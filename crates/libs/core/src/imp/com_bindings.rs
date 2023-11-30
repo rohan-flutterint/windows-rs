@@ -90,6 +90,7 @@ impl ::core::default::Default for DateTime {
 pub const E_BOUNDS: ::windows_core::HRESULT = ::windows_core::HRESULT(-2147483637i32);
 pub const E_NOINTERFACE: ::windows_core::HRESULT = ::windows_core::HRESULT(-2147467262i32);
 pub const E_OUTOFMEMORY: ::windows_core::HRESULT = ::windows_core::HRESULT(-2147024882i32);
+pub const E_POINTER: ::windows_core::HRESULT = ::windows_core::HRESULT(-2147467261i32);
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq, ::core::fmt::Debug, ::core::clone::Clone)]
 pub struct IAgileObject(::windows_core::IUnknown);
@@ -1303,6 +1304,7 @@ impl ::core::default::Default for Rect {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const S_OK: ::windows_core::HRESULT = ::windows_core::HRESULT(0i32);
 #[repr(C)]
 pub struct Size {
     pub Width: f32,
