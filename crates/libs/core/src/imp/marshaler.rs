@@ -1,5 +1,6 @@
 // TODO: maybe just scrap this and use CoCreateFreeThreadedMarshaler directly even though it theoretically slower 
-// its not needed very often.
+// its not needed very often. But that has its own problems since the inner would need to be kept alive by every 
+// agile object... so this is probably the best we can do. 
 
 use super::{RefCount, E_OUTOFMEMORY, E_POINTER, S_OK};
 use crate::{ComInterface, IUnknown, IUnknown_Vtbl, Interface, GUID, HRESULT};
