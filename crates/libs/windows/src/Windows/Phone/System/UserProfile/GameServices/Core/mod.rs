@@ -85,7 +85,7 @@ impl GameService {
     pub fn ServiceUri() -> ::windows_core::Result<super::super::super::super::super::Foundation::Uri> {
         Self::IGameService(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ServiceUri)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ServiceUri(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -93,7 +93,7 @@ impl GameService {
     pub fn GetGamerProfileAsync() -> ::windows_core::Result<super::super::super::super::super::Foundation::IAsyncOperation<GameServicePropertyCollection>> {
         Self::IGameService(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetGamerProfileAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetGamerProfileAsync(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -101,7 +101,7 @@ impl GameService {
     pub fn GetInstalledGameItemsAsync() -> ::windows_core::Result<super::super::super::super::super::Foundation::IAsyncOperation<GameServicePropertyCollection>> {
         Self::IGameService(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetInstalledGameItemsAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetInstalledGameItemsAsync(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -112,7 +112,7 @@ impl GameService {
     {
         Self::IGameService(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetPartnerTokenAsync)(::windows_core::Interface::as_raw(this), audienceuri.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetPartnerTokenAsync(audienceuri.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -120,14 +120,14 @@ impl GameService {
     pub fn GetPrivilegesAsync() -> ::windows_core::Result<super::super::super::super::super::Foundation::IAsyncOperation<::windows_core::HSTRING>> {
         Self::IGameService(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetPrivilegesAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetPrivilegesAsync(&mut result__)).from_abi(result__)
         })
     }
     pub fn GrantAchievement(achievementid: u32) -> ::windows_core::Result<()> {
-        Self::IGameService(|this| unsafe { (::windows_core::Interface::vtable(this).GrantAchievement)(::windows_core::Interface::as_raw(this), achievementid).ok() })
+        Self::IGameService(|this| unsafe { ::windows_core::vcall!(this.GrantAchievement(achievementid)).ok() })
     }
     pub fn GrantAvatarAward(avatarawardid: u32) -> ::windows_core::Result<()> {
-        Self::IGameService(|this| unsafe { (::windows_core::Interface::vtable(this).GrantAvatarAward)(::windows_core::Interface::as_raw(this), avatarawardid).ok() })
+        Self::IGameService(|this| unsafe { ::windows_core::vcall!(this.GrantAvatarAward(avatarawardid)).ok() })
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
     #[cfg(feature = "Storage_Streams")]
@@ -135,7 +135,7 @@ impl GameService {
     where
         P0: ::windows_core::TryIntoParam<super::super::super::super::super::Storage::Streams::IBuffer>,
     {
-        Self::IGameService(|this| unsafe { (::windows_core::Interface::vtable(this).PostResult)(::windows_core::Interface::as_raw(this), gamevariant, scorekind, scorevalue, gameoutcome, buffer.try_into_param()?.abi()).ok() })
+        Self::IGameService(|this| unsafe { ::windows_core::vcall!(this.PostResult(gamevariant, scorekind, scorevalue, gameoutcome, buffer.try_into_param()?.abi())).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -143,12 +143,12 @@ impl GameService {
     where
         P0: ::windows_core::IntoParam<super::super::super::super::super::Foundation::Uri>,
     {
-        Self::IGameService2(|this| unsafe { (::windows_core::Interface::vtable(this).NotifyPartnerTokenExpired)(::windows_core::Interface::as_raw(this), audienceuri.into_param().abi()).ok() })
+        Self::IGameService2(|this| unsafe { ::windows_core::vcall!(this.NotifyPartnerTokenExpired(audienceuri.into_param().abi())).ok() })
     }
     pub fn GetAuthenticationStatus() -> ::windows_core::Result<u32> {
         Self::IGameService2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetAuthenticationStatus)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetAuthenticationStatus(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -175,7 +175,7 @@ impl GameServicePropertyCollection {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetPropertyAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(propertyname), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetPropertyAsync(::core::mem::transmute_copy(propertyname), &mut result__)).from_abi(result__)
         }
     }
 }

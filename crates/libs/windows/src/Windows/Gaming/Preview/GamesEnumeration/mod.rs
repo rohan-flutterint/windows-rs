@@ -8,7 +8,7 @@ impl IGameListEntry {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayInfo(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -17,14 +17,14 @@ impl IGameListEntry {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LaunchAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LaunchAsync(&mut result__)).from_abi(result__)
         }
     }
     pub fn Category(&self) -> ::windows_core::Result<GameListCategory> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Category)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Category(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -33,7 +33,7 @@ impl IGameListEntry {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Properties)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Properties(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -42,7 +42,7 @@ impl IGameListEntry {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetCategoryAsync)(::windows_core::Interface::as_raw(this), value, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetCategoryAsync(value, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -304,7 +304,7 @@ impl GameList {
     pub fn FindAllAsync() -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<super::super::super::Foundation::Collections::IVectorView<GameListEntry>>> {
         Self::IGameListStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FindAllAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FindAllAsync(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -312,7 +312,7 @@ impl GameList {
     pub fn FindAllAsyncPackageFamilyName(packagefamilyname: &::windows_core::HSTRING) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<super::super::super::Foundation::Collections::IVectorView<GameListEntry>>> {
         Self::IGameListStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FindAllAsyncPackageFamilyName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(packagefamilyname), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FindAllAsyncPackageFamilyName(::core::mem::transmute_copy(packagefamilyname), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -323,13 +323,13 @@ impl GameList {
     {
         Self::IGameListStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GameAdded)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GameAdded(handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveGameAdded(token: super::super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
-        Self::IGameListStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RemoveGameAdded)(::windows_core::Interface::as_raw(this), token).ok() })
+        Self::IGameListStatics(|this| unsafe { ::windows_core::vcall!(this.RemoveGameAdded(token)).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -339,13 +339,13 @@ impl GameList {
     {
         Self::IGameListStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GameRemoved)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GameRemoved(handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveGameRemoved(token: super::super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
-        Self::IGameListStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RemoveGameRemoved)(::windows_core::Interface::as_raw(this), token).ok() })
+        Self::IGameListStatics(|this| unsafe { ::windows_core::vcall!(this.RemoveGameRemoved(token)).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -355,13 +355,13 @@ impl GameList {
     {
         Self::IGameListStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GameUpdated)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GameUpdated(handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveGameUpdated(token: super::super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
-        Self::IGameListStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RemoveGameUpdated)(::windows_core::Interface::as_raw(this), token).ok() })
+        Self::IGameListStatics(|this| unsafe { ::windows_core::vcall!(this.RemoveGameUpdated(token)).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -372,7 +372,7 @@ impl GameList {
     {
         Self::IGameListStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MergeEntriesAsync)(::windows_core::Interface::as_raw(this), left.into_param().abi(), right.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MergeEntriesAsync(left.into_param().abi(), right.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -383,7 +383,7 @@ impl GameList {
     {
         Self::IGameListStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UnmergeEntryAsync)(::windows_core::Interface::as_raw(this), mergedentry.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UnmergeEntryAsync(mergedentry.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -410,7 +410,7 @@ impl GameListEntry {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayInfo(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -419,14 +419,14 @@ impl GameListEntry {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LaunchAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LaunchAsync(&mut result__)).from_abi(result__)
         }
     }
     pub fn Category(&self) -> ::windows_core::Result<GameListCategory> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Category)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Category(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -435,7 +435,7 @@ impl GameListEntry {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Properties)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Properties(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -444,14 +444,14 @@ impl GameListEntry {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetCategoryAsync)(::windows_core::Interface::as_raw(this), value, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetCategoryAsync(value, &mut result__)).from_abi(result__)
         }
     }
     pub fn LaunchableState(&self) -> ::windows_core::Result<GameListEntryLaunchableState> {
         let this = &::windows_core::ComInterface::cast::<IGameListEntry2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LaunchableState)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LaunchableState(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage\"`"]
@@ -460,14 +460,14 @@ impl GameListEntry {
         let this = &::windows_core::ComInterface::cast::<IGameListEntry2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LauncherExecutable)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LauncherExecutable(&mut result__)).from_abi(result__)
         }
     }
     pub fn LaunchParameters(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IGameListEntry2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LaunchParameters)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LaunchParameters(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -479,7 +479,7 @@ impl GameListEntry {
         let this = &::windows_core::ComInterface::cast::<IGameListEntry2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetLauncherExecutableFileAsync)(::windows_core::Interface::as_raw(this), executablefile.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetLauncherExecutableFileAsync(executablefile.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -491,14 +491,14 @@ impl GameListEntry {
         let this = &::windows_core::ComInterface::cast::<IGameListEntry2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetLauncherExecutableFileWithParamsAsync)(::windows_core::Interface::as_raw(this), executablefile.try_into_param()?.abi(), ::core::mem::transmute_copy(launchparams), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetLauncherExecutableFileWithParamsAsync(executablefile.try_into_param()?.abi(), ::core::mem::transmute_copy(launchparams), &mut result__)).from_abi(result__)
         }
     }
     pub fn TitleId(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IGameListEntry2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TitleId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TitleId(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -507,14 +507,14 @@ impl GameListEntry {
         let this = &::windows_core::ComInterface::cast::<IGameListEntry2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetTitleIdAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(id), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetTitleIdAsync(::core::mem::transmute_copy(id), &mut result__)).from_abi(result__)
         }
     }
     pub fn GameModeConfiguration(&self) -> ::windows_core::Result<GameModeConfiguration> {
         let this = &::windows_core::ComInterface::cast::<IGameListEntry2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GameModeConfiguration)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GameModeConfiguration(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -542,12 +542,12 @@ impl GameModeConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetIsEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsEnabled(value)).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -555,7 +555,7 @@ impl GameModeConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RelatedProcessNames)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RelatedProcessNames(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -564,7 +564,7 @@ impl GameModeConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PercentGpuTimeAllocatedToGame)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PercentGpuTimeAllocatedToGame(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -574,7 +574,7 @@ impl GameModeConfiguration {
         P0: ::windows_core::TryIntoParam<super::super::super::Foundation::IReference<i32>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPercentGpuTimeAllocatedToGame)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPercentGpuTimeAllocatedToGame(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -582,7 +582,7 @@ impl GameModeConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PercentGpuMemoryAllocatedToGame)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PercentGpuMemoryAllocatedToGame(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -592,7 +592,7 @@ impl GameModeConfiguration {
         P0: ::windows_core::TryIntoParam<super::super::super::Foundation::IReference<i32>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPercentGpuMemoryAllocatedToGame)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPercentGpuMemoryAllocatedToGame(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -600,7 +600,7 @@ impl GameModeConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PercentGpuMemoryAllocatedToSystemCompositor)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PercentGpuMemoryAllocatedToSystemCompositor(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -610,7 +610,7 @@ impl GameModeConfiguration {
         P0: ::windows_core::TryIntoParam<super::super::super::Foundation::IReference<i32>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPercentGpuMemoryAllocatedToSystemCompositor)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPercentGpuMemoryAllocatedToSystemCompositor(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -618,7 +618,7 @@ impl GameModeConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MaxCpuCount)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MaxCpuCount(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -628,7 +628,7 @@ impl GameModeConfiguration {
         P0: ::windows_core::TryIntoParam<super::super::super::Foundation::IReference<i32>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetMaxCpuCount)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMaxCpuCount(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -636,7 +636,7 @@ impl GameModeConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CpuExclusivityMaskLow)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CpuExclusivityMaskLow(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -646,7 +646,7 @@ impl GameModeConfiguration {
         P0: ::windows_core::TryIntoParam<super::super::super::Foundation::IReference<i32>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetCpuExclusivityMaskLow)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCpuExclusivityMaskLow(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -654,7 +654,7 @@ impl GameModeConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CpuExclusivityMaskHigh)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CpuExclusivityMaskHigh(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -664,18 +664,18 @@ impl GameModeConfiguration {
         P0: ::windows_core::TryIntoParam<super::super::super::Foundation::IReference<i32>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetCpuExclusivityMaskHigh)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCpuExclusivityMaskHigh(value.try_into_param()?.abi())).ok() }
     }
     pub fn AffinitizeToExclusiveCpus(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AffinitizeToExclusiveCpus)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AffinitizeToExclusiveCpus(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAffinitizeToExclusiveCpus(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAffinitizeToExclusiveCpus)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAffinitizeToExclusiveCpus(value)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -683,7 +683,7 @@ impl GameModeConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SaveAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SaveAsync(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -712,7 +712,7 @@ impl GameModeUserConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GamingRelatedProcessNames)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GamingRelatedProcessNames(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -721,13 +721,13 @@ impl GameModeUserConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SaveAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SaveAsync(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetDefault() -> ::windows_core::Result<GameModeUserConfiguration> {
         Self::IGameModeUserConfigurationStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDefault)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDefault(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -825,7 +825,7 @@ impl GameListChangedEventHandler {
         P0: ::windows_core::IntoParam<GameListEntry>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), game.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(game.into_param().abi())).ok() }
     }
 }
 #[repr(C)]
@@ -894,7 +894,7 @@ impl GameListRemovedEventHandler {
     }
     pub fn Invoke(&self, identifier: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(identifier)).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(::core::mem::transmute_copy(identifier))).ok() }
     }
 }
 #[repr(C)]

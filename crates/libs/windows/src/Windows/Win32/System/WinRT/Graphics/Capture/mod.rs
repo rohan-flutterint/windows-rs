@@ -10,7 +10,7 @@ impl IGraphicsCaptureItemInterop {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).CreateForWindow)(::windows_core::Interface::as_raw(self), window.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateForWindow(window.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -20,7 +20,7 @@ impl IGraphicsCaptureItemInterop {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).CreateForMonitor)(::windows_core::Interface::as_raw(self), monitor.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateForMonitor(monitor.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IGraphicsCaptureItemInterop, ::windows_core::IUnknown);

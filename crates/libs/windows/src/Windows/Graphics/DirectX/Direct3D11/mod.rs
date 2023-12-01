@@ -4,13 +4,13 @@ pub struct IDirect3DDevice(::windows_core::IUnknown);
 impl IDirect3DDevice {
     pub fn Trim(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Trim)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Trim()).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn Close(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<super::super::super::Foundation::IClosable>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).Close)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Close()).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirect3DDevice, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -39,14 +39,14 @@ impl IDirect3DSurface {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Description)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Description(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn Close(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<super::super::super::Foundation::IClosable>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).Close)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Close()).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirect3DSurface, ::windows_core::IUnknown, ::windows_core::IInspectable);

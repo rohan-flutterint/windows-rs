@@ -669,14 +669,14 @@ impl BufferProtectUnprotectResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Buffer)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Buffer(&mut result__)).from_abi(result__)
         }
     }
     pub fn ProtectionInfo(&self) -> ::windows_core::Result<DataProtectionInfo> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProtectionInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProtectionInfo(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -703,14 +703,14 @@ impl DataProtectionInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
     pub fn Identity(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Identity)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Identity(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -739,7 +739,7 @@ impl DataProtectionManager {
     {
         Self::IDataProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProtectAsync)(::windows_core::Interface::as_raw(this), data.try_into_param()?.abi(), ::core::mem::transmute_copy(identity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProtectAsync(data.try_into_param()?.abi(), ::core::mem::transmute_copy(identity), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -750,7 +750,7 @@ impl DataProtectionManager {
     {
         Self::IDataProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UnprotectAsync)(::windows_core::Interface::as_raw(this), data.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UnprotectAsync(data.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -762,7 +762,7 @@ impl DataProtectionManager {
     {
         Self::IDataProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProtectStreamAsync)(::windows_core::Interface::as_raw(this), unprotectedstream.try_into_param()?.abi(), ::core::mem::transmute_copy(identity), protectedstream.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProtectStreamAsync(unprotectedstream.try_into_param()?.abi(), ::core::mem::transmute_copy(identity), protectedstream.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -774,7 +774,7 @@ impl DataProtectionManager {
     {
         Self::IDataProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UnprotectStreamAsync)(::windows_core::Interface::as_raw(this), protectedstream.try_into_param()?.abi(), unprotectedstream.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UnprotectStreamAsync(protectedstream.try_into_param()?.abi(), unprotectedstream.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -785,7 +785,7 @@ impl DataProtectionManager {
     {
         Self::IDataProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetProtectionInfoAsync)(::windows_core::Interface::as_raw(this), protecteddata.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetProtectionInfoAsync(protecteddata.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -796,7 +796,7 @@ impl DataProtectionManager {
     {
         Self::IDataProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetStreamProtectionInfoAsync)(::windows_core::Interface::as_raw(this), protectedstream.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetStreamProtectionInfoAsync(protectedstream.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -816,28 +816,28 @@ impl FileProtectionInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsRoamable(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsRoamable)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsRoamable(&mut result__)).from_abi(result__)
         }
     }
     pub fn Identity(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Identity)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Identity(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsProtectWhileOpenSupported(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IFileProtectionInfo2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsProtectWhileOpenSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsProtectWhileOpenSupported(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -866,7 +866,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProtectAsync)(::windows_core::Interface::as_raw(this), target.try_into_param()?.abi(), ::core::mem::transmute_copy(identity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProtectAsync(target.try_into_param()?.abi(), ::core::mem::transmute_copy(identity), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -878,7 +878,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CopyProtectionAsync)(::windows_core::Interface::as_raw(this), source.try_into_param()?.abi(), target.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CopyProtectionAsync(source.try_into_param()?.abi(), target.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -889,7 +889,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetProtectionInfoAsync)(::windows_core::Interface::as_raw(this), source.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetProtectionInfoAsync(source.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -900,7 +900,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SaveFileAsContainerAsync)(::windows_core::Interface::as_raw(this), protectedfile.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SaveFileAsContainerAsync(protectedfile.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -911,7 +911,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LoadFileFromContainerAsync)(::windows_core::Interface::as_raw(this), containerfile.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LoadFileFromContainerAsync(containerfile.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -923,7 +923,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LoadFileFromContainerWithTargetAsync)(::windows_core::Interface::as_raw(this), containerfile.try_into_param()?.abi(), target.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LoadFileFromContainerWithTargetAsync(containerfile.try_into_param()?.abi(), target.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -934,7 +934,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateProtectedAndOpenAsync)(::windows_core::Interface::as_raw(this), parentfolder.try_into_param()?.abi(), ::core::mem::transmute_copy(desiredname), ::core::mem::transmute_copy(identity), collisionoption, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateProtectedAndOpenAsync(parentfolder.try_into_param()?.abi(), ::core::mem::transmute_copy(desiredname), ::core::mem::transmute_copy(identity), collisionoption, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -945,7 +945,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsContainerAsync)(::windows_core::Interface::as_raw(this), file.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsContainerAsync(file.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -957,7 +957,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LoadFileFromContainerWithTargetAndNameCollisionOptionAsync)(::windows_core::Interface::as_raw(this), containerfile.try_into_param()?.abi(), target.try_into_param()?.abi(), collisionoption, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LoadFileFromContainerWithTargetAndNameCollisionOptionAsync(containerfile.try_into_param()?.abi(), target.try_into_param()?.abi(), collisionoption, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`"]
@@ -969,7 +969,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SaveFileAsContainerWithSharingAsync)(::windows_core::Interface::as_raw(this), protectedfile.try_into_param()?.abi(), sharedwithidentities.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SaveFileAsContainerWithSharingAsync(protectedfile.try_into_param()?.abi(), sharedwithidentities.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -980,7 +980,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics3(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UnprotectAsync)(::windows_core::Interface::as_raw(this), target.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UnprotectAsync(target.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -992,7 +992,7 @@ impl FileProtectionManager {
     {
         Self::IFileProtectionManagerStatics3(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UnprotectWithOptionsAsync)(::windows_core::Interface::as_raw(this), target.try_into_param()?.abi(), options.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UnprotectWithOptionsAsync(target.try_into_param()?.abi(), options.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1027,7 +1027,7 @@ impl FileRevocationManager {
     {
         Self::IFileRevocationManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProtectAsync)(::windows_core::Interface::as_raw(this), storageitem.try_into_param()?.abi(), ::core::mem::transmute_copy(enterpriseidentity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProtectAsync(storageitem.try_into_param()?.abi(), ::core::mem::transmute_copy(enterpriseidentity), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`, `\"deprecated\"`"]
@@ -1039,13 +1039,13 @@ impl FileRevocationManager {
     {
         Self::IFileRevocationManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CopyProtectionAsync)(::windows_core::Interface::as_raw(this), sourcestorageitem.try_into_param()?.abi(), targetstorageitem.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CopyProtectionAsync(sourcestorageitem.try_into_param()?.abi(), targetstorageitem.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"deprecated\"`"]
     #[cfg(feature = "deprecated")]
     pub fn Revoke(enterpriseidentity: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
-        Self::IFileRevocationManagerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).Revoke)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(enterpriseidentity)).ok() })
+        Self::IFileRevocationManagerStatics(|this| unsafe { ::windows_core::vcall!(this.Revoke(::core::mem::transmute_copy(enterpriseidentity))).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`, `\"deprecated\"`"]
     #[cfg(all(feature = "Foundation", feature = "Storage", feature = "deprecated"))]
@@ -1055,7 +1055,7 @@ impl FileRevocationManager {
     {
         Self::IFileRevocationManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetStatusAsync)(::windows_core::Interface::as_raw(this), storageitem.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetStatusAsync(storageitem.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1075,19 +1075,19 @@ pub struct FileUnprotectOptions(::windows_core::IUnknown);
 impl FileUnprotectOptions {
     pub fn SetAudit(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAudit)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAudit(value)).ok() }
     }
     pub fn Audit(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Audit)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Audit(&mut result__)).from_abi(result__)
         }
     }
     pub fn Create(audit: bool) -> ::windows_core::Result<FileUnprotectOptions> {
         Self::IFileUnprotectOptionsFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Create)(::windows_core::Interface::as_raw(this), audit, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Create(audit, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1121,7 +1121,7 @@ impl ProtectedAccessResumedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Identities)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Identities(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1150,7 +1150,7 @@ impl ProtectedAccessSuspendingEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Identities)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Identities(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1159,7 +1159,7 @@ impl ProtectedAccessSuspendingEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Deadline)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Deadline(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1168,7 +1168,7 @@ impl ProtectedAccessSuspendingEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDeferral)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDeferral(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1195,7 +1195,7 @@ impl ProtectedContainerExportResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage\"`"]
@@ -1204,7 +1204,7 @@ impl ProtectedContainerExportResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).File)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.File(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1231,7 +1231,7 @@ impl ProtectedContainerImportResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage\"`"]
@@ -1240,7 +1240,7 @@ impl ProtectedContainerImportResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).File)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.File(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1269,7 +1269,7 @@ impl ProtectedContentRevokedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Identities)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Identities(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1298,7 +1298,7 @@ impl ProtectedFileCreateResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).File)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.File(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1307,14 +1307,14 @@ impl ProtectedFileCreateResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Stream)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Stream(&mut result__)).from_abi(result__)
         }
     }
     pub fn ProtectionInfo(&self) -> ::windows_core::Result<FileProtectionInfo> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProtectionInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProtectionInfo(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1339,58 +1339,58 @@ pub struct ProtectionPolicyAuditInfo(::windows_core::IUnknown);
 impl ProtectionPolicyAuditInfo {
     pub fn SetAction(&self, value: ProtectionPolicyAuditAction) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAction)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAction(value)).ok() }
     }
     pub fn Action(&self) -> ::windows_core::Result<ProtectionPolicyAuditAction> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Action)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Action(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDataDescription(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDataDescription)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDataDescription(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn DataDescription(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DataDescription)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DataDescription(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetSourceDescription(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetSourceDescription)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetSourceDescription(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn SourceDescription(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SourceDescription)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SourceDescription(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTargetDescription(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTargetDescription)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTargetDescription(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn TargetDescription(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TargetDescription)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TargetDescription(&mut result__)).from_abi(result__)
         }
     }
     pub fn Create(action: ProtectionPolicyAuditAction, datadescription: &::windows_core::HSTRING, sourcedescription: &::windows_core::HSTRING, targetdescription: &::windows_core::HSTRING) -> ::windows_core::Result<ProtectionPolicyAuditInfo> {
         Self::IProtectionPolicyAuditInfoFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Create)(::windows_core::Interface::as_raw(this), action, ::core::mem::transmute_copy(datadescription), ::core::mem::transmute_copy(sourcedescription), ::core::mem::transmute_copy(targetdescription), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Create(action, ::core::mem::transmute_copy(datadescription), ::core::mem::transmute_copy(sourcedescription), ::core::mem::transmute_copy(targetdescription), &mut result__)).from_abi(result__)
         })
     }
     pub fn CreateWithActionAndDataDescription(action: ProtectionPolicyAuditAction, datadescription: &::windows_core::HSTRING) -> ::windows_core::Result<ProtectionPolicyAuditInfo> {
         Self::IProtectionPolicyAuditInfoFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWithActionAndDataDescription)(::windows_core::Interface::as_raw(this), action, ::core::mem::transmute_copy(datadescription), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWithActionAndDataDescription(action, ::core::mem::transmute_copy(datadescription), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1420,45 +1420,45 @@ pub struct ProtectionPolicyManager(::windows_core::IUnknown);
 impl ProtectionPolicyManager {
     pub fn SetIdentity(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIdentity)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIdentity(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Identity(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Identity)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Identity(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetShowEnterpriseIndicator(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IProtectionPolicyManager2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetShowEnterpriseIndicator)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetShowEnterpriseIndicator(value)).ok() }
     }
     pub fn ShowEnterpriseIndicator(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IProtectionPolicyManager2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ShowEnterpriseIndicator)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ShowEnterpriseIndicator(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsIdentityManaged(identity: &::windows_core::HSTRING) -> ::windows_core::Result<bool> {
         Self::IProtectionPolicyManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsIdentityManaged)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(identity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsIdentityManaged(::core::mem::transmute_copy(identity), &mut result__)).from_abi(result__)
         })
     }
     pub fn TryApplyProcessUIPolicy(identity: &::windows_core::HSTRING) -> ::windows_core::Result<bool> {
         Self::IProtectionPolicyManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryApplyProcessUIPolicy)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(identity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryApplyProcessUIPolicy(::core::mem::transmute_copy(identity), &mut result__)).from_abi(result__)
         })
     }
     pub fn ClearProcessUIPolicy() -> ::windows_core::Result<()> {
-        Self::IProtectionPolicyManagerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).ClearProcessUIPolicy)(::windows_core::Interface::as_raw(this)).ok() })
+        Self::IProtectionPolicyManagerStatics(|this| unsafe { ::windows_core::vcall!(this.ClearProcessUIPolicy()).ok() })
     }
     pub fn CreateCurrentThreadNetworkContext(identity: &::windows_core::HSTRING) -> ::windows_core::Result<ThreadNetworkContext> {
         Self::IProtectionPolicyManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateCurrentThreadNetworkContext)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(identity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateCurrentThreadNetworkContext(::core::mem::transmute_copy(identity), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Networking\"`"]
@@ -1469,16 +1469,16 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetPrimaryManagedIdentityForNetworkEndpointAsync)(::windows_core::Interface::as_raw(this), endpointhost.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetPrimaryManagedIdentityForNetworkEndpointAsync(endpointhost.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     pub fn RevokeContent(identity: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
-        Self::IProtectionPolicyManagerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RevokeContent)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(identity)).ok() })
+        Self::IProtectionPolicyManagerStatics(|this| unsafe { ::windows_core::vcall!(this.RevokeContent(::core::mem::transmute_copy(identity))).ok() })
     }
     pub fn GetForCurrentView() -> ::windows_core::Result<ProtectionPolicyManager> {
         Self::IProtectionPolicyManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForCurrentView)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForCurrentView(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1489,13 +1489,13 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProtectedAccessSuspending)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProtectedAccessSuspending(handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveProtectedAccessSuspending(token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
-        Self::IProtectionPolicyManagerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RemoveProtectedAccessSuspending)(::windows_core::Interface::as_raw(this), token).ok() })
+        Self::IProtectionPolicyManagerStatics(|this| unsafe { ::windows_core::vcall!(this.RemoveProtectedAccessSuspending(token)).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1505,13 +1505,13 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProtectedAccessResumed)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProtectedAccessResumed(handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveProtectedAccessResumed(token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
-        Self::IProtectionPolicyManagerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RemoveProtectedAccessResumed)(::windows_core::Interface::as_raw(this), token).ok() })
+        Self::IProtectionPolicyManagerStatics(|this| unsafe { ::windows_core::vcall!(this.RemoveProtectedAccessResumed(token)).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1521,18 +1521,18 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProtectedContentRevoked)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProtectedContentRevoked(handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveProtectedContentRevoked(token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
-        Self::IProtectionPolicyManagerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RemoveProtectedContentRevoked)(::windows_core::Interface::as_raw(this), token).ok() })
+        Self::IProtectionPolicyManagerStatics(|this| unsafe { ::windows_core::vcall!(this.RemoveProtectedContentRevoked(token)).ok() })
     }
     pub fn CheckAccess(sourceidentity: &::windows_core::HSTRING, targetidentity: &::windows_core::HSTRING) -> ::windows_core::Result<ProtectionPolicyEvaluationResult> {
         Self::IProtectionPolicyManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CheckAccess)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CheckAccess(::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1540,7 +1540,7 @@ impl ProtectionPolicyManager {
     pub fn RequestAccessAsync(sourceidentity: &::windows_core::HSTRING, targetidentity: &::windows_core::HSTRING) -> ::windows_core::Result<super::super::Foundation::IAsyncOperation<ProtectionPolicyEvaluationResult>> {
         Self::IProtectionPolicyManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessAsync(::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1548,13 +1548,13 @@ impl ProtectionPolicyManager {
     pub fn HasContentBeenRevokedSince(identity: &::windows_core::HSTRING, since: super::super::Foundation::DateTime) -> ::windows_core::Result<bool> {
         Self::IProtectionPolicyManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasContentBeenRevokedSince)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(identity), since, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HasContentBeenRevokedSince(::core::mem::transmute_copy(identity), since, &mut result__)).from_abi(result__)
         })
     }
     pub fn CheckAccessForApp(sourceidentity: &::windows_core::HSTRING, apppackagefamilyname: &::windows_core::HSTRING) -> ::windows_core::Result<ProtectionPolicyEvaluationResult> {
         Self::IProtectionPolicyManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CheckAccessForApp)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(apppackagefamilyname), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CheckAccessForApp(::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(apppackagefamilyname), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1562,25 +1562,25 @@ impl ProtectionPolicyManager {
     pub fn RequestAccessForAppAsync(sourceidentity: &::windows_core::HSTRING, apppackagefamilyname: &::windows_core::HSTRING) -> ::windows_core::Result<super::super::Foundation::IAsyncOperation<ProtectionPolicyEvaluationResult>> {
         Self::IProtectionPolicyManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessForAppAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(apppackagefamilyname), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessForAppAsync(::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(apppackagefamilyname), &mut result__)).from_abi(result__)
         })
     }
     pub fn GetEnforcementLevel(identity: &::windows_core::HSTRING) -> ::windows_core::Result<EnforcementLevel> {
         Self::IProtectionPolicyManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetEnforcementLevel)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(identity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetEnforcementLevel(::core::mem::transmute_copy(identity), &mut result__)).from_abi(result__)
         })
     }
     pub fn IsUserDecryptionAllowed(identity: &::windows_core::HSTRING) -> ::windows_core::Result<bool> {
         Self::IProtectionPolicyManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsUserDecryptionAllowed)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(identity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsUserDecryptionAllowed(::core::mem::transmute_copy(identity), &mut result__)).from_abi(result__)
         })
     }
     pub fn IsProtectionUnderLockRequired(identity: &::windows_core::HSTRING) -> ::windows_core::Result<bool> {
         Self::IProtectionPolicyManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsProtectionUnderLockRequired)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(identity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsProtectionUnderLockRequired(::core::mem::transmute_copy(identity), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1591,18 +1591,18 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PolicyChanged)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PolicyChanged(handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemovePolicyChanged(token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
-        Self::IProtectionPolicyManagerStatics2(|this| unsafe { (::windows_core::Interface::vtable(this).RemovePolicyChanged)(::windows_core::Interface::as_raw(this), token).ok() })
+        Self::IProtectionPolicyManagerStatics2(|this| unsafe { ::windows_core::vcall!(this.RemovePolicyChanged(token)).ok() })
     }
     pub fn IsProtectionEnabled() -> ::windows_core::Result<bool> {
         Self::IProtectionPolicyManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsProtectionEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsProtectionEnabled(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1613,7 +1613,7 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics3(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessWithAuditingInfoAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), auditinfo.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessWithAuditingInfoAsync(::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), auditinfo.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1624,7 +1624,7 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics3(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessWithMessageAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessWithMessageAsync(::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1635,7 +1635,7 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics3(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessForAppWithAuditingInfoAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(apppackagefamilyname), auditinfo.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessForAppWithAuditingInfoAsync(::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(apppackagefamilyname), auditinfo.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1646,19 +1646,19 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics3(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessForAppWithMessageAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(apppackagefamilyname), auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessForAppWithMessageAsync(::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(apppackagefamilyname), auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), &mut result__)).from_abi(result__)
         })
     }
     pub fn LogAuditEvent<P0>(sourceidentity: &::windows_core::HSTRING, targetidentity: &::windows_core::HSTRING, auditinfo: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ProtectionPolicyAuditInfo>,
     {
-        Self::IProtectionPolicyManagerStatics3(|this| unsafe { (::windows_core::Interface::vtable(this).LogAuditEvent)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), auditinfo.into_param().abi()).ok() })
+        Self::IProtectionPolicyManagerStatics3(|this| unsafe { ::windows_core::vcall!(this.LogAuditEvent(::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), auditinfo.into_param().abi())).ok() })
     }
     pub fn IsRoamableProtectionEnabled(identity: &::windows_core::HSTRING) -> ::windows_core::Result<bool> {
         Self::IProtectionPolicyManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsRoamableProtectionEnabled)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(identity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsRoamableProtectionEnabled(::core::mem::transmute_copy(identity), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1669,7 +1669,7 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessWithBehaviorAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), behavior, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessWithBehaviorAsync(::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(targetidentity), auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), behavior, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1680,7 +1680,7 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessForAppWithBehaviorAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(apppackagefamilyname), auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), behavior, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessForAppWithBehaviorAsync(::core::mem::transmute_copy(sourceidentity), ::core::mem::transmute_copy(apppackagefamilyname), auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), behavior, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`"]
@@ -1692,7 +1692,7 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessToFilesForAppAsync)(::windows_core::Interface::as_raw(this), sourceitemlist.try_into_param()?.abi(), ::core::mem::transmute_copy(apppackagefamilyname), auditinfo.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessToFilesForAppAsync(sourceitemlist.try_into_param()?.abi(), ::core::mem::transmute_copy(apppackagefamilyname), auditinfo.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`"]
@@ -1704,7 +1704,7 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessToFilesForAppWithMessageAndBehaviorAsync)(::windows_core::Interface::as_raw(this), sourceitemlist.try_into_param()?.abi(), ::core::mem::transmute_copy(apppackagefamilyname), auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), behavior, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessToFilesForAppWithMessageAndBehaviorAsync(sourceitemlist.try_into_param()?.abi(), ::core::mem::transmute_copy(apppackagefamilyname), auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), behavior, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`"]
@@ -1716,7 +1716,7 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessToFilesForProcessAsync)(::windows_core::Interface::as_raw(this), sourceitemlist.try_into_param()?.abi(), processid, auditinfo.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessToFilesForProcessAsync(sourceitemlist.try_into_param()?.abi(), processid, auditinfo.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"Storage\"`"]
@@ -1728,7 +1728,7 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestAccessToFilesForProcessWithMessageAndBehaviorAsync)(::windows_core::Interface::as_raw(this), sourceitemlist.try_into_param()?.abi(), processid, auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), behavior, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestAccessToFilesForProcessWithMessageAndBehaviorAsync(sourceitemlist.try_into_param()?.abi(), processid, auditinfo.into_param().abi(), ::core::mem::transmute_copy(messagefromapp), behavior, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -1739,7 +1739,7 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsFileProtectionRequiredAsync)(::windows_core::Interface::as_raw(this), target.try_into_param()?.abi(), ::core::mem::transmute_copy(identity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsFileProtectionRequiredAsync(target.try_into_param()?.abi(), ::core::mem::transmute_copy(identity), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -1750,19 +1750,19 @@ impl ProtectionPolicyManager {
     {
         Self::IProtectionPolicyManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsFileProtectionRequiredForNewFileAsync)(::windows_core::Interface::as_raw(this), parentfolder.try_into_param()?.abi(), ::core::mem::transmute_copy(identity), ::core::mem::transmute_copy(desiredname), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsFileProtectionRequiredForNewFileAsync(parentfolder.try_into_param()?.abi(), ::core::mem::transmute_copy(identity), ::core::mem::transmute_copy(desiredname), &mut result__)).from_abi(result__)
         })
     }
     pub fn PrimaryManagedIdentity() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IProtectionPolicyManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PrimaryManagedIdentity)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PrimaryManagedIdentity(&mut result__)).from_abi(result__)
         })
     }
     pub fn GetPrimaryManagedIdentityForIdentity(identity: &::windows_core::HSTRING) -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IProtectionPolicyManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetPrimaryManagedIdentityForIdentity)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(identity), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetPrimaryManagedIdentityForIdentity(::core::mem::transmute_copy(identity), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1809,7 +1809,7 @@ impl ThreadNetworkContext {
     #[cfg(feature = "Foundation")]
     pub fn Close(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<super::super::Foundation::IClosable>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).Close)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Close()).ok() }
     }
 }
 impl ::windows_core::RuntimeType for ThreadNetworkContext {

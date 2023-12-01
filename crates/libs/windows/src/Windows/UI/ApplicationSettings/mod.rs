@@ -446,30 +446,30 @@ impl AccountsSettingsPane {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AccountCommandsRequested)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AccountCommandsRequested(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveAccountCommandsRequested(&self, cookie: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveAccountCommandsRequested)(::windows_core::Interface::as_raw(this), cookie).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveAccountCommandsRequested(cookie)).ok() }
     }
     pub fn GetForCurrentView() -> ::windows_core::Result<AccountsSettingsPane> {
         Self::IAccountsSettingsPaneStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForCurrentView)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForCurrentView(&mut result__)).from_abi(result__)
         })
     }
     pub fn Show() -> ::windows_core::Result<()> {
-        Self::IAccountsSettingsPaneStatics(|this| unsafe { (::windows_core::Interface::vtable(this).Show)(::windows_core::Interface::as_raw(this)).ok() })
+        Self::IAccountsSettingsPaneStatics(|this| unsafe { ::windows_core::vcall!(this.Show()).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn ShowManageAccountsAsync() -> ::windows_core::Result<super::super::Foundation::IAsyncAction> {
         Self::IAccountsSettingsPaneStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ShowManageAccountsAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ShowManageAccountsAsync(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -477,7 +477,7 @@ impl AccountsSettingsPane {
     pub fn ShowAddAccountAsync() -> ::windows_core::Result<super::super::Foundation::IAsyncAction> {
         Self::IAccountsSettingsPaneStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ShowAddAccountAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ShowAddAccountAsync(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"System\"`"]
@@ -488,7 +488,7 @@ impl AccountsSettingsPane {
     {
         Self::IAccountsSettingsPaneStatics3(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ShowManageAccountsForUserAsync)(::windows_core::Interface::as_raw(this), user.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ShowManageAccountsForUserAsync(user.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"System\"`"]
@@ -499,7 +499,7 @@ impl AccountsSettingsPane {
     {
         Self::IAccountsSettingsPaneStatics3(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ShowAddAccountForUserAsync)(::windows_core::Interface::as_raw(this), user.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ShowAddAccountForUserAsync(user.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -541,7 +541,7 @@ impl AccountsSettingsPaneCommandsRequestedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WebAccountProviderCommands)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WebAccountProviderCommands(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -550,7 +550,7 @@ impl AccountsSettingsPaneCommandsRequestedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WebAccountCommands)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WebAccountCommands(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -559,7 +559,7 @@ impl AccountsSettingsPaneCommandsRequestedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CredentialCommands)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CredentialCommands(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"UI_Popups\"`"]
@@ -568,25 +568,25 @@ impl AccountsSettingsPaneCommandsRequestedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Commands)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Commands(&mut result__)).from_abi(result__)
         }
     }
     pub fn HeaderText(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HeaderText)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HeaderText(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetHeaderText(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetHeaderText)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetHeaderText(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn GetDeferral(&self) -> ::windows_core::Result<AccountsSettingsPaneEventDeferral> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDeferral)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDeferral(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"System\"`"]
@@ -595,7 +595,7 @@ impl AccountsSettingsPaneCommandsRequestedEventArgs {
         let this = &::windows_core::ComInterface::cast::<IAccountsSettingsPaneCommandsRequestedEventArgs2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).User)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.User(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -618,7 +618,7 @@ pub struct AccountsSettingsPaneEventDeferral(::windows_core::IUnknown);
 impl AccountsSettingsPaneEventDeferral {
     pub fn Complete(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Complete)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Complete()).ok() }
     }
 }
 impl ::windows_core::RuntimeType for AccountsSettingsPaneEventDeferral {
@@ -644,14 +644,14 @@ impl CredentialCommand {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PasswordCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PasswordCredential(&mut result__)).from_abi(result__)
         }
     }
     pub fn CredentialDeleted(&self) -> ::windows_core::Result<CredentialCommandCredentialDeletedHandler> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CredentialDeleted)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CredentialDeleted(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -662,7 +662,7 @@ impl CredentialCommand {
     {
         Self::ICredentialCommandFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateCredentialCommand)(::windows_core::Interface::as_raw(this), passwordcredential.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateCredentialCommand(passwordcredential.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -674,7 +674,7 @@ impl CredentialCommand {
     {
         Self::ICredentialCommandFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateCredentialCommandWithHandler)(::windows_core::Interface::as_raw(this), passwordcredential.into_param().abi(), deleted.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateCredentialCommandWithHandler(passwordcredential.into_param().abi(), deleted.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -712,7 +712,7 @@ impl SettingsCommand {
     {
         Self::ISettingsCommandFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateSettingsCommand)(::windows_core::Interface::as_raw(this), settingscommandid.into_param().abi(), ::core::mem::transmute_copy(label), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateSettingsCommand(settingscommandid.into_param().abi(), ::core::mem::transmute_copy(label), handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"UI_Popups\"`"]
@@ -720,7 +720,7 @@ impl SettingsCommand {
     pub fn AccountsCommand() -> ::windows_core::Result<SettingsCommand> {
         Self::ISettingsCommandStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AccountsCommand)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AccountsCommand(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"UI_Popups\"`"]
@@ -729,14 +729,14 @@ impl SettingsCommand {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Label)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Label(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Popups\"`"]
     #[cfg(feature = "UI_Popups")]
     pub fn SetLabel(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetLabel)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLabel(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"UI_Popups\"`"]
     #[cfg(feature = "UI_Popups")]
@@ -744,7 +744,7 @@ impl SettingsCommand {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Invoked)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Invoked(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Popups\"`"]
@@ -754,7 +754,7 @@ impl SettingsCommand {
         P0: ::windows_core::IntoParam<super::Popups::UICommandInvokedHandler>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetInvoked)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetInvoked(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"UI_Popups\"`"]
     #[cfg(feature = "UI_Popups")]
@@ -762,7 +762,7 @@ impl SettingsCommand {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Popups\"`"]
@@ -772,7 +772,7 @@ impl SettingsCommand {
         P0: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetId)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetId(value.into_param().abi())).ok() }
     }
     #[doc(hidden)]
     pub fn ISettingsCommandFactory<R, F: FnOnce(&ISettingsCommandFactory) -> ::windows_core::Result<R>>(callback: F) -> ::windows_core::Result<R> {
@@ -821,34 +821,34 @@ impl SettingsPane {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CommandsRequested)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CommandsRequested(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"deprecated\"`"]
     #[cfg(all(feature = "Foundation", feature = "deprecated"))]
     pub fn RemoveCommandsRequested(&self, cookie: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveCommandsRequested)(::windows_core::Interface::as_raw(this), cookie).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveCommandsRequested(cookie)).ok() }
     }
     #[doc = "Required features: `\"deprecated\"`"]
     #[cfg(feature = "deprecated")]
     pub fn GetForCurrentView() -> ::windows_core::Result<SettingsPane> {
         Self::ISettingsPaneStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForCurrentView)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForCurrentView(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"deprecated\"`"]
     #[cfg(feature = "deprecated")]
     pub fn Show() -> ::windows_core::Result<()> {
-        Self::ISettingsPaneStatics(|this| unsafe { (::windows_core::Interface::vtable(this).Show)(::windows_core::Interface::as_raw(this)).ok() })
+        Self::ISettingsPaneStatics(|this| unsafe { ::windows_core::vcall!(this.Show()).ok() })
     }
     #[doc = "Required features: `\"deprecated\"`"]
     #[cfg(feature = "deprecated")]
     pub fn Edge() -> ::windows_core::Result<SettingsEdgeLocation> {
         Self::ISettingsPaneStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Edge)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Edge(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -889,7 +889,7 @@ impl SettingsPaneCommandsRequest {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ApplicationCommands)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ApplicationCommands(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -924,7 +924,7 @@ impl SettingsPaneCommandsRequestedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Request)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Request(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -956,21 +956,21 @@ impl WebAccountCommand {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WebAccount)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WebAccount(&mut result__)).from_abi(result__)
         }
     }
     pub fn Invoked(&self) -> ::windows_core::Result<WebAccountCommandInvokedHandler> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Invoked)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Invoked(&mut result__)).from_abi(result__)
         }
     }
     pub fn Actions(&self) -> ::windows_core::Result<SupportedWebAccountActions> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Actions)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Actions(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -982,7 +982,7 @@ impl WebAccountCommand {
     {
         Self::IWebAccountCommandFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWebAccountCommand)(::windows_core::Interface::as_raw(this), webaccount.into_param().abi(), invoked.into_param().abi(), actions, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWebAccountCommand(webaccount.into_param().abi(), invoked.into_param().abi(), actions, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1012,7 +1012,7 @@ impl WebAccountInvokedArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Action)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Action(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1039,14 +1039,14 @@ impl WebAccountProviderCommand {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WebAccountProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WebAccountProvider(&mut result__)).from_abi(result__)
         }
     }
     pub fn Invoked(&self) -> ::windows_core::Result<WebAccountProviderCommandInvokedHandler> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Invoked)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Invoked(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -1058,7 +1058,7 @@ impl WebAccountProviderCommand {
     {
         Self::IWebAccountProviderCommandFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWebAccountProviderCommand)(::windows_core::Interface::as_raw(this), webaccountprovider.into_param().abi(), invoked.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWebAccountProviderCommand(webaccountprovider.into_param().abi(), invoked.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1229,7 +1229,7 @@ impl CredentialCommandCredentialDeletedHandler {
         P0: ::windows_core::IntoParam<CredentialCommand>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), command.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(command.into_param().abi())).ok() }
     }
 }
 #[repr(C)]
@@ -1302,7 +1302,7 @@ impl WebAccountCommandInvokedHandler {
         P1: ::windows_core::IntoParam<WebAccountInvokedArgs>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), command.into_param().abi(), args.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(command.into_param().abi(), args.into_param().abi())).ok() }
     }
 }
 #[repr(C)]
@@ -1374,7 +1374,7 @@ impl WebAccountProviderCommandInvokedHandler {
         P0: ::windows_core::IntoParam<WebAccountProviderCommand>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), command.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(command.into_param().abi())).ok() }
     }
 }
 #[repr(C)]

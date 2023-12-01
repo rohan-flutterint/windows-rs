@@ -9,7 +9,7 @@ impl IAdaptiveNotificationContent {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Kind)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Kind(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -18,7 +18,7 @@ impl IAdaptiveNotificationContent {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Hints)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Hints(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1521,7 +1521,7 @@ impl AdaptiveNotificationText {
         let this = &::windows_core::ComInterface::cast::<IAdaptiveNotificationContent>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Kind)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Kind(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1530,30 +1530,30 @@ impl AdaptiveNotificationText {
         let this = &::windows_core::ComInterface::cast::<IAdaptiveNotificationContent>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Hints)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Hints(&mut result__)).from_abi(result__)
         }
     }
     pub fn Text(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Text)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Text(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetText(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetText)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetText(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Language(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Language)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Language(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetLanguage(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetLanguage)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLanguage(::core::mem::transmute_copy(value))).ok() }
     }
 }
 impl ::windows_core::RuntimeType for AdaptiveNotificationText {
@@ -1582,7 +1582,7 @@ impl BadgeNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Content)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Content(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1592,7 +1592,7 @@ impl BadgeNotification {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<super::super::Foundation::DateTime>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetExpirationTime)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetExpirationTime(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1600,7 +1600,7 @@ impl BadgeNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExpirationTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExpirationTime(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Data_Xml_Dom\"`"]
@@ -1611,7 +1611,7 @@ impl BadgeNotification {
     {
         Self::IBadgeNotificationFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateBadgeNotification)(::windows_core::Interface::as_raw(this), content.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateBadgeNotification(content.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1640,19 +1640,19 @@ impl BadgeUpdateManager {
     pub fn CreateBadgeUpdaterForApplication() -> ::windows_core::Result<BadgeUpdater> {
         Self::IBadgeUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateBadgeUpdaterForApplication)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateBadgeUpdaterForApplication(&mut result__)).from_abi(result__)
         })
     }
     pub fn CreateBadgeUpdaterForApplicationWithId(applicationid: &::windows_core::HSTRING) -> ::windows_core::Result<BadgeUpdater> {
         Self::IBadgeUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateBadgeUpdaterForApplicationWithId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(applicationid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateBadgeUpdaterForApplicationWithId(::core::mem::transmute_copy(applicationid), &mut result__)).from_abi(result__)
         })
     }
     pub fn CreateBadgeUpdaterForSecondaryTile(tileid: &::windows_core::HSTRING) -> ::windows_core::Result<BadgeUpdater> {
         Self::IBadgeUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateBadgeUpdaterForSecondaryTile)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(tileid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateBadgeUpdaterForSecondaryTile(::core::mem::transmute_copy(tileid), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Data_Xml_Dom\"`"]
@@ -1660,7 +1660,7 @@ impl BadgeUpdateManager {
     pub fn GetTemplateContent(r#type: BadgeTemplateType) -> ::windows_core::Result<super::super::Data::Xml::Dom::XmlDocument> {
         Self::IBadgeUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetTemplateContent)(::windows_core::Interface::as_raw(this), r#type, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetTemplateContent(r#type, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"System\"`"]
@@ -1671,7 +1671,7 @@ impl BadgeUpdateManager {
     {
         Self::IBadgeUpdateManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForUser)(::windows_core::Interface::as_raw(this), user.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForUser(user.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1696,21 +1696,21 @@ impl BadgeUpdateManagerForUser {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateBadgeUpdaterForApplication)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateBadgeUpdaterForApplication(&mut result__)).from_abi(result__)
         }
     }
     pub fn CreateBadgeUpdaterForApplicationWithId(&self, applicationid: &::windows_core::HSTRING) -> ::windows_core::Result<BadgeUpdater> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateBadgeUpdaterForApplicationWithId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(applicationid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateBadgeUpdaterForApplicationWithId(::core::mem::transmute_copy(applicationid), &mut result__)).from_abi(result__)
         }
     }
     pub fn CreateBadgeUpdaterForSecondaryTile(&self, tileid: &::windows_core::HSTRING) -> ::windows_core::Result<BadgeUpdater> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateBadgeUpdaterForSecondaryTile)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(tileid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateBadgeUpdaterForSecondaryTile(::core::mem::transmute_copy(tileid), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"System\"`"]
@@ -1719,7 +1719,7 @@ impl BadgeUpdateManagerForUser {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).User)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.User(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1747,11 +1747,11 @@ impl BadgeUpdater {
         P0: ::windows_core::IntoParam<BadgeNotification>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Update)(::windows_core::Interface::as_raw(this), notification.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Update(notification.into_param().abi())).ok() }
     }
     pub fn Clear(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Clear)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Clear()).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1760,7 +1760,7 @@ impl BadgeUpdater {
         P0: ::windows_core::IntoParam<super::super::Foundation::Uri>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).StartPeriodicUpdate)(::windows_core::Interface::as_raw(this), badgecontent.into_param().abi(), requestedinterval).ok() }
+        unsafe { ::windows_core::vcall!(this.StartPeriodicUpdate(badgecontent.into_param().abi(), requestedinterval)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1769,11 +1769,11 @@ impl BadgeUpdater {
         P0: ::windows_core::IntoParam<super::super::Foundation::Uri>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).StartPeriodicUpdateAtTime)(::windows_core::Interface::as_raw(this), badgecontent.into_param().abi(), starttime, requestedinterval).ok() }
+        unsafe { ::windows_core::vcall!(this.StartPeriodicUpdateAtTime(badgecontent.into_param().abi(), starttime, requestedinterval)).ok() }
     }
     pub fn StopPeriodicUpdate(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).StopPeriodicUpdate)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.StopPeriodicUpdate()).ok() }
     }
 }
 impl ::windows_core::RuntimeType for BadgeUpdater {
@@ -1796,37 +1796,37 @@ impl KnownAdaptiveNotificationHints {
     pub fn Style() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationHintsStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Style)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Style(&mut result__)).from_abi(result__)
         })
     }
     pub fn Wrap() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationHintsStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Wrap)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Wrap(&mut result__)).from_abi(result__)
         })
     }
     pub fn MaxLines() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationHintsStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MaxLines)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MaxLines(&mut result__)).from_abi(result__)
         })
     }
     pub fn MinLines() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationHintsStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MinLines)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MinLines(&mut result__)).from_abi(result__)
         })
     }
     pub fn TextStacking() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationHintsStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TextStacking)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TextStacking(&mut result__)).from_abi(result__)
         })
     }
     pub fn Align() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationHintsStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Align)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Align(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1843,115 +1843,115 @@ impl KnownAdaptiveNotificationTextStyles {
     pub fn Caption() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Caption)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Caption(&mut result__)).from_abi(result__)
         })
     }
     pub fn Body() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Body)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Body(&mut result__)).from_abi(result__)
         })
     }
     pub fn Base() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Base)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Base(&mut result__)).from_abi(result__)
         })
     }
     pub fn Subtitle() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Subtitle)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Subtitle(&mut result__)).from_abi(result__)
         })
     }
     pub fn Title() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Title)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Title(&mut result__)).from_abi(result__)
         })
     }
     pub fn Subheader() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Subheader)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Subheader(&mut result__)).from_abi(result__)
         })
     }
     pub fn Header() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Header)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Header(&mut result__)).from_abi(result__)
         })
     }
     pub fn TitleNumeral() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TitleNumeral)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TitleNumeral(&mut result__)).from_abi(result__)
         })
     }
     pub fn SubheaderNumeral() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SubheaderNumeral)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SubheaderNumeral(&mut result__)).from_abi(result__)
         })
     }
     pub fn HeaderNumeral() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HeaderNumeral)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HeaderNumeral(&mut result__)).from_abi(result__)
         })
     }
     pub fn CaptionSubtle() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CaptionSubtle)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CaptionSubtle(&mut result__)).from_abi(result__)
         })
     }
     pub fn BodySubtle() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BodySubtle)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BodySubtle(&mut result__)).from_abi(result__)
         })
     }
     pub fn BaseSubtle() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BaseSubtle)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BaseSubtle(&mut result__)).from_abi(result__)
         })
     }
     pub fn SubtitleSubtle() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SubtitleSubtle)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SubtitleSubtle(&mut result__)).from_abi(result__)
         })
     }
     pub fn TitleSubtle() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TitleSubtle)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TitleSubtle(&mut result__)).from_abi(result__)
         })
     }
     pub fn SubheaderSubtle() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SubheaderSubtle)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SubheaderSubtle(&mut result__)).from_abi(result__)
         })
     }
     pub fn SubheaderNumeralSubtle() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SubheaderNumeralSubtle)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SubheaderNumeralSubtle(&mut result__)).from_abi(result__)
         })
     }
     pub fn HeaderSubtle() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HeaderSubtle)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HeaderSubtle(&mut result__)).from_abi(result__)
         })
     }
     pub fn HeaderNumeralSubtle() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownAdaptiveNotificationTextStylesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HeaderNumeralSubtle)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HeaderNumeralSubtle(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1968,7 +1968,7 @@ impl KnownNotificationBindings {
     pub fn ToastGeneric() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKnownNotificationBindingsStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ToastGeneric)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ToastGeneric(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1997,7 +1997,7 @@ impl Notification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExpirationTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExpirationTime(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2007,13 +2007,13 @@ impl Notification {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<super::super::Foundation::DateTime>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetExpirationTime)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetExpirationTime(value.try_into_param()?.abi())).ok() }
     }
     pub fn Visual(&self) -> ::windows_core::Result<NotificationVisual> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Visual)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Visual(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetVisual<P0>(&self, value: P0) -> ::windows_core::Result<()>
@@ -2021,7 +2021,7 @@ impl Notification {
         P0: ::windows_core::IntoParam<NotificationVisual>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetVisual)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetVisual(value.into_param().abi())).ok() }
     }
 }
 impl ::windows_core::RuntimeType for Notification {
@@ -2047,23 +2047,23 @@ impl NotificationBinding {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Template)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Template(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTemplate(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTemplate)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTemplate(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Language(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Language)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Language(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetLanguage(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetLanguage)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLanguage(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -2071,7 +2071,7 @@ impl NotificationBinding {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Hints)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Hints(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2080,7 +2080,7 @@ impl NotificationBinding {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetTextElements)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetTextElements(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2116,19 +2116,19 @@ impl NotificationData {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Values)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Values(&mut result__)).from_abi(result__)
         }
     }
     pub fn SequenceNumber(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SequenceNumber)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SequenceNumber(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetSequenceNumber(&self, value: u32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetSequenceNumber)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetSequenceNumber(value)).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -2138,7 +2138,7 @@ impl NotificationData {
     {
         Self::INotificationDataFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateNotificationDataWithValuesAndSequenceNumber)(::windows_core::Interface::as_raw(this), initialvalues.try_into_param()?.abi(), sequencenumber, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateNotificationDataWithValuesAndSequenceNumber(initialvalues.try_into_param()?.abi(), sequencenumber, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2149,7 +2149,7 @@ impl NotificationData {
     {
         Self::INotificationDataFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateNotificationDataWithValues)(::windows_core::Interface::as_raw(this), initialvalues.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateNotificationDataWithValues(initialvalues.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2181,12 +2181,12 @@ impl NotificationVisual {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Language)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Language(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetLanguage(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetLanguage)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLanguage(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -2194,14 +2194,14 @@ impl NotificationVisual {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Bindings)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Bindings(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetBinding(&self, templatename: &::windows_core::HSTRING) -> ::windows_core::Result<NotificationBinding> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetBinding)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(templatename), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetBinding(::core::mem::transmute_copy(templatename), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -2230,7 +2230,7 @@ impl ScheduledTileNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Content)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Content(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2239,7 +2239,7 @@ impl ScheduledTileNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DeliveryTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DeliveryTime(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2249,7 +2249,7 @@ impl ScheduledTileNotification {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<super::super::Foundation::DateTime>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetExpirationTime)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetExpirationTime(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2257,29 +2257,29 @@ impl ScheduledTileNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExpirationTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExpirationTime(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTag(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTag)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTag(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Tag(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Tag)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Tag(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetId(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetId(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Id(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Data_Xml_Dom\"`, `\"Foundation\"`"]
@@ -2290,7 +2290,7 @@ impl ScheduledTileNotification {
     {
         Self::IScheduledTileNotificationFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateScheduledTileNotification)(::windows_core::Interface::as_raw(this), content.into_param().abi(), deliverytime, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateScheduledTileNotification(content.into_param().abi(), deliverytime, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2324,7 +2324,7 @@ impl ScheduledToastNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Content)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Content(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2333,7 +2333,7 @@ impl ScheduledToastNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DeliveryTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DeliveryTime(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2342,81 +2342,81 @@ impl ScheduledToastNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SnoozeInterval)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SnoozeInterval(&mut result__)).from_abi(result__)
         }
     }
     pub fn MaximumSnoozeCount(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MaximumSnoozeCount)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MaximumSnoozeCount(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetId(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetId(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Id(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTag(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetTag)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTag(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Tag(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Tag)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Tag(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetGroup(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetGroup)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetGroup(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Group(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Group)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Group(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetSuppressPopup(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetSuppressPopup)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetSuppressPopup(value)).ok() }
     }
     pub fn SuppressPopup(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SuppressPopup)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SuppressPopup(&mut result__)).from_abi(result__)
         }
     }
     pub fn NotificationMirroring(&self) -> ::windows_core::Result<NotificationMirroring> {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NotificationMirroring)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NotificationMirroring(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetNotificationMirroring(&self, value: NotificationMirroring) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetNotificationMirroring)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetNotificationMirroring(value)).ok() }
     }
     pub fn RemoteId(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RemoteId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RemoteId(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRemoteId(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetRemoteId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRemoteId(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2424,7 +2424,7 @@ impl ScheduledToastNotification {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification4>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExpirationTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExpirationTime(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2434,7 +2434,7 @@ impl ScheduledToastNotification {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<super::super::Foundation::DateTime>>,
     {
         let this = &::windows_core::ComInterface::cast::<IScheduledToastNotification4>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetExpirationTime)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetExpirationTime(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Data_Xml_Dom\"`, `\"Foundation\"`"]
     #[cfg(all(feature = "Data_Xml_Dom", feature = "Foundation"))]
@@ -2444,7 +2444,7 @@ impl ScheduledToastNotification {
     {
         Self::IScheduledToastNotificationFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateScheduledToastNotification)(::windows_core::Interface::as_raw(this), content.into_param().abi(), deliverytime, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateScheduledToastNotification(content.into_param().abi(), deliverytime, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Data_Xml_Dom\"`, `\"Foundation\"`"]
@@ -2455,7 +2455,7 @@ impl ScheduledToastNotification {
     {
         Self::IScheduledToastNotificationFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateScheduledToastNotificationRecurring)(::windows_core::Interface::as_raw(this), content.into_param().abi(), deliverytime, snoozeinterval, maximumsnoozecount, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateScheduledToastNotificationRecurring(content.into_param().abi(), deliverytime, snoozeinterval, maximumsnoozecount, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2487,18 +2487,18 @@ impl ScheduledToastNotificationShowingEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Cancel)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Cancel(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCancel(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetCancel)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCancel(value)).ok() }
     }
     pub fn ScheduledToastNotification(&self) -> ::windows_core::Result<ScheduledToastNotification> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ScheduledToastNotification)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ScheduledToastNotification(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2507,7 +2507,7 @@ impl ScheduledToastNotificationShowingEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDeferral)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDeferral(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2534,7 +2534,7 @@ impl ShownTileNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Arguments)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Arguments(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2563,7 +2563,7 @@ impl TileFlyoutNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Content)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Content(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2573,7 +2573,7 @@ impl TileFlyoutNotification {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<super::super::Foundation::DateTime>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetExpirationTime)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetExpirationTime(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2581,7 +2581,7 @@ impl TileFlyoutNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExpirationTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExpirationTime(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Data_Xml_Dom\"`"]
@@ -2592,7 +2592,7 @@ impl TileFlyoutNotification {
     {
         Self::ITileFlyoutNotificationFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTileFlyoutNotification)(::windows_core::Interface::as_raw(this), content.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTileFlyoutNotification(content.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2621,19 +2621,19 @@ impl TileFlyoutUpdateManager {
     pub fn CreateTileFlyoutUpdaterForApplication() -> ::windows_core::Result<TileFlyoutUpdater> {
         Self::ITileFlyoutUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTileFlyoutUpdaterForApplication)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTileFlyoutUpdaterForApplication(&mut result__)).from_abi(result__)
         })
     }
     pub fn CreateTileFlyoutUpdaterForApplicationWithId(applicationid: &::windows_core::HSTRING) -> ::windows_core::Result<TileFlyoutUpdater> {
         Self::ITileFlyoutUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTileFlyoutUpdaterForApplicationWithId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(applicationid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTileFlyoutUpdaterForApplicationWithId(::core::mem::transmute_copy(applicationid), &mut result__)).from_abi(result__)
         })
     }
     pub fn CreateTileFlyoutUpdaterForSecondaryTile(tileid: &::windows_core::HSTRING) -> ::windows_core::Result<TileFlyoutUpdater> {
         Self::ITileFlyoutUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTileFlyoutUpdaterForSecondaryTile)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(tileid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTileFlyoutUpdaterForSecondaryTile(::core::mem::transmute_copy(tileid), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Data_Xml_Dom\"`"]
@@ -2641,7 +2641,7 @@ impl TileFlyoutUpdateManager {
     pub fn GetTemplateContent(r#type: TileFlyoutTemplateType) -> ::windows_core::Result<super::super::Data::Xml::Dom::XmlDocument> {
         Self::ITileFlyoutUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetTemplateContent)(::windows_core::Interface::as_raw(this), r#type, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetTemplateContent(r#type, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2662,11 +2662,11 @@ impl TileFlyoutUpdater {
         P0: ::windows_core::IntoParam<TileFlyoutNotification>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Update)(::windows_core::Interface::as_raw(this), notification.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Update(notification.into_param().abi())).ok() }
     }
     pub fn Clear(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Clear)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Clear()).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2675,7 +2675,7 @@ impl TileFlyoutUpdater {
         P0: ::windows_core::IntoParam<super::super::Foundation::Uri>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).StartPeriodicUpdate)(::windows_core::Interface::as_raw(this), tileflyoutcontent.into_param().abi(), requestedinterval).ok() }
+        unsafe { ::windows_core::vcall!(this.StartPeriodicUpdate(tileflyoutcontent.into_param().abi(), requestedinterval)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2684,17 +2684,17 @@ impl TileFlyoutUpdater {
         P0: ::windows_core::IntoParam<super::super::Foundation::Uri>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).StartPeriodicUpdateAtTime)(::windows_core::Interface::as_raw(this), tileflyoutcontent.into_param().abi(), starttime, requestedinterval).ok() }
+        unsafe { ::windows_core::vcall!(this.StartPeriodicUpdateAtTime(tileflyoutcontent.into_param().abi(), starttime, requestedinterval)).ok() }
     }
     pub fn StopPeriodicUpdate(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).StopPeriodicUpdate)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.StopPeriodicUpdate()).ok() }
     }
     pub fn Setting(&self) -> ::windows_core::Result<NotificationSetting> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Setting)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Setting(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2721,7 +2721,7 @@ impl TileNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Content)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Content(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2731,7 +2731,7 @@ impl TileNotification {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<super::super::Foundation::DateTime>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetExpirationTime)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetExpirationTime(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2739,18 +2739,18 @@ impl TileNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExpirationTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExpirationTime(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTag(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTag)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTag(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Tag(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Tag)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Tag(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Data_Xml_Dom\"`"]
@@ -2761,7 +2761,7 @@ impl TileNotification {
     {
         Self::ITileNotificationFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTileNotification)(::windows_core::Interface::as_raw(this), content.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTileNotification(content.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2790,19 +2790,19 @@ impl TileUpdateManager {
     pub fn CreateTileUpdaterForApplication() -> ::windows_core::Result<TileUpdater> {
         Self::ITileUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTileUpdaterForApplication)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTileUpdaterForApplication(&mut result__)).from_abi(result__)
         })
     }
     pub fn CreateTileUpdaterForApplicationWithId(applicationid: &::windows_core::HSTRING) -> ::windows_core::Result<TileUpdater> {
         Self::ITileUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTileUpdaterForApplicationWithId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(applicationid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTileUpdaterForApplicationWithId(::core::mem::transmute_copy(applicationid), &mut result__)).from_abi(result__)
         })
     }
     pub fn CreateTileUpdaterForSecondaryTile(tileid: &::windows_core::HSTRING) -> ::windows_core::Result<TileUpdater> {
         Self::ITileUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTileUpdaterForSecondaryTile)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(tileid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTileUpdaterForSecondaryTile(::core::mem::transmute_copy(tileid), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Data_Xml_Dom\"`"]
@@ -2810,7 +2810,7 @@ impl TileUpdateManager {
     pub fn GetTemplateContent(r#type: TileTemplateType) -> ::windows_core::Result<super::super::Data::Xml::Dom::XmlDocument> {
         Self::ITileUpdateManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetTemplateContent)(::windows_core::Interface::as_raw(this), r#type, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetTemplateContent(r#type, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"System\"`"]
@@ -2821,7 +2821,7 @@ impl TileUpdateManager {
     {
         Self::ITileUpdateManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForUser)(::windows_core::Interface::as_raw(this), user.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForUser(user.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2846,21 +2846,21 @@ impl TileUpdateManagerForUser {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTileUpdaterForApplication)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTileUpdaterForApplication(&mut result__)).from_abi(result__)
         }
     }
     pub fn CreateTileUpdaterForApplicationWithId(&self, applicationid: &::windows_core::HSTRING) -> ::windows_core::Result<TileUpdater> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTileUpdaterForApplicationWithId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(applicationid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTileUpdaterForApplicationWithId(::core::mem::transmute_copy(applicationid), &mut result__)).from_abi(result__)
         }
     }
     pub fn CreateTileUpdaterForSecondaryTile(&self, tileid: &::windows_core::HSTRING) -> ::windows_core::Result<TileUpdater> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTileUpdaterForSecondaryTile)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(tileid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTileUpdaterForSecondaryTile(::core::mem::transmute_copy(tileid), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"System\"`"]
@@ -2869,7 +2869,7 @@ impl TileUpdateManagerForUser {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).User)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.User(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2897,21 +2897,21 @@ impl TileUpdater {
         P0: ::windows_core::IntoParam<TileNotification>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Update)(::windows_core::Interface::as_raw(this), notification.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Update(notification.into_param().abi())).ok() }
     }
     pub fn Clear(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Clear)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Clear()).ok() }
     }
     pub fn EnableNotificationQueue(&self, enable: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).EnableNotificationQueue)(::windows_core::Interface::as_raw(this), enable).ok() }
+        unsafe { ::windows_core::vcall!(this.EnableNotificationQueue(enable)).ok() }
     }
     pub fn Setting(&self) -> ::windows_core::Result<NotificationSetting> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Setting)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Setting(&mut result__)).from_abi(result__)
         }
     }
     pub fn AddToSchedule<P0>(&self, scheduledtile: P0) -> ::windows_core::Result<()>
@@ -2919,14 +2919,14 @@ impl TileUpdater {
         P0: ::windows_core::IntoParam<ScheduledTileNotification>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).AddToSchedule)(::windows_core::Interface::as_raw(this), scheduledtile.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.AddToSchedule(scheduledtile.into_param().abi())).ok() }
     }
     pub fn RemoveFromSchedule<P0>(&self, scheduledtile: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ScheduledTileNotification>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveFromSchedule)(::windows_core::Interface::as_raw(this), scheduledtile.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveFromSchedule(scheduledtile.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -2934,7 +2934,7 @@ impl TileUpdater {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetScheduledTileNotifications)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetScheduledTileNotifications(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2944,7 +2944,7 @@ impl TileUpdater {
         P0: ::windows_core::IntoParam<super::super::Foundation::Uri>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).StartPeriodicUpdate)(::windows_core::Interface::as_raw(this), tilecontent.into_param().abi(), requestedinterval).ok() }
+        unsafe { ::windows_core::vcall!(this.StartPeriodicUpdate(tilecontent.into_param().abi(), requestedinterval)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2953,11 +2953,11 @@ impl TileUpdater {
         P0: ::windows_core::IntoParam<super::super::Foundation::Uri>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).StartPeriodicUpdateAtTime)(::windows_core::Interface::as_raw(this), tilecontent.into_param().abi(), starttime, requestedinterval).ok() }
+        unsafe { ::windows_core::vcall!(this.StartPeriodicUpdateAtTime(tilecontent.into_param().abi(), starttime, requestedinterval)).ok() }
     }
     pub fn StopPeriodicUpdate(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).StopPeriodicUpdate)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.StopPeriodicUpdate()).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -2966,7 +2966,7 @@ impl TileUpdater {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IIterable<super::super::Foundation::Uri>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).StartPeriodicUpdateBatch)(::windows_core::Interface::as_raw(this), tilecontents.try_into_param()?.abi(), requestedinterval).ok() }
+        unsafe { ::windows_core::vcall!(this.StartPeriodicUpdateBatch(tilecontents.try_into_param()?.abi(), requestedinterval)).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -2975,19 +2975,19 @@ impl TileUpdater {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IIterable<super::super::Foundation::Uri>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).StartPeriodicUpdateBatchAtTime)(::windows_core::Interface::as_raw(this), tilecontents.try_into_param()?.abi(), starttime, requestedinterval).ok() }
+        unsafe { ::windows_core::vcall!(this.StartPeriodicUpdateBatchAtTime(tilecontents.try_into_param()?.abi(), starttime, requestedinterval)).ok() }
     }
     pub fn EnableNotificationQueueForSquare150x150(&self, enable: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<ITileUpdater2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).EnableNotificationQueueForSquare150x150)(::windows_core::Interface::as_raw(this), enable).ok() }
+        unsafe { ::windows_core::vcall!(this.EnableNotificationQueueForSquare150x150(enable)).ok() }
     }
     pub fn EnableNotificationQueueForWide310x150(&self, enable: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<ITileUpdater2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).EnableNotificationQueueForWide310x150)(::windows_core::Interface::as_raw(this), enable).ok() }
+        unsafe { ::windows_core::vcall!(this.EnableNotificationQueueForWide310x150(enable)).ok() }
     }
     pub fn EnableNotificationQueueForSquare310x310(&self, enable: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<ITileUpdater2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).EnableNotificationQueueForSquare310x310)(::windows_core::Interface::as_raw(this), enable).ok() }
+        unsafe { ::windows_core::vcall!(this.EnableNotificationQueueForSquare310x310(enable)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for TileUpdater {
@@ -3013,7 +3013,7 @@ impl ToastActivatedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Arguments)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Arguments(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3022,7 +3022,7 @@ impl ToastActivatedEventArgs {
         let this = &::windows_core::ComInterface::cast::<IToastActivatedEventArgs2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UserInput)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UserInput(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3047,30 +3047,30 @@ impl ToastCollection {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
     pub fn DisplayName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDisplayName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDisplayName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDisplayName(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn LaunchArgs(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LaunchArgs)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LaunchArgs(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetLaunchArgs(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetLaunchArgs)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLaunchArgs(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -3078,7 +3078,7 @@ impl ToastCollection {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Icon)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Icon(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3088,7 +3088,7 @@ impl ToastCollection {
         P0: ::windows_core::IntoParam<super::super::Foundation::Uri>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIcon)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIcon(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -3098,7 +3098,7 @@ impl ToastCollection {
     {
         Self::IToastCollectionFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateInstance)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(collectionid), ::core::mem::transmute_copy(displayname), ::core::mem::transmute_copy(launchargs), iconuri.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateInstance(::core::mem::transmute_copy(collectionid), ::core::mem::transmute_copy(displayname), ::core::mem::transmute_copy(launchargs), iconuri.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -3135,7 +3135,7 @@ impl ToastCollectionManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SaveToastCollectionAsync)(::windows_core::Interface::as_raw(this), collection.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SaveToastCollectionAsync(collection.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3144,7 +3144,7 @@ impl ToastCollectionManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FindAllToastCollectionsAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FindAllToastCollectionsAsync(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3153,7 +3153,7 @@ impl ToastCollectionManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetToastCollectionAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(collectionid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetToastCollectionAsync(::core::mem::transmute_copy(collectionid), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3162,7 +3162,7 @@ impl ToastCollectionManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RemoveToastCollectionAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(collectionid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RemoveToastCollectionAsync(::core::mem::transmute_copy(collectionid), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3171,7 +3171,7 @@ impl ToastCollectionManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RemoveAllToastCollectionsAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RemoveAllToastCollectionsAsync(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"System\"`"]
@@ -3180,14 +3180,14 @@ impl ToastCollectionManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).User)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.User(&mut result__)).from_abi(result__)
         }
     }
     pub fn AppId(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AppId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AppId(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3214,7 +3214,7 @@ impl ToastDismissedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Reason)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Reason(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3241,7 +3241,7 @@ impl ToastFailedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ErrorCode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ErrorCode(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3270,7 +3270,7 @@ impl ToastNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Content)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Content(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3280,7 +3280,7 @@ impl ToastNotification {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<super::super::Foundation::DateTime>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetExpirationTime)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetExpirationTime(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -3288,7 +3288,7 @@ impl ToastNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExpirationTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExpirationTime(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3300,14 +3300,14 @@ impl ToastNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Dismissed)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Dismissed(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveDismissed(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveDismissed)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveDismissed(token)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -3318,14 +3318,14 @@ impl ToastNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Activated)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Activated(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveActivated(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveActivated)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveActivated(token)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -3336,75 +3336,75 @@ impl ToastNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Failed)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Failed(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveFailed(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveFailed)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveFailed(token)).ok() }
     }
     pub fn SetTag(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetTag)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTag(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Tag(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Tag)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Tag(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetGroup(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetGroup)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetGroup(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Group(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Group)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Group(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetSuppressPopup(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetSuppressPopup)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetSuppressPopup(value)).ok() }
     }
     pub fn SuppressPopup(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SuppressPopup)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SuppressPopup(&mut result__)).from_abi(result__)
         }
     }
     pub fn NotificationMirroring(&self) -> ::windows_core::Result<NotificationMirroring> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NotificationMirroring)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NotificationMirroring(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetNotificationMirroring(&self, value: NotificationMirroring) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetNotificationMirroring)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetNotificationMirroring(value)).ok() }
     }
     pub fn RemoteId(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RemoteId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RemoteId(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRemoteId(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetRemoteId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRemoteId(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Data(&self) -> ::windows_core::Result<NotificationData> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification4>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Data)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Data(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetData<P0>(&self, value: P0) -> ::windows_core::Result<()>
@@ -3412,29 +3412,29 @@ impl ToastNotification {
         P0: ::windows_core::IntoParam<NotificationData>,
     {
         let this = &::windows_core::ComInterface::cast::<IToastNotification4>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetData)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetData(value.into_param().abi())).ok() }
     }
     pub fn Priority(&self) -> ::windows_core::Result<ToastNotificationPriority> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification4>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Priority)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Priority(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPriority(&self, value: ToastNotificationPriority) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification4>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetPriority)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPriority(value)).ok() }
     }
     pub fn ExpiresOnReboot(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification6>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExpiresOnReboot)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExpiresOnReboot(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetExpiresOnReboot(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IToastNotification6>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetExpiresOnReboot)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetExpiresOnReboot(value)).ok() }
     }
     #[doc = "Required features: `\"Data_Xml_Dom\"`"]
     #[cfg(feature = "Data_Xml_Dom")]
@@ -3444,7 +3444,7 @@ impl ToastNotification {
     {
         Self::IToastNotificationFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateToastNotification)(::windows_core::Interface::as_raw(this), content.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateToastNotification(content.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -3476,7 +3476,7 @@ impl ToastNotificationActionTriggerDetail {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Argument)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Argument(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3485,7 +3485,7 @@ impl ToastNotificationActionTriggerDetail {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UserInput)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UserInput(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3508,31 +3508,31 @@ pub struct ToastNotificationHistory(::windows_core::IUnknown);
 impl ToastNotificationHistory {
     pub fn RemoveGroup(&self, group: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveGroup)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(group)).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveGroup(::core::mem::transmute_copy(group))).ok() }
     }
     pub fn RemoveGroupWithId(&self, group: &::windows_core::HSTRING, applicationid: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveGroupWithId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(group), ::core::mem::transmute_copy(applicationid)).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveGroupWithId(::core::mem::transmute_copy(group), ::core::mem::transmute_copy(applicationid))).ok() }
     }
     pub fn RemoveGroupedTagWithId(&self, tag: &::windows_core::HSTRING, group: &::windows_core::HSTRING, applicationid: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveGroupedTagWithId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(tag), ::core::mem::transmute_copy(group), ::core::mem::transmute_copy(applicationid)).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveGroupedTagWithId(::core::mem::transmute_copy(tag), ::core::mem::transmute_copy(group), ::core::mem::transmute_copy(applicationid))).ok() }
     }
     pub fn RemoveGroupedTag(&self, tag: &::windows_core::HSTRING, group: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveGroupedTag)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(tag), ::core::mem::transmute_copy(group)).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveGroupedTag(::core::mem::transmute_copy(tag), ::core::mem::transmute_copy(group))).ok() }
     }
     pub fn Remove(&self, tag: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Remove)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(tag)).ok() }
+        unsafe { ::windows_core::vcall!(this.Remove(::core::mem::transmute_copy(tag))).ok() }
     }
     pub fn Clear(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Clear)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Clear()).ok() }
     }
     pub fn ClearWithId(&self, applicationid: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ClearWithId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(applicationid)).ok() }
+        unsafe { ::windows_core::vcall!(this.ClearWithId(::core::mem::transmute_copy(applicationid))).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -3540,7 +3540,7 @@ impl ToastNotificationHistory {
         let this = &::windows_core::ComInterface::cast::<IToastNotificationHistory2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetHistory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetHistory(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3549,7 +3549,7 @@ impl ToastNotificationHistory {
         let this = &::windows_core::ComInterface::cast::<IToastNotificationHistory2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetHistoryWithId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(applicationid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetHistoryWithId(::core::mem::transmute_copy(applicationid), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -3574,14 +3574,14 @@ impl ToastNotificationHistoryChangedTriggerDetail {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ChangeType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ChangeType(&mut result__)).from_abi(result__)
         }
     }
     pub fn CollectionId(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IToastNotificationHistoryChangedTriggerDetail2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CollectionId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CollectionId(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3603,13 +3603,13 @@ impl ToastNotificationManager {
     pub fn CreateToastNotifier() -> ::windows_core::Result<ToastNotifier> {
         Self::IToastNotificationManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateToastNotifier)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateToastNotifier(&mut result__)).from_abi(result__)
         })
     }
     pub fn CreateToastNotifierWithId(applicationid: &::windows_core::HSTRING) -> ::windows_core::Result<ToastNotifier> {
         Self::IToastNotificationManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateToastNotifierWithId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(applicationid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateToastNotifierWithId(::core::mem::transmute_copy(applicationid), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Data_Xml_Dom\"`"]
@@ -3617,13 +3617,13 @@ impl ToastNotificationManager {
     pub fn GetTemplateContent(r#type: ToastTemplateType) -> ::windows_core::Result<super::super::Data::Xml::Dom::XmlDocument> {
         Self::IToastNotificationManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetTemplateContent)(::windows_core::Interface::as_raw(this), r#type, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetTemplateContent(r#type, &mut result__)).from_abi(result__)
         })
     }
     pub fn History() -> ::windows_core::Result<ToastNotificationHistory> {
         Self::IToastNotificationManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).History)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.History(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"System\"`"]
@@ -3634,16 +3634,16 @@ impl ToastNotificationManager {
     {
         Self::IToastNotificationManagerStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForUser)(::windows_core::Interface::as_raw(this), user.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForUser(user.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     pub fn ConfigureNotificationMirroring(value: NotificationMirroring) -> ::windows_core::Result<()> {
-        Self::IToastNotificationManagerStatics4(|this| unsafe { (::windows_core::Interface::vtable(this).ConfigureNotificationMirroring)(::windows_core::Interface::as_raw(this), value).ok() })
+        Self::IToastNotificationManagerStatics4(|this| unsafe { ::windows_core::vcall!(this.ConfigureNotificationMirroring(value)).ok() })
     }
     pub fn GetDefault() -> ::windows_core::Result<ToastNotificationManagerForUser> {
         Self::IToastNotificationManagerStatics5(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDefault)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDefault(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -3678,21 +3678,21 @@ impl ToastNotificationManagerForUser {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateToastNotifier)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateToastNotifier(&mut result__)).from_abi(result__)
         }
     }
     pub fn CreateToastNotifierWithId(&self, applicationid: &::windows_core::HSTRING) -> ::windows_core::Result<ToastNotifier> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateToastNotifierWithId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(applicationid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateToastNotifierWithId(::core::mem::transmute_copy(applicationid), &mut result__)).from_abi(result__)
         }
     }
     pub fn History(&self) -> ::windows_core::Result<ToastNotificationHistory> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).History)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.History(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"System\"`"]
@@ -3701,7 +3701,7 @@ impl ToastNotificationManagerForUser {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).User)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.User(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3710,7 +3710,7 @@ impl ToastNotificationManagerForUser {
         let this = &::windows_core::ComInterface::cast::<IToastNotificationManagerForUser2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetToastNotifierForToastCollectionIdAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(collectionid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetToastNotifierForToastCollectionIdAsync(::core::mem::transmute_copy(collectionid), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3719,28 +3719,28 @@ impl ToastNotificationManagerForUser {
         let this = &::windows_core::ComInterface::cast::<IToastNotificationManagerForUser2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetHistoryForToastCollectionIdAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(collectionid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetHistoryForToastCollectionIdAsync(::core::mem::transmute_copy(collectionid), &mut result__)).from_abi(result__)
         }
     }
     pub fn GetToastCollectionManager(&self) -> ::windows_core::Result<ToastCollectionManager> {
         let this = &::windows_core::ComInterface::cast::<IToastNotificationManagerForUser2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetToastCollectionManager)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetToastCollectionManager(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetToastCollectionManagerWithAppId(&self, appid: &::windows_core::HSTRING) -> ::windows_core::Result<ToastCollectionManager> {
         let this = &::windows_core::ComInterface::cast::<IToastNotificationManagerForUser2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetToastCollectionManagerWithAppId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(appid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetToastCollectionManagerWithAppId(::core::mem::transmute_copy(appid), &mut result__)).from_abi(result__)
         }
     }
     pub fn NotificationMode(&self) -> ::windows_core::Result<ToastNotificationMode> {
         let this = &::windows_core::ComInterface::cast::<IToastNotificationManagerForUser3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NotificationMode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NotificationMode(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3752,14 +3752,14 @@ impl ToastNotificationManagerForUser {
         let this = &::windows_core::ComInterface::cast::<IToastNotificationManagerForUser3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NotificationModeChanged)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NotificationModeChanged(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveNotificationModeChanged(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IToastNotificationManagerForUser3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveNotificationModeChanged)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveNotificationModeChanged(token)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for ToastNotificationManagerForUser {
@@ -3786,20 +3786,20 @@ impl ToastNotifier {
         P0: ::windows_core::IntoParam<ToastNotification>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Show)(::windows_core::Interface::as_raw(this), notification.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Show(notification.into_param().abi())).ok() }
     }
     pub fn Hide<P0>(&self, notification: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ToastNotification>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Hide)(::windows_core::Interface::as_raw(this), notification.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Hide(notification.into_param().abi())).ok() }
     }
     pub fn Setting(&self) -> ::windows_core::Result<NotificationSetting> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Setting)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Setting(&mut result__)).from_abi(result__)
         }
     }
     pub fn AddToSchedule<P0>(&self, scheduledtoast: P0) -> ::windows_core::Result<()>
@@ -3807,14 +3807,14 @@ impl ToastNotifier {
         P0: ::windows_core::IntoParam<ScheduledToastNotification>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).AddToSchedule)(::windows_core::Interface::as_raw(this), scheduledtoast.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.AddToSchedule(scheduledtoast.into_param().abi())).ok() }
     }
     pub fn RemoveFromSchedule<P0>(&self, scheduledtoast: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ScheduledToastNotification>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveFromSchedule)(::windows_core::Interface::as_raw(this), scheduledtoast.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveFromSchedule(scheduledtoast.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -3822,7 +3822,7 @@ impl ToastNotifier {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetScheduledToastNotifications)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetScheduledToastNotifications(&mut result__)).from_abi(result__)
         }
     }
     pub fn UpdateWithTagAndGroup<P0>(&self, data: P0, tag: &::windows_core::HSTRING, group: &::windows_core::HSTRING) -> ::windows_core::Result<NotificationUpdateResult>
@@ -3832,7 +3832,7 @@ impl ToastNotifier {
         let this = &::windows_core::ComInterface::cast::<IToastNotifier2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UpdateWithTagAndGroup)(::windows_core::Interface::as_raw(this), data.into_param().abi(), ::core::mem::transmute_copy(tag), ::core::mem::transmute_copy(group), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UpdateWithTagAndGroup(data.into_param().abi(), ::core::mem::transmute_copy(tag), ::core::mem::transmute_copy(group), &mut result__)).from_abi(result__)
         }
     }
     pub fn UpdateWithTag<P0>(&self, data: P0, tag: &::windows_core::HSTRING) -> ::windows_core::Result<NotificationUpdateResult>
@@ -3842,7 +3842,7 @@ impl ToastNotifier {
         let this = &::windows_core::ComInterface::cast::<IToastNotifier2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UpdateWithTag)(::windows_core::Interface::as_raw(this), data.into_param().abi(), ::core::mem::transmute_copy(tag), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UpdateWithTag(data.into_param().abi(), ::core::mem::transmute_copy(tag), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3854,14 +3854,14 @@ impl ToastNotifier {
         let this = &::windows_core::ComInterface::cast::<IToastNotifier3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ScheduledToastNotificationShowing)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ScheduledToastNotificationShowing(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveScheduledToastNotificationShowing(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IToastNotifier3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveScheduledToastNotificationShowing)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveScheduledToastNotificationShowing(token)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for ToastNotifier {
@@ -3887,7 +3887,7 @@ impl UserNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Notification)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Notification(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"ApplicationModel\"`"]
@@ -3896,14 +3896,14 @@ impl UserNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AppInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AppInfo(&mut result__)).from_abi(result__)
         }
     }
     pub fn Id(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3912,7 +3912,7 @@ impl UserNotification {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreationTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreationTime(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3939,14 +3939,14 @@ impl UserNotificationChangedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ChangeKind)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ChangeKind(&mut result__)).from_abi(result__)
         }
     }
     pub fn UserNotificationId(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UserNotificationId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UserNotificationId(&mut result__)).from_abi(result__)
         }
     }
 }

@@ -132,7 +132,7 @@ impl PaymentAppCanMakePaymentTriggerDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Request)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Request(&mut result__)).from_abi(result__)
         }
     }
     pub fn ReportCanMakePaymentResult<P0>(&self, value: P0) -> ::windows_core::Result<()>
@@ -140,7 +140,7 @@ impl PaymentAppCanMakePaymentTriggerDetails {
         P0: ::windows_core::IntoParam<super::PaymentCanMakePaymentResult>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ReportCanMakePaymentResult)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.ReportCanMakePaymentResult(value.into_param().abi())).ok() }
     }
 }
 impl ::windows_core::RuntimeType for PaymentAppCanMakePaymentTriggerDetails {
@@ -171,7 +171,7 @@ impl PaymentAppManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RegisterAsync)(::windows_core::Interface::as_raw(this), supportedpaymentmethodids.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RegisterAsync(supportedpaymentmethodids.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -180,13 +180,13 @@ impl PaymentAppManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UnregisterAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UnregisterAsync(&mut result__)).from_abi(result__)
         }
     }
     pub fn Current() -> ::windows_core::Result<PaymentAppManager> {
         Self::IPaymentAppManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Current)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Current(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -218,41 +218,41 @@ impl PaymentTransaction {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PaymentRequest)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PaymentRequest(&mut result__)).from_abi(result__)
         }
     }
     pub fn PayerEmail(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PayerEmail)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PayerEmail(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPayerEmail(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPayerEmail)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPayerEmail(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn PayerName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PayerName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PayerName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPayerName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPayerName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPayerName(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn PayerPhoneNumber(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PayerPhoneNumber)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PayerPhoneNumber(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPayerPhoneNumber(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPayerPhoneNumber)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPayerPhoneNumber(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -263,7 +263,7 @@ impl PaymentTransaction {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UpdateShippingAddressAsync)(::windows_core::Interface::as_raw(this), shippingaddress.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UpdateShippingAddressAsync(shippingaddress.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -275,7 +275,7 @@ impl PaymentTransaction {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UpdateSelectedShippingOptionAsync)(::windows_core::Interface::as_raw(this), selectedshippingoption.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UpdateSelectedShippingOptionAsync(selectedshippingoption.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -287,19 +287,19 @@ impl PaymentTransaction {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AcceptAsync)(::windows_core::Interface::as_raw(this), paymenttoken.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AcceptAsync(paymenttoken.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn Reject(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Reject)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Reject()).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn FromIdAsync(id: &::windows_core::HSTRING) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<PaymentTransaction>> {
         Self::IPaymentTransactionStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FromIdAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(id), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FromIdAsync(::core::mem::transmute_copy(id), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -331,7 +331,7 @@ impl PaymentTransactionAcceptResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
 }

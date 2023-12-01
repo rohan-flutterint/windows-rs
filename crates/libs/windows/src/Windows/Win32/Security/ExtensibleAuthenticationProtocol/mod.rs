@@ -226,10 +226,10 @@ impl IAccountingProviderConfig {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), pszmachinename.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Initialize(pszmachinename.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Uninitialize(&self, uconnectionparam: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Uninitialize)(::windows_core::Interface::as_raw(self), uconnectionparam).ok()
+        ::windows_core::vcall!(self.Uninitialize(uconnectionparam)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -237,13 +237,13 @@ impl IAccountingProviderConfig {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).Configure)(::windows_core::Interface::as_raw(self), uconnectionparam, hwnd.into_param().abi(), dwflags, ureserved1, ureserved2).ok()
+        ::windows_core::vcall!(self.Configure(uconnectionparam, hwnd.into_param().abi(), dwflags, ureserved1, ureserved2)).ok()
     }
     pub unsafe fn Activate(&self, uconnectionparam: usize, ureserved1: usize, ureserved2: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Activate)(::windows_core::Interface::as_raw(self), uconnectionparam, ureserved1, ureserved2).ok()
+        ::windows_core::vcall!(self.Activate(uconnectionparam, ureserved1, ureserved2)).ok()
     }
     pub unsafe fn Deactivate(&self, uconnectionparam: usize, ureserved1: usize, ureserved2: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Deactivate)(::windows_core::Interface::as_raw(self), uconnectionparam, ureserved1, ureserved2).ok()
+        ::windows_core::vcall!(self.Deactivate(uconnectionparam, ureserved1, ureserved2)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAccountingProviderConfig, ::windows_core::IUnknown);
@@ -275,10 +275,10 @@ impl IAuthenticationProviderConfig {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), pszmachinename.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Initialize(pszmachinename.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Uninitialize(&self, uconnectionparam: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Uninitialize)(::windows_core::Interface::as_raw(self), uconnectionparam).ok()
+        ::windows_core::vcall!(self.Uninitialize(uconnectionparam)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -286,13 +286,13 @@ impl IAuthenticationProviderConfig {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).Configure)(::windows_core::Interface::as_raw(self), uconnectionparam, hwnd.into_param().abi(), dwflags, ureserved1, ureserved2).ok()
+        ::windows_core::vcall!(self.Configure(uconnectionparam, hwnd.into_param().abi(), dwflags, ureserved1, ureserved2)).ok()
     }
     pub unsafe fn Activate(&self, uconnectionparam: usize, ureserved1: usize, ureserved2: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Activate)(::windows_core::Interface::as_raw(self), uconnectionparam, ureserved1, ureserved2).ok()
+        ::windows_core::vcall!(self.Activate(uconnectionparam, ureserved1, ureserved2)).ok()
     }
     pub unsafe fn Deactivate(&self, uconnectionparam: usize, ureserved1: usize, ureserved2: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Deactivate)(::windows_core::Interface::as_raw(self), uconnectionparam, ureserved1, ureserved2).ok()
+        ::windows_core::vcall!(self.Deactivate(uconnectionparam, ureserved1, ureserved2)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAuthenticationProviderConfig, ::windows_core::IUnknown);
@@ -324,10 +324,10 @@ impl IEAPProviderConfig {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), pszmachinename.into_param().abi(), dweaptypeid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Initialize(pszmachinename.into_param().abi(), dweaptypeid, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Uninitialize(&self, dweaptypeid: u32, uconnectionparam: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Uninitialize)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam).ok()
+        ::windows_core::vcall!(self.Uninitialize(dweaptypeid, uconnectionparam)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -335,7 +335,7 @@ impl IEAPProviderConfig {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).ServerInvokeConfigUI)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwnd.into_param().abi(), ureserved1, ureserved2).ok()
+        ::windows_core::vcall!(self.ServerInvokeConfigUI(dweaptypeid, uconnectionparam, hwnd.into_param().abi(), ureserved1, ureserved2)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -343,7 +343,7 @@ impl IEAPProviderConfig {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).RouterInvokeConfigUI)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ppconnectiondataout, pdwsizeofconnectiondataout).ok()
+        ::windows_core::vcall!(self.RouterInvokeConfigUI(dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ppconnectiondataout, pdwsizeofconnectiondataout)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -351,7 +351,7 @@ impl IEAPProviderConfig {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).RouterInvokeCredentialsUI)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ::core::mem::transmute(puserdatain.as_ptr()), puserdatain.len().try_into().unwrap(), ppuserdataout, pdwsizeofuserdataout).ok()
+        ::windows_core::vcall!(self.RouterInvokeCredentialsUI(dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ::core::mem::transmute(puserdatain.as_ptr()), puserdatain.len().try_into().unwrap(), ppuserdataout, pdwsizeofuserdataout)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEAPProviderConfig, ::windows_core::IUnknown);
@@ -389,10 +389,10 @@ impl IEAPProviderConfig2 {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Initialize)(::windows_core::Interface::as_raw(self), pszmachinename.into_param().abi(), dweaptypeid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Initialize(pszmachinename.into_param().abi(), dweaptypeid, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Uninitialize(&self, dweaptypeid: u32, uconnectionparam: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Uninitialize)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam).ok()
+        ::windows_core::vcall!(self.base__.Uninitialize(dweaptypeid, uconnectionparam)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -400,7 +400,7 @@ impl IEAPProviderConfig2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.ServerInvokeConfigUI)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwnd.into_param().abi(), ureserved1, ureserved2).ok()
+        ::windows_core::vcall!(self.base__.ServerInvokeConfigUI(dweaptypeid, uconnectionparam, hwnd.into_param().abi(), ureserved1, ureserved2)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -408,7 +408,7 @@ impl IEAPProviderConfig2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.RouterInvokeConfigUI)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ppconnectiondataout, pdwsizeofconnectiondataout).ok()
+        ::windows_core::vcall!(self.base__.RouterInvokeConfigUI(dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ppconnectiondataout, pdwsizeofconnectiondataout)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -416,7 +416,7 @@ impl IEAPProviderConfig2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.RouterInvokeCredentialsUI)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ::core::mem::transmute(puserdatain.as_ptr()), puserdatain.len().try_into().unwrap(), ppuserdataout, pdwsizeofuserdataout).ok()
+        ::windows_core::vcall!(self.base__.RouterInvokeCredentialsUI(dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ::core::mem::transmute(puserdatain.as_ptr()), puserdatain.len().try_into().unwrap(), ppuserdataout, pdwsizeofuserdataout)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -424,10 +424,10 @@ impl IEAPProviderConfig2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).ServerInvokeConfigUI2)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwnd.into_param().abi(), pconfigdatain, dwsizeofconfigdatain, ppconfigdataout, pdwsizeofconfigdataout).ok()
+        ::windows_core::vcall!(self.ServerInvokeConfigUI2(dweaptypeid, uconnectionparam, hwnd.into_param().abi(), pconfigdatain, dwsizeofconfigdatain, ppconfigdataout, pdwsizeofconfigdataout)).ok()
     }
     pub unsafe fn GetGlobalConfig(&self, dweaptypeid: u32, ppconfigdataout: *mut *mut u8, pdwsizeofconfigdataout: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetGlobalConfig)(::windows_core::Interface::as_raw(self), dweaptypeid, ppconfigdataout, pdwsizeofconfigdataout).ok()
+        ::windows_core::vcall!(self.GetGlobalConfig(dweaptypeid, ppconfigdataout, pdwsizeofconfigdataout)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEAPProviderConfig2, ::windows_core::IUnknown, IEAPProviderConfig);
@@ -456,10 +456,10 @@ impl IEAPProviderConfig3 {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.Initialize)(::windows_core::Interface::as_raw(self), pszmachinename.into_param().abi(), dweaptypeid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.Initialize(pszmachinename.into_param().abi(), dweaptypeid, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Uninitialize(&self, dweaptypeid: u32, uconnectionparam: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.Uninitialize)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam).ok()
+        ::windows_core::vcall!(self.base__.base__.Uninitialize(dweaptypeid, uconnectionparam)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -467,7 +467,7 @@ impl IEAPProviderConfig3 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.ServerInvokeConfigUI)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwnd.into_param().abi(), ureserved1, ureserved2).ok()
+        ::windows_core::vcall!(self.base__.base__.ServerInvokeConfigUI(dweaptypeid, uconnectionparam, hwnd.into_param().abi(), ureserved1, ureserved2)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -475,7 +475,7 @@ impl IEAPProviderConfig3 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.RouterInvokeConfigUI)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ppconnectiondataout, pdwsizeofconnectiondataout).ok()
+        ::windows_core::vcall!(self.base__.base__.RouterInvokeConfigUI(dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ppconnectiondataout, pdwsizeofconnectiondataout)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -483,7 +483,7 @@ impl IEAPProviderConfig3 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.RouterInvokeCredentialsUI)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ::core::mem::transmute(puserdatain.as_ptr()), puserdatain.len().try_into().unwrap(), ppuserdataout, pdwsizeofuserdataout).ok()
+        ::windows_core::vcall!(self.base__.base__.RouterInvokeCredentialsUI(dweaptypeid, uconnectionparam, hwndparent.into_param().abi(), dwflags, ::core::mem::transmute(pconnectiondatain.as_ptr()), pconnectiondatain.len().try_into().unwrap(), ::core::mem::transmute(puserdatain.as_ptr()), puserdatain.len().try_into().unwrap(), ppuserdataout, pdwsizeofuserdataout)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -491,10 +491,10 @@ impl IEAPProviderConfig3 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.ServerInvokeConfigUI2)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwnd.into_param().abi(), pconfigdatain, dwsizeofconfigdatain, ppconfigdataout, pdwsizeofconfigdataout).ok()
+        ::windows_core::vcall!(self.base__.ServerInvokeConfigUI2(dweaptypeid, uconnectionparam, hwnd.into_param().abi(), pconfigdatain, dwsizeofconfigdatain, ppconfigdataout, pdwsizeofconfigdataout)).ok()
     }
     pub unsafe fn GetGlobalConfig(&self, dweaptypeid: u32, ppconfigdataout: *mut *mut u8, pdwsizeofconfigdataout: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetGlobalConfig)(::windows_core::Interface::as_raw(self), dweaptypeid, ppconfigdataout, pdwsizeofconfigdataout).ok()
+        ::windows_core::vcall!(self.base__.GetGlobalConfig(dweaptypeid, ppconfigdataout, pdwsizeofconfigdataout)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -502,7 +502,7 @@ impl IEAPProviderConfig3 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).ServerInvokeCertificateConfigUI)(::windows_core::Interface::as_raw(self), dweaptypeid, uconnectionparam, hwnd.into_param().abi(), pconfigdatain, dwsizeofconfigdatain, ppconfigdataout, pdwsizeofconfigdataout, ureserved).ok()
+        ::windows_core::vcall!(self.ServerInvokeCertificateConfigUI(dweaptypeid, uconnectionparam, hwnd.into_param().abi(), pconfigdatain, dwsizeofconfigdatain, ppconfigdataout, pdwsizeofconfigdataout, ureserved)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEAPProviderConfig3, ::windows_core::IUnknown, IEAPProviderConfig, IEAPProviderConfig2);
@@ -533,7 +533,7 @@ impl IRouterProtocolConfig {
         P1: ::windows_core::IntoParam<super::super::Foundation::HWND>,
         P2: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).AddProtocol)(::windows_core::Interface::as_raw(self), pszmachinename.into_param().abi(), dwtransportid, dwprotocolid, hwnd.into_param().abi(), dwflags, prouter.into_param().abi(), ureserved1).ok()
+        ::windows_core::vcall!(self.AddProtocol(pszmachinename.into_param().abi(), dwtransportid, dwprotocolid, hwnd.into_param().abi(), dwflags, prouter.into_param().abi(), ureserved1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -543,7 +543,7 @@ impl IRouterProtocolConfig {
         P1: ::windows_core::IntoParam<super::super::Foundation::HWND>,
         P2: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).RemoveProtocol)(::windows_core::Interface::as_raw(self), pszmachinename.into_param().abi(), dwtransportid, dwprotocolid, hwnd.into_param().abi(), dwflags, prouter.into_param().abi(), ureserved1).ok()
+        ::windows_core::vcall!(self.RemoveProtocol(pszmachinename.into_param().abi(), dwtransportid, dwprotocolid, hwnd.into_param().abi(), dwflags, prouter.into_param().abi(), ureserved1)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IRouterProtocolConfig, ::windows_core::IUnknown);

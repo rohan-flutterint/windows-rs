@@ -9,7 +9,7 @@ impl ICustomGameControllerFactory {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateGameController)(::windows_core::Interface::as_raw(this), provider.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateGameController(provider.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn OnGameControllerAdded<P0>(&self, value: P0) -> ::windows_core::Result<()>
@@ -17,14 +17,14 @@ impl ICustomGameControllerFactory {
         P0: ::windows_core::TryIntoParam<super::IGameController>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).OnGameControllerAdded)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.OnGameControllerAdded(value.try_into_param()?.abi())).ok() }
     }
     pub fn OnGameControllerRemoved<P0>(&self, value: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::TryIntoParam<super::IGameController>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).OnGameControllerRemoved)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.OnGameControllerRemoved(value.try_into_param()?.abi())).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICustomGameControllerFactory, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -85,11 +85,11 @@ pub struct IGameControllerInputSink(::windows_core::IUnknown);
 impl IGameControllerInputSink {
     pub fn OnInputResumed(&self, timestamp: u64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).OnInputResumed)(::windows_core::Interface::as_raw(this), timestamp).ok() }
+        unsafe { ::windows_core::vcall!(this.OnInputResumed(timestamp)).ok() }
     }
     pub fn OnInputSuspended(&self, timestamp: u64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).OnInputSuspended)(::windows_core::Interface::as_raw(this), timestamp).ok() }
+        unsafe { ::windows_core::vcall!(this.OnInputSuspended(timestamp)).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IGameControllerInputSink, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -117,35 +117,35 @@ impl IGameControllerProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirmwareVersionInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FirmwareVersionInfo(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareProductId(&self) -> ::windows_core::Result<u16> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareProductId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareProductId(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareVendorId(&self) -> ::windows_core::Result<u16> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareVendorId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareVendorId(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareVersionInfo(&self) -> ::windows_core::Result<GameControllerVersionInfo> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareVersionInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareVersionInfo(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsConnected(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsConnected)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsConnected(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -193,19 +193,19 @@ pub struct IGipGameControllerInputSink(::windows_core::IUnknown);
 impl IGipGameControllerInputSink {
     pub fn OnKeyReceived(&self, timestamp: u64, keycode: u8, ispressed: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).OnKeyReceived)(::windows_core::Interface::as_raw(this), timestamp, keycode, ispressed).ok() }
+        unsafe { ::windows_core::vcall!(this.OnKeyReceived(timestamp, keycode, ispressed)).ok() }
     }
     pub fn OnMessageReceived(&self, timestamp: u64, messageclass: GipMessageClass, messageid: u8, sequenceid: u8, messagebuffer: &[u8]) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).OnMessageReceived)(::windows_core::Interface::as_raw(this), timestamp, messageclass, messageid, sequenceid, messagebuffer.len().try_into().unwrap(), messagebuffer.as_ptr()).ok() }
+        unsafe { ::windows_core::vcall!(this.OnMessageReceived(timestamp, messageclass, messageid, sequenceid, messagebuffer.len().try_into().unwrap(), messagebuffer.as_ptr())).ok() }
     }
     pub fn OnInputResumed(&self, timestamp: u64) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerInputSink>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).OnInputResumed)(::windows_core::Interface::as_raw(this), timestamp).ok() }
+        unsafe { ::windows_core::vcall!(this.OnInputResumed(timestamp)).ok() }
     }
     pub fn OnInputSuspended(&self, timestamp: u64) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerInputSink>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).OnInputSuspended)(::windows_core::Interface::as_raw(this), timestamp).ok() }
+        unsafe { ::windows_core::vcall!(this.OnInputSuspended(timestamp)).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IGipGameControllerInputSink, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -253,15 +253,15 @@ pub struct IHidGameControllerInputSink(::windows_core::IUnknown);
 impl IHidGameControllerInputSink {
     pub fn OnInputReportReceived(&self, timestamp: u64, reportid: u8, reportbuffer: &[u8]) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).OnInputReportReceived)(::windows_core::Interface::as_raw(this), timestamp, reportid, reportbuffer.len().try_into().unwrap(), reportbuffer.as_ptr()).ok() }
+        unsafe { ::windows_core::vcall!(this.OnInputReportReceived(timestamp, reportid, reportbuffer.len().try_into().unwrap(), reportbuffer.as_ptr())).ok() }
     }
     pub fn OnInputResumed(&self, timestamp: u64) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerInputSink>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).OnInputResumed)(::windows_core::Interface::as_raw(this), timestamp).ok() }
+        unsafe { ::windows_core::vcall!(this.OnInputResumed(timestamp)).ok() }
     }
     pub fn OnInputSuspended(&self, timestamp: u64) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerInputSink>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).OnInputSuspended)(::windows_core::Interface::as_raw(this), timestamp).ok() }
+        unsafe { ::windows_core::vcall!(this.OnInputSuspended(timestamp)).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IHidGameControllerInputSink, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -307,15 +307,15 @@ pub struct IXusbGameControllerInputSink(::windows_core::IUnknown);
 impl IXusbGameControllerInputSink {
     pub fn OnInputReceived(&self, timestamp: u64, reportid: u8, inputbuffer: &[u8]) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).OnInputReceived)(::windows_core::Interface::as_raw(this), timestamp, reportid, inputbuffer.len().try_into().unwrap(), inputbuffer.as_ptr()).ok() }
+        unsafe { ::windows_core::vcall!(this.OnInputReceived(timestamp, reportid, inputbuffer.len().try_into().unwrap(), inputbuffer.as_ptr())).ok() }
     }
     pub fn OnInputResumed(&self, timestamp: u64) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerInputSink>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).OnInputResumed)(::windows_core::Interface::as_raw(this), timestamp).ok() }
+        unsafe { ::windows_core::vcall!(this.OnInputResumed(timestamp)).ok() }
     }
     pub fn OnInputSuspended(&self, timestamp: u64) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerInputSink>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).OnInputSuspended)(::windows_core::Interface::as_raw(this), timestamp).ok() }
+        unsafe { ::windows_core::vcall!(this.OnInputSuspended(timestamp)).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IXusbGameControllerInputSink, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -357,19 +357,19 @@ impl GameControllerFactoryManager {
     where
         P0: ::windows_core::TryIntoParam<ICustomGameControllerFactory>,
     {
-        Self::IGameControllerFactoryManagerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RegisterCustomFactoryForGipInterface)(::windows_core::Interface::as_raw(this), factory.try_into_param()?.abi(), interfaceid).ok() })
+        Self::IGameControllerFactoryManagerStatics(|this| unsafe { ::windows_core::vcall!(this.RegisterCustomFactoryForGipInterface(factory.try_into_param()?.abi(), interfaceid)).ok() })
     }
     pub fn RegisterCustomFactoryForHardwareId<P0>(factory: P0, hardwarevendorid: u16, hardwareproductid: u16) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::TryIntoParam<ICustomGameControllerFactory>,
     {
-        Self::IGameControllerFactoryManagerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RegisterCustomFactoryForHardwareId)(::windows_core::Interface::as_raw(this), factory.try_into_param()?.abi(), hardwarevendorid, hardwareproductid).ok() })
+        Self::IGameControllerFactoryManagerStatics(|this| unsafe { ::windows_core::vcall!(this.RegisterCustomFactoryForHardwareId(factory.try_into_param()?.abi(), hardwarevendorid, hardwareproductid)).ok() })
     }
     pub fn RegisterCustomFactoryForXusbType<P0>(factory: P0, xusbtype: XusbDeviceType, xusbsubtype: XusbDeviceSubtype) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::TryIntoParam<ICustomGameControllerFactory>,
     {
-        Self::IGameControllerFactoryManagerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RegisterCustomFactoryForXusbType)(::windows_core::Interface::as_raw(this), factory.try_into_param()?.abi(), xusbtype, xusbsubtype).ok() })
+        Self::IGameControllerFactoryManagerStatics(|this| unsafe { ::windows_core::vcall!(this.RegisterCustomFactoryForXusbType(factory.try_into_param()?.abi(), xusbtype, xusbsubtype)).ok() })
     }
     pub fn TryGetFactoryControllerFromGameController<P0, P1>(factory: P0, gamecontroller: P1) -> ::windows_core::Result<super::IGameController>
     where
@@ -378,7 +378,7 @@ impl GameControllerFactoryManager {
     {
         Self::IGameControllerFactoryManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryGetFactoryControllerFromGameController)(::windows_core::Interface::as_raw(this), factory.try_into_param()?.abi(), gamecontroller.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryGetFactoryControllerFromGameController(factory.try_into_param()?.abi(), gamecontroller.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -403,21 +403,21 @@ impl GipFirmwareUpdateResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExtendedErrorCode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExtendedErrorCode(&mut result__)).from_abi(result__)
         }
     }
     pub fn FinalComponentId(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FinalComponentId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FinalComponentId(&mut result__)).from_abi(result__)
         }
     }
     pub fn Status(&self) -> ::windows_core::Result<GipFirmwareUpdateStatus> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -444,44 +444,44 @@ impl GipGameControllerProvider {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirmwareVersionInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FirmwareVersionInfo(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareProductId(&self) -> ::windows_core::Result<u16> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareProductId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareProductId(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareVendorId(&self) -> ::windows_core::Result<u16> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareVendorId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareVendorId(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareVersionInfo(&self) -> ::windows_core::Result<GameControllerVersionInfo> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareVersionInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareVersionInfo(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsConnected(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsConnected)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsConnected(&mut result__)).from_abi(result__)
         }
     }
     pub fn SendMessage(&self, messageclass: GipMessageClass, messageid: u8, messagebuffer: &[u8]) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SendMessage)(::windows_core::Interface::as_raw(this), messageclass, messageid, messagebuffer.len().try_into().unwrap(), messagebuffer.as_ptr()).ok() }
+        unsafe { ::windows_core::vcall!(this.SendMessage(messageclass, messageid, messagebuffer.len().try_into().unwrap(), messagebuffer.as_ptr())).ok() }
     }
     pub fn SendReceiveMessage(&self, messageclass: GipMessageClass, messageid: u8, requestmessagebuffer: &[u8], responsemessagebuffer: &mut [u8]) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SendReceiveMessage)(::windows_core::Interface::as_raw(this), messageclass, messageid, requestmessagebuffer.len().try_into().unwrap(), requestmessagebuffer.as_ptr(), responsemessagebuffer.len().try_into().unwrap(), responsemessagebuffer.as_mut_ptr()).ok() }
+        unsafe { ::windows_core::vcall!(this.SendReceiveMessage(messageclass, messageid, requestmessagebuffer.len().try_into().unwrap(), requestmessagebuffer.as_ptr(), responsemessagebuffer.len().try_into().unwrap(), responsemessagebuffer.as_mut_ptr())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
     #[cfg(all(feature = "Foundation", feature = "Storage_Streams"))]
@@ -492,7 +492,7 @@ impl GipGameControllerProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UpdateFirmwareAsync)(::windows_core::Interface::as_raw(this), firmwareimage.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UpdateFirmwareAsync(firmwareimage.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -520,62 +520,62 @@ impl HidGameControllerProvider {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirmwareVersionInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FirmwareVersionInfo(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareProductId(&self) -> ::windows_core::Result<u16> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareProductId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareProductId(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareVendorId(&self) -> ::windows_core::Result<u16> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareVendorId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareVendorId(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareVersionInfo(&self) -> ::windows_core::Result<GameControllerVersionInfo> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareVersionInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareVersionInfo(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsConnected(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsConnected)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsConnected(&mut result__)).from_abi(result__)
         }
     }
     pub fn UsageId(&self) -> ::windows_core::Result<u16> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UsageId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UsageId(&mut result__)).from_abi(result__)
         }
     }
     pub fn UsagePage(&self) -> ::windows_core::Result<u16> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UsagePage)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UsagePage(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetFeatureReport(&self, reportid: u8, reportbuffer: &mut [u8]) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).GetFeatureReport)(::windows_core::Interface::as_raw(this), reportid, reportbuffer.len().try_into().unwrap(), reportbuffer.as_mut_ptr()).ok() }
+        unsafe { ::windows_core::vcall!(this.GetFeatureReport(reportid, reportbuffer.len().try_into().unwrap(), reportbuffer.as_mut_ptr())).ok() }
     }
     pub fn SendFeatureReport(&self, reportid: u8, reportbuffer: &[u8]) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SendFeatureReport)(::windows_core::Interface::as_raw(this), reportid, reportbuffer.len().try_into().unwrap(), reportbuffer.as_ptr()).ok() }
+        unsafe { ::windows_core::vcall!(this.SendFeatureReport(reportid, reportbuffer.len().try_into().unwrap(), reportbuffer.as_ptr())).ok() }
     }
     pub fn SendOutputReport(&self, reportid: u8, reportbuffer: &[u8]) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SendOutputReport)(::windows_core::Interface::as_raw(this), reportid, reportbuffer.len().try_into().unwrap(), reportbuffer.as_ptr()).ok() }
+        unsafe { ::windows_core::vcall!(this.SendOutputReport(reportid, reportbuffer.len().try_into().unwrap(), reportbuffer.as_ptr())).ok() }
     }
 }
 impl ::windows_core::RuntimeType for HidGameControllerProvider {
@@ -602,40 +602,40 @@ impl XusbGameControllerProvider {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirmwareVersionInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FirmwareVersionInfo(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareProductId(&self) -> ::windows_core::Result<u16> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareProductId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareProductId(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareVendorId(&self) -> ::windows_core::Result<u16> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareVendorId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareVendorId(&mut result__)).from_abi(result__)
         }
     }
     pub fn HardwareVersionInfo(&self) -> ::windows_core::Result<GameControllerVersionInfo> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareVersionInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareVersionInfo(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsConnected(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IGameControllerProvider>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsConnected)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsConnected(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetVibration(&self, lowfrequencymotorspeed: f64, highfrequencymotorspeed: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetVibration)(::windows_core::Interface::as_raw(this), lowfrequencymotorspeed, highfrequencymotorspeed).ok() }
+        unsafe { ::windows_core::vcall!(this.SetVibration(lowfrequencymotorspeed, highfrequencymotorspeed)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for XusbGameControllerProvider {

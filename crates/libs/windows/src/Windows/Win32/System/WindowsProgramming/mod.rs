@@ -1920,38 +1920,38 @@ impl ICameraUIControl {
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
         P2: ::windows_core::IntoParam<ICameraUIControlEventCallback>,
     {
-        (::windows_core::Interface::vtable(self).Show)(::windows_core::Interface::as_raw(self), pwindow.into_param().abi(), mode, selectionmode, capturemode, photoformat, videoformat, bhasclosebutton.into_param().abi(), peventcallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Show(pwindow.into_param().abi(), mode, selectionmode, capturemode, photoformat, videoformat, bhasclosebutton.into_param().abi(), peventcallback.into_param().abi())).ok()
     }
     pub unsafe fn Close(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Close()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Suspend(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Suspend)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Suspend(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Resume(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Resume)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Resume()).ok()
     }
     pub unsafe fn GetCurrentViewType(&self) -> ::windows_core::Result<CameraUIControlViewType> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCurrentViewType)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCurrentViewType(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetActiveItem(&self, pbstractiveitempath: ::core::option::Option<*mut ::windows_core::BSTR>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetActiveItem)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pbstractiveitempath.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetActiveItem(::core::mem::transmute(pbstractiveitempath.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetSelectedItems(&self) -> ::windows_core::Result<*mut super::Com::SAFEARRAY> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSelectedItems)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSelectedItems(&mut result__)).from_abi(result__)
     }
     pub unsafe fn RemoveCapturedItem<P0>(&self, pszpath: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).RemoveCapturedItem)(::windows_core::Interface::as_raw(self), pszpath.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RemoveCapturedItem(pszpath.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICameraUIControl, ::windows_core::IUnknown);
@@ -1988,25 +1988,25 @@ pub struct ICameraUIControl_Vtbl {
 pub struct ICameraUIControlEventCallback(::windows_core::IUnknown);
 impl ICameraUIControlEventCallback {
     pub unsafe fn OnStartupComplete(&self) {
-        (::windows_core::Interface::vtable(self).OnStartupComplete)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.OnStartupComplete())
     }
     pub unsafe fn OnSuspendComplete(&self) {
-        (::windows_core::Interface::vtable(self).OnSuspendComplete)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.OnSuspendComplete())
     }
     pub unsafe fn OnItemCaptured<P0>(&self, pszpath: P0)
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnItemCaptured)(::windows_core::Interface::as_raw(self), pszpath.into_param().abi())
+        ::windows_core::vcall!(self.OnItemCaptured(pszpath.into_param().abi()))
     }
     pub unsafe fn OnItemDeleted<P0>(&self, pszpath: P0)
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnItemDeleted)(::windows_core::Interface::as_raw(self), pszpath.into_param().abi())
+        ::windows_core::vcall!(self.OnItemDeleted(pszpath.into_param().abi()))
     }
     pub unsafe fn OnClosed(&self) {
-        (::windows_core::Interface::vtable(self).OnClosed)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.OnClosed())
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICameraUIControlEventCallback, ::windows_core::IUnknown);
@@ -2038,7 +2038,7 @@ impl IClipServiceNotificationHelper {
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
         P4: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ShowToast)(::windows_core::Interface::as_raw(self), titletext.into_param().abi(), bodytext.into_param().abi(), packagename.into_param().abi(), appid.into_param().abi(), launchcommand.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ShowToast(titletext.into_param().abi(), bodytext.into_param().abi(), packagename.into_param().abi(), appid.into_param().abi(), launchcommand.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IClipServiceNotificationHelper, ::windows_core::IUnknown);
@@ -2062,7 +2062,7 @@ impl IContainerActivationHelper {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn CanActivateClientVM(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CanActivateClientVM)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CanActivateClientVM(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IContainerActivationHelper, ::windows_core::IUnknown);
@@ -2088,7 +2088,7 @@ impl IDefaultBrowserSyncSettings {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsEnabled(&self) -> super::super::Foundation::BOOL {
-        (::windows_core::Interface::vtable(self).IsEnabled)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.IsEnabled())
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDefaultBrowserSyncSettings, ::windows_core::IUnknown);
@@ -2112,7 +2112,7 @@ pub struct IDefaultBrowserSyncSettings_Vtbl {
 pub struct IDeleteBrowsingHistory(::windows_core::IUnknown);
 impl IDeleteBrowsingHistory {
     pub unsafe fn DeleteBrowsingHistory(&self, dwflags: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeleteBrowsingHistory)(::windows_core::Interface::as_raw(self), dwflags).ok()
+        ::windows_core::vcall!(self.DeleteBrowsingHistory(dwflags)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDeleteBrowsingHistory, ::windows_core::IUnknown);
@@ -2138,19 +2138,19 @@ impl IEditionUpgradeBroker {
     where
         P0: ::windows_core::IntoParam<super::Ole::OLE_HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).InitializeParentWindow)(::windows_core::Interface::as_raw(self), parenthandle.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InitializeParentWindow(parenthandle.into_param().abi())).ok()
     }
     pub unsafe fn UpdateOperatingSystem<P0>(&self, parameter: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).UpdateOperatingSystem)(::windows_core::Interface::as_raw(self), parameter.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UpdateOperatingSystem(parameter.into_param().abi())).ok()
     }
     pub unsafe fn ShowProductKeyUI(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ShowProductKeyUI)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ShowProductKeyUI()).ok()
     }
     pub unsafe fn CanUpgrade(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CanUpgrade)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.CanUpgrade()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEditionUpgradeBroker, ::windows_core::IUnknown);
@@ -2180,26 +2180,26 @@ impl IEditionUpgradeHelper {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn CanUpgrade(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CanUpgrade)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CanUpgrade(&mut result__)).from_abi(result__)
     }
     pub unsafe fn UpdateOperatingSystem<P0>(&self, contentid: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).UpdateOperatingSystem)(::windows_core::Interface::as_raw(self), contentid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UpdateOperatingSystem(contentid.into_param().abi())).ok()
     }
     pub unsafe fn ShowProductKeyUI(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ShowProductKeyUI)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ShowProductKeyUI()).ok()
     }
     pub unsafe fn GetOsProductContentId(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetOsProductContentId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetOsProductContentId(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetGenuineLocalStatus(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetGenuineLocalStatus)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetGenuineLocalStatus(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEditionUpgradeHelper, ::windows_core::IUnknown);
@@ -2234,7 +2234,7 @@ impl IFClipNotificationHelper {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ShowSystemDialog)(::windows_core::Interface::as_raw(self), titletext.into_param().abi(), bodytext.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ShowSystemDialog(titletext.into_param().abi(), bodytext.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IFClipNotificationHelper, ::windows_core::IUnknown);
@@ -2258,7 +2258,7 @@ impl IWindowsLockModeHelper {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetSMode(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSMode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSMode(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWindowsLockModeHelper, ::windows_core::IUnknown);

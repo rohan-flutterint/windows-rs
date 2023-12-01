@@ -65,7 +65,7 @@ impl DataProtectionProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProtectAsync)(::windows_core::Interface::as_raw(this), data.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProtectAsync(data.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -77,7 +77,7 @@ impl DataProtectionProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UnprotectAsync)(::windows_core::Interface::as_raw(this), data.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UnprotectAsync(data.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -90,7 +90,7 @@ impl DataProtectionProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProtectStreamAsync)(::windows_core::Interface::as_raw(this), src.try_into_param()?.abi(), dest.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProtectStreamAsync(src.try_into_param()?.abi(), dest.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -103,13 +103,13 @@ impl DataProtectionProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UnprotectStreamAsync)(::windows_core::Interface::as_raw(this), src.try_into_param()?.abi(), dest.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UnprotectStreamAsync(src.try_into_param()?.abi(), dest.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn CreateOverloadExplicit(protectiondescriptor: &::windows_core::HSTRING) -> ::windows_core::Result<DataProtectionProvider> {
         Self::IDataProtectionProviderFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateOverloadExplicit)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(protectiondescriptor), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateOverloadExplicit(::core::mem::transmute_copy(protectiondescriptor), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

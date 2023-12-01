@@ -22,7 +22,7 @@ impl InteractiveSession {
     pub fn IsRemote() -> ::windows_core::Result<bool> {
         Self::IInteractiveSessionStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsRemote)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsRemote(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

@@ -76,14 +76,14 @@ impl SpatialGraphInteropFrameOfReferencePreview {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CoordinateSystem)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CoordinateSystem(&mut result__)).from_abi(result__)
         }
     }
     pub fn NodeId(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NodeId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NodeId(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Numerics\"`"]
@@ -92,7 +92,7 @@ impl SpatialGraphInteropFrameOfReferencePreview {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CoordinateSystemToNodeTransform)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CoordinateSystemToNodeTransform(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -116,7 +116,7 @@ impl SpatialGraphInteropPreview {
     pub fn CreateCoordinateSystemForNode(nodeid: ::windows_core::GUID) -> ::windows_core::Result<super::SpatialCoordinateSystem> {
         Self::ISpatialGraphInteropPreviewStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateCoordinateSystemForNode)(::windows_core::Interface::as_raw(this), nodeid, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateCoordinateSystemForNode(nodeid, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Numerics\"`"]
@@ -124,7 +124,7 @@ impl SpatialGraphInteropPreview {
     pub fn CreateCoordinateSystemForNodeWithPosition(nodeid: ::windows_core::GUID, relativeposition: super::super::super::Foundation::Numerics::Vector3) -> ::windows_core::Result<super::SpatialCoordinateSystem> {
         Self::ISpatialGraphInteropPreviewStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateCoordinateSystemForNodeWithPosition)(::windows_core::Interface::as_raw(this), nodeid, relativeposition, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateCoordinateSystemForNodeWithPosition(nodeid, relativeposition, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Numerics\"`"]
@@ -132,13 +132,13 @@ impl SpatialGraphInteropPreview {
     pub fn CreateCoordinateSystemForNodeWithPositionAndOrientation(nodeid: ::windows_core::GUID, relativeposition: super::super::super::Foundation::Numerics::Vector3, relativeorientation: super::super::super::Foundation::Numerics::Quaternion) -> ::windows_core::Result<super::SpatialCoordinateSystem> {
         Self::ISpatialGraphInteropPreviewStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateCoordinateSystemForNodeWithPositionAndOrientation)(::windows_core::Interface::as_raw(this), nodeid, relativeposition, relativeorientation, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateCoordinateSystemForNodeWithPositionAndOrientation(nodeid, relativeposition, relativeorientation, &mut result__)).from_abi(result__)
         })
     }
     pub fn CreateLocatorForNode(nodeid: ::windows_core::GUID) -> ::windows_core::Result<super::SpatialLocator> {
         Self::ISpatialGraphInteropPreviewStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateLocatorForNode)(::windows_core::Interface::as_raw(this), nodeid, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateLocatorForNode(nodeid, &mut result__)).from_abi(result__)
         })
     }
     pub fn TryCreateFrameOfReference<P0>(coordinatesystem: P0) -> ::windows_core::Result<SpatialGraphInteropFrameOfReferencePreview>
@@ -147,7 +147,7 @@ impl SpatialGraphInteropPreview {
     {
         Self::ISpatialGraphInteropPreviewStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryCreateFrameOfReference)(::windows_core::Interface::as_raw(this), coordinatesystem.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryCreateFrameOfReference(coordinatesystem.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Numerics\"`"]
@@ -158,7 +158,7 @@ impl SpatialGraphInteropPreview {
     {
         Self::ISpatialGraphInteropPreviewStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryCreateFrameOfReferenceWithPosition)(::windows_core::Interface::as_raw(this), coordinatesystem.into_param().abi(), relativeposition, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryCreateFrameOfReferenceWithPosition(coordinatesystem.into_param().abi(), relativeposition, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Numerics\"`"]
@@ -169,7 +169,7 @@ impl SpatialGraphInteropPreview {
     {
         Self::ISpatialGraphInteropPreviewStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryCreateFrameOfReferenceWithPositionAndOrientation)(::windows_core::Interface::as_raw(this), coordinatesystem.into_param().abi(), relativeposition, relativeorientation, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryCreateFrameOfReferenceWithPositionAndOrientation(coordinatesystem.into_param().abi(), relativeposition, relativeorientation, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

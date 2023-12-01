@@ -170,7 +170,7 @@ impl ICoreDropOperationTarget {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EnterAsync)(::windows_core::Interface::as_raw(this), draginfo.into_param().abi(), draguioverride.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EnterAsync(draginfo.into_param().abi(), draguioverride.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -183,7 +183,7 @@ impl ICoreDropOperationTarget {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OverAsync)(::windows_core::Interface::as_raw(this), draginfo.into_param().abi(), draguioverride.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OverAsync(draginfo.into_param().abi(), draguioverride.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -195,7 +195,7 @@ impl ICoreDropOperationTarget {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LeaveAsync)(::windows_core::Interface::as_raw(this), draginfo.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LeaveAsync(draginfo.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -207,7 +207,7 @@ impl ICoreDropOperationTarget {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DropAsync)(::windows_core::Interface::as_raw(this), draginfo.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DropAsync(draginfo.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -271,30 +271,30 @@ impl CoreDragDropManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TargetRequested)(::windows_core::Interface::as_raw(this), value.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TargetRequested(value.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveTargetRequested(&self, value: super::super::super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveTargetRequested)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveTargetRequested(value)).ok() }
     }
     pub fn AreConcurrentOperationsEnabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AreConcurrentOperationsEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AreConcurrentOperationsEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAreConcurrentOperationsEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAreConcurrentOperationsEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAreConcurrentOperationsEnabled(value)).ok() }
     }
     pub fn GetForCurrentView() -> ::windows_core::Result<CoreDragDropManager> {
         Self::ICoreDragDropManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForCurrentView)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForCurrentView(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -326,14 +326,14 @@ impl CoreDragInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Data)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Data(&mut result__)).from_abi(result__)
         }
     }
     pub fn Modifiers(&self) -> ::windows_core::Result<super::DragDropModifiers> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Modifiers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Modifiers(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -342,14 +342,14 @@ impl CoreDragInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Position)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Position(&mut result__)).from_abi(result__)
         }
     }
     pub fn AllowedOperations(&self) -> ::windows_core::Result<super::super::DataPackageOperation> {
         let this = &::windows_core::ComInterface::cast::<ICoreDragInfo2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AllowedOperations)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AllowedOperations(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -383,12 +383,12 @@ impl CoreDragOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Data)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Data(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPointerId(&self, pointerid: u32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPointerId)(::windows_core::Interface::as_raw(this), pointerid).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPointerId(pointerid)).ok() }
     }
     #[doc = "Required features: `\"Graphics_Imaging\"`"]
     #[cfg(feature = "Graphics_Imaging")]
@@ -397,7 +397,7 @@ impl CoreDragOperation {
         P0: ::windows_core::IntoParam<super::super::super::super::Graphics::Imaging::SoftwareBitmap>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDragUIContentFromSoftwareBitmap)(::windows_core::Interface::as_raw(this), softwarebitmap.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDragUIContentFromSoftwareBitmap(softwarebitmap.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Graphics_Imaging\"`"]
     #[cfg(all(feature = "Foundation", feature = "Graphics_Imaging"))]
@@ -406,18 +406,18 @@ impl CoreDragOperation {
         P0: ::windows_core::IntoParam<super::super::super::super::Graphics::Imaging::SoftwareBitmap>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDragUIContentFromSoftwareBitmapWithAnchorPoint)(::windows_core::Interface::as_raw(this), softwarebitmap.into_param().abi(), anchorpoint).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDragUIContentFromSoftwareBitmapWithAnchorPoint(softwarebitmap.into_param().abi(), anchorpoint)).ok() }
     }
     pub fn DragUIContentMode(&self) -> ::windows_core::Result<CoreDragUIContentMode> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DragUIContentMode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DragUIContentMode(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDragUIContentMode(&self, value: CoreDragUIContentMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDragUIContentMode)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDragUIContentMode(value)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -425,19 +425,19 @@ impl CoreDragOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).StartAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.StartAsync(&mut result__)).from_abi(result__)
         }
     }
     pub fn AllowedOperations(&self) -> ::windows_core::Result<super::super::DataPackageOperation> {
         let this = &::windows_core::ComInterface::cast::<ICoreDragOperation2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AllowedOperations)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AllowedOperations(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAllowedOperations(&self, value: super::super::DataPackageOperation) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<ICoreDragOperation2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetAllowedOperations)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAllowedOperations(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for CoreDragOperation {
@@ -466,7 +466,7 @@ impl CoreDragUIOverride {
         P0: ::windows_core::IntoParam<super::super::super::super::Graphics::Imaging::SoftwareBitmap>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetContentFromSoftwareBitmap)(::windows_core::Interface::as_raw(this), softwarebitmap.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetContentFromSoftwareBitmap(softwarebitmap.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Graphics_Imaging\"`"]
     #[cfg(all(feature = "Foundation", feature = "Graphics_Imaging"))]
@@ -475,55 +475,55 @@ impl CoreDragUIOverride {
         P0: ::windows_core::IntoParam<super::super::super::super::Graphics::Imaging::SoftwareBitmap>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetContentFromSoftwareBitmapWithAnchorPoint)(::windows_core::Interface::as_raw(this), softwarebitmap.into_param().abi(), anchorpoint).ok() }
+        unsafe { ::windows_core::vcall!(this.SetContentFromSoftwareBitmapWithAnchorPoint(softwarebitmap.into_param().abi(), anchorpoint)).ok() }
     }
     pub fn IsContentVisible(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsContentVisible)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsContentVisible(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetIsContentVisible(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsContentVisible)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsContentVisible(value)).ok() }
     }
     pub fn Caption(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Caption)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Caption(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCaption(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetCaption)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCaption(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn IsCaptionVisible(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsCaptionVisible)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsCaptionVisible(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetIsCaptionVisible(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsCaptionVisible)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsCaptionVisible(value)).ok() }
     }
     pub fn IsGlyphVisible(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsGlyphVisible)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsGlyphVisible(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetIsGlyphVisible(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsGlyphVisible)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsGlyphVisible(value)).ok() }
     }
     pub fn Clear(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Clear)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Clear()).ok() }
     }
 }
 impl ::windows_core::RuntimeType for CoreDragUIOverride {
@@ -550,7 +550,7 @@ impl CoreDropOperationTargetRequestedEventArgs {
         P0: ::windows_core::TryIntoParam<ICoreDropOperationTarget>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTarget)(::windows_core::Interface::as_raw(this), target.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTarget(target.try_into_param()?.abi())).ok() }
     }
 }
 impl ::windows_core::RuntimeType for CoreDropOperationTargetRequestedEventArgs {

@@ -180,21 +180,21 @@ impl Enterprise {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
     pub fn Name(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Name)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Name(&mut result__)).from_abi(result__)
         }
     }
     pub fn WorkplaceId(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WorkplaceId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WorkplaceId(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -203,7 +203,7 @@ impl Enterprise {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EnrollmentValidFrom)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EnrollmentValidFrom(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -212,14 +212,14 @@ impl Enterprise {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EnrollmentValidTo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EnrollmentValidTo(&mut result__)).from_abi(result__)
         }
     }
     pub fn Status(&self) -> ::windows_core::Result<EnterpriseStatus> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -245,13 +245,13 @@ impl EnterpriseEnrollmentManager {
     pub fn EnrolledEnterprises() -> ::windows_core::Result<super::super::super::Foundation::Collections::IVectorView<Enterprise>> {
         Self::IEnterpriseEnrollmentManager(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EnrolledEnterprises)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EnrolledEnterprises(&mut result__)).from_abi(result__)
         })
     }
     pub fn CurrentEnterprise() -> ::windows_core::Result<Enterprise> {
         Self::IEnterpriseEnrollmentManager(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CurrentEnterprise)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CurrentEnterprise(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -259,7 +259,7 @@ impl EnterpriseEnrollmentManager {
     pub fn ValidateEnterprisesAsync() -> ::windows_core::Result<super::super::super::Foundation::IAsyncAction> {
         Self::IEnterpriseEnrollmentManager(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ValidateEnterprisesAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ValidateEnterprisesAsync(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -267,7 +267,7 @@ impl EnterpriseEnrollmentManager {
     pub fn RequestEnrollmentAsync(enrollmenttoken: &::windows_core::HSTRING) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperation<EnterpriseEnrollmentResult>> {
         Self::IEnterpriseEnrollmentManager(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestEnrollmentAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(enrollmenttoken), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestEnrollmentAsync(::core::mem::transmute_copy(enrollmenttoken), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -278,7 +278,7 @@ impl EnterpriseEnrollmentManager {
     {
         Self::IEnterpriseEnrollmentManager(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestUnenrollmentAsync)(::windows_core::Interface::as_raw(this), enterprise.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestUnenrollmentAsync(enterprise.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -298,14 +298,14 @@ impl EnterpriseEnrollmentResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EnrolledEnterprise)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EnrolledEnterprise(&mut result__)).from_abi(result__)
         }
     }
     pub fn Status(&self) -> ::windows_core::Result<EnterpriseEnrollmentStatus> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -332,7 +332,7 @@ impl InstallationManager {
     {
         Self::IInstallationManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AddPackageAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(title), sourcelocation.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AddPackageAsync(::core::mem::transmute_copy(title), sourcelocation.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -344,7 +344,7 @@ impl InstallationManager {
     {
         Self::IInstallationManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AddPackagePreloadedAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(title), sourcelocation.into_param().abi(), ::core::mem::transmute_copy(instanceid), ::core::mem::transmute_copy(offerid), license.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AddPackagePreloadedAsync(::core::mem::transmute_copy(title), sourcelocation.into_param().abi(), ::core::mem::transmute_copy(instanceid), ::core::mem::transmute_copy(offerid), license.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -352,7 +352,7 @@ impl InstallationManager {
     pub fn GetPendingPackageInstalls() -> ::windows_core::Result<super::super::super::Foundation::Collections::IIterable<super::super::super::Foundation::IAsyncOperationWithProgress<PackageInstallResult, u32>>> {
         Self::IInstallationManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetPendingPackageInstalls)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetPendingPackageInstalls(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"ApplicationModel\"`, `\"Foundation_Collections\"`"]
@@ -360,7 +360,7 @@ impl InstallationManager {
     pub fn FindPackagesForCurrentPublisher() -> ::windows_core::Result<super::super::super::Foundation::Collections::IIterable<super::super::super::ApplicationModel::Package>> {
         Self::IInstallationManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FindPackagesForCurrentPublisher)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FindPackagesForCurrentPublisher(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"ApplicationModel\"`, `\"Foundation_Collections\"`"]
@@ -368,7 +368,7 @@ impl InstallationManager {
     pub fn FindPackages() -> ::windows_core::Result<super::super::super::Foundation::Collections::IIterable<super::super::super::ApplicationModel::Package>> {
         Self::IInstallationManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FindPackages)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FindPackages(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Management_Deployment\"`"]
@@ -376,7 +376,7 @@ impl InstallationManager {
     pub fn RemovePackageAsync(packagefullname: &::windows_core::HSTRING, removaloptions: super::super::super::Management::Deployment::RemovalOptions) -> ::windows_core::Result<super::super::super::Foundation::IAsyncOperationWithProgress<PackageInstallResult, u32>> {
         Self::IInstallationManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RemovePackageAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(packagefullname), removaloptions, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RemovePackageAsync(::core::mem::transmute_copy(packagefullname), removaloptions, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"Management_Deployment\"`"]
@@ -388,7 +388,7 @@ impl InstallationManager {
     {
         Self::IInstallationManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RegisterPackageAsync)(::windows_core::Interface::as_raw(this), manifesturi.into_param().abi(), dependencypackageuris.try_into_param()?.abi(), deploymentoptions, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RegisterPackageAsync(manifesturi.into_param().abi(), dependencypackageuris.try_into_param()?.abi(), deploymentoptions, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"ApplicationModel\"`, `\"Foundation_Collections\"`"]
@@ -396,7 +396,7 @@ impl InstallationManager {
     pub fn FindPackagesByNamePublisher(packagename: &::windows_core::HSTRING, packagepublisher: &::windows_core::HSTRING) -> ::windows_core::Result<super::super::super::Foundation::Collections::IIterable<super::super::super::ApplicationModel::Package>> {
         Self::IInstallationManagerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FindPackagesByNamePublisher)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(packagename), ::core::mem::transmute_copy(packagepublisher), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FindPackagesByNamePublisher(::core::mem::transmute_copy(packagename), ::core::mem::transmute_copy(packagepublisher), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -421,7 +421,7 @@ impl PackageInstallResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProductId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProductId(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Management_Deployment\"`"]
@@ -430,14 +430,14 @@ impl PackageInstallResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).InstallState)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.InstallState(&mut result__)).from_abi(result__)
         }
     }
     pub fn ErrorText(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IPackageInstallResult2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ErrorText)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ErrorText(&mut result__)).from_abi(result__)
         }
     }
 }

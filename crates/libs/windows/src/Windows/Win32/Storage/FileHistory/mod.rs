@@ -76,7 +76,7 @@ where
 pub struct IFhConfigMgr(::windows_core::IUnknown);
 impl IFhConfigMgr {
     pub unsafe fn LoadConfiguration(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).LoadConfiguration)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.LoadConfiguration()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -84,10 +84,10 @@ impl IFhConfigMgr {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).CreateDefaultConfiguration)(::windows_core::Interface::as_raw(self), overwriteifexists.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateDefaultConfiguration(overwriteifexists.into_param().abi())).ok()
     }
     pub unsafe fn SaveConfiguration(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SaveConfiguration)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SaveConfiguration()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -96,7 +96,7 @@ impl IFhConfigMgr {
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).AddRemoveExcludeRule)(::windows_core::Interface::as_raw(self), add.into_param().abi(), category, item.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AddRemoveExcludeRule(add.into_param().abi(), category, item.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -105,39 +105,39 @@ impl IFhConfigMgr {
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetIncludeExcludeRules)(::windows_core::Interface::as_raw(self), include.into_param().abi(), category, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetIncludeExcludeRules(include.into_param().abi(), category, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetLocalPolicy(&self, localpolicytype: FH_LOCAL_POLICY_TYPE) -> ::windows_core::Result<u64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLocalPolicy)(::windows_core::Interface::as_raw(self), localpolicytype, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLocalPolicy(localpolicytype, &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetLocalPolicy(&self, localpolicytype: FH_LOCAL_POLICY_TYPE, policyvalue: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetLocalPolicy)(::windows_core::Interface::as_raw(self), localpolicytype, policyvalue).ok()
+        ::windows_core::vcall!(self.SetLocalPolicy(localpolicytype, policyvalue)).ok()
     }
     pub unsafe fn GetBackupStatus(&self) -> ::windows_core::Result<FH_BACKUP_STATUS> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetBackupStatus)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetBackupStatus(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetBackupStatus(&self, backupstatus: FH_BACKUP_STATUS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetBackupStatus)(::windows_core::Interface::as_raw(self), backupstatus).ok()
+        ::windows_core::vcall!(self.SetBackupStatus(backupstatus)).ok()
     }
     pub unsafe fn GetDefaultTarget(&self) -> ::windows_core::Result<IFhTarget> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDefaultTarget)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDefaultTarget(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ValidateTarget<P0>(&self, targeturl: P0) -> ::windows_core::Result<FH_DEVICE_VALIDATION_RESULT>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ValidateTarget)(::windows_core::Interface::as_raw(self), targeturl.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ValidateTarget(targeturl.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn ProvisionAndSetNewTarget<P0, P1>(&self, targeturl: P0, targetname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ProvisionAndSetNewTarget)(::windows_core::Interface::as_raw(self), targeturl.into_param().abi(), targetname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ProvisionAndSetNewTarget(targeturl.into_param().abi(), targetname.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -145,10 +145,10 @@ impl IFhConfigMgr {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).ChangeDefaultTargetRecommendation)(::windows_core::Interface::as_raw(self), recommend.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ChangeDefaultTargetRecommendation(recommend.into_param().abi())).ok()
     }
     pub unsafe fn QueryProtectionStatus(&self, protectionstate: *mut u32, protecteduntiltime: *mut ::windows_core::BSTR) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).QueryProtectionStatus)(::windows_core::Interface::as_raw(self), protectionstate, ::core::mem::transmute(protecteduntiltime)).ok()
+        ::windows_core::vcall!(self.QueryProtectionStatus(protectionstate, ::core::mem::transmute(protecteduntiltime))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IFhConfigMgr, ::windows_core::IUnknown);
@@ -198,21 +198,21 @@ impl IFhReassociation {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ValidateTarget)(::windows_core::Interface::as_raw(self), targeturl.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ValidateTarget(targeturl.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn ScanTargetForConfigurations<P0>(&self, targeturl: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ScanTargetForConfigurations)(::windows_core::Interface::as_raw(self), targeturl.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ScanTargetForConfigurations(targeturl.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetConfigurationDetails(&self, index: u32, username: *mut ::windows_core::BSTR, pcname: *mut ::windows_core::BSTR, backuptime: *mut super::super::Foundation::FILETIME) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetConfigurationDetails)(::windows_core::Interface::as_raw(self), index, ::core::mem::transmute(username), ::core::mem::transmute(pcname), backuptime).ok()
+        ::windows_core::vcall!(self.GetConfigurationDetails(index, ::core::mem::transmute(username), ::core::mem::transmute(pcname), backuptime)).ok()
     }
     pub unsafe fn SelectConfiguration(&self, index: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SelectConfiguration)(::windows_core::Interface::as_raw(self), index).ok()
+        ::windows_core::vcall!(self.SelectConfiguration(index)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -220,7 +220,7 @@ impl IFhReassociation {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).PerformReassociation)(::windows_core::Interface::as_raw(self), overwriteifexists.into_param().abi()).ok()
+        ::windows_core::vcall!(self.PerformReassociation(overwriteifexists.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IFhReassociation, ::windows_core::IUnknown);
@@ -251,11 +251,11 @@ pub struct IFhReassociation_Vtbl {
 pub struct IFhScopeIterator(::windows_core::IUnknown);
 impl IFhScopeIterator {
     pub unsafe fn MoveToNextItem(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).MoveToNextItem)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.MoveToNextItem()).ok()
     }
     pub unsafe fn GetItem(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetItem)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetItem(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IFhScopeIterator, ::windows_core::IUnknown);
@@ -278,11 +278,11 @@ pub struct IFhTarget(::windows_core::IUnknown);
 impl IFhTarget {
     pub unsafe fn GetStringProperty(&self, propertytype: FH_TARGET_PROPERTY_TYPE) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetStringProperty)(::windows_core::Interface::as_raw(self), propertytype, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetStringProperty(propertytype, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetNumericalProperty(&self, propertytype: FH_TARGET_PROPERTY_TYPE) -> ::windows_core::Result<u64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetNumericalProperty)(::windows_core::Interface::as_raw(self), propertytype, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetNumericalProperty(propertytype, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IFhTarget, ::windows_core::IUnknown);

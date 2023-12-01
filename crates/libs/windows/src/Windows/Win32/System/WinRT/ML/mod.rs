@@ -9,7 +9,7 @@ impl ILearningModelDeviceFactoryNative {
         P0: ::windows_core::IntoParam<super::super::super::Graphics::Direct3D12::ID3D12CommandQueue>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateFromD3D12CommandQueue)(::windows_core::Interface::as_raw(self), value.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateFromD3D12CommandQueue(value.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ILearningModelDeviceFactoryNative, ::windows_core::IUnknown);
@@ -36,7 +36,7 @@ impl ILearningModelOperatorProviderNative {
     #[cfg(feature = "Win32_AI_MachineLearning_WinML")]
     pub unsafe fn GetRegistry(&self) -> ::windows_core::Result<super::super::super::AI::MachineLearning::WinML::IMLOperatorRegistry> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRegistry)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRegistry(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ILearningModelOperatorProviderNative, ::windows_core::IUnknown);
@@ -60,7 +60,7 @@ pub struct ILearningModelOperatorProviderNative_Vtbl {
 pub struct ILearningModelSessionOptionsNative(::windows_core::IUnknown);
 impl ILearningModelSessionOptionsNative {
     pub unsafe fn SetIntraOpNumThreadsOverride(&self, intraopnumthreads: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetIntraOpNumThreadsOverride)(::windows_core::Interface::as_raw(self), intraopnumthreads).ok()
+        ::windows_core::vcall!(self.SetIntraOpNumThreadsOverride(intraopnumthreads)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ILearningModelSessionOptionsNative, ::windows_core::IUnknown);
@@ -81,7 +81,7 @@ pub struct ILearningModelSessionOptionsNative_Vtbl {
 pub struct ILearningModelSessionOptionsNative1(::windows_core::IUnknown);
 impl ILearningModelSessionOptionsNative1 {
     pub unsafe fn SetIntraOpThreadSpinning(&self, allowspinning: u8) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetIntraOpThreadSpinning)(::windows_core::Interface::as_raw(self), allowspinning).ok()
+        ::windows_core::vcall!(self.SetIntraOpThreadSpinning(allowspinning)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ILearningModelSessionOptionsNative1, ::windows_core::IUnknown);
@@ -102,13 +102,13 @@ pub struct ILearningModelSessionOptionsNative1_Vtbl {
 pub struct ITensorNative(::windows_core::IUnknown);
 impl ITensorNative {
     pub unsafe fn GetBuffer(&self, value: *mut *mut u8, capacity: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetBuffer)(::windows_core::Interface::as_raw(self), value, capacity).ok()
+        ::windows_core::vcall!(self.GetBuffer(value, capacity)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`"]
     #[cfg(feature = "Win32_Graphics_Direct3D12")]
     pub unsafe fn GetD3D12Resource(&self) -> ::windows_core::Result<super::super::super::Graphics::Direct3D12::ID3D12Resource> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetD3D12Resource)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetD3D12Resource(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITensorNative, ::windows_core::IUnknown);
@@ -138,7 +138,7 @@ impl ITensorStaticsNative {
     where
         P0: ::windows_core::IntoParam<super::super::super::Graphics::Direct3D12::ID3D12Resource>,
     {
-        (::windows_core::Interface::vtable(self).CreateFromD3D12Resource)(::windows_core::Interface::as_raw(self), value.into_param().abi(), shape, shapecount, ::core::mem::transmute(result)).ok()
+        ::windows_core::vcall!(self.CreateFromD3D12Resource(value.into_param().abi(), shape, shapecount, ::core::mem::transmute(result))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITensorStaticsNative, ::windows_core::IUnknown);

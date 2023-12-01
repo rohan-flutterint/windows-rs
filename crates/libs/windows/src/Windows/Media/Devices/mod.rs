@@ -513,14 +513,14 @@ impl IDefaultAudioDeviceChangedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
     pub fn Role(&self) -> ::windows_core::Result<AudioDeviceRole> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Role)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Role(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1127,7 +1127,7 @@ impl IMediaDeviceController {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetAvailableMediaStreamProperties)(::windows_core::Interface::as_raw(this), mediastreamtype, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetAvailableMediaStreamProperties(mediastreamtype, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Media_Capture\"`, `\"Media_MediaProperties\"`"]
@@ -1136,7 +1136,7 @@ impl IMediaDeviceController {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetMediaStreamProperties)(::windows_core::Interface::as_raw(this), mediastreamtype, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetMediaStreamProperties(mediastreamtype, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Media_Capture\"`, `\"Media_MediaProperties\"`"]
@@ -1148,7 +1148,7 @@ impl IMediaDeviceController {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetMediaStreamPropertiesAsync)(::windows_core::Interface::as_raw(this), mediastreamtype, mediaencodingproperties.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetMediaStreamPropertiesAsync(mediastreamtype, mediaencodingproperties.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -1627,12 +1627,12 @@ impl AdvancedPhotoCaptureSettings {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Mode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Mode(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMode(&self, value: AdvancedPhotoMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetMode)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMode(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for AdvancedPhotoCaptureSettings {
@@ -1658,7 +1658,7 @@ impl AdvancedPhotoControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1667,14 +1667,14 @@ impl AdvancedPhotoControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedModes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedModes(&mut result__)).from_abi(result__)
         }
     }
     pub fn Mode(&self) -> ::windows_core::Result<AdvancedPhotoMode> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Mode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Mode(&mut result__)).from_abi(result__)
         }
     }
     pub fn Configure<P0>(&self, settings: P0) -> ::windows_core::Result<()>
@@ -1682,7 +1682,7 @@ impl AdvancedPhotoControl {
         P0: ::windows_core::IntoParam<AdvancedPhotoCaptureSettings>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Configure)(::windows_core::Interface::as_raw(this), settings.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Configure(settings.into_param().abi())).ok() }
     }
 }
 impl ::windows_core::RuntimeType for AdvancedPhotoControl {
@@ -1706,24 +1706,24 @@ pub struct AudioDeviceController(::windows_core::IUnknown);
 impl AudioDeviceController {
     pub fn SetMuted(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetMuted)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMuted(value)).ok() }
     }
     pub fn Muted(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Muted)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Muted(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetVolumePercent(&self, value: f32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetVolumePercent)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetVolumePercent(value)).ok() }
     }
     pub fn VolumePercent(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).VolumePercent)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.VolumePercent(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"Media_Capture\"`, `\"Media_MediaProperties\"`"]
@@ -1732,7 +1732,7 @@ impl AudioDeviceController {
         let this = &::windows_core::ComInterface::cast::<IMediaDeviceController>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetAvailableMediaStreamProperties)(::windows_core::Interface::as_raw(this), mediastreamtype, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetAvailableMediaStreamProperties(mediastreamtype, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Media_Capture\"`, `\"Media_MediaProperties\"`"]
@@ -1741,7 +1741,7 @@ impl AudioDeviceController {
         let this = &::windows_core::ComInterface::cast::<IMediaDeviceController>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetMediaStreamProperties)(::windows_core::Interface::as_raw(this), mediastreamtype, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetMediaStreamProperties(mediastreamtype, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Media_Capture\"`, `\"Media_MediaProperties\"`"]
@@ -1753,7 +1753,7 @@ impl AudioDeviceController {
         let this = &::windows_core::ComInterface::cast::<IMediaDeviceController>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetMediaStreamPropertiesAsync)(::windows_core::Interface::as_raw(this), mediastreamtype, mediaencodingproperties.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetMediaStreamPropertiesAsync(mediastreamtype, mediaencodingproperties.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -1779,35 +1779,35 @@ impl AudioDeviceModule {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ClassId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ClassId(&mut result__)).from_abi(result__)
         }
     }
     pub fn DisplayName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayName(&mut result__)).from_abi(result__)
         }
     }
     pub fn InstanceId(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).InstanceId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.InstanceId(&mut result__)).from_abi(result__)
         }
     }
     pub fn MajorVersion(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MajorVersion)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MajorVersion(&mut result__)).from_abi(result__)
         }
     }
     pub fn MinorVersion(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MinorVersion)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MinorVersion(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -1819,7 +1819,7 @@ impl AudioDeviceModule {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SendCommandAsync)(::windows_core::Interface::as_raw(this), command.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SendCommandAsync(command.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -1844,7 +1844,7 @@ impl AudioDeviceModuleNotificationEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Module)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Module(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1853,7 +1853,7 @@ impl AudioDeviceModuleNotificationEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NotificationData)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NotificationData(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1885,14 +1885,14 @@ impl AudioDeviceModulesManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ModuleNotificationReceived)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ModuleNotificationReceived(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveModuleNotificationReceived(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveModuleNotificationReceived)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveModuleNotificationReceived(token)).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -1900,7 +1900,7 @@ impl AudioDeviceModulesManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FindAllById)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(moduleid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FindAllById(::core::mem::transmute_copy(moduleid), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1909,13 +1909,13 @@ impl AudioDeviceModulesManager {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FindAll)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FindAll(&mut result__)).from_abi(result__)
         }
     }
     pub fn Create(deviceid: &::windows_core::HSTRING) -> ::windows_core::Result<AudioDeviceModulesManager> {
         Self::IAudioDeviceModulesManagerFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Create)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(deviceid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Create(::core::mem::transmute_copy(deviceid), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1947,29 +1947,29 @@ impl CallControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IndicateNewIncomingCall)(::windows_core::Interface::as_raw(this), enableringer, ::core::mem::transmute_copy(callerid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IndicateNewIncomingCall(enableringer, ::core::mem::transmute_copy(callerid), &mut result__)).from_abi(result__)
         }
     }
     pub fn IndicateNewOutgoingCall(&self) -> ::windows_core::Result<u64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IndicateNewOutgoingCall)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IndicateNewOutgoingCall(&mut result__)).from_abi(result__)
         }
     }
     pub fn IndicateActiveCall(&self, calltoken: u64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).IndicateActiveCall)(::windows_core::Interface::as_raw(this), calltoken).ok() }
+        unsafe { ::windows_core::vcall!(this.IndicateActiveCall(calltoken)).ok() }
     }
     pub fn EndCall(&self, calltoken: u64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).EndCall)(::windows_core::Interface::as_raw(this), calltoken).ok() }
+        unsafe { ::windows_core::vcall!(this.EndCall(calltoken)).ok() }
     }
     pub fn HasRinger(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasRinger)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HasRinger(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1981,14 +1981,14 @@ impl CallControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AnswerRequested)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AnswerRequested(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveAnswerRequested(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveAnswerRequested)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveAnswerRequested(token)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1999,14 +1999,14 @@ impl CallControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HangUpRequested)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HangUpRequested(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveHangUpRequested(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveHangUpRequested)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveHangUpRequested(token)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2017,14 +2017,14 @@ impl CallControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DialRequested)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DialRequested(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveDialRequested(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveDialRequested)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveDialRequested(token)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2035,14 +2035,14 @@ impl CallControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RedialRequested)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RedialRequested(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveRedialRequested(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveRedialRequested)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveRedialRequested(token)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2053,14 +2053,14 @@ impl CallControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).KeypadPressed)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.KeypadPressed(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveKeypadPressed(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveKeypadPressed)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveKeypadPressed(token)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2071,25 +2071,25 @@ impl CallControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AudioTransferRequested)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AudioTransferRequested(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveAudioTransferRequested(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveAudioTransferRequested)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveAudioTransferRequested(token)).ok() }
     }
     pub fn GetDefault() -> ::windows_core::Result<CallControl> {
         Self::ICallControlStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDefault)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDefault(&mut result__)).from_abi(result__)
         })
     }
     pub fn FromId(deviceid: &::windows_core::HSTRING) -> ::windows_core::Result<CallControl> {
         Self::ICallControlStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FromId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(deviceid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FromId(::core::mem::transmute_copy(deviceid), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2121,14 +2121,14 @@ impl CameraOcclusionInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetState)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetState(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsOcclusionKindSupported(&self, occlusionkind: CameraOcclusionKind) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsOcclusionKindSupported)(::windows_core::Interface::as_raw(this), occlusionkind, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsOcclusionKindSupported(occlusionkind, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2140,14 +2140,14 @@ impl CameraOcclusionInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).StateChanged)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.StateChanged(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveStateChanged(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveStateChanged)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveStateChanged(token)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for CameraOcclusionInfo {
@@ -2173,14 +2173,14 @@ impl CameraOcclusionState {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsOccluded)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsOccluded(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsOcclusionKind(&self, occlusionkind: CameraOcclusionKind) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsOcclusionKind)(::windows_core::Interface::as_raw(this), occlusionkind, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsOcclusionKind(occlusionkind, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -2207,7 +2207,7 @@ impl CameraOcclusionStateChangedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).State)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.State(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2234,14 +2234,14 @@ impl DefaultAudioCaptureDeviceChangedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
     pub fn Role(&self) -> ::windows_core::Result<AudioDeviceRole> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Role)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Role(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2269,14 +2269,14 @@ impl DefaultAudioRenderDeviceChangedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
     pub fn Role(&self) -> ::windows_core::Result<AudioDeviceRole> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Role)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Role(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2302,13 +2302,13 @@ pub struct DialRequestedEventArgs(::windows_core::IUnknown);
 impl DialRequestedEventArgs {
     pub fn Handled(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Handled)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Handled()).ok() }
     }
     pub fn Contact(&self) -> ::windows_core::Result<::windows_core::IInspectable> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Contact)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Contact(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2342,34 +2342,34 @@ impl DigitalWindowBounds {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NormalizedOriginTop)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NormalizedOriginTop(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetNormalizedOriginTop(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetNormalizedOriginTop)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetNormalizedOriginTop(value)).ok() }
     }
     pub fn NormalizedOriginLeft(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NormalizedOriginLeft)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NormalizedOriginLeft(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetNormalizedOriginLeft(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetNormalizedOriginLeft)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetNormalizedOriginLeft(value)).ok() }
     }
     pub fn Scale(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Scale)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Scale(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetScale(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetScale)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetScale(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for DigitalWindowBounds {
@@ -2395,35 +2395,35 @@ impl DigitalWindowCapability {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Width)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Width(&mut result__)).from_abi(result__)
         }
     }
     pub fn Height(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Height)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Height(&mut result__)).from_abi(result__)
         }
     }
     pub fn MinScaleValue(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MinScaleValue)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MinScaleValue(&mut result__)).from_abi(result__)
         }
     }
     pub fn MaxScaleValue(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MaxScaleValue)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MaxScaleValue(&mut result__)).from_abi(result__)
         }
     }
     pub fn MinScaleValueWithoutUpsampling(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MinScaleValueWithoutUpsampling)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MinScaleValueWithoutUpsampling(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2432,7 +2432,7 @@ impl DigitalWindowCapability {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NormalizedFieldOfViewLimit)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NormalizedFieldOfViewLimit(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2459,40 +2459,40 @@ impl DigitalWindowControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsSupported(&mut result__)).from_abi(result__)
         }
     }
     pub fn SupportedModes(&self) -> ::windows_core::Result<::windows_core::Array<DigitalWindowMode>> {
         let this = self;
         unsafe {
             let mut result__ = ::core::mem::MaybeUninit::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedModes)(::windows_core::Interface::as_raw(this), ::windows_core::Array::<DigitalWindowMode>::set_abi_len(::std::mem::transmute(&mut result__)), result__.as_mut_ptr() as *mut _ as _).and_then(|| result__.assume_init())
+            ::windows_core::vcall!(this.SupportedModes(::windows_core::Array::<DigitalWindowMode>::set_abi_len(::std::mem::transmute(&mut result__)), result__.as_mut_ptr() as *mut _ as _)).and_then(|| result__.assume_init())
         }
     }
     pub fn CurrentMode(&self) -> ::windows_core::Result<DigitalWindowMode> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CurrentMode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CurrentMode(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetBounds(&self) -> ::windows_core::Result<DigitalWindowBounds> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetBounds)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetBounds(&mut result__)).from_abi(result__)
         }
     }
     pub fn Configure(&self, digitalwindowmode: DigitalWindowMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Configure)(::windows_core::Interface::as_raw(this), digitalwindowmode).ok() }
+        unsafe { ::windows_core::vcall!(this.Configure(digitalwindowmode)).ok() }
     }
     pub fn ConfigureWithBounds<P0>(&self, digitalwindowmode: DigitalWindowMode, digitalwindowbounds: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<DigitalWindowBounds>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ConfigureWithBounds)(::windows_core::Interface::as_raw(this), digitalwindowmode, digitalwindowbounds.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.ConfigureWithBounds(digitalwindowmode, digitalwindowbounds.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -2500,14 +2500,14 @@ impl DigitalWindowControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedCapabilities)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedCapabilities(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetCapabilityForSize(&self, width: i32, height: i32) -> ::windows_core::Result<DigitalWindowCapability> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCapabilityForSize)(::windows_core::Interface::as_raw(this), width, height, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetCapabilityForSize(width, height, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -2534,35 +2534,35 @@ impl ExposureCompensationControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     pub fn Min(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Min)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Min(&mut result__)).from_abi(result__)
         }
     }
     pub fn Max(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Max)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Max(&mut result__)).from_abi(result__)
         }
     }
     pub fn Step(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Step)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Step(&mut result__)).from_abi(result__)
         }
     }
     pub fn Value(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2571,7 +2571,7 @@ impl ExposureCompensationControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetValueAsync)(::windows_core::Interface::as_raw(this), value, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetValueAsync(value, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -2596,14 +2596,14 @@ impl ExposureControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     pub fn Auto(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Auto)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Auto(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2612,7 +2612,7 @@ impl ExposureControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetAutoAsync)(::windows_core::Interface::as_raw(this), value, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetAutoAsync(value, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2621,7 +2621,7 @@ impl ExposureControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Min)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Min(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2630,7 +2630,7 @@ impl ExposureControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Max)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Max(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2639,7 +2639,7 @@ impl ExposureControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Step)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Step(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2648,7 +2648,7 @@ impl ExposureControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2657,7 +2657,7 @@ impl ExposureControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetValueAsync)(::windows_core::Interface::as_raw(this), shutterduration, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetValueAsync(shutterduration, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -2682,19 +2682,19 @@ impl ExposurePriorityVideoControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     pub fn Enabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Enabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Enabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetEnabled(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for ExposurePriorityVideoControl {
@@ -2720,84 +2720,84 @@ impl FlashControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     pub fn PowerSupported(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PowerSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PowerSupported(&mut result__)).from_abi(result__)
         }
     }
     pub fn RedEyeReductionSupported(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RedEyeReductionSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RedEyeReductionSupported(&mut result__)).from_abi(result__)
         }
     }
     pub fn Enabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Enabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Enabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetEnabled(value)).ok() }
     }
     pub fn Auto(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Auto)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Auto(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAuto(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAuto)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAuto(value)).ok() }
     }
     pub fn RedEyeReduction(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RedEyeReduction)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RedEyeReduction(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRedEyeReduction(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetRedEyeReduction)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRedEyeReduction(value)).ok() }
     }
     pub fn PowerPercent(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PowerPercent)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PowerPercent(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPowerPercent(&self, value: f32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPowerPercent)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPowerPercent(value)).ok() }
     }
     pub fn AssistantLightSupported(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IFlashControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AssistantLightSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AssistantLightSupported(&mut result__)).from_abi(result__)
         }
     }
     pub fn AssistantLightEnabled(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IFlashControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AssistantLightEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AssistantLightEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAssistantLightEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IFlashControl2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetAssistantLightEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAssistantLightEnabled(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for FlashControl {
@@ -2821,7 +2821,7 @@ impl FocusControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2830,14 +2830,14 @@ impl FocusControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedPresets)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedPresets(&mut result__)).from_abi(result__)
         }
     }
     pub fn Preset(&self) -> ::windows_core::Result<FocusPreset> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Preset)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Preset(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2846,7 +2846,7 @@ impl FocusControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetPresetAsync)(::windows_core::Interface::as_raw(this), preset, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetPresetAsync(preset, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2855,35 +2855,35 @@ impl FocusControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetPresetWithCompletionOptionAsync)(::windows_core::Interface::as_raw(this), preset, completebeforefocus, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetPresetWithCompletionOptionAsync(preset, completebeforefocus, &mut result__)).from_abi(result__)
         }
     }
     pub fn Min(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Min)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Min(&mut result__)).from_abi(result__)
         }
     }
     pub fn Max(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Max)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Max(&mut result__)).from_abi(result__)
         }
     }
     pub fn Step(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Step)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Step(&mut result__)).from_abi(result__)
         }
     }
     pub fn Value(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2892,7 +2892,7 @@ impl FocusControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetValueAsync)(::windows_core::Interface::as_raw(this), focus, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetValueAsync(focus, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2901,21 +2901,21 @@ impl FocusControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FocusAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FocusAsync(&mut result__)).from_abi(result__)
         }
     }
     pub fn FocusChangedSupported(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IFocusControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FocusChangedSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FocusChangedSupported(&mut result__)).from_abi(result__)
         }
     }
     pub fn WaitForFocusSupported(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IFocusControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WaitForFocusSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WaitForFocusSupported(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2924,7 +2924,7 @@ impl FocusControl {
         let this = &::windows_core::ComInterface::cast::<IFocusControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedFocusModes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedFocusModes(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2933,7 +2933,7 @@ impl FocusControl {
         let this = &::windows_core::ComInterface::cast::<IFocusControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedFocusDistances)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedFocusDistances(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2942,21 +2942,21 @@ impl FocusControl {
         let this = &::windows_core::ComInterface::cast::<IFocusControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedFocusRanges)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedFocusRanges(&mut result__)).from_abi(result__)
         }
     }
     pub fn Mode(&self) -> ::windows_core::Result<FocusMode> {
         let this = &::windows_core::ComInterface::cast::<IFocusControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Mode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Mode(&mut result__)).from_abi(result__)
         }
     }
     pub fn FocusState(&self) -> ::windows_core::Result<MediaCaptureFocusState> {
         let this = &::windows_core::ComInterface::cast::<IFocusControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FocusState)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FocusState(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2965,7 +2965,7 @@ impl FocusControl {
         let this = &::windows_core::ComInterface::cast::<IFocusControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UnlockAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UnlockAsync(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2974,7 +2974,7 @@ impl FocusControl {
         let this = &::windows_core::ComInterface::cast::<IFocusControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LockAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LockAsync(&mut result__)).from_abi(result__)
         }
     }
     pub fn Configure<P0>(&self, settings: P0) -> ::windows_core::Result<()>
@@ -2982,7 +2982,7 @@ impl FocusControl {
         P0: ::windows_core::IntoParam<FocusSettings>,
     {
         let this = &::windows_core::ComInterface::cast::<IFocusControl2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).Configure)(::windows_core::Interface::as_raw(this), settings.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Configure(settings.into_param().abi())).ok() }
     }
 }
 impl ::windows_core::RuntimeType for FocusControl {
@@ -3013,23 +3013,23 @@ impl FocusSettings {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Mode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Mode(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMode(&self, value: FocusMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetMode)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMode(value)).ok() }
     }
     pub fn AutoFocusRange(&self) -> ::windows_core::Result<AutoFocusRange> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AutoFocusRange)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AutoFocusRange(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAutoFocusRange(&self, value: AutoFocusRange) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAutoFocusRange)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAutoFocusRange(value)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -3037,7 +3037,7 @@ impl FocusSettings {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3047,7 +3047,7 @@ impl FocusSettings {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<u32>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetValue)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetValue(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -3055,7 +3055,7 @@ impl FocusSettings {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Distance)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Distance(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3065,29 +3065,29 @@ impl FocusSettings {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<ManualFocusDistance>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDistance)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDistance(value.try_into_param()?.abi())).ok() }
     }
     pub fn WaitForFocus(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WaitForFocus)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WaitForFocus(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetWaitForFocus(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetWaitForFocus)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetWaitForFocus(value)).ok() }
     }
     pub fn DisableDriverFallback(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisableDriverFallback)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisableDriverFallback(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDisableDriverFallback(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDisableDriverFallback)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDisableDriverFallback(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for FocusSettings {
@@ -3113,7 +3113,7 @@ impl HdrVideoControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3122,19 +3122,19 @@ impl HdrVideoControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedModes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedModes(&mut result__)).from_abi(result__)
         }
     }
     pub fn Mode(&self) -> ::windows_core::Result<HdrVideoMode> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Mode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Mode(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMode(&self, value: HdrVideoMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetMode)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMode(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for HdrVideoControl {
@@ -3160,7 +3160,7 @@ impl InfraredTorchControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsSupported(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3169,51 +3169,51 @@ impl InfraredTorchControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedModes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedModes(&mut result__)).from_abi(result__)
         }
     }
     pub fn CurrentMode(&self) -> ::windows_core::Result<InfraredTorchMode> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CurrentMode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CurrentMode(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCurrentMode(&self, value: InfraredTorchMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetCurrentMode)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCurrentMode(value)).ok() }
     }
     pub fn MinPower(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MinPower)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MinPower(&mut result__)).from_abi(result__)
         }
     }
     pub fn MaxPower(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MaxPower)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MaxPower(&mut result__)).from_abi(result__)
         }
     }
     pub fn PowerStep(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PowerStep)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PowerStep(&mut result__)).from_abi(result__)
         }
     }
     pub fn Power(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Power)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Power(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPower(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPower)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPower(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for InfraredTorchControl {
@@ -3239,7 +3239,7 @@ impl IsoSpeedControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"deprecated\"`"]
@@ -3248,7 +3248,7 @@ impl IsoSpeedControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedPresets)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedPresets(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"deprecated\"`"]
@@ -3257,7 +3257,7 @@ impl IsoSpeedControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Preset)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Preset(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"deprecated\"`"]
@@ -3266,35 +3266,35 @@ impl IsoSpeedControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetPresetAsync)(::windows_core::Interface::as_raw(this), preset, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetPresetAsync(preset, &mut result__)).from_abi(result__)
         }
     }
     pub fn Min(&self) -> ::windows_core::Result<u32> {
         let this = &::windows_core::ComInterface::cast::<IIsoSpeedControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Min)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Min(&mut result__)).from_abi(result__)
         }
     }
     pub fn Max(&self) -> ::windows_core::Result<u32> {
         let this = &::windows_core::ComInterface::cast::<IIsoSpeedControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Max)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Max(&mut result__)).from_abi(result__)
         }
     }
     pub fn Step(&self) -> ::windows_core::Result<u32> {
         let this = &::windows_core::ComInterface::cast::<IIsoSpeedControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Step)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Step(&mut result__)).from_abi(result__)
         }
     }
     pub fn Value(&self) -> ::windows_core::Result<u32> {
         let this = &::windows_core::ComInterface::cast::<IIsoSpeedControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3303,14 +3303,14 @@ impl IsoSpeedControl {
         let this = &::windows_core::ComInterface::cast::<IIsoSpeedControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetValueAsync)(::windows_core::Interface::as_raw(this), isospeed, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetValueAsync(isospeed, &mut result__)).from_abi(result__)
         }
     }
     pub fn Auto(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IIsoSpeedControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Auto)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Auto(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3319,7 +3319,7 @@ impl IsoSpeedControl {
         let this = &::windows_core::ComInterface::cast::<IIsoSpeedControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetAutoAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetAutoAsync(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3344,7 +3344,7 @@ impl KeypadPressedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TelephonyKey)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TelephonyKey(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3376,7 +3376,7 @@ impl LowLagPhotoControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetHighestConcurrentFrameRate)(::windows_core::Interface::as_raw(this), captureproperties.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetHighestConcurrentFrameRate(captureproperties.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Media_MediaProperties\"`"]
@@ -3385,19 +3385,19 @@ impl LowLagPhotoControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCurrentFrameRate)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetCurrentFrameRate(&mut result__)).from_abi(result__)
         }
     }
     pub fn ThumbnailEnabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ThumbnailEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ThumbnailEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetThumbnailEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetThumbnailEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetThumbnailEnabled(value)).ok() }
     }
     #[doc = "Required features: `\"Media_MediaProperties\"`"]
     #[cfg(feature = "Media_MediaProperties")]
@@ -3405,31 +3405,31 @@ impl LowLagPhotoControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ThumbnailFormat)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ThumbnailFormat(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Media_MediaProperties\"`"]
     #[cfg(feature = "Media_MediaProperties")]
     pub fn SetThumbnailFormat(&self, value: super::MediaProperties::MediaThumbnailFormat) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetThumbnailFormat)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetThumbnailFormat(value)).ok() }
     }
     pub fn DesiredThumbnailSize(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DesiredThumbnailSize)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DesiredThumbnailSize(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDesiredThumbnailSize(&self, value: u32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDesiredThumbnailSize)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDesiredThumbnailSize(value)).ok() }
     }
     pub fn HardwareAcceleratedThumbnailSupported(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareAcceleratedThumbnailSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareAcceleratedThumbnailSupported(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3454,44 +3454,44 @@ impl LowLagPhotoSequenceControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     pub fn MaxPastPhotos(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MaxPastPhotos)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MaxPastPhotos(&mut result__)).from_abi(result__)
         }
     }
     pub fn MaxPhotosPerSecond(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MaxPhotosPerSecond)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MaxPhotosPerSecond(&mut result__)).from_abi(result__)
         }
     }
     pub fn PastPhotoLimit(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PastPhotoLimit)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PastPhotoLimit(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPastPhotoLimit(&self, value: u32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPastPhotoLimit)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPastPhotoLimit(value)).ok() }
     }
     pub fn PhotosPerSecondLimit(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PhotosPerSecondLimit)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PhotosPerSecondLimit(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPhotosPerSecondLimit(&self, value: f32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPhotosPerSecondLimit)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPhotosPerSecondLimit(value)).ok() }
     }
     #[doc = "Required features: `\"Media_MediaProperties\"`"]
     #[cfg(feature = "Media_MediaProperties")]
@@ -3502,7 +3502,7 @@ impl LowLagPhotoSequenceControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetHighestConcurrentFrameRate)(::windows_core::Interface::as_raw(this), captureproperties.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetHighestConcurrentFrameRate(captureproperties.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Media_MediaProperties\"`"]
@@ -3511,19 +3511,19 @@ impl LowLagPhotoSequenceControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCurrentFrameRate)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetCurrentFrameRate(&mut result__)).from_abi(result__)
         }
     }
     pub fn ThumbnailEnabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ThumbnailEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ThumbnailEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetThumbnailEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetThumbnailEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetThumbnailEnabled(value)).ok() }
     }
     #[doc = "Required features: `\"Media_MediaProperties\"`"]
     #[cfg(feature = "Media_MediaProperties")]
@@ -3531,31 +3531,31 @@ impl LowLagPhotoSequenceControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ThumbnailFormat)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ThumbnailFormat(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Media_MediaProperties\"`"]
     #[cfg(feature = "Media_MediaProperties")]
     pub fn SetThumbnailFormat(&self, value: super::MediaProperties::MediaThumbnailFormat) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetThumbnailFormat)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetThumbnailFormat(value)).ok() }
     }
     pub fn DesiredThumbnailSize(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DesiredThumbnailSize)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DesiredThumbnailSize(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDesiredThumbnailSize(&self, value: u32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDesiredThumbnailSize)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDesiredThumbnailSize(value)).ok() }
     }
     pub fn HardwareAcceleratedThumbnailSupported(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareAcceleratedThumbnailSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareAcceleratedThumbnailSupported(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3577,31 +3577,31 @@ impl MediaDevice {
     pub fn GetAudioCaptureSelector() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IMediaDeviceStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetAudioCaptureSelector)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetAudioCaptureSelector(&mut result__)).from_abi(result__)
         })
     }
     pub fn GetAudioRenderSelector() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IMediaDeviceStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetAudioRenderSelector)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetAudioRenderSelector(&mut result__)).from_abi(result__)
         })
     }
     pub fn GetVideoCaptureSelector() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IMediaDeviceStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetVideoCaptureSelector)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetVideoCaptureSelector(&mut result__)).from_abi(result__)
         })
     }
     pub fn GetDefaultAudioCaptureId(role: AudioDeviceRole) -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IMediaDeviceStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDefaultAudioCaptureId)(::windows_core::Interface::as_raw(this), role, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDefaultAudioCaptureId(role, &mut result__)).from_abi(result__)
         })
     }
     pub fn GetDefaultAudioRenderId(role: AudioDeviceRole) -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IMediaDeviceStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDefaultAudioRenderId)(::windows_core::Interface::as_raw(this), role, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDefaultAudioRenderId(role, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3612,13 +3612,13 @@ impl MediaDevice {
     {
         Self::IMediaDeviceStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DefaultAudioCaptureDeviceChanged)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DefaultAudioCaptureDeviceChanged(handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveDefaultAudioCaptureDeviceChanged(cookie: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
-        Self::IMediaDeviceStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RemoveDefaultAudioCaptureDeviceChanged)(::windows_core::Interface::as_raw(this), cookie).ok() })
+        Self::IMediaDeviceStatics(|this| unsafe { ::windows_core::vcall!(this.RemoveDefaultAudioCaptureDeviceChanged(cookie)).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -3628,13 +3628,13 @@ impl MediaDevice {
     {
         Self::IMediaDeviceStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DefaultAudioRenderDeviceChanged)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DefaultAudioRenderDeviceChanged(handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveDefaultAudioRenderDeviceChanged(cookie: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
-        Self::IMediaDeviceStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RemoveDefaultAudioRenderDeviceChanged)(::windows_core::Interface::as_raw(this), cookie).ok() })
+        Self::IMediaDeviceStatics(|this| unsafe { ::windows_core::vcall!(this.RemoveDefaultAudioRenderDeviceChanged(cookie)).ok() })
     }
     #[doc(hidden)]
     pub fn IMediaDeviceStatics<R, F: FnOnce(&IMediaDeviceStatics) -> ::windows_core::Result<R>>(callback: F) -> ::windows_core::Result<R> {
@@ -3653,35 +3653,35 @@ impl MediaDeviceControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Capabilities)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Capabilities(&mut result__)).from_abi(result__)
         }
     }
     pub fn TryGetValue(&self, value: &mut f64) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryGetValue)(::windows_core::Interface::as_raw(this), value, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryGetValue(value, &mut result__)).from_abi(result__)
         }
     }
     pub fn TrySetValue(&self, value: f64) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TrySetValue)(::windows_core::Interface::as_raw(this), value, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TrySetValue(value, &mut result__)).from_abi(result__)
         }
     }
     pub fn TryGetAuto(&self, value: &mut bool) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryGetAuto)(::windows_core::Interface::as_raw(this), value, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryGetAuto(value, &mut result__)).from_abi(result__)
         }
     }
     pub fn TrySetAuto(&self, value: bool) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TrySetAuto)(::windows_core::Interface::as_raw(this), value, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TrySetAuto(value, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -3706,42 +3706,42 @@ impl MediaDeviceControlCapabilities {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     pub fn Min(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Min)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Min(&mut result__)).from_abi(result__)
         }
     }
     pub fn Max(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Max)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Max(&mut result__)).from_abi(result__)
         }
     }
     pub fn Step(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Step)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Step(&mut result__)).from_abi(result__)
         }
     }
     pub fn Default(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Default)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Default(&mut result__)).from_abi(result__)
         }
     }
     pub fn AutoModeSupported(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AutoModeSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AutoModeSupported(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3766,7 +3766,7 @@ impl ModuleCommandResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -3775,7 +3775,7 @@ impl ModuleCommandResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Result)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Result(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3800,7 +3800,7 @@ impl OpticalImageStabilizationControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3809,19 +3809,19 @@ impl OpticalImageStabilizationControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedModes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedModes(&mut result__)).from_abi(result__)
         }
     }
     pub fn Mode(&self) -> ::windows_core::Result<OpticalImageStabilizationMode> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Mode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Mode(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMode(&self, value: OpticalImageStabilizationMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetMode)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMode(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for OpticalImageStabilizationControl {
@@ -3847,7 +3847,7 @@ impl PanelBasedOptimizationControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsSupported(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Enumeration\"`"]
@@ -3856,14 +3856,14 @@ impl PanelBasedOptimizationControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Panel)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Panel(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Enumeration\"`"]
     #[cfg(feature = "Devices_Enumeration")]
     pub fn SetPanel(&self, value: super::super::Devices::Enumeration::Panel) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPanel)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPanel(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for PanelBasedOptimizationControl {
@@ -3889,19 +3889,19 @@ impl PhotoConfirmationControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     pub fn Enabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Enabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Enabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetEnabled(value)).ok() }
     }
     #[doc = "Required features: `\"Media_MediaProperties\"`"]
     #[cfg(feature = "Media_MediaProperties")]
@@ -3909,14 +3909,14 @@ impl PhotoConfirmationControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PixelFormat)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PixelFormat(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Media_MediaProperties\"`"]
     #[cfg(feature = "Media_MediaProperties")]
     pub fn SetPixelFormat(&self, format: super::MediaProperties::MediaPixelFormat) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPixelFormat)(::windows_core::Interface::as_raw(this), format).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPixelFormat(format)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for PhotoConfirmationControl {
@@ -3938,7 +3938,7 @@ pub struct RedialRequestedEventArgs(::windows_core::IUnknown);
 impl RedialRequestedEventArgs {
     pub fn Handled(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Handled)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Handled()).ok() }
     }
 }
 impl ::windows_core::RuntimeType for RedialRequestedEventArgs {
@@ -3971,34 +3971,34 @@ impl RegionOfInterest {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AutoFocusEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AutoFocusEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAutoFocusEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAutoFocusEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAutoFocusEnabled(value)).ok() }
     }
     pub fn AutoWhiteBalanceEnabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AutoWhiteBalanceEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AutoWhiteBalanceEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAutoWhiteBalanceEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAutoWhiteBalanceEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAutoWhiteBalanceEnabled(value)).ok() }
     }
     pub fn AutoExposureEnabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AutoExposureEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AutoExposureEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAutoExposureEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAutoExposureEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAutoExposureEnabled(value)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -4006,47 +4006,47 @@ impl RegionOfInterest {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Bounds)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Bounds(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn SetBounds(&self, value: super::super::Foundation::Rect) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetBounds)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetBounds(value)).ok() }
     }
     pub fn Type(&self) -> ::windows_core::Result<RegionOfInterestType> {
         let this = &::windows_core::ComInterface::cast::<IRegionOfInterest2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Type)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Type(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetType(&self, value: RegionOfInterestType) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IRegionOfInterest2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetType)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetType(value)).ok() }
     }
     pub fn BoundsNormalized(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IRegionOfInterest2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BoundsNormalized)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BoundsNormalized(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetBoundsNormalized(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IRegionOfInterest2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetBoundsNormalized)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetBoundsNormalized(value)).ok() }
     }
     pub fn Weight(&self) -> ::windows_core::Result<u32> {
         let this = &::windows_core::ComInterface::cast::<IRegionOfInterest2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Weight)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Weight(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetWeight(&self, value: u32) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IRegionOfInterest2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetWeight)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetWeight(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for RegionOfInterest {
@@ -4072,7 +4072,7 @@ impl RegionsOfInterestControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MaxRegions)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MaxRegions(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -4084,7 +4084,7 @@ impl RegionsOfInterestControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetRegionsAsync)(::windows_core::Interface::as_raw(this), regions.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetRegionsAsync(regions.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -4096,7 +4096,7 @@ impl RegionsOfInterestControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetRegionsWithLockAsync)(::windows_core::Interface::as_raw(this), regions.try_into_param()?.abi(), lockvalues, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetRegionsWithLockAsync(regions.try_into_param()?.abi(), lockvalues, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -4105,28 +4105,28 @@ impl RegionsOfInterestControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ClearRegionsAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ClearRegionsAsync(&mut result__)).from_abi(result__)
         }
     }
     pub fn AutoFocusSupported(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AutoFocusSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AutoFocusSupported(&mut result__)).from_abi(result__)
         }
     }
     pub fn AutoWhiteBalanceSupported(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AutoWhiteBalanceSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AutoWhiteBalanceSupported(&mut result__)).from_abi(result__)
         }
     }
     pub fn AutoExposureSupported(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AutoExposureSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AutoExposureSupported(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -4153,14 +4153,14 @@ impl SceneModeControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedModes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedModes(&mut result__)).from_abi(result__)
         }
     }
     pub fn Value(&self) -> ::windows_core::Result<CaptureSceneMode> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -4169,7 +4169,7 @@ impl SceneModeControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetValueAsync)(::windows_core::Interface::as_raw(this), scenemode, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetValueAsync(scenemode, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -4194,37 +4194,37 @@ impl TorchControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     pub fn PowerSupported(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PowerSupported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PowerSupported(&mut result__)).from_abi(result__)
         }
     }
     pub fn Enabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Enabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Enabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetEnabled(value)).ok() }
     }
     pub fn PowerPercent(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PowerPercent)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PowerPercent(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPowerPercent(&self, value: f32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPowerPercent)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPowerPercent(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for TorchControl {
@@ -4249,20 +4249,20 @@ impl VideoDeviceController {
         P0: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetDeviceProperty)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(propertyid), propertyvalue.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDeviceProperty(::core::mem::transmute_copy(propertyid), propertyvalue.into_param().abi())).ok() }
     }
     pub fn GetDeviceProperty(&self, propertyid: &::windows_core::HSTRING) -> ::windows_core::Result<::windows_core::IInspectable> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDeviceProperty)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(propertyid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDeviceProperty(::core::mem::transmute_copy(propertyid), &mut result__)).from_abi(result__)
         }
     }
     pub fn CameraOcclusionInfo(&self) -> ::windows_core::Result<CameraOcclusionInfo> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController10>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CameraOcclusionInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CameraOcclusionInfo(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Media_Capture\"`"]
@@ -4271,96 +4271,96 @@ impl VideoDeviceController {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController11>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryAcquireExclusiveControl)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(deviceid), mode, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryAcquireExclusiveControl(::core::mem::transmute_copy(deviceid), mode, &mut result__)).from_abi(result__)
         }
     }
     pub fn LowLagPhotoSequence(&self) -> ::windows_core::Result<LowLagPhotoSequenceControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LowLagPhotoSequence)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LowLagPhotoSequence(&mut result__)).from_abi(result__)
         }
     }
     pub fn LowLagPhoto(&self) -> ::windows_core::Result<LowLagPhotoControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LowLagPhoto)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LowLagPhoto(&mut result__)).from_abi(result__)
         }
     }
     pub fn SceneModeControl(&self) -> ::windows_core::Result<SceneModeControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SceneModeControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SceneModeControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn TorchControl(&self) -> ::windows_core::Result<TorchControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TorchControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TorchControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn FlashControl(&self) -> ::windows_core::Result<FlashControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FlashControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FlashControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn WhiteBalanceControl(&self) -> ::windows_core::Result<WhiteBalanceControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WhiteBalanceControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WhiteBalanceControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn ExposureControl(&self) -> ::windows_core::Result<ExposureControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExposureControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExposureControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn FocusControl(&self) -> ::windows_core::Result<FocusControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FocusControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FocusControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn ExposureCompensationControl(&self) -> ::windows_core::Result<ExposureCompensationControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExposureCompensationControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExposureCompensationControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsoSpeedControl(&self) -> ::windows_core::Result<IsoSpeedControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsoSpeedControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsoSpeedControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn RegionsOfInterestControl(&self) -> ::windows_core::Result<RegionsOfInterestControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RegionsOfInterestControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RegionsOfInterestControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn PrimaryUse(&self) -> ::windows_core::Result<CaptureUse> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PrimaryUse)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PrimaryUse(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPrimaryUse(&self, value: CaptureUse) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetPrimaryUse)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPrimaryUse(value)).ok() }
     }
     #[doc = "Required features: `\"Media_Devices_Core\"`"]
     #[cfg(feature = "Media_Devices_Core")]
@@ -4368,67 +4368,67 @@ impl VideoDeviceController {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).VariablePhotoSequenceController)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.VariablePhotoSequenceController(&mut result__)).from_abi(result__)
         }
     }
     pub fn PhotoConfirmationControl(&self) -> ::windows_core::Result<PhotoConfirmationControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PhotoConfirmationControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PhotoConfirmationControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn ZoomControl(&self) -> ::windows_core::Result<ZoomControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ZoomControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ZoomControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn ExposurePriorityVideoControl(&self) -> ::windows_core::Result<ExposurePriorityVideoControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController4>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExposurePriorityVideoControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExposurePriorityVideoControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn DesiredOptimization(&self) -> ::windows_core::Result<MediaCaptureOptimization> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController4>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DesiredOptimization)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DesiredOptimization(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDesiredOptimization(&self, value: MediaCaptureOptimization) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController4>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetDesiredOptimization)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDesiredOptimization(value)).ok() }
     }
     pub fn HdrVideoControl(&self) -> ::windows_core::Result<HdrVideoControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController4>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HdrVideoControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HdrVideoControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn OpticalImageStabilizationControl(&self) -> ::windows_core::Result<OpticalImageStabilizationControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController4>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OpticalImageStabilizationControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OpticalImageStabilizationControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn AdvancedPhotoControl(&self) -> ::windows_core::Result<AdvancedPhotoControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController4>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AdvancedPhotoControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AdvancedPhotoControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn Id(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController5>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -4440,7 +4440,7 @@ impl VideoDeviceController {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController5>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDevicePropertyById)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(propertyid), maxpropertyvaluesize.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDevicePropertyById(::core::mem::transmute_copy(propertyid), maxpropertyvaluesize.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn SetDevicePropertyById<P0>(&self, propertyid: &::windows_core::HSTRING, propertyvalue: P0) -> ::windows_core::Result<VideoDeviceControllerSetDevicePropertyStatus>
@@ -4450,7 +4450,7 @@ impl VideoDeviceController {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController5>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetDevicePropertyById)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(propertyid), propertyvalue.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetDevicePropertyById(::core::mem::transmute_copy(propertyid), propertyvalue.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -4462,42 +4462,42 @@ impl VideoDeviceController {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController5>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDevicePropertyByExtendedId)(::windows_core::Interface::as_raw(this), extendedpropertyid.len().try_into().unwrap(), extendedpropertyid.as_ptr(), maxpropertyvaluesize.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDevicePropertyByExtendedId(extendedpropertyid.len().try_into().unwrap(), extendedpropertyid.as_ptr(), maxpropertyvaluesize.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn SetDevicePropertyByExtendedId(&self, extendedpropertyid: &[u8], propertyvalue: &[u8]) -> ::windows_core::Result<VideoDeviceControllerSetDevicePropertyStatus> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController5>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetDevicePropertyByExtendedId)(::windows_core::Interface::as_raw(this), extendedpropertyid.len().try_into().unwrap(), extendedpropertyid.as_ptr(), propertyvalue.len().try_into().unwrap(), propertyvalue.as_ptr(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetDevicePropertyByExtendedId(extendedpropertyid.len().try_into().unwrap(), extendedpropertyid.as_ptr(), propertyvalue.len().try_into().unwrap(), propertyvalue.as_ptr(), &mut result__)).from_abi(result__)
         }
     }
     pub fn VideoTemporalDenoisingControl(&self) -> ::windows_core::Result<VideoTemporalDenoisingControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController6>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).VideoTemporalDenoisingControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.VideoTemporalDenoisingControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn InfraredTorchControl(&self) -> ::windows_core::Result<InfraredTorchControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController7>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).InfraredTorchControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.InfraredTorchControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn PanelBasedOptimizationControl(&self) -> ::windows_core::Result<PanelBasedOptimizationControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController8>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PanelBasedOptimizationControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PanelBasedOptimizationControl(&mut result__)).from_abi(result__)
         }
     }
     pub fn DigitalWindowControl(&self) -> ::windows_core::Result<DigitalWindowControl> {
         let this = &::windows_core::ComInterface::cast::<IAdvancedVideoCaptureDeviceController9>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DigitalWindowControl)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DigitalWindowControl(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"Media_Capture\"`, `\"Media_MediaProperties\"`"]
@@ -4506,7 +4506,7 @@ impl VideoDeviceController {
         let this = &::windows_core::ComInterface::cast::<IMediaDeviceController>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetAvailableMediaStreamProperties)(::windows_core::Interface::as_raw(this), mediastreamtype, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetAvailableMediaStreamProperties(mediastreamtype, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Media_Capture\"`, `\"Media_MediaProperties\"`"]
@@ -4515,7 +4515,7 @@ impl VideoDeviceController {
         let this = &::windows_core::ComInterface::cast::<IMediaDeviceController>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetMediaStreamProperties)(::windows_core::Interface::as_raw(this), mediastreamtype, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetMediaStreamProperties(mediastreamtype, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Media_Capture\"`, `\"Media_MediaProperties\"`"]
@@ -4527,84 +4527,84 @@ impl VideoDeviceController {
         let this = &::windows_core::ComInterface::cast::<IMediaDeviceController>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetMediaStreamPropertiesAsync)(::windows_core::Interface::as_raw(this), mediastreamtype, mediaencodingproperties.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetMediaStreamPropertiesAsync(mediastreamtype, mediaencodingproperties.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn Brightness(&self) -> ::windows_core::Result<MediaDeviceControl> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Brightness)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Brightness(&mut result__)).from_abi(result__)
         }
     }
     pub fn Contrast(&self) -> ::windows_core::Result<MediaDeviceControl> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Contrast)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Contrast(&mut result__)).from_abi(result__)
         }
     }
     pub fn Hue(&self) -> ::windows_core::Result<MediaDeviceControl> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Hue)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Hue(&mut result__)).from_abi(result__)
         }
     }
     pub fn WhiteBalance(&self) -> ::windows_core::Result<MediaDeviceControl> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WhiteBalance)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WhiteBalance(&mut result__)).from_abi(result__)
         }
     }
     pub fn BacklightCompensation(&self) -> ::windows_core::Result<MediaDeviceControl> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BacklightCompensation)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BacklightCompensation(&mut result__)).from_abi(result__)
         }
     }
     pub fn Pan(&self) -> ::windows_core::Result<MediaDeviceControl> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Pan)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Pan(&mut result__)).from_abi(result__)
         }
     }
     pub fn Tilt(&self) -> ::windows_core::Result<MediaDeviceControl> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Tilt)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Tilt(&mut result__)).from_abi(result__)
         }
     }
     pub fn Zoom(&self) -> ::windows_core::Result<MediaDeviceControl> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Zoom)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Zoom(&mut result__)).from_abi(result__)
         }
     }
     pub fn Roll(&self) -> ::windows_core::Result<MediaDeviceControl> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Roll)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Roll(&mut result__)).from_abi(result__)
         }
     }
     pub fn Exposure(&self) -> ::windows_core::Result<MediaDeviceControl> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Exposure)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Exposure(&mut result__)).from_abi(result__)
         }
     }
     pub fn Focus(&self) -> ::windows_core::Result<MediaDeviceControl> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Focus)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Focus(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Media_Capture\"`"]
@@ -4613,7 +4613,7 @@ impl VideoDeviceController {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TrySetPowerlineFrequency)(::windows_core::Interface::as_raw(this), value, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TrySetPowerlineFrequency(value, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Media_Capture\"`"]
@@ -4622,7 +4622,7 @@ impl VideoDeviceController {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryGetPowerlineFrequency)(::windows_core::Interface::as_raw(this), value, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryGetPowerlineFrequency(value, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -4648,14 +4648,14 @@ impl VideoDeviceControllerGetDevicePropertyResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
     pub fn Value(&self) -> ::windows_core::Result<::windows_core::IInspectable> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -4682,7 +4682,7 @@ impl VideoTemporalDenoisingControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -4691,19 +4691,19 @@ impl VideoTemporalDenoisingControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedModes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedModes(&mut result__)).from_abi(result__)
         }
     }
     pub fn Mode(&self) -> ::windows_core::Result<VideoTemporalDenoisingMode> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Mode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Mode(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMode(&self, value: VideoTemporalDenoisingMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetMode)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMode(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for VideoTemporalDenoisingControl {
@@ -4729,14 +4729,14 @@ impl WhiteBalanceControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     pub fn Preset(&self) -> ::windows_core::Result<ColorTemperaturePreset> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Preset)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Preset(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -4745,35 +4745,35 @@ impl WhiteBalanceControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetPresetAsync)(::windows_core::Interface::as_raw(this), preset, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetPresetAsync(preset, &mut result__)).from_abi(result__)
         }
     }
     pub fn Min(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Min)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Min(&mut result__)).from_abi(result__)
         }
     }
     pub fn Max(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Max)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Max(&mut result__)).from_abi(result__)
         }
     }
     pub fn Step(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Step)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Step(&mut result__)).from_abi(result__)
         }
     }
     pub fn Value(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -4782,7 +4782,7 @@ impl WhiteBalanceControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetValueAsync)(::windows_core::Interface::as_raw(this), temperature, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetValueAsync(temperature, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -4807,40 +4807,40 @@ impl ZoomControl {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Supported)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Supported(&mut result__)).from_abi(result__)
         }
     }
     pub fn Min(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Min)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Min(&mut result__)).from_abi(result__)
         }
     }
     pub fn Max(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Max)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Max(&mut result__)).from_abi(result__)
         }
     }
     pub fn Step(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Step)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Step(&mut result__)).from_abi(result__)
         }
     }
     pub fn Value(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetValue(&self, value: f32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetValue)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetValue(value)).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -4848,14 +4848,14 @@ impl ZoomControl {
         let this = &::windows_core::ComInterface::cast::<IZoomControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SupportedModes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SupportedModes(&mut result__)).from_abi(result__)
         }
     }
     pub fn Mode(&self) -> ::windows_core::Result<ZoomTransitionMode> {
         let this = &::windows_core::ComInterface::cast::<IZoomControl2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Mode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Mode(&mut result__)).from_abi(result__)
         }
     }
     pub fn Configure<P0>(&self, settings: P0) -> ::windows_core::Result<()>
@@ -4863,7 +4863,7 @@ impl ZoomControl {
         P0: ::windows_core::IntoParam<ZoomSettings>,
     {
         let this = &::windows_core::ComInterface::cast::<IZoomControl2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).Configure)(::windows_core::Interface::as_raw(this), settings.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Configure(settings.into_param().abi())).ok() }
     }
 }
 impl ::windows_core::RuntimeType for ZoomControl {
@@ -4894,23 +4894,23 @@ impl ZoomSettings {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Mode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Mode(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMode(&self, value: ZoomTransitionMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetMode)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMode(value)).ok() }
     }
     pub fn Value(&self) -> ::windows_core::Result<f32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetValue(&self, value: f32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetValue)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetValue(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for ZoomSettings {
@@ -5781,7 +5781,7 @@ impl CallControlEventHandler {
         P0: ::windows_core::IntoParam<CallControl>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), sender.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(sender.into_param().abi())).ok() }
     }
 }
 #[repr(C)]
@@ -5854,7 +5854,7 @@ impl DialRequestedEventHandler {
         P1: ::windows_core::IntoParam<DialRequestedEventArgs>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), sender.into_param().abi(), e.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(sender.into_param().abi(), e.into_param().abi())).ok() }
     }
 }
 #[repr(C)]
@@ -5927,7 +5927,7 @@ impl KeypadPressedEventHandler {
         P1: ::windows_core::IntoParam<KeypadPressedEventArgs>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), sender.into_param().abi(), e.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(sender.into_param().abi(), e.into_param().abi())).ok() }
     }
 }
 #[repr(C)]
@@ -6000,7 +6000,7 @@ impl RedialRequestedEventHandler {
         P1: ::windows_core::IntoParam<RedialRequestedEventArgs>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), sender.into_param().abi(), e.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(sender.into_param().abi(), e.into_param().abi())).ok() }
     }
 }
 #[repr(C)]

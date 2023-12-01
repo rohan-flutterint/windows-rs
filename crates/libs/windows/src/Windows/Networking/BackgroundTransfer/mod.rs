@@ -177,7 +177,7 @@ pub struct IBackgroundTransferBase(::windows_core::IUnknown);
 impl IBackgroundTransferBase {
     pub fn SetRequestHeader(&self, headername: &::windows_core::HSTRING, headervalue: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetRequestHeader)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRequestHeader(::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue))).ok() }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
     #[cfg(feature = "Security_Credentials")]
@@ -185,7 +185,7 @@ impl IBackgroundTransferBase {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ServerCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ServerCredential(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -195,7 +195,7 @@ impl IBackgroundTransferBase {
         P0: ::windows_core::IntoParam<super::super::Security::Credentials::PasswordCredential>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetServerCredential)(::windows_core::Interface::as_raw(this), credential.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetServerCredential(credential.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
     #[cfg(feature = "Security_Credentials")]
@@ -203,7 +203,7 @@ impl IBackgroundTransferBase {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProxyCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProxyCredential(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -213,18 +213,18 @@ impl IBackgroundTransferBase {
         P0: ::windows_core::IntoParam<super::super::Security::Credentials::PasswordCredential>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetProxyCredential)(::windows_core::Interface::as_raw(this), credential.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetProxyCredential(credential.into_param().abi())).ok() }
     }
     pub fn Method(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Method)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Method(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMethod(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetMethod)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMethod(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"deprecated\"`"]
     #[cfg(feature = "deprecated")]
@@ -232,25 +232,25 @@ impl IBackgroundTransferBase {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Group)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Group(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"deprecated\"`"]
     #[cfg(feature = "deprecated")]
     pub fn SetGroup(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetGroup)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetGroup(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn CostPolicy(&self) -> ::windows_core::Result<BackgroundTransferCostPolicy> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CostPolicy)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CostPolicy(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCostPolicy(&self, value: BackgroundTransferCostPolicy) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetCostPolicy)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCostPolicy(value)).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IBackgroundTransferBase, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -370,14 +370,14 @@ impl IBackgroundTransferContentPartFactory {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWithName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWithName(::core::mem::transmute_copy(name), &mut result__)).from_abi(result__)
         }
     }
     pub fn CreateWithNameAndFileName(&self, name: &::windows_core::HSTRING, filename: &::windows_core::HSTRING) -> ::windows_core::Result<BackgroundTransferContentPart> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWithNameAndFileName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), ::core::mem::transmute_copy(filename), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWithNameAndFileName(::core::mem::transmute_copy(name), ::core::mem::transmute_copy(filename), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -459,7 +459,7 @@ impl IBackgroundTransferOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Guid)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Guid(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -468,14 +468,14 @@ impl IBackgroundTransferOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestedUri)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestedUri(&mut result__)).from_abi(result__)
         }
     }
     pub fn Method(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Method)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Method(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"deprecated\"`"]
@@ -484,19 +484,19 @@ impl IBackgroundTransferOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Group)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Group(&mut result__)).from_abi(result__)
         }
     }
     pub fn CostPolicy(&self) -> ::windows_core::Result<BackgroundTransferCostPolicy> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CostPolicy)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CostPolicy(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCostPolicy(&self, value: BackgroundTransferCostPolicy) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetCostPolicy)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCostPolicy(value)).ok() }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
     #[cfg(feature = "Storage_Streams")]
@@ -504,14 +504,14 @@ impl IBackgroundTransferOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetResultStreamAt)(::windows_core::Interface::as_raw(this), position, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetResultStreamAt(position, &mut result__)).from_abi(result__)
         }
     }
     pub fn GetResponseInformation(&self) -> ::windows_core::Result<ResponseInformation> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetResponseInformation)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetResponseInformation(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -555,12 +555,12 @@ impl IBackgroundTransferOperationPriority {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Priority)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Priority(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPriority(&self, value: BackgroundTransferPriority) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPriority)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPriority(value)).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IBackgroundTransferOperationPriority, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -1101,7 +1101,7 @@ impl BackgroundDownloader {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateDownload)(::windows_core::Interface::as_raw(this), uri.into_param().abi(), resultfile.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateDownload(uri.into_param().abi(), resultfile.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
@@ -1115,7 +1115,7 @@ impl BackgroundDownloader {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateDownloadFromFile)(::windows_core::Interface::as_raw(this), uri.into_param().abi(), resultfile.try_into_param()?.abi(), requestbodyfile.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateDownloadFromFile(uri.into_param().abi(), resultfile.try_into_param()?.abi(), requestbodyfile.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -1129,14 +1129,14 @@ impl BackgroundDownloader {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateDownloadAsync)(::windows_core::Interface::as_raw(this), uri.into_param().abi(), resultfile.try_into_param()?.abi(), requestbodystream.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateDownloadAsync(uri.into_param().abi(), resultfile.try_into_param()?.abi(), requestbodystream.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn TransferGroup(&self) -> ::windows_core::Result<BackgroundTransferGroup> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundDownloader2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TransferGroup)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TransferGroup(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTransferGroup<P0>(&self, value: P0) -> ::windows_core::Result<()>
@@ -1144,7 +1144,7 @@ impl BackgroundDownloader {
         P0: ::windows_core::IntoParam<BackgroundTransferGroup>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundDownloader2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetTransferGroup)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTransferGroup(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
     #[cfg(feature = "UI_Notifications")]
@@ -1152,7 +1152,7 @@ impl BackgroundDownloader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundDownloader2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SuccessToastNotification)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SuccessToastNotification(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
@@ -1162,7 +1162,7 @@ impl BackgroundDownloader {
         P0: ::windows_core::IntoParam<super::super::UI::Notifications::ToastNotification>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundDownloader2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetSuccessToastNotification)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetSuccessToastNotification(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
     #[cfg(feature = "UI_Notifications")]
@@ -1170,7 +1170,7 @@ impl BackgroundDownloader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundDownloader2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FailureToastNotification)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FailureToastNotification(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
@@ -1180,7 +1180,7 @@ impl BackgroundDownloader {
         P0: ::windows_core::IntoParam<super::super::UI::Notifications::ToastNotification>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundDownloader2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetFailureToastNotification)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetFailureToastNotification(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
     #[cfg(feature = "UI_Notifications")]
@@ -1188,7 +1188,7 @@ impl BackgroundDownloader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundDownloader2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SuccessTileNotification)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SuccessTileNotification(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
@@ -1198,7 +1198,7 @@ impl BackgroundDownloader {
         P0: ::windows_core::IntoParam<super::super::UI::Notifications::TileNotification>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundDownloader2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetSuccessTileNotification)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetSuccessTileNotification(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
     #[cfg(feature = "UI_Notifications")]
@@ -1206,7 +1206,7 @@ impl BackgroundDownloader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundDownloader2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FailureTileNotification)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FailureTileNotification(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
@@ -1216,13 +1216,13 @@ impl BackgroundDownloader {
         P0: ::windows_core::IntoParam<super::super::UI::Notifications::TileNotification>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundDownloader2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetFailureTileNotification)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetFailureTileNotification(value.into_param().abi())).ok() }
     }
     pub fn CompletionGroup(&self) -> ::windows_core::Result<BackgroundTransferCompletionGroup> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundDownloader3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CompletionGroup)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CompletionGroup(&mut result__)).from_abi(result__)
         }
     }
     pub fn CreateWithCompletionGroup<P0>(completiongroup: P0) -> ::windows_core::Result<BackgroundDownloader>
@@ -1231,7 +1231,7 @@ impl BackgroundDownloader {
     {
         Self::IBackgroundDownloaderFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWithCompletionGroup)(::windows_core::Interface::as_raw(this), completiongroup.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWithCompletionGroup(completiongroup.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1239,7 +1239,7 @@ impl BackgroundDownloader {
     pub fn GetCurrentDownloadsAsync() -> ::windows_core::Result<super::super::Foundation::IAsyncOperation<super::super::Foundation::Collections::IVectorView<DownloadOperation>>> {
         Self::IBackgroundDownloaderStaticMethods(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCurrentDownloadsAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetCurrentDownloadsAsync(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"deprecated\"`"]
@@ -1247,7 +1247,7 @@ impl BackgroundDownloader {
     pub fn GetCurrentDownloadsForGroupAsync(group: &::windows_core::HSTRING) -> ::windows_core::Result<super::super::Foundation::IAsyncOperation<super::super::Foundation::Collections::IVectorView<DownloadOperation>>> {
         Self::IBackgroundDownloaderStaticMethods(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCurrentDownloadsForGroupAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(group), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetCurrentDownloadsForGroupAsync(::core::mem::transmute_copy(group), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1258,7 +1258,7 @@ impl BackgroundDownloader {
     {
         Self::IBackgroundDownloaderStaticMethods2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCurrentDownloadsForTransferGroupAsync)(::windows_core::Interface::as_raw(this), group.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetCurrentDownloadsForTransferGroupAsync(group.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"deprecated\"`"]
@@ -1269,12 +1269,12 @@ impl BackgroundDownloader {
     {
         Self::IBackgroundDownloaderUserConsent(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestUnconstrainedDownloadsAsync)(::windows_core::Interface::as_raw(this), operations.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestUnconstrainedDownloadsAsync(operations.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     pub fn SetRequestHeader(&self, headername: &::windows_core::HSTRING, headervalue: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetRequestHeader)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRequestHeader(::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue))).ok() }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
     #[cfg(feature = "Security_Credentials")]
@@ -1282,7 +1282,7 @@ impl BackgroundDownloader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ServerCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ServerCredential(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -1292,7 +1292,7 @@ impl BackgroundDownloader {
         P0: ::windows_core::IntoParam<super::super::Security::Credentials::PasswordCredential>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetServerCredential)(::windows_core::Interface::as_raw(this), credential.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetServerCredential(credential.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
     #[cfg(feature = "Security_Credentials")]
@@ -1300,7 +1300,7 @@ impl BackgroundDownloader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProxyCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProxyCredential(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -1310,18 +1310,18 @@ impl BackgroundDownloader {
         P0: ::windows_core::IntoParam<super::super::Security::Credentials::PasswordCredential>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetProxyCredential)(::windows_core::Interface::as_raw(this), credential.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetProxyCredential(credential.into_param().abi())).ok() }
     }
     pub fn Method(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Method)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Method(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMethod(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetMethod)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMethod(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"deprecated\"`"]
     #[cfg(feature = "deprecated")]
@@ -1329,25 +1329,25 @@ impl BackgroundDownloader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Group)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Group(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"deprecated\"`"]
     #[cfg(feature = "deprecated")]
     pub fn SetGroup(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetGroup)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetGroup(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn CostPolicy(&self) -> ::windows_core::Result<BackgroundTransferCostPolicy> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CostPolicy)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CostPolicy(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCostPolicy(&self, value: BackgroundTransferCostPolicy) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCostPolicy)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCostPolicy(value)).ok() }
     }
     #[doc(hidden)]
     pub fn IBackgroundDownloaderFactory<R, F: FnOnce(&IBackgroundDownloaderFactory) -> ::windows_core::Result<R>>(callback: F) -> ::windows_core::Result<R> {
@@ -1404,19 +1404,19 @@ impl BackgroundTransferCompletionGroup {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Trigger)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Trigger(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsEnabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn Enable(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Enable)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Enable()).ok() }
     }
 }
 impl ::windows_core::RuntimeType for BackgroundTransferCompletionGroup {
@@ -1444,7 +1444,7 @@ impl BackgroundTransferCompletionGroupTriggerDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Downloads)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Downloads(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1453,7 +1453,7 @@ impl BackgroundTransferCompletionGroupTriggerDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Uploads)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Uploads(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1485,11 +1485,11 @@ impl BackgroundTransferContentPart {
     }
     pub fn SetHeader(&self, headername: &::windows_core::HSTRING, headervalue: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetHeader)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetHeader(::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue))).ok() }
     }
     pub fn SetText(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetText)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetText(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"Storage\"`"]
     #[cfg(feature = "Storage")]
@@ -1498,18 +1498,18 @@ impl BackgroundTransferContentPart {
         P0: ::windows_core::TryIntoParam<super::super::Storage::IStorageFile>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetFile)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetFile(value.try_into_param()?.abi())).ok() }
     }
     pub fn CreateWithName(name: &::windows_core::HSTRING) -> ::windows_core::Result<BackgroundTransferContentPart> {
         Self::IBackgroundTransferContentPartFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWithName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWithName(::core::mem::transmute_copy(name), &mut result__)).from_abi(result__)
         })
     }
     pub fn CreateWithNameAndFileName(name: &::windows_core::HSTRING, filename: &::windows_core::HSTRING) -> ::windows_core::Result<BackgroundTransferContentPart> {
         Self::IBackgroundTransferContentPartFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWithNameAndFileName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), ::core::mem::transmute_copy(filename), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWithNameAndFileName(::core::mem::transmute_copy(name), ::core::mem::transmute_copy(filename), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1540,7 +1540,7 @@ impl BackgroundTransferError {
     pub fn GetStatus(hresult: i32) -> ::windows_core::Result<super::super::Web::WebErrorStatus> {
         Self::IBackgroundTransferErrorStaticMethods(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetStatus)(::windows_core::Interface::as_raw(this), hresult, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetStatus(hresult, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1560,24 +1560,24 @@ impl BackgroundTransferGroup {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Name)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Name(&mut result__)).from_abi(result__)
         }
     }
     pub fn TransferBehavior(&self) -> ::windows_core::Result<BackgroundTransferBehavior> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TransferBehavior)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TransferBehavior(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTransferBehavior(&self, value: BackgroundTransferBehavior) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTransferBehavior)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTransferBehavior(value)).ok() }
     }
     pub fn CreateGroup(name: &::windows_core::HSTRING) -> ::windows_core::Result<BackgroundTransferGroup> {
         Self::IBackgroundTransferGroupStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateGroup)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateGroup(::core::mem::transmute_copy(name), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1609,7 +1609,7 @@ impl BackgroundTransferRangesDownloadedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WasDownloadRestarted)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WasDownloadRestarted(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1618,7 +1618,7 @@ impl BackgroundTransferRangesDownloadedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AddedRanges)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AddedRanges(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1627,7 +1627,7 @@ impl BackgroundTransferRangesDownloadedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDeferral)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDeferral(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1659,7 +1659,7 @@ impl BackgroundUploader {
     }
     pub fn SetRequestHeader(&self, headername: &::windows_core::HSTRING, headervalue: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetRequestHeader)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRequestHeader(::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue))).ok() }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
     #[cfg(feature = "Security_Credentials")]
@@ -1667,7 +1667,7 @@ impl BackgroundUploader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ServerCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ServerCredential(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -1677,7 +1677,7 @@ impl BackgroundUploader {
         P0: ::windows_core::IntoParam<super::super::Security::Credentials::PasswordCredential>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetServerCredential)(::windows_core::Interface::as_raw(this), credential.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetServerCredential(credential.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
     #[cfg(feature = "Security_Credentials")]
@@ -1685,7 +1685,7 @@ impl BackgroundUploader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProxyCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProxyCredential(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -1695,18 +1695,18 @@ impl BackgroundUploader {
         P0: ::windows_core::IntoParam<super::super::Security::Credentials::PasswordCredential>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetProxyCredential)(::windows_core::Interface::as_raw(this), credential.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetProxyCredential(credential.into_param().abi())).ok() }
     }
     pub fn Method(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Method)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Method(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMethod(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetMethod)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMethod(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"deprecated\"`"]
     #[cfg(feature = "deprecated")]
@@ -1714,25 +1714,25 @@ impl BackgroundUploader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Group)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Group(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"deprecated\"`"]
     #[cfg(feature = "deprecated")]
     pub fn SetGroup(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetGroup)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetGroup(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn CostPolicy(&self) -> ::windows_core::Result<BackgroundTransferCostPolicy> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CostPolicy)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CostPolicy(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCostPolicy(&self, value: BackgroundTransferCostPolicy) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferBase>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCostPolicy)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCostPolicy(value)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage\"`"]
     #[cfg(all(feature = "Foundation", feature = "Storage"))]
@@ -1744,7 +1744,7 @@ impl BackgroundUploader {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateUpload)(::windows_core::Interface::as_raw(this), uri.into_param().abi(), sourcefile.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateUpload(uri.into_param().abi(), sourcefile.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -1757,7 +1757,7 @@ impl BackgroundUploader {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateUploadFromStreamAsync)(::windows_core::Interface::as_raw(this), uri.into_param().abi(), sourcestream.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateUploadFromStreamAsync(uri.into_param().abi(), sourcestream.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1770,7 +1770,7 @@ impl BackgroundUploader {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateUploadWithFormDataAndAutoBoundaryAsync)(::windows_core::Interface::as_raw(this), uri.into_param().abi(), parts.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateUploadWithFormDataAndAutoBoundaryAsync(uri.into_param().abi(), parts.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1783,7 +1783,7 @@ impl BackgroundUploader {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateUploadWithSubTypeAsync)(::windows_core::Interface::as_raw(this), uri.into_param().abi(), parts.try_into_param()?.abi(), ::core::mem::transmute_copy(subtype), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateUploadWithSubTypeAsync(uri.into_param().abi(), parts.try_into_param()?.abi(), ::core::mem::transmute_copy(subtype), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1796,14 +1796,14 @@ impl BackgroundUploader {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateUploadWithSubTypeAndBoundaryAsync)(::windows_core::Interface::as_raw(this), uri.into_param().abi(), parts.try_into_param()?.abi(), ::core::mem::transmute_copy(subtype), ::core::mem::transmute_copy(boundary), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateUploadWithSubTypeAndBoundaryAsync(uri.into_param().abi(), parts.try_into_param()?.abi(), ::core::mem::transmute_copy(subtype), ::core::mem::transmute_copy(boundary), &mut result__)).from_abi(result__)
         }
     }
     pub fn TransferGroup(&self) -> ::windows_core::Result<BackgroundTransferGroup> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundUploader2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TransferGroup)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TransferGroup(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTransferGroup<P0>(&self, value: P0) -> ::windows_core::Result<()>
@@ -1811,7 +1811,7 @@ impl BackgroundUploader {
         P0: ::windows_core::IntoParam<BackgroundTransferGroup>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundUploader2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetTransferGroup)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTransferGroup(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
     #[cfg(feature = "UI_Notifications")]
@@ -1819,7 +1819,7 @@ impl BackgroundUploader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundUploader2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SuccessToastNotification)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SuccessToastNotification(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
@@ -1829,7 +1829,7 @@ impl BackgroundUploader {
         P0: ::windows_core::IntoParam<super::super::UI::Notifications::ToastNotification>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundUploader2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetSuccessToastNotification)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetSuccessToastNotification(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
     #[cfg(feature = "UI_Notifications")]
@@ -1837,7 +1837,7 @@ impl BackgroundUploader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundUploader2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FailureToastNotification)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FailureToastNotification(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
@@ -1847,7 +1847,7 @@ impl BackgroundUploader {
         P0: ::windows_core::IntoParam<super::super::UI::Notifications::ToastNotification>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundUploader2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetFailureToastNotification)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetFailureToastNotification(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
     #[cfg(feature = "UI_Notifications")]
@@ -1855,7 +1855,7 @@ impl BackgroundUploader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundUploader2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SuccessTileNotification)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SuccessTileNotification(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
@@ -1865,7 +1865,7 @@ impl BackgroundUploader {
         P0: ::windows_core::IntoParam<super::super::UI::Notifications::TileNotification>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundUploader2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetSuccessTileNotification)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetSuccessTileNotification(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
     #[cfg(feature = "UI_Notifications")]
@@ -1873,7 +1873,7 @@ impl BackgroundUploader {
         let this = &::windows_core::ComInterface::cast::<IBackgroundUploader2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FailureTileNotification)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FailureTileNotification(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Notifications\"`"]
@@ -1883,13 +1883,13 @@ impl BackgroundUploader {
         P0: ::windows_core::IntoParam<super::super::UI::Notifications::TileNotification>,
     {
         let this = &::windows_core::ComInterface::cast::<IBackgroundUploader2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetFailureTileNotification)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetFailureTileNotification(value.into_param().abi())).ok() }
     }
     pub fn CompletionGroup(&self) -> ::windows_core::Result<BackgroundTransferCompletionGroup> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundUploader3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CompletionGroup)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CompletionGroup(&mut result__)).from_abi(result__)
         }
     }
     pub fn CreateWithCompletionGroup<P0>(completiongroup: P0) -> ::windows_core::Result<BackgroundUploader>
@@ -1898,7 +1898,7 @@ impl BackgroundUploader {
     {
         Self::IBackgroundUploaderFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWithCompletionGroup)(::windows_core::Interface::as_raw(this), completiongroup.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWithCompletionGroup(completiongroup.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1906,7 +1906,7 @@ impl BackgroundUploader {
     pub fn GetCurrentUploadsAsync() -> ::windows_core::Result<super::super::Foundation::IAsyncOperation<super::super::Foundation::Collections::IVectorView<UploadOperation>>> {
         Self::IBackgroundUploaderStaticMethods(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCurrentUploadsAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetCurrentUploadsAsync(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"deprecated\"`"]
@@ -1914,7 +1914,7 @@ impl BackgroundUploader {
     pub fn GetCurrentUploadsForGroupAsync(group: &::windows_core::HSTRING) -> ::windows_core::Result<super::super::Foundation::IAsyncOperation<super::super::Foundation::Collections::IVectorView<UploadOperation>>> {
         Self::IBackgroundUploaderStaticMethods(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCurrentUploadsForGroupAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(group), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetCurrentUploadsForGroupAsync(::core::mem::transmute_copy(group), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1925,7 +1925,7 @@ impl BackgroundUploader {
     {
         Self::IBackgroundUploaderStaticMethods2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCurrentUploadsForTransferGroupAsync)(::windows_core::Interface::as_raw(this), group.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetCurrentUploadsForTransferGroupAsync(group.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"deprecated\"`"]
@@ -1936,7 +1936,7 @@ impl BackgroundUploader {
     {
         Self::IBackgroundUploaderUserConsent(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestUnconstrainedUploadsAsync)(::windows_core::Interface::as_raw(this), operations.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestUnconstrainedUploadsAsync(operations.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1984,7 +1984,7 @@ impl ContentPrefetcher {
     pub fn ContentUris() -> ::windows_core::Result<super::super::Foundation::Collections::IVector<super::super::Foundation::Uri>> {
         Self::IContentPrefetcher(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ContentUris)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ContentUris(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1993,14 +1993,14 @@ impl ContentPrefetcher {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::Uri>,
     {
-        Self::IContentPrefetcher(|this| unsafe { (::windows_core::Interface::vtable(this).SetIndirectContentUri)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() })
+        Self::IContentPrefetcher(|this| unsafe { ::windows_core::vcall!(this.SetIndirectContentUri(value.into_param().abi())).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn IndirectContentUri() -> ::windows_core::Result<super::super::Foundation::Uri> {
         Self::IContentPrefetcher(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IndirectContentUri)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IndirectContentUri(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2008,7 +2008,7 @@ impl ContentPrefetcher {
     pub fn LastSuccessfulPrefetchTime() -> ::windows_core::Result<super::super::Foundation::IReference<super::super::Foundation::DateTime>> {
         Self::IContentPrefetcherTime(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LastSuccessfulPrefetchTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LastSuccessfulPrefetchTime(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2033,7 +2033,7 @@ impl DownloadOperation {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Guid)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Guid(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2042,14 +2042,14 @@ impl DownloadOperation {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestedUri)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestedUri(&mut result__)).from_abi(result__)
         }
     }
     pub fn Method(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Method)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Method(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"deprecated\"`"]
@@ -2058,19 +2058,19 @@ impl DownloadOperation {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Group)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Group(&mut result__)).from_abi(result__)
         }
     }
     pub fn CostPolicy(&self) -> ::windows_core::Result<BackgroundTransferCostPolicy> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CostPolicy)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CostPolicy(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCostPolicy(&self, value: BackgroundTransferCostPolicy) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCostPolicy)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCostPolicy(value)).ok() }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
     #[cfg(feature = "Storage_Streams")]
@@ -2078,26 +2078,26 @@ impl DownloadOperation {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetResultStreamAt)(::windows_core::Interface::as_raw(this), position, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetResultStreamAt(position, &mut result__)).from_abi(result__)
         }
     }
     pub fn GetResponseInformation(&self) -> ::windows_core::Result<ResponseInformation> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetResponseInformation)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetResponseInformation(&mut result__)).from_abi(result__)
         }
     }
     pub fn Priority(&self) -> ::windows_core::Result<BackgroundTransferPriority> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperationPriority>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Priority)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Priority(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPriority(&self, value: BackgroundTransferPriority) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperationPriority>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetPriority)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPriority(value)).ok() }
     }
     #[doc = "Required features: `\"Storage\"`"]
     #[cfg(feature = "Storage")]
@@ -2105,14 +2105,14 @@ impl DownloadOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ResultFile)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ResultFile(&mut result__)).from_abi(result__)
         }
     }
     pub fn Progress(&self) -> ::windows_core::Result<BackgroundDownloadProgress> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Progress)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Progress(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2121,7 +2121,7 @@ impl DownloadOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).StartAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.StartAsync(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2130,34 +2130,34 @@ impl DownloadOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AttachAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AttachAsync(&mut result__)).from_abi(result__)
         }
     }
     pub fn Pause(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Pause)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Pause()).ok() }
     }
     pub fn Resume(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Resume)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Resume()).ok() }
     }
     pub fn TransferGroup(&self) -> ::windows_core::Result<BackgroundTransferGroup> {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TransferGroup)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TransferGroup(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsRandomAccessRequired(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsRandomAccessRequired)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsRandomAccessRequired(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetIsRandomAccessRequired(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsRandomAccessRequired)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsRandomAccessRequired(value)).ok() }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
     #[cfg(feature = "Storage_Streams")]
@@ -2165,7 +2165,7 @@ impl DownloadOperation {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetResultRandomAccessStreamReference)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetResultRandomAccessStreamReference(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2174,7 +2174,7 @@ impl DownloadOperation {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDownloadedRanges)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDownloadedRanges(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2186,14 +2186,14 @@ impl DownloadOperation {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RangesDownloaded)(::windows_core::Interface::as_raw(this), eventhandler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RangesDownloaded(eventhandler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveRangesDownloaded(&self, eventcookie: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveRangesDownloaded)(::windows_core::Interface::as_raw(this), eventcookie).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveRangesDownloaded(eventcookie)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2202,7 +2202,7 @@ impl DownloadOperation {
         P0: ::windows_core::IntoParam<super::super::Foundation::Uri>,
     {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetRequestedUri)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRequestedUri(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"Web\"`"]
     #[cfg(all(feature = "Foundation_Collections", feature = "Web"))]
@@ -2210,7 +2210,7 @@ impl DownloadOperation {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RecoverableWebErrorStatuses)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RecoverableWebErrorStatuses(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Web\"`"]
@@ -2219,20 +2219,20 @@ impl DownloadOperation {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CurrentWebErrorStatus)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CurrentWebErrorStatus(&mut result__)).from_abi(result__)
         }
     }
     pub fn MakeCurrentInTransferGroup(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation4>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).MakeCurrentInTransferGroup)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.MakeCurrentInTransferGroup()).ok() }
     }
     pub fn SetRequestHeader(&self, headername: &::windows_core::HSTRING, headervalue: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation5>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetRequestHeader)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRequestHeader(::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue))).ok() }
     }
     pub fn RemoveRequestHeader(&self, headername: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IDownloadOperation5>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveRequestHeader)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(headername)).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveRequestHeader(::core::mem::transmute_copy(headername))).ok() }
     }
 }
 impl ::windows_core::RuntimeType for DownloadOperation {
@@ -2260,7 +2260,7 @@ impl ResponseInformation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsResumable)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsResumable(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2269,14 +2269,14 @@ impl ResponseInformation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ActualUri)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ActualUri(&mut result__)).from_abi(result__)
         }
     }
     pub fn StatusCode(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).StatusCode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.StatusCode(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2285,7 +2285,7 @@ impl ResponseInformation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Headers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Headers(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2317,7 +2317,7 @@ impl UnconstrainedTransferRequestResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsUnconstrained)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsUnconstrained(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2351,7 +2351,7 @@ impl UploadOperation {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Guid)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Guid(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2360,14 +2360,14 @@ impl UploadOperation {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestedUri)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestedUri(&mut result__)).from_abi(result__)
         }
     }
     pub fn Method(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Method)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Method(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"deprecated\"`"]
@@ -2376,19 +2376,19 @@ impl UploadOperation {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Group)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Group(&mut result__)).from_abi(result__)
         }
     }
     pub fn CostPolicy(&self) -> ::windows_core::Result<BackgroundTransferCostPolicy> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CostPolicy)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CostPolicy(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCostPolicy(&self, value: BackgroundTransferCostPolicy) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCostPolicy)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCostPolicy(value)).ok() }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
     #[cfg(feature = "Storage_Streams")]
@@ -2396,26 +2396,26 @@ impl UploadOperation {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetResultStreamAt)(::windows_core::Interface::as_raw(this), position, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetResultStreamAt(position, &mut result__)).from_abi(result__)
         }
     }
     pub fn GetResponseInformation(&self) -> ::windows_core::Result<ResponseInformation> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperation>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetResponseInformation)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetResponseInformation(&mut result__)).from_abi(result__)
         }
     }
     pub fn Priority(&self) -> ::windows_core::Result<BackgroundTransferPriority> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperationPriority>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Priority)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Priority(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPriority(&self, value: BackgroundTransferPriority) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IBackgroundTransferOperationPriority>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetPriority)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPriority(value)).ok() }
     }
     #[doc = "Required features: `\"Storage\"`"]
     #[cfg(feature = "Storage")]
@@ -2423,14 +2423,14 @@ impl UploadOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SourceFile)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SourceFile(&mut result__)).from_abi(result__)
         }
     }
     pub fn Progress(&self) -> ::windows_core::Result<BackgroundUploadProgress> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Progress)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Progress(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2439,7 +2439,7 @@ impl UploadOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).StartAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.StartAsync(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2448,27 +2448,27 @@ impl UploadOperation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AttachAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AttachAsync(&mut result__)).from_abi(result__)
         }
     }
     pub fn TransferGroup(&self) -> ::windows_core::Result<BackgroundTransferGroup> {
         let this = &::windows_core::ComInterface::cast::<IUploadOperation2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TransferGroup)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TransferGroup(&mut result__)).from_abi(result__)
         }
     }
     pub fn MakeCurrentInTransferGroup(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IUploadOperation3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).MakeCurrentInTransferGroup)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.MakeCurrentInTransferGroup()).ok() }
     }
     pub fn SetRequestHeader(&self, headername: &::windows_core::HSTRING, headervalue: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IUploadOperation4>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetRequestHeader)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRequestHeader(::core::mem::transmute_copy(headername), ::core::mem::transmute_copy(headervalue))).ok() }
     }
     pub fn RemoveRequestHeader(&self, headername: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IUploadOperation4>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveRequestHeader)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(headername)).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveRequestHeader(::core::mem::transmute_copy(headername))).ok() }
     }
 }
 impl ::windows_core::RuntimeType for UploadOperation {

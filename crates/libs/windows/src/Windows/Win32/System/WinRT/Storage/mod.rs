@@ -3,7 +3,7 @@
 pub struct IOplockBreakingHandler(::windows_core::IUnknown);
 impl IOplockBreakingHandler {
     pub unsafe fn OplockBreaking(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OplockBreaking)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OplockBreaking()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOplockBreakingHandler, ::windows_core::IUnknown);
@@ -25,7 +25,7 @@ pub struct IRandomAccessStreamFileAccessMode(::windows_core::IUnknown);
 impl IRandomAccessStreamFileAccessMode {
     pub unsafe fn GetMode(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMode(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IRandomAccessStreamFileAccessMode, ::windows_core::IUnknown);
@@ -53,7 +53,7 @@ impl IStorageFolderHandleAccess {
         P1: ::windows_core::IntoParam<IOplockBreakingHandler>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Create)(::windows_core::Interface::as_raw(self), filename.into_param().abi(), creationoptions, accessoptions, sharingoptions, options, oplockbreakinghandler.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Create(filename.into_param().abi(), creationoptions, accessoptions, sharingoptions, options, oplockbreakinghandler.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IStorageFolderHandleAccess, ::windows_core::IUnknown);
@@ -83,7 +83,7 @@ impl IStorageItemHandleAccess {
         P0: ::windows_core::IntoParam<IOplockBreakingHandler>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Create)(::windows_core::Interface::as_raw(self), accessoptions, sharingoptions, options, oplockbreakinghandler.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Create(accessoptions, sharingoptions, options, oplockbreakinghandler.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IStorageItemHandleAccess, ::windows_core::IUnknown);
@@ -107,7 +107,7 @@ pub struct IStorageItemHandleAccess_Vtbl {
 pub struct IUnbufferedFileHandleOplockCallback(::windows_core::IUnknown);
 impl IUnbufferedFileHandleOplockCallback {
     pub unsafe fn OnBrokenCallback(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnBrokenCallback)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnBrokenCallback()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IUnbufferedFileHandleOplockCallback, ::windows_core::IUnknown);
@@ -132,10 +132,10 @@ impl IUnbufferedFileHandleProvider {
         P0: ::windows_core::IntoParam<IUnbufferedFileHandleOplockCallback>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).OpenUnbufferedFileHandle)(::windows_core::Interface::as_raw(self), oplockbreakcallback.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.OpenUnbufferedFileHandle(oplockbreakcallback.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn CloseUnbufferedFileHandle(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CloseUnbufferedFileHandle)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.CloseUnbufferedFileHandle()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IUnbufferedFileHandleProvider, ::windows_core::IUnknown);

@@ -628,42 +628,42 @@ pub struct ITraceEvent(::windows_core::IUnknown);
 impl ITraceEvent {
     pub unsafe fn Clone(&self) -> ::windows_core::Result<ITraceEvent> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetUserContext(&self) -> ::windows_core::Result<*mut ::core::ffi::c_void> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUserContext)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUserContext(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetEventRecord(&self) -> ::windows_core::Result<*mut EVENT_RECORD> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetEventRecord)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetEventRecord(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPayload(&self, payload: &[u8]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetPayload)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(payload.as_ptr()), payload.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.SetPayload(::core::mem::transmute(payload.as_ptr()), payload.len().try_into().unwrap())).ok()
     }
     pub unsafe fn SetEventDescriptor(&self, eventdescriptor: *const EVENT_DESCRIPTOR) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetEventDescriptor)(::windows_core::Interface::as_raw(self), eventdescriptor).ok()
+        ::windows_core::vcall!(self.SetEventDescriptor(eventdescriptor)).ok()
     }
     pub unsafe fn SetProcessId(&self, processid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetProcessId)(::windows_core::Interface::as_raw(self), processid).ok()
+        ::windows_core::vcall!(self.SetProcessId(processid)).ok()
     }
     pub unsafe fn SetProcessorIndex(&self, processorindex: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetProcessorIndex)(::windows_core::Interface::as_raw(self), processorindex).ok()
+        ::windows_core::vcall!(self.SetProcessorIndex(processorindex)).ok()
     }
     pub unsafe fn SetThreadId(&self, threadid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetThreadId)(::windows_core::Interface::as_raw(self), threadid).ok()
+        ::windows_core::vcall!(self.SetThreadId(threadid)).ok()
     }
     pub unsafe fn SetThreadTimes(&self, kerneltime: u32, usertime: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetThreadTimes)(::windows_core::Interface::as_raw(self), kerneltime, usertime).ok()
+        ::windows_core::vcall!(self.SetThreadTimes(kerneltime, usertime)).ok()
     }
     pub unsafe fn SetActivityId(&self, activityid: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetActivityId)(::windows_core::Interface::as_raw(self), activityid).ok()
+        ::windows_core::vcall!(self.SetActivityId(activityid)).ok()
     }
     pub unsafe fn SetTimeStamp(&self, timestamp: *const i64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetTimeStamp)(::windows_core::Interface::as_raw(self), timestamp).ok()
+        ::windows_core::vcall!(self.SetTimeStamp(timestamp)).ok()
     }
     pub unsafe fn SetProviderId(&self, providerid: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetProviderId)(::windows_core::Interface::as_raw(self), providerid).ok()
+        ::windows_core::vcall!(self.SetProviderId(providerid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITraceEvent, ::windows_core::IUnknown);
@@ -699,20 +699,20 @@ impl ITraceEventCallback {
         P0: ::windows_core::IntoParam<ITraceEvent>,
         P1: ::windows_core::IntoParam<ITraceRelogger>,
     {
-        (::windows_core::Interface::vtable(self).OnBeginProcessTrace)(::windows_core::Interface::as_raw(self), headerevent.into_param().abi(), relogger.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnBeginProcessTrace(headerevent.into_param().abi(), relogger.into_param().abi())).ok()
     }
     pub unsafe fn OnFinalizeProcessTrace<P0>(&self, relogger: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITraceRelogger>,
     {
-        (::windows_core::Interface::vtable(self).OnFinalizeProcessTrace)(::windows_core::Interface::as_raw(self), relogger.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnFinalizeProcessTrace(relogger.into_param().abi())).ok()
     }
     pub unsafe fn OnEvent<P0, P1>(&self, event: P0, relogger: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITraceEvent>,
         P1: ::windows_core::IntoParam<ITraceRelogger>,
     {
-        (::windows_core::Interface::vtable(self).OnEvent)(::windows_core::Interface::as_raw(self), event.into_param().abi(), relogger.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnEvent(event.into_param().abi(), relogger.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITraceEventCallback, ::windows_core::IUnknown);
@@ -739,39 +739,39 @@ impl ITraceRelogger {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AddLogfileTraceStream)(::windows_core::Interface::as_raw(self), logfilename.into_param().abi(), usercontext, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AddLogfileTraceStream(logfilename.into_param().abi(), usercontext, &mut result__)).from_abi(result__)
     }
     pub unsafe fn AddRealtimeTraceStream<P0>(&self, loggername: P0, usercontext: *const ::core::ffi::c_void) -> ::windows_core::Result<RELOGSTREAM_HANDLE>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AddRealtimeTraceStream)(::windows_core::Interface::as_raw(self), loggername.into_param().abi(), usercontext, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AddRealtimeTraceStream(loggername.into_param().abi(), usercontext, &mut result__)).from_abi(result__)
     }
     pub unsafe fn RegisterCallback<P0>(&self, callback: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITraceEventCallback>,
     {
-        (::windows_core::Interface::vtable(self).RegisterCallback)(::windows_core::Interface::as_raw(self), callback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RegisterCallback(callback.into_param().abi())).ok()
     }
     pub unsafe fn Inject<P0>(&self, event: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITraceEvent>,
     {
-        (::windows_core::Interface::vtable(self).Inject)(::windows_core::Interface::as_raw(self), event.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Inject(event.into_param().abi())).ok()
     }
     pub unsafe fn CreateEventInstance(&self, tracehandle: RELOGSTREAM_HANDLE, flags: u32) -> ::windows_core::Result<ITraceEvent> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateEventInstance)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(tracehandle), flags, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateEventInstance(::core::mem::transmute(tracehandle), flags, &mut result__)).from_abi(result__)
     }
     pub unsafe fn ProcessTrace(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ProcessTrace)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ProcessTrace()).ok()
     }
     pub unsafe fn SetOutputFilename<P0>(&self, logfilename: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetOutputFilename)(::windows_core::Interface::as_raw(self), logfilename.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetOutputFilename(logfilename.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -779,10 +779,10 @@ impl ITraceRelogger {
     where
         P0: ::windows_core::IntoParam<super::super::super::Foundation::BOOLEAN>,
     {
-        (::windows_core::Interface::vtable(self).SetCompressionMode)(::windows_core::Interface::as_raw(self), compressionmode.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetCompressionMode(compressionmode.into_param().abi())).ok()
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITraceRelogger, ::windows_core::IUnknown);

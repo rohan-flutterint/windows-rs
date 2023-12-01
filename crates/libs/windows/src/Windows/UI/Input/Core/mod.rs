@@ -64,7 +64,7 @@ impl RadialControllerIndependentInputSource {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Controller)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Controller(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"UI_Core\"`"]
@@ -73,7 +73,7 @@ impl RadialControllerIndependentInputSource {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Dispatcher)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Dispatcher(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"System\"`"]
@@ -82,7 +82,7 @@ impl RadialControllerIndependentInputSource {
         let this = &::windows_core::ComInterface::cast::<IRadialControllerIndependentInputSource2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DispatcherQueue)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DispatcherQueue(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"ApplicationModel_Core\"`"]
@@ -93,7 +93,7 @@ impl RadialControllerIndependentInputSource {
     {
         Self::IRadialControllerIndependentInputSourceStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateForView)(::windows_core::Interface::as_raw(this), view.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateForView(view.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

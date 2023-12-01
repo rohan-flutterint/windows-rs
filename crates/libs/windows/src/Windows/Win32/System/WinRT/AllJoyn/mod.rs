@@ -7,7 +7,7 @@ impl IWindowsDevicesAllJoynBusAttachmentFactoryInterop {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).CreateFromWin32Handle)(::windows_core::Interface::as_raw(self), win32handle, enableaboutdata, &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateFromWin32Handle(win32handle, enableaboutdata, &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWindowsDevicesAllJoynBusAttachmentFactoryInterop, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -29,7 +29,7 @@ pub struct IWindowsDevicesAllJoynBusAttachmentInterop(::windows_core::IUnknown);
 impl IWindowsDevicesAllJoynBusAttachmentInterop {
     pub unsafe fn Win32Handle(&self) -> ::windows_core::Result<u64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Win32Handle)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Win32Handle(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWindowsDevicesAllJoynBusAttachmentInterop, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -54,7 +54,7 @@ impl IWindowsDevicesAllJoynBusObjectFactoryInterop {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).CreateFromWin32Handle)(::windows_core::Interface::as_raw(self), win32handle, &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateFromWin32Handle(win32handle, &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWindowsDevicesAllJoynBusObjectFactoryInterop, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -75,14 +75,14 @@ pub struct IWindowsDevicesAllJoynBusObjectFactoryInterop_Vtbl {
 pub struct IWindowsDevicesAllJoynBusObjectInterop(::windows_core::IUnknown);
 impl IWindowsDevicesAllJoynBusObjectInterop {
     pub unsafe fn AddPropertyGetHandler(&self, context: *const ::core::ffi::c_void, interfacename: &::windows_core::HSTRING, callback: isize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AddPropertyGetHandler)(::windows_core::Interface::as_raw(self), context, ::core::mem::transmute_copy(interfacename), callback).ok()
+        ::windows_core::vcall!(self.AddPropertyGetHandler(context, ::core::mem::transmute_copy(interfacename), callback)).ok()
     }
     pub unsafe fn AddPropertySetHandler(&self, context: *const ::core::ffi::c_void, interfacename: &::windows_core::HSTRING, callback: isize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AddPropertySetHandler)(::windows_core::Interface::as_raw(self), context, ::core::mem::transmute_copy(interfacename), callback).ok()
+        ::windows_core::vcall!(self.AddPropertySetHandler(context, ::core::mem::transmute_copy(interfacename), callback)).ok()
     }
     pub unsafe fn Win32Handle(&self) -> ::windows_core::Result<u64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Win32Handle)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Win32Handle(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWindowsDevicesAllJoynBusObjectInterop, ::windows_core::IUnknown, ::windows_core::IInspectable);

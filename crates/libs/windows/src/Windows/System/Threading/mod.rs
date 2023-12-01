@@ -93,7 +93,7 @@ impl ThreadPool {
     {
         Self::IThreadPoolStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RunAsync)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RunAsync(handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -104,7 +104,7 @@ impl ThreadPool {
     {
         Self::IThreadPoolStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RunWithPriorityAsync)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), priority, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RunWithPriorityAsync(handler.into_param().abi(), priority, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -115,7 +115,7 @@ impl ThreadPool {
     {
         Self::IThreadPoolStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RunWithPriorityAndOptionsAsync)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), priority, options, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RunWithPriorityAndOptionsAsync(handler.into_param().abi(), priority, options, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -137,7 +137,7 @@ impl ThreadPoolTimer {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Period)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Period(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -146,12 +146,12 @@ impl ThreadPoolTimer {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Delay)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Delay(&mut result__)).from_abi(result__)
         }
     }
     pub fn Cancel(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Cancel)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Cancel()).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -161,7 +161,7 @@ impl ThreadPoolTimer {
     {
         Self::IThreadPoolTimerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreatePeriodicTimer)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), period, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreatePeriodicTimer(handler.into_param().abi(), period, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -172,7 +172,7 @@ impl ThreadPoolTimer {
     {
         Self::IThreadPoolTimerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTimer)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), delay, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTimer(handler.into_param().abi(), delay, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -184,7 +184,7 @@ impl ThreadPoolTimer {
     {
         Self::IThreadPoolTimerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreatePeriodicTimerWithCompletion)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), period, destroyed.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreatePeriodicTimerWithCompletion(handler.into_param().abi(), period, destroyed.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -196,7 +196,7 @@ impl ThreadPoolTimer {
     {
         Self::IThreadPoolTimerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateTimerWithCompletion)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), delay, destroyed.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateTimerWithCompletion(handler.into_param().abi(), delay, destroyed.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -325,7 +325,7 @@ impl TimerDestroyedHandler {
         P0: ::windows_core::IntoParam<ThreadPoolTimer>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), timer.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(timer.into_param().abi())).ok() }
     }
 }
 #[repr(C)]
@@ -397,7 +397,7 @@ impl TimerElapsedHandler {
         P0: ::windows_core::IntoParam<ThreadPoolTimer>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), timer.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(timer.into_param().abi())).ok() }
     }
 }
 #[repr(C)]
@@ -474,7 +474,7 @@ impl WorkItemHandler {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IAsyncAction>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), operation.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(operation.try_into_param()?.abi())).ok() }
     }
 }
 #[cfg(feature = "Foundation")]

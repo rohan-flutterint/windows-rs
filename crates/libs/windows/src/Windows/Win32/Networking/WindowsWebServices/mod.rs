@@ -1191,14 +1191,14 @@ impl IContentPrefetcherTaskTrigger {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).TriggerContentPrefetcherTask)(::windows_core::Interface::as_raw(self), packagefullname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.TriggerContentPrefetcherTask(packagefullname.into_param().abi())).ok()
     }
     pub unsafe fn IsRegisteredForContentPrefetch<P0>(&self, packagefullname: P0) -> ::windows_core::Result<u8>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsRegisteredForContentPrefetch)(::windows_core::Interface::as_raw(self), packagefullname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsRegisteredForContentPrefetch(packagefullname.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IContentPrefetcherTaskTrigger, ::windows_core::IUnknown, ::windows_core::IInspectable);

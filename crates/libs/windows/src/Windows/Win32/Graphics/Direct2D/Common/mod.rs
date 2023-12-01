@@ -3,25 +3,25 @@
 pub struct ID2D1SimplifiedGeometrySink(::windows_core::IUnknown);
 impl ID2D1SimplifiedGeometrySink {
     pub unsafe fn SetFillMode(&self, fillmode: D2D1_FILL_MODE) {
-        (::windows_core::Interface::vtable(self).SetFillMode)(::windows_core::Interface::as_raw(self), fillmode)
+        ::windows_core::vcall!(self.SetFillMode(fillmode))
     }
     pub unsafe fn SetSegmentFlags(&self, vertexflags: D2D1_PATH_SEGMENT) {
-        (::windows_core::Interface::vtable(self).SetSegmentFlags)(::windows_core::Interface::as_raw(self), vertexflags)
+        ::windows_core::vcall!(self.SetSegmentFlags(vertexflags))
     }
     pub unsafe fn BeginFigure(&self, startpoint: D2D_POINT_2F, figurebegin: D2D1_FIGURE_BEGIN) {
-        (::windows_core::Interface::vtable(self).BeginFigure)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(startpoint), figurebegin)
+        ::windows_core::vcall!(self.BeginFigure(::core::mem::transmute(startpoint), figurebegin))
     }
     pub unsafe fn AddLines(&self, points: &[D2D_POINT_2F]) {
-        (::windows_core::Interface::vtable(self).AddLines)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(points.as_ptr()), points.len().try_into().unwrap())
+        ::windows_core::vcall!(self.AddLines(::core::mem::transmute(points.as_ptr()), points.len().try_into().unwrap()))
     }
     pub unsafe fn AddBeziers(&self, beziers: &[D2D1_BEZIER_SEGMENT]) {
-        (::windows_core::Interface::vtable(self).AddBeziers)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(beziers.as_ptr()), beziers.len().try_into().unwrap())
+        ::windows_core::vcall!(self.AddBeziers(::core::mem::transmute(beziers.as_ptr()), beziers.len().try_into().unwrap()))
     }
     pub unsafe fn EndFigure(&self, figureend: D2D1_FIGURE_END) {
-        (::windows_core::Interface::vtable(self).EndFigure)(::windows_core::Interface::as_raw(self), figureend)
+        ::windows_core::vcall!(self.EndFigure(figureend))
     }
     pub unsafe fn Close(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Close()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ID2D1SimplifiedGeometrySink, ::windows_core::IUnknown);

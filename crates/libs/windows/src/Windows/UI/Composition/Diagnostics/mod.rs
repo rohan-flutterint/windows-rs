@@ -58,28 +58,28 @@ impl CompositionDebugHeatMaps {
         P0: ::windows_core::TryIntoParam<super::Visual>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Hide)(::windows_core::Interface::as_raw(this), subtree.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Hide(subtree.try_into_param()?.abi())).ok() }
     }
     pub fn ShowMemoryUsage<P0>(&self, subtree: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::TryIntoParam<super::Visual>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ShowMemoryUsage)(::windows_core::Interface::as_raw(this), subtree.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.ShowMemoryUsage(subtree.try_into_param()?.abi())).ok() }
     }
     pub fn ShowOverdraw<P0>(&self, subtree: P0, contentkinds: CompositionDebugOverdrawContentKinds) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::TryIntoParam<super::Visual>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ShowOverdraw)(::windows_core::Interface::as_raw(this), subtree.try_into_param()?.abi(), contentkinds).ok() }
+        unsafe { ::windows_core::vcall!(this.ShowOverdraw(subtree.try_into_param()?.abi(), contentkinds)).ok() }
     }
     pub fn ShowRedraw<P0>(&self, subtree: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::TryIntoParam<super::Visual>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ShowRedraw)(::windows_core::Interface::as_raw(this), subtree.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.ShowRedraw(subtree.try_into_param()?.abi())).ok() }
     }
 }
 impl ::windows_core::RuntimeType for CompositionDebugHeatMaps {
@@ -105,7 +105,7 @@ impl CompositionDebugSettings {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HeatMaps)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HeatMaps(&mut result__)).from_abi(result__)
         }
     }
     pub fn TryGetSettings<P0>(compositor: P0) -> ::windows_core::Result<CompositionDebugSettings>
@@ -114,7 +114,7 @@ impl CompositionDebugSettings {
     {
         Self::ICompositionDebugSettingsStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryGetSettings)(::windows_core::Interface::as_raw(this), compositor.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryGetSettings(compositor.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

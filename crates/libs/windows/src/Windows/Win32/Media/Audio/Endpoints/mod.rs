@@ -3,7 +3,7 @@
 pub struct IAudioEndpointFormatControl(::windows_core::IUnknown);
 impl IAudioEndpointFormatControl {
     pub unsafe fn ResetToDefault(&self, resetflags: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ResetToDefault)(::windows_core::Interface::as_raw(self), resetflags).ok()
+        ::windows_core::vcall!(self.ResetToDefault(resetflags)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioEndpointFormatControl, ::windows_core::IUnknown);
@@ -26,12 +26,12 @@ impl IAudioEndpointLastBufferControl {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsLastBufferControlSupported(&self) -> super::super::super::Foundation::BOOL {
-        (::windows_core::Interface::vtable(self).IsLastBufferControlSupported)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.IsLastBufferControlSupported())
     }
     #[doc = "Required features: `\"Win32_Media_Audio_Apo\"`"]
     #[cfg(feature = "Win32_Media_Audio_Apo")]
     pub unsafe fn ReleaseOutputDataPointerForLastBuffer(&self, pconnectionproperty: *const super::Apo::APO_CONNECTION_PROPERTY) {
-        (::windows_core::Interface::vtable(self).ReleaseOutputDataPointerForLastBuffer)(::windows_core::Interface::as_raw(self), pconnectionproperty)
+        ::windows_core::vcall!(self.ReleaseOutputDataPointerForLastBuffer(pconnectionproperty))
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioEndpointLastBufferControl, ::windows_core::IUnknown);
@@ -60,11 +60,11 @@ pub struct IAudioEndpointOffloadStreamMeter(::windows_core::IUnknown);
 impl IAudioEndpointOffloadStreamMeter {
     pub unsafe fn GetMeterChannelCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMeterChannelCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMeterChannelCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetMeteringData(&self, u32channelcount: u32) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMeteringData)(::windows_core::Interface::as_raw(self), u32channelcount, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMeteringData(u32channelcount, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioEndpointOffloadStreamMeter, ::windows_core::IUnknown);
@@ -86,11 +86,11 @@ pub struct IAudioEndpointOffloadStreamMeter_Vtbl {
 pub struct IAudioEndpointOffloadStreamMute(::windows_core::IUnknown);
 impl IAudioEndpointOffloadStreamMute {
     pub unsafe fn SetMute(&self, bmuted: u8) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMute)(::windows_core::Interface::as_raw(self), bmuted).ok()
+        ::windows_core::vcall!(self.SetMute(bmuted)).ok()
     }
     pub unsafe fn GetMute(&self) -> ::windows_core::Result<u8> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMute)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMute(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioEndpointOffloadStreamMute, ::windows_core::IUnknown);
@@ -113,16 +113,16 @@ pub struct IAudioEndpointOffloadStreamVolume(::windows_core::IUnknown);
 impl IAudioEndpointOffloadStreamVolume {
     pub unsafe fn GetVolumeChannelCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetVolumeChannelCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetVolumeChannelCount(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Media_KernelStreaming\"`"]
     #[cfg(feature = "Win32_Media_KernelStreaming")]
     pub unsafe fn SetChannelVolumes(&self, u32channelcount: u32, pf32volumes: *const f32, u32curvetype: super::super::KernelStreaming::AUDIO_CURVE_TYPE, pcurveduration: *const i64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetChannelVolumes)(::windows_core::Interface::as_raw(self), u32channelcount, pf32volumes, u32curvetype, pcurveduration).ok()
+        ::windows_core::vcall!(self.SetChannelVolumes(u32channelcount, pf32volumes, u32curvetype, pcurveduration)).ok()
     }
     pub unsafe fn GetChannelVolumes(&self, u32channelcount: u32) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetChannelVolumes)(::windows_core::Interface::as_raw(self), u32channelcount, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetChannelVolumes(u32channelcount, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioEndpointOffloadStreamVolume, ::windows_core::IUnknown);
@@ -151,45 +151,45 @@ impl IAudioEndpointVolume {
     where
         P0: ::windows_core::IntoParam<IAudioEndpointVolumeCallback>,
     {
-        (::windows_core::Interface::vtable(self).RegisterControlChangeNotify)(::windows_core::Interface::as_raw(self), pnotify.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RegisterControlChangeNotify(pnotify.into_param().abi())).ok()
     }
     pub unsafe fn UnregisterControlChangeNotify<P0>(&self, pnotify: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IAudioEndpointVolumeCallback>,
     {
-        (::windows_core::Interface::vtable(self).UnregisterControlChangeNotify)(::windows_core::Interface::as_raw(self), pnotify.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UnregisterControlChangeNotify(pnotify.into_param().abi())).ok()
     }
     pub unsafe fn GetChannelCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetChannelCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetChannelCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetMasterVolumeLevel(&self, fleveldb: f32, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMasterVolumeLevel)(::windows_core::Interface::as_raw(self), fleveldb, pguideventcontext).ok()
+        ::windows_core::vcall!(self.SetMasterVolumeLevel(fleveldb, pguideventcontext)).ok()
     }
     pub unsafe fn SetMasterVolumeLevelScalar(&self, flevel: f32, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMasterVolumeLevelScalar)(::windows_core::Interface::as_raw(self), flevel, pguideventcontext).ok()
+        ::windows_core::vcall!(self.SetMasterVolumeLevelScalar(flevel, pguideventcontext)).ok()
     }
     pub unsafe fn GetMasterVolumeLevel(&self) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMasterVolumeLevel)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMasterVolumeLevel(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetMasterVolumeLevelScalar(&self) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMasterVolumeLevelScalar)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMasterVolumeLevelScalar(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetChannelVolumeLevel(&self, nchannel: u32, fleveldb: f32, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetChannelVolumeLevel)(::windows_core::Interface::as_raw(self), nchannel, fleveldb, pguideventcontext).ok()
+        ::windows_core::vcall!(self.SetChannelVolumeLevel(nchannel, fleveldb, pguideventcontext)).ok()
     }
     pub unsafe fn SetChannelVolumeLevelScalar(&self, nchannel: u32, flevel: f32, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetChannelVolumeLevelScalar)(::windows_core::Interface::as_raw(self), nchannel, flevel, pguideventcontext).ok()
+        ::windows_core::vcall!(self.SetChannelVolumeLevelScalar(nchannel, flevel, pguideventcontext)).ok()
     }
     pub unsafe fn GetChannelVolumeLevel(&self, nchannel: u32) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetChannelVolumeLevel)(::windows_core::Interface::as_raw(self), nchannel, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetChannelVolumeLevel(nchannel, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetChannelVolumeLevelScalar(&self, nchannel: u32) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetChannelVolumeLevelScalar)(::windows_core::Interface::as_raw(self), nchannel, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetChannelVolumeLevelScalar(nchannel, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -197,29 +197,29 @@ impl IAudioEndpointVolume {
     where
         P0: ::windows_core::IntoParam<super::super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetMute)(::windows_core::Interface::as_raw(self), bmute.into_param().abi(), pguideventcontext).ok()
+        ::windows_core::vcall!(self.SetMute(bmute.into_param().abi(), pguideventcontext)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetMute(&self) -> ::windows_core::Result<super::super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMute)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMute(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetVolumeStepInfo(&self, pnstep: *mut u32, pnstepcount: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetVolumeStepInfo)(::windows_core::Interface::as_raw(self), pnstep, pnstepcount).ok()
+        ::windows_core::vcall!(self.GetVolumeStepInfo(pnstep, pnstepcount)).ok()
     }
     pub unsafe fn VolumeStepUp(&self, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).VolumeStepUp)(::windows_core::Interface::as_raw(self), pguideventcontext).ok()
+        ::windows_core::vcall!(self.VolumeStepUp(pguideventcontext)).ok()
     }
     pub unsafe fn VolumeStepDown(&self, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).VolumeStepDown)(::windows_core::Interface::as_raw(self), pguideventcontext).ok()
+        ::windows_core::vcall!(self.VolumeStepDown(pguideventcontext)).ok()
     }
     pub unsafe fn QueryHardwareSupport(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueryHardwareSupport)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueryHardwareSupport(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetVolumeRange(&self, pflvolumemindb: *mut f32, pflvolumemaxdb: *mut f32, pflvolumeincrementdb: *mut f32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetVolumeRange)(::windows_core::Interface::as_raw(self), pflvolumemindb, pflvolumemaxdb, pflvolumeincrementdb).ok()
+        ::windows_core::vcall!(self.GetVolumeRange(pflvolumemindb, pflvolumemaxdb, pflvolumeincrementdb)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioEndpointVolume, ::windows_core::IUnknown);
@@ -265,7 +265,7 @@ impl IAudioEndpointVolumeCallback {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn OnNotify(&self, pnotify: *mut super::AUDIO_VOLUME_NOTIFICATION_DATA) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnNotify)(::windows_core::Interface::as_raw(self), pnotify).ok()
+        ::windows_core::vcall!(self.OnNotify(pnotify)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioEndpointVolumeCallback, ::windows_core::IUnknown);
@@ -292,45 +292,45 @@ impl IAudioEndpointVolumeEx {
     where
         P0: ::windows_core::IntoParam<IAudioEndpointVolumeCallback>,
     {
-        (::windows_core::Interface::vtable(self).base__.RegisterControlChangeNotify)(::windows_core::Interface::as_raw(self), pnotify.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.RegisterControlChangeNotify(pnotify.into_param().abi())).ok()
     }
     pub unsafe fn UnregisterControlChangeNotify<P0>(&self, pnotify: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IAudioEndpointVolumeCallback>,
     {
-        (::windows_core::Interface::vtable(self).base__.UnregisterControlChangeNotify)(::windows_core::Interface::as_raw(self), pnotify.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.UnregisterControlChangeNotify(pnotify.into_param().abi())).ok()
     }
     pub unsafe fn GetChannelCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetChannelCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetChannelCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetMasterVolumeLevel(&self, fleveldb: f32, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetMasterVolumeLevel)(::windows_core::Interface::as_raw(self), fleveldb, pguideventcontext).ok()
+        ::windows_core::vcall!(self.base__.SetMasterVolumeLevel(fleveldb, pguideventcontext)).ok()
     }
     pub unsafe fn SetMasterVolumeLevelScalar(&self, flevel: f32, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetMasterVolumeLevelScalar)(::windows_core::Interface::as_raw(self), flevel, pguideventcontext).ok()
+        ::windows_core::vcall!(self.base__.SetMasterVolumeLevelScalar(flevel, pguideventcontext)).ok()
     }
     pub unsafe fn GetMasterVolumeLevel(&self) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetMasterVolumeLevel)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetMasterVolumeLevel(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetMasterVolumeLevelScalar(&self) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetMasterVolumeLevelScalar)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetMasterVolumeLevelScalar(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetChannelVolumeLevel(&self, nchannel: u32, fleveldb: f32, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetChannelVolumeLevel)(::windows_core::Interface::as_raw(self), nchannel, fleveldb, pguideventcontext).ok()
+        ::windows_core::vcall!(self.base__.SetChannelVolumeLevel(nchannel, fleveldb, pguideventcontext)).ok()
     }
     pub unsafe fn SetChannelVolumeLevelScalar(&self, nchannel: u32, flevel: f32, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetChannelVolumeLevelScalar)(::windows_core::Interface::as_raw(self), nchannel, flevel, pguideventcontext).ok()
+        ::windows_core::vcall!(self.base__.SetChannelVolumeLevelScalar(nchannel, flevel, pguideventcontext)).ok()
     }
     pub unsafe fn GetChannelVolumeLevel(&self, nchannel: u32) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetChannelVolumeLevel)(::windows_core::Interface::as_raw(self), nchannel, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetChannelVolumeLevel(nchannel, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetChannelVolumeLevelScalar(&self, nchannel: u32) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetChannelVolumeLevelScalar)(::windows_core::Interface::as_raw(self), nchannel, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetChannelVolumeLevelScalar(nchannel, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -338,32 +338,32 @@ impl IAudioEndpointVolumeEx {
     where
         P0: ::windows_core::IntoParam<super::super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetMute)(::windows_core::Interface::as_raw(self), bmute.into_param().abi(), pguideventcontext).ok()
+        ::windows_core::vcall!(self.base__.SetMute(bmute.into_param().abi(), pguideventcontext)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetMute(&self) -> ::windows_core::Result<super::super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetMute)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetMute(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetVolumeStepInfo(&self, pnstep: *mut u32, pnstepcount: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetVolumeStepInfo)(::windows_core::Interface::as_raw(self), pnstep, pnstepcount).ok()
+        ::windows_core::vcall!(self.base__.GetVolumeStepInfo(pnstep, pnstepcount)).ok()
     }
     pub unsafe fn VolumeStepUp(&self, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.VolumeStepUp)(::windows_core::Interface::as_raw(self), pguideventcontext).ok()
+        ::windows_core::vcall!(self.base__.VolumeStepUp(pguideventcontext)).ok()
     }
     pub unsafe fn VolumeStepDown(&self, pguideventcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.VolumeStepDown)(::windows_core::Interface::as_raw(self), pguideventcontext).ok()
+        ::windows_core::vcall!(self.base__.VolumeStepDown(pguideventcontext)).ok()
     }
     pub unsafe fn QueryHardwareSupport(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.QueryHardwareSupport)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.QueryHardwareSupport(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetVolumeRange(&self, pflvolumemindb: *mut f32, pflvolumemaxdb: *mut f32, pflvolumeincrementdb: *mut f32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetVolumeRange)(::windows_core::Interface::as_raw(self), pflvolumemindb, pflvolumemaxdb, pflvolumeincrementdb).ok()
+        ::windows_core::vcall!(self.base__.GetVolumeRange(pflvolumemindb, pflvolumemaxdb, pflvolumeincrementdb)).ok()
     }
     pub unsafe fn GetVolumeRangeChannel(&self, ichannel: u32, pflvolumemindb: *mut f32, pflvolumemaxdb: *mut f32, pflvolumeincrementdb: *mut f32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetVolumeRangeChannel)(::windows_core::Interface::as_raw(self), ichannel, pflvolumemindb, pflvolumemaxdb, pflvolumeincrementdb).ok()
+        ::windows_core::vcall!(self.GetVolumeRangeChannel(ichannel, pflvolumemindb, pflvolumemaxdb, pflvolumeincrementdb)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioEndpointVolumeEx, ::windows_core::IUnknown, IAudioEndpointVolume);
@@ -389,13 +389,13 @@ impl IAudioLfxControl {
     where
         P0: ::windows_core::IntoParam<super::super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetLocalEffectsState)(::windows_core::Interface::as_raw(self), benabled.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetLocalEffectsState(benabled.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetLocalEffectsState(&self) -> ::windows_core::Result<super::super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLocalEffectsState)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLocalEffectsState(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioLfxControl, ::windows_core::IUnknown);
@@ -424,18 +424,18 @@ pub struct IAudioMeterInformation(::windows_core::IUnknown);
 impl IAudioMeterInformation {
     pub unsafe fn GetPeakValue(&self) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPeakValue)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPeakValue(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetMeteringChannelCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMeteringChannelCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMeteringChannelCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetChannelsPeakValues(&self, afpeakvalues: &mut [f32]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetChannelsPeakValues)(::windows_core::Interface::as_raw(self), afpeakvalues.len().try_into().unwrap(), ::core::mem::transmute(afpeakvalues.as_ptr())).ok()
+        ::windows_core::vcall!(self.GetChannelsPeakValues(afpeakvalues.len().try_into().unwrap(), ::core::mem::transmute(afpeakvalues.as_ptr()))).ok()
     }
     pub unsafe fn QueryHardwareSupport(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueryHardwareSupport)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueryHardwareSupport(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioMeterInformation, ::windows_core::IUnknown);
@@ -463,7 +463,7 @@ impl IHardwareAudioEngineBase {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetAvailableOffloadConnectorCount)(::windows_core::Interface::as_raw(self), _pwstrdeviceid.into_param().abi(), _uconnectorid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetAvailableOffloadConnectorCount(_pwstrdeviceid.into_param().abi(), _uconnectorid, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -472,13 +472,13 @@ impl IHardwareAudioEngineBase {
         P0: ::windows_core::IntoParam<super::IMMDevice>,
         P1: ::windows_core::IntoParam<super::super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).GetEngineFormat)(::windows_core::Interface::as_raw(self), pdevice.into_param().abi(), _brequestdeviceformat.into_param().abi(), _ppwfxformat).ok()
+        ::windows_core::vcall!(self.GetEngineFormat(pdevice.into_param().abi(), _brequestdeviceformat.into_param().abi(), _ppwfxformat)).ok()
     }
     pub unsafe fn SetEngineDeviceFormat<P0>(&self, pdevice: P0, _pwfxformat: *mut super::WAVEFORMATEX) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<super::IMMDevice>,
     {
-        (::windows_core::Interface::vtable(self).SetEngineDeviceFormat)(::windows_core::Interface::as_raw(self), pdevice.into_param().abi(), _pwfxformat).ok()
+        ::windows_core::vcall!(self.SetEngineDeviceFormat(pdevice.into_param().abi(), _pwfxformat)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -487,7 +487,7 @@ impl IHardwareAudioEngineBase {
         P0: ::windows_core::IntoParam<super::IMMDevice>,
         P1: ::windows_core::IntoParam<super::super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetGfxState)(::windows_core::Interface::as_raw(self), pdevice.into_param().abi(), _benable.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetGfxState(pdevice.into_param().abi(), _benable.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -496,7 +496,7 @@ impl IHardwareAudioEngineBase {
         P0: ::windows_core::IntoParam<super::IMMDevice>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetGfxState)(::windows_core::Interface::as_raw(self), pdevice.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetGfxState(pdevice.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IHardwareAudioEngineBase, ::windows_core::IUnknown);

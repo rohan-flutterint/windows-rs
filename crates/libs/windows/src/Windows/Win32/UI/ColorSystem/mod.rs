@@ -1036,46 +1036,46 @@ impl IDeviceModelPlugIn {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), bstrxml.into_param().abi(), cnummodels, imodelposition).ok()
+        ::windows_core::vcall!(self.Initialize(bstrxml.into_param().abi(), cnummodels, imodelposition)).ok()
     }
     pub unsafe fn GetNumChannels(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetNumChannels)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetNumChannels(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DeviceToColorimetricColors(&self, cchannels: u32, pdevicevalues: *const f32, pxyzcolors: &mut [XYZColorF]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeviceToColorimetricColors)(::windows_core::Interface::as_raw(self), pxyzcolors.len().try_into().unwrap(), cchannels, pdevicevalues, ::core::mem::transmute(pxyzcolors.as_ptr())).ok()
+        ::windows_core::vcall!(self.DeviceToColorimetricColors(pxyzcolors.len().try_into().unwrap(), cchannels, pdevicevalues, ::core::mem::transmute(pxyzcolors.as_ptr()))).ok()
     }
     pub unsafe fn ColorimetricToDeviceColors(&self, cchannels: u32, pxyzcolors: &[XYZColorF]) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ColorimetricToDeviceColors)(::windows_core::Interface::as_raw(self), pxyzcolors.len().try_into().unwrap(), cchannels, ::core::mem::transmute(pxyzcolors.as_ptr()), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ColorimetricToDeviceColors(pxyzcolors.len().try_into().unwrap(), cchannels, ::core::mem::transmute(pxyzcolors.as_ptr()), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn ColorimetricToDeviceColorsWithBlack(&self, ccolors: u32, cchannels: u32, pxyzcolors: *const XYZColorF, pblackinformation: *const BlackInformation) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ColorimetricToDeviceColorsWithBlack)(::windows_core::Interface::as_raw(self), ccolors, cchannels, pxyzcolors, pblackinformation, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ColorimetricToDeviceColorsWithBlack(ccolors, cchannels, pxyzcolors, pblackinformation, &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetTransformDeviceModelInfo<P0>(&self, imodelposition: u32, pidevicemodelother: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IDeviceModelPlugIn>,
     {
-        (::windows_core::Interface::vtable(self).SetTransformDeviceModelInfo)(::windows_core::Interface::as_raw(self), imodelposition, pidevicemodelother.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTransformDeviceModelInfo(imodelposition, pidevicemodelother.into_param().abi())).ok()
     }
     pub unsafe fn GetPrimarySamples(&self, pprimarycolor: *mut PrimaryXYZColors) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetPrimarySamples)(::windows_core::Interface::as_raw(self), pprimarycolor).ok()
+        ::windows_core::vcall!(self.GetPrimarySamples(pprimarycolor)).ok()
     }
     pub unsafe fn GetGamutBoundaryMeshSize(&self, pnumvertices: *mut u32, pnumtriangles: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetGamutBoundaryMeshSize)(::windows_core::Interface::as_raw(self), pnumvertices, pnumtriangles).ok()
+        ::windows_core::vcall!(self.GetGamutBoundaryMeshSize(pnumvertices, pnumtriangles)).ok()
     }
     pub unsafe fn GetGamutBoundaryMesh(&self, cchannels: u32, cvertices: u32, pvertices: *mut f32, ptriangles: &mut [GamutShellTriangle]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetGamutBoundaryMesh)(::windows_core::Interface::as_raw(self), cchannels, cvertices, ptriangles.len().try_into().unwrap(), pvertices, ::core::mem::transmute(ptriangles.as_ptr())).ok()
+        ::windows_core::vcall!(self.GetGamutBoundaryMesh(cchannels, cvertices, ptriangles.len().try_into().unwrap(), pvertices, ::core::mem::transmute(ptriangles.as_ptr()))).ok()
     }
     pub unsafe fn GetNeutralAxisSize(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetNeutralAxisSize)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetNeutralAxisSize(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetNeutralAxis(&self, pxyzcolors: &mut [XYZColorF]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetNeutralAxis)(::windows_core::Interface::as_raw(self), pxyzcolors.len().try_into().unwrap(), ::core::mem::transmute(pxyzcolors.as_ptr())).ok()
+        ::windows_core::vcall!(self.GetNeutralAxis(pxyzcolors.len().try_into().unwrap(), ::core::mem::transmute(pxyzcolors.as_ptr()))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDeviceModelPlugIn, ::windows_core::IUnknown);
@@ -1114,10 +1114,10 @@ impl IGamutMapModelPlugIn {
         P1: ::windows_core::IntoParam<IDeviceModelPlugIn>,
         P2: ::windows_core::IntoParam<IDeviceModelPlugIn>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), bstrxml.into_param().abi(), psrcplugin.into_param().abi(), pdestplugin.into_param().abi(), psrcgbd, pdestgbd).ok()
+        ::windows_core::vcall!(self.Initialize(bstrxml.into_param().abi(), psrcplugin.into_param().abi(), pdestplugin.into_param().abi(), psrcgbd, pdestgbd)).ok()
     }
     pub unsafe fn SourceToDestinationAppearanceColors(&self, ccolors: u32, pinputcolors: *const JChColorF, poutputcolors: *mut JChColorF) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SourceToDestinationAppearanceColors)(::windows_core::Interface::as_raw(self), ccolors, pinputcolors, poutputcolors).ok()
+        ::windows_core::vcall!(self.SourceToDestinationAppearanceColors(ccolors, pinputcolors, poutputcolors)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IGamutMapModelPlugIn, ::windows_core::IUnknown);

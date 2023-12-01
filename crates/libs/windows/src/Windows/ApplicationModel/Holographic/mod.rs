@@ -49,7 +49,7 @@ impl HolographicKeyboard {
         P0: ::windows_core::IntoParam<super::super::Perception::Spatial::SpatialCoordinateSystem>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPlacementOverride)(::windows_core::Interface::as_raw(this), coordinatesystem.into_param().abi(), topcenterposition, orientation).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPlacementOverride(coordinatesystem.into_param().abi(), topcenterposition, orientation)).ok() }
     }
     #[doc = "Required features: `\"Foundation_Numerics\"`, `\"Perception_Spatial\"`"]
     #[cfg(all(feature = "Foundation_Numerics", feature = "Perception_Spatial"))]
@@ -58,16 +58,16 @@ impl HolographicKeyboard {
         P0: ::windows_core::IntoParam<super::super::Perception::Spatial::SpatialCoordinateSystem>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPlacementOverrideWithMaxSize)(::windows_core::Interface::as_raw(this), coordinatesystem.into_param().abi(), topcenterposition, orientation, maxsize).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPlacementOverrideWithMaxSize(coordinatesystem.into_param().abi(), topcenterposition, orientation, maxsize)).ok() }
     }
     pub fn ResetPlacementOverride(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ResetPlacementOverride)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.ResetPlacementOverride()).ok() }
     }
     pub fn GetDefault() -> ::windows_core::Result<HolographicKeyboard> {
         Self::IHolographicKeyboardStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDefault)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDefault(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

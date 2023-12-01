@@ -96,7 +96,7 @@ impl PreallocatedWorkItem {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RunAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RunAsync(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -107,7 +107,7 @@ impl PreallocatedWorkItem {
     {
         Self::IPreallocatedWorkItemFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWorkItem)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWorkItem(handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -118,7 +118,7 @@ impl PreallocatedWorkItem {
     {
         Self::IPreallocatedWorkItemFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWorkItemWithPriority)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), priority, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWorkItemWithPriority(handler.into_param().abi(), priority, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -129,7 +129,7 @@ impl PreallocatedWorkItem {
     {
         Self::IPreallocatedWorkItemFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateWorkItemWithPriorityAndOptions)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), priority, options, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateWorkItemWithPriorityAndOptions(handler.into_param().abi(), priority, options, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -159,11 +159,11 @@ pub struct SignalNotifier(::windows_core::IUnknown);
 impl SignalNotifier {
     pub fn Enable(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Enable)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Enable()).ok() }
     }
     pub fn Terminate(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Terminate)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Terminate()).ok() }
     }
     pub fn AttachToEvent<P0>(name: &::windows_core::HSTRING, handler: P0) -> ::windows_core::Result<SignalNotifier>
     where
@@ -171,7 +171,7 @@ impl SignalNotifier {
     {
         Self::ISignalNotifierStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AttachToEvent)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AttachToEvent(::core::mem::transmute_copy(name), handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -182,7 +182,7 @@ impl SignalNotifier {
     {
         Self::ISignalNotifierStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AttachToEventWithTimeout)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), handler.into_param().abi(), timeout, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AttachToEventWithTimeout(::core::mem::transmute_copy(name), handler.into_param().abi(), timeout, &mut result__)).from_abi(result__)
         })
     }
     pub fn AttachToSemaphore<P0>(name: &::windows_core::HSTRING, handler: P0) -> ::windows_core::Result<SignalNotifier>
@@ -191,7 +191,7 @@ impl SignalNotifier {
     {
         Self::ISignalNotifierStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AttachToSemaphore)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AttachToSemaphore(::core::mem::transmute_copy(name), handler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -202,7 +202,7 @@ impl SignalNotifier {
     {
         Self::ISignalNotifierStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AttachToSemaphoreWithTimeout)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), handler.into_param().abi(), timeout, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AttachToSemaphoreWithTimeout(::core::mem::transmute_copy(name), handler.into_param().abi(), timeout, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -239,7 +239,7 @@ impl SignalHandler {
         P0: ::windows_core::IntoParam<SignalNotifier>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), signalnotifier.into_param().abi(), timedout).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(signalnotifier.into_param().abi(), timedout)).ok() }
     }
 }
 #[repr(C)]

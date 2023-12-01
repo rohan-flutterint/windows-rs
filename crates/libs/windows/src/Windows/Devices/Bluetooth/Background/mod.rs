@@ -245,14 +245,14 @@ impl BluetoothLEAdvertisementPublisherTriggerDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
     pub fn Error(&self) -> ::windows_core::Result<super::BluetoothError> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Error)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Error(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -261,7 +261,7 @@ impl BluetoothLEAdvertisementPublisherTriggerDetails {
         let this = &::windows_core::ComInterface::cast::<IBluetoothLEAdvertisementPublisherTriggerDetails2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SelectedTransmitPowerLevelInDBm)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SelectedTransmitPowerLevelInDBm(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -288,7 +288,7 @@ impl BluetoothLEAdvertisementWatcherTriggerDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Error)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Error(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Bluetooth_Advertisement\"`, `\"Foundation_Collections\"`"]
@@ -297,14 +297,14 @@ impl BluetoothLEAdvertisementWatcherTriggerDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Advertisements)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Advertisements(&mut result__)).from_abi(result__)
         }
     }
     pub fn SignalStrengthFilter(&self) -> ::windows_core::Result<super::BluetoothSignalStrengthFilter> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SignalStrengthFilter)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SignalStrengthFilter(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -333,7 +333,7 @@ impl GattCharacteristicNotificationTriggerDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Characteristic)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Characteristic(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -342,21 +342,21 @@ impl GattCharacteristicNotificationTriggerDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     pub fn Error(&self) -> ::windows_core::Result<super::BluetoothError> {
         let this = &::windows_core::ComInterface::cast::<IGattCharacteristicNotificationTriggerDetails2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Error)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Error(&mut result__)).from_abi(result__)
         }
     }
     pub fn EventTriggeringMode(&self) -> ::windows_core::Result<BluetoothEventTriggeringMode> {
         let this = &::windows_core::ComInterface::cast::<IGattCharacteristicNotificationTriggerDetails2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EventTriggeringMode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EventTriggeringMode(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Bluetooth_GenericAttributeProfile\"`, `\"Foundation_Collections\"`"]
@@ -365,7 +365,7 @@ impl GattCharacteristicNotificationTriggerDetails {
         let this = &::windows_core::ComInterface::cast::<IGattCharacteristicNotificationTriggerDetails2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ValueChangedEvents)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ValueChangedEvents(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -392,7 +392,7 @@ impl GattServiceProviderConnection {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TriggerId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TriggerId(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Bluetooth_GenericAttributeProfile\"`"]
@@ -401,19 +401,19 @@ impl GattServiceProviderConnection {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Service)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Service(&mut result__)).from_abi(result__)
         }
     }
     pub fn Start(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Start)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Start()).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
     pub fn AllServices() -> ::windows_core::Result<super::super::super::Foundation::Collections::IMapView<::windows_core::HSTRING, GattServiceProviderConnection>> {
         Self::IGattServiceProviderConnectionStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AllServices)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AllServices(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -445,7 +445,7 @@ impl GattServiceProviderTriggerDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Connection)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Connection(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -474,21 +474,21 @@ impl RfcommConnectionTriggerDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Socket)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Socket(&mut result__)).from_abi(result__)
         }
     }
     pub fn Incoming(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Incoming)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Incoming(&mut result__)).from_abi(result__)
         }
     }
     pub fn RemoteDevice(&self) -> ::windows_core::Result<super::BluetoothDevice> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RemoteDevice)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RemoteDevice(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -517,7 +517,7 @@ impl RfcommInboundConnectionInformation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SdpRecord)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SdpRecord(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -527,7 +527,7 @@ impl RfcommInboundConnectionInformation {
         P0: ::windows_core::TryIntoParam<super::super::super::Storage::Streams::IBuffer>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetSdpRecord)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetSdpRecord(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Devices_Bluetooth_Rfcomm\"`"]
     #[cfg(feature = "Devices_Bluetooth_Rfcomm")]
@@ -535,7 +535,7 @@ impl RfcommInboundConnectionInformation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LocalServiceId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LocalServiceId(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Bluetooth_Rfcomm\"`"]
@@ -545,18 +545,18 @@ impl RfcommInboundConnectionInformation {
         P0: ::windows_core::IntoParam<super::Rfcomm::RfcommServiceId>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetLocalServiceId)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLocalServiceId(value.into_param().abi())).ok() }
     }
     pub fn ServiceCapabilities(&self) -> ::windows_core::Result<super::BluetoothServiceCapabilities> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ServiceCapabilities)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ServiceCapabilities(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetServiceCapabilities(&self, value: super::BluetoothServiceCapabilities) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetServiceCapabilities)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetServiceCapabilities(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for RfcommInboundConnectionInformation {
@@ -584,7 +584,7 @@ impl RfcommOutboundConnectionInformation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RemoteServiceId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RemoteServiceId(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Bluetooth_Rfcomm\"`"]
@@ -594,7 +594,7 @@ impl RfcommOutboundConnectionInformation {
         P0: ::windows_core::IntoParam<super::Rfcomm::RfcommServiceId>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetRemoteServiceId)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRemoteServiceId(value.into_param().abi())).ok() }
     }
 }
 impl ::windows_core::RuntimeType for RfcommOutboundConnectionInformation {

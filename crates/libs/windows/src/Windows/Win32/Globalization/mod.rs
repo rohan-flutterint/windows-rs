@@ -7206,7 +7206,7 @@ impl IComprehensiveSpellCheckProvider {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ComprehensiveCheck)(::windows_core::Interface::as_raw(self), text.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ComprehensiveCheck(text.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComprehensiveSpellCheckProvider, ::windows_core::IUnknown);
@@ -7227,16 +7227,16 @@ pub struct IComprehensiveSpellCheckProvider_Vtbl {
 pub struct IEnumCodePage(::windows_core::IUnknown);
 impl IEnumCodePage {
     pub unsafe fn Clone(&self, ppenum: ::core::option::Option<*const ::core::option::Option<IEnumCodePage>>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppenum.unwrap_or(::std::ptr::null()))).ok()
+        ::windows_core::vcall!(self.Clone(::core::mem::transmute(ppenum.unwrap_or(::std::ptr::null())))).ok()
     }
     pub unsafe fn Next(&self, celt: u32, rgelt: *mut MIMECPINFO, pceltfetched: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), celt, rgelt, ::core::mem::transmute(pceltfetched.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.Next(celt, rgelt, ::core::mem::transmute(pceltfetched.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Skip(&self, celt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Skip)(::windows_core::Interface::as_raw(self), celt).ok()
+        ::windows_core::vcall!(self.Skip(celt)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumCodePage, ::windows_core::IUnknown);
@@ -7260,16 +7260,16 @@ pub struct IEnumCodePage_Vtbl {
 pub struct IEnumRfc1766(::windows_core::IUnknown);
 impl IEnumRfc1766 {
     pub unsafe fn Clone(&self, ppenum: ::core::option::Option<*const ::core::option::Option<IEnumRfc1766>>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppenum.unwrap_or(::std::ptr::null()))).ok()
+        ::windows_core::vcall!(self.Clone(::core::mem::transmute(ppenum.unwrap_or(::std::ptr::null())))).ok()
     }
     pub unsafe fn Next(&self, celt: u32, rgelt: *mut RFC1766INFO, pceltfetched: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), celt, rgelt, ::core::mem::transmute(pceltfetched.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.Next(celt, rgelt, ::core::mem::transmute(pceltfetched.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Skip(&self, celt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Skip)(::windows_core::Interface::as_raw(self), celt).ok()
+        ::windows_core::vcall!(self.Skip(celt)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumRfc1766, ::windows_core::IUnknown);
@@ -7293,16 +7293,16 @@ pub struct IEnumRfc1766_Vtbl {
 pub struct IEnumScript(::windows_core::IUnknown);
 impl IEnumScript {
     pub unsafe fn Clone(&self, ppenum: ::core::option::Option<*const ::core::option::Option<IEnumScript>>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppenum.unwrap_or(::std::ptr::null()))).ok()
+        ::windows_core::vcall!(self.Clone(::core::mem::transmute(ppenum.unwrap_or(::std::ptr::null())))).ok()
     }
     pub unsafe fn Next(&self, celt: u32, rgelt: *mut SCRIPTINFO, pceltfetched: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), celt, rgelt, ::core::mem::transmute(pceltfetched.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.Next(celt, rgelt, ::core::mem::transmute(pceltfetched.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Skip(&self, celt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Skip)(::windows_core::Interface::as_raw(self), celt).ok()
+        ::windows_core::vcall!(self.Skip(celt)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumScript, ::windows_core::IUnknown);
@@ -7326,7 +7326,7 @@ pub struct IEnumScript_Vtbl {
 pub struct IEnumSpellingError(::windows_core::IUnknown);
 impl IEnumSpellingError {
     pub unsafe fn Next(&self, value: *mut ::core::option::Option<ISpellingError>) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(value))
+        ::windows_core::vcall!(self.Next(::core::mem::transmute(value)))
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumSpellingError, ::windows_core::IUnknown);
@@ -7348,18 +7348,18 @@ pub struct IMLangCodePages(::windows_core::IUnknown);
 impl IMLangCodePages {
     pub unsafe fn GetCharCodePages(&self, chsrc: u16) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCharCodePages)(::windows_core::Interface::as_raw(self), chsrc, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCharCodePages(chsrc, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStrCodePages(&self, pszsrc: &[u16], dwprioritycodepages: u32, pdwcodepages: ::core::option::Option<*mut u32>, pcchcodepages: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetStrCodePages)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), dwprioritycodepages, ::core::mem::transmute(pdwcodepages.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchcodepages.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetStrCodePages(::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), dwprioritycodepages, ::core::mem::transmute(pdwcodepages.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchcodepages.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn CodePageToCodePages(&self, ucodepage: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CodePageToCodePages)(::windows_core::Interface::as_raw(self), ucodepage, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CodePageToCodePages(ucodepage, &mut result__)).from_abi(result__)
     }
     pub unsafe fn CodePagesToCodePage(&self, dwcodepages: u32, udefaultcodepage: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CodePagesToCodePage)(::windows_core::Interface::as_raw(self), dwcodepages, udefaultcodepage, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CodePagesToCodePage(dwcodepages, udefaultcodepage, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMLangCodePages, ::windows_core::IUnknown);
@@ -7383,34 +7383,34 @@ pub struct IMLangCodePages_Vtbl {
 pub struct IMLangConvertCharset(::windows_core::IUnknown);
 impl IMLangConvertCharset {
     pub unsafe fn Initialize(&self, uisrccodepage: u32, uidstcodepage: u32, dwproperty: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), uisrccodepage, uidstcodepage, dwproperty).ok()
+        ::windows_core::vcall!(self.Initialize(uisrccodepage, uidstcodepage, dwproperty)).ok()
     }
     pub unsafe fn GetSourceCodePage(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSourceCodePage)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSourceCodePage(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetDestinationCodePage(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDestinationCodePage)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDestinationCodePage(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetProperty(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetProperty)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetProperty(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DoConversion(&self, psrcstr: *const u8, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: *mut u8, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DoConversion)(::windows_core::Interface::as_raw(self), psrcstr, ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), pdststr, ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.DoConversion(psrcstr, ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), pdststr, ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn DoConversionToUnicode<P0>(&self, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PWSTR, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).DoConversionToUnicode)(::windows_core::Interface::as_raw(self), psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.DoConversionToUnicode(psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn DoConversionFromUnicode<P0>(&self, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PSTR, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DoConversionFromUnicode)(::windows_core::Interface::as_raw(self), psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.DoConversionFromUnicode(psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMLangConvertCharset, ::windows_core::IUnknown);
@@ -7438,18 +7438,18 @@ pub struct IMLangFontLink(::windows_core::IUnknown);
 impl IMLangFontLink {
     pub unsafe fn GetCharCodePages(&self, chsrc: u16) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetCharCodePages)(::windows_core::Interface::as_raw(self), chsrc, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetCharCodePages(chsrc, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStrCodePages(&self, pszsrc: &[u16], dwprioritycodepages: u32, pdwcodepages: ::core::option::Option<*mut u32>, pcchcodepages: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetStrCodePages)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), dwprioritycodepages, ::core::mem::transmute(pdwcodepages.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchcodepages.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.base__.GetStrCodePages(::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), dwprioritycodepages, ::core::mem::transmute(pdwcodepages.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchcodepages.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn CodePageToCodePages(&self, ucodepage: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.CodePageToCodePages)(::windows_core::Interface::as_raw(self), ucodepage, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.CodePageToCodePages(ucodepage, &mut result__)).from_abi(result__)
     }
     pub unsafe fn CodePagesToCodePage(&self, dwcodepages: u32, udefaultcodepage: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.CodePagesToCodePage)(::windows_core::Interface::as_raw(self), dwcodepages, udefaultcodepage, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.CodePagesToCodePage(dwcodepages, udefaultcodepage, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -7458,7 +7458,7 @@ impl IMLangFontLink {
         P0: ::windows_core::IntoParam<super::Graphics::Gdi::HDC>,
         P1: ::windows_core::IntoParam<super::Graphics::Gdi::HFONT>,
     {
-        (::windows_core::Interface::vtable(self).GetFontCodePages)(::windows_core::Interface::as_raw(self), hdc.into_param().abi(), hfont.into_param().abi(), ::core::mem::transmute(pdwcodepages.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetFontCodePages(hdc.into_param().abi(), hfont.into_param().abi(), ::core::mem::transmute(pdwcodepages.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -7467,7 +7467,7 @@ impl IMLangFontLink {
         P0: ::windows_core::IntoParam<super::Graphics::Gdi::HDC>,
         P1: ::windows_core::IntoParam<super::Graphics::Gdi::HFONT>,
     {
-        (::windows_core::Interface::vtable(self).MapFont)(::windows_core::Interface::as_raw(self), hdc.into_param().abi(), dwcodepages, hsrcfont.into_param().abi(), ::core::mem::transmute(phdestfont.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.MapFont(hdc.into_param().abi(), dwcodepages, hsrcfont.into_param().abi(), ::core::mem::transmute(phdestfont.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -7475,10 +7475,10 @@ impl IMLangFontLink {
     where
         P0: ::windows_core::IntoParam<super::Graphics::Gdi::HFONT>,
     {
-        (::windows_core::Interface::vtable(self).ReleaseFont)(::windows_core::Interface::as_raw(self), hfont.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ReleaseFont(hfont.into_param().abi())).ok()
     }
     pub unsafe fn ResetFontMapping(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ResetFontMapping)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ResetFontMapping()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMLangFontLink, ::windows_core::IUnknown, IMLangCodePages);
@@ -7512,18 +7512,18 @@ pub struct IMLangFontLink2(::windows_core::IUnknown);
 impl IMLangFontLink2 {
     pub unsafe fn GetCharCodePages(&self, chsrc: u16) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetCharCodePages)(::windows_core::Interface::as_raw(self), chsrc, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetCharCodePages(chsrc, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStrCodePages(&self, pszsrc: &[u16], dwprioritycodepages: u32, pdwcodepages: ::core::option::Option<*mut u32>, pcchcodepages: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetStrCodePages)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), dwprioritycodepages, ::core::mem::transmute(pdwcodepages.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchcodepages.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.base__.GetStrCodePages(::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), dwprioritycodepages, ::core::mem::transmute(pdwcodepages.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchcodepages.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn CodePageToCodePages(&self, ucodepage: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.CodePageToCodePages)(::windows_core::Interface::as_raw(self), ucodepage, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.CodePageToCodePages(ucodepage, &mut result__)).from_abi(result__)
     }
     pub unsafe fn CodePagesToCodePage(&self, dwcodepages: u32, udefaultcodepage: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.CodePagesToCodePage)(::windows_core::Interface::as_raw(self), dwcodepages, udefaultcodepage, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.CodePagesToCodePage(dwcodepages, udefaultcodepage, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -7532,7 +7532,7 @@ impl IMLangFontLink2 {
         P0: ::windows_core::IntoParam<super::Graphics::Gdi::HDC>,
         P1: ::windows_core::IntoParam<super::Graphics::Gdi::HFONT>,
     {
-        (::windows_core::Interface::vtable(self).GetFontCodePages)(::windows_core::Interface::as_raw(self), hdc.into_param().abi(), hfont.into_param().abi(), ::core::mem::transmute(pdwcodepages.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetFontCodePages(hdc.into_param().abi(), hfont.into_param().abi(), ::core::mem::transmute(pdwcodepages.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -7540,10 +7540,10 @@ impl IMLangFontLink2 {
     where
         P0: ::windows_core::IntoParam<super::Graphics::Gdi::HFONT>,
     {
-        (::windows_core::Interface::vtable(self).ReleaseFont)(::windows_core::Interface::as_raw(self), hfont.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ReleaseFont(hfont.into_param().abi())).ok()
     }
     pub unsafe fn ResetFontMapping(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ResetFontMapping)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ResetFontMapping()).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -7551,7 +7551,7 @@ impl IMLangFontLink2 {
     where
         P0: ::windows_core::IntoParam<super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).MapFont)(::windows_core::Interface::as_raw(self), hdc.into_param().abi(), dwcodepages, chsrc, ::core::mem::transmute(pfont.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.MapFont(hdc.into_param().abi(), dwcodepages, chsrc, ::core::mem::transmute(pfont.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -7559,14 +7559,14 @@ impl IMLangFontLink2 {
     where
         P0: ::windows_core::IntoParam<super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).GetFontUnicodeRanges)(::windows_core::Interface::as_raw(self), hdc.into_param().abi(), puiranges, ::core::mem::transmute(puranges.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetFontUnicodeRanges(hdc.into_param().abi(), puiranges, ::core::mem::transmute(puranges.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn GetScriptFontInfo(&self, sid: u8, dwflags: u32, puifonts: *mut u32, pscriptfont: ::core::option::Option<*mut SCRIPTFONTINFO>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetScriptFontInfo)(::windows_core::Interface::as_raw(self), sid, dwflags, puifonts, ::core::mem::transmute(pscriptfont.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetScriptFontInfo(sid, dwflags, puifonts, ::core::mem::transmute(pscriptfont.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn CodePageToScriptID(&self, uicodepage: u32) -> ::windows_core::Result<u8> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CodePageToScriptID)(::windows_core::Interface::as_raw(self), uicodepage, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CodePageToScriptID(uicodepage, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMLangFontLink2, ::windows_core::IUnknown, IMLangCodePages);
@@ -7608,13 +7608,13 @@ impl IMLangLineBreakConsole {
     where
         P0: ::windows_core::IntoParam<IMLangString>,
     {
-        (::windows_core::Interface::vtable(self).BreakLineML)(::windows_core::Interface::as_raw(self), psrcmlstr.into_param().abi(), lsrcpos, lsrclen, cmincolumns, cmaxcolumns, ::core::mem::transmute(pllinelen.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plskiplen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.BreakLineML(psrcmlstr.into_param().abi(), lsrcpos, lsrclen, cmincolumns, cmaxcolumns, ::core::mem::transmute(pllinelen.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plskiplen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn BreakLineW(&self, locale: u32, pszsrc: &[u16], cmaxcolumns: i32, pcchline: ::core::option::Option<*mut i32>, pcchskip: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).BreakLineW)(::windows_core::Interface::as_raw(self), locale, ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), cmaxcolumns, ::core::mem::transmute(pcchline.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchskip.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.BreakLineW(locale, ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), cmaxcolumns, ::core::mem::transmute(pcchline.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchskip.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn BreakLineA(&self, locale: u32, ucodepage: u32, pszsrc: &[u8], cmaxcolumns: i32, pcchline: ::core::option::Option<*mut i32>, pcchskip: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).BreakLineA)(::windows_core::Interface::as_raw(self), locale, ucodepage, ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), cmaxcolumns, ::core::mem::transmute(pcchline.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchskip.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.BreakLineA(locale, ucodepage, ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), cmaxcolumns, ::core::mem::transmute(pcchline.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchskip.unwrap_or(::std::ptr::null_mut())))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMLangLineBreakConsole, ::windows_core::IUnknown);
@@ -7642,22 +7642,22 @@ impl IMLangString {
     where
         P0: ::windows_core::IntoParam<super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).Sync)(::windows_core::Interface::as_raw(self), fnoaccess.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Sync(fnoaccess.into_param().abi())).ok()
     }
     pub unsafe fn GetLength(&self, pllen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetLength)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pllen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetLength(::core::mem::transmute(pllen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn SetMLStr<P0>(&self, ldestpos: i32, ldestlen: i32, psrcmlstr: P0, lsrcpos: i32, lsrclen: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).SetMLStr)(::windows_core::Interface::as_raw(self), ldestpos, ldestlen, psrcmlstr.into_param().abi(), lsrcpos, lsrclen).ok()
+        ::windows_core::vcall!(self.SetMLStr(ldestpos, ldestlen, psrcmlstr.into_param().abi(), lsrcpos, lsrclen)).ok()
     }
     pub unsafe fn GetMLStr<P0>(&self, lsrcpos: i32, lsrclen: i32, punkouter: P0, dwclscontext: u32, piid: *const ::windows_core::GUID, ppdestmlstr: *mut ::core::option::Option<::windows_core::IUnknown>, pldestpos: ::core::option::Option<*mut i32>, pldestlen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).GetMLStr)(::windows_core::Interface::as_raw(self), lsrcpos, lsrclen, punkouter.into_param().abi(), dwclscontext, piid, ::core::mem::transmute(ppdestmlstr), ::core::mem::transmute(pldestpos.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetMLStr(lsrcpos, lsrclen, punkouter.into_param().abi(), dwclscontext, piid, ::core::mem::transmute(ppdestmlstr), ::core::mem::transmute(pldestpos.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMLangString, ::windows_core::IUnknown);
@@ -7689,49 +7689,49 @@ impl IMLangStringAStr {
     where
         P0: ::windows_core::IntoParam<super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.Sync)(::windows_core::Interface::as_raw(self), fnoaccess.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Sync(fnoaccess.into_param().abi())).ok()
     }
     pub unsafe fn GetLength(&self, pllen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetLength)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pllen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.base__.GetLength(::core::mem::transmute(pllen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn SetMLStr<P0>(&self, ldestpos: i32, ldestlen: i32, psrcmlstr: P0, lsrcpos: i32, lsrclen: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetMLStr)(::windows_core::Interface::as_raw(self), ldestpos, ldestlen, psrcmlstr.into_param().abi(), lsrcpos, lsrclen).ok()
+        ::windows_core::vcall!(self.base__.SetMLStr(ldestpos, ldestlen, psrcmlstr.into_param().abi(), lsrcpos, lsrclen)).ok()
     }
     pub unsafe fn GetMLStr<P0>(&self, lsrcpos: i32, lsrclen: i32, punkouter: P0, dwclscontext: u32, piid: *const ::windows_core::GUID, ppdestmlstr: *mut ::core::option::Option<::windows_core::IUnknown>, pldestpos: ::core::option::Option<*mut i32>, pldestlen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetMLStr)(::windows_core::Interface::as_raw(self), lsrcpos, lsrclen, punkouter.into_param().abi(), dwclscontext, piid, ::core::mem::transmute(ppdestmlstr), ::core::mem::transmute(pldestpos.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.base__.GetMLStr(lsrcpos, lsrclen, punkouter.into_param().abi(), dwclscontext, piid, ::core::mem::transmute(ppdestmlstr), ::core::mem::transmute(pldestpos.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn SetAStr(&self, ldestpos: i32, ldestlen: i32, ucodepage: u32, pszsrc: &[u8], pcchactual: ::core::option::Option<*mut i32>, plactuallen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetAStr)(::windows_core::Interface::as_raw(self), ldestpos, ldestlen, ucodepage, ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.SetAStr(ldestpos, ldestlen, ucodepage, ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn SetStrBufA<P0>(&self, ldestpos: i32, ldestlen: i32, ucodepage: u32, psrcbuf: P0, pcchactual: ::core::option::Option<*mut i32>, plactuallen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IMLangStringBufA>,
     {
-        (::windows_core::Interface::vtable(self).SetStrBufA)(::windows_core::Interface::as_raw(self), ldestpos, ldestlen, ucodepage, psrcbuf.into_param().abi(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.SetStrBufA(ldestpos, ldestlen, ucodepage, psrcbuf.into_param().abi(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn GetAStr(&self, lsrcpos: i32, lsrclen: i32, ucodepagein: u32, pucodepageout: ::core::option::Option<*const u32>, pszdest: ::core::option::Option<&mut [u8]>, pcchactual: ::core::option::Option<*mut i32>, plactuallen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetAStr)(::windows_core::Interface::as_raw(self), lsrcpos, lsrclen, ucodepagein, ::core::mem::transmute(pucodepageout.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pszdest.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pszdest.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetAStr(lsrcpos, lsrclen, ucodepagein, ::core::mem::transmute(pucodepageout.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pszdest.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pszdest.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn GetStrBufA(&self, lsrcpos: i32, lsrcmaxlen: i32, pudestcodepage: ::core::option::Option<*mut u32>, ppdestbuf: *mut ::core::option::Option<IMLangStringBufA>, pldestlen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetStrBufA)(::windows_core::Interface::as_raw(self), lsrcpos, lsrcmaxlen, ::core::mem::transmute(pudestcodepage.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppdestbuf), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetStrBufA(lsrcpos, lsrcmaxlen, ::core::mem::transmute(pudestcodepage.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppdestbuf), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn LockAStr(&self, lsrcpos: i32, lsrclen: i32, lflags: i32, ucodepagein: u32, cchrequest: i32, pucodepageout: ::core::option::Option<*mut u32>, ppszdest: ::core::option::Option<*mut ::windows_core::PSTR>, pcchdest: ::core::option::Option<*mut i32>, pldestlen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).LockAStr)(::windows_core::Interface::as_raw(self), lsrcpos, lsrclen, lflags, ucodepagein, cchrequest, ::core::mem::transmute(pucodepageout.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppszdest.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchdest.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.LockAStr(lsrcpos, lsrclen, lflags, ucodepagein, cchrequest, ::core::mem::transmute(pucodepageout.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppszdest.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchdest.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn UnlockAStr(&self, pszsrc: &[u8], pcchactual: ::core::option::Option<*mut i32>, plactuallen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UnlockAStr)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.UnlockAStr(::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn SetLocale(&self, ldestpos: i32, ldestlen: i32, locale: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetLocale)(::windows_core::Interface::as_raw(self), ldestpos, ldestlen, locale).ok()
+        ::windows_core::vcall!(self.SetLocale(ldestpos, ldestlen, locale)).ok()
     }
     pub unsafe fn GetLocale(&self, lsrcpos: i32, lsrcmaxlen: i32, plocale: ::core::option::Option<*mut u32>, pllocalepos: ::core::option::Option<*mut i32>, pllocalelen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetLocale)(::windows_core::Interface::as_raw(self), lsrcpos, lsrcmaxlen, ::core::mem::transmute(plocale.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pllocalepos.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pllocalelen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetLocale(lsrcpos, lsrcmaxlen, ::core::mem::transmute(plocale.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pllocalepos.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pllocalelen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMLangStringAStr, ::windows_core::IUnknown, IMLangString);
@@ -7759,22 +7759,22 @@ pub struct IMLangStringAStr_Vtbl {
 pub struct IMLangStringBufA(::windows_core::IUnknown);
 impl IMLangStringBufA {
     pub unsafe fn GetStatus(&self, plflags: ::core::option::Option<*mut i32>, pcchbuf: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetStatus)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(plflags.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchbuf.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetStatus(::core::mem::transmute(plflags.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchbuf.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn LockBuf(&self, cchoffset: i32, cchmaxlock: i32, ppszbuf: *mut *mut u8, pcchbuf: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).LockBuf)(::windows_core::Interface::as_raw(self), cchoffset, cchmaxlock, ppszbuf, ::core::mem::transmute(pcchbuf.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.LockBuf(cchoffset, cchmaxlock, ppszbuf, ::core::mem::transmute(pcchbuf.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn UnlockBuf<P0>(&self, pszbuf: P0, cchoffset: i32, cchwrite: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).UnlockBuf)(::windows_core::Interface::as_raw(self), pszbuf.into_param().abi(), cchoffset, cchwrite).ok()
+        ::windows_core::vcall!(self.UnlockBuf(pszbuf.into_param().abi(), cchoffset, cchwrite)).ok()
     }
     pub unsafe fn Insert(&self, cchoffset: i32, cchmaxinsert: i32, pcchactual: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Insert)(::windows_core::Interface::as_raw(self), cchoffset, cchmaxinsert, ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.Insert(cchoffset, cchmaxinsert, ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn Delete(&self, cchoffset: i32, cchdelete: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Delete)(::windows_core::Interface::as_raw(self), cchoffset, cchdelete).ok()
+        ::windows_core::vcall!(self.Delete(cchoffset, cchdelete)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMLangStringBufA, ::windows_core::IUnknown);
@@ -7799,22 +7799,22 @@ pub struct IMLangStringBufA_Vtbl {
 pub struct IMLangStringBufW(::windows_core::IUnknown);
 impl IMLangStringBufW {
     pub unsafe fn GetStatus(&self, plflags: ::core::option::Option<*mut i32>, pcchbuf: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetStatus)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(plflags.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchbuf.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetStatus(::core::mem::transmute(plflags.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchbuf.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn LockBuf(&self, cchoffset: i32, cchmaxlock: i32, ppszbuf: *mut *mut u16, pcchbuf: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).LockBuf)(::windows_core::Interface::as_raw(self), cchoffset, cchmaxlock, ppszbuf, ::core::mem::transmute(pcchbuf.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.LockBuf(cchoffset, cchmaxlock, ppszbuf, ::core::mem::transmute(pcchbuf.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn UnlockBuf<P0>(&self, pszbuf: P0, cchoffset: i32, cchwrite: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).UnlockBuf)(::windows_core::Interface::as_raw(self), pszbuf.into_param().abi(), cchoffset, cchwrite).ok()
+        ::windows_core::vcall!(self.UnlockBuf(pszbuf.into_param().abi(), cchoffset, cchwrite)).ok()
     }
     pub unsafe fn Insert(&self, cchoffset: i32, cchmaxinsert: i32, pcchactual: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Insert)(::windows_core::Interface::as_raw(self), cchoffset, cchmaxinsert, ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.Insert(cchoffset, cchmaxinsert, ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn Delete(&self, cchoffset: i32, cchdelete: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Delete)(::windows_core::Interface::as_raw(self), cchoffset, cchdelete).ok()
+        ::windows_core::vcall!(self.Delete(cchoffset, cchdelete)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMLangStringBufW, ::windows_core::IUnknown);
@@ -7844,49 +7844,49 @@ impl IMLangStringWStr {
     where
         P0: ::windows_core::IntoParam<super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.Sync)(::windows_core::Interface::as_raw(self), fnoaccess.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Sync(fnoaccess.into_param().abi())).ok()
     }
     pub unsafe fn GetLength(&self, pllen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetLength)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pllen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.base__.GetLength(::core::mem::transmute(pllen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn SetMLStr<P0>(&self, ldestpos: i32, ldestlen: i32, psrcmlstr: P0, lsrcpos: i32, lsrclen: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetMLStr)(::windows_core::Interface::as_raw(self), ldestpos, ldestlen, psrcmlstr.into_param().abi(), lsrcpos, lsrclen).ok()
+        ::windows_core::vcall!(self.base__.SetMLStr(ldestpos, ldestlen, psrcmlstr.into_param().abi(), lsrcpos, lsrclen)).ok()
     }
     pub unsafe fn GetMLStr<P0>(&self, lsrcpos: i32, lsrclen: i32, punkouter: P0, dwclscontext: u32, piid: *const ::windows_core::GUID, ppdestmlstr: *mut ::core::option::Option<::windows_core::IUnknown>, pldestpos: ::core::option::Option<*mut i32>, pldestlen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetMLStr)(::windows_core::Interface::as_raw(self), lsrcpos, lsrclen, punkouter.into_param().abi(), dwclscontext, piid, ::core::mem::transmute(ppdestmlstr), ::core::mem::transmute(pldestpos.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.base__.GetMLStr(lsrcpos, lsrclen, punkouter.into_param().abi(), dwclscontext, piid, ::core::mem::transmute(ppdestmlstr), ::core::mem::transmute(pldestpos.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn SetWStr(&self, ldestpos: i32, ldestlen: i32, pszsrc: &[u16], pcchactual: ::core::option::Option<*mut i32>, plactuallen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetWStr)(::windows_core::Interface::as_raw(self), ldestpos, ldestlen, ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.SetWStr(ldestpos, ldestlen, ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn SetStrBufW<P0>(&self, ldestpos: i32, ldestlen: i32, psrcbuf: P0, pcchactual: ::core::option::Option<*mut i32>, plactuallen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IMLangStringBufW>,
     {
-        (::windows_core::Interface::vtable(self).SetStrBufW)(::windows_core::Interface::as_raw(self), ldestpos, ldestlen, psrcbuf.into_param().abi(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.SetStrBufW(ldestpos, ldestlen, psrcbuf.into_param().abi(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn GetWStr(&self, lsrcpos: i32, lsrclen: i32, pszdest: ::core::option::Option<&mut [u16]>, pcchactual: ::core::option::Option<*mut i32>, plactuallen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetWStr)(::windows_core::Interface::as_raw(self), lsrcpos, lsrclen, ::core::mem::transmute(pszdest.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pszdest.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetWStr(lsrcpos, lsrclen, ::core::mem::transmute(pszdest.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pszdest.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn GetStrBufW(&self, lsrcpos: i32, lsrcmaxlen: i32, ppdestbuf: *mut ::core::option::Option<IMLangStringBufW>, pldestlen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetStrBufW)(::windows_core::Interface::as_raw(self), lsrcpos, lsrcmaxlen, ::core::mem::transmute(ppdestbuf), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetStrBufW(lsrcpos, lsrcmaxlen, ::core::mem::transmute(ppdestbuf), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn LockWStr(&self, lsrcpos: i32, lsrclen: i32, lflags: i32, cchrequest: i32, ppszdest: ::core::option::Option<*mut ::windows_core::PWSTR>, pcchdest: ::core::option::Option<*mut i32>, pldestlen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).LockWStr)(::windows_core::Interface::as_raw(self), lsrcpos, lsrclen, lflags, cchrequest, ::core::mem::transmute(ppszdest.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchdest.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.LockWStr(lsrcpos, lsrclen, lflags, cchrequest, ::core::mem::transmute(ppszdest.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchdest.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pldestlen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn UnlockWStr(&self, pszsrc: &[u16], pcchactual: ::core::option::Option<*mut i32>, plactuallen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UnlockWStr)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.UnlockWStr(::core::mem::transmute(pszsrc.as_ptr()), pszsrc.len().try_into().unwrap(), ::core::mem::transmute(pcchactual.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plactuallen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn SetLocale(&self, ldestpos: i32, ldestlen: i32, locale: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetLocale)(::windows_core::Interface::as_raw(self), ldestpos, ldestlen, locale).ok()
+        ::windows_core::vcall!(self.SetLocale(ldestpos, ldestlen, locale)).ok()
     }
     pub unsafe fn GetLocale(&self, lsrcpos: i32, lsrcmaxlen: i32, plocale: ::core::option::Option<*mut u32>, pllocalepos: ::core::option::Option<*mut i32>, pllocalelen: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetLocale)(::windows_core::Interface::as_raw(self), lsrcpos, lsrcmaxlen, ::core::mem::transmute(plocale.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pllocalepos.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pllocalelen.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetLocale(lsrcpos, lsrcmaxlen, ::core::mem::transmute(plocale.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pllocalepos.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pllocalelen.unwrap_or(::std::ptr::null_mut())))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMLangStringWStr, ::windows_core::IUnknown, IMLangString);
@@ -7915,66 +7915,66 @@ pub struct IMultiLanguage(::windows_core::IUnknown);
 impl IMultiLanguage {
     pub unsafe fn GetNumberOfCodePageInfo(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetNumberOfCodePageInfo)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetNumberOfCodePageInfo(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetCodePageInfo(&self, uicodepage: u32, pcodepageinfo: *mut MIMECPINFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCodePageInfo)(::windows_core::Interface::as_raw(self), uicodepage, pcodepageinfo).ok()
+        ::windows_core::vcall!(self.GetCodePageInfo(uicodepage, pcodepageinfo)).ok()
     }
     pub unsafe fn GetFamilyCodePage(&self, uicodepage: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFamilyCodePage)(::windows_core::Interface::as_raw(self), uicodepage, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFamilyCodePage(uicodepage, &mut result__)).from_abi(result__)
     }
     pub unsafe fn EnumCodePages(&self, grfflags: u32) -> ::windows_core::Result<IEnumCodePage> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumCodePages)(::windows_core::Interface::as_raw(self), grfflags, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumCodePages(grfflags, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetCharsetInfo<P0>(&self, charset: P0, pcharsetinfo: *mut MIMECSETINFO) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetCharsetInfo)(::windows_core::Interface::as_raw(self), charset.into_param().abi(), pcharsetinfo).ok()
+        ::windows_core::vcall!(self.GetCharsetInfo(charset.into_param().abi(), pcharsetinfo)).ok()
     }
     pub unsafe fn IsConvertible(&self, dwsrcencoding: u32, dwdstencoding: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).IsConvertible)(::windows_core::Interface::as_raw(self), dwsrcencoding, dwdstencoding).ok()
+        ::windows_core::vcall!(self.IsConvertible(dwsrcencoding, dwdstencoding)).ok()
     }
     pub unsafe fn ConvertString(&self, pdwmode: ::core::option::Option<*mut u32>, dwsrcencoding: u32, dwdstencoding: u32, psrcstr: ::core::option::Option<*const u8>, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::core::option::Option<*mut u8>, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConvertString)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwsrcencoding, dwdstencoding, ::core::mem::transmute(psrcstr.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.ConvertString(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwsrcencoding, dwdstencoding, ::core::mem::transmute(psrcstr.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ConvertStringToUnicode<P0>(&self, pdwmode: ::core::option::Option<*mut u32>, dwencoding: u32, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PWSTR, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).ConvertStringToUnicode)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.ConvertStringToUnicode(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ConvertStringFromUnicode<P0>(&self, pdwmode: ::core::option::Option<*mut u32>, dwencoding: u32, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PSTR, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).ConvertStringFromUnicode)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.ConvertStringFromUnicode(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ConvertStringReset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConvertStringReset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ConvertStringReset()).ok()
     }
     pub unsafe fn GetRfc1766FromLcid(&self, locale: u32) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRfc1766FromLcid)(::windows_core::Interface::as_raw(self), locale, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRfc1766FromLcid(locale, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetLcidFromRfc1766<P0>(&self, plocale: *mut u32, bstrrfc1766: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetLcidFromRfc1766)(::windows_core::Interface::as_raw(self), plocale, bstrrfc1766.into_param().abi()).ok()
+        ::windows_core::vcall!(self.GetLcidFromRfc1766(plocale, bstrrfc1766.into_param().abi())).ok()
     }
     pub unsafe fn EnumRfc1766(&self) -> ::windows_core::Result<IEnumRfc1766> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumRfc1766)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumRfc1766(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetRfc1766Info(&self, locale: u32, prfc1766info: *mut RFC1766INFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetRfc1766Info)(::windows_core::Interface::as_raw(self), locale, prfc1766info).ok()
+        ::windows_core::vcall!(self.GetRfc1766Info(locale, prfc1766info)).ok()
     }
     pub unsafe fn CreateConvertCharset(&self, uisrccodepage: u32, uidstcodepage: u32, dwproperty: u32) -> ::windows_core::Result<IMLangConvertCharset> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateConvertCharset)(::windows_core::Interface::as_raw(self), uisrccodepage, uidstcodepage, dwproperty, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateConvertCharset(uisrccodepage, uidstcodepage, dwproperty, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMultiLanguage, ::windows_core::IUnknown);
@@ -8010,66 +8010,66 @@ pub struct IMultiLanguage2(::windows_core::IUnknown);
 impl IMultiLanguage2 {
     pub unsafe fn GetNumberOfCodePageInfo(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetNumberOfCodePageInfo)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetNumberOfCodePageInfo(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetCodePageInfo(&self, uicodepage: u32, langid: u16, pcodepageinfo: *mut MIMECPINFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCodePageInfo)(::windows_core::Interface::as_raw(self), uicodepage, langid, pcodepageinfo).ok()
+        ::windows_core::vcall!(self.GetCodePageInfo(uicodepage, langid, pcodepageinfo)).ok()
     }
     pub unsafe fn GetFamilyCodePage(&self, uicodepage: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFamilyCodePage)(::windows_core::Interface::as_raw(self), uicodepage, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFamilyCodePage(uicodepage, &mut result__)).from_abi(result__)
     }
     pub unsafe fn EnumCodePages(&self, grfflags: u32, langid: u16) -> ::windows_core::Result<IEnumCodePage> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumCodePages)(::windows_core::Interface::as_raw(self), grfflags, langid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumCodePages(grfflags, langid, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetCharsetInfo<P0>(&self, charset: P0, pcharsetinfo: *mut MIMECSETINFO) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetCharsetInfo)(::windows_core::Interface::as_raw(self), charset.into_param().abi(), pcharsetinfo).ok()
+        ::windows_core::vcall!(self.GetCharsetInfo(charset.into_param().abi(), pcharsetinfo)).ok()
     }
     pub unsafe fn IsConvertible(&self, dwsrcencoding: u32, dwdstencoding: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).IsConvertible)(::windows_core::Interface::as_raw(self), dwsrcencoding, dwdstencoding).ok()
+        ::windows_core::vcall!(self.IsConvertible(dwsrcencoding, dwdstencoding)).ok()
     }
     pub unsafe fn ConvertString(&self, pdwmode: ::core::option::Option<*mut u32>, dwsrcencoding: u32, dwdstencoding: u32, psrcstr: ::core::option::Option<*const u8>, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::core::option::Option<*mut u8>, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConvertString)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwsrcencoding, dwdstencoding, ::core::mem::transmute(psrcstr.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.ConvertString(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwsrcencoding, dwdstencoding, ::core::mem::transmute(psrcstr.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ConvertStringToUnicode<P0>(&self, pdwmode: ::core::option::Option<*mut u32>, dwencoding: u32, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PWSTR, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).ConvertStringToUnicode)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.ConvertStringToUnicode(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ConvertStringFromUnicode<P0>(&self, pdwmode: ::core::option::Option<*mut u32>, dwencoding: u32, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PSTR, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).ConvertStringFromUnicode)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.ConvertStringFromUnicode(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ConvertStringReset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConvertStringReset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ConvertStringReset()).ok()
     }
     pub unsafe fn GetRfc1766FromLcid(&self, locale: u32) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRfc1766FromLcid)(::windows_core::Interface::as_raw(self), locale, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRfc1766FromLcid(locale, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetLcidFromRfc1766<P0>(&self, plocale: *mut u32, bstrrfc1766: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetLcidFromRfc1766)(::windows_core::Interface::as_raw(self), plocale, bstrrfc1766.into_param().abi()).ok()
+        ::windows_core::vcall!(self.GetLcidFromRfc1766(plocale, bstrrfc1766.into_param().abi())).ok()
     }
     pub unsafe fn EnumRfc1766(&self, langid: u16) -> ::windows_core::Result<IEnumRfc1766> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumRfc1766)(::windows_core::Interface::as_raw(self), langid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumRfc1766(langid, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetRfc1766Info(&self, locale: u32, langid: u16, prfc1766info: *mut RFC1766INFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetRfc1766Info)(::windows_core::Interface::as_raw(self), locale, langid, prfc1766info).ok()
+        ::windows_core::vcall!(self.GetRfc1766Info(locale, langid, prfc1766info)).ok()
     }
     pub unsafe fn CreateConvertCharset(&self, uisrccodepage: u32, uidstcodepage: u32, dwproperty: u32) -> ::windows_core::Result<IMLangConvertCharset> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateConvertCharset)(::windows_core::Interface::as_raw(self), uisrccodepage, uidstcodepage, dwproperty, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateConvertCharset(uisrccodepage, uidstcodepage, dwproperty, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -8079,21 +8079,21 @@ impl IMultiLanguage2 {
         P1: ::windows_core::IntoParam<super::System::Com::IStream>,
         P2: ::windows_core::IntoParam<super::System::Com::IStream>,
     {
-        (::windows_core::Interface::vtable(self).ConvertStringInIStream)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi(), dwsrcencoding, dwdstencoding, pstmin.into_param().abi(), pstmout.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ConvertStringInIStream(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi(), dwsrcencoding, dwdstencoding, pstmin.into_param().abi(), pstmout.into_param().abi())).ok()
     }
     pub unsafe fn ConvertStringToUnicodeEx<P0, P1>(&self, pdwmode: ::core::option::Option<*mut u32>, dwencoding: u32, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PWSTR, pcdstsize: ::core::option::Option<*mut u32>, dwflag: u32, lpfallback: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).ConvertStringToUnicodeEx)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ConvertStringToUnicodeEx(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi())).ok()
     }
     pub unsafe fn ConvertStringFromUnicodeEx<P0, P1>(&self, pdwmode: ::core::option::Option<*mut u32>, dwencoding: u32, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PSTR, pcdstsize: ::core::option::Option<*mut u32>, dwflag: u32, lpfallback: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).ConvertStringFromUnicodeEx)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ConvertStringFromUnicodeEx(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -8101,13 +8101,13 @@ impl IMultiLanguage2 {
     where
         P0: ::windows_core::IntoParam<super::System::Com::IStream>,
     {
-        (::windows_core::Interface::vtable(self).DetectCodepageInIStream)(::windows_core::Interface::as_raw(self), dwflag, dwprefwincodepage, pstmin.into_param().abi(), lpencoding, pnscores).ok()
+        ::windows_core::vcall!(self.DetectCodepageInIStream(dwflag, dwprefwincodepage, pstmin.into_param().abi(), lpencoding, pnscores)).ok()
     }
     pub unsafe fn DetectInputCodepage<P0>(&self, dwflag: u32, dwprefwincodepage: u32, psrcstr: P0, pcsrcsize: *mut i32, lpencoding: *mut DetectEncodingInfo, pnscores: *mut i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).DetectInputCodepage)(::windows_core::Interface::as_raw(self), dwflag, dwprefwincodepage, psrcstr.into_param().abi(), pcsrcsize, lpencoding, pnscores).ok()
+        ::windows_core::vcall!(self.DetectInputCodepage(dwflag, dwprefwincodepage, psrcstr.into_param().abi(), pcsrcsize, lpencoding, pnscores)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -8115,24 +8115,24 @@ impl IMultiLanguage2 {
     where
         P0: ::windows_core::IntoParam<super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).ValidateCodePage)(::windows_core::Interface::as_raw(self), uicodepage, hwnd.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ValidateCodePage(uicodepage, hwnd.into_param().abi())).ok()
     }
     pub unsafe fn GetCodePageDescription(&self, uicodepage: u32, lcid: u32, lpwidecharstr: &mut [u16]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCodePageDescription)(::windows_core::Interface::as_raw(self), uicodepage, lcid, ::core::mem::transmute(lpwidecharstr.as_ptr()), lpwidecharstr.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.GetCodePageDescription(uicodepage, lcid, ::core::mem::transmute(lpwidecharstr.as_ptr()), lpwidecharstr.len().try_into().unwrap())).ok()
     }
     pub unsafe fn IsCodePageInstallable(&self, uicodepage: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).IsCodePageInstallable)(::windows_core::Interface::as_raw(self), uicodepage).ok()
+        ::windows_core::vcall!(self.IsCodePageInstallable(uicodepage)).ok()
     }
     pub unsafe fn SetMimeDBSource(&self, dwsource: MIMECONTF) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMimeDBSource)(::windows_core::Interface::as_raw(self), dwsource).ok()
+        ::windows_core::vcall!(self.SetMimeDBSource(dwsource)).ok()
     }
     pub unsafe fn GetNumberOfScripts(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetNumberOfScripts)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetNumberOfScripts(&mut result__)).from_abi(result__)
     }
     pub unsafe fn EnumScripts(&self, dwflags: u32, langid: u16) -> ::windows_core::Result<IEnumScript> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumScripts)(::windows_core::Interface::as_raw(self), dwflags, langid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumScripts(dwflags, langid, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -8140,7 +8140,7 @@ impl IMultiLanguage2 {
     where
         P0: ::windows_core::IntoParam<super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).ValidateCodePageEx)(::windows_core::Interface::as_raw(self), uicodepage, hwnd.into_param().abi(), dwfiodcontrol).ok()
+        ::windows_core::vcall!(self.ValidateCodePageEx(uicodepage, hwnd.into_param().abi(), dwfiodcontrol)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMultiLanguage2, ::windows_core::IUnknown);
@@ -8200,66 +8200,66 @@ pub struct IMultiLanguage3(::windows_core::IUnknown);
 impl IMultiLanguage3 {
     pub unsafe fn GetNumberOfCodePageInfo(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetNumberOfCodePageInfo)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetNumberOfCodePageInfo(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetCodePageInfo(&self, uicodepage: u32, langid: u16, pcodepageinfo: *mut MIMECPINFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetCodePageInfo)(::windows_core::Interface::as_raw(self), uicodepage, langid, pcodepageinfo).ok()
+        ::windows_core::vcall!(self.base__.GetCodePageInfo(uicodepage, langid, pcodepageinfo)).ok()
     }
     pub unsafe fn GetFamilyCodePage(&self, uicodepage: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetFamilyCodePage)(::windows_core::Interface::as_raw(self), uicodepage, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetFamilyCodePage(uicodepage, &mut result__)).from_abi(result__)
     }
     pub unsafe fn EnumCodePages(&self, grfflags: u32, langid: u16) -> ::windows_core::Result<IEnumCodePage> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.EnumCodePages)(::windows_core::Interface::as_raw(self), grfflags, langid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.EnumCodePages(grfflags, langid, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetCharsetInfo<P0>(&self, charset: P0, pcharsetinfo: *mut MIMECSETINFO) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetCharsetInfo)(::windows_core::Interface::as_raw(self), charset.into_param().abi(), pcharsetinfo).ok()
+        ::windows_core::vcall!(self.base__.GetCharsetInfo(charset.into_param().abi(), pcharsetinfo)).ok()
     }
     pub unsafe fn IsConvertible(&self, dwsrcencoding: u32, dwdstencoding: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.IsConvertible)(::windows_core::Interface::as_raw(self), dwsrcencoding, dwdstencoding).ok()
+        ::windows_core::vcall!(self.base__.IsConvertible(dwsrcencoding, dwdstencoding)).ok()
     }
     pub unsafe fn ConvertString(&self, pdwmode: ::core::option::Option<*mut u32>, dwsrcencoding: u32, dwdstencoding: u32, psrcstr: ::core::option::Option<*const u8>, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::core::option::Option<*mut u8>, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.ConvertString)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwsrcencoding, dwdstencoding, ::core::mem::transmute(psrcstr.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.base__.ConvertString(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwsrcencoding, dwdstencoding, ::core::mem::transmute(psrcstr.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ConvertStringToUnicode<P0>(&self, pdwmode: ::core::option::Option<*mut u32>, dwencoding: u32, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PWSTR, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.ConvertStringToUnicode)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.base__.ConvertStringToUnicode(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ConvertStringFromUnicode<P0>(&self, pdwmode: ::core::option::Option<*mut u32>, dwencoding: u32, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PSTR, pcdstsize: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.ConvertStringFromUnicode)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.base__.ConvertStringFromUnicode(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ConvertStringReset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.ConvertStringReset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.ConvertStringReset()).ok()
     }
     pub unsafe fn GetRfc1766FromLcid(&self, locale: u32) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetRfc1766FromLcid)(::windows_core::Interface::as_raw(self), locale, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetRfc1766FromLcid(locale, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetLcidFromRfc1766<P0>(&self, plocale: *mut u32, bstrrfc1766: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetLcidFromRfc1766)(::windows_core::Interface::as_raw(self), plocale, bstrrfc1766.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.GetLcidFromRfc1766(plocale, bstrrfc1766.into_param().abi())).ok()
     }
     pub unsafe fn EnumRfc1766(&self, langid: u16) -> ::windows_core::Result<IEnumRfc1766> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.EnumRfc1766)(::windows_core::Interface::as_raw(self), langid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.EnumRfc1766(langid, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetRfc1766Info(&self, locale: u32, langid: u16, prfc1766info: *mut RFC1766INFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetRfc1766Info)(::windows_core::Interface::as_raw(self), locale, langid, prfc1766info).ok()
+        ::windows_core::vcall!(self.base__.GetRfc1766Info(locale, langid, prfc1766info)).ok()
     }
     pub unsafe fn CreateConvertCharset(&self, uisrccodepage: u32, uidstcodepage: u32, dwproperty: u32) -> ::windows_core::Result<IMLangConvertCharset> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.CreateConvertCharset)(::windows_core::Interface::as_raw(self), uisrccodepage, uidstcodepage, dwproperty, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.CreateConvertCharset(uisrccodepage, uidstcodepage, dwproperty, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -8269,21 +8269,21 @@ impl IMultiLanguage3 {
         P1: ::windows_core::IntoParam<super::System::Com::IStream>,
         P2: ::windows_core::IntoParam<super::System::Com::IStream>,
     {
-        (::windows_core::Interface::vtable(self).base__.ConvertStringInIStream)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi(), dwsrcencoding, dwdstencoding, pstmin.into_param().abi(), pstmout.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ConvertStringInIStream(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi(), dwsrcencoding, dwdstencoding, pstmin.into_param().abi(), pstmout.into_param().abi())).ok()
     }
     pub unsafe fn ConvertStringToUnicodeEx<P0, P1>(&self, pdwmode: ::core::option::Option<*mut u32>, dwencoding: u32, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PWSTR, pcdstsize: ::core::option::Option<*mut u32>, dwflag: u32, lpfallback: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.ConvertStringToUnicodeEx)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ConvertStringToUnicodeEx(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi())).ok()
     }
     pub unsafe fn ConvertStringFromUnicodeEx<P0, P1>(&self, pdwmode: ::core::option::Option<*mut u32>, dwencoding: u32, psrcstr: P0, pcsrcsize: ::core::option::Option<*mut u32>, pdststr: ::windows_core::PSTR, pcdstsize: ::core::option::Option<*mut u32>, dwflag: u32, lpfallback: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.ConvertStringFromUnicodeEx)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ConvertStringFromUnicodeEx(::core::mem::transmute(pdwmode.unwrap_or(::std::ptr::null_mut())), dwencoding, psrcstr.into_param().abi(), ::core::mem::transmute(pcsrcsize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdststr), ::core::mem::transmute(pcdstsize.unwrap_or(::std::ptr::null_mut())), dwflag, lpfallback.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -8291,13 +8291,13 @@ impl IMultiLanguage3 {
     where
         P0: ::windows_core::IntoParam<super::System::Com::IStream>,
     {
-        (::windows_core::Interface::vtable(self).base__.DetectCodepageInIStream)(::windows_core::Interface::as_raw(self), dwflag, dwprefwincodepage, pstmin.into_param().abi(), lpencoding, pnscores).ok()
+        ::windows_core::vcall!(self.base__.DetectCodepageInIStream(dwflag, dwprefwincodepage, pstmin.into_param().abi(), lpencoding, pnscores)).ok()
     }
     pub unsafe fn DetectInputCodepage<P0>(&self, dwflag: u32, dwprefwincodepage: u32, psrcstr: P0, pcsrcsize: *mut i32, lpencoding: *mut DetectEncodingInfo, pnscores: *mut i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.DetectInputCodepage)(::windows_core::Interface::as_raw(self), dwflag, dwprefwincodepage, psrcstr.into_param().abi(), pcsrcsize, lpencoding, pnscores).ok()
+        ::windows_core::vcall!(self.base__.DetectInputCodepage(dwflag, dwprefwincodepage, psrcstr.into_param().abi(), pcsrcsize, lpencoding, pnscores)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -8305,24 +8305,24 @@ impl IMultiLanguage3 {
     where
         P0: ::windows_core::IntoParam<super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.ValidateCodePage)(::windows_core::Interface::as_raw(self), uicodepage, hwnd.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ValidateCodePage(uicodepage, hwnd.into_param().abi())).ok()
     }
     pub unsafe fn GetCodePageDescription(&self, uicodepage: u32, lcid: u32, lpwidecharstr: &mut [u16]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetCodePageDescription)(::windows_core::Interface::as_raw(self), uicodepage, lcid, ::core::mem::transmute(lpwidecharstr.as_ptr()), lpwidecharstr.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.base__.GetCodePageDescription(uicodepage, lcid, ::core::mem::transmute(lpwidecharstr.as_ptr()), lpwidecharstr.len().try_into().unwrap())).ok()
     }
     pub unsafe fn IsCodePageInstallable(&self, uicodepage: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.IsCodePageInstallable)(::windows_core::Interface::as_raw(self), uicodepage).ok()
+        ::windows_core::vcall!(self.base__.IsCodePageInstallable(uicodepage)).ok()
     }
     pub unsafe fn SetMimeDBSource(&self, dwsource: MIMECONTF) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetMimeDBSource)(::windows_core::Interface::as_raw(self), dwsource).ok()
+        ::windows_core::vcall!(self.base__.SetMimeDBSource(dwsource)).ok()
     }
     pub unsafe fn GetNumberOfScripts(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetNumberOfScripts)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetNumberOfScripts(&mut result__)).from_abi(result__)
     }
     pub unsafe fn EnumScripts(&self, dwflags: u32, langid: u16) -> ::windows_core::Result<IEnumScript> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.EnumScripts)(::windows_core::Interface::as_raw(self), dwflags, langid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.EnumScripts(dwflags, langid, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -8330,13 +8330,13 @@ impl IMultiLanguage3 {
     where
         P0: ::windows_core::IntoParam<super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.ValidateCodePageEx)(::windows_core::Interface::as_raw(self), uicodepage, hwnd.into_param().abi(), dwfiodcontrol).ok()
+        ::windows_core::vcall!(self.base__.ValidateCodePageEx(uicodepage, hwnd.into_param().abi(), dwfiodcontrol)).ok()
     }
     pub unsafe fn DetectOutboundCodePage<P0>(&self, dwflags: u32, lpwidecharstr: &[u16], puipreferredcodepages: ::core::option::Option<&[u32]>, puidetectedcodepages: *mut u32, pndetectedcodepages: *mut u32, lpspecialchar: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DetectOutboundCodePage)(::windows_core::Interface::as_raw(self), dwflags, ::core::mem::transmute(lpwidecharstr.as_ptr()), lpwidecharstr.len().try_into().unwrap(), ::core::mem::transmute(puipreferredcodepages.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), puipreferredcodepages.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), puidetectedcodepages, pndetectedcodepages, lpspecialchar.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DetectOutboundCodePage(dwflags, ::core::mem::transmute(lpwidecharstr.as_ptr()), lpwidecharstr.len().try_into().unwrap(), ::core::mem::transmute(puipreferredcodepages.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), puipreferredcodepages.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), puidetectedcodepages, pndetectedcodepages, lpspecialchar.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -8345,7 +8345,7 @@ impl IMultiLanguage3 {
         P0: ::windows_core::IntoParam<super::System::Com::IStream>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DetectOutboundCodePageInIStream)(::windows_core::Interface::as_raw(self), dwflags, pstrin.into_param().abi(), ::core::mem::transmute(puipreferredcodepages.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), puipreferredcodepages.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), puidetectedcodepages, pndetectedcodepages, lpspecialchar.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DetectOutboundCodePageInIStream(dwflags, pstrin.into_param().abi(), ::core::mem::transmute(puipreferredcodepages.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), puipreferredcodepages.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), puidetectedcodepages, pndetectedcodepages, lpspecialchar.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMultiLanguage3, ::windows_core::IUnknown, IMultiLanguage2);
@@ -8371,21 +8371,21 @@ pub struct IOptionDescription(::windows_core::IUnknown);
 impl IOptionDescription {
     pub unsafe fn Id(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Id)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Id(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Heading(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Heading)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Heading(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Description(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Description)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Description(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Labels(&self) -> ::windows_core::Result<super::System::Com::IEnumString> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Labels)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Labels(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOptionDescription, ::windows_core::IUnknown);
@@ -8413,14 +8413,14 @@ pub struct ISpellCheckProvider(::windows_core::IUnknown);
 impl ISpellCheckProvider {
     pub unsafe fn LanguageTag(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).LanguageTag)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.LanguageTag(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Check<P0>(&self, text: P0) -> ::windows_core::Result<IEnumSpellingError>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Check)(::windows_core::Interface::as_raw(self), text.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Check(text.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -8429,41 +8429,41 @@ impl ISpellCheckProvider {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Suggest)(::windows_core::Interface::as_raw(self), word.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Suggest(word.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetOptionValue<P0>(&self, optionid: P0) -> ::windows_core::Result<u8>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetOptionValue)(::windows_core::Interface::as_raw(self), optionid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetOptionValue(optionid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetOptionValue<P0>(&self, optionid: P0, value: u8) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetOptionValue)(::windows_core::Interface::as_raw(self), optionid.into_param().abi(), value).ok()
+        ::windows_core::vcall!(self.SetOptionValue(optionid.into_param().abi(), value)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn OptionIds(&self) -> ::windows_core::Result<super::System::Com::IEnumString> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).OptionIds)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.OptionIds(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Id(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Id)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Id(&mut result__)).from_abi(result__)
     }
     pub unsafe fn LocalizedName(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).LocalizedName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.LocalizedName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetOptionDescription<P0>(&self, optionid: P0) -> ::windows_core::Result<IOptionDescription>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetOptionDescription)(::windows_core::Interface::as_raw(self), optionid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetOptionDescription(optionid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -8471,7 +8471,7 @@ impl ISpellCheckProvider {
     where
         P0: ::windows_core::IntoParam<super::System::Com::IEnumString>,
     {
-        (::windows_core::Interface::vtable(self).InitializeWordlist)(::windows_core::Interface::as_raw(self), wordlisttype, words.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InitializeWordlist(wordlisttype, words.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISpellCheckProvider, ::windows_core::IUnknown);
@@ -8513,7 +8513,7 @@ impl ISpellCheckProviderFactory {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn SupportedLanguages(&self) -> ::windows_core::Result<super::System::Com::IEnumString> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SupportedLanguages)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SupportedLanguages(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -8522,14 +8522,14 @@ impl ISpellCheckProviderFactory {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsSupported)(::windows_core::Interface::as_raw(self), languagetag.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsSupported(languagetag.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn CreateSpellCheckProvider<P0>(&self, languagetag: P0) -> ::windows_core::Result<ISpellCheckProvider>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateSpellCheckProvider)(::windows_core::Interface::as_raw(self), languagetag.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateSpellCheckProvider(languagetag.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISpellCheckProviderFactory, ::windows_core::IUnknown);
@@ -8559,14 +8559,14 @@ pub struct ISpellChecker(::windows_core::IUnknown);
 impl ISpellChecker {
     pub unsafe fn LanguageTag(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).LanguageTag)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.LanguageTag(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Check<P0>(&self, text: P0) -> ::windows_core::Result<IEnumSpellingError>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Check)(::windows_core::Interface::as_raw(self), text.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Check(text.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -8575,71 +8575,71 @@ impl ISpellChecker {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Suggest)(::windows_core::Interface::as_raw(self), word.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Suggest(word.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Add<P0>(&self, word: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).Add)(::windows_core::Interface::as_raw(self), word.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Add(word.into_param().abi())).ok()
     }
     pub unsafe fn Ignore<P0>(&self, word: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).Ignore)(::windows_core::Interface::as_raw(self), word.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Ignore(word.into_param().abi())).ok()
     }
     pub unsafe fn AutoCorrect<P0, P1>(&self, from: P0, to: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).AutoCorrect)(::windows_core::Interface::as_raw(self), from.into_param().abi(), to.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AutoCorrect(from.into_param().abi(), to.into_param().abi())).ok()
     }
     pub unsafe fn GetOptionValue<P0>(&self, optionid: P0) -> ::windows_core::Result<u8>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetOptionValue)(::windows_core::Interface::as_raw(self), optionid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetOptionValue(optionid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn OptionIds(&self) -> ::windows_core::Result<super::System::Com::IEnumString> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).OptionIds)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.OptionIds(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Id(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Id)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Id(&mut result__)).from_abi(result__)
     }
     pub unsafe fn LocalizedName(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).LocalizedName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.LocalizedName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn add_SpellCheckerChanged<P0>(&self, handler: P0) -> ::windows_core::Result<u32>
     where
         P0: ::windows_core::IntoParam<ISpellCheckerChangedEventHandler>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).add_SpellCheckerChanged)(::windows_core::Interface::as_raw(self), handler.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.add_SpellCheckerChanged(handler.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn remove_SpellCheckerChanged(&self, eventcookie: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).remove_SpellCheckerChanged)(::windows_core::Interface::as_raw(self), eventcookie).ok()
+        ::windows_core::vcall!(self.remove_SpellCheckerChanged(eventcookie)).ok()
     }
     pub unsafe fn GetOptionDescription<P0>(&self, optionid: P0) -> ::windows_core::Result<IOptionDescription>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetOptionDescription)(::windows_core::Interface::as_raw(self), optionid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetOptionDescription(optionid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn ComprehensiveCheck<P0>(&self, text: P0) -> ::windows_core::Result<IEnumSpellingError>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ComprehensiveCheck)(::windows_core::Interface::as_raw(self), text.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ComprehensiveCheck(text.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISpellChecker, ::windows_core::IUnknown);
@@ -8680,14 +8680,14 @@ pub struct ISpellChecker2(::windows_core::IUnknown);
 impl ISpellChecker2 {
     pub unsafe fn LanguageTag(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.LanguageTag)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.LanguageTag(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Check<P0>(&self, text: P0) -> ::windows_core::Result<IEnumSpellingError>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Check)(::windows_core::Interface::as_raw(self), text.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Check(text.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -8696,77 +8696,77 @@ impl ISpellChecker2 {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Suggest)(::windows_core::Interface::as_raw(self), word.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Suggest(word.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Add<P0>(&self, word: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.Add)(::windows_core::Interface::as_raw(self), word.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Add(word.into_param().abi())).ok()
     }
     pub unsafe fn Ignore<P0>(&self, word: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.Ignore)(::windows_core::Interface::as_raw(self), word.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Ignore(word.into_param().abi())).ok()
     }
     pub unsafe fn AutoCorrect<P0, P1>(&self, from: P0, to: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.AutoCorrect)(::windows_core::Interface::as_raw(self), from.into_param().abi(), to.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.AutoCorrect(from.into_param().abi(), to.into_param().abi())).ok()
     }
     pub unsafe fn GetOptionValue<P0>(&self, optionid: P0) -> ::windows_core::Result<u8>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetOptionValue)(::windows_core::Interface::as_raw(self), optionid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetOptionValue(optionid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn OptionIds(&self) -> ::windows_core::Result<super::System::Com::IEnumString> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.OptionIds)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.OptionIds(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Id(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Id)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Id(&mut result__)).from_abi(result__)
     }
     pub unsafe fn LocalizedName(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.LocalizedName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.LocalizedName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn add_SpellCheckerChanged<P0>(&self, handler: P0) -> ::windows_core::Result<u32>
     where
         P0: ::windows_core::IntoParam<ISpellCheckerChangedEventHandler>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.add_SpellCheckerChanged)(::windows_core::Interface::as_raw(self), handler.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.add_SpellCheckerChanged(handler.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn remove_SpellCheckerChanged(&self, eventcookie: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.remove_SpellCheckerChanged)(::windows_core::Interface::as_raw(self), eventcookie).ok()
+        ::windows_core::vcall!(self.base__.remove_SpellCheckerChanged(eventcookie)).ok()
     }
     pub unsafe fn GetOptionDescription<P0>(&self, optionid: P0) -> ::windows_core::Result<IOptionDescription>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetOptionDescription)(::windows_core::Interface::as_raw(self), optionid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetOptionDescription(optionid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn ComprehensiveCheck<P0>(&self, text: P0) -> ::windows_core::Result<IEnumSpellingError>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.ComprehensiveCheck)(::windows_core::Interface::as_raw(self), text.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.ComprehensiveCheck(text.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Remove<P0>(&self, word: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).Remove)(::windows_core::Interface::as_raw(self), word.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Remove(word.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISpellChecker2, ::windows_core::IUnknown, ISpellChecker);
@@ -8790,7 +8790,7 @@ impl ISpellCheckerChangedEventHandler {
     where
         P0: ::windows_core::IntoParam<ISpellChecker>,
     {
-        (::windows_core::Interface::vtable(self).Invoke)(::windows_core::Interface::as_raw(self), sender.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Invoke(sender.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISpellCheckerChangedEventHandler, ::windows_core::IUnknown);
@@ -8814,7 +8814,7 @@ impl ISpellCheckerFactory {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn SupportedLanguages(&self) -> ::windows_core::Result<super::System::Com::IEnumString> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SupportedLanguages)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SupportedLanguages(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -8823,14 +8823,14 @@ impl ISpellCheckerFactory {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsSupported)(::windows_core::Interface::as_raw(self), languagetag.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsSupported(languagetag.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn CreateSpellChecker<P0>(&self, languagetag: P0) -> ::windows_core::Result<ISpellChecker>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateSpellChecker)(::windows_core::Interface::as_raw(self), languagetag.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateSpellChecker(languagetag.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISpellCheckerFactory, ::windows_core::IUnknown);
@@ -8860,19 +8860,19 @@ pub struct ISpellingError(::windows_core::IUnknown);
 impl ISpellingError {
     pub unsafe fn StartIndex(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).StartIndex)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.StartIndex(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Length(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Length)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Length(&mut result__)).from_abi(result__)
     }
     pub unsafe fn CorrectiveAction(&self) -> ::windows_core::Result<CORRECTIVE_ACTION> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CorrectiveAction)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CorrectiveAction(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Replacement(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Replacement)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Replacement(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISpellingError, ::windows_core::IUnknown);
@@ -8900,14 +8900,14 @@ impl IUserDictionariesRegistrar {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).RegisterUserDictionary)(::windows_core::Interface::as_raw(self), dictionarypath.into_param().abi(), languagetag.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RegisterUserDictionary(dictionarypath.into_param().abi(), languagetag.into_param().abi())).ok()
     }
     pub unsafe fn UnregisterUserDictionary<P0, P1>(&self, dictionarypath: P0, languagetag: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).UnregisterUserDictionary)(::windows_core::Interface::as_raw(self), dictionarypath.into_param().abi(), languagetag.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UnregisterUserDictionary(dictionarypath.into_param().abi(), languagetag.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IUserDictionariesRegistrar, ::windows_core::IUnknown);

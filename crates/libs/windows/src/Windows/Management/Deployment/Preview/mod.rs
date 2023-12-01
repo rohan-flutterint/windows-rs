@@ -36,7 +36,7 @@ impl ClassicAppManager {
     pub fn FindInstalledApp(appuninstallkey: &::windows_core::HSTRING) -> ::windows_core::Result<InstalledClassicAppInfo> {
         Self::IClassicAppManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FindInstalledApp)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(appuninstallkey), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FindInstalledApp(::core::mem::transmute_copy(appuninstallkey), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -56,14 +56,14 @@ impl InstalledClassicAppInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayName(&mut result__)).from_abi(result__)
         }
     }
     pub fn DisplayVersion(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayVersion)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayVersion(&mut result__)).from_abi(result__)
         }
     }
 }

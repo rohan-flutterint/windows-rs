@@ -2608,13 +2608,13 @@ impl IDialBranding {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), pwzconnectoid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Initialize(pwzconnectoid.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
     pub unsafe fn GetBitmap(&self, dwindex: u32) -> ::windows_core::Result<super::super::Graphics::Gdi::HBITMAP> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetBitmap)(::windows_core::Interface::as_raw(self), dwindex, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetBitmap(dwindex, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDialBranding, ::windows_core::IUnknown);
@@ -2643,35 +2643,35 @@ impl IDialEngine {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<IDialEventSink>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), pwzconnectoid.into_param().abi(), pides.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Initialize(pwzconnectoid.into_param().abi(), pides.into_param().abi())).ok()
     }
     pub unsafe fn GetProperty<P0, P1>(&self, pwzproperty: P0, pwzvalue: P1, dwbufsize: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetProperty)(::windows_core::Interface::as_raw(self), pwzproperty.into_param().abi(), pwzvalue.into_param().abi(), dwbufsize).ok()
+        ::windows_core::vcall!(self.GetProperty(pwzproperty.into_param().abi(), pwzvalue.into_param().abi(), dwbufsize)).ok()
     }
     pub unsafe fn SetProperty<P0, P1>(&self, pwzproperty: P0, pwzvalue: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetProperty)(::windows_core::Interface::as_raw(self), pwzproperty.into_param().abi(), pwzvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetProperty(pwzproperty.into_param().abi(), pwzvalue.into_param().abi())).ok()
     }
     pub unsafe fn Dial(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Dial)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Dial()).ok()
     }
     pub unsafe fn HangUp(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).HangUp)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.HangUp()).ok()
     }
     pub unsafe fn GetConnectedState(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetConnectedState)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetConnectedState(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetConnectHandle(&self) -> ::windows_core::Result<usize> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetConnectHandle)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetConnectHandle(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDialEngine, ::windows_core::IUnknown);
@@ -2698,7 +2698,7 @@ pub struct IDialEngine_Vtbl {
 pub struct IDialEventSink(::windows_core::IUnknown);
 impl IDialEventSink {
     pub unsafe fn OnEvent(&self, dwevent: u32, dwstatus: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnEvent)(::windows_core::Interface::as_raw(self), dwevent, dwstatus).ok()
+        ::windows_core::vcall!(self.OnEvent(dwevent, dwstatus)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDialEventSink, ::windows_core::IUnknown);
@@ -2722,7 +2722,7 @@ impl IProofOfPossessionCookieInfoManager {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetCookieInfoForUri)(::windows_core::Interface::as_raw(self), uri.into_param().abi(), cookieinfocount, cookieinfo).ok()
+        ::windows_core::vcall!(self.GetCookieInfoForUri(uri.into_param().abi(), cookieinfocount, cookieinfo)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IProofOfPossessionCookieInfoManager, ::windows_core::IUnknown);
@@ -2747,7 +2747,7 @@ impl IProofOfPossessionCookieInfoManager2 {
         P0: ::windows_core::IntoParam<::windows_core::IInspectable>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetCookieInfoWithUriForAccount)(::windows_core::Interface::as_raw(self), webaccount.into_param().abi(), uri.into_param().abi(), cookieinfocount, cookieinfo).ok()
+        ::windows_core::vcall!(self.GetCookieInfoWithUriForAccount(webaccount.into_param().abi(), uri.into_param().abi(), cookieinfocount, cookieinfo)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IProofOfPossessionCookieInfoManager2, ::windows_core::IUnknown);

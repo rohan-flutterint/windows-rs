@@ -1391,25 +1391,25 @@ where
 pub struct IAVIEditStream(::windows_core::IUnknown);
 impl IAVIEditStream {
     pub unsafe fn Cut(&self, plstart: *mut i32, pllength: *mut i32, ppresult: *mut ::core::option::Option<IAVIStream>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cut)(::windows_core::Interface::as_raw(self), plstart, pllength, ::core::mem::transmute(ppresult)).ok()
+        ::windows_core::vcall!(self.Cut(plstart, pllength, ::core::mem::transmute(ppresult))).ok()
     }
     pub unsafe fn Copy(&self, plstart: *mut i32, pllength: *mut i32, ppresult: *mut ::core::option::Option<IAVIStream>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Copy)(::windows_core::Interface::as_raw(self), plstart, pllength, ::core::mem::transmute(ppresult)).ok()
+        ::windows_core::vcall!(self.Copy(plstart, pllength, ::core::mem::transmute(ppresult))).ok()
     }
     pub unsafe fn Paste<P0>(&self, plpos: *mut i32, pllength: *mut i32, pstream: P0, lstart: i32, lend: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IAVIStream>,
     {
-        (::windows_core::Interface::vtable(self).Paste)(::windows_core::Interface::as_raw(self), plpos, pllength, pstream.into_param().abi(), lstart, lend).ok()
+        ::windows_core::vcall!(self.Paste(plpos, pllength, pstream.into_param().abi(), lstart, lend)).ok()
     }
     pub unsafe fn Clone(&self) -> ::windows_core::Result<IAVIStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetInfo(&self, lpinfo: *const AVISTREAMINFOW, cbinfo: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetInfo)(::windows_core::Interface::as_raw(self), lpinfo, cbinfo).ok()
+        ::windows_core::vcall!(self.SetInfo(lpinfo, cbinfo)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAVIEditStream, ::windows_core::IUnknown);
@@ -1437,27 +1437,27 @@ pub struct IAVIEditStream_Vtbl {
 pub struct IAVIFile(::windows_core::IUnknown);
 impl IAVIFile {
     pub unsafe fn Info(&self, pfi: *mut AVIFILEINFOW, lsize: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Info)(::windows_core::Interface::as_raw(self), pfi, lsize).ok()
+        ::windows_core::vcall!(self.Info(pfi, lsize)).ok()
     }
     pub unsafe fn GetStream(&self, ppstream: *mut ::core::option::Option<IAVIStream>, fcctype: u32, lparam: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetStream)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppstream), fcctype, lparam).ok()
+        ::windows_core::vcall!(self.GetStream(::core::mem::transmute(ppstream), fcctype, lparam)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn CreateStream(&self, ppstream: *mut ::core::option::Option<IAVIStream>, psi: *const AVISTREAMINFOW) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CreateStream)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppstream), psi).ok()
+        ::windows_core::vcall!(self.CreateStream(::core::mem::transmute(ppstream), psi)).ok()
     }
     pub unsafe fn WriteData(&self, ckid: u32, lpdata: *const ::core::ffi::c_void, cbdata: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).WriteData)(::windows_core::Interface::as_raw(self), ckid, lpdata, cbdata).ok()
+        ::windows_core::vcall!(self.WriteData(ckid, lpdata, cbdata)).ok()
     }
     pub unsafe fn ReadData(&self, ckid: u32, lpdata: *mut ::core::ffi::c_void, lpcbdata: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ReadData)(::windows_core::Interface::as_raw(self), ckid, lpdata, lpcbdata).ok()
+        ::windows_core::vcall!(self.ReadData(ckid, lpdata, lpcbdata)).ok()
     }
     pub unsafe fn EndRecord(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EndRecord)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.EndRecord()).ok()
     }
     pub unsafe fn DeleteStream(&self, fcctype: u32, lparam: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeleteStream)(::windows_core::Interface::as_raw(self), fcctype, lparam).ok()
+        ::windows_core::vcall!(self.DeleteStream(fcctype, lparam)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAVIFile, ::windows_core::IUnknown);
@@ -1493,12 +1493,12 @@ impl IAVIPersistFile {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetClassID(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.GetClassID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.GetClassID(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn IsDirty(&self) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).base__.IsDirty)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.base__.IsDirty())
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -1506,7 +1506,7 @@ impl IAVIPersistFile {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.Load)(::windows_core::Interface::as_raw(self), pszfilename.into_param().abi(), dwmode).ok()
+        ::windows_core::vcall!(self.base__.Load(pszfilename.into_param().abi(), dwmode)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -1515,7 +1515,7 @@ impl IAVIPersistFile {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.Save)(::windows_core::Interface::as_raw(self), pszfilename.into_param().abi(), fremember.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Save(pszfilename.into_param().abi(), fremember.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -1523,16 +1523,16 @@ impl IAVIPersistFile {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SaveCompleted)(::windows_core::Interface::as_raw(self), pszfilename.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SaveCompleted(pszfilename.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetCurFile(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetCurFile)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetCurFile(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Reserved1(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reserved1)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reserved1()).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -1563,41 +1563,41 @@ impl IAVIStream {
         P0: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
         P1: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).Create)(::windows_core::Interface::as_raw(self), lparam1.into_param().abi(), lparam2.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Create(lparam1.into_param().abi(), lparam2.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Info(&self, psi: *mut AVISTREAMINFOW, lsize: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Info)(::windows_core::Interface::as_raw(self), psi, lsize).ok()
+        ::windows_core::vcall!(self.Info(psi, lsize)).ok()
     }
     pub unsafe fn FindSample(&self, lpos: i32, lflags: i32) -> i32 {
-        (::windows_core::Interface::vtable(self).FindSample)(::windows_core::Interface::as_raw(self), lpos, lflags)
+        ::windows_core::vcall!(self.FindSample(lpos, lflags))
     }
     pub unsafe fn ReadFormat(&self, lpos: i32, lpformat: ::core::option::Option<*mut ::core::ffi::c_void>, lpcbformat: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ReadFormat)(::windows_core::Interface::as_raw(self), lpos, ::core::mem::transmute(lpformat.unwrap_or(::std::ptr::null_mut())), lpcbformat).ok()
+        ::windows_core::vcall!(self.ReadFormat(lpos, ::core::mem::transmute(lpformat.unwrap_or(::std::ptr::null_mut())), lpcbformat)).ok()
     }
     pub unsafe fn SetFormat(&self, lpos: i32, lpformat: *const ::core::ffi::c_void, cbformat: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetFormat)(::windows_core::Interface::as_raw(self), lpos, lpformat, cbformat).ok()
+        ::windows_core::vcall!(self.SetFormat(lpos, lpformat, cbformat)).ok()
     }
     pub unsafe fn Read(&self, lstart: i32, lsamples: i32, lpbuffer: ::core::option::Option<*mut ::core::ffi::c_void>, cbbuffer: i32, plbytes: ::core::option::Option<*mut i32>, plsamples: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Read)(::windows_core::Interface::as_raw(self), lstart, lsamples, ::core::mem::transmute(lpbuffer.unwrap_or(::std::ptr::null_mut())), cbbuffer, ::core::mem::transmute(plbytes.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plsamples.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.Read(lstart, lsamples, ::core::mem::transmute(lpbuffer.unwrap_or(::std::ptr::null_mut())), cbbuffer, ::core::mem::transmute(plbytes.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plsamples.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn Write(&self, lstart: i32, lsamples: i32, lpbuffer: *const ::core::ffi::c_void, cbbuffer: i32, dwflags: u32, plsampwritten: ::core::option::Option<*mut i32>, plbyteswritten: ::core::option::Option<*mut i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Write)(::windows_core::Interface::as_raw(self), lstart, lsamples, lpbuffer, cbbuffer, dwflags, ::core::mem::transmute(plsampwritten.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plbyteswritten.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.Write(lstart, lsamples, lpbuffer, cbbuffer, dwflags, ::core::mem::transmute(plsampwritten.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(plbyteswritten.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn Delete(&self, lstart: i32, lsamples: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Delete)(::windows_core::Interface::as_raw(self), lstart, lsamples).ok()
+        ::windows_core::vcall!(self.Delete(lstart, lsamples)).ok()
     }
     pub unsafe fn ReadData(&self, fcc: u32, lp: ::core::option::Option<*mut ::core::ffi::c_void>, lpcb: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ReadData)(::windows_core::Interface::as_raw(self), fcc, ::core::mem::transmute(lp.unwrap_or(::std::ptr::null_mut())), lpcb).ok()
+        ::windows_core::vcall!(self.ReadData(fcc, ::core::mem::transmute(lp.unwrap_or(::std::ptr::null_mut())), lpcb)).ok()
     }
     pub unsafe fn WriteData(&self, fcc: u32, lp: *const ::core::ffi::c_void, cb: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).WriteData)(::windows_core::Interface::as_raw(self), fcc, lp, cb).ok()
+        ::windows_core::vcall!(self.WriteData(fcc, lp, cb)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetInfo(&self, lpinfo: *const AVISTREAMINFOW, cbinfo: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetInfo)(::windows_core::Interface::as_raw(self), lpinfo, cbinfo).ok()
+        ::windows_core::vcall!(self.SetInfo(lpinfo, cbinfo)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAVIStream, ::windows_core::IUnknown);
@@ -1637,10 +1637,10 @@ pub struct IAVIStream_Vtbl {
 pub struct IAVIStreaming(::windows_core::IUnknown);
 impl IAVIStreaming {
     pub unsafe fn Begin(&self, lstart: i32, lend: i32, lrate: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Begin)(::windows_core::Interface::as_raw(self), lstart, lend, lrate).ok()
+        ::windows_core::vcall!(self.Begin(lstart, lend, lrate)).ok()
     }
     pub unsafe fn End(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).End)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.End()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAVIStreaming, ::windows_core::IUnknown);
@@ -1662,18 +1662,18 @@ pub struct IAVIStreaming_Vtbl {
 pub struct IGetFrame(::windows_core::IUnknown);
 impl IGetFrame {
     pub unsafe fn GetFrame(&self, lpos: i32) -> *mut ::core::ffi::c_void {
-        (::windows_core::Interface::vtable(self).GetFrame)(::windows_core::Interface::as_raw(self), lpos)
+        ::windows_core::vcall!(self.GetFrame(lpos))
     }
     pub unsafe fn Begin(&self, lstart: i32, lend: i32, lrate: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Begin)(::windows_core::Interface::as_raw(self), lstart, lend, lrate).ok()
+        ::windows_core::vcall!(self.Begin(lstart, lend, lrate)).ok()
     }
     pub unsafe fn End(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).End)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.End()).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
     pub unsafe fn SetFormat(&self, lpbi: *const super::super::Graphics::Gdi::BITMAPINFOHEADER, lpbits: ::core::option::Option<*const ::core::ffi::c_void>, x: i32, y: i32, dx: i32, dy: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetFormat)(::windows_core::Interface::as_raw(self), lpbi, ::core::mem::transmute(lpbits.unwrap_or(::std::ptr::null())), x, y, dx, dy).ok()
+        ::windows_core::vcall!(self.SetFormat(lpbi, ::core::mem::transmute(lpbits.unwrap_or(::std::ptr::null())), x, y, dx, dy)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IGetFrame, ::windows_core::IUnknown);

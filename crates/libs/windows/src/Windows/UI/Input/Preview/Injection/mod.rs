@@ -252,87 +252,87 @@ impl InjectedInputGamepadInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Buttons)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Buttons(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Gaming_Input\"`"]
     #[cfg(feature = "Gaming_Input")]
     pub fn SetButtons(&self, value: super::super::super::super::Gaming::Input::GamepadButtons) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetButtons)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetButtons(value)).ok() }
     }
     pub fn LeftThumbstickX(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LeftThumbstickX)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LeftThumbstickX(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetLeftThumbstickX(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetLeftThumbstickX)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLeftThumbstickX(value)).ok() }
     }
     pub fn LeftThumbstickY(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LeftThumbstickY)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LeftThumbstickY(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetLeftThumbstickY(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetLeftThumbstickY)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLeftThumbstickY(value)).ok() }
     }
     pub fn LeftTrigger(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LeftTrigger)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LeftTrigger(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetLeftTrigger(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetLeftTrigger)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLeftTrigger(value)).ok() }
     }
     pub fn RightThumbstickX(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RightThumbstickX)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RightThumbstickX(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRightThumbstickX(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetRightThumbstickX)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRightThumbstickX(value)).ok() }
     }
     pub fn RightThumbstickY(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RightThumbstickY)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RightThumbstickY(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRightThumbstickY(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetRightThumbstickY)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRightThumbstickY(value)).ok() }
     }
     pub fn RightTrigger(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RightTrigger)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RightTrigger(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRightTrigger(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetRightTrigger)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRightTrigger(value)).ok() }
     }
     #[doc = "Required features: `\"Gaming_Input\"`"]
     #[cfg(feature = "Gaming_Input")]
     pub fn CreateInstanceFromGamepadReading(reading: super::super::super::super::Gaming::Input::GamepadReading) -> ::windows_core::Result<InjectedInputGamepadInfo> {
         Self::IInjectedInputGamepadInfoFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateInstanceFromGamepadReading)(::windows_core::Interface::as_raw(this), reading, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateInstanceFromGamepadReading(reading, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -369,34 +369,34 @@ impl InjectedInputKeyboardInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).KeyOptions)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.KeyOptions(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetKeyOptions(&self, value: InjectedInputKeyOptions) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetKeyOptions)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetKeyOptions(value)).ok() }
     }
     pub fn ScanCode(&self) -> ::windows_core::Result<u16> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ScanCode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ScanCode(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetScanCode(&self, value: u16) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetScanCode)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetScanCode(value)).ok() }
     }
     pub fn VirtualKey(&self) -> ::windows_core::Result<u16> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).VirtualKey)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.VirtualKey(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetVirtualKey(&self, value: u16) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetVirtualKey)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetVirtualKey(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for InjectedInputKeyboardInfo {
@@ -427,56 +427,56 @@ impl InjectedInputMouseInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MouseOptions)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MouseOptions(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMouseOptions(&self, value: InjectedInputMouseOptions) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetMouseOptions)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMouseOptions(value)).ok() }
     }
     pub fn MouseData(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MouseData)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MouseData(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMouseData(&self, value: u32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetMouseData)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetMouseData(value)).ok() }
     }
     pub fn DeltaY(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DeltaY)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DeltaY(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDeltaY(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDeltaY)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDeltaY(value)).ok() }
     }
     pub fn DeltaX(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DeltaX)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DeltaX(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDeltaX(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDeltaX)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDeltaX(value)).ok() }
     }
     pub fn TimeOffsetInMilliseconds(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TimeOffsetInMilliseconds)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TimeOffsetInMilliseconds(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTimeOffsetInMilliseconds(&self, value: u32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTimeOffsetInMilliseconds)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTimeOffsetInMilliseconds(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for InjectedInputMouseInfo {
@@ -507,78 +507,78 @@ impl InjectedInputPenInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PointerInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PointerInfo(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPointerInfo(&self, value: InjectedInputPointerInfo) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPointerInfo)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPointerInfo(value)).ok() }
     }
     pub fn PenButtons(&self) -> ::windows_core::Result<InjectedInputPenButtons> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PenButtons)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PenButtons(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPenButtons(&self, value: InjectedInputPenButtons) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPenButtons)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPenButtons(value)).ok() }
     }
     pub fn PenParameters(&self) -> ::windows_core::Result<InjectedInputPenParameters> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PenParameters)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PenParameters(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPenParameters(&self, value: InjectedInputPenParameters) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPenParameters)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPenParameters(value)).ok() }
     }
     pub fn Pressure(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Pressure)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Pressure(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPressure(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPressure)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPressure(value)).ok() }
     }
     pub fn Rotation(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Rotation)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Rotation(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRotation(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetRotation)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRotation(value)).ok() }
     }
     pub fn TiltX(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TiltX)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TiltX(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTiltX(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTiltX)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTiltX(value)).ok() }
     }
     pub fn TiltY(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TiltY)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TiltY(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTiltY(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTiltY)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTiltY(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for InjectedInputPenInfo {
@@ -609,56 +609,56 @@ impl InjectedInputTouchInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Contact)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Contact(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetContact(&self, value: InjectedInputRectangle) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetContact)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetContact(value)).ok() }
     }
     pub fn Orientation(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Orientation)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Orientation(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetOrientation(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetOrientation)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetOrientation(value)).ok() }
     }
     pub fn PointerInfo(&self) -> ::windows_core::Result<InjectedInputPointerInfo> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PointerInfo)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PointerInfo(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPointerInfo(&self, value: InjectedInputPointerInfo) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPointerInfo)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPointerInfo(value)).ok() }
     }
     pub fn Pressure(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Pressure)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Pressure(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPressure(&self, value: f64) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPressure)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPressure(value)).ok() }
     }
     pub fn TouchParameters(&self) -> ::windows_core::Result<InjectedInputTouchParameters> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TouchParameters)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TouchParameters(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTouchParameters(&self, value: InjectedInputTouchParameters) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTouchParameters)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTouchParameters(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for InjectedInputTouchInfo {
@@ -685,7 +685,7 @@ impl InputInjector {
         P0: ::windows_core::TryIntoParam<super::super::super::super::Foundation::Collections::IIterable<InjectedInputKeyboardInfo>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).InjectKeyboardInput)(::windows_core::Interface::as_raw(this), input.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.InjectKeyboardInput(input.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -694,11 +694,11 @@ impl InputInjector {
         P0: ::windows_core::TryIntoParam<super::super::super::super::Foundation::Collections::IIterable<InjectedInputMouseInfo>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).InjectMouseInput)(::windows_core::Interface::as_raw(this), input.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.InjectMouseInput(input.try_into_param()?.abi())).ok() }
     }
     pub fn InitializeTouchInjection(&self, visualmode: InjectedInputVisualizationMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).InitializeTouchInjection)(::windows_core::Interface::as_raw(this), visualmode).ok() }
+        unsafe { ::windows_core::vcall!(this.InitializeTouchInjection(visualmode)).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -707,56 +707,56 @@ impl InputInjector {
         P0: ::windows_core::TryIntoParam<super::super::super::super::Foundation::Collections::IIterable<InjectedInputTouchInfo>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).InjectTouchInput)(::windows_core::Interface::as_raw(this), input.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.InjectTouchInput(input.try_into_param()?.abi())).ok() }
     }
     pub fn UninitializeTouchInjection(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).UninitializeTouchInjection)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.UninitializeTouchInjection()).ok() }
     }
     pub fn InitializePenInjection(&self, visualmode: InjectedInputVisualizationMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).InitializePenInjection)(::windows_core::Interface::as_raw(this), visualmode).ok() }
+        unsafe { ::windows_core::vcall!(this.InitializePenInjection(visualmode)).ok() }
     }
     pub fn InjectPenInput<P0>(&self, input: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<InjectedInputPenInfo>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).InjectPenInput)(::windows_core::Interface::as_raw(this), input.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.InjectPenInput(input.into_param().abi())).ok() }
     }
     pub fn UninitializePenInjection(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).UninitializePenInjection)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.UninitializePenInjection()).ok() }
     }
     pub fn InjectShortcut(&self, shortcut: InjectedInputShortcut) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).InjectShortcut)(::windows_core::Interface::as_raw(this), shortcut).ok() }
+        unsafe { ::windows_core::vcall!(this.InjectShortcut(shortcut)).ok() }
     }
     pub fn InitializeGamepadInjection(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IInputInjector2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).InitializeGamepadInjection)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.InitializeGamepadInjection()).ok() }
     }
     pub fn InjectGamepadInput<P0>(&self, input: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<InjectedInputGamepadInfo>,
     {
         let this = &::windows_core::ComInterface::cast::<IInputInjector2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).InjectGamepadInput)(::windows_core::Interface::as_raw(this), input.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.InjectGamepadInput(input.into_param().abi())).ok() }
     }
     pub fn UninitializeGamepadInjection(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IInputInjector2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).UninitializeGamepadInjection)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.UninitializeGamepadInjection()).ok() }
     }
     pub fn TryCreate() -> ::windows_core::Result<InputInjector> {
         Self::IInputInjectorStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryCreate)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryCreate(&mut result__)).from_abi(result__)
         })
     }
     pub fn TryCreateForAppBroadcastOnly() -> ::windows_core::Result<InputInjector> {
         Self::IInputInjectorStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryCreateForAppBroadcastOnly)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryCreateForAppBroadcastOnly(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

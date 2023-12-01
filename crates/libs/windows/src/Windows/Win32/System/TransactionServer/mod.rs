@@ -12,7 +12,7 @@ impl ICatalog {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCollection)(::windows_core::Interface::as_raw(self), bstrcollname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCollection(bstrcollname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -21,13 +21,13 @@ impl ICatalog {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Connect)(::windows_core::Interface::as_raw(self), bstrconnectstring.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Connect(bstrconnectstring.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn MajorVersion(&self, retval: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).MajorVersion)(::windows_core::Interface::as_raw(self), retval).ok()
+        ::windows_core::vcall!(self.MajorVersion(retval)).ok()
     }
     pub unsafe fn MinorVersion(&self, retval: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).MinorVersion)(::windows_core::Interface::as_raw(self), retval).ok()
+        ::windows_core::vcall!(self.MinorVersion(retval)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -69,19 +69,19 @@ impl IComponentUtil {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).InstallComponent)(::windows_core::Interface::as_raw(self), bstrdllfile.into_param().abi(), bstrtypelibfile.into_param().abi(), bstrproxystubdllfile.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InstallComponent(bstrdllfile.into_param().abi(), bstrtypelibfile.into_param().abi(), bstrproxystubdllfile.into_param().abi())).ok()
     }
     pub unsafe fn ImportComponent<P0>(&self, bstrclsid: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ImportComponent)(::windows_core::Interface::as_raw(self), bstrclsid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ImportComponent(bstrclsid.into_param().abi())).ok()
     }
     pub unsafe fn ImportComponentByName<P0>(&self, bstrprogid: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ImportComponentByName)(::windows_core::Interface::as_raw(self), bstrprogid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ImportComponentByName(bstrprogid.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -90,7 +90,7 @@ impl IComponentUtil {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetCLSIDs)(::windows_core::Interface::as_raw(self), bstrdllfile.into_param().abi(), bstrtypelibfile.into_param().abi(), aclsids).ok()
+        ::windows_core::vcall!(self.GetCLSIDs(bstrdllfile.into_param().abi(), bstrtypelibfile.into_param().abi(), aclsids)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -128,20 +128,20 @@ impl IPackageUtil {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).InstallPackage)(::windows_core::Interface::as_raw(self), bstrpackagefile.into_param().abi(), bstrinstallpath.into_param().abi(), loptions).ok()
+        ::windows_core::vcall!(self.InstallPackage(bstrpackagefile.into_param().abi(), bstrinstallpath.into_param().abi(), loptions)).ok()
     }
     pub unsafe fn ExportPackage<P0, P1>(&self, bstrpackageid: P0, bstrpackagefile: P1, loptions: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ExportPackage)(::windows_core::Interface::as_raw(self), bstrpackageid.into_param().abi(), bstrpackagefile.into_param().abi(), loptions).ok()
+        ::windows_core::vcall!(self.ExportPackage(bstrpackageid.into_param().abi(), bstrpackagefile.into_param().abi(), loptions)).ok()
     }
     pub unsafe fn ShutdownPackage<P0>(&self, bstrpackageid: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ShutdownPackage)(::windows_core::Interface::as_raw(self), bstrpackageid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ShutdownPackage(bstrpackageid.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -176,7 +176,7 @@ impl IRemoteComponentUtil {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).InstallRemoteComponent)(::windows_core::Interface::as_raw(self), bstrserver.into_param().abi(), bstrpackageid.into_param().abi(), bstrclsid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InstallRemoteComponent(bstrserver.into_param().abi(), bstrpackageid.into_param().abi(), bstrclsid.into_param().abi())).ok()
     }
     pub unsafe fn InstallRemoteComponentByName<P0, P1, P2>(&self, bstrserver: P0, bstrpackagename: P1, bstrprogid: P2) -> ::windows_core::Result<()>
     where
@@ -184,7 +184,7 @@ impl IRemoteComponentUtil {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).InstallRemoteComponentByName)(::windows_core::Interface::as_raw(self), bstrserver.into_param().abi(), bstrpackagename.into_param().abi(), bstrprogid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InstallRemoteComponentByName(bstrserver.into_param().abi(), bstrpackagename.into_param().abi(), bstrprogid.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -216,13 +216,13 @@ impl IRoleAssociationUtil {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).AssociateRole)(::windows_core::Interface::as_raw(self), bstrroleid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AssociateRole(bstrroleid.into_param().abi())).ok()
     }
     pub unsafe fn AssociateRoleByName<P0>(&self, bstrrolename: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).AssociateRoleByName)(::windows_core::Interface::as_raw(self), bstrrolename.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AssociateRoleByName(bstrrolename.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]

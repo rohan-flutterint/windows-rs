@@ -44,23 +44,23 @@ impl IFilter {
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
     pub unsafe fn Init(&self, grfflags: u32, aattributes: &[FULLPROPSPEC], pflags: *mut u32) -> i32 {
-        (::windows_core::Interface::vtable(self).Init)(::windows_core::Interface::as_raw(self), grfflags, aattributes.len().try_into().unwrap(), ::core::mem::transmute(aattributes.as_ptr()), pflags)
+        ::windows_core::vcall!(self.Init(grfflags, aattributes.len().try_into().unwrap(), ::core::mem::transmute(aattributes.as_ptr()), pflags))
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
     pub unsafe fn GetChunk(&self, pstat: *mut STAT_CHUNK) -> i32 {
-        (::windows_core::Interface::vtable(self).GetChunk)(::windows_core::Interface::as_raw(self), pstat)
+        ::windows_core::vcall!(self.GetChunk(pstat))
     }
     pub unsafe fn GetText(&self, pcwcbuffer: *mut u32, awcbuffer: ::windows_core::PWSTR) -> i32 {
-        (::windows_core::Interface::vtable(self).GetText)(::windows_core::Interface::as_raw(self), pcwcbuffer, ::core::mem::transmute(awcbuffer))
+        ::windows_core::vcall!(self.GetText(pcwcbuffer, ::core::mem::transmute(awcbuffer)))
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
     pub unsafe fn GetValue(&self, pppropvalue: *mut *mut super::super::System::Com::StructuredStorage::PROPVARIANT) -> i32 {
-        (::windows_core::Interface::vtable(self).GetValue)(::windows_core::Interface::as_raw(self), pppropvalue)
+        ::windows_core::vcall!(self.GetValue(pppropvalue))
     }
     pub unsafe fn BindRegion(&self, origpos: FILTERREGION, riid: *const ::windows_core::GUID, ppunk: *mut *mut ::core::ffi::c_void) -> i32 {
-        (::windows_core::Interface::vtable(self).BindRegion)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(origpos), riid, ppunk)
+        ::windows_core::vcall!(self.BindRegion(::core::mem::transmute(origpos), riid, ppunk))
     }
 }
 ::windows_core::imp::interface_hierarchy!(IFilter, ::windows_core::IUnknown);
@@ -98,13 +98,13 @@ impl IPhraseSink {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).PutSmallPhrase)(::windows_core::Interface::as_raw(self), pwcnoun.into_param().abi(), cwcnoun, pwcmodifier.into_param().abi(), cwcmodifier, ulattachmenttype).ok()
+        ::windows_core::vcall!(self.PutSmallPhrase(pwcnoun.into_param().abi(), cwcnoun, pwcmodifier.into_param().abi(), cwcmodifier, ulattachmenttype)).ok()
     }
     pub unsafe fn PutPhrase<P0>(&self, pwcphrase: P0, cwcphrase: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).PutPhrase)(::windows_core::Interface::as_raw(self), pwcphrase.into_param().abi(), cwcphrase).ok()
+        ::windows_core::vcall!(self.PutPhrase(pwcphrase.into_param().abi(), cwcphrase)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPhraseSink, ::windows_core::IUnknown);

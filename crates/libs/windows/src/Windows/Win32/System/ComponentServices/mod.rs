@@ -69,23 +69,23 @@ impl ContextInfo {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsInTransaction(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsInTransaction)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsInTransaction(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetTransaction(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetTransaction)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetTransaction(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetTransactionId(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetTransactionId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetTransactionId(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetActivityId(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetActivityId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetActivityId(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetContextId(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetContextId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetContextId(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -123,35 +123,35 @@ impl ContextInfo2 {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsInTransaction(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.IsInTransaction)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.IsInTransaction(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetTransaction(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetTransaction)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetTransaction(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetTransactionId(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetTransactionId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetTransactionId(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetActivityId(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetActivityId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetActivityId(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetContextId(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetContextId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetContextId(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPartitionId(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPartitionId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPartitionId(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetApplicationId(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetApplicationId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetApplicationId(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetApplicationInstanceId(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetApplicationInstanceId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetApplicationInstanceId(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -184,13 +184,13 @@ impl IAppDomainHelper {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), punkad.into_param().abi(), __midl__iappdomainhelper0000, ppool).ok()
+        ::windows_core::vcall!(self.Initialize(punkad.into_param().abi(), __midl__iappdomainhelper0000, ppool)).ok()
     }
     pub unsafe fn DoCallback<P0>(&self, punkad: P0, __midl__iappdomainhelper0001: isize, ppool: *mut ::core::ffi::c_void) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).DoCallback)(::windows_core::Interface::as_raw(self), punkad.into_param().abi(), __midl__iappdomainhelper0001, ppool).ok()
+        ::windows_core::vcall!(self.DoCallback(punkad.into_param().abi(), __midl__iappdomainhelper0001, ppool)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -227,7 +227,7 @@ impl IAssemblyLocator {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetModules)(::windows_core::Interface::as_raw(self), applicationdir.into_param().abi(), applicationname.into_param().abi(), assemblyname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetModules(applicationdir.into_param().abi(), applicationname.into_param().abi(), assemblyname.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -255,7 +255,7 @@ pub struct IAssemblyLocator_Vtbl {
 pub struct IAsyncErrorNotify(::windows_core::IUnknown);
 impl IAsyncErrorNotify {
     pub unsafe fn OnError(&self, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnError)(::windows_core::Interface::as_raw(self), hr).ok()
+        ::windows_core::vcall!(self.OnError(hr)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAsyncErrorNotify, ::windows_core::IUnknown);
@@ -285,7 +285,7 @@ impl ICOMAdminCatalog {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCollection)(::windows_core::Interface::as_raw(self), bstrcollname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCollection(bstrcollname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -294,15 +294,15 @@ impl ICOMAdminCatalog {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Connect)(::windows_core::Interface::as_raw(self), bstrcatalogservername.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Connect(bstrcatalogservername.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn MajorVersion(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).MajorVersion)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.MajorVersion(&mut result__)).from_abi(result__)
     }
     pub unsafe fn MinorVersion(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).MinorVersion)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.MinorVersion(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -311,14 +311,14 @@ impl ICOMAdminCatalog {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCollectionByQuery)(::windows_core::Interface::as_raw(self), bstrcollname.into_param().abi(), ppsavarquery, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCollectionByQuery(bstrcollname.into_param().abi(), ppsavarquery, &mut result__)).from_abi(result__)
     }
     pub unsafe fn ImportComponent<P0, P1>(&self, bstrapplidorname: P0, bstrclsidorprogid: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ImportComponent)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), bstrclsidorprogid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ImportComponent(bstrapplidorname.into_param().abi(), bstrclsidorprogid.into_param().abi())).ok()
     }
     pub unsafe fn InstallComponent<P0, P1, P2, P3>(&self, bstrapplidorname: P0, bstrdll: P1, bstrtlb: P2, bstrpsdll: P3) -> ::windows_core::Result<()>
     where
@@ -327,20 +327,20 @@ impl ICOMAdminCatalog {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).InstallComponent)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), bstrdll.into_param().abi(), bstrtlb.into_param().abi(), bstrpsdll.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InstallComponent(bstrapplidorname.into_param().abi(), bstrdll.into_param().abi(), bstrtlb.into_param().abi(), bstrpsdll.into_param().abi())).ok()
     }
     pub unsafe fn ShutdownApplication<P0>(&self, bstrapplidorname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ShutdownApplication)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ShutdownApplication(bstrapplidorname.into_param().abi())).ok()
     }
     pub unsafe fn ExportApplication<P0, P1>(&self, bstrapplidorname: P0, bstrapplicationfile: P1, loptions: COMAdminApplicationExportOptions) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ExportApplication)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), bstrapplicationfile.into_param().abi(), loptions).ok()
+        ::windows_core::vcall!(self.ExportApplication(bstrapplidorname.into_param().abi(), bstrapplicationfile.into_param().abi(), loptions)).ok()
     }
     pub unsafe fn InstallApplication<P0, P1, P2, P3, P4>(&self, bstrapplicationfile: P0, bstrdestinationdirectory: P1, loptions: COMAdminApplicationInstallOptions, bstruserid: P2, bstrpassword: P3, bstrrsn: P4) -> ::windows_core::Result<()>
     where
@@ -350,22 +350,22 @@ impl ICOMAdminCatalog {
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
         P4: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).InstallApplication)(::windows_core::Interface::as_raw(self), bstrapplicationfile.into_param().abi(), bstrdestinationdirectory.into_param().abi(), loptions, bstruserid.into_param().abi(), bstrpassword.into_param().abi(), bstrrsn.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InstallApplication(bstrapplicationfile.into_param().abi(), bstrdestinationdirectory.into_param().abi(), loptions, bstruserid.into_param().abi(), bstrpassword.into_param().abi(), bstrrsn.into_param().abi())).ok()
     }
     pub unsafe fn StopRouter(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).StopRouter)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.StopRouter()).ok()
     }
     pub unsafe fn RefreshRouter(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RefreshRouter)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.RefreshRouter()).ok()
     }
     pub unsafe fn StartRouter(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).StartRouter)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.StartRouter()).ok()
     }
     pub unsafe fn Reserved1(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reserved1)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reserved1()).ok()
     }
     pub unsafe fn Reserved2(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reserved2)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reserved2()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -373,7 +373,7 @@ impl ICOMAdminCatalog {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).InstallMultipleComponents)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids).ok()
+        ::windows_core::vcall!(self.InstallMultipleComponents(bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -381,22 +381,22 @@ impl ICOMAdminCatalog {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetMultipleComponentsInfo)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids, ppsavarclassnames, ppsavarfileflags, ppsavarcomponentflags).ok()
+        ::windows_core::vcall!(self.GetMultipleComponentsInfo(bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids, ppsavarclassnames, ppsavarfileflags, ppsavarcomponentflags)).ok()
     }
     pub unsafe fn RefreshComponents(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RefreshComponents)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.RefreshComponents()).ok()
     }
     pub unsafe fn BackupREGDB<P0>(&self, bstrbackupfilepath: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).BackupREGDB)(::windows_core::Interface::as_raw(self), bstrbackupfilepath.into_param().abi()).ok()
+        ::windows_core::vcall!(self.BackupREGDB(bstrbackupfilepath.into_param().abi())).ok()
     }
     pub unsafe fn RestoreREGDB<P0>(&self, bstrbackupfilepath: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).RestoreREGDB)(::windows_core::Interface::as_raw(self), bstrbackupfilepath.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RestoreREGDB(bstrbackupfilepath.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -404,17 +404,17 @@ impl ICOMAdminCatalog {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).QueryApplicationFile)(::windows_core::Interface::as_raw(self), bstrapplicationfile.into_param().abi(), ::core::mem::transmute(pbstrapplicationname), ::core::mem::transmute(pbstrapplicationdescription), pbhasusers, pbisproxy, ppsavarfilenames).ok()
+        ::windows_core::vcall!(self.QueryApplicationFile(bstrapplicationfile.into_param().abi(), ::core::mem::transmute(pbstrapplicationname), ::core::mem::transmute(pbstrapplicationdescription), pbhasusers, pbisproxy, ppsavarfilenames)).ok()
     }
     pub unsafe fn StartApplication<P0>(&self, bstrapplidorname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).StartApplication)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.StartApplication(bstrapplidorname.into_param().abi())).ok()
     }
     pub unsafe fn ServiceCheck(&self, lservice: i32) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ServiceCheck)(::windows_core::Interface::as_raw(self), lservice, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ServiceCheck(lservice, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -422,7 +422,7 @@ impl ICOMAdminCatalog {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).InstallMultipleEventClasses)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids).ok()
+        ::windows_core::vcall!(self.InstallMultipleEventClasses(bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids)).ok()
     }
     pub unsafe fn InstallEventClass<P0, P1, P2, P3>(&self, bstrapplidorname: P0, bstrdll: P1, bstrtlb: P2, bstrpsdll: P3) -> ::windows_core::Result<()>
     where
@@ -431,7 +431,7 @@ impl ICOMAdminCatalog {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).InstallEventClass)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), bstrdll.into_param().abi(), bstrtlb.into_param().abi(), bstrpsdll.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InstallEventClass(bstrapplidorname.into_param().abi(), bstrdll.into_param().abi(), bstrtlb.into_param().abi(), bstrpsdll.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -439,7 +439,7 @@ impl ICOMAdminCatalog {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetEventClassesForIID)(::windows_core::Interface::as_raw(self), bstriid.into_param().abi(), ppsavarclsids, ppsavarprogids, ppsavardescriptions).ok()
+        ::windows_core::vcall!(self.GetEventClassesForIID(bstriid.into_param().abi(), ppsavarclsids, ppsavarprogids, ppsavardescriptions)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -522,7 +522,7 @@ impl ICOMAdminCatalog2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetCollection)(::windows_core::Interface::as_raw(self), bstrcollname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetCollection(bstrcollname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -531,15 +531,15 @@ impl ICOMAdminCatalog2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Connect)(::windows_core::Interface::as_raw(self), bstrcatalogservername.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Connect(bstrcatalogservername.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn MajorVersion(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.MajorVersion)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.MajorVersion(&mut result__)).from_abi(result__)
     }
     pub unsafe fn MinorVersion(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.MinorVersion)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.MinorVersion(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -548,14 +548,14 @@ impl ICOMAdminCatalog2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetCollectionByQuery)(::windows_core::Interface::as_raw(self), bstrcollname.into_param().abi(), ppsavarquery, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetCollectionByQuery(bstrcollname.into_param().abi(), ppsavarquery, &mut result__)).from_abi(result__)
     }
     pub unsafe fn ImportComponent<P0, P1>(&self, bstrapplidorname: P0, bstrclsidorprogid: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.ImportComponent)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), bstrclsidorprogid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ImportComponent(bstrapplidorname.into_param().abi(), bstrclsidorprogid.into_param().abi())).ok()
     }
     pub unsafe fn InstallComponent<P0, P1, P2, P3>(&self, bstrapplidorname: P0, bstrdll: P1, bstrtlb: P2, bstrpsdll: P3) -> ::windows_core::Result<()>
     where
@@ -564,20 +564,20 @@ impl ICOMAdminCatalog2 {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.InstallComponent)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), bstrdll.into_param().abi(), bstrtlb.into_param().abi(), bstrpsdll.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.InstallComponent(bstrapplidorname.into_param().abi(), bstrdll.into_param().abi(), bstrtlb.into_param().abi(), bstrpsdll.into_param().abi())).ok()
     }
     pub unsafe fn ShutdownApplication<P0>(&self, bstrapplidorname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.ShutdownApplication)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ShutdownApplication(bstrapplidorname.into_param().abi())).ok()
     }
     pub unsafe fn ExportApplication<P0, P1>(&self, bstrapplidorname: P0, bstrapplicationfile: P1, loptions: COMAdminApplicationExportOptions) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.ExportApplication)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), bstrapplicationfile.into_param().abi(), loptions).ok()
+        ::windows_core::vcall!(self.base__.ExportApplication(bstrapplidorname.into_param().abi(), bstrapplicationfile.into_param().abi(), loptions)).ok()
     }
     pub unsafe fn InstallApplication<P0, P1, P2, P3, P4>(&self, bstrapplicationfile: P0, bstrdestinationdirectory: P1, loptions: COMAdminApplicationInstallOptions, bstruserid: P2, bstrpassword: P3, bstrrsn: P4) -> ::windows_core::Result<()>
     where
@@ -587,22 +587,22 @@ impl ICOMAdminCatalog2 {
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
         P4: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.InstallApplication)(::windows_core::Interface::as_raw(self), bstrapplicationfile.into_param().abi(), bstrdestinationdirectory.into_param().abi(), loptions, bstruserid.into_param().abi(), bstrpassword.into_param().abi(), bstrrsn.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.InstallApplication(bstrapplicationfile.into_param().abi(), bstrdestinationdirectory.into_param().abi(), loptions, bstruserid.into_param().abi(), bstrpassword.into_param().abi(), bstrrsn.into_param().abi())).ok()
     }
     pub unsafe fn StopRouter(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.StopRouter)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.StopRouter()).ok()
     }
     pub unsafe fn RefreshRouter(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.RefreshRouter)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.RefreshRouter()).ok()
     }
     pub unsafe fn StartRouter(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.StartRouter)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.StartRouter()).ok()
     }
     pub unsafe fn Reserved1(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Reserved1)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Reserved1()).ok()
     }
     pub unsafe fn Reserved2(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Reserved2)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Reserved2()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -610,7 +610,7 @@ impl ICOMAdminCatalog2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.InstallMultipleComponents)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids).ok()
+        ::windows_core::vcall!(self.base__.InstallMultipleComponents(bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -618,22 +618,22 @@ impl ICOMAdminCatalog2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetMultipleComponentsInfo)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids, ppsavarclassnames, ppsavarfileflags, ppsavarcomponentflags).ok()
+        ::windows_core::vcall!(self.base__.GetMultipleComponentsInfo(bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids, ppsavarclassnames, ppsavarfileflags, ppsavarcomponentflags)).ok()
     }
     pub unsafe fn RefreshComponents(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.RefreshComponents)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.RefreshComponents()).ok()
     }
     pub unsafe fn BackupREGDB<P0>(&self, bstrbackupfilepath: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.BackupREGDB)(::windows_core::Interface::as_raw(self), bstrbackupfilepath.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.BackupREGDB(bstrbackupfilepath.into_param().abi())).ok()
     }
     pub unsafe fn RestoreREGDB<P0>(&self, bstrbackupfilepath: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.RestoreREGDB)(::windows_core::Interface::as_raw(self), bstrbackupfilepath.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.RestoreREGDB(bstrbackupfilepath.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -641,17 +641,17 @@ impl ICOMAdminCatalog2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.QueryApplicationFile)(::windows_core::Interface::as_raw(self), bstrapplicationfile.into_param().abi(), ::core::mem::transmute(pbstrapplicationname), ::core::mem::transmute(pbstrapplicationdescription), pbhasusers, pbisproxy, ppsavarfilenames).ok()
+        ::windows_core::vcall!(self.base__.QueryApplicationFile(bstrapplicationfile.into_param().abi(), ::core::mem::transmute(pbstrapplicationname), ::core::mem::transmute(pbstrapplicationdescription), pbhasusers, pbisproxy, ppsavarfilenames)).ok()
     }
     pub unsafe fn StartApplication<P0>(&self, bstrapplidorname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.StartApplication)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.StartApplication(bstrapplidorname.into_param().abi())).ok()
     }
     pub unsafe fn ServiceCheck(&self, lservice: i32) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.ServiceCheck)(::windows_core::Interface::as_raw(self), lservice, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.ServiceCheck(lservice, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -659,7 +659,7 @@ impl ICOMAdminCatalog2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.InstallMultipleEventClasses)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids).ok()
+        ::windows_core::vcall!(self.base__.InstallMultipleEventClasses(bstrapplidorname.into_param().abi(), ppsavarfilenames, ppsavarclsids)).ok()
     }
     pub unsafe fn InstallEventClass<P0, P1, P2, P3>(&self, bstrapplidorname: P0, bstrdll: P1, bstrtlb: P2, bstrpsdll: P3) -> ::windows_core::Result<()>
     where
@@ -668,7 +668,7 @@ impl ICOMAdminCatalog2 {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.InstallEventClass)(::windows_core::Interface::as_raw(self), bstrapplidorname.into_param().abi(), bstrdll.into_param().abi(), bstrtlb.into_param().abi(), bstrpsdll.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.InstallEventClass(bstrapplidorname.into_param().abi(), bstrdll.into_param().abi(), bstrtlb.into_param().abi(), bstrpsdll.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -676,7 +676,7 @@ impl ICOMAdminCatalog2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetEventClassesForIID)(::windows_core::Interface::as_raw(self), bstriid.into_param().abi(), ppsavarclsids, ppsavarprogids, ppsavardescriptions).ok()
+        ::windows_core::vcall!(self.base__.GetEventClassesForIID(bstriid.into_param().abi(), ppsavarclsids, ppsavarprogids, ppsavardescriptions)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -685,37 +685,37 @@ impl ICOMAdminCatalog2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCollectionByQuery2)(::windows_core::Interface::as_raw(self), bstrcollectionname.into_param().abi(), pvarquerystrings, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCollectionByQuery2(bstrcollectionname.into_param().abi(), pvarquerystrings, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetApplicationInstanceIDFromProcessID(&self, lprocessid: i32) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetApplicationInstanceIDFromProcessID)(::windows_core::Interface::as_raw(self), lprocessid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetApplicationInstanceIDFromProcessID(lprocessid, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn ShutdownApplicationInstances(&self, pvarapplicationinstanceid: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ShutdownApplicationInstances)(::windows_core::Interface::as_raw(self), pvarapplicationinstanceid).ok()
+        ::windows_core::vcall!(self.ShutdownApplicationInstances(pvarapplicationinstanceid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn PauseApplicationInstances(&self, pvarapplicationinstanceid: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).PauseApplicationInstances)(::windows_core::Interface::as_raw(self), pvarapplicationinstanceid).ok()
+        ::windows_core::vcall!(self.PauseApplicationInstances(pvarapplicationinstanceid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn ResumeApplicationInstances(&self, pvarapplicationinstanceid: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ResumeApplicationInstances)(::windows_core::Interface::as_raw(self), pvarapplicationinstanceid).ok()
+        ::windows_core::vcall!(self.ResumeApplicationInstances(pvarapplicationinstanceid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn RecycleApplicationInstances(&self, pvarapplicationinstanceid: *const super::Variant::VARIANT, lreasoncode: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RecycleApplicationInstances)(::windows_core::Interface::as_raw(self), pvarapplicationinstanceid, lreasoncode).ok()
+        ::windows_core::vcall!(self.RecycleApplicationInstances(pvarapplicationinstanceid, lreasoncode)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn AreApplicationInstancesPaused(&self, pvarapplicationinstanceid: *const super::Variant::VARIANT) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AreApplicationInstancesPaused)(::windows_core::Interface::as_raw(self), pvarapplicationinstanceid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AreApplicationInstancesPaused(pvarapplicationinstanceid, &mut result__)).from_abi(result__)
     }
     pub unsafe fn DumpApplicationInstance<P0, P1>(&self, bstrapplicationinstanceid: P0, bstrdirectory: P1, lmaximages: i32) -> ::windows_core::Result<::windows_core::BSTR>
     where
@@ -723,13 +723,13 @@ impl ICOMAdminCatalog2 {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DumpApplicationInstance)(::windows_core::Interface::as_raw(self), bstrapplicationinstanceid.into_param().abi(), bstrdirectory.into_param().abi(), lmaximages, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DumpApplicationInstance(bstrapplicationinstanceid.into_param().abi(), bstrdirectory.into_param().abi(), lmaximages, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsApplicationInstanceDumpSupported(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsApplicationInstanceDumpSupported)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsApplicationInstanceDumpSupported(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -744,48 +744,48 @@ impl ICOMAdminCatalog2 {
         P6: ::windows_core::IntoParam<::windows_core::BSTR>,
         P7: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
     {
-        (::windows_core::Interface::vtable(self).CreateServiceForApplication)(::windows_core::Interface::as_raw(self), bstrapplicationidorname.into_param().abi(), bstrservicename.into_param().abi(), bstrstarttype.into_param().abi(), bstrerrorcontrol.into_param().abi(), bstrdependencies.into_param().abi(), bstrrunas.into_param().abi(), bstrpassword.into_param().abi(), bdesktopok.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateServiceForApplication(bstrapplicationidorname.into_param().abi(), bstrservicename.into_param().abi(), bstrstarttype.into_param().abi(), bstrerrorcontrol.into_param().abi(), bstrdependencies.into_param().abi(), bstrrunas.into_param().abi(), bstrpassword.into_param().abi(), bdesktopok.into_param().abi())).ok()
     }
     pub unsafe fn DeleteServiceForApplication<P0>(&self, bstrapplicationidorname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeleteServiceForApplication)(::windows_core::Interface::as_raw(self), bstrapplicationidorname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeleteServiceForApplication(bstrapplicationidorname.into_param().abi())).ok()
     }
     pub unsafe fn GetPartitionID<P0>(&self, bstrapplicationidorname: P0) -> ::windows_core::Result<::windows_core::BSTR>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPartitionID)(::windows_core::Interface::as_raw(self), bstrapplicationidorname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPartitionID(bstrapplicationidorname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPartitionName<P0>(&self, bstrapplicationidorname: P0) -> ::windows_core::Result<::windows_core::BSTR>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPartitionName)(::windows_core::Interface::as_raw(self), bstrapplicationidorname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPartitionName(bstrapplicationidorname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetCurrentPartition<P0>(&self, bstrpartitionidorname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetCurrentPartition)(::windows_core::Interface::as_raw(self), bstrpartitionidorname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetCurrentPartition(bstrpartitionidorname.into_param().abi())).ok()
     }
     pub unsafe fn CurrentPartitionID(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CurrentPartitionID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CurrentPartitionID(&mut result__)).from_abi(result__)
     }
     pub unsafe fn CurrentPartitionName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CurrentPartitionName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CurrentPartitionName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GlobalPartitionID(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GlobalPartitionID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GlobalPartitionID(&mut result__)).from_abi(result__)
     }
     pub unsafe fn FlushPartitionCache(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FlushPartitionCache)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.FlushPartitionCache()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -794,7 +794,7 @@ impl ICOMAdminCatalog2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).CopyApplications)(::windows_core::Interface::as_raw(self), bstrsourcepartitionidorname.into_param().abi(), pvarapplicationid, bstrdestinationpartitionidorname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CopyApplications(bstrsourcepartitionidorname.into_param().abi(), pvarapplicationid, bstrdestinationpartitionidorname.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -803,7 +803,7 @@ impl ICOMAdminCatalog2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).CopyComponents)(::windows_core::Interface::as_raw(self), bstrsourceapplicationidorname.into_param().abi(), pvarclsidorprogid, bstrdestinationapplicationidorname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CopyComponents(bstrsourceapplicationidorname.into_param().abi(), pvarclsidorprogid, bstrdestinationapplicationidorname.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -812,7 +812,7 @@ impl ICOMAdminCatalog2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).MoveComponents)(::windows_core::Interface::as_raw(self), bstrsourceapplicationidorname.into_param().abi(), pvarclsidorprogid, bstrdestinationapplicationidorname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.MoveComponents(bstrsourceapplicationidorname.into_param().abi(), pvarclsidorprogid, bstrdestinationapplicationidorname.into_param().abi())).ok()
     }
     pub unsafe fn AliasComponent<P0, P1, P2, P3, P4>(&self, bstrsrcapplicationidorname: P0, bstrclsidorprogid: P1, bstrdestapplicationidorname: P2, bstrnewprogid: P3, bstrnewclsid: P4) -> ::windows_core::Result<()>
     where
@@ -822,14 +822,14 @@ impl ICOMAdminCatalog2 {
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
         P4: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).AliasComponent)(::windows_core::Interface::as_raw(self), bstrsrcapplicationidorname.into_param().abi(), bstrclsidorprogid.into_param().abi(), bstrdestapplicationidorname.into_param().abi(), bstrnewprogid.into_param().abi(), bstrnewclsid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AliasComponent(bstrsrcapplicationidorname.into_param().abi(), bstrclsidorprogid.into_param().abi(), bstrdestapplicationidorname.into_param().abi(), bstrnewprogid.into_param().abi(), bstrnewclsid.into_param().abi())).ok()
     }
     pub unsafe fn IsSafeToDelete<P0>(&self, bstrdllname: P0) -> ::windows_core::Result<COMAdminInUse>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsSafeToDelete)(::windows_core::Interface::as_raw(self), bstrdllname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsSafeToDelete(bstrdllname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -837,7 +837,7 @@ impl ICOMAdminCatalog2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ImportUnconfiguredComponents)(::windows_core::Interface::as_raw(self), bstrapplicationidorname.into_param().abi(), pvarclsidorprogid, pvarcomponenttype).ok()
+        ::windows_core::vcall!(self.ImportUnconfiguredComponents(bstrapplicationidorname.into_param().abi(), pvarclsidorprogid, pvarcomponenttype)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -845,7 +845,7 @@ impl ICOMAdminCatalog2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).PromoteUnconfiguredComponents)(::windows_core::Interface::as_raw(self), bstrapplicationidorname.into_param().abi(), pvarclsidorprogid, pvarcomponenttype).ok()
+        ::windows_core::vcall!(self.PromoteUnconfiguredComponents(bstrapplicationidorname.into_param().abi(), pvarclsidorprogid, pvarcomponenttype)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -853,20 +853,20 @@ impl ICOMAdminCatalog2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ImportComponents)(::windows_core::Interface::as_raw(self), bstrapplicationidorname.into_param().abi(), pvarclsidorprogid, pvarcomponenttype).ok()
+        ::windows_core::vcall!(self.ImportComponents(bstrapplicationidorname.into_param().abi(), pvarclsidorprogid, pvarcomponenttype)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Is64BitCatalogServer(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Is64BitCatalogServer)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Is64BitCatalogServer(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ExportPartition<P0, P1>(&self, bstrpartitionidorname: P0, bstrpartitionfilename: P1, loptions: COMAdminApplicationExportOptions) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ExportPartition)(::windows_core::Interface::as_raw(self), bstrpartitionidorname.into_param().abi(), bstrpartitionfilename.into_param().abi(), loptions).ok()
+        ::windows_core::vcall!(self.ExportPartition(bstrpartitionidorname.into_param().abi(), bstrpartitionfilename.into_param().abi(), loptions)).ok()
     }
     pub unsafe fn InstallPartition<P0, P1, P2, P3, P4>(&self, bstrfilename: P0, bstrdestdirectory: P1, loptions: COMAdminApplicationInstallOptions, bstruserid: P2, bstrpassword: P3, bstrrsn: P4) -> ::windows_core::Result<()>
     where
@@ -876,7 +876,7 @@ impl ICOMAdminCatalog2 {
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
         P4: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).InstallPartition)(::windows_core::Interface::as_raw(self), bstrfilename.into_param().abi(), bstrdestdirectory.into_param().abi(), loptions, bstruserid.into_param().abi(), bstrpassword.into_param().abi(), bstrrsn.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InstallPartition(bstrfilename.into_param().abi(), bstrdestdirectory.into_param().abi(), loptions, bstruserid.into_param().abi(), bstrpassword.into_param().abi(), bstrrsn.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -885,14 +885,14 @@ impl ICOMAdminCatalog2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueryApplicationFile2)(::windows_core::Interface::as_raw(self), bstrapplicationfile.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueryApplicationFile2(bstrapplicationfile.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetComponentVersionCount<P0>(&self, bstrclsidorprogid: P0) -> ::windows_core::Result<i32>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetComponentVersionCount)(::windows_core::Interface::as_raw(self), bstrclsidorprogid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetComponentVersionCount(bstrclsidorprogid.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -995,16 +995,16 @@ pub struct ICOMAdminCatalog2_Vtbl {
 pub struct ICOMLBArguments(::windows_core::IUnknown);
 impl ICOMLBArguments {
     pub unsafe fn GetCLSID(&self, pclsid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCLSID)(::windows_core::Interface::as_raw(self), pclsid).ok()
+        ::windows_core::vcall!(self.GetCLSID(pclsid)).ok()
     }
     pub unsafe fn SetCLSID(&self, pclsid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetCLSID)(::windows_core::Interface::as_raw(self), pclsid).ok()
+        ::windows_core::vcall!(self.SetCLSID(pclsid)).ok()
     }
     pub unsafe fn GetMachineName(&self, szservername: &mut [u16]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetMachineName)(::windows_core::Interface::as_raw(self), szservername.len().try_into().unwrap(), ::core::mem::transmute(szservername.as_ptr())).ok()
+        ::windows_core::vcall!(self.GetMachineName(szservername.len().try_into().unwrap(), ::core::mem::transmute(szservername.as_ptr()))).ok()
     }
     pub unsafe fn SetMachineName(&self, szservername: &[u16]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMachineName)(::windows_core::Interface::as_raw(self), szservername.len().try_into().unwrap(), ::core::mem::transmute(szservername.as_ptr())).ok()
+        ::windows_core::vcall!(self.SetMachineName(szservername.len().try_into().unwrap(), ::core::mem::transmute(szservername.as_ptr()))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICOMLBArguments, ::windows_core::IUnknown);
@@ -1032,33 +1032,33 @@ pub struct ICatalogCollection(::windows_core::IUnknown);
 impl ICatalogCollection {
     pub unsafe fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self)._NewEnum)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self._NewEnum(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn get_Item(&self, lindex: i32) -> ::windows_core::Result<super::Com::IDispatch> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).get_Item)(::windows_core::Interface::as_raw(self), lindex, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.get_Item(lindex, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Count(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Remove(&self, lindex: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Remove)(::windows_core::Interface::as_raw(self), lindex).ok()
+        ::windows_core::vcall!(self.Remove(lindex)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Add(&self) -> ::windows_core::Result<super::Com::IDispatch> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Add)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Add(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Populate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Populate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Populate()).ok()
     }
     pub unsafe fn SaveChanges(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SaveChanges)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SaveChanges(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1067,50 +1067,50 @@ impl ICatalogCollection {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCollection)(::windows_core::Interface::as_raw(self), bstrcollname.into_param().abi(), ::core::mem::transmute(varobjectkey), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCollection(bstrcollname.into_param().abi(), ::core::mem::transmute(varobjectkey), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn Name(&self) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Name(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn AddEnabled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AddEnabled)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AddEnabled(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn RemoveEnabled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RemoveEnabled)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RemoveEnabled(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetUtilInterface(&self) -> ::windows_core::Result<super::Com::IDispatch> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUtilInterface)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUtilInterface(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DataStoreMajorVersion(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DataStoreMajorVersion)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DataStoreMajorVersion(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DataStoreMinorVersion(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DataStoreMinorVersion)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DataStoreMinorVersion(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn PopulateByKey(&self, psakeys: *const super::Com::SAFEARRAY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).PopulateByKey)(::windows_core::Interface::as_raw(self), psakeys).ok()
+        ::windows_core::vcall!(self.PopulateByKey(psakeys)).ok()
     }
     pub unsafe fn PopulateByQuery<P0>(&self, bstrquerystring: P0, lquerytype: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).PopulateByQuery)(::windows_core::Interface::as_raw(self), bstrquerystring.into_param().abi(), lquerytype).ok()
+        ::windows_core::vcall!(self.PopulateByQuery(bstrquerystring.into_param().abi(), lquerytype)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -1183,7 +1183,7 @@ impl ICatalogObject {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).get_Value)(::windows_core::Interface::as_raw(self), bstrpropname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.get_Value(bstrpropname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1191,19 +1191,19 @@ impl ICatalogObject {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).put_Value)(::windows_core::Interface::as_raw(self), bstrpropname.into_param().abi(), ::core::mem::transmute(val)).ok()
+        ::windows_core::vcall!(self.put_Value(bstrpropname.into_param().abi(), ::core::mem::transmute(val))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn Key(&self) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Key)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Key(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn Name(&self) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Name(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1212,13 +1212,13 @@ impl ICatalogObject {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsPropertyReadOnly)(::windows_core::Interface::as_raw(self), bstrpropname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsPropertyReadOnly(bstrpropname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Valid(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Valid)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Valid(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1227,7 +1227,7 @@ impl ICatalogObject {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsPropertyWriteOnly)(::windows_core::Interface::as_raw(self), bstrpropname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsPropertyWriteOnly(bstrpropname.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -1284,7 +1284,7 @@ impl ICheckSxsConfig {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).IsSameSxsConfig)(::windows_core::Interface::as_raw(self), wszsxsname.into_param().abi(), wszsxsdirectory.into_param().abi(), wszsxsappname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.IsSameSxsConfig(wszsxsname.into_param().abi(), wszsxsdirectory.into_param().abi(), wszsxsappname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICheckSxsConfig, ::windows_core::IUnknown);
@@ -1305,25 +1305,25 @@ pub struct ICheckSxsConfig_Vtbl {
 pub struct IComActivityEvents(::windows_core::IUnknown);
 impl IComActivityEvents {
     pub unsafe fn OnActivityCreate(&self, pinfo: *const COMSVCSEVENTINFO, guidactivity: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnActivityCreate)(::windows_core::Interface::as_raw(self), pinfo, guidactivity).ok()
+        ::windows_core::vcall!(self.OnActivityCreate(pinfo, guidactivity)).ok()
     }
     pub unsafe fn OnActivityDestroy(&self, pinfo: *const COMSVCSEVENTINFO, guidactivity: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnActivityDestroy)(::windows_core::Interface::as_raw(self), pinfo, guidactivity).ok()
+        ::windows_core::vcall!(self.OnActivityDestroy(pinfo, guidactivity)).ok()
     }
     pub unsafe fn OnActivityEnter(&self, pinfo: *const COMSVCSEVENTINFO, guidcurrent: *const ::windows_core::GUID, guidentered: *const ::windows_core::GUID, dwthread: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnActivityEnter)(::windows_core::Interface::as_raw(self), pinfo, guidcurrent, guidentered, dwthread).ok()
+        ::windows_core::vcall!(self.OnActivityEnter(pinfo, guidcurrent, guidentered, dwthread)).ok()
     }
     pub unsafe fn OnActivityTimeout(&self, pinfo: *const COMSVCSEVENTINFO, guidcurrent: *const ::windows_core::GUID, guidentered: *const ::windows_core::GUID, dwthread: u32, dwtimeout: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnActivityTimeout)(::windows_core::Interface::as_raw(self), pinfo, guidcurrent, guidentered, dwthread, dwtimeout).ok()
+        ::windows_core::vcall!(self.OnActivityTimeout(pinfo, guidcurrent, guidentered, dwthread, dwtimeout)).ok()
     }
     pub unsafe fn OnActivityReenter(&self, pinfo: *const COMSVCSEVENTINFO, guidcurrent: *const ::windows_core::GUID, dwthread: u32, dwcalldepth: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnActivityReenter)(::windows_core::Interface::as_raw(self), pinfo, guidcurrent, dwthread, dwcalldepth).ok()
+        ::windows_core::vcall!(self.OnActivityReenter(pinfo, guidcurrent, dwthread, dwcalldepth)).ok()
     }
     pub unsafe fn OnActivityLeave(&self, pinfo: *const COMSVCSEVENTINFO, guidcurrent: *const ::windows_core::GUID, guidleft: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnActivityLeave)(::windows_core::Interface::as_raw(self), pinfo, guidcurrent, guidleft).ok()
+        ::windows_core::vcall!(self.OnActivityLeave(pinfo, guidcurrent, guidleft)).ok()
     }
     pub unsafe fn OnActivityLeaveSame(&self, pinfo: *const COMSVCSEVENTINFO, guidcurrent: *const ::windows_core::GUID, dwcalldepth: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnActivityLeaveSame)(::windows_core::Interface::as_raw(self), pinfo, guidcurrent, dwcalldepth).ok()
+        ::windows_core::vcall!(self.OnActivityLeaveSame(pinfo, guidcurrent, dwcalldepth)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComActivityEvents, ::windows_core::IUnknown);
@@ -1350,13 +1350,13 @@ pub struct IComActivityEvents_Vtbl {
 pub struct IComApp2Events(::windows_core::IUnknown);
 impl IComApp2Events {
     pub unsafe fn OnAppActivation2(&self, pinfo: *const COMSVCSEVENTINFO, guidapp: ::windows_core::GUID, guidprocess: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnAppActivation2)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidapp), ::core::mem::transmute(guidprocess)).ok()
+        ::windows_core::vcall!(self.OnAppActivation2(pinfo, ::core::mem::transmute(guidapp), ::core::mem::transmute(guidprocess))).ok()
     }
     pub unsafe fn OnAppShutdown2(&self, pinfo: *const COMSVCSEVENTINFO, guidapp: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnAppShutdown2)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidapp)).ok()
+        ::windows_core::vcall!(self.OnAppShutdown2(pinfo, ::core::mem::transmute(guidapp))).ok()
     }
     pub unsafe fn OnAppForceShutdown2(&self, pinfo: *const COMSVCSEVENTINFO, guidapp: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnAppForceShutdown2)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidapp)).ok()
+        ::windows_core::vcall!(self.OnAppForceShutdown2(pinfo, ::core::mem::transmute(guidapp))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1364,10 +1364,10 @@ impl IComApp2Events {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnAppPaused2)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidapp), bpaused.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnAppPaused2(pinfo, ::core::mem::transmute(guidapp), bpaused.into_param().abi())).ok()
     }
     pub unsafe fn OnAppRecycle2(&self, pinfo: *const COMSVCSEVENTINFO, guidapp: ::windows_core::GUID, guidprocess: ::windows_core::GUID, lreason: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnAppRecycle2)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidapp), ::core::mem::transmute(guidprocess), lreason).ok()
+        ::windows_core::vcall!(self.OnAppRecycle2(pinfo, ::core::mem::transmute(guidapp), ::core::mem::transmute(guidprocess), lreason)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComApp2Events, ::windows_core::IUnknown);
@@ -1395,13 +1395,13 @@ pub struct IComApp2Events_Vtbl {
 pub struct IComAppEvents(::windows_core::IUnknown);
 impl IComAppEvents {
     pub unsafe fn OnAppActivation(&self, pinfo: *const COMSVCSEVENTINFO, guidapp: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnAppActivation)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidapp)).ok()
+        ::windows_core::vcall!(self.OnAppActivation(pinfo, ::core::mem::transmute(guidapp))).ok()
     }
     pub unsafe fn OnAppShutdown(&self, pinfo: *const COMSVCSEVENTINFO, guidapp: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnAppShutdown)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidapp)).ok()
+        ::windows_core::vcall!(self.OnAppShutdown(pinfo, ::core::mem::transmute(guidapp))).ok()
     }
     pub unsafe fn OnAppForceShutdown(&self, pinfo: *const COMSVCSEVENTINFO, guidapp: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnAppForceShutdown)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidapp)).ok()
+        ::windows_core::vcall!(self.OnAppForceShutdown(pinfo, ::core::mem::transmute(guidapp))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComAppEvents, ::windows_core::IUnknown);
@@ -1424,37 +1424,37 @@ pub struct IComAppEvents_Vtbl {
 pub struct IComCRMEvents(::windows_core::IUnknown);
 impl IComCRMEvents {
     pub unsafe fn OnCRMRecoveryStart(&self, pinfo: *const COMSVCSEVENTINFO, guidapp: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMRecoveryStart)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidapp)).ok()
+        ::windows_core::vcall!(self.OnCRMRecoveryStart(pinfo, ::core::mem::transmute(guidapp))).ok()
     }
     pub unsafe fn OnCRMRecoveryDone(&self, pinfo: *const COMSVCSEVENTINFO, guidapp: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMRecoveryDone)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidapp)).ok()
+        ::windows_core::vcall!(self.OnCRMRecoveryDone(pinfo, ::core::mem::transmute(guidapp))).ok()
     }
     pub unsafe fn OnCRMCheckpoint(&self, pinfo: *const COMSVCSEVENTINFO, guidapp: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMCheckpoint)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidapp)).ok()
+        ::windows_core::vcall!(self.OnCRMCheckpoint(pinfo, ::core::mem::transmute(guidapp))).ok()
     }
     pub unsafe fn OnCRMBegin(&self, pinfo: *const COMSVCSEVENTINFO, guidclerkclsid: ::windows_core::GUID, guidactivity: ::windows_core::GUID, guidtx: ::windows_core::GUID, szprogidcompensator: &[u16; 64], szdescription: &[u16; 64]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMBegin)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid), ::core::mem::transmute(guidactivity), ::core::mem::transmute(guidtx), ::core::mem::transmute(szprogidcompensator.as_ptr()), ::core::mem::transmute(szdescription.as_ptr())).ok()
+        ::windows_core::vcall!(self.OnCRMBegin(pinfo, ::core::mem::transmute(guidclerkclsid), ::core::mem::transmute(guidactivity), ::core::mem::transmute(guidtx), ::core::mem::transmute(szprogidcompensator.as_ptr()), ::core::mem::transmute(szdescription.as_ptr()))).ok()
     }
     pub unsafe fn OnCRMPrepare(&self, pinfo: *const COMSVCSEVENTINFO, guidclerkclsid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMPrepare)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid)).ok()
+        ::windows_core::vcall!(self.OnCRMPrepare(pinfo, ::core::mem::transmute(guidclerkclsid))).ok()
     }
     pub unsafe fn OnCRMCommit(&self, pinfo: *const COMSVCSEVENTINFO, guidclerkclsid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMCommit)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid)).ok()
+        ::windows_core::vcall!(self.OnCRMCommit(pinfo, ::core::mem::transmute(guidclerkclsid))).ok()
     }
     pub unsafe fn OnCRMAbort(&self, pinfo: *const COMSVCSEVENTINFO, guidclerkclsid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMAbort)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid)).ok()
+        ::windows_core::vcall!(self.OnCRMAbort(pinfo, ::core::mem::transmute(guidclerkclsid))).ok()
     }
     pub unsafe fn OnCRMIndoubt(&self, pinfo: *const COMSVCSEVENTINFO, guidclerkclsid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMIndoubt)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid)).ok()
+        ::windows_core::vcall!(self.OnCRMIndoubt(pinfo, ::core::mem::transmute(guidclerkclsid))).ok()
     }
     pub unsafe fn OnCRMDone(&self, pinfo: *const COMSVCSEVENTINFO, guidclerkclsid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMDone)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid)).ok()
+        ::windows_core::vcall!(self.OnCRMDone(pinfo, ::core::mem::transmute(guidclerkclsid))).ok()
     }
     pub unsafe fn OnCRMRelease(&self, pinfo: *const COMSVCSEVENTINFO, guidclerkclsid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMRelease)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid)).ok()
+        ::windows_core::vcall!(self.OnCRMRelease(pinfo, ::core::mem::transmute(guidclerkclsid))).ok()
     }
     pub unsafe fn OnCRMAnalyze(&self, pinfo: *const COMSVCSEVENTINFO, guidclerkclsid: ::windows_core::GUID, dwcrmrecordtype: u32, dwrecordsize: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMAnalyze)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid), dwcrmrecordtype, dwrecordsize).ok()
+        ::windows_core::vcall!(self.OnCRMAnalyze(pinfo, ::core::mem::transmute(guidclerkclsid), dwcrmrecordtype, dwrecordsize)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1462,13 +1462,13 @@ impl IComCRMEvents {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnCRMWrite)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid), fvariants.into_param().abi(), dwrecordsize).ok()
+        ::windows_core::vcall!(self.OnCRMWrite(pinfo, ::core::mem::transmute(guidclerkclsid), fvariants.into_param().abi(), dwrecordsize)).ok()
     }
     pub unsafe fn OnCRMForget(&self, pinfo: *const COMSVCSEVENTINFO, guidclerkclsid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMForget)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid)).ok()
+        ::windows_core::vcall!(self.OnCRMForget(pinfo, ::core::mem::transmute(guidclerkclsid))).ok()
     }
     pub unsafe fn OnCRMForce(&self, pinfo: *const COMSVCSEVENTINFO, guidclerkclsid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCRMForce)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid)).ok()
+        ::windows_core::vcall!(self.OnCRMForce(pinfo, ::core::mem::transmute(guidclerkclsid))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1476,7 +1476,7 @@ impl IComCRMEvents {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnCRMDeliver)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidclerkclsid), fvariants.into_param().abi(), dwrecordsize).ok()
+        ::windows_core::vcall!(self.OnCRMDeliver(pinfo, ::core::mem::transmute(guidclerkclsid), fvariants.into_param().abi(), dwrecordsize)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComCRMEvents, ::windows_core::IUnknown);
@@ -1520,7 +1520,7 @@ impl IComExceptionEvents {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnExceptionUser)(::windows_core::Interface::as_raw(self), pinfo, code, address, pszstacktrace.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnExceptionUser(pinfo, code, address, pszstacktrace.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComExceptionEvents, ::windows_core::IUnknown);
@@ -1546,7 +1546,7 @@ impl IComIdentityEvents {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnIISRequestInfo)(::windows_core::Interface::as_raw(self), pinfo, objid, pszclientip.into_param().abi(), pszserverip.into_param().abi(), pszurl.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnIISRequestInfo(pinfo, objid, pszclientip.into_param().abi(), pszserverip.into_param().abi(), pszurl.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComIdentityEvents, ::windows_core::IUnknown);
@@ -1567,10 +1567,10 @@ pub struct IComIdentityEvents_Vtbl {
 pub struct IComInstance2Events(::windows_core::IUnknown);
 impl IComInstance2Events {
     pub unsafe fn OnObjectCreate2(&self, pinfo: *const COMSVCSEVENTINFO, guidactivity: *const ::windows_core::GUID, clsid: *const ::windows_core::GUID, tsid: *const ::windows_core::GUID, ctxtid: u64, objectid: u64, guidpartition: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjectCreate2)(::windows_core::Interface::as_raw(self), pinfo, guidactivity, clsid, tsid, ctxtid, objectid, guidpartition).ok()
+        ::windows_core::vcall!(self.OnObjectCreate2(pinfo, guidactivity, clsid, tsid, ctxtid, objectid, guidpartition)).ok()
     }
     pub unsafe fn OnObjectDestroy2(&self, pinfo: *const COMSVCSEVENTINFO, ctxtid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjectDestroy2)(::windows_core::Interface::as_raw(self), pinfo, ctxtid).ok()
+        ::windows_core::vcall!(self.OnObjectDestroy2(pinfo, ctxtid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComInstance2Events, ::windows_core::IUnknown);
@@ -1592,10 +1592,10 @@ pub struct IComInstance2Events_Vtbl {
 pub struct IComInstanceEvents(::windows_core::IUnknown);
 impl IComInstanceEvents {
     pub unsafe fn OnObjectCreate(&self, pinfo: *const COMSVCSEVENTINFO, guidactivity: *const ::windows_core::GUID, clsid: *const ::windows_core::GUID, tsid: *const ::windows_core::GUID, ctxtid: u64, objectid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjectCreate)(::windows_core::Interface::as_raw(self), pinfo, guidactivity, clsid, tsid, ctxtid, objectid).ok()
+        ::windows_core::vcall!(self.OnObjectCreate(pinfo, guidactivity, clsid, tsid, ctxtid, objectid)).ok()
     }
     pub unsafe fn OnObjectDestroy(&self, pinfo: *const COMSVCSEVENTINFO, ctxtid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjectDestroy)(::windows_core::Interface::as_raw(self), pinfo, ctxtid).ok()
+        ::windows_core::vcall!(self.OnObjectDestroy(pinfo, ctxtid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComInstanceEvents, ::windows_core::IUnknown);
@@ -1622,7 +1622,7 @@ impl IComLTxEvents {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnLtxTransactionStart)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidltx), ::core::mem::transmute(tsid), froot.into_param().abi(), nisolationlevel).ok()
+        ::windows_core::vcall!(self.OnLtxTransactionStart(pinfo, ::core::mem::transmute(guidltx), ::core::mem::transmute(tsid), froot.into_param().abi(), nisolationlevel)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1630,16 +1630,16 @@ impl IComLTxEvents {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnLtxTransactionPrepare)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidltx), fvote.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnLtxTransactionPrepare(pinfo, ::core::mem::transmute(guidltx), fvote.into_param().abi())).ok()
     }
     pub unsafe fn OnLtxTransactionAbort(&self, pinfo: *const COMSVCSEVENTINFO, guidltx: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnLtxTransactionAbort)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidltx)).ok()
+        ::windows_core::vcall!(self.OnLtxTransactionAbort(pinfo, ::core::mem::transmute(guidltx))).ok()
     }
     pub unsafe fn OnLtxTransactionCommit(&self, pinfo: *const COMSVCSEVENTINFO, guidltx: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnLtxTransactionCommit)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidltx)).ok()
+        ::windows_core::vcall!(self.OnLtxTransactionCommit(pinfo, ::core::mem::transmute(guidltx))).ok()
     }
     pub unsafe fn OnLtxTransactionPromote(&self, pinfo: *const COMSVCSEVENTINFO, guidltx: ::windows_core::GUID, txnid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnLtxTransactionPromote)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(guidltx), ::core::mem::transmute(txnid)).ok()
+        ::windows_core::vcall!(self.OnLtxTransactionPromote(pinfo, ::core::mem::transmute(guidltx), ::core::mem::transmute(txnid))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComLTxEvents, ::windows_core::IUnknown);
@@ -1670,13 +1670,13 @@ pub struct IComLTxEvents_Vtbl {
 pub struct IComMethod2Events(::windows_core::IUnknown);
 impl IComMethod2Events {
     pub unsafe fn OnMethodCall2(&self, pinfo: *const COMSVCSEVENTINFO, oid: u64, guidcid: *const ::windows_core::GUID, guidrid: *const ::windows_core::GUID, dwthread: u32, imeth: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnMethodCall2)(::windows_core::Interface::as_raw(self), pinfo, oid, guidcid, guidrid, dwthread, imeth).ok()
+        ::windows_core::vcall!(self.OnMethodCall2(pinfo, oid, guidcid, guidrid, dwthread, imeth)).ok()
     }
     pub unsafe fn OnMethodReturn2(&self, pinfo: *const COMSVCSEVENTINFO, oid: u64, guidcid: *const ::windows_core::GUID, guidrid: *const ::windows_core::GUID, dwthread: u32, imeth: u32, hresult: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnMethodReturn2)(::windows_core::Interface::as_raw(self), pinfo, oid, guidcid, guidrid, dwthread, imeth, hresult).ok()
+        ::windows_core::vcall!(self.OnMethodReturn2(pinfo, oid, guidcid, guidrid, dwthread, imeth, hresult)).ok()
     }
     pub unsafe fn OnMethodException2(&self, pinfo: *const COMSVCSEVENTINFO, oid: u64, guidcid: *const ::windows_core::GUID, guidrid: *const ::windows_core::GUID, dwthread: u32, imeth: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnMethodException2)(::windows_core::Interface::as_raw(self), pinfo, oid, guidcid, guidrid, dwthread, imeth).ok()
+        ::windows_core::vcall!(self.OnMethodException2(pinfo, oid, guidcid, guidrid, dwthread, imeth)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComMethod2Events, ::windows_core::IUnknown);
@@ -1699,13 +1699,13 @@ pub struct IComMethod2Events_Vtbl {
 pub struct IComMethodEvents(::windows_core::IUnknown);
 impl IComMethodEvents {
     pub unsafe fn OnMethodCall(&self, pinfo: *const COMSVCSEVENTINFO, oid: u64, guidcid: *const ::windows_core::GUID, guidrid: *const ::windows_core::GUID, imeth: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnMethodCall)(::windows_core::Interface::as_raw(self), pinfo, oid, guidcid, guidrid, imeth).ok()
+        ::windows_core::vcall!(self.OnMethodCall(pinfo, oid, guidcid, guidrid, imeth)).ok()
     }
     pub unsafe fn OnMethodReturn(&self, pinfo: *const COMSVCSEVENTINFO, oid: u64, guidcid: *const ::windows_core::GUID, guidrid: *const ::windows_core::GUID, imeth: u32, hresult: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnMethodReturn)(::windows_core::Interface::as_raw(self), pinfo, oid, guidcid, guidrid, imeth, hresult).ok()
+        ::windows_core::vcall!(self.OnMethodReturn(pinfo, oid, guidcid, guidrid, imeth, hresult)).ok()
     }
     pub unsafe fn OnMethodException(&self, pinfo: *const COMSVCSEVENTINFO, oid: u64, guidcid: *const ::windows_core::GUID, guidrid: *const ::windows_core::GUID, imeth: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnMethodException)(::windows_core::Interface::as_raw(self), pinfo, oid, guidcid, guidrid, imeth).ok()
+        ::windows_core::vcall!(self.OnMethodException(pinfo, oid, guidcid, guidrid, imeth)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComMethodEvents, ::windows_core::IUnknown);
@@ -1728,18 +1728,18 @@ pub struct IComMethodEvents_Vtbl {
 pub struct IComMtaThreadPoolKnobs(::windows_core::IUnknown);
 impl IComMtaThreadPoolKnobs {
     pub unsafe fn MTASetMaxThreadCount(&self, dwmaxthreads: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).MTASetMaxThreadCount)(::windows_core::Interface::as_raw(self), dwmaxthreads).ok()
+        ::windows_core::vcall!(self.MTASetMaxThreadCount(dwmaxthreads)).ok()
     }
     pub unsafe fn MTAGetMaxThreadCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).MTAGetMaxThreadCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.MTAGetMaxThreadCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn MTASetThrottleValue(&self, dwthrottle: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).MTASetThrottleValue)(::windows_core::Interface::as_raw(self), dwthrottle).ok()
+        ::windows_core::vcall!(self.MTASetThrottleValue(dwthrottle)).ok()
     }
     pub unsafe fn MTAGetThrottleValue(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).MTAGetThrottleValue)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.MTAGetThrottleValue(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComMtaThreadPoolKnobs, ::windows_core::IUnknown);
@@ -1766,7 +1766,7 @@ impl IComObjectConstruction2Events {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnObjectConstruct2)(::windows_core::Interface::as_raw(self), pinfo, guidobject, sconstructstring.into_param().abi(), oid, guidpartition).ok()
+        ::windows_core::vcall!(self.OnObjectConstruct2(pinfo, guidobject, sconstructstring.into_param().abi(), oid, guidpartition)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComObjectConstruction2Events, ::windows_core::IUnknown);
@@ -1790,7 +1790,7 @@ impl IComObjectConstructionEvents {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnObjectConstruct)(::windows_core::Interface::as_raw(self), pinfo, guidobject, sconstructstring.into_param().abi(), oid).ok()
+        ::windows_core::vcall!(self.OnObjectConstruct(pinfo, guidobject, sconstructstring.into_param().abi(), oid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComObjectConstructionEvents, ::windows_core::IUnknown);
@@ -1811,22 +1811,22 @@ pub struct IComObjectConstructionEvents_Vtbl {
 pub struct IComObjectEvents(::windows_core::IUnknown);
 impl IComObjectEvents {
     pub unsafe fn OnObjectActivate(&self, pinfo: *const COMSVCSEVENTINFO, ctxtid: u64, objectid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjectActivate)(::windows_core::Interface::as_raw(self), pinfo, ctxtid, objectid).ok()
+        ::windows_core::vcall!(self.OnObjectActivate(pinfo, ctxtid, objectid)).ok()
     }
     pub unsafe fn OnObjectDeactivate(&self, pinfo: *const COMSVCSEVENTINFO, ctxtid: u64, objectid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjectDeactivate)(::windows_core::Interface::as_raw(self), pinfo, ctxtid, objectid).ok()
+        ::windows_core::vcall!(self.OnObjectDeactivate(pinfo, ctxtid, objectid)).ok()
     }
     pub unsafe fn OnDisableCommit(&self, pinfo: *const COMSVCSEVENTINFO, ctxtid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnDisableCommit)(::windows_core::Interface::as_raw(self), pinfo, ctxtid).ok()
+        ::windows_core::vcall!(self.OnDisableCommit(pinfo, ctxtid)).ok()
     }
     pub unsafe fn OnEnableCommit(&self, pinfo: *const COMSVCSEVENTINFO, ctxtid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnEnableCommit)(::windows_core::Interface::as_raw(self), pinfo, ctxtid).ok()
+        ::windows_core::vcall!(self.OnEnableCommit(pinfo, ctxtid)).ok()
     }
     pub unsafe fn OnSetComplete(&self, pinfo: *const COMSVCSEVENTINFO, ctxtid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnSetComplete)(::windows_core::Interface::as_raw(self), pinfo, ctxtid).ok()
+        ::windows_core::vcall!(self.OnSetComplete(pinfo, ctxtid)).ok()
     }
     pub unsafe fn OnSetAbort(&self, pinfo: *const COMSVCSEVENTINFO, ctxtid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnSetAbort)(::windows_core::Interface::as_raw(self), pinfo, ctxtid).ok()
+        ::windows_core::vcall!(self.OnSetAbort(pinfo, ctxtid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComObjectEvents, ::windows_core::IUnknown);
@@ -1852,16 +1852,16 @@ pub struct IComObjectEvents_Vtbl {
 pub struct IComObjectPool2Events(::windows_core::IUnknown);
 impl IComObjectPool2Events {
     pub unsafe fn OnObjPoolPutObject2(&self, pinfo: *const COMSVCSEVENTINFO, guidobject: *const ::windows_core::GUID, nreason: i32, dwavailable: u32, oid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolPutObject2)(::windows_core::Interface::as_raw(self), pinfo, guidobject, nreason, dwavailable, oid).ok()
+        ::windows_core::vcall!(self.OnObjPoolPutObject2(pinfo, guidobject, nreason, dwavailable, oid)).ok()
     }
     pub unsafe fn OnObjPoolGetObject2(&self, pinfo: *const COMSVCSEVENTINFO, guidactivity: *const ::windows_core::GUID, guidobject: *const ::windows_core::GUID, dwavailable: u32, oid: u64, guidpartition: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolGetObject2)(::windows_core::Interface::as_raw(self), pinfo, guidactivity, guidobject, dwavailable, oid, guidpartition).ok()
+        ::windows_core::vcall!(self.OnObjPoolGetObject2(pinfo, guidactivity, guidobject, dwavailable, oid, guidpartition)).ok()
     }
     pub unsafe fn OnObjPoolRecycleToTx2(&self, pinfo: *const COMSVCSEVENTINFO, guidactivity: *const ::windows_core::GUID, guidobject: *const ::windows_core::GUID, guidtx: *const ::windows_core::GUID, objid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolRecycleToTx2)(::windows_core::Interface::as_raw(self), pinfo, guidactivity, guidobject, guidtx, objid).ok()
+        ::windows_core::vcall!(self.OnObjPoolRecycleToTx2(pinfo, guidactivity, guidobject, guidtx, objid)).ok()
     }
     pub unsafe fn OnObjPoolGetFromTx2(&self, pinfo: *const COMSVCSEVENTINFO, guidactivity: *const ::windows_core::GUID, guidobject: *const ::windows_core::GUID, guidtx: *const ::windows_core::GUID, objid: u64, guidpartition: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolGetFromTx2)(::windows_core::Interface::as_raw(self), pinfo, guidactivity, guidobject, guidtx, objid, guidpartition).ok()
+        ::windows_core::vcall!(self.OnObjPoolGetFromTx2(pinfo, guidactivity, guidobject, guidtx, objid, guidpartition)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComObjectPool2Events, ::windows_core::IUnknown);
@@ -1885,16 +1885,16 @@ pub struct IComObjectPool2Events_Vtbl {
 pub struct IComObjectPoolEvents(::windows_core::IUnknown);
 impl IComObjectPoolEvents {
     pub unsafe fn OnObjPoolPutObject(&self, pinfo: *const COMSVCSEVENTINFO, guidobject: *const ::windows_core::GUID, nreason: i32, dwavailable: u32, oid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolPutObject)(::windows_core::Interface::as_raw(self), pinfo, guidobject, nreason, dwavailable, oid).ok()
+        ::windows_core::vcall!(self.OnObjPoolPutObject(pinfo, guidobject, nreason, dwavailable, oid)).ok()
     }
     pub unsafe fn OnObjPoolGetObject(&self, pinfo: *const COMSVCSEVENTINFO, guidactivity: *const ::windows_core::GUID, guidobject: *const ::windows_core::GUID, dwavailable: u32, oid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolGetObject)(::windows_core::Interface::as_raw(self), pinfo, guidactivity, guidobject, dwavailable, oid).ok()
+        ::windows_core::vcall!(self.OnObjPoolGetObject(pinfo, guidactivity, guidobject, dwavailable, oid)).ok()
     }
     pub unsafe fn OnObjPoolRecycleToTx(&self, pinfo: *const COMSVCSEVENTINFO, guidactivity: *const ::windows_core::GUID, guidobject: *const ::windows_core::GUID, guidtx: *const ::windows_core::GUID, objid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolRecycleToTx)(::windows_core::Interface::as_raw(self), pinfo, guidactivity, guidobject, guidtx, objid).ok()
+        ::windows_core::vcall!(self.OnObjPoolRecycleToTx(pinfo, guidactivity, guidobject, guidtx, objid)).ok()
     }
     pub unsafe fn OnObjPoolGetFromTx(&self, pinfo: *const COMSVCSEVENTINFO, guidactivity: *const ::windows_core::GUID, guidobject: *const ::windows_core::GUID, guidtx: *const ::windows_core::GUID, objid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolGetFromTx)(::windows_core::Interface::as_raw(self), pinfo, guidactivity, guidobject, guidtx, objid).ok()
+        ::windows_core::vcall!(self.OnObjPoolGetFromTx(pinfo, guidactivity, guidobject, guidtx, objid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComObjectPoolEvents, ::windows_core::IUnknown);
@@ -1918,19 +1918,19 @@ pub struct IComObjectPoolEvents_Vtbl {
 pub struct IComObjectPoolEvents2(::windows_core::IUnknown);
 impl IComObjectPoolEvents2 {
     pub unsafe fn OnObjPoolCreateObject(&self, pinfo: *const COMSVCSEVENTINFO, guidobject: *const ::windows_core::GUID, dwobjscreated: u32, oid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolCreateObject)(::windows_core::Interface::as_raw(self), pinfo, guidobject, dwobjscreated, oid).ok()
+        ::windows_core::vcall!(self.OnObjPoolCreateObject(pinfo, guidobject, dwobjscreated, oid)).ok()
     }
     pub unsafe fn OnObjPoolDestroyObject(&self, pinfo: *const COMSVCSEVENTINFO, guidobject: *const ::windows_core::GUID, dwobjscreated: u32, oid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolDestroyObject)(::windows_core::Interface::as_raw(self), pinfo, guidobject, dwobjscreated, oid).ok()
+        ::windows_core::vcall!(self.OnObjPoolDestroyObject(pinfo, guidobject, dwobjscreated, oid)).ok()
     }
     pub unsafe fn OnObjPoolCreateDecision(&self, pinfo: *const COMSVCSEVENTINFO, dwthreadswaiting: u32, dwavail: u32, dwcreated: u32, dwmin: u32, dwmax: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolCreateDecision)(::windows_core::Interface::as_raw(self), pinfo, dwthreadswaiting, dwavail, dwcreated, dwmin, dwmax).ok()
+        ::windows_core::vcall!(self.OnObjPoolCreateDecision(pinfo, dwthreadswaiting, dwavail, dwcreated, dwmin, dwmax)).ok()
     }
     pub unsafe fn OnObjPoolTimeout(&self, pinfo: *const COMSVCSEVENTINFO, guidobject: *const ::windows_core::GUID, guidactivity: *const ::windows_core::GUID, dwtimeout: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolTimeout)(::windows_core::Interface::as_raw(self), pinfo, guidobject, guidactivity, dwtimeout).ok()
+        ::windows_core::vcall!(self.OnObjPoolTimeout(pinfo, guidobject, guidactivity, dwtimeout)).ok()
     }
     pub unsafe fn OnObjPoolCreatePool(&self, pinfo: *const COMSVCSEVENTINFO, guidobject: *const ::windows_core::GUID, dwmin: u32, dwmax: u32, dwtimeout: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnObjPoolCreatePool)(::windows_core::Interface::as_raw(self), pinfo, guidobject, dwmin, dwmax, dwtimeout).ok()
+        ::windows_core::vcall!(self.OnObjPoolCreatePool(pinfo, guidobject, dwmin, dwmax, dwtimeout)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComObjectPoolEvents2, ::windows_core::IUnknown);
@@ -1955,25 +1955,25 @@ pub struct IComObjectPoolEvents2_Vtbl {
 pub struct IComQCEvents(::windows_core::IUnknown);
 impl IComQCEvents {
     pub unsafe fn OnQCRecord(&self, pinfo: *const COMSVCSEVENTINFO, objid: u64, szqueue: &[u16; 60], guidmsgid: *const ::windows_core::GUID, guidworkflowid: *const ::windows_core::GUID, msmqhr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnQCRecord)(::windows_core::Interface::as_raw(self), pinfo, objid, ::core::mem::transmute(szqueue.as_ptr()), guidmsgid, guidworkflowid, msmqhr).ok()
+        ::windows_core::vcall!(self.OnQCRecord(pinfo, objid, ::core::mem::transmute(szqueue.as_ptr()), guidmsgid, guidworkflowid, msmqhr)).ok()
     }
     pub unsafe fn OnQCQueueOpen(&self, pinfo: *const COMSVCSEVENTINFO, szqueue: &[u16; 60], queueid: u64, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnQCQueueOpen)(::windows_core::Interface::as_raw(self), pinfo, ::core::mem::transmute(szqueue.as_ptr()), queueid, hr).ok()
+        ::windows_core::vcall!(self.OnQCQueueOpen(pinfo, ::core::mem::transmute(szqueue.as_ptr()), queueid, hr)).ok()
     }
     pub unsafe fn OnQCReceive(&self, pinfo: *const COMSVCSEVENTINFO, queueid: u64, guidmsgid: *const ::windows_core::GUID, guidworkflowid: *const ::windows_core::GUID, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnQCReceive)(::windows_core::Interface::as_raw(self), pinfo, queueid, guidmsgid, guidworkflowid, hr).ok()
+        ::windows_core::vcall!(self.OnQCReceive(pinfo, queueid, guidmsgid, guidworkflowid, hr)).ok()
     }
     pub unsafe fn OnQCReceiveFail(&self, pinfo: *const COMSVCSEVENTINFO, queueid: u64, msmqhr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnQCReceiveFail)(::windows_core::Interface::as_raw(self), pinfo, queueid, msmqhr).ok()
+        ::windows_core::vcall!(self.OnQCReceiveFail(pinfo, queueid, msmqhr)).ok()
     }
     pub unsafe fn OnQCMoveToReTryQueue(&self, pinfo: *const COMSVCSEVENTINFO, guidmsgid: *const ::windows_core::GUID, guidworkflowid: *const ::windows_core::GUID, retryindex: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnQCMoveToReTryQueue)(::windows_core::Interface::as_raw(self), pinfo, guidmsgid, guidworkflowid, retryindex).ok()
+        ::windows_core::vcall!(self.OnQCMoveToReTryQueue(pinfo, guidmsgid, guidworkflowid, retryindex)).ok()
     }
     pub unsafe fn OnQCMoveToDeadQueue(&self, pinfo: *const COMSVCSEVENTINFO, guidmsgid: *const ::windows_core::GUID, guidworkflowid: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnQCMoveToDeadQueue)(::windows_core::Interface::as_raw(self), pinfo, guidmsgid, guidworkflowid).ok()
+        ::windows_core::vcall!(self.OnQCMoveToDeadQueue(pinfo, guidmsgid, guidworkflowid)).ok()
     }
     pub unsafe fn OnQCPlayback(&self, pinfo: *const COMSVCSEVENTINFO, objid: u64, guidmsgid: *const ::windows_core::GUID, guidworkflowid: *const ::windows_core::GUID, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnQCPlayback)(::windows_core::Interface::as_raw(self), pinfo, objid, guidmsgid, guidworkflowid, hr).ok()
+        ::windows_core::vcall!(self.OnQCPlayback(pinfo, objid, guidmsgid, guidworkflowid, hr)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComQCEvents, ::windows_core::IUnknown);
@@ -2006,7 +2006,7 @@ impl IComResourceEvents {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnResourceCreate)(::windows_core::Interface::as_raw(self), pinfo, objectid, psztype.into_param().abi(), resid, enlisted.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnResourceCreate(pinfo, objectid, psztype.into_param().abi(), resid, enlisted.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2015,19 +2015,19 @@ impl IComResourceEvents {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnResourceAllocate)(::windows_core::Interface::as_raw(self), pinfo, objectid, psztype.into_param().abi(), resid, enlisted.into_param().abi(), numrated, rating).ok()
+        ::windows_core::vcall!(self.OnResourceAllocate(pinfo, objectid, psztype.into_param().abi(), resid, enlisted.into_param().abi(), numrated, rating)).ok()
     }
     pub unsafe fn OnResourceRecycle<P0>(&self, pinfo: *const COMSVCSEVENTINFO, objectid: u64, psztype: P0, resid: u64) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnResourceRecycle)(::windows_core::Interface::as_raw(self), pinfo, objectid, psztype.into_param().abi(), resid).ok()
+        ::windows_core::vcall!(self.OnResourceRecycle(pinfo, objectid, psztype.into_param().abi(), resid)).ok()
     }
     pub unsafe fn OnResourceDestroy<P0>(&self, pinfo: *const COMSVCSEVENTINFO, objectid: u64, hr: ::windows_core::HRESULT, psztype: P0, resid: u64) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnResourceDestroy)(::windows_core::Interface::as_raw(self), pinfo, objectid, hr, psztype.into_param().abi(), resid).ok()
+        ::windows_core::vcall!(self.OnResourceDestroy(pinfo, objectid, hr, psztype.into_param().abi(), resid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2036,7 +2036,7 @@ impl IComResourceEvents {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnResourceTrack)(::windows_core::Interface::as_raw(self), pinfo, objectid, psztype.into_param().abi(), resid, enlisted.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnResourceTrack(pinfo, objectid, psztype.into_param().abi(), resid, enlisted.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComResourceEvents, ::windows_core::IUnknown);
@@ -2075,7 +2075,7 @@ impl IComSecurityEvents {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnAuthenticate)(::windows_core::Interface::as_raw(self), pinfo, guidactivity, objectid, guidiid, imeth, psidoriginaluser.len().try_into().unwrap(), ::core::mem::transmute(psidoriginaluser.as_ptr()), psidcurrentuser.len().try_into().unwrap(), ::core::mem::transmute(psidcurrentuser.as_ptr()), bcurrentuserinpersonatinginproc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnAuthenticate(pinfo, guidactivity, objectid, guidiid, imeth, psidoriginaluser.len().try_into().unwrap(), ::core::mem::transmute(psidoriginaluser.as_ptr()), psidcurrentuser.len().try_into().unwrap(), ::core::mem::transmute(psidcurrentuser.as_ptr()), bcurrentuserinpersonatinginproc.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2083,7 +2083,7 @@ impl IComSecurityEvents {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnAuthenticateFail)(::windows_core::Interface::as_raw(self), pinfo, guidactivity, objectid, guidiid, imeth, psidoriginaluser.len().try_into().unwrap(), ::core::mem::transmute(psidoriginaluser.as_ptr()), psidcurrentuser.len().try_into().unwrap(), ::core::mem::transmute(psidcurrentuser.as_ptr()), bcurrentuserinpersonatinginproc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnAuthenticateFail(pinfo, guidactivity, objectid, guidiid, imeth, psidoriginaluser.len().try_into().unwrap(), ::core::mem::transmute(psidoriginaluser.as_ptr()), psidcurrentuser.len().try_into().unwrap(), ::core::mem::transmute(psidcurrentuser.as_ptr()), bcurrentuserinpersonatinginproc.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComSecurityEvents, ::windows_core::IUnknown);
@@ -2111,43 +2111,43 @@ pub struct IComSecurityEvents_Vtbl {
 pub struct IComStaThreadPoolKnobs(::windows_core::IUnknown);
 impl IComStaThreadPoolKnobs {
     pub unsafe fn SetMinThreadCount(&self, minthreads: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMinThreadCount)(::windows_core::Interface::as_raw(self), minthreads).ok()
+        ::windows_core::vcall!(self.SetMinThreadCount(minthreads)).ok()
     }
     pub unsafe fn GetMinThreadCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMinThreadCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMinThreadCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetMaxThreadCount(&self, maxthreads: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMaxThreadCount)(::windows_core::Interface::as_raw(self), maxthreads).ok()
+        ::windows_core::vcall!(self.SetMaxThreadCount(maxthreads)).ok()
     }
     pub unsafe fn GetMaxThreadCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMaxThreadCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMaxThreadCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetActivityPerThread(&self, activitiesperthread: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetActivityPerThread)(::windows_core::Interface::as_raw(self), activitiesperthread).ok()
+        ::windows_core::vcall!(self.SetActivityPerThread(activitiesperthread)).ok()
     }
     pub unsafe fn GetActivityPerThread(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetActivityPerThread)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetActivityPerThread(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetActivityRatio(&self, activityratio: f64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetActivityRatio)(::windows_core::Interface::as_raw(self), activityratio).ok()
+        ::windows_core::vcall!(self.SetActivityRatio(activityratio)).ok()
     }
     pub unsafe fn GetActivityRatio(&self) -> ::windows_core::Result<f64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetActivityRatio)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetActivityRatio(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetThreadCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetThreadCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetThreadCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetQueueDepth(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetQueueDepth)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetQueueDepth(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetQueueDepth(&self, dwqdepth: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetQueueDepth)(::windows_core::Interface::as_raw(self), dwqdepth).ok()
+        ::windows_core::vcall!(self.SetQueueDepth(dwqdepth)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComStaThreadPoolKnobs, ::windows_core::IUnknown);
@@ -2178,56 +2178,56 @@ pub struct IComStaThreadPoolKnobs_Vtbl {
 pub struct IComStaThreadPoolKnobs2(::windows_core::IUnknown);
 impl IComStaThreadPoolKnobs2 {
     pub unsafe fn SetMinThreadCount(&self, minthreads: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetMinThreadCount)(::windows_core::Interface::as_raw(self), minthreads).ok()
+        ::windows_core::vcall!(self.base__.SetMinThreadCount(minthreads)).ok()
     }
     pub unsafe fn GetMinThreadCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetMinThreadCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetMinThreadCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetMaxThreadCount(&self, maxthreads: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetMaxThreadCount)(::windows_core::Interface::as_raw(self), maxthreads).ok()
+        ::windows_core::vcall!(self.base__.SetMaxThreadCount(maxthreads)).ok()
     }
     pub unsafe fn GetMaxThreadCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetMaxThreadCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetMaxThreadCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetActivityPerThread(&self, activitiesperthread: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetActivityPerThread)(::windows_core::Interface::as_raw(self), activitiesperthread).ok()
+        ::windows_core::vcall!(self.base__.SetActivityPerThread(activitiesperthread)).ok()
     }
     pub unsafe fn GetActivityPerThread(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetActivityPerThread)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetActivityPerThread(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetActivityRatio(&self, activityratio: f64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetActivityRatio)(::windows_core::Interface::as_raw(self), activityratio).ok()
+        ::windows_core::vcall!(self.base__.SetActivityRatio(activityratio)).ok()
     }
     pub unsafe fn GetActivityRatio(&self) -> ::windows_core::Result<f64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetActivityRatio)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetActivityRatio(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetThreadCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetThreadCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetThreadCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetQueueDepth(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetQueueDepth)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetQueueDepth(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetQueueDepth(&self, dwqdepth: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetQueueDepth)(::windows_core::Interface::as_raw(self), dwqdepth).ok()
+        ::windows_core::vcall!(self.base__.SetQueueDepth(dwqdepth)).ok()
     }
     pub unsafe fn GetMaxCPULoad(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMaxCPULoad)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMaxCPULoad(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetMaxCPULoad(&self, pdwload: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMaxCPULoad)(::windows_core::Interface::as_raw(self), pdwload).ok()
+        ::windows_core::vcall!(self.SetMaxCPULoad(pdwload)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetCPUMetricEnabled(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCPUMetricEnabled)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCPUMetricEnabled(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2235,13 +2235,13 @@ impl IComStaThreadPoolKnobs2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetCPUMetricEnabled)(::windows_core::Interface::as_raw(self), bmetricenabled.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetCPUMetricEnabled(bmetricenabled.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetCreateThreadsAggressively(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCreateThreadsAggressively)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCreateThreadsAggressively(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2249,21 +2249,21 @@ impl IComStaThreadPoolKnobs2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetCreateThreadsAggressively)(::windows_core::Interface::as_raw(self), bmetricenabled.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetCreateThreadsAggressively(bmetricenabled.into_param().abi())).ok()
     }
     pub unsafe fn GetMaxCSR(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMaxCSR)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMaxCSR(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetMaxCSR(&self, dwcsr: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMaxCSR)(::windows_core::Interface::as_raw(self), dwcsr).ok()
+        ::windows_core::vcall!(self.SetMaxCSR(dwcsr)).ok()
     }
     pub unsafe fn GetWaitTimeForThreadCleanup(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetWaitTimeForThreadCleanup)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetWaitTimeForThreadCleanup(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetWaitTimeForThreadCleanup(&self, dwthreadcleanupwaittime: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetWaitTimeForThreadCleanup)(::windows_core::Interface::as_raw(self), dwthreadcleanupwaittime).ok()
+        ::windows_core::vcall!(self.SetWaitTimeForThreadCleanup(dwthreadcleanupwaittime)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComStaThreadPoolKnobs2, ::windows_core::IUnknown, IComStaThreadPoolKnobs);
@@ -2305,37 +2305,37 @@ pub struct IComStaThreadPoolKnobs2_Vtbl {
 pub struct IComThreadEvents(::windows_core::IUnknown);
 impl IComThreadEvents {
     pub unsafe fn OnThreadStart(&self, pinfo: *const COMSVCSEVENTINFO, threadid: u64, dwthread: u32, dwtheadcnt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnThreadStart)(::windows_core::Interface::as_raw(self), pinfo, threadid, dwthread, dwtheadcnt).ok()
+        ::windows_core::vcall!(self.OnThreadStart(pinfo, threadid, dwthread, dwtheadcnt)).ok()
     }
     pub unsafe fn OnThreadTerminate(&self, pinfo: *const COMSVCSEVENTINFO, threadid: u64, dwthread: u32, dwtheadcnt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnThreadTerminate)(::windows_core::Interface::as_raw(self), pinfo, threadid, dwthread, dwtheadcnt).ok()
+        ::windows_core::vcall!(self.OnThreadTerminate(pinfo, threadid, dwthread, dwtheadcnt)).ok()
     }
     pub unsafe fn OnThreadBindToApartment(&self, pinfo: *const COMSVCSEVENTINFO, threadid: u64, aptid: u64, dwactcnt: u32, dwlowcnt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnThreadBindToApartment)(::windows_core::Interface::as_raw(self), pinfo, threadid, aptid, dwactcnt, dwlowcnt).ok()
+        ::windows_core::vcall!(self.OnThreadBindToApartment(pinfo, threadid, aptid, dwactcnt, dwlowcnt)).ok()
     }
     pub unsafe fn OnThreadUnBind(&self, pinfo: *const COMSVCSEVENTINFO, threadid: u64, aptid: u64, dwactcnt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnThreadUnBind)(::windows_core::Interface::as_raw(self), pinfo, threadid, aptid, dwactcnt).ok()
+        ::windows_core::vcall!(self.OnThreadUnBind(pinfo, threadid, aptid, dwactcnt)).ok()
     }
     pub unsafe fn OnThreadWorkEnque(&self, pinfo: *const COMSVCSEVENTINFO, threadid: u64, msgworkid: u64, queuelen: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnThreadWorkEnque)(::windows_core::Interface::as_raw(self), pinfo, threadid, msgworkid, queuelen).ok()
+        ::windows_core::vcall!(self.OnThreadWorkEnque(pinfo, threadid, msgworkid, queuelen)).ok()
     }
     pub unsafe fn OnThreadWorkPrivate(&self, pinfo: *const COMSVCSEVENTINFO, threadid: u64, msgworkid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnThreadWorkPrivate)(::windows_core::Interface::as_raw(self), pinfo, threadid, msgworkid).ok()
+        ::windows_core::vcall!(self.OnThreadWorkPrivate(pinfo, threadid, msgworkid)).ok()
     }
     pub unsafe fn OnThreadWorkPublic(&self, pinfo: *const COMSVCSEVENTINFO, threadid: u64, msgworkid: u64, queuelen: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnThreadWorkPublic)(::windows_core::Interface::as_raw(self), pinfo, threadid, msgworkid, queuelen).ok()
+        ::windows_core::vcall!(self.OnThreadWorkPublic(pinfo, threadid, msgworkid, queuelen)).ok()
     }
     pub unsafe fn OnThreadWorkRedirect(&self, pinfo: *const COMSVCSEVENTINFO, threadid: u64, msgworkid: u64, queuelen: u32, threadnum: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnThreadWorkRedirect)(::windows_core::Interface::as_raw(self), pinfo, threadid, msgworkid, queuelen, threadnum).ok()
+        ::windows_core::vcall!(self.OnThreadWorkRedirect(pinfo, threadid, msgworkid, queuelen, threadnum)).ok()
     }
     pub unsafe fn OnThreadWorkReject(&self, pinfo: *const COMSVCSEVENTINFO, threadid: u64, msgworkid: u64, queuelen: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnThreadWorkReject)(::windows_core::Interface::as_raw(self), pinfo, threadid, msgworkid, queuelen).ok()
+        ::windows_core::vcall!(self.OnThreadWorkReject(pinfo, threadid, msgworkid, queuelen)).ok()
     }
     pub unsafe fn OnThreadAssignApartment(&self, pinfo: *const COMSVCSEVENTINFO, guidactivity: *const ::windows_core::GUID, aptid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnThreadAssignApartment)(::windows_core::Interface::as_raw(self), pinfo, guidactivity, aptid).ok()
+        ::windows_core::vcall!(self.OnThreadAssignApartment(pinfo, guidactivity, aptid)).ok()
     }
     pub unsafe fn OnThreadUnassignApartment(&self, pinfo: *const COMSVCSEVENTINFO, aptid: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnThreadUnassignApartment)(::windows_core::Interface::as_raw(self), pinfo, aptid).ok()
+        ::windows_core::vcall!(self.OnThreadUnassignApartment(pinfo, aptid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComThreadEvents, ::windows_core::IUnknown);
@@ -2367,14 +2367,14 @@ pub struct IComTrackingInfoCollection(::windows_core::IUnknown);
 impl IComTrackingInfoCollection {
     pub unsafe fn Type(&self) -> ::windows_core::Result<TRACKING_COLL_TYPE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Type)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Type(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Count(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Item(&self, ulindex: u32, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Item)(::windows_core::Interface::as_raw(self), ulindex, riid, ppv).ok()
+        ::windows_core::vcall!(self.Item(ulindex, riid, ppv)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComTrackingInfoCollection, ::windows_core::IUnknown);
@@ -2400,7 +2400,7 @@ impl IComTrackingInfoEvents {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).OnNewTrackingInfo)(::windows_core::Interface::as_raw(self), ptoplevelcollection.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnNewTrackingInfo(ptoplevelcollection.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComTrackingInfoEvents, ::windows_core::IUnknown);
@@ -2427,7 +2427,7 @@ impl IComTrackingInfoObject {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetValue)(::windows_core::Interface::as_raw(self), szpropertyname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetValue(szpropertyname.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComTrackingInfoObject, ::windows_core::IUnknown);
@@ -2452,11 +2452,11 @@ pub struct IComTrackingInfoProperties(::windows_core::IUnknown);
 impl IComTrackingInfoProperties {
     pub unsafe fn PropCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).PropCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.PropCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPropName(&self, ulindex: u32) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPropName)(::windows_core::Interface::as_raw(self), ulindex, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPropName(ulindex, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComTrackingInfoProperties, ::windows_core::IUnknown);
@@ -2483,7 +2483,7 @@ impl IComTransaction2Events {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnTransactionStart2)(::windows_core::Interface::as_raw(self), pinfo, guidtx, tsid, froot.into_param().abi(), nisolationlevel).ok()
+        ::windows_core::vcall!(self.OnTransactionStart2(pinfo, guidtx, tsid, froot.into_param().abi(), nisolationlevel)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2491,13 +2491,13 @@ impl IComTransaction2Events {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnTransactionPrepare2)(::windows_core::Interface::as_raw(self), pinfo, guidtx, fvoteyes.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnTransactionPrepare2(pinfo, guidtx, fvoteyes.into_param().abi())).ok()
     }
     pub unsafe fn OnTransactionAbort2(&self, pinfo: *const COMSVCSEVENTINFO, guidtx: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnTransactionAbort2)(::windows_core::Interface::as_raw(self), pinfo, guidtx).ok()
+        ::windows_core::vcall!(self.OnTransactionAbort2(pinfo, guidtx)).ok()
     }
     pub unsafe fn OnTransactionCommit2(&self, pinfo: *const COMSVCSEVENTINFO, guidtx: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnTransactionCommit2)(::windows_core::Interface::as_raw(self), pinfo, guidtx).ok()
+        ::windows_core::vcall!(self.OnTransactionCommit2(pinfo, guidtx)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComTransaction2Events, ::windows_core::IUnknown);
@@ -2532,7 +2532,7 @@ impl IComTransactionEvents {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnTransactionStart)(::windows_core::Interface::as_raw(self), pinfo, guidtx, tsid, froot.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnTransactionStart(pinfo, guidtx, tsid, froot.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2540,13 +2540,13 @@ impl IComTransactionEvents {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnTransactionPrepare)(::windows_core::Interface::as_raw(self), pinfo, guidtx, fvoteyes.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnTransactionPrepare(pinfo, guidtx, fvoteyes.into_param().abi())).ok()
     }
     pub unsafe fn OnTransactionAbort(&self, pinfo: *const COMSVCSEVENTINFO, guidtx: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnTransactionAbort)(::windows_core::Interface::as_raw(self), pinfo, guidtx).ok()
+        ::windows_core::vcall!(self.OnTransactionAbort(pinfo, guidtx)).ok()
     }
     pub unsafe fn OnTransactionCommit(&self, pinfo: *const COMSVCSEVENTINFO, guidtx: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnTransactionCommit)(::windows_core::Interface::as_raw(self), pinfo, guidtx).ok()
+        ::windows_core::vcall!(self.OnTransactionCommit(pinfo, guidtx)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComTransactionEvents, ::windows_core::IUnknown);
@@ -2578,7 +2578,7 @@ impl IComUserEvent {
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn OnUserEvent(&self, pinfo: *const COMSVCSEVENTINFO, pvarevent: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnUserEvent)(::windows_core::Interface::as_raw(self), pinfo, pvarevent).ok()
+        ::windows_core::vcall!(self.OnUserEvent(pinfo, pvarevent)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IComUserEvent, ::windows_core::IUnknown);
@@ -2602,7 +2602,7 @@ pub struct IComUserEvent_Vtbl {
 pub struct IContextProperties(::windows_core::IUnknown);
 impl IContextProperties {
     pub unsafe fn Count(&self, plcount: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), plcount).ok()
+        ::windows_core::vcall!(self.Count(plcount)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2610,11 +2610,11 @@ impl IContextProperties {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetProperty)(::windows_core::Interface::as_raw(self), name.into_param().abi(), pproperty).ok()
+        ::windows_core::vcall!(self.GetProperty(name.into_param().abi(), pproperty)).ok()
     }
     pub unsafe fn EnumNames(&self) -> ::windows_core::Result<IEnumNames> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumNames)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumNames(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2622,13 +2622,13 @@ impl IContextProperties {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetProperty)(::windows_core::Interface::as_raw(self), name.into_param().abi(), ::core::mem::transmute(property)).ok()
+        ::windows_core::vcall!(self.SetProperty(name.into_param().abi(), ::core::mem::transmute(property))).ok()
     }
     pub unsafe fn RemoveProperty<P0>(&self, name: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).RemoveProperty)(::windows_core::Interface::as_raw(self), name.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RemoveProperty(name.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IContextProperties, ::windows_core::IUnknown);
@@ -2661,7 +2661,7 @@ impl IContextSecurityPerimeter {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetPerimeterFlag(&self, pflag: *mut super::super::Foundation::BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetPerimeterFlag)(::windows_core::Interface::as_raw(self), pflag).ok()
+        ::windows_core::vcall!(self.GetPerimeterFlag(pflag)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2669,7 +2669,7 @@ impl IContextSecurityPerimeter {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetPerimeterFlag)(::windows_core::Interface::as_raw(self), fflag.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetPerimeterFlag(fflag.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IContextSecurityPerimeter, ::windows_core::IUnknown);
@@ -2702,18 +2702,18 @@ impl IContextState {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetDeactivateOnReturn)(::windows_core::Interface::as_raw(self), bdeactivate.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetDeactivateOnReturn(bdeactivate.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetDeactivateOnReturn(&self, pbdeactivate: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeactivateOnReturn)(::windows_core::Interface::as_raw(self), pbdeactivate).ok()
+        ::windows_core::vcall!(self.GetDeactivateOnReturn(pbdeactivate)).ok()
     }
     pub unsafe fn SetMyTransactionVote(&self, txvote: TransactionVote) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMyTransactionVote)(::windows_core::Interface::as_raw(self), txvote).ok()
+        ::windows_core::vcall!(self.SetMyTransactionVote(txvote)).ok()
     }
     pub unsafe fn GetMyTransactionVote(&self, ptxvote: *mut TransactionVote) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetMyTransactionVote)(::windows_core::Interface::as_raw(self), ptxvote).ok()
+        ::windows_core::vcall!(self.GetMyTransactionVote(ptxvote)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IContextState, ::windows_core::IUnknown);
@@ -2746,7 +2746,7 @@ impl ICreateWithLocalTransaction {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateInstanceWithSysTx)(::windows_core::Interface::as_raw(self), ptransaction.into_param().abi(), rclsid, riid, pobject).ok()
+        ::windows_core::vcall!(self.CreateInstanceWithSysTx(ptransaction.into_param().abi(), rclsid, riid, pobject)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICreateWithLocalTransaction, ::windows_core::IUnknown);
@@ -2772,7 +2772,7 @@ impl ICreateWithTipTransactionEx {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).CreateInstance)(::windows_core::Interface::as_raw(self), bstrtipurl.into_param().abi(), rclsid, &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateInstance(bstrtipurl.into_param().abi(), rclsid, &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICreateWithTipTransactionEx, ::windows_core::IUnknown);
@@ -2800,7 +2800,7 @@ impl ICreateWithTransactionEx {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).CreateInstance)(::windows_core::Interface::as_raw(self), ptransaction.into_param().abi(), rclsid, &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateInstance(ptransaction.into_param().abi(), rclsid, &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICreateWithTransactionEx, ::windows_core::IUnknown);
@@ -2827,22 +2827,22 @@ impl ICrmCompensator {
     where
         P0: ::windows_core::IntoParam<ICrmLogControl>,
     {
-        (::windows_core::Interface::vtable(self).SetLogControl)(::windows_core::Interface::as_raw(self), plogcontrol.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetLogControl(plogcontrol.into_param().abi())).ok()
     }
     pub unsafe fn BeginPrepare(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).BeginPrepare)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.BeginPrepare()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
     pub unsafe fn PrepareRecord(&self, crmlogrec: CrmLogRecordRead) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).PrepareRecord)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(crmlogrec), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.PrepareRecord(::core::mem::transmute(crmlogrec), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EndPrepare(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EndPrepare)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EndPrepare(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2850,16 +2850,16 @@ impl ICrmCompensator {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).BeginCommit)(::windows_core::Interface::as_raw(self), frecovery.into_param().abi()).ok()
+        ::windows_core::vcall!(self.BeginCommit(frecovery.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
     pub unsafe fn CommitRecord(&self, crmlogrec: CrmLogRecordRead) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CommitRecord)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(crmlogrec), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CommitRecord(::core::mem::transmute(crmlogrec), &mut result__)).from_abi(result__)
     }
     pub unsafe fn EndCommit(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EndCommit)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.EndCommit()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2867,16 +2867,16 @@ impl ICrmCompensator {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).BeginAbort)(::windows_core::Interface::as_raw(self), frecovery.into_param().abi()).ok()
+        ::windows_core::vcall!(self.BeginAbort(frecovery.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
     pub unsafe fn AbortRecord(&self, crmlogrec: CrmLogRecordRead) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AbortRecord)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(crmlogrec), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AbortRecord(::core::mem::transmute(crmlogrec), &mut result__)).from_abi(result__)
     }
     pub unsafe fn EndAbort(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EndAbort)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.EndAbort()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICrmCompensator, ::windows_core::IUnknown);
@@ -2927,22 +2927,22 @@ impl ICrmCompensatorVariants {
     where
         P0: ::windows_core::IntoParam<ICrmLogControl>,
     {
-        (::windows_core::Interface::vtable(self).SetLogControlVariants)(::windows_core::Interface::as_raw(self), plogcontrol.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetLogControlVariants(plogcontrol.into_param().abi())).ok()
     }
     pub unsafe fn BeginPrepareVariants(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).BeginPrepareVariants)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.BeginPrepareVariants()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn PrepareRecordVariants(&self, plogrecord: *const super::Variant::VARIANT) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).PrepareRecordVariants)(::windows_core::Interface::as_raw(self), plogrecord, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.PrepareRecordVariants(plogrecord, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EndPrepareVariants(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EndPrepareVariants)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EndPrepareVariants(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2950,16 +2950,16 @@ impl ICrmCompensatorVariants {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
     {
-        (::windows_core::Interface::vtable(self).BeginCommitVariants)(::windows_core::Interface::as_raw(self), brecovery.into_param().abi()).ok()
+        ::windows_core::vcall!(self.BeginCommitVariants(brecovery.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn CommitRecordVariants(&self, plogrecord: *const super::Variant::VARIANT) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CommitRecordVariants)(::windows_core::Interface::as_raw(self), plogrecord, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CommitRecordVariants(plogrecord, &mut result__)).from_abi(result__)
     }
     pub unsafe fn EndCommitVariants(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EndCommitVariants)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.EndCommitVariants()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2967,16 +2967,16 @@ impl ICrmCompensatorVariants {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
     {
-        (::windows_core::Interface::vtable(self).BeginAbortVariants)(::windows_core::Interface::as_raw(self), brecovery.into_param().abi()).ok()
+        ::windows_core::vcall!(self.BeginAbortVariants(brecovery.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn AbortRecordVariants(&self, plogrecord: *const super::Variant::VARIANT) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AbortRecordVariants)(::windows_core::Interface::as_raw(self), plogrecord, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AbortRecordVariants(plogrecord, &mut result__)).from_abi(result__)
     }
     pub unsafe fn EndAbortVariants(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EndAbortVariants)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.EndAbortVariants()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICrmCompensatorVariants, ::windows_core::IUnknown);
@@ -3025,25 +3025,25 @@ pub struct ICrmFormatLogRecords(::windows_core::IUnknown);
 impl ICrmFormatLogRecords {
     pub unsafe fn GetColumnCount(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetColumnCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetColumnCount(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn GetColumnHeaders(&self) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetColumnHeaders)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetColumnHeaders(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn GetColumn(&self, crmlogrec: CrmLogRecordRead) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetColumn)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(crmlogrec), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetColumn(::core::mem::transmute(crmlogrec), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn GetColumnVariants(&self, logrecord: super::Variant::VARIANT) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetColumnVariants)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(logrecord), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetColumnVariants(::core::mem::transmute(logrecord), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICrmFormatLogRecords, ::windows_core::IUnknown);
@@ -3077,33 +3077,33 @@ pub struct ICrmLogControl(::windows_core::IUnknown);
 impl ICrmLogControl {
     pub unsafe fn TransactionUOW(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TransactionUOW)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TransactionUOW(&mut result__)).from_abi(result__)
     }
     pub unsafe fn RegisterCompensator<P0, P1>(&self, lpcwstrprogidcompensator: P0, lpcwstrdescription: P1, lcrmregflags: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).RegisterCompensator)(::windows_core::Interface::as_raw(self), lpcwstrprogidcompensator.into_param().abi(), lpcwstrdescription.into_param().abi(), lcrmregflags).ok()
+        ::windows_core::vcall!(self.RegisterCompensator(lpcwstrprogidcompensator.into_param().abi(), lpcwstrdescription.into_param().abi(), lcrmregflags)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn WriteLogRecordVariants(&self, plogrecord: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).WriteLogRecordVariants)(::windows_core::Interface::as_raw(self), plogrecord).ok()
+        ::windows_core::vcall!(self.WriteLogRecordVariants(plogrecord)).ok()
     }
     pub unsafe fn ForceLog(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ForceLog)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ForceLog()).ok()
     }
     pub unsafe fn ForgetLogRecord(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ForgetLogRecord)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ForgetLogRecord()).ok()
     }
     pub unsafe fn ForceTransactionToAbort(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ForceTransactionToAbort)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ForceTransactionToAbort()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn WriteLogRecord(&self, rgblob: &[super::Com::BLOB]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).WriteLogRecord)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(rgblob.as_ptr()), rgblob.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.WriteLogRecord(::core::mem::transmute(rgblob.as_ptr()), rgblob.len().try_into().unwrap())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICrmLogControl, ::windows_core::IUnknown);
@@ -3139,13 +3139,13 @@ impl ICrmMonitor {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetClerks(&self) -> ::windows_core::Result<ICrmMonitorClerks> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetClerks)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetClerks(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn HoldClerk(&self, index: super::Variant::VARIANT) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).HoldClerk)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(index), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.HoldClerk(::core::mem::transmute(index), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICrmMonitor, ::windows_core::IUnknown);
@@ -3179,39 +3179,39 @@ impl ICrmMonitorClerks {
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn Item(&self, index: super::Variant::VARIANT) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Item)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(index), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Item(::core::mem::transmute(index), &mut result__)).from_abi(result__)
     }
     pub unsafe fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self)._NewEnum)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self._NewEnum(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Count(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn ProgIdCompensator(&self, index: super::Variant::VARIANT) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ProgIdCompensator)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(index), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ProgIdCompensator(::core::mem::transmute(index), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn Description(&self, index: super::Variant::VARIANT) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Description)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(index), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Description(::core::mem::transmute(index), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn TransactionUOW(&self, index: super::Variant::VARIANT) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TransactionUOW)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(index), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TransactionUOW(::core::mem::transmute(index), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn ActivityId(&self, index: super::Variant::VARIANT) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ActivityId)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(index), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ActivityId(::core::mem::transmute(index), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -3258,28 +3258,28 @@ pub struct ICrmMonitorLogRecords(::windows_core::IUnknown);
 impl ICrmMonitorLogRecords {
     pub unsafe fn Count(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     pub unsafe fn TransactionState(&self) -> ::windows_core::Result<CrmTransactionState> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TransactionState)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TransactionState(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn StructuredRecords(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).StructuredRecords)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.StructuredRecords(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetLogRecord(&self, dwindex: u32, pcrmlogrec: *mut CrmLogRecordRead) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetLogRecord)(::windows_core::Interface::as_raw(self), dwindex, pcrmlogrec).ok()
+        ::windows_core::vcall!(self.GetLogRecord(dwindex, pcrmlogrec)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn GetLogRecordVariants(&self, indexnumber: super::Variant::VARIANT) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLogRecordVariants)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(indexnumber), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLogRecordVariants(::core::mem::transmute(indexnumber), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICrmMonitorLogRecords, ::windows_core::IUnknown);
@@ -3313,7 +3313,7 @@ pub struct ICrmMonitorLogRecords_Vtbl {
 pub struct IDispenserDriver(::windows_core::IUnknown);
 impl IDispenserDriver {
     pub unsafe fn CreateResource(&self, restypid: usize, presid: *mut usize, psecsfreebeforedestroy: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CreateResource)(::windows_core::Interface::as_raw(self), restypid, presid, psecsfreebeforedestroy).ok()
+        ::windows_core::vcall!(self.CreateResource(restypid, presid, psecsfreebeforedestroy)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3321,19 +3321,19 @@ impl IDispenserDriver {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).RateResource)(::windows_core::Interface::as_raw(self), restypid, resid, frequirestransactionenlistment.into_param().abi(), prating).ok()
+        ::windows_core::vcall!(self.RateResource(restypid, resid, frequirestransactionenlistment.into_param().abi(), prating)).ok()
     }
     pub unsafe fn EnlistResource(&self, resid: usize, transid: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnlistResource)(::windows_core::Interface::as_raw(self), resid, transid).ok()
+        ::windows_core::vcall!(self.EnlistResource(resid, transid)).ok()
     }
     pub unsafe fn ResetResource(&self, resid: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ResetResource)(::windows_core::Interface::as_raw(self), resid).ok()
+        ::windows_core::vcall!(self.ResetResource(resid)).ok()
     }
     pub unsafe fn DestroyResource(&self, resid: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DestroyResource)(::windows_core::Interface::as_raw(self), resid).ok()
+        ::windows_core::vcall!(self.DestroyResource(resid)).ok()
     }
     pub unsafe fn DestroyResourceS(&self, resid: *mut u16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DestroyResourceS)(::windows_core::Interface::as_raw(self), resid).ok()
+        ::windows_core::vcall!(self.DestroyResourceS(resid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDispenserDriver, ::windows_core::IUnknown);
@@ -3367,10 +3367,10 @@ impl IDispenserManager {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RegisterDispenser)(::windows_core::Interface::as_raw(self), __midl__idispensermanager0000.into_param().abi(), szdispensername.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RegisterDispenser(__midl__idispensermanager0000.into_param().abi(), szdispensername.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetContext(&self, __midl__idispensermanager0002: *mut usize, __midl__idispensermanager0003: *mut usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetContext)(::windows_core::Interface::as_raw(self), __midl__idispensermanager0002, __midl__idispensermanager0003).ok()
+        ::windows_core::vcall!(self.GetContext(__midl__idispensermanager0002, __midl__idispensermanager0003)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDispenserManager, ::windows_core::IUnknown);
@@ -3392,17 +3392,17 @@ pub struct IDispenserManager_Vtbl {
 pub struct IEnumNames(::windows_core::IUnknown);
 impl IEnumNames {
     pub unsafe fn Next(&self, celt: u32, rgname: *mut ::windows_core::BSTR, pceltfetched: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), celt, ::core::mem::transmute(rgname), pceltfetched).ok()
+        ::windows_core::vcall!(self.Next(celt, ::core::mem::transmute(rgname), pceltfetched)).ok()
     }
     pub unsafe fn Skip(&self, celt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Skip)(::windows_core::Interface::as_raw(self), celt).ok()
+        ::windows_core::vcall!(self.Skip(celt)).ok()
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Clone(&self) -> ::windows_core::Result<IEnumNames> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumNames, ::windows_core::IUnknown);
@@ -3433,17 +3433,17 @@ impl IEventServerTrace {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).StartTraceGuid)(::windows_core::Interface::as_raw(self), bstrguidevent.into_param().abi(), bstrguidfilter.into_param().abi(), lpidfilter).ok()
+        ::windows_core::vcall!(self.StartTraceGuid(bstrguidevent.into_param().abi(), bstrguidfilter.into_param().abi(), lpidfilter)).ok()
     }
     pub unsafe fn StopTraceGuid<P0, P1>(&self, bstrguidevent: P0, bstrguidfilter: P1, lpidfilter: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).StopTraceGuid)(::windows_core::Interface::as_raw(self), bstrguidevent.into_param().abi(), bstrguidfilter.into_param().abi(), lpidfilter).ok()
+        ::windows_core::vcall!(self.StopTraceGuid(bstrguidevent.into_param().abi(), bstrguidfilter.into_param().abi(), lpidfilter)).ok()
     }
     pub unsafe fn EnumTraceGuid(&self, plcntguids: *mut i32, pbstrguidlist: *mut ::windows_core::BSTR) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumTraceGuid)(::windows_core::Interface::as_raw(self), plcntguids, ::core::mem::transmute(pbstrguidlist)).ok()
+        ::windows_core::vcall!(self.EnumTraceGuid(plcntguids, ::core::mem::transmute(pbstrguidlist))).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -3472,31 +3472,31 @@ impl IGetAppTrackerData {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetApplicationProcesses(&self, partitionid: *const ::windows_core::GUID, applicationid: *const ::windows_core::GUID, flags: u32, numapplicationprocesses: *mut u32, applicationprocesses: *mut *mut ApplicationProcessSummary) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetApplicationProcesses)(::windows_core::Interface::as_raw(self), partitionid, applicationid, flags, numapplicationprocesses, applicationprocesses).ok()
+        ::windows_core::vcall!(self.GetApplicationProcesses(partitionid, applicationid, flags, numapplicationprocesses, applicationprocesses)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetApplicationProcessDetails(&self, applicationinstanceid: *const ::windows_core::GUID, processid: u32, flags: u32, summary: ::core::option::Option<*mut ApplicationProcessSummary>, statistics: ::core::option::Option<*mut ApplicationProcessStatistics>, recycleinfo: ::core::option::Option<*mut ApplicationProcessRecycleInfo>, anycomponentshangmonitored: ::core::option::Option<*mut super::super::Foundation::BOOL>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetApplicationProcessDetails)(::windows_core::Interface::as_raw(self), applicationinstanceid, processid, flags, ::core::mem::transmute(summary.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(statistics.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(recycleinfo.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(anycomponentshangmonitored.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetApplicationProcessDetails(applicationinstanceid, processid, flags, ::core::mem::transmute(summary.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(statistics.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(recycleinfo.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(anycomponentshangmonitored.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn GetApplicationsInProcess(&self, applicationinstanceid: *const ::windows_core::GUID, processid: u32, partitionid: *const ::windows_core::GUID, flags: u32, numapplicationsinprocess: *mut u32, applications: *mut *mut ApplicationSummary) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetApplicationsInProcess)(::windows_core::Interface::as_raw(self), applicationinstanceid, processid, partitionid, flags, numapplicationsinprocess, applications).ok()
+        ::windows_core::vcall!(self.GetApplicationsInProcess(applicationinstanceid, processid, partitionid, flags, numapplicationsinprocess, applications)).ok()
     }
     pub unsafe fn GetComponentsInProcess(&self, applicationinstanceid: *const ::windows_core::GUID, processid: u32, partitionid: *const ::windows_core::GUID, applicationid: *const ::windows_core::GUID, flags: u32, numcomponentsinprocess: *mut u32, components: *mut *mut ComponentSummary) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetComponentsInProcess)(::windows_core::Interface::as_raw(self), applicationinstanceid, processid, partitionid, applicationid, flags, numcomponentsinprocess, components).ok()
+        ::windows_core::vcall!(self.GetComponentsInProcess(applicationinstanceid, processid, partitionid, applicationid, flags, numcomponentsinprocess, components)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetComponentDetails(&self, applicationinstanceid: *const ::windows_core::GUID, processid: u32, clsid: *const ::windows_core::GUID, flags: u32, summary: ::core::option::Option<*mut ComponentSummary>, statistics: ::core::option::Option<*mut ComponentStatistics>, hangmonitorinfo: ::core::option::Option<*mut ComponentHangMonitorInfo>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetComponentDetails)(::windows_core::Interface::as_raw(self), applicationinstanceid, processid, clsid, flags, ::core::mem::transmute(summary.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(statistics.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(hangmonitorinfo.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetComponentDetails(applicationinstanceid, processid, clsid, flags, ::core::mem::transmute(summary.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(statistics.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(hangmonitorinfo.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn GetTrackerDataAsCollectionObject(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetTrackerDataAsCollectionObject)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetTrackerDataAsCollectionObject(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetSuggestedPollingInterval(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSuggestedPollingInterval)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSuggestedPollingInterval(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IGetAppTrackerData, ::windows_core::IUnknown);
@@ -3532,7 +3532,7 @@ pub struct IGetAppTrackerData_Vtbl {
 pub struct IGetContextProperties(::windows_core::IUnknown);
 impl IGetContextProperties {
     pub unsafe fn Count(&self, plcount: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), plcount).ok()
+        ::windows_core::vcall!(self.Count(plcount)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3540,11 +3540,11 @@ impl IGetContextProperties {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetProperty)(::windows_core::Interface::as_raw(self), name.into_param().abi(), pproperty).ok()
+        ::windows_core::vcall!(self.GetProperty(name.into_param().abi(), pproperty)).ok()
     }
     pub unsafe fn EnumNames(&self) -> ::windows_core::Result<IEnumNames> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumNames)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumNames(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IGetContextProperties, ::windows_core::IUnknown);
@@ -3576,7 +3576,7 @@ impl IGetSecurityCallContext {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetSecurityCallContext(&self) -> ::windows_core::Result<ISecurityCallContext> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSecurityCallContext)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSecurityCallContext(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -3604,16 +3604,16 @@ pub struct IGetSecurityCallContext_Vtbl {
 pub struct IHolder(::windows_core::IUnknown);
 impl IHolder {
     pub unsafe fn AllocResource(&self, __midl__iholder0000: usize, __midl__iholder0001: *mut usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AllocResource)(::windows_core::Interface::as_raw(self), __midl__iholder0000, __midl__iholder0001).ok()
+        ::windows_core::vcall!(self.AllocResource(__midl__iholder0000, __midl__iholder0001)).ok()
     }
     pub unsafe fn FreeResource(&self, __midl__iholder0002: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FreeResource)(::windows_core::Interface::as_raw(self), __midl__iholder0002).ok()
+        ::windows_core::vcall!(self.FreeResource(__midl__iholder0002)).ok()
     }
     pub unsafe fn TrackResource(&self, __midl__iholder0003: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).TrackResource)(::windows_core::Interface::as_raw(self), __midl__iholder0003).ok()
+        ::windows_core::vcall!(self.TrackResource(__midl__iholder0003)).ok()
     }
     pub unsafe fn TrackResourceS(&self, __midl__iholder0004: *mut u16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).TrackResourceS)(::windows_core::Interface::as_raw(self), __midl__iholder0004).ok()
+        ::windows_core::vcall!(self.TrackResourceS(__midl__iholder0004)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3621,7 +3621,7 @@ impl IHolder {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).UntrackResource)(::windows_core::Interface::as_raw(self), __midl__iholder0005, __midl__iholder0006.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UntrackResource(__midl__iholder0005, __midl__iholder0006.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3629,13 +3629,13 @@ impl IHolder {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).UntrackResourceS)(::windows_core::Interface::as_raw(self), __midl__iholder0007, __midl__iholder0008.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UntrackResourceS(__midl__iholder0007, __midl__iholder0008.into_param().abi())).ok()
     }
     pub unsafe fn Close(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Close()).ok()
     }
     pub unsafe fn RequestDestroyResource(&self, __midl__iholder0009: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RequestDestroyResource)(::windows_core::Interface::as_raw(self), __midl__iholder0009).ok()
+        ::windows_core::vcall!(self.RequestDestroyResource(__midl__iholder0009)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IHolder, ::windows_core::IUnknown);
@@ -3673,14 +3673,14 @@ impl ILBEvents {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).TargetUp)(::windows_core::Interface::as_raw(self), bstrservername.into_param().abi(), bstrclsideng.into_param().abi()).ok()
+        ::windows_core::vcall!(self.TargetUp(bstrservername.into_param().abi(), bstrclsideng.into_param().abi())).ok()
     }
     pub unsafe fn TargetDown<P0, P1>(&self, bstrservername: P0, bstrclsideng: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).TargetDown)(::windows_core::Interface::as_raw(self), bstrservername.into_param().abi(), bstrclsideng.into_param().abi()).ok()
+        ::windows_core::vcall!(self.TargetDown(bstrservername.into_param().abi(), bstrclsideng.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3689,7 +3689,7 @@ impl ILBEvents {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).EngineDefined)(::windows_core::Interface::as_raw(self), bstrpropname.into_param().abi(), varpropvalue, bstrclsideng.into_param().abi()).ok()
+        ::windows_core::vcall!(self.EngineDefined(bstrpropname.into_param().abi(), varpropvalue, bstrclsideng.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ILBEvents, ::windows_core::IUnknown);
@@ -3718,22 +3718,22 @@ impl IMTSActivity {
     where
         P0: ::windows_core::IntoParam<IMTSCall>,
     {
-        (::windows_core::Interface::vtable(self).SynchronousCall)(::windows_core::Interface::as_raw(self), pcall.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SynchronousCall(pcall.into_param().abi())).ok()
     }
     pub unsafe fn AsyncCall<P0>(&self, pcall: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IMTSCall>,
     {
-        (::windows_core::Interface::vtable(self).AsyncCall)(::windows_core::Interface::as_raw(self), pcall.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AsyncCall(pcall.into_param().abi())).ok()
     }
     pub unsafe fn Reserved1(&self) {
-        (::windows_core::Interface::vtable(self).Reserved1)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved1())
     }
     pub unsafe fn BindToCurrentThread(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).BindToCurrentThread)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.BindToCurrentThread()).ok()
     }
     pub unsafe fn UnbindFromThread(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UnbindFromThread)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.UnbindFromThread()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMTSActivity, ::windows_core::IUnknown);
@@ -3758,7 +3758,7 @@ pub struct IMTSActivity_Vtbl {
 pub struct IMTSCall(::windows_core::IUnknown);
 impl IMTSCall {
     pub unsafe fn OnCall(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCall)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnCall()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMTSCall, ::windows_core::IUnknown);
@@ -3783,7 +3783,7 @@ pub struct IMTSLocator(::windows_core::IUnknown);
 impl IMTSLocator {
     pub unsafe fn GetEventDispatcher(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetEventDispatcher)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetEventDispatcher(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -3814,13 +3814,13 @@ impl IManagedActivationEvents {
         P0: ::windows_core::IntoParam<IManagedObjectInfo>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).CreateManagedStub)(::windows_core::Interface::as_raw(self), pinfo.into_param().abi(), fdist.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateManagedStub(pinfo.into_param().abi(), fdist.into_param().abi())).ok()
     }
     pub unsafe fn DestroyManagedStub<P0>(&self, pinfo: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IManagedObjectInfo>,
     {
-        (::windows_core::Interface::vtable(self).DestroyManagedStub)(::windows_core::Interface::as_raw(self), pinfo.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DestroyManagedStub(pinfo.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IManagedActivationEvents, ::windows_core::IUnknown);
@@ -3846,11 +3846,11 @@ pub struct IManagedObjectInfo(::windows_core::IUnknown);
 impl IManagedObjectInfo {
     pub unsafe fn GetIUnknown(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetIUnknown)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetIUnknown(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetIObjectControl(&self) -> ::windows_core::Result<IObjectControl> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetIObjectControl)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetIObjectControl(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3859,7 +3859,7 @@ impl IManagedObjectInfo {
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
         P1: ::windows_core::IntoParam<IManagedPooledObj>,
     {
-        (::windows_core::Interface::vtable(self).SetInPool)(::windows_core::Interface::as_raw(self), binpool.into_param().abi(), ppooledobj.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetInPool(binpool.into_param().abi(), ppooledobj.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3867,7 +3867,7 @@ impl IManagedObjectInfo {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetWrapperStrength)(::windows_core::Interface::as_raw(self), bstrong.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetWrapperStrength(bstrong.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IManagedObjectInfo, ::windows_core::IUnknown);
@@ -3897,7 +3897,7 @@ pub struct IManagedObjectInfo_Vtbl {
 pub struct IManagedPoolAction(::windows_core::IUnknown);
 impl IManagedPoolAction {
     pub unsafe fn LastRelease(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).LastRelease)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.LastRelease()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IManagedPoolAction, ::windows_core::IUnknown);
@@ -3923,7 +3923,7 @@ impl IManagedPooledObj {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetHeld)(::windows_core::Interface::as_raw(self), m_bheld.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetHeld(m_bheld.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IManagedPooledObj, ::windows_core::IUnknown);
@@ -3951,34 +3951,34 @@ pub struct IMessageMover(::windows_core::IUnknown);
 impl IMessageMover {
     pub unsafe fn SourcePath(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SourcePath)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SourcePath(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetSourcePath<P0>(&self, newval: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetSourcePath)(::windows_core::Interface::as_raw(self), newval.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetSourcePath(newval.into_param().abi())).ok()
     }
     pub unsafe fn DestPath(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DestPath)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DestPath(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetDestPath<P0>(&self, newval: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetDestPath)(::windows_core::Interface::as_raw(self), newval.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetDestPath(newval.into_param().abi())).ok()
     }
     pub unsafe fn CommitBatchSize(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CommitBatchSize)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CommitBatchSize(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetCommitBatchSize(&self, newval: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetCommitBatchSize)(::windows_core::Interface::as_raw(self), newval).ok()
+        ::windows_core::vcall!(self.SetCommitBatchSize(newval)).ok()
     }
     pub unsafe fn MoveMessages(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).MoveMessages)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.MoveMessages(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4013,19 +4013,19 @@ pub struct IMtsEventInfo(::windows_core::IUnknown);
 impl IMtsEventInfo {
     pub unsafe fn Names(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Names)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Names(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DisplayName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DisplayName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DisplayName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn EventID(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EventID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EventID(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Count(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4034,7 +4034,7 @@ impl IMtsEventInfo {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).get_Value)(::windows_core::Interface::as_raw(self), skey.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.get_Value(skey.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4070,26 +4070,26 @@ pub struct IMtsEvents(::windows_core::IUnknown);
 impl IMtsEvents {
     pub unsafe fn PackageName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).PackageName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.PackageName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn PackageGuid(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).PackageGuid)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.PackageGuid(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn PostEvent(&self, vevent: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).PostEvent)(::windows_core::Interface::as_raw(self), vevent).ok()
+        ::windows_core::vcall!(self.PostEvent(vevent)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn FireEvents(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).FireEvents)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.FireEvents(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetProcessID(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetProcessID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetProcessID(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4128,14 +4128,14 @@ pub struct IMtsGrp(::windows_core::IUnknown);
 impl IMtsGrp {
     pub unsafe fn Count(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Item(&self, lindex: i32) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Item)(::windows_core::Interface::as_raw(self), lindex, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Item(lindex, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Refresh(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Refresh)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Refresh()).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4162,28 +4162,28 @@ pub struct IMtsGrp_Vtbl {
 pub struct IObjPool(::windows_core::IUnknown);
 impl IObjPool {
     pub unsafe fn Reserved1(&self) {
-        (::windows_core::Interface::vtable(self).Reserved1)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved1())
     }
     pub unsafe fn Reserved2(&self) {
-        (::windows_core::Interface::vtable(self).Reserved2)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved2())
     }
     pub unsafe fn Reserved3(&self) {
-        (::windows_core::Interface::vtable(self).Reserved3)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved3())
     }
     pub unsafe fn Reserved4(&self) {
-        (::windows_core::Interface::vtable(self).Reserved4)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved4())
     }
     pub unsafe fn PutEndTx<P0>(&self, pobj: P0)
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).PutEndTx)(::windows_core::Interface::as_raw(self), pobj.into_param().abi())
+        ::windows_core::vcall!(self.PutEndTx(pobj.into_param().abi()))
     }
     pub unsafe fn Reserved5(&self) {
-        (::windows_core::Interface::vtable(self).Reserved5)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved5())
     }
     pub unsafe fn Reserved6(&self) {
-        (::windows_core::Interface::vtable(self).Reserved6)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved6())
     }
 }
 ::windows_core::imp::interface_hierarchy!(IObjPool, ::windows_core::IUnknown);
@@ -4215,7 +4215,7 @@ impl IObjectConstruct {
     where
         P0: ::windows_core::IntoParam<super::Com::IDispatch>,
     {
-        (::windows_core::Interface::vtable(self).Construct)(::windows_core::Interface::as_raw(self), pctorobj.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Construct(pctorobj.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IObjectConstruct, ::windows_core::IUnknown);
@@ -4242,7 +4242,7 @@ pub struct IObjectConstructString(::windows_core::IUnknown);
 #[cfg(feature = "Win32_System_Com")]
 impl IObjectConstructString {
     pub unsafe fn ConstructString(&self, pval: *mut ::windows_core::BSTR) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConstructString)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pval)).ok()
+        ::windows_core::vcall!(self.ConstructString(::core::mem::transmute(pval))).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4267,29 +4267,29 @@ pub struct IObjectConstructString_Vtbl {
 pub struct IObjectContext(::windows_core::IUnknown);
 impl IObjectContext {
     pub unsafe fn CreateInstance(&self, rclsid: *const ::windows_core::GUID, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CreateInstance)(::windows_core::Interface::as_raw(self), rclsid, riid, ppv).ok()
+        ::windows_core::vcall!(self.CreateInstance(rclsid, riid, ppv)).ok()
     }
     pub unsafe fn SetComplete(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetComplete)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SetComplete()).ok()
     }
     pub unsafe fn SetAbort(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetAbort)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SetAbort()).ok()
     }
     pub unsafe fn EnableCommit(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnableCommit)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.EnableCommit()).ok()
     }
     pub unsafe fn DisableCommit(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DisableCommit)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.DisableCommit()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsInTransaction(&self) -> super::super::Foundation::BOOL {
-        (::windows_core::Interface::vtable(self).IsInTransaction)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.IsInTransaction())
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsSecurityEnabled(&self) -> super::super::Foundation::BOOL {
-        (::windows_core::Interface::vtable(self).IsSecurityEnabled)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.IsSecurityEnabled())
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4297,7 +4297,7 @@ impl IObjectContext {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).IsCallerInRole)(::windows_core::Interface::as_raw(self), bstrrole.into_param().abi(), pfisinrole).ok()
+        ::windows_core::vcall!(self.IsCallerInRole(bstrrole.into_param().abi(), pfisinrole)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IObjectContext, ::windows_core::IUnknown);
@@ -4334,7 +4334,7 @@ pub struct IObjectContext_Vtbl {
 pub struct IObjectContextActivity(::windows_core::IUnknown);
 impl IObjectContextActivity {
     pub unsafe fn GetActivityId(&self, pguid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetActivityId)(::windows_core::Interface::as_raw(self), pguid).ok()
+        ::windows_core::vcall!(self.GetActivityId(pguid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IObjectContextActivity, ::windows_core::IUnknown);
@@ -4357,20 +4357,20 @@ impl IObjectContextInfo {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsInTransaction(&self) -> super::super::Foundation::BOOL {
-        (::windows_core::Interface::vtable(self).IsInTransaction)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.IsInTransaction())
     }
     pub unsafe fn GetTransaction(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetTransaction)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetTransaction(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetTransactionId(&self, pguid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetTransactionId)(::windows_core::Interface::as_raw(self), pguid).ok()
+        ::windows_core::vcall!(self.GetTransactionId(pguid)).ok()
     }
     pub unsafe fn GetActivityId(&self, pguid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetActivityId)(::windows_core::Interface::as_raw(self), pguid).ok()
+        ::windows_core::vcall!(self.GetActivityId(pguid)).ok()
     }
     pub unsafe fn GetContextId(&self, pguid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetContextId)(::windows_core::Interface::as_raw(self), pguid).ok()
+        ::windows_core::vcall!(self.GetContextId(pguid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IObjectContextInfo, ::windows_core::IUnknown);
@@ -4400,29 +4400,29 @@ impl IObjectContextInfo2 {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsInTransaction(&self) -> super::super::Foundation::BOOL {
-        (::windows_core::Interface::vtable(self).base__.IsInTransaction)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.base__.IsInTransaction())
     }
     pub unsafe fn GetTransaction(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetTransaction)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetTransaction(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetTransactionId(&self, pguid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetTransactionId)(::windows_core::Interface::as_raw(self), pguid).ok()
+        ::windows_core::vcall!(self.base__.GetTransactionId(pguid)).ok()
     }
     pub unsafe fn GetActivityId(&self, pguid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetActivityId)(::windows_core::Interface::as_raw(self), pguid).ok()
+        ::windows_core::vcall!(self.base__.GetActivityId(pguid)).ok()
     }
     pub unsafe fn GetContextId(&self, pguid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetContextId)(::windows_core::Interface::as_raw(self), pguid).ok()
+        ::windows_core::vcall!(self.base__.GetContextId(pguid)).ok()
     }
     pub unsafe fn GetPartitionId(&self, pguid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetPartitionId)(::windows_core::Interface::as_raw(self), pguid).ok()
+        ::windows_core::vcall!(self.GetPartitionId(pguid)).ok()
     }
     pub unsafe fn GetApplicationId(&self, pguid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetApplicationId)(::windows_core::Interface::as_raw(self), pguid).ok()
+        ::windows_core::vcall!(self.GetApplicationId(pguid)).ok()
     }
     pub unsafe fn GetApplicationInstanceId(&self, pguid: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetApplicationInstanceId)(::windows_core::Interface::as_raw(self), pguid).ok()
+        ::windows_core::vcall!(self.GetApplicationInstanceId(pguid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IObjectContextInfo2, ::windows_core::IUnknown, IObjectContextInfo);
@@ -4445,7 +4445,7 @@ pub struct IObjectContextInfo2_Vtbl {
 pub struct IObjectContextTip(::windows_core::IUnknown);
 impl IObjectContextTip {
     pub unsafe fn GetTipUrl(&self, ptipurl: *mut ::windows_core::BSTR) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetTipUrl)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ptipurl)).ok()
+        ::windows_core::vcall!(self.GetTipUrl(::core::mem::transmute(ptipurl))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IObjectContextTip, ::windows_core::IUnknown);
@@ -4466,15 +4466,15 @@ pub struct IObjectContextTip_Vtbl {
 pub struct IObjectControl(::windows_core::IUnknown);
 impl IObjectControl {
     pub unsafe fn Activate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Activate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Activate()).ok()
     }
     pub unsafe fn Deactivate(&self) {
-        (::windows_core::Interface::vtable(self).Deactivate)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Deactivate())
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn CanBePooled(&self) -> super::super::Foundation::BOOL {
-        (::windows_core::Interface::vtable(self).CanBePooled)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.CanBePooled())
     }
 }
 ::windows_core::imp::interface_hierarchy!(IObjectControl, ::windows_core::IUnknown);
@@ -4500,10 +4500,10 @@ pub struct IObjectControl_Vtbl {
 pub struct IPlaybackControl(::windows_core::IUnknown);
 impl IPlaybackControl {
     pub unsafe fn FinalClientRetry(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FinalClientRetry)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.FinalClientRetry()).ok()
     }
     pub unsafe fn FinalServerRetry(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FinalServerRetry)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.FinalServerRetry()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPlaybackControl, ::windows_core::IUnknown);
@@ -4531,7 +4531,7 @@ impl IPoolManager {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ShutdownPool)(::windows_core::Interface::as_raw(self), clsidorprogid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ShutdownPool(clsidorprogid.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4559,10 +4559,10 @@ impl IProcessInitializer {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).Startup)(::windows_core::Interface::as_raw(self), punkprocesscontrol.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Startup(punkprocesscontrol.into_param().abi())).ok()
     }
     pub unsafe fn Shutdown(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Shutdown)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Shutdown()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IProcessInitializer, ::windows_core::IUnknown);
@@ -4588,7 +4588,7 @@ pub struct ISecurityCallContext(::windows_core::IUnknown);
 impl ISecurityCallContext {
     pub unsafe fn Count(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4597,11 +4597,11 @@ impl ISecurityCallContext {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).get_Item)(::windows_core::Interface::as_raw(self), name.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.get_Item(name.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self)._NewEnum)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self._NewEnum(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4610,13 +4610,13 @@ impl ISecurityCallContext {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsCallerInRole)(::windows_core::Interface::as_raw(self), bstrrole.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsCallerInRole(bstrrole.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsSecurityEnabled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsSecurityEnabled)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsSecurityEnabled(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4625,7 +4625,7 @@ impl ISecurityCallContext {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsUserInRole)(::windows_core::Interface::as_raw(self), puser, bstrrole.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsUserInRole(puser, bstrrole.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4671,17 +4671,17 @@ pub struct ISecurityCallersColl(::windows_core::IUnknown);
 impl ISecurityCallersColl {
     pub unsafe fn Count(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn get_Item(&self, lindex: i32) -> ::windows_core::Result<ISecurityIdentityColl> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).get_Item)(::windows_core::Interface::as_raw(self), lindex, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.get_Item(lindex, &mut result__)).from_abi(result__)
     }
     pub unsafe fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self)._NewEnum)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self._NewEnum(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4715,7 +4715,7 @@ pub struct ISecurityIdentityColl(::windows_core::IUnknown);
 impl ISecurityIdentityColl {
     pub unsafe fn Count(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4724,11 +4724,11 @@ impl ISecurityIdentityColl {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).get_Item)(::windows_core::Interface::as_raw(self), name.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.get_Item(name.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self)._NewEnum)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self._NewEnum(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4760,22 +4760,22 @@ impl ISecurityProperty {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetDirectCreatorSID(&self, psid: *mut super::super::Foundation::PSID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDirectCreatorSID)(::windows_core::Interface::as_raw(self), psid).ok()
+        ::windows_core::vcall!(self.GetDirectCreatorSID(psid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetOriginalCreatorSID(&self, psid: *mut super::super::Foundation::PSID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetOriginalCreatorSID)(::windows_core::Interface::as_raw(self), psid).ok()
+        ::windows_core::vcall!(self.GetOriginalCreatorSID(psid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetDirectCallerSID(&self, psid: *mut super::super::Foundation::PSID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDirectCallerSID)(::windows_core::Interface::as_raw(self), psid).ok()
+        ::windows_core::vcall!(self.GetDirectCallerSID(psid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetOriginalCallerSID(&self, psid: *mut super::super::Foundation::PSID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetOriginalCallerSID)(::windows_core::Interface::as_raw(self), psid).ok()
+        ::windows_core::vcall!(self.GetOriginalCallerSID(psid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4783,7 +4783,7 @@ impl ISecurityProperty {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::PSID>,
     {
-        (::windows_core::Interface::vtable(self).ReleaseSID)(::windows_core::Interface::as_raw(self), psid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ReleaseSID(psid.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISecurityProperty, ::windows_core::IUnknown);
@@ -4823,13 +4823,13 @@ pub struct ISecurityProperty_Vtbl {
 pub struct ISelectCOMLBServer(::windows_core::IUnknown);
 impl ISelectCOMLBServer {
     pub unsafe fn Init(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Init)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Init()).ok()
     }
     pub unsafe fn GetLBServer<P0>(&self, punk: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).GetLBServer)(::windows_core::Interface::as_raw(self), punk.into_param().abi()).ok()
+        ::windows_core::vcall!(self.GetLBServer(punk.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISelectCOMLBServer, ::windows_core::IUnknown);
@@ -4851,10 +4851,10 @@ pub struct ISelectCOMLBServer_Vtbl {
 pub struct ISendMethodEvents(::windows_core::IUnknown);
 impl ISendMethodEvents {
     pub unsafe fn SendMethodCall(&self, pidentity: *const ::core::ffi::c_void, riid: *const ::windows_core::GUID, dwmeth: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendMethodCall)(::windows_core::Interface::as_raw(self), pidentity, riid, dwmeth).ok()
+        ::windows_core::vcall!(self.SendMethodCall(pidentity, riid, dwmeth)).ok()
     }
     pub unsafe fn SendMethodReturn(&self, pidentity: *const ::core::ffi::c_void, riid: *const ::windows_core::GUID, dwmeth: u32, hrcall: ::windows_core::HRESULT, hrserver: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendMethodReturn)(::windows_core::Interface::as_raw(self), pidentity, riid, dwmeth, hrcall, hrserver).ok()
+        ::windows_core::vcall!(self.SendMethodReturn(pidentity, riid, dwmeth, hrcall, hrserver)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISendMethodEvents, ::windows_core::IUnknown);
@@ -4879,19 +4879,19 @@ impl IServiceActivity {
     where
         P0: ::windows_core::IntoParam<IServiceCall>,
     {
-        (::windows_core::Interface::vtable(self).SynchronousCall)(::windows_core::Interface::as_raw(self), piservicecall.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SynchronousCall(piservicecall.into_param().abi())).ok()
     }
     pub unsafe fn AsynchronousCall<P0>(&self, piservicecall: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IServiceCall>,
     {
-        (::windows_core::Interface::vtable(self).AsynchronousCall)(::windows_core::Interface::as_raw(self), piservicecall.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AsynchronousCall(piservicecall.into_param().abi())).ok()
     }
     pub unsafe fn BindToCurrentThread(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).BindToCurrentThread)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.BindToCurrentThread()).ok()
     }
     pub unsafe fn UnbindFromThread(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UnbindFromThread)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.UnbindFromThread()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceActivity, ::windows_core::IUnknown);
@@ -4915,7 +4915,7 @@ pub struct IServiceActivity_Vtbl {
 pub struct IServiceCall(::windows_core::IUnknown);
 impl IServiceCall {
     pub unsafe fn OnCall(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCall)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnCall()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceCall, ::windows_core::IUnknown);
@@ -4936,7 +4936,7 @@ pub struct IServiceCall_Vtbl {
 pub struct IServiceComTIIntrinsicsConfig(::windows_core::IUnknown);
 impl IServiceComTIIntrinsicsConfig {
     pub unsafe fn ComTIIntrinsicsConfig(&self, comtiintrinsicsconfig: CSC_COMTIIntrinsicsConfig) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ComTIIntrinsicsConfig)(::windows_core::Interface::as_raw(self), comtiintrinsicsconfig).ok()
+        ::windows_core::vcall!(self.ComTIIntrinsicsConfig(comtiintrinsicsconfig)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceComTIIntrinsicsConfig, ::windows_core::IUnknown);
@@ -4957,7 +4957,7 @@ pub struct IServiceComTIIntrinsicsConfig_Vtbl {
 pub struct IServiceIISIntrinsicsConfig(::windows_core::IUnknown);
 impl IServiceIISIntrinsicsConfig {
     pub unsafe fn IISIntrinsicsConfig(&self, iisintrinsicsconfig: CSC_IISIntrinsicsConfig) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).IISIntrinsicsConfig)(::windows_core::Interface::as_raw(self), iisintrinsicsconfig).ok()
+        ::windows_core::vcall!(self.IISIntrinsicsConfig(iisintrinsicsconfig)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceIISIntrinsicsConfig, ::windows_core::IUnknown);
@@ -4978,7 +4978,7 @@ pub struct IServiceIISIntrinsicsConfig_Vtbl {
 pub struct IServiceInheritanceConfig(::windows_core::IUnknown);
 impl IServiceInheritanceConfig {
     pub unsafe fn ContainingContextTreatment(&self, inheritanceconfig: CSC_InheritanceConfig) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ContainingContextTreatment)(::windows_core::Interface::as_raw(self), inheritanceconfig).ok()
+        ::windows_core::vcall!(self.ContainingContextTreatment(inheritanceconfig)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceInheritanceConfig, ::windows_core::IUnknown);
@@ -4999,10 +4999,10 @@ pub struct IServiceInheritanceConfig_Vtbl {
 pub struct IServicePartitionConfig(::windows_core::IUnknown);
 impl IServicePartitionConfig {
     pub unsafe fn PartitionConfig(&self, partitionconfig: CSC_PartitionConfig) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).PartitionConfig)(::windows_core::Interface::as_raw(self), partitionconfig).ok()
+        ::windows_core::vcall!(self.PartitionConfig(partitionconfig)).ok()
     }
     pub unsafe fn PartitionID(&self, guidpartitionid: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).PartitionID)(::windows_core::Interface::as_raw(self), guidpartitionid).ok()
+        ::windows_core::vcall!(self.PartitionID(guidpartitionid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServicePartitionConfig, ::windows_core::IUnknown);
@@ -5027,13 +5027,13 @@ impl IServicePool {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), ppoolconfig.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Initialize(ppoolconfig.into_param().abi())).ok()
     }
     pub unsafe fn GetObject(&self, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetObject)(::windows_core::Interface::as_raw(self), riid, ppv).ok()
+        ::windows_core::vcall!(self.GetObject(riid, ppv)).ok()
     }
     pub unsafe fn Shutdown(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Shutdown)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Shutdown()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServicePool, ::windows_core::IUnknown);
@@ -5056,22 +5056,22 @@ pub struct IServicePool_Vtbl {
 pub struct IServicePoolConfig(::windows_core::IUnknown);
 impl IServicePoolConfig {
     pub unsafe fn SetMaxPoolSize(&self, dwmaxpool: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMaxPoolSize)(::windows_core::Interface::as_raw(self), dwmaxpool).ok()
+        ::windows_core::vcall!(self.SetMaxPoolSize(dwmaxpool)).ok()
     }
     pub unsafe fn MaxPoolSize(&self, pdwmaxpool: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).MaxPoolSize)(::windows_core::Interface::as_raw(self), pdwmaxpool).ok()
+        ::windows_core::vcall!(self.MaxPoolSize(pdwmaxpool)).ok()
     }
     pub unsafe fn SetMinPoolSize(&self, dwminpool: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMinPoolSize)(::windows_core::Interface::as_raw(self), dwminpool).ok()
+        ::windows_core::vcall!(self.SetMinPoolSize(dwminpool)).ok()
     }
     pub unsafe fn MinPoolSize(&self, pdwminpool: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).MinPoolSize)(::windows_core::Interface::as_raw(self), pdwminpool).ok()
+        ::windows_core::vcall!(self.MinPoolSize(pdwminpool)).ok()
     }
     pub unsafe fn SetCreationTimeout(&self, dwcreationtimeout: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetCreationTimeout)(::windows_core::Interface::as_raw(self), dwcreationtimeout).ok()
+        ::windows_core::vcall!(self.SetCreationTimeout(dwcreationtimeout)).ok()
     }
     pub unsafe fn CreationTimeout(&self, pdwcreationtimeout: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CreationTimeout)(::windows_core::Interface::as_raw(self), pdwcreationtimeout).ok()
+        ::windows_core::vcall!(self.CreationTimeout(pdwcreationtimeout)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5079,12 +5079,12 @@ impl IServicePoolConfig {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetTransactionAffinity)(::windows_core::Interface::as_raw(self), ftxaffinity.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTransactionAffinity(ftxaffinity.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn TransactionAffinity(&self, pftxaffinity: *mut super::super::Foundation::BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).TransactionAffinity)(::windows_core::Interface::as_raw(self), pftxaffinity).ok()
+        ::windows_core::vcall!(self.TransactionAffinity(pftxaffinity)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5092,13 +5092,13 @@ impl IServicePoolConfig {
     where
         P0: ::windows_core::IntoParam<super::Com::IClassFactory>,
     {
-        (::windows_core::Interface::vtable(self).SetClassFactory)(::windows_core::Interface::as_raw(self), pfactory.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetClassFactory(pfactory.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn ClassFactory(&self) -> ::windows_core::Result<super::Com::IClassFactory> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ClassFactory)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ClassFactory(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServicePoolConfig, ::windows_core::IUnknown);
@@ -5140,19 +5140,19 @@ pub struct IServicePoolConfig_Vtbl {
 pub struct IServiceSxsConfig(::windows_core::IUnknown);
 impl IServiceSxsConfig {
     pub unsafe fn SxsConfig(&self, scsconfig: CSC_SxsConfig) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SxsConfig)(::windows_core::Interface::as_raw(self), scsconfig).ok()
+        ::windows_core::vcall!(self.SxsConfig(scsconfig)).ok()
     }
     pub unsafe fn SxsName<P0>(&self, szsxsname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SxsName)(::windows_core::Interface::as_raw(self), szsxsname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SxsName(szsxsname.into_param().abi())).ok()
     }
     pub unsafe fn SxsDirectory<P0>(&self, szsxsdirectory: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SxsDirectory)(::windows_core::Interface::as_raw(self), szsxsdirectory.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SxsDirectory(szsxsdirectory.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceSxsConfig, ::windows_core::IUnknown);
@@ -5175,7 +5175,7 @@ pub struct IServiceSxsConfig_Vtbl {
 pub struct IServiceSynchronizationConfig(::windows_core::IUnknown);
 impl IServiceSynchronizationConfig {
     pub unsafe fn ConfigureSynchronization(&self, synchconfig: CSC_SynchronizationConfig) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConfigureSynchronization)(::windows_core::Interface::as_raw(self), synchconfig).ok()
+        ::windows_core::vcall!(self.ConfigureSynchronization(synchconfig)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceSynchronizationConfig, ::windows_core::IUnknown);
@@ -5196,25 +5196,25 @@ pub struct IServiceSynchronizationConfig_Vtbl {
 pub struct IServiceSysTxnConfig(::windows_core::IUnknown);
 impl IServiceSysTxnConfig {
     pub unsafe fn ConfigureTransaction(&self, transactionconfig: CSC_TransactionConfig) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.ConfigureTransaction)(::windows_core::Interface::as_raw(self), transactionconfig).ok()
+        ::windows_core::vcall!(self.base__.base__.ConfigureTransaction(transactionconfig)).ok()
     }
     pub unsafe fn IsolationLevel(&self, option: COMAdminTxIsolationLevelOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.IsolationLevel)(::windows_core::Interface::as_raw(self), option).ok()
+        ::windows_core::vcall!(self.base__.base__.IsolationLevel(option)).ok()
     }
     pub unsafe fn TransactionTimeout(&self, ultimeoutsec: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.TransactionTimeout)(::windows_core::Interface::as_raw(self), ultimeoutsec).ok()
+        ::windows_core::vcall!(self.base__.base__.TransactionTimeout(ultimeoutsec)).ok()
     }
     pub unsafe fn BringYourOwnTransaction<P0>(&self, sztipurl: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.BringYourOwnTransaction)(::windows_core::Interface::as_raw(self), sztipurl.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.BringYourOwnTransaction(sztipurl.into_param().abi())).ok()
     }
     pub unsafe fn NewTransactionDescription<P0>(&self, sztxdesc: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.NewTransactionDescription)(::windows_core::Interface::as_raw(self), sztxdesc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.NewTransactionDescription(sztxdesc.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_DistributedTransactionCoordinator\"`"]
     #[cfg(feature = "Win32_System_DistributedTransactionCoordinator")]
@@ -5222,13 +5222,13 @@ impl IServiceSysTxnConfig {
     where
         P0: ::windows_core::IntoParam<super::DistributedTransactionCoordinator::ITransaction>,
     {
-        (::windows_core::Interface::vtable(self).base__.ConfigureBYOT)(::windows_core::Interface::as_raw(self), pitxbyot.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ConfigureBYOT(pitxbyot.into_param().abi())).ok()
     }
     pub unsafe fn ConfigureBYOTSysTxn<P0>(&self, ptxproxy: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITransactionProxy>,
     {
-        (::windows_core::Interface::vtable(self).ConfigureBYOTSysTxn)(::windows_core::Interface::as_raw(self), ptxproxy.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ConfigureBYOTSysTxn(ptxproxy.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceSysTxnConfig, ::windows_core::IUnknown, IServiceTransactionConfigBase, IServiceTransactionConfig);
@@ -5249,10 +5249,10 @@ pub struct IServiceSysTxnConfig_Vtbl {
 pub struct IServiceThreadPoolConfig(::windows_core::IUnknown);
 impl IServiceThreadPoolConfig {
     pub unsafe fn SelectThreadPool(&self, threadpool: CSC_ThreadPool) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SelectThreadPool)(::windows_core::Interface::as_raw(self), threadpool).ok()
+        ::windows_core::vcall!(self.SelectThreadPool(threadpool)).ok()
     }
     pub unsafe fn SetBindingInfo(&self, binding: CSC_Binding) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetBindingInfo)(::windows_core::Interface::as_raw(self), binding).ok()
+        ::windows_core::vcall!(self.SetBindingInfo(binding)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceThreadPoolConfig, ::windows_core::IUnknown);
@@ -5278,7 +5278,7 @@ impl IServiceTrackerConfig {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).TrackerConfig)(::windows_core::Interface::as_raw(self), trackerconfig, sztrackerappname.into_param().abi(), sztrackerctxname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.TrackerConfig(trackerconfig, sztrackerappname.into_param().abi(), sztrackerctxname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceTrackerConfig, ::windows_core::IUnknown);
@@ -5299,25 +5299,25 @@ pub struct IServiceTrackerConfig_Vtbl {
 pub struct IServiceTransactionConfig(::windows_core::IUnknown);
 impl IServiceTransactionConfig {
     pub unsafe fn ConfigureTransaction(&self, transactionconfig: CSC_TransactionConfig) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.ConfigureTransaction)(::windows_core::Interface::as_raw(self), transactionconfig).ok()
+        ::windows_core::vcall!(self.base__.ConfigureTransaction(transactionconfig)).ok()
     }
     pub unsafe fn IsolationLevel(&self, option: COMAdminTxIsolationLevelOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.IsolationLevel)(::windows_core::Interface::as_raw(self), option).ok()
+        ::windows_core::vcall!(self.base__.IsolationLevel(option)).ok()
     }
     pub unsafe fn TransactionTimeout(&self, ultimeoutsec: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.TransactionTimeout)(::windows_core::Interface::as_raw(self), ultimeoutsec).ok()
+        ::windows_core::vcall!(self.base__.TransactionTimeout(ultimeoutsec)).ok()
     }
     pub unsafe fn BringYourOwnTransaction<P0>(&self, sztipurl: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.BringYourOwnTransaction)(::windows_core::Interface::as_raw(self), sztipurl.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.BringYourOwnTransaction(sztipurl.into_param().abi())).ok()
     }
     pub unsafe fn NewTransactionDescription<P0>(&self, sztxdesc: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.NewTransactionDescription)(::windows_core::Interface::as_raw(self), sztxdesc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.NewTransactionDescription(sztxdesc.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_DistributedTransactionCoordinator\"`"]
     #[cfg(feature = "Win32_System_DistributedTransactionCoordinator")]
@@ -5325,7 +5325,7 @@ impl IServiceTransactionConfig {
     where
         P0: ::windows_core::IntoParam<super::DistributedTransactionCoordinator::ITransaction>,
     {
-        (::windows_core::Interface::vtable(self).ConfigureBYOT)(::windows_core::Interface::as_raw(self), pitxbyot.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ConfigureBYOT(pitxbyot.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceTransactionConfig, ::windows_core::IUnknown, IServiceTransactionConfigBase);
@@ -5349,25 +5349,25 @@ pub struct IServiceTransactionConfig_Vtbl {
 pub struct IServiceTransactionConfigBase(::windows_core::IUnknown);
 impl IServiceTransactionConfigBase {
     pub unsafe fn ConfigureTransaction(&self, transactionconfig: CSC_TransactionConfig) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConfigureTransaction)(::windows_core::Interface::as_raw(self), transactionconfig).ok()
+        ::windows_core::vcall!(self.ConfigureTransaction(transactionconfig)).ok()
     }
     pub unsafe fn IsolationLevel(&self, option: COMAdminTxIsolationLevelOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).IsolationLevel)(::windows_core::Interface::as_raw(self), option).ok()
+        ::windows_core::vcall!(self.IsolationLevel(option)).ok()
     }
     pub unsafe fn TransactionTimeout(&self, ultimeoutsec: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).TransactionTimeout)(::windows_core::Interface::as_raw(self), ultimeoutsec).ok()
+        ::windows_core::vcall!(self.TransactionTimeout(ultimeoutsec)).ok()
     }
     pub unsafe fn BringYourOwnTransaction<P0>(&self, sztipurl: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).BringYourOwnTransaction)(::windows_core::Interface::as_raw(self), sztipurl.into_param().abi()).ok()
+        ::windows_core::vcall!(self.BringYourOwnTransaction(sztipurl.into_param().abi())).ok()
     }
     pub unsafe fn NewTransactionDescription<P0>(&self, sztxdesc: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).NewTransactionDescription)(::windows_core::Interface::as_raw(self), sztxdesc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.NewTransactionDescription(sztxdesc.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IServiceTransactionConfigBase, ::windows_core::IUnknown);
@@ -5398,12 +5398,12 @@ impl ISharedProperty {
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn Value(&self) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Value)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Value(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn SetValue(&self, val: super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetValue)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(val)).ok()
+        ::windows_core::vcall!(self.SetValue(::core::mem::transmute(val))).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5440,13 +5440,13 @@ impl ISharedPropertyGroup {
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
     pub unsafe fn CreatePropertyByPosition(&self, index: i32, fexists: *mut super::super::Foundation::VARIANT_BOOL, ppprop: *mut ::core::option::Option<ISharedProperty>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CreatePropertyByPosition)(::windows_core::Interface::as_raw(self), index, fexists, ::core::mem::transmute(ppprop)).ok()
+        ::windows_core::vcall!(self.CreatePropertyByPosition(index, fexists, ::core::mem::transmute(ppprop))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn get_PropertyByPosition(&self, index: i32) -> ::windows_core::Result<ISharedProperty> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).get_PropertyByPosition)(::windows_core::Interface::as_raw(self), index, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.get_PropertyByPosition(index, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -5454,7 +5454,7 @@ impl ISharedPropertyGroup {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).CreateProperty)(::windows_core::Interface::as_raw(self), name.into_param().abi(), fexists, ::core::mem::transmute(ppprop)).ok()
+        ::windows_core::vcall!(self.CreateProperty(name.into_param().abi(), fexists, ::core::mem::transmute(ppprop))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5463,7 +5463,7 @@ impl ISharedPropertyGroup {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).get_Property)(::windows_core::Interface::as_raw(self), name.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.get_Property(name.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5511,7 +5511,7 @@ impl ISharedPropertyGroupManager {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).CreatePropertyGroup)(::windows_core::Interface::as_raw(self), name.into_param().abi(), dwisomode, dwrelmode, fexists, ::core::mem::transmute(ppgroup)).ok()
+        ::windows_core::vcall!(self.CreatePropertyGroup(name.into_param().abi(), dwisomode, dwrelmode, fexists, ::core::mem::transmute(ppgroup))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5520,11 +5520,11 @@ impl ISharedPropertyGroupManager {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).get_Group)(::windows_core::Interface::as_raw(self), name.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.get_Group(name.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self)._NewEnum)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self._NewEnum(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5557,13 +5557,13 @@ pub struct ISharedPropertyGroupManager_Vtbl {
 pub struct ISystemAppEventData(::windows_core::IUnknown);
 impl ISystemAppEventData {
     pub unsafe fn Startup(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Startup)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Startup()).ok()
     }
     pub unsafe fn OnDataChanged<P0>(&self, dwpid: u32, dwmask: u32, dwnumbersinks: u32, bstrdwmethodmask: P0, dwreason: u32, u64tracehandle: u64) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnDataChanged)(::windows_core::Interface::as_raw(self), dwpid, dwmask, dwnumbersinks, bstrdwmethodmask.into_param().abi(), dwreason, u64tracehandle).ok()
+        ::windows_core::vcall!(self.OnDataChanged(dwpid, dwmask, dwnumbersinks, bstrdwmethodmask.into_param().abi(), dwreason, u64tracehandle)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISystemAppEventData, ::windows_core::IUnknown);
@@ -5585,34 +5585,34 @@ pub struct ISystemAppEventData_Vtbl {
 pub struct IThreadPoolKnobs(::windows_core::IUnknown);
 impl IThreadPoolKnobs {
     pub unsafe fn GetMaxThreads(&self, plcmaxthreads: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetMaxThreads)(::windows_core::Interface::as_raw(self), plcmaxthreads).ok()
+        ::windows_core::vcall!(self.GetMaxThreads(plcmaxthreads)).ok()
     }
     pub unsafe fn GetCurrentThreads(&self, plccurrentthreads: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCurrentThreads)(::windows_core::Interface::as_raw(self), plccurrentthreads).ok()
+        ::windows_core::vcall!(self.GetCurrentThreads(plccurrentthreads)).ok()
     }
     pub unsafe fn SetMaxThreads(&self, lcmaxthreads: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMaxThreads)(::windows_core::Interface::as_raw(self), lcmaxthreads).ok()
+        ::windows_core::vcall!(self.SetMaxThreads(lcmaxthreads)).ok()
     }
     pub unsafe fn GetDeleteDelay(&self, pmsecdeletedelay: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeleteDelay)(::windows_core::Interface::as_raw(self), pmsecdeletedelay).ok()
+        ::windows_core::vcall!(self.GetDeleteDelay(pmsecdeletedelay)).ok()
     }
     pub unsafe fn SetDeleteDelay(&self, msecdeletedelay: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetDeleteDelay)(::windows_core::Interface::as_raw(self), msecdeletedelay).ok()
+        ::windows_core::vcall!(self.SetDeleteDelay(msecdeletedelay)).ok()
     }
     pub unsafe fn GetMaxQueuedRequests(&self, plcmaxqueuedrequests: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetMaxQueuedRequests)(::windows_core::Interface::as_raw(self), plcmaxqueuedrequests).ok()
+        ::windows_core::vcall!(self.GetMaxQueuedRequests(plcmaxqueuedrequests)).ok()
     }
     pub unsafe fn GetCurrentQueuedRequests(&self, plccurrentqueuedrequests: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCurrentQueuedRequests)(::windows_core::Interface::as_raw(self), plccurrentqueuedrequests).ok()
+        ::windows_core::vcall!(self.GetCurrentQueuedRequests(plccurrentqueuedrequests)).ok()
     }
     pub unsafe fn SetMaxQueuedRequests(&self, lcmaxqueuedrequests: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMaxQueuedRequests)(::windows_core::Interface::as_raw(self), lcmaxqueuedrequests).ok()
+        ::windows_core::vcall!(self.SetMaxQueuedRequests(lcmaxqueuedrequests)).ok()
     }
     pub unsafe fn SetMinThreads(&self, lcminthreads: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMinThreads)(::windows_core::Interface::as_raw(self), lcminthreads).ok()
+        ::windows_core::vcall!(self.SetMinThreads(lcminthreads)).ok()
     }
     pub unsafe fn SetQueueDepth(&self, lcqueuedepth: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetQueueDepth)(::windows_core::Interface::as_raw(self), lcqueuedepth).ok()
+        ::windows_core::vcall!(self.SetQueueDepth(lcqueuedepth)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IThreadPoolKnobs, ::windows_core::IUnknown);
@@ -5651,13 +5651,13 @@ impl ITransactionContext {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateInstance)(::windows_core::Interface::as_raw(self), pszprogid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateInstance(pszprogid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Commit(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Commit)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Commit()).ok()
     }
     pub unsafe fn Abort(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Abort)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Abort()).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5691,13 +5691,13 @@ impl ITransactionContextEx {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).CreateInstance)(::windows_core::Interface::as_raw(self), rclsid, &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateInstance(rclsid, &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Commit(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Commit)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Commit()).ok()
     }
     pub unsafe fn Abort(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Abort)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Abort()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITransactionContextEx, ::windows_core::IUnknown);
@@ -5720,59 +5720,59 @@ pub struct ITransactionContextEx_Vtbl {
 pub struct ITransactionProperty(::windows_core::IUnknown);
 impl ITransactionProperty {
     pub unsafe fn Reserved1(&self) {
-        (::windows_core::Interface::vtable(self).Reserved1)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved1())
     }
     pub unsafe fn Reserved2(&self) {
-        (::windows_core::Interface::vtable(self).Reserved2)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved2())
     }
     pub unsafe fn Reserved3(&self) {
-        (::windows_core::Interface::vtable(self).Reserved3)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved3())
     }
     pub unsafe fn Reserved4(&self) {
-        (::windows_core::Interface::vtable(self).Reserved4)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved4())
     }
     pub unsafe fn Reserved5(&self) {
-        (::windows_core::Interface::vtable(self).Reserved5)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved5())
     }
     pub unsafe fn Reserved6(&self) {
-        (::windows_core::Interface::vtable(self).Reserved6)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved6())
     }
     pub unsafe fn Reserved7(&self) {
-        (::windows_core::Interface::vtable(self).Reserved7)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved7())
     }
     pub unsafe fn Reserved8(&self) {
-        (::windows_core::Interface::vtable(self).Reserved8)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved8())
     }
     pub unsafe fn Reserved9(&self) {
-        (::windows_core::Interface::vtable(self).Reserved9)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved9())
     }
     pub unsafe fn GetTransactionResourcePool(&self) -> ::windows_core::Result<ITransactionResourcePool> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetTransactionResourcePool)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetTransactionResourcePool(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Reserved10(&self) {
-        (::windows_core::Interface::vtable(self).Reserved10)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved10())
     }
     pub unsafe fn Reserved11(&self) {
-        (::windows_core::Interface::vtable(self).Reserved11)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved11())
     }
     pub unsafe fn Reserved12(&self) {
-        (::windows_core::Interface::vtable(self).Reserved12)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved12())
     }
     pub unsafe fn Reserved13(&self) {
-        (::windows_core::Interface::vtable(self).Reserved13)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved13())
     }
     pub unsafe fn Reserved14(&self) {
-        (::windows_core::Interface::vtable(self).Reserved14)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved14())
     }
     pub unsafe fn Reserved15(&self) {
-        (::windows_core::Interface::vtable(self).Reserved15)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved15())
     }
     pub unsafe fn Reserved16(&self) {
-        (::windows_core::Interface::vtable(self).Reserved16)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved16())
     }
     pub unsafe fn Reserved17(&self) {
-        (::windows_core::Interface::vtable(self).Reserved17)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reserved17())
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITransactionProperty, ::windows_core::IUnknown);
@@ -5810,16 +5810,16 @@ pub struct ITransactionProperty_Vtbl {
 pub struct ITransactionProxy(::windows_core::IUnknown);
 impl ITransactionProxy {
     pub unsafe fn Commit(&self, guid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Commit)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(guid)).ok()
+        ::windows_core::vcall!(self.Commit(::core::mem::transmute(guid))).ok()
     }
     pub unsafe fn Abort(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Abort)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Abort()).ok()
     }
     #[doc = "Required features: `\"Win32_System_DistributedTransactionCoordinator\"`"]
     #[cfg(feature = "Win32_System_DistributedTransactionCoordinator")]
     pub unsafe fn Promote(&self) -> ::windows_core::Result<super::DistributedTransactionCoordinator::ITransaction> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Promote)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Promote(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_DistributedTransactionCoordinator\"`"]
     #[cfg(feature = "Win32_System_DistributedTransactionCoordinator")]
@@ -5828,18 +5828,18 @@ impl ITransactionProxy {
         P0: ::windows_core::IntoParam<super::DistributedTransactionCoordinator::ITransactionVoterNotifyAsync2>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateVoter)(::windows_core::Interface::as_raw(self), ptxasync.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateVoter(ptxasync.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetIsolationLevel(&self, __midl__itransactionproxy0000: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetIsolationLevel)(::windows_core::Interface::as_raw(self), __midl__itransactionproxy0000).ok()
+        ::windows_core::vcall!(self.GetIsolationLevel(__midl__itransactionproxy0000)).ok()
     }
     pub unsafe fn GetIdentifier(&self, pbstridentifier: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetIdentifier)(::windows_core::Interface::as_raw(self), pbstridentifier).ok()
+        ::windows_core::vcall!(self.GetIdentifier(pbstridentifier)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsReusable(&self, pfisreusable: *mut super::super::Foundation::BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).IsReusable)(::windows_core::Interface::as_raw(self), pfisreusable).ok()
+        ::windows_core::vcall!(self.IsReusable(pfisreusable)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITransactionProxy, ::windows_core::IUnknown);
@@ -5879,14 +5879,14 @@ impl ITransactionResourcePool {
         P0: ::windows_core::IntoParam<IObjPool>,
         P1: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).PutResource)(::windows_core::Interface::as_raw(self), ppool.into_param().abi(), punk.into_param().abi()).ok()
+        ::windows_core::vcall!(self.PutResource(ppool.into_param().abi(), punk.into_param().abi())).ok()
     }
     pub unsafe fn GetResource<P0>(&self, ppool: P0) -> ::windows_core::Result<::windows_core::IUnknown>
     where
         P0: ::windows_core::IntoParam<IObjPool>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetResource)(::windows_core::Interface::as_raw(self), ppool.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetResource(ppool.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITransactionResourcePool, ::windows_core::IUnknown);
@@ -5908,10 +5908,10 @@ pub struct ITransactionResourcePool_Vtbl {
 pub struct ITransactionStatus(::windows_core::IUnknown);
 impl ITransactionStatus {
     pub unsafe fn SetTransactionStatus(&self, hrstatus: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetTransactionStatus)(::windows_core::Interface::as_raw(self), hrstatus).ok()
+        ::windows_core::vcall!(self.SetTransactionStatus(hrstatus)).ok()
     }
     pub unsafe fn GetTransactionStatus(&self, phrstatus: *mut ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetTransactionStatus)(::windows_core::Interface::as_raw(self), phrstatus).ok()
+        ::windows_core::vcall!(self.GetTransactionStatus(phrstatus)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITransactionStatus, ::windows_core::IUnknown);
@@ -5933,7 +5933,7 @@ pub struct ITransactionStatus_Vtbl {
 pub struct ITxProxyHolder(::windows_core::IUnknown);
 impl ITxProxyHolder {
     pub unsafe fn GetIdentifier(&self, pguidltx: *mut ::windows_core::GUID) {
-        (::windows_core::Interface::vtable(self).GetIdentifier)(::windows_core::Interface::as_raw(self), pguidltx)
+        ::windows_core::vcall!(self.GetIdentifier(pguidltx))
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITxProxyHolder, ::windows_core::IUnknown);
@@ -5963,31 +5963,31 @@ impl ObjectContext {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateInstance)(::windows_core::Interface::as_raw(self), bstrprogid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateInstance(bstrprogid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetComplete(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetComplete)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SetComplete()).ok()
     }
     pub unsafe fn SetAbort(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetAbort)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SetAbort()).ok()
     }
     pub unsafe fn EnableCommit(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnableCommit)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.EnableCommit()).ok()
     }
     pub unsafe fn DisableCommit(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DisableCommit)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.DisableCommit()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsInTransaction(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsInTransaction)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsInTransaction(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsSecurityEnabled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsSecurityEnabled)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsSecurityEnabled(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5996,11 +5996,11 @@ impl ObjectContext {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsCallerInRole)(::windows_core::Interface::as_raw(self), bstrrole.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsCallerInRole(bstrrole.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Count(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -6009,23 +6009,23 @@ impl ObjectContext {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).get_Item)(::windows_core::Interface::as_raw(self), name.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.get_Item(name.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self)._NewEnum)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self._NewEnum(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Security(&self) -> ::windows_core::Result<SecurityProperty> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Security)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Security(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn ContextInfo(&self) -> ::windows_core::Result<ContextInfo> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ContextInfo)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ContextInfo(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6083,15 +6083,15 @@ pub struct ObjectContext_Vtbl {
 pub struct ObjectControl(::windows_core::IUnknown);
 impl ObjectControl {
     pub unsafe fn Activate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Activate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Activate()).ok()
     }
     pub unsafe fn Deactivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Deactivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Deactivate()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn CanBePooled(&self, pbpoolable: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CanBePooled)(::windows_core::Interface::as_raw(self), pbpoolable).ok()
+        ::windows_core::vcall!(self.CanBePooled(pbpoolable)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ObjectControl, ::windows_core::IUnknown);
@@ -6121,19 +6121,19 @@ pub struct SecurityProperty(::windows_core::IUnknown);
 impl SecurityProperty {
     pub unsafe fn GetDirectCallerName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDirectCallerName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDirectCallerName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetDirectCreatorName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDirectCreatorName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDirectCreatorName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetOriginalCallerName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetOriginalCallerName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetOriginalCallerName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetOriginalCreatorName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetOriginalCreatorName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetOriginalCreatorName(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]

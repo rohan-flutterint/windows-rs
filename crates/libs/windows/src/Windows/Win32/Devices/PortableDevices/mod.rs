@@ -12,7 +12,7 @@ where
 pub struct IConnectionRequestCallback(::windows_core::IUnknown);
 impl IConnectionRequestCallback {
     pub unsafe fn OnComplete(&self, hrstatus: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnComplete)(::windows_core::Interface::as_raw(self), hrstatus).ok()
+        ::windows_core::vcall!(self.OnComplete(hrstatus)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IConnectionRequestCallback, ::windows_core::IUnknown);
@@ -33,17 +33,17 @@ pub struct IConnectionRequestCallback_Vtbl {
 pub struct IEnumPortableDeviceConnectors(::windows_core::IUnknown);
 impl IEnumPortableDeviceConnectors {
     pub unsafe fn Next(&self, pconnectors: &mut [::core::option::Option<IPortableDeviceConnector>], pcfetched: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), pconnectors.len().try_into().unwrap(), ::core::mem::transmute(pconnectors.as_ptr()), pcfetched).ok()
+        ::windows_core::vcall!(self.Next(pconnectors.len().try_into().unwrap(), ::core::mem::transmute(pconnectors.as_ptr()), pcfetched)).ok()
     }
     pub unsafe fn Skip(&self, cconnectors: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Skip)(::windows_core::Interface::as_raw(self), cconnectors).ok()
+        ::windows_core::vcall!(self.Skip(cconnectors)).ok()
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Clone(&self) -> ::windows_core::Result<IEnumPortableDeviceConnectors> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumPortableDeviceConnectors, ::windows_core::IUnknown);
@@ -67,20 +67,20 @@ pub struct IEnumPortableDeviceConnectors_Vtbl {
 pub struct IEnumPortableDeviceObjectIDs(::windows_core::IUnknown);
 impl IEnumPortableDeviceObjectIDs {
     pub unsafe fn Next(&self, pobjids: &mut [::windows_core::PWSTR], pcfetched: *mut u32) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), pobjids.len().try_into().unwrap(), ::core::mem::transmute(pobjids.as_ptr()), pcfetched)
+        ::windows_core::vcall!(self.Next(pobjids.len().try_into().unwrap(), ::core::mem::transmute(pobjids.as_ptr()), pcfetched))
     }
     pub unsafe fn Skip(&self, cobjects: u32) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).Skip)(::windows_core::Interface::as_raw(self), cobjects)
+        ::windows_core::vcall!(self.Skip(cobjects))
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Clone(&self) -> ::windows_core::Result<IEnumPortableDeviceObjectIDs> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumPortableDeviceObjectIDs, ::windows_core::IUnknown);
@@ -106,10 +106,10 @@ pub struct IMediaRadioManager(::windows_core::IUnknown);
 impl IMediaRadioManager {
     pub unsafe fn GetRadioInstances(&self) -> ::windows_core::Result<IRadioInstanceCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRadioInstances)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRadioInstances(&mut result__)).from_abi(result__)
     }
     pub unsafe fn OnSystemRadioStateChange(&self, sysradiostate: SYSTEM_RADIO_STATE, utimeoutsec: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnSystemRadioStateChange)(::windows_core::Interface::as_raw(self), sysradiostate, utimeoutsec).ok()
+        ::windows_core::vcall!(self.OnSystemRadioStateChange(sysradiostate, utimeoutsec)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMediaRadioManager, ::windows_core::IUnknown);
@@ -134,19 +134,19 @@ impl IMediaRadioManagerNotifySink {
     where
         P0: ::windows_core::IntoParam<IRadioInstance>,
     {
-        (::windows_core::Interface::vtable(self).OnInstanceAdd)(::windows_core::Interface::as_raw(self), pradioinstance.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnInstanceAdd(pradioinstance.into_param().abi())).ok()
     }
     pub unsafe fn OnInstanceRemove<P0>(&self, bstrradioinstanceid: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnInstanceRemove)(::windows_core::Interface::as_raw(self), bstrradioinstanceid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnInstanceRemove(bstrradioinstanceid.into_param().abi())).ok()
     }
     pub unsafe fn OnInstanceRadioChange<P0>(&self, bstrradioinstanceid: P0, radiostate: DEVICE_RADIO_STATE) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnInstanceRadioChange)(::windows_core::Interface::as_raw(self), bstrradioinstanceid.into_param().abi(), radiostate).ok()
+        ::windows_core::vcall!(self.OnInstanceRadioChange(bstrradioinstanceid.into_param().abi(), radiostate)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IMediaRadioManagerNotifySink, ::windows_core::IUnknown);
@@ -173,28 +173,28 @@ impl IPortableDevice {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).Open)(::windows_core::Interface::as_raw(self), pszpnpdeviceid.into_param().abi(), pclientinfo.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Open(pszpnpdeviceid.into_param().abi(), pclientinfo.into_param().abi())).ok()
     }
     pub unsafe fn SendCommand<P0>(&self, dwflags: u32, pparameters: P0) -> ::windows_core::Result<IPortableDeviceValues>
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SendCommand)(::windows_core::Interface::as_raw(self), dwflags, pparameters.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SendCommand(dwflags, pparameters.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Content(&self) -> ::windows_core::Result<IPortableDeviceContent> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Content)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Content(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Capabilities(&self) -> ::windows_core::Result<IPortableDeviceCapabilities> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Capabilities)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Capabilities(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
     pub unsafe fn Close(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Close()).ok()
     }
     pub unsafe fn Advise<P0, P1>(&self, dwflags: u32, pcallback: P0, pparameters: P1) -> ::windows_core::Result<::windows_core::PWSTR>
     where
@@ -202,17 +202,17 @@ impl IPortableDevice {
         P1: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Advise)(::windows_core::Interface::as_raw(self), dwflags, pcallback.into_param().abi(), pparameters.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Advise(dwflags, pcallback.into_param().abi(), pparameters.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Unadvise<P0>(&self, pszcookie: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).Unadvise)(::windows_core::Interface::as_raw(self), pszcookie.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Unadvise(pszcookie.into_param().abi())).ok()
     }
     pub unsafe fn GetPnPDeviceID(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPnPDeviceID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPnPDeviceID(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDevice, ::windows_core::IUnknown);
@@ -242,50 +242,50 @@ pub struct IPortableDeviceCapabilities(::windows_core::IUnknown);
 impl IPortableDeviceCapabilities {
     pub unsafe fn GetSupportedCommands(&self) -> ::windows_core::Result<IPortableDeviceKeyCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedCommands)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedCommands(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetCommandOptions(&self, command: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCommandOptions)(::windows_core::Interface::as_raw(self), command, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCommandOptions(command, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetFunctionalCategories(&self) -> ::windows_core::Result<IPortableDevicePropVariantCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFunctionalCategories)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFunctionalCategories(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetFunctionalObjects(&self, category: *const ::windows_core::GUID) -> ::windows_core::Result<IPortableDevicePropVariantCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFunctionalObjects)(::windows_core::Interface::as_raw(self), category, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFunctionalObjects(category, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetSupportedContentTypes(&self, category: *const ::windows_core::GUID) -> ::windows_core::Result<IPortableDevicePropVariantCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedContentTypes)(::windows_core::Interface::as_raw(self), category, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedContentTypes(category, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetSupportedFormats(&self, contenttype: *const ::windows_core::GUID) -> ::windows_core::Result<IPortableDevicePropVariantCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedFormats)(::windows_core::Interface::as_raw(self), contenttype, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedFormats(contenttype, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetSupportedFormatProperties(&self, format: *const ::windows_core::GUID) -> ::windows_core::Result<IPortableDeviceKeyCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedFormatProperties)(::windows_core::Interface::as_raw(self), format, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedFormatProperties(format, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetFixedPropertyAttributes(&self, format: *const ::windows_core::GUID, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFixedPropertyAttributes)(::windows_core::Interface::as_raw(self), format, key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFixedPropertyAttributes(format, key, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
     pub unsafe fn GetSupportedEvents(&self) -> ::windows_core::Result<IPortableDevicePropVariantCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedEvents)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedEvents(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetEventOptions(&self, event: *const ::windows_core::GUID) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetEventOptions)(::windows_core::Interface::as_raw(self), event, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetEventOptions(event, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceCapabilities, ::windows_core::IUnknown);
@@ -325,33 +325,33 @@ impl IPortableDeviceConnector {
     where
         P0: ::windows_core::IntoParam<IConnectionRequestCallback>,
     {
-        (::windows_core::Interface::vtable(self).Connect)(::windows_core::Interface::as_raw(self), pcallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Connect(pcallback.into_param().abi())).ok()
     }
     pub unsafe fn Disconnect<P0>(&self, pcallback: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IConnectionRequestCallback>,
     {
-        (::windows_core::Interface::vtable(self).Disconnect)(::windows_core::Interface::as_raw(self), pcallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Disconnect(pcallback.into_param().abi())).ok()
     }
     pub unsafe fn Cancel<P0>(&self, pcallback: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IConnectionRequestCallback>,
     {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self), pcallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Cancel(pcallback.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Devices_Properties\"`"]
     #[cfg(feature = "Win32_Devices_Properties")]
     pub unsafe fn GetProperty(&self, ppropertykey: *const super::Properties::DEVPROPKEY, ppropertytype: *mut super::Properties::DEVPROPTYPE, ppdata: *mut *mut u8, pcbdata: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetProperty)(::windows_core::Interface::as_raw(self), ppropertykey, ppropertytype, ppdata, pcbdata).ok()
+        ::windows_core::vcall!(self.GetProperty(ppropertykey, ppropertytype, ppdata, pcbdata)).ok()
     }
     #[doc = "Required features: `\"Win32_Devices_Properties\"`"]
     #[cfg(feature = "Win32_Devices_Properties")]
     pub unsafe fn SetProperty(&self, ppropertykey: *const super::Properties::DEVPROPKEY, propertytype: super::Properties::DEVPROPTYPE, pdata: &[u8]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetProperty)(::windows_core::Interface::as_raw(self), ppropertykey, propertytype, ::core::mem::transmute(pdata.as_ptr()), pdata.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.SetProperty(ppropertykey, propertytype, ::core::mem::transmute(pdata.as_ptr()), pdata.len().try_into().unwrap())).ok()
     }
     pub unsafe fn GetPnPID(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPnPID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPnPID(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceConnector, ::windows_core::IUnknown);
@@ -388,21 +388,21 @@ impl IPortableDeviceContent {
         P1: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumObjects)(::windows_core::Interface::as_raw(self), dwflags, pszparentobjectid.into_param().abi(), pfilter.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumObjects(dwflags, pszparentobjectid.into_param().abi(), pfilter.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Properties(&self) -> ::windows_core::Result<IPortableDeviceProperties> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Properties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Properties(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Transfer(&self) -> ::windows_core::Result<IPortableDeviceResources> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Transfer)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Transfer(&mut result__)).from_abi(result__)
     }
     pub unsafe fn CreateObjectWithPropertiesOnly<P0>(&self, pvalues: P0, ppszobjectid: *mut ::windows_core::PWSTR) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).CreateObjectWithPropertiesOnly)(::windows_core::Interface::as_raw(self), pvalues.into_param().abi(), ppszobjectid).ok()
+        ::windows_core::vcall!(self.CreateObjectWithPropertiesOnly(pvalues.into_param().abi(), ppszobjectid)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -410,37 +410,37 @@ impl IPortableDeviceContent {
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).CreateObjectWithPropertiesAndData)(::windows_core::Interface::as_raw(self), pvalues.into_param().abi(), ::core::mem::transmute(ppdata), pdwoptimalwritebuffersize, ppszcookie).ok()
+        ::windows_core::vcall!(self.CreateObjectWithPropertiesAndData(pvalues.into_param().abi(), ::core::mem::transmute(ppdata), pdwoptimalwritebuffersize, ppszcookie)).ok()
     }
     pub unsafe fn Delete<P0>(&self, dwoptions: u32, pobjectids: P0, ppresults: *mut ::core::option::Option<IPortableDevicePropVariantCollection>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDevicePropVariantCollection>,
     {
-        (::windows_core::Interface::vtable(self).Delete)(::windows_core::Interface::as_raw(self), dwoptions, pobjectids.into_param().abi(), ::core::mem::transmute(ppresults)).ok()
+        ::windows_core::vcall!(self.Delete(dwoptions, pobjectids.into_param().abi(), ::core::mem::transmute(ppresults))).ok()
     }
     pub unsafe fn GetObjectIDsFromPersistentUniqueIDs<P0>(&self, ppersistentuniqueids: P0) -> ::windows_core::Result<IPortableDevicePropVariantCollection>
     where
         P0: ::windows_core::IntoParam<IPortableDevicePropVariantCollection>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetObjectIDsFromPersistentUniqueIDs)(::windows_core::Interface::as_raw(self), ppersistentuniqueids.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetObjectIDsFromPersistentUniqueIDs(ppersistentuniqueids.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
     pub unsafe fn Move<P0, P1>(&self, pobjectids: P0, pszdestinationfolderobjectid: P1, ppresults: *mut ::core::option::Option<IPortableDevicePropVariantCollection>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDevicePropVariantCollection>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).Move)(::windows_core::Interface::as_raw(self), pobjectids.into_param().abi(), pszdestinationfolderobjectid.into_param().abi(), ::core::mem::transmute(ppresults)).ok()
+        ::windows_core::vcall!(self.Move(pobjectids.into_param().abi(), pszdestinationfolderobjectid.into_param().abi(), ::core::mem::transmute(ppresults))).ok()
     }
     pub unsafe fn Copy<P0, P1>(&self, pobjectids: P0, pszdestinationfolderobjectid: P1, ppresults: *mut ::core::option::Option<IPortableDevicePropVariantCollection>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDevicePropVariantCollection>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).Copy)(::windows_core::Interface::as_raw(self), pobjectids.into_param().abi(), pszdestinationfolderobjectid.into_param().abi(), ::core::mem::transmute(ppresults)).ok()
+        ::windows_core::vcall!(self.Copy(pobjectids.into_param().abi(), pszdestinationfolderobjectid.into_param().abi(), ::core::mem::transmute(ppresults))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceContent, ::windows_core::IUnknown);
@@ -478,21 +478,21 @@ impl IPortableDeviceContent2 {
         P1: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.EnumObjects)(::windows_core::Interface::as_raw(self), dwflags, pszparentobjectid.into_param().abi(), pfilter.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.EnumObjects(dwflags, pszparentobjectid.into_param().abi(), pfilter.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Properties(&self) -> ::windows_core::Result<IPortableDeviceProperties> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Properties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Properties(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Transfer(&self) -> ::windows_core::Result<IPortableDeviceResources> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Transfer)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Transfer(&mut result__)).from_abi(result__)
     }
     pub unsafe fn CreateObjectWithPropertiesOnly<P0>(&self, pvalues: P0, ppszobjectid: *mut ::windows_core::PWSTR) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).base__.CreateObjectWithPropertiesOnly)(::windows_core::Interface::as_raw(self), pvalues.into_param().abi(), ppszobjectid).ok()
+        ::windows_core::vcall!(self.base__.CreateObjectWithPropertiesOnly(pvalues.into_param().abi(), ppszobjectid)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -500,37 +500,37 @@ impl IPortableDeviceContent2 {
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).base__.CreateObjectWithPropertiesAndData)(::windows_core::Interface::as_raw(self), pvalues.into_param().abi(), ::core::mem::transmute(ppdata), pdwoptimalwritebuffersize, ppszcookie).ok()
+        ::windows_core::vcall!(self.base__.CreateObjectWithPropertiesAndData(pvalues.into_param().abi(), ::core::mem::transmute(ppdata), pdwoptimalwritebuffersize, ppszcookie)).ok()
     }
     pub unsafe fn Delete<P0>(&self, dwoptions: u32, pobjectids: P0, ppresults: *mut ::core::option::Option<IPortableDevicePropVariantCollection>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDevicePropVariantCollection>,
     {
-        (::windows_core::Interface::vtable(self).base__.Delete)(::windows_core::Interface::as_raw(self), dwoptions, pobjectids.into_param().abi(), ::core::mem::transmute(ppresults)).ok()
+        ::windows_core::vcall!(self.base__.Delete(dwoptions, pobjectids.into_param().abi(), ::core::mem::transmute(ppresults))).ok()
     }
     pub unsafe fn GetObjectIDsFromPersistentUniqueIDs<P0>(&self, ppersistentuniqueids: P0) -> ::windows_core::Result<IPortableDevicePropVariantCollection>
     where
         P0: ::windows_core::IntoParam<IPortableDevicePropVariantCollection>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetObjectIDsFromPersistentUniqueIDs)(::windows_core::Interface::as_raw(self), ppersistentuniqueids.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetObjectIDsFromPersistentUniqueIDs(ppersistentuniqueids.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Cancel()).ok()
     }
     pub unsafe fn Move<P0, P1>(&self, pobjectids: P0, pszdestinationfolderobjectid: P1, ppresults: *mut ::core::option::Option<IPortableDevicePropVariantCollection>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDevicePropVariantCollection>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.Move)(::windows_core::Interface::as_raw(self), pobjectids.into_param().abi(), pszdestinationfolderobjectid.into_param().abi(), ::core::mem::transmute(ppresults)).ok()
+        ::windows_core::vcall!(self.base__.Move(pobjectids.into_param().abi(), pszdestinationfolderobjectid.into_param().abi(), ::core::mem::transmute(ppresults))).ok()
     }
     pub unsafe fn Copy<P0, P1>(&self, pobjectids: P0, pszdestinationfolderobjectid: P1, ppresults: *mut ::core::option::Option<IPortableDevicePropVariantCollection>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDevicePropVariantCollection>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.Copy)(::windows_core::Interface::as_raw(self), pobjectids.into_param().abi(), pszdestinationfolderobjectid.into_param().abi(), ::core::mem::transmute(ppresults)).ok()
+        ::windows_core::vcall!(self.base__.Copy(pobjectids.into_param().abi(), pszdestinationfolderobjectid.into_param().abi(), ::core::mem::transmute(ppresults))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -539,7 +539,7 @@ impl IPortableDeviceContent2 {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).UpdateObjectWithPropertiesAndData)(::windows_core::Interface::as_raw(self), pszobjectid.into_param().abi(), pproperties.into_param().abi(), ::core::mem::transmute(ppdata), pdwoptimalwritebuffersize).ok()
+        ::windows_core::vcall!(self.UpdateObjectWithPropertiesAndData(pszobjectid.into_param().abi(), pproperties.into_param().abi(), ::core::mem::transmute(ppdata), pdwoptimalwritebuffersize)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceContent2, ::windows_core::IUnknown, IPortableDeviceContent);
@@ -568,22 +568,22 @@ impl IPortableDeviceDataStream {
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Read(&self, pv: *mut ::core::ffi::c_void, cb: u32, pcbread: ::core::option::Option<*mut u32>) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).base__.base__.Read)(::windows_core::Interface::as_raw(self), pv, cb, ::core::mem::transmute(pcbread.unwrap_or(::std::ptr::null_mut())))
+        ::windows_core::vcall!(self.base__.base__.Read(pv, cb, ::core::mem::transmute(pcbread.unwrap_or(::std::ptr::null_mut()))))
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Write(&self, pv: *const ::core::ffi::c_void, cb: u32, pcbwritten: ::core::option::Option<*mut u32>) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).base__.base__.Write)(::windows_core::Interface::as_raw(self), pv, cb, ::core::mem::transmute(pcbwritten.unwrap_or(::std::ptr::null_mut())))
+        ::windows_core::vcall!(self.base__.base__.Write(pv, cb, ::core::mem::transmute(pcbwritten.unwrap_or(::std::ptr::null_mut()))))
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Seek(&self, dlibmove: i64, dworigin: super::super::System::Com::STREAM_SEEK, plibnewposition: ::core::option::Option<*mut u64>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Seek)(::windows_core::Interface::as_raw(self), dlibmove, dworigin, ::core::mem::transmute(plibnewposition.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.base__.Seek(dlibmove, dworigin, ::core::mem::transmute(plibnewposition.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn SetSize(&self, libnewsize: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetSize)(::windows_core::Interface::as_raw(self), libnewsize).ok()
+        ::windows_core::vcall!(self.base__.SetSize(libnewsize)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -591,45 +591,45 @@ impl IPortableDeviceDataStream {
     where
         P0: ::windows_core::IntoParam<super::super::System::Com::IStream>,
     {
-        (::windows_core::Interface::vtable(self).base__.CopyTo)(::windows_core::Interface::as_raw(self), pstm.into_param().abi(), cb, ::core::mem::transmute(pcbread.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbwritten.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.base__.CopyTo(pstm.into_param().abi(), cb, ::core::mem::transmute(pcbread.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbwritten.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Commit(&self, grfcommitflags: super::super::System::Com::STGC) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Commit)(::windows_core::Interface::as_raw(self), grfcommitflags.0 as _).ok()
+        ::windows_core::vcall!(self.base__.Commit(grfcommitflags.0 as _)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Revert(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Revert)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Revert()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn LockRegion(&self, liboffset: u64, cb: u64, dwlocktype: super::super::System::Com::LOCKTYPE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.LockRegion)(::windows_core::Interface::as_raw(self), liboffset, cb, dwlocktype.0 as _).ok()
+        ::windows_core::vcall!(self.base__.LockRegion(liboffset, cb, dwlocktype.0 as _)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn UnlockRegion(&self, liboffset: u64, cb: u64, dwlocktype: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.UnlockRegion)(::windows_core::Interface::as_raw(self), liboffset, cb, dwlocktype).ok()
+        ::windows_core::vcall!(self.base__.UnlockRegion(liboffset, cb, dwlocktype)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
     pub unsafe fn Stat(&self, pstatstg: *mut super::super::System::Com::STATSTG, grfstatflag: super::super::System::Com::STATFLAG) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Stat)(::windows_core::Interface::as_raw(self), pstatstg, grfstatflag.0 as _).ok()
+        ::windows_core::vcall!(self.base__.Stat(pstatstg, grfstatflag.0 as _)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Clone(&self) -> ::windows_core::Result<super::super::System::Com::IStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Clone(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetObjectID(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetObjectID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetObjectID(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -661,7 +661,7 @@ impl IPortableDeviceDispatchFactory {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDeviceDispatch)(::windows_core::Interface::as_raw(self), pszpnpdeviceid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDeviceDispatch(pszpnpdeviceid.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceDispatchFactory, ::windows_core::IUnknown);
@@ -688,7 +688,7 @@ impl IPortableDeviceEventCallback {
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).OnEvent)(::windows_core::Interface::as_raw(self), peventparameters.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnEvent(peventparameters.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceEventCallback, ::windows_core::IUnknown);
@@ -709,23 +709,23 @@ pub struct IPortableDeviceEventCallback_Vtbl {
 pub struct IPortableDeviceKeyCollection(::windows_core::IUnknown);
 impl IPortableDeviceKeyCollection {
     pub unsafe fn GetCount(&self, pcelems: *const u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCount)(::windows_core::Interface::as_raw(self), pcelems).ok()
+        ::windows_core::vcall!(self.GetCount(pcelems)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetAt(&self, dwindex: u32, pkey: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetAt)(::windows_core::Interface::as_raw(self), dwindex, pkey).ok()
+        ::windows_core::vcall!(self.GetAt(dwindex, pkey)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn Add(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Add)(::windows_core::Interface::as_raw(self), key).ok()
+        ::windows_core::vcall!(self.Add(key)).ok()
     }
     pub unsafe fn Clear(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Clear)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Clear()).ok()
     }
     pub unsafe fn RemoveAt(&self, dwindex: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RemoveAt)(::windows_core::Interface::as_raw(self), dwindex).ok()
+        ::windows_core::vcall!(self.RemoveAt(dwindex)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceKeyCollection, ::windows_core::IUnknown);
@@ -756,38 +756,38 @@ pub struct IPortableDeviceKeyCollection_Vtbl {
 pub struct IPortableDeviceManager(::windows_core::IUnknown);
 impl IPortableDeviceManager {
     pub unsafe fn GetDevices(&self, ppnpdeviceids: *mut ::windows_core::PWSTR, pcpnpdeviceids: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDevices)(::windows_core::Interface::as_raw(self), ppnpdeviceids, pcpnpdeviceids).ok()
+        ::windows_core::vcall!(self.GetDevices(ppnpdeviceids, pcpnpdeviceids)).ok()
     }
     pub unsafe fn RefreshDeviceList(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RefreshDeviceList)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.RefreshDeviceList()).ok()
     }
     pub unsafe fn GetDeviceFriendlyName<P0>(&self, pszpnpdeviceid: P0, pdevicefriendlyname: ::windows_core::PWSTR, pcchdevicefriendlyname: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetDeviceFriendlyName)(::windows_core::Interface::as_raw(self), pszpnpdeviceid.into_param().abi(), ::core::mem::transmute(pdevicefriendlyname), pcchdevicefriendlyname).ok()
+        ::windows_core::vcall!(self.GetDeviceFriendlyName(pszpnpdeviceid.into_param().abi(), ::core::mem::transmute(pdevicefriendlyname), pcchdevicefriendlyname)).ok()
     }
     pub unsafe fn GetDeviceDescription<P0>(&self, pszpnpdeviceid: P0, pdevicedescription: ::windows_core::PWSTR, pcchdevicedescription: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetDeviceDescription)(::windows_core::Interface::as_raw(self), pszpnpdeviceid.into_param().abi(), ::core::mem::transmute(pdevicedescription), pcchdevicedescription).ok()
+        ::windows_core::vcall!(self.GetDeviceDescription(pszpnpdeviceid.into_param().abi(), ::core::mem::transmute(pdevicedescription), pcchdevicedescription)).ok()
     }
     pub unsafe fn GetDeviceManufacturer<P0>(&self, pszpnpdeviceid: P0, pdevicemanufacturer: ::windows_core::PWSTR, pcchdevicemanufacturer: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetDeviceManufacturer)(::windows_core::Interface::as_raw(self), pszpnpdeviceid.into_param().abi(), ::core::mem::transmute(pdevicemanufacturer), pcchdevicemanufacturer).ok()
+        ::windows_core::vcall!(self.GetDeviceManufacturer(pszpnpdeviceid.into_param().abi(), ::core::mem::transmute(pdevicemanufacturer), pcchdevicemanufacturer)).ok()
     }
     pub unsafe fn GetDeviceProperty<P0, P1>(&self, pszpnpdeviceid: P0, pszdevicepropertyname: P1, pdata: *mut u8, pcbdata: *mut u32, pdwtype: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetDeviceProperty)(::windows_core::Interface::as_raw(self), pszpnpdeviceid.into_param().abi(), pszdevicepropertyname.into_param().abi(), pdata, pcbdata, pdwtype).ok()
+        ::windows_core::vcall!(self.GetDeviceProperty(pszpnpdeviceid.into_param().abi(), pszdevicepropertyname.into_param().abi(), pdata, pcbdata, pdwtype)).ok()
     }
     pub unsafe fn GetPrivateDevices(&self, ppnpdeviceids: *mut ::windows_core::PWSTR, pcpnpdeviceids: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetPrivateDevices)(::windows_core::Interface::as_raw(self), ppnpdeviceids, pcpnpdeviceids).ok()
+        ::windows_core::vcall!(self.GetPrivateDevices(ppnpdeviceids, pcpnpdeviceids)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceManager, ::windows_core::IUnknown);
@@ -814,30 +814,30 @@ pub struct IPortableDeviceManager_Vtbl {
 pub struct IPortableDevicePropVariantCollection(::windows_core::IUnknown);
 impl IPortableDevicePropVariantCollection {
     pub unsafe fn GetCount(&self, pcelems: *const u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCount)(::windows_core::Interface::as_raw(self), pcelems).ok()
+        ::windows_core::vcall!(self.GetCount(pcelems)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
     pub unsafe fn GetAt(&self, dwindex: u32, pvalue: *const super::super::System::Com::StructuredStorage::PROPVARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetAt)(::windows_core::Interface::as_raw(self), dwindex, pvalue).ok()
+        ::windows_core::vcall!(self.GetAt(dwindex, pvalue)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant"))]
     pub unsafe fn Add(&self, pvalue: *const super::super::System::Com::StructuredStorage::PROPVARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Add)(::windows_core::Interface::as_raw(self), pvalue).ok()
+        ::windows_core::vcall!(self.Add(pvalue)).ok()
     }
     pub unsafe fn GetType(&self) -> ::windows_core::Result<u16> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetType)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetType(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ChangeType(&self, vt: u16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ChangeType)(::windows_core::Interface::as_raw(self), vt).ok()
+        ::windows_core::vcall!(self.ChangeType(vt)).ok()
     }
     pub unsafe fn Clear(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Clear)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Clear()).ok()
     }
     pub unsafe fn RemoveAt(&self, dwindex: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RemoveAt)(::windows_core::Interface::as_raw(self), dwindex).ok()
+        ::windows_core::vcall!(self.RemoveAt(dwindex)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDevicePropVariantCollection, ::windows_core::IUnknown);
@@ -874,7 +874,7 @@ impl IPortableDeviceProperties {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedProperties)(::windows_core::Interface::as_raw(self), pszobjectid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedProperties(pszobjectid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -883,7 +883,7 @@ impl IPortableDeviceProperties {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPropertyAttributes)(::windows_core::Interface::as_raw(self), pszobjectid.into_param().abi(), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPropertyAttributes(pszobjectid.into_param().abi(), key, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetValues<P0, P1>(&self, pszobjectid: P0, pkeys: P1) -> ::windows_core::Result<IPortableDeviceValues>
     where
@@ -891,7 +891,7 @@ impl IPortableDeviceProperties {
         P1: ::windows_core::IntoParam<IPortableDeviceKeyCollection>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetValues)(::windows_core::Interface::as_raw(self), pszobjectid.into_param().abi(), pkeys.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetValues(pszobjectid.into_param().abi(), pkeys.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetValues<P0, P1>(&self, pszobjectid: P0, pvalues: P1) -> ::windows_core::Result<IPortableDeviceValues>
     where
@@ -899,17 +899,17 @@ impl IPortableDeviceProperties {
         P1: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SetValues)(::windows_core::Interface::as_raw(self), pszobjectid.into_param().abi(), pvalues.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SetValues(pszobjectid.into_param().abi(), pvalues.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Delete<P0, P1>(&self, pszobjectid: P0, pkeys: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<IPortableDeviceKeyCollection>,
     {
-        (::windows_core::Interface::vtable(self).Delete)(::windows_core::Interface::as_raw(self), pszobjectid.into_param().abi(), pkeys.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Delete(pszobjectid.into_param().abi(), pkeys.into_param().abi())).ok()
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceProperties, ::windows_core::IUnknown);
@@ -944,7 +944,7 @@ impl IPortableDevicePropertiesBulk {
         P2: ::windows_core::IntoParam<IPortableDevicePropertiesBulkCallback>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueueGetValuesByObjectList)(::windows_core::Interface::as_raw(self), pobjectids.into_param().abi(), pkeys.into_param().abi(), pcallback.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueueGetValuesByObjectList(pobjectids.into_param().abi(), pkeys.into_param().abi(), pcallback.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn QueueGetValuesByObjectFormat<P0, P1, P2>(&self, pguidobjectformat: *const ::windows_core::GUID, pszparentobjectid: P0, dwdepth: u32, pkeys: P1, pcallback: P2) -> ::windows_core::Result<::windows_core::GUID>
     where
@@ -953,7 +953,7 @@ impl IPortableDevicePropertiesBulk {
         P2: ::windows_core::IntoParam<IPortableDevicePropertiesBulkCallback>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueueGetValuesByObjectFormat)(::windows_core::Interface::as_raw(self), pguidobjectformat, pszparentobjectid.into_param().abi(), dwdepth, pkeys.into_param().abi(), pcallback.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueueGetValuesByObjectFormat(pguidobjectformat, pszparentobjectid.into_param().abi(), dwdepth, pkeys.into_param().abi(), pcallback.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn QueueSetValuesByObjectList<P0, P1>(&self, pobjectvalues: P0, pcallback: P1) -> ::windows_core::Result<::windows_core::GUID>
     where
@@ -961,13 +961,13 @@ impl IPortableDevicePropertiesBulk {
         P1: ::windows_core::IntoParam<IPortableDevicePropertiesBulkCallback>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueueSetValuesByObjectList)(::windows_core::Interface::as_raw(self), pobjectvalues.into_param().abi(), pcallback.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueueSetValuesByObjectList(pobjectvalues.into_param().abi(), pcallback.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Start(&self, pcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Start)(::windows_core::Interface::as_raw(self), pcontext).ok()
+        ::windows_core::vcall!(self.Start(pcontext)).ok()
     }
     pub unsafe fn Cancel(&self, pcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self), pcontext).ok()
+        ::windows_core::vcall!(self.Cancel(pcontext)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDevicePropertiesBulk, ::windows_core::IUnknown);
@@ -992,16 +992,16 @@ pub struct IPortableDevicePropertiesBulk_Vtbl {
 pub struct IPortableDevicePropertiesBulkCallback(::windows_core::IUnknown);
 impl IPortableDevicePropertiesBulkCallback {
     pub unsafe fn OnStart(&self, pcontext: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnStart)(::windows_core::Interface::as_raw(self), pcontext).ok()
+        ::windows_core::vcall!(self.OnStart(pcontext)).ok()
     }
     pub unsafe fn OnProgress<P0>(&self, pcontext: *const ::windows_core::GUID, presults: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValuesCollection>,
     {
-        (::windows_core::Interface::vtable(self).OnProgress)(::windows_core::Interface::as_raw(self), pcontext, presults.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnProgress(pcontext, presults.into_param().abi())).ok()
     }
     pub unsafe fn OnEnd(&self, pcontext: *const ::windows_core::GUID, hrstatus: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnEnd)(::windows_core::Interface::as_raw(self), pcontext, hrstatus).ok()
+        ::windows_core::vcall!(self.OnEnd(pcontext, hrstatus)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDevicePropertiesBulkCallback, ::windows_core::IUnknown);
@@ -1028,7 +1028,7 @@ impl IPortableDeviceResources {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedResources)(::windows_core::Interface::as_raw(self), pszobjectid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedResources(pszobjectid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1037,7 +1037,7 @@ impl IPortableDeviceResources {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetResourceAttributes)(::windows_core::Interface::as_raw(self), pszobjectid.into_param().abi(), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetResourceAttributes(pszobjectid.into_param().abi(), key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(all(feature = "Win32_System_Com", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -1045,17 +1045,17 @@ impl IPortableDeviceResources {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetStream)(::windows_core::Interface::as_raw(self), pszobjectid.into_param().abi(), key, dwmode, pdwoptimalbuffersize, ::core::mem::transmute(ppstream)).ok()
+        ::windows_core::vcall!(self.GetStream(pszobjectid.into_param().abi(), key, dwmode, pdwoptimalbuffersize, ::core::mem::transmute(ppstream))).ok()
     }
     pub unsafe fn Delete<P0, P1>(&self, pszobjectid: P0, pkeys: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<IPortableDeviceKeyCollection>,
     {
-        (::windows_core::Interface::vtable(self).Delete)(::windows_core::Interface::as_raw(self), pszobjectid.into_param().abi(), pkeys.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Delete(pszobjectid.into_param().abi(), pkeys.into_param().abi())).ok()
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -1063,7 +1063,7 @@ impl IPortableDeviceResources {
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).CreateResource)(::windows_core::Interface::as_raw(self), presourceattributes.into_param().abi(), ::core::mem::transmute(ppdata), pdwoptimalwritebuffersize, ppszcookie).ok()
+        ::windows_core::vcall!(self.CreateResource(presourceattributes.into_param().abi(), ::core::mem::transmute(ppdata), pdwoptimalwritebuffersize, ppszcookie)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceResources, ::windows_core::IUnknown);
@@ -1102,33 +1102,33 @@ impl IPortableDeviceService {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).Open)(::windows_core::Interface::as_raw(self), pszpnpserviceid.into_param().abi(), pclientinfo.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Open(pszpnpserviceid.into_param().abi(), pclientinfo.into_param().abi())).ok()
     }
     pub unsafe fn Capabilities(&self) -> ::windows_core::Result<IPortableDeviceServiceCapabilities> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Capabilities)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Capabilities(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Content(&self) -> ::windows_core::Result<IPortableDeviceContent2> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Content)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Content(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Methods(&self) -> ::windows_core::Result<IPortableDeviceServiceMethods> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Methods)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Methods(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
     pub unsafe fn Close(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Close()).ok()
     }
     pub unsafe fn GetServiceObjectID(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetServiceObjectID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetServiceObjectID(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPnPServiceID(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPnPServiceID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPnPServiceID(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Advise<P0, P1>(&self, dwflags: u32, pcallback: P0, pparameters: P1) -> ::windows_core::Result<::windows_core::PWSTR>
     where
@@ -1136,20 +1136,20 @@ impl IPortableDeviceService {
         P1: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Advise)(::windows_core::Interface::as_raw(self), dwflags, pcallback.into_param().abi(), pparameters.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Advise(dwflags, pcallback.into_param().abi(), pparameters.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Unadvise<P0>(&self, pszcookie: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).Unadvise)(::windows_core::Interface::as_raw(self), pszcookie.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Unadvise(pszcookie.into_param().abi())).ok()
     }
     pub unsafe fn SendCommand<P0>(&self, dwflags: u32, pparameters: P0) -> ::windows_core::Result<IPortableDeviceValues>
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SendCommand)(::windows_core::Interface::as_raw(self), dwflags, pparameters.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SendCommand(dwflags, pparameters.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceService, ::windows_core::IUnknown);
@@ -1185,10 +1185,10 @@ impl IPortableDeviceServiceActivation {
         P1: ::windows_core::IntoParam<IPortableDeviceValues>,
         P2: ::windows_core::IntoParam<IPortableDeviceServiceOpenCallback>,
     {
-        (::windows_core::Interface::vtable(self).OpenAsync)(::windows_core::Interface::as_raw(self), pszpnpserviceid.into_param().abi(), pclientinfo.into_param().abi(), pcallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OpenAsync(pszpnpserviceid.into_param().abi(), pclientinfo.into_param().abi(), pcallback.into_param().abi())).ok()
     }
     pub unsafe fn CancelOpenAsync(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CancelOpenAsync)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.CancelOpenAsync()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceServiceActivation, ::windows_core::IUnknown);
@@ -1211,74 +1211,74 @@ pub struct IPortableDeviceServiceCapabilities(::windows_core::IUnknown);
 impl IPortableDeviceServiceCapabilities {
     pub unsafe fn GetSupportedMethods(&self) -> ::windows_core::Result<IPortableDevicePropVariantCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedMethods)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedMethods(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetSupportedMethodsByFormat(&self, format: *const ::windows_core::GUID) -> ::windows_core::Result<IPortableDevicePropVariantCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedMethodsByFormat)(::windows_core::Interface::as_raw(self), format, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedMethodsByFormat(format, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetMethodAttributes(&self, method: *const ::windows_core::GUID) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMethodAttributes)(::windows_core::Interface::as_raw(self), method, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMethodAttributes(method, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetMethodParameterAttributes(&self, method: *const ::windows_core::GUID, parameter: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMethodParameterAttributes)(::windows_core::Interface::as_raw(self), method, parameter, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMethodParameterAttributes(method, parameter, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetSupportedFormats(&self) -> ::windows_core::Result<IPortableDevicePropVariantCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedFormats)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedFormats(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetFormatAttributes(&self, format: *const ::windows_core::GUID) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFormatAttributes)(::windows_core::Interface::as_raw(self), format, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFormatAttributes(format, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetSupportedFormatProperties(&self, format: *const ::windows_core::GUID) -> ::windows_core::Result<IPortableDeviceKeyCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedFormatProperties)(::windows_core::Interface::as_raw(self), format, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedFormatProperties(format, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetFormatPropertyAttributes(&self, format: *const ::windows_core::GUID, property: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFormatPropertyAttributes)(::windows_core::Interface::as_raw(self), format, property, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFormatPropertyAttributes(format, property, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetSupportedEvents(&self) -> ::windows_core::Result<IPortableDevicePropVariantCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedEvents)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedEvents(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetEventAttributes(&self, event: *const ::windows_core::GUID) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetEventAttributes)(::windows_core::Interface::as_raw(self), event, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetEventAttributes(event, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetEventParameterAttributes(&self, event: *const ::windows_core::GUID, parameter: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetEventParameterAttributes)(::windows_core::Interface::as_raw(self), event, parameter, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetEventParameterAttributes(event, parameter, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetInheritedServices(&self, dwinheritancetype: u32) -> ::windows_core::Result<IPortableDevicePropVariantCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetInheritedServices)(::windows_core::Interface::as_raw(self), dwinheritancetype, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetInheritedServices(dwinheritancetype, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetFormatRenderingProfiles(&self, format: *const ::windows_core::GUID) -> ::windows_core::Result<IPortableDeviceValuesCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFormatRenderingProfiles)(::windows_core::Interface::as_raw(self), format, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFormatRenderingProfiles(format, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetSupportedCommands(&self) -> ::windows_core::Result<IPortableDeviceKeyCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSupportedCommands)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSupportedCommands(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetCommandOptions(&self, command: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCommandOptions)(::windows_core::Interface::as_raw(self), command, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCommandOptions(command, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceServiceCapabilities, ::windows_core::IUnknown);
@@ -1329,14 +1329,14 @@ impl IPortableDeviceServiceManager {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetDeviceServices)(::windows_core::Interface::as_raw(self), pszpnpdeviceid.into_param().abi(), guidservicecategory, pservices, pcservices).ok()
+        ::windows_core::vcall!(self.GetDeviceServices(pszpnpdeviceid.into_param().abi(), guidservicecategory, pservices, pcservices)).ok()
     }
     pub unsafe fn GetDeviceForService<P0>(&self, pszpnpserviceid: P0) -> ::windows_core::Result<::windows_core::PWSTR>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDeviceForService)(::windows_core::Interface::as_raw(self), pszpnpserviceid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDeviceForService(pszpnpserviceid.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceServiceManager, ::windows_core::IUnknown);
@@ -1361,7 +1361,7 @@ impl IPortableDeviceServiceMethodCallback {
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).OnComplete)(::windows_core::Interface::as_raw(self), hrstatus, presults.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnComplete(hrstatus, presults.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceServiceMethodCallback, ::windows_core::IUnknown);
@@ -1385,20 +1385,20 @@ impl IPortableDeviceServiceMethods {
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).Invoke)(::windows_core::Interface::as_raw(self), method, pparameters.into_param().abi(), ::core::mem::transmute(ppresults)).ok()
+        ::windows_core::vcall!(self.Invoke(method, pparameters.into_param().abi(), ::core::mem::transmute(ppresults))).ok()
     }
     pub unsafe fn InvokeAsync<P0, P1>(&self, method: *const ::windows_core::GUID, pparameters: P0, pcallback: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
         P1: ::windows_core::IntoParam<IPortableDeviceServiceMethodCallback>,
     {
-        (::windows_core::Interface::vtable(self).InvokeAsync)(::windows_core::Interface::as_raw(self), method, pparameters.into_param().abi(), pcallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InvokeAsync(method, pparameters.into_param().abi(), pcallback.into_param().abi())).ok()
     }
     pub unsafe fn Cancel<P0>(&self, pcallback: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDeviceServiceMethodCallback>,
     {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self), pcallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Cancel(pcallback.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceServiceMethods, ::windows_core::IUnknown);
@@ -1421,7 +1421,7 @@ pub struct IPortableDeviceServiceMethods_Vtbl {
 pub struct IPortableDeviceServiceOpenCallback(::windows_core::IUnknown);
 impl IPortableDeviceServiceOpenCallback {
     pub unsafe fn OnComplete(&self, hrstatus: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnComplete)(::windows_core::Interface::as_raw(self), hrstatus).ok()
+        ::windows_core::vcall!(self.OnComplete(hrstatus)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceServiceOpenCallback, ::windows_core::IUnknown);
@@ -1442,10 +1442,10 @@ pub struct IPortableDeviceServiceOpenCallback_Vtbl {
 pub struct IPortableDeviceUnitsStream(::windows_core::IUnknown);
 impl IPortableDeviceUnitsStream {
     pub unsafe fn SeekInUnits(&self, dlibmove: i64, units: WPD_STREAM_UNITS, dworigin: u32, plibnewposition: ::core::option::Option<*mut u64>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SeekInUnits)(::windows_core::Interface::as_raw(self), dlibmove, units, dworigin, ::core::mem::transmute(plibnewposition.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.SeekInUnits(dlibmove, units, dworigin, ::core::mem::transmute(plibnewposition.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceUnitsStream, ::windows_core::IUnknown);
@@ -1467,23 +1467,23 @@ pub struct IPortableDeviceUnitsStream_Vtbl {
 pub struct IPortableDeviceValues(::windows_core::IUnknown);
 impl IPortableDeviceValues {
     pub unsafe fn GetCount(&self, pcelt: *const u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCount)(::windows_core::Interface::as_raw(self), pcelt).ok()
+        ::windows_core::vcall!(self.GetCount(pcelt)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
     pub unsafe fn GetAt(&self, index: u32, pkey: *mut super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, pvalue: *mut super::super::System::Com::StructuredStorage::PROPVARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetAt)(::windows_core::Interface::as_raw(self), index, pkey, pvalue).ok()
+        ::windows_core::vcall!(self.GetAt(index, pkey, pvalue)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
     pub unsafe fn SetValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, pvalue: *const super::super::System::Com::StructuredStorage::PROPVARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetValue)(::windows_core::Interface::as_raw(self), key, pvalue).ok()
+        ::windows_core::vcall!(self.SetValue(key, pvalue)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Variant\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Variant", feature = "Win32_UI_Shell_PropertiesSystem"))]
     pub unsafe fn GetValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<super::super::System::Com::StructuredStorage::PROPVARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1491,89 +1491,89 @@ impl IPortableDeviceValues {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetStringValue)(::windows_core::Interface::as_raw(self), key, value.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetStringValue(key, value.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetStringValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetStringValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetStringValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn SetUnsignedIntegerValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, value: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetUnsignedIntegerValue)(::windows_core::Interface::as_raw(self), key, value).ok()
+        ::windows_core::vcall!(self.SetUnsignedIntegerValue(key, value)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetUnsignedIntegerValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUnsignedIntegerValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUnsignedIntegerValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn SetSignedIntegerValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, value: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetSignedIntegerValue)(::windows_core::Interface::as_raw(self), key, value).ok()
+        ::windows_core::vcall!(self.SetSignedIntegerValue(key, value)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetSignedIntegerValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSignedIntegerValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSignedIntegerValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn SetUnsignedLargeIntegerValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, value: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetUnsignedLargeIntegerValue)(::windows_core::Interface::as_raw(self), key, value).ok()
+        ::windows_core::vcall!(self.SetUnsignedLargeIntegerValue(key, value)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetUnsignedLargeIntegerValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<u64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUnsignedLargeIntegerValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUnsignedLargeIntegerValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn SetSignedLargeIntegerValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, value: i64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetSignedLargeIntegerValue)(::windows_core::Interface::as_raw(self), key, value).ok()
+        ::windows_core::vcall!(self.SetSignedLargeIntegerValue(key, value)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetSignedLargeIntegerValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<i64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSignedLargeIntegerValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSignedLargeIntegerValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn SetFloatValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, value: f32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetFloatValue)(::windows_core::Interface::as_raw(self), key, value).ok()
+        ::windows_core::vcall!(self.SetFloatValue(key, value)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetFloatValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<f32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFloatValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFloatValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn SetErrorValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, value: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetErrorValue)(::windows_core::Interface::as_raw(self), key, value).ok()
+        ::windows_core::vcall!(self.SetErrorValue(key, value)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetErrorValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<::windows_core::HRESULT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetErrorValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetErrorValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn SetKeyValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, value: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetKeyValue)(::windows_core::Interface::as_raw(self), key, value).ok()
+        ::windows_core::vcall!(self.SetKeyValue(key, value)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetKeyValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, pvalue: *mut super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetKeyValue)(::windows_core::Interface::as_raw(self), key, pvalue).ok()
+        ::windows_core::vcall!(self.GetKeyValue(key, pvalue)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_Shell_PropertiesSystem"))]
@@ -1581,13 +1581,13 @@ impl IPortableDeviceValues {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetBoolValue)(::windows_core::Interface::as_raw(self), key, value.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetBoolValue(key, value.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_Shell_PropertiesSystem"))]
     pub unsafe fn GetBoolValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetBoolValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetBoolValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1595,34 +1595,34 @@ impl IPortableDeviceValues {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).SetIUnknownValue)(::windows_core::Interface::as_raw(self), key, pvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetIUnknownValue(key, pvalue.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetIUnknownValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetIUnknownValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetIUnknownValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn SetGuidValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, value: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetGuidValue)(::windows_core::Interface::as_raw(self), key, value).ok()
+        ::windows_core::vcall!(self.SetGuidValue(key, value)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetGuidValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetGuidValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetGuidValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn SetBufferValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, pvalue: &[u8]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetBufferValue)(::windows_core::Interface::as_raw(self), key, ::core::mem::transmute(pvalue.as_ptr()), pvalue.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.SetBufferValue(key, ::core::mem::transmute(pvalue.as_ptr()), pvalue.len().try_into().unwrap())).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetBufferValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY, ppvalue: *mut *mut u8, pcbvalue: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetBufferValue)(::windows_core::Interface::as_raw(self), key, ppvalue, pcbvalue).ok()
+        ::windows_core::vcall!(self.GetBufferValue(key, ppvalue, pcbvalue)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1630,13 +1630,13 @@ impl IPortableDeviceValues {
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).SetIPortableDeviceValuesValue)(::windows_core::Interface::as_raw(self), key, pvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetIPortableDeviceValuesValue(key, pvalue.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetIPortableDeviceValuesValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetIPortableDeviceValuesValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetIPortableDeviceValuesValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1644,13 +1644,13 @@ impl IPortableDeviceValues {
     where
         P0: ::windows_core::IntoParam<IPortableDevicePropVariantCollection>,
     {
-        (::windows_core::Interface::vtable(self).SetIPortableDevicePropVariantCollectionValue)(::windows_core::Interface::as_raw(self), key, pvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetIPortableDevicePropVariantCollectionValue(key, pvalue.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetIPortableDevicePropVariantCollectionValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<IPortableDevicePropVariantCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetIPortableDevicePropVariantCollectionValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetIPortableDevicePropVariantCollectionValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1658,13 +1658,13 @@ impl IPortableDeviceValues {
     where
         P0: ::windows_core::IntoParam<IPortableDeviceKeyCollection>,
     {
-        (::windows_core::Interface::vtable(self).SetIPortableDeviceKeyCollectionValue)(::windows_core::Interface::as_raw(self), key, pvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetIPortableDeviceKeyCollectionValue(key, pvalue.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetIPortableDeviceKeyCollectionValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<IPortableDeviceKeyCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetIPortableDeviceKeyCollectionValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetIPortableDeviceKeyCollectionValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1672,18 +1672,18 @@ impl IPortableDeviceValues {
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValuesCollection>,
     {
-        (::windows_core::Interface::vtable(self).SetIPortableDeviceValuesCollectionValue)(::windows_core::Interface::as_raw(self), key, pvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetIPortableDeviceValuesCollectionValue(key, pvalue.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn GetIPortableDeviceValuesCollectionValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<IPortableDeviceValuesCollection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetIPortableDeviceValuesCollectionValue)(::windows_core::Interface::as_raw(self), key, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetIPortableDeviceValuesCollectionValue(key, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
     pub unsafe fn RemoveValue(&self, key: *const super::super::UI::Shell::PropertiesSystem::PROPERTYKEY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RemoveValue)(::windows_core::Interface::as_raw(self), key).ok()
+        ::windows_core::vcall!(self.RemoveValue(key)).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1691,7 +1691,7 @@ impl IPortableDeviceValues {
     where
         P0: ::windows_core::IntoParam<super::super::UI::Shell::PropertiesSystem::IPropertyStore>,
     {
-        (::windows_core::Interface::vtable(self).CopyValuesFromPropertyStore)(::windows_core::Interface::as_raw(self), pstore.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CopyValuesFromPropertyStore(pstore.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_UI_Shell_PropertiesSystem\"`"]
     #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
@@ -1699,10 +1699,10 @@ impl IPortableDeviceValues {
     where
         P0: ::windows_core::IntoParam<super::super::UI::Shell::PropertiesSystem::IPropertyStore>,
     {
-        (::windows_core::Interface::vtable(self).CopyValuesToPropertyStore)(::windows_core::Interface::as_raw(self), pstore.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CopyValuesToPropertyStore(pstore.into_param().abi())).ok()
     }
     pub unsafe fn Clear(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Clear)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Clear()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceValues, ::windows_core::IUnknown);
@@ -1876,23 +1876,23 @@ pub struct IPortableDeviceValues_Vtbl {
 pub struct IPortableDeviceValuesCollection(::windows_core::IUnknown);
 impl IPortableDeviceValuesCollection {
     pub unsafe fn GetCount(&self, pcelems: *const u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCount)(::windows_core::Interface::as_raw(self), pcelems).ok()
+        ::windows_core::vcall!(self.GetCount(pcelems)).ok()
     }
     pub unsafe fn GetAt(&self, dwindex: u32) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetAt)(::windows_core::Interface::as_raw(self), dwindex, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetAt(dwindex, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Add<P0>(&self, pvalues: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).Add)(::windows_core::Interface::as_raw(self), pvalues.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Add(pvalues.into_param().abi())).ok()
     }
     pub unsafe fn Clear(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Clear)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Clear()).ok()
     }
     pub unsafe fn RemoveAt(&self, dwindex: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RemoveAt)(::windows_core::Interface::as_raw(self), dwindex).ok()
+        ::windows_core::vcall!(self.RemoveAt(dwindex)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPortableDeviceValuesCollection, ::windows_core::IUnknown);
@@ -1926,7 +1926,7 @@ impl IPortableDeviceWebControl {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDeviceFromId)(::windows_core::Interface::as_raw(self), deviceid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDeviceFromId(deviceid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -1936,7 +1936,7 @@ impl IPortableDeviceWebControl {
         P1: ::windows_core::IntoParam<super::super::System::Com::IDispatch>,
         P2: ::windows_core::IntoParam<super::super::System::Com::IDispatch>,
     {
-        (::windows_core::Interface::vtable(self).GetDeviceFromIdAsync)(::windows_core::Interface::as_raw(self), deviceid.into_param().abi(), pcompletionhandler.into_param().abi(), perrorhandler.into_param().abi()).ok()
+        ::windows_core::vcall!(self.GetDeviceFromIdAsync(deviceid.into_param().abi(), pcompletionhandler.into_param().abi(), perrorhandler.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -1969,32 +1969,32 @@ pub struct IRadioInstance(::windows_core::IUnknown);
 impl IRadioInstance {
     pub unsafe fn GetRadioManagerSignature(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRadioManagerSignature)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRadioManagerSignature(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetInstanceSignature(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetInstanceSignature)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetInstanceSignature(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetFriendlyName(&self, lcid: u32) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFriendlyName)(::windows_core::Interface::as_raw(self), lcid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFriendlyName(lcid, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetRadioState(&self) -> ::windows_core::Result<DEVICE_RADIO_STATE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRadioState)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRadioState(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetRadioState(&self, radiostate: DEVICE_RADIO_STATE, utimeoutsec: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetRadioState)(::windows_core::Interface::as_raw(self), radiostate, utimeoutsec).ok()
+        ::windows_core::vcall!(self.SetRadioState(radiostate, utimeoutsec)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsMultiComm(&self) -> super::super::Foundation::BOOL {
-        (::windows_core::Interface::vtable(self).IsMultiComm)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.IsMultiComm())
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsAssociatingDevice(&self) -> super::super::Foundation::BOOL {
-        (::windows_core::Interface::vtable(self).IsAssociatingDevice)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.IsAssociatingDevice())
     }
 }
 ::windows_core::imp::interface_hierarchy!(IRadioInstance, ::windows_core::IUnknown);
@@ -2028,11 +2028,11 @@ pub struct IRadioInstanceCollection(::windows_core::IUnknown);
 impl IRadioInstanceCollection {
     pub unsafe fn GetCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetAt(&self, uindex: u32) -> ::windows_core::Result<IRadioInstance> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetAt)(::windows_core::Interface::as_raw(self), uindex, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetAt(uindex, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IRadioInstanceCollection, ::windows_core::IUnknown);
@@ -2055,26 +2055,26 @@ pub struct IWpdSerializer(::windows_core::IUnknown);
 impl IWpdSerializer {
     pub unsafe fn GetIPortableDeviceValuesFromBuffer(&self, pbuffer: &[u8]) -> ::windows_core::Result<IPortableDeviceValues> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetIPortableDeviceValuesFromBuffer)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pbuffer.as_ptr()), pbuffer.len().try_into().unwrap(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetIPortableDeviceValuesFromBuffer(::core::mem::transmute(pbuffer.as_ptr()), pbuffer.len().try_into().unwrap(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn WriteIPortableDeviceValuesToBuffer<P0>(&self, presults: P0, pbuffer: &mut [u8], pdwbyteswritten: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).WriteIPortableDeviceValuesToBuffer)(::windows_core::Interface::as_raw(self), pbuffer.len().try_into().unwrap(), presults.into_param().abi(), ::core::mem::transmute(pbuffer.as_ptr()), pdwbyteswritten).ok()
+        ::windows_core::vcall!(self.WriteIPortableDeviceValuesToBuffer(pbuffer.len().try_into().unwrap(), presults.into_param().abi(), ::core::mem::transmute(pbuffer.as_ptr()), pdwbyteswritten)).ok()
     }
     pub unsafe fn GetBufferFromIPortableDeviceValues<P0>(&self, psource: P0, ppbuffer: *mut *mut u8, pdwbuffersize: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
-        (::windows_core::Interface::vtable(self).GetBufferFromIPortableDeviceValues)(::windows_core::Interface::as_raw(self), psource.into_param().abi(), ppbuffer, pdwbuffersize).ok()
+        ::windows_core::vcall!(self.GetBufferFromIPortableDeviceValues(psource.into_param().abi(), ppbuffer, pdwbuffersize)).ok()
     }
     pub unsafe fn GetSerializedSize<P0>(&self, psource: P0) -> ::windows_core::Result<u32>
     where
         P0: ::windows_core::IntoParam<IPortableDeviceValues>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSerializedSize)(::windows_core::Interface::as_raw(self), psource.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSerializedSize(psource.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWpdSerializer, ::windows_core::IUnknown);

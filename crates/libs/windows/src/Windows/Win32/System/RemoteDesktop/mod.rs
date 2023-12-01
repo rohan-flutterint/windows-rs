@@ -654,123 +654,123 @@ pub struct IADsTSUserEx(::windows_core::IUnknown);
 impl IADsTSUserEx {
     pub unsafe fn TerminalServicesProfilePath(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TerminalServicesProfilePath)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TerminalServicesProfilePath(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetTerminalServicesProfilePath<P0>(&self, pnewval: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTerminalServicesProfilePath)(::windows_core::Interface::as_raw(self), pnewval.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTerminalServicesProfilePath(pnewval.into_param().abi())).ok()
     }
     pub unsafe fn TerminalServicesHomeDirectory(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TerminalServicesHomeDirectory)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TerminalServicesHomeDirectory(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetTerminalServicesHomeDirectory<P0>(&self, pnewval: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTerminalServicesHomeDirectory)(::windows_core::Interface::as_raw(self), pnewval.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTerminalServicesHomeDirectory(pnewval.into_param().abi())).ok()
     }
     pub unsafe fn TerminalServicesHomeDrive(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TerminalServicesHomeDrive)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TerminalServicesHomeDrive(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetTerminalServicesHomeDrive<P0>(&self, pnewval: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTerminalServicesHomeDrive)(::windows_core::Interface::as_raw(self), pnewval.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTerminalServicesHomeDrive(pnewval.into_param().abi())).ok()
     }
     pub unsafe fn AllowLogon(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AllowLogon)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AllowLogon(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetAllowLogon(&self, newval: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetAllowLogon)(::windows_core::Interface::as_raw(self), newval).ok()
+        ::windows_core::vcall!(self.SetAllowLogon(newval)).ok()
     }
     pub unsafe fn EnableRemoteControl(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnableRemoteControl)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnableRemoteControl(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetEnableRemoteControl(&self, newval: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetEnableRemoteControl)(::windows_core::Interface::as_raw(self), newval).ok()
+        ::windows_core::vcall!(self.SetEnableRemoteControl(newval)).ok()
     }
     pub unsafe fn MaxDisconnectionTime(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).MaxDisconnectionTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.MaxDisconnectionTime(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetMaxDisconnectionTime(&self, newval: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMaxDisconnectionTime)(::windows_core::Interface::as_raw(self), newval).ok()
+        ::windows_core::vcall!(self.SetMaxDisconnectionTime(newval)).ok()
     }
     pub unsafe fn MaxConnectionTime(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).MaxConnectionTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.MaxConnectionTime(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetMaxConnectionTime(&self, newval: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMaxConnectionTime)(::windows_core::Interface::as_raw(self), newval).ok()
+        ::windows_core::vcall!(self.SetMaxConnectionTime(newval)).ok()
     }
     pub unsafe fn MaxIdleTime(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).MaxIdleTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.MaxIdleTime(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetMaxIdleTime(&self, newval: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMaxIdleTime)(::windows_core::Interface::as_raw(self), newval).ok()
+        ::windows_core::vcall!(self.SetMaxIdleTime(newval)).ok()
     }
     pub unsafe fn ReconnectionAction(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ReconnectionAction)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ReconnectionAction(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetReconnectionAction(&self, newval: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetReconnectionAction)(::windows_core::Interface::as_raw(self), newval).ok()
+        ::windows_core::vcall!(self.SetReconnectionAction(newval)).ok()
     }
     pub unsafe fn BrokenConnectionAction(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).BrokenConnectionAction)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.BrokenConnectionAction(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetBrokenConnectionAction(&self, newval: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetBrokenConnectionAction)(::windows_core::Interface::as_raw(self), newval).ok()
+        ::windows_core::vcall!(self.SetBrokenConnectionAction(newval)).ok()
     }
     pub unsafe fn ConnectClientDrivesAtLogon(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ConnectClientDrivesAtLogon)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ConnectClientDrivesAtLogon(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetConnectClientDrivesAtLogon(&self, newval: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetConnectClientDrivesAtLogon)(::windows_core::Interface::as_raw(self), newval).ok()
+        ::windows_core::vcall!(self.SetConnectClientDrivesAtLogon(newval)).ok()
     }
     pub unsafe fn ConnectClientPrintersAtLogon(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ConnectClientPrintersAtLogon)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ConnectClientPrintersAtLogon(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetConnectClientPrintersAtLogon(&self, newval: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetConnectClientPrintersAtLogon)(::windows_core::Interface::as_raw(self), newval).ok()
+        ::windows_core::vcall!(self.SetConnectClientPrintersAtLogon(newval)).ok()
     }
     pub unsafe fn DefaultToMainPrinter(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DefaultToMainPrinter)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DefaultToMainPrinter(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetDefaultToMainPrinter(&self, newval: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetDefaultToMainPrinter)(::windows_core::Interface::as_raw(self), newval).ok()
+        ::windows_core::vcall!(self.SetDefaultToMainPrinter(newval)).ok()
     }
     pub unsafe fn TerminalServicesWorkDirectory(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TerminalServicesWorkDirectory)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TerminalServicesWorkDirectory(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetTerminalServicesWorkDirectory<P0>(&self, pnewval: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTerminalServicesWorkDirectory)(::windows_core::Interface::as_raw(self), pnewval.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTerminalServicesWorkDirectory(pnewval.into_param().abi())).ok()
     }
     pub unsafe fn TerminalServicesInitialProgram(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TerminalServicesInitialProgram)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TerminalServicesInitialProgram(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetTerminalServicesInitialProgram<P0>(&self, pnewval: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTerminalServicesInitialProgram)(::windows_core::Interface::as_raw(self), pnewval.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTerminalServicesInitialProgram(pnewval.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -824,22 +824,22 @@ pub struct IADsTSUserEx_Vtbl {
 pub struct IAudioDeviceEndpoint(::windows_core::IUnknown);
 impl IAudioDeviceEndpoint {
     pub unsafe fn SetBuffer(&self, maxperiod: i64, u32latencycoefficient: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetBuffer)(::windows_core::Interface::as_raw(self), maxperiod, u32latencycoefficient).ok()
+        ::windows_core::vcall!(self.SetBuffer(maxperiod, u32latencycoefficient)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetRTCaps(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRTCaps)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRTCaps(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetEventDrivenCapable(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetEventDrivenCapable)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetEventDrivenCapable(&mut result__)).from_abi(result__)
     }
     pub unsafe fn WriteExclusiveModeParametersToSharedMemory(&self, htargetprocess: usize, hnsperiod: i64, hnsbufferduration: i64, u32latencycoefficient: u32, pu32sharedmemorysize: *mut u32, phsharedmemory: *mut usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).WriteExclusiveModeParametersToSharedMemory)(::windows_core::Interface::as_raw(self), htargetprocess, hnsperiod, hnsbufferduration, u32latencycoefficient, pu32sharedmemorysize, phsharedmemory).ok()
+        ::windows_core::vcall!(self.WriteExclusiveModeParametersToSharedMemory(htargetprocess, hnsperiod, hnsbufferduration, u32latencycoefficient, pu32sharedmemorysize, phsharedmemory)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioDeviceEndpoint, ::windows_core::IUnknown);
@@ -872,18 +872,18 @@ impl IAudioEndpoint {
     #[cfg(feature = "Win32_Media_Audio")]
     pub unsafe fn GetFrameFormat(&self) -> ::windows_core::Result<*mut super::super::Media::Audio::WAVEFORMATEX> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFrameFormat)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFrameFormat(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetFramesPerPacket(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFramesPerPacket)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFramesPerPacket(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetLatency(&self) -> ::windows_core::Result<i64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLatency)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLatency(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetStreamFlags(&self, streamflags: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetStreamFlags)(::windows_core::Interface::as_raw(self), streamflags).ok()
+        ::windows_core::vcall!(self.SetStreamFlags(streamflags)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -891,7 +891,7 @@ impl IAudioEndpoint {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).SetEventHandle)(::windows_core::Interface::as_raw(self), eventhandle.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetEventHandle(eventhandle.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioEndpoint, ::windows_core::IUnknown);
@@ -922,13 +922,13 @@ pub struct IAudioEndpoint_Vtbl {
 pub struct IAudioEndpointControl(::windows_core::IUnknown);
 impl IAudioEndpointControl {
     pub unsafe fn Start(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Start)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Start()).ok()
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Stop(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Stop)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Stop()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioEndpointControl, ::windows_core::IUnknown);
@@ -951,16 +951,16 @@ pub struct IAudioEndpointControl_Vtbl {
 pub struct IAudioEndpointRT(::windows_core::IUnknown);
 impl IAudioEndpointRT {
     pub unsafe fn GetCurrentPadding(&self, ppadding: *mut i64, paecurrentposition: *mut AE_CURRENT_POSITION) {
-        (::windows_core::Interface::vtable(self).GetCurrentPadding)(::windows_core::Interface::as_raw(self), ppadding, paecurrentposition)
+        ::windows_core::vcall!(self.GetCurrentPadding(ppadding, paecurrentposition))
     }
     pub unsafe fn ProcessingComplete(&self) {
-        (::windows_core::Interface::vtable(self).ProcessingComplete)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.ProcessingComplete())
     }
     pub unsafe fn SetPinInactive(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetPinInactive)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SetPinInactive()).ok()
     }
     pub unsafe fn SetPinActive(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetPinActive)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SetPinActive()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioEndpointRT, ::windows_core::IUnknown);
@@ -986,13 +986,13 @@ impl IAudioInputEndpointRT {
     #[doc = "Required features: `\"Win32_Media_Audio_Apo\"`"]
     #[cfg(feature = "Win32_Media_Audio_Apo")]
     pub unsafe fn GetInputDataPointer(&self, pconnectionproperty: *mut super::super::Media::Audio::Apo::APO_CONNECTION_PROPERTY, paetimestamp: *mut AE_CURRENT_POSITION) {
-        (::windows_core::Interface::vtable(self).GetInputDataPointer)(::windows_core::Interface::as_raw(self), pconnectionproperty, paetimestamp)
+        ::windows_core::vcall!(self.GetInputDataPointer(pconnectionproperty, paetimestamp))
     }
     pub unsafe fn ReleaseInputDataPointer(&self, u32framecount: u32, pdatapointer: usize) {
-        (::windows_core::Interface::vtable(self).ReleaseInputDataPointer)(::windows_core::Interface::as_raw(self), u32framecount, pdatapointer)
+        ::windows_core::vcall!(self.ReleaseInputDataPointer(u32framecount, pdatapointer))
     }
     pub unsafe fn PulseEndpoint(&self) {
-        (::windows_core::Interface::vtable(self).PulseEndpoint)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.PulseEndpoint())
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioInputEndpointRT, ::windows_core::IUnknown);
@@ -1018,15 +1018,15 @@ pub struct IAudioInputEndpointRT_Vtbl {
 pub struct IAudioOutputEndpointRT(::windows_core::IUnknown);
 impl IAudioOutputEndpointRT {
     pub unsafe fn GetOutputDataPointer(&self, u32framecount: u32, paetimestamp: *const AE_CURRENT_POSITION) -> usize {
-        (::windows_core::Interface::vtable(self).GetOutputDataPointer)(::windows_core::Interface::as_raw(self), u32framecount, paetimestamp)
+        ::windows_core::vcall!(self.GetOutputDataPointer(u32framecount, paetimestamp))
     }
     #[doc = "Required features: `\"Win32_Media_Audio_Apo\"`"]
     #[cfg(feature = "Win32_Media_Audio_Apo")]
     pub unsafe fn ReleaseOutputDataPointer(&self, pconnectionproperty: *const super::super::Media::Audio::Apo::APO_CONNECTION_PROPERTY) {
-        (::windows_core::Interface::vtable(self).ReleaseOutputDataPointer)(::windows_core::Interface::as_raw(self), pconnectionproperty)
+        ::windows_core::vcall!(self.ReleaseOutputDataPointer(pconnectionproperty))
     }
     pub unsafe fn PulseEndpoint(&self) {
-        (::windows_core::Interface::vtable(self).PulseEndpoint)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.PulseEndpoint())
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAudioOutputEndpointRT, ::windows_core::IUnknown);
@@ -1055,40 +1055,40 @@ pub struct IRemoteDesktopClient(::windows_core::IUnknown);
 #[cfg(feature = "Win32_System_Com")]
 impl IRemoteDesktopClient {
     pub unsafe fn Connect(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Connect)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Connect()).ok()
     }
     pub unsafe fn Disconnect(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Disconnect)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Disconnect()).ok()
     }
     pub unsafe fn Reconnect(&self, width: u32, height: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reconnect)(::windows_core::Interface::as_raw(self), width, height).ok()
+        ::windows_core::vcall!(self.Reconnect(width, height)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Settings(&self) -> ::windows_core::Result<IRemoteDesktopClientSettings> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Settings)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Settings(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Actions(&self) -> ::windows_core::Result<IRemoteDesktopClientActions> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Actions)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Actions(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn TouchPointer(&self) -> ::windows_core::Result<IRemoteDesktopClientTouchPointer> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TouchPointer)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TouchPointer(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DeleteSavedCredentials<P0>(&self, servername: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeleteSavedCredentials)(::windows_core::Interface::as_raw(self), servername.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeleteSavedCredentials(servername.into_param().abi())).ok()
     }
     pub unsafe fn UpdateSessionDisplaySettings(&self, width: u32, height: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UpdateSessionDisplaySettings)(::windows_core::Interface::as_raw(self), width, height).ok()
+        ::windows_core::vcall!(self.UpdateSessionDisplaySettings(width, height)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -1097,7 +1097,7 @@ impl IRemoteDesktopClient {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<super::Com::IDispatch>,
     {
-        (::windows_core::Interface::vtable(self).attachEvent)(::windows_core::Interface::as_raw(self), eventname.into_param().abi(), callback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.attachEvent(eventname.into_param().abi(), callback.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -1106,7 +1106,7 @@ impl IRemoteDesktopClient {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<super::Com::IDispatch>,
     {
-        (::windows_core::Interface::vtable(self).detachEvent)(::windows_core::Interface::as_raw(self), eventname.into_param().abi(), callback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.detachEvent(eventname.into_param().abi(), callback.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -1158,17 +1158,17 @@ pub struct IRemoteDesktopClientActions(::windows_core::IUnknown);
 #[cfg(feature = "Win32_System_Com")]
 impl IRemoteDesktopClientActions {
     pub unsafe fn SuspendScreenUpdates(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SuspendScreenUpdates)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SuspendScreenUpdates()).ok()
     }
     pub unsafe fn ResumeScreenUpdates(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ResumeScreenUpdates)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ResumeScreenUpdates()).ok()
     }
     pub unsafe fn ExecuteRemoteAction(&self, remoteaction: RemoteActionType) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ExecuteRemoteAction)(::windows_core::Interface::as_raw(self), remoteaction).ok()
+        ::windows_core::vcall!(self.ExecuteRemoteAction(remoteaction)).ok()
     }
     pub unsafe fn GetSnapshot(&self, snapshotencoding: SnapshotEncodingType, snapshotformat: SnapshotFormatType, snapshotwidth: u32, snapshotheight: u32) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSnapshot)(::windows_core::Interface::as_raw(self), snapshotencoding, snapshotformat, snapshotwidth, snapshotheight, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSnapshot(snapshotencoding, snapshotformat, snapshotwidth, snapshotheight, &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -1202,11 +1202,11 @@ impl IRemoteDesktopClientSettings {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ApplySettings)(::windows_core::Interface::as_raw(self), rdpfilecontents.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ApplySettings(rdpfilecontents.into_param().abi())).ok()
     }
     pub unsafe fn RetrieveSettings(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RetrieveSettings)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RetrieveSettings(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1215,7 +1215,7 @@ impl IRemoteDesktopClientSettings {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRdpProperty)(::windows_core::Interface::as_raw(self), propertyname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRdpProperty(propertyname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1223,7 +1223,7 @@ impl IRemoteDesktopClientSettings {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetRdpProperty)(::windows_core::Interface::as_raw(self), propertyname.into_param().abi(), ::core::mem::transmute(value)).ok()
+        ::windows_core::vcall!(self.SetRdpProperty(propertyname.into_param().abi(), ::core::mem::transmute(value))).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -1265,13 +1265,13 @@ impl IRemoteDesktopClientTouchPointer {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetEnabled)(::windows_core::Interface::as_raw(self), enabled.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetEnabled(enabled.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Enabled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Enabled)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Enabled(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1279,20 +1279,20 @@ impl IRemoteDesktopClientTouchPointer {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetEventsEnabled)(::windows_core::Interface::as_raw(self), eventsenabled.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetEventsEnabled(eventsenabled.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EventsEnabled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EventsEnabled)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EventsEnabled(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPointerSpeed(&self, pointerspeed: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetPointerSpeed)(::windows_core::Interface::as_raw(self), pointerspeed).ok()
+        ::windows_core::vcall!(self.SetPointerSpeed(pointerspeed)).ok()
     }
     pub unsafe fn PointerSpeed(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).PointerSpeed)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.PointerSpeed(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -1338,7 +1338,7 @@ impl IRemoteSystemAdditionalInfoProvider {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).GetAdditionalInfo)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(deduplicationid), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetAdditionalInfo(::core::mem::transmute(deduplicationid), &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IRemoteSystemAdditionalInfoProvider, ::windows_core::IUnknown);
@@ -1359,7 +1359,7 @@ pub struct IRemoteSystemAdditionalInfoProvider_Vtbl {
 pub struct ITSGAccountingEngine(::windows_core::IUnknown);
 impl ITSGAccountingEngine {
     pub unsafe fn DoAccounting(&self, accountingdatatype: AAAccountingDataType, accountingdata: AAAccountingData) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DoAccounting)(::windows_core::Interface::as_raw(self), accountingdatatype, ::core::mem::transmute(accountingdata)).ok()
+        ::windows_core::vcall!(self.DoAccounting(accountingdatatype, ::core::mem::transmute(accountingdata))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITSGAccountingEngine, ::windows_core::IUnknown);
@@ -1387,16 +1387,16 @@ impl ITSGAuthenticateUserSink {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<super::super::Foundation::HANDLE_PTR>,
     {
-        (::windows_core::Interface::vtable(self).OnUserAuthenticated)(::windows_core::Interface::as_raw(self), username.into_param().abi(), userdomain.into_param().abi(), context, usertoken.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnUserAuthenticated(username.into_param().abi(), userdomain.into_param().abi(), context, usertoken.into_param().abi())).ok()
     }
     pub unsafe fn OnUserAuthenticationFailed(&self, context: usize, genericerrorcode: ::windows_core::HRESULT, specificerrorcode: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnUserAuthenticationFailed)(::windows_core::Interface::as_raw(self), context, genericerrorcode, specificerrorcode).ok()
+        ::windows_core::vcall!(self.OnUserAuthenticationFailed(context, genericerrorcode, specificerrorcode)).ok()
     }
     pub unsafe fn ReauthenticateUser(&self, context: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ReauthenticateUser)(::windows_core::Interface::as_raw(self), context).ok()
+        ::windows_core::vcall!(self.ReauthenticateUser(context)).ok()
     }
     pub unsafe fn DisconnectUser(&self, context: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DisconnectUser)(::windows_core::Interface::as_raw(self), context).ok()
+        ::windows_core::vcall!(self.DisconnectUser(context)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITSGAuthenticateUserSink, ::windows_core::IUnknown);
@@ -1426,10 +1426,10 @@ impl ITSGAuthenticationEngine {
     where
         P0: ::windows_core::IntoParam<ITSGAuthenticateUserSink>,
     {
-        (::windows_core::Interface::vtable(self).AuthenticateUser)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(mainsessionid), cookiedata, numcookiebytes, context, psink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AuthenticateUser(::core::mem::transmute(mainsessionid), cookiedata, numcookiebytes, context, psink.into_param().abi())).ok()
     }
     pub unsafe fn CancelAuthentication(&self, mainsessionid: ::windows_core::GUID, context: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CancelAuthentication)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(mainsessionid), context).ok()
+        ::windows_core::vcall!(self.CancelAuthentication(::core::mem::transmute(mainsessionid), context)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITSGAuthenticationEngine, ::windows_core::IUnknown);
@@ -1451,7 +1451,7 @@ pub struct ITSGAuthenticationEngine_Vtbl {
 pub struct ITSGAuthorizeConnectionSink(::windows_core::IUnknown);
 impl ITSGAuthorizeConnectionSink {
     pub unsafe fn OnConnectionAuthorized(&self, hrin: ::windows_core::HRESULT, mainsessionid: ::windows_core::GUID, pbsohresponse: &[u8], idletimeout: u32, sessiontimeout: u32, sessiontimeoutaction: SESSION_TIMEOUT_ACTION_TYPE, trustclass: AATrustClassID, policyattributes: *const u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnConnectionAuthorized)(::windows_core::Interface::as_raw(self), hrin, ::core::mem::transmute(mainsessionid), pbsohresponse.len().try_into().unwrap(), ::core::mem::transmute(pbsohresponse.as_ptr()), idletimeout, sessiontimeout, sessiontimeoutaction, trustclass, policyattributes).ok()
+        ::windows_core::vcall!(self.OnConnectionAuthorized(hrin, ::core::mem::transmute(mainsessionid), pbsohresponse.len().try_into().unwrap(), ::core::mem::transmute(pbsohresponse.as_ptr()), idletimeout, sessiontimeout, sessiontimeoutaction, trustclass, policyattributes)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITSGAuthorizeConnectionSink, ::windows_core::IUnknown);
@@ -1472,7 +1472,7 @@ pub struct ITSGAuthorizeConnectionSink_Vtbl {
 pub struct ITSGAuthorizeResourceSink(::windows_core::IUnknown);
 impl ITSGAuthorizeResourceSink {
     pub unsafe fn OnChannelAuthorized(&self, hrin: ::windows_core::HRESULT, mainsessionid: ::windows_core::GUID, subsessionid: i32, allowedresourcenames: &[::windows_core::BSTR], failedresourcenames: &[::windows_core::BSTR]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnChannelAuthorized)(::windows_core::Interface::as_raw(self), hrin, ::core::mem::transmute(mainsessionid), subsessionid, ::core::mem::transmute(allowedresourcenames.as_ptr()), allowedresourcenames.len().try_into().unwrap(), ::core::mem::transmute(failedresourcenames.as_ptr()), failedresourcenames.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.OnChannelAuthorized(hrin, ::core::mem::transmute(mainsessionid), subsessionid, ::core::mem::transmute(allowedresourcenames.as_ptr()), allowedresourcenames.len().try_into().unwrap(), ::core::mem::transmute(failedresourcenames.as_ptr()), failedresourcenames.len().try_into().unwrap())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITSGAuthorizeResourceSink, ::windows_core::IUnknown);
@@ -1502,7 +1502,7 @@ impl ITSGPolicyEngine {
         P3: ::windows_core::IntoParam<super::super::Foundation::HANDLE_PTR>,
         P4: ::windows_core::IntoParam<ITSGAuthorizeConnectionSink>,
     {
-        (::windows_core::Interface::vtable(self).AuthorizeConnection)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(mainsessionid), username.into_param().abi(), authtype, clientmachineip.into_param().abi(), clientmachinename.into_param().abi(), ::core::mem::transmute(sohdata.as_ptr()), sohdata.len().try_into().unwrap(), ::core::mem::transmute(cookiedata.as_ptr()), cookiedata.len().try_into().unwrap(), usertoken.into_param().abi(), psink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AuthorizeConnection(::core::mem::transmute(mainsessionid), username.into_param().abi(), authtype, clientmachineip.into_param().abi(), clientmachinename.into_param().abi(), ::core::mem::transmute(sohdata.as_ptr()), sohdata.len().try_into().unwrap(), ::core::mem::transmute(cookiedata.as_ptr()), cookiedata.len().try_into().unwrap(), usertoken.into_param().abi(), psink.into_param().abi())).ok()
     }
     pub unsafe fn AuthorizeResource<P0, P1, P2>(&self, mainsessionid: ::windows_core::GUID, subsessionid: i32, username: P0, resourcenames: &[::windows_core::BSTR], alternateresourcenames: &[::windows_core::BSTR], portnumber: u32, operation: P1, cookie: &[u8], psink: P2) -> ::windows_core::Result<()>
     where
@@ -1510,16 +1510,16 @@ impl ITSGPolicyEngine {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<ITSGAuthorizeResourceSink>,
     {
-        (::windows_core::Interface::vtable(self).AuthorizeResource)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(mainsessionid), subsessionid, username.into_param().abi(), ::core::mem::transmute(resourcenames.as_ptr()), resourcenames.len().try_into().unwrap(), ::core::mem::transmute(alternateresourcenames.as_ptr()), alternateresourcenames.len().try_into().unwrap(), portnumber, operation.into_param().abi(), ::core::mem::transmute(cookie.as_ptr()), cookie.len().try_into().unwrap(), psink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AuthorizeResource(::core::mem::transmute(mainsessionid), subsessionid, username.into_param().abi(), ::core::mem::transmute(resourcenames.as_ptr()), resourcenames.len().try_into().unwrap(), ::core::mem::transmute(alternateresourcenames.as_ptr()), alternateresourcenames.len().try_into().unwrap(), portnumber, operation.into_param().abi(), ::core::mem::transmute(cookie.as_ptr()), cookie.len().try_into().unwrap(), psink.into_param().abi())).ok()
     }
     pub unsafe fn Refresh(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Refresh)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Refresh()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsQuarantineEnabled(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsQuarantineEnabled)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsQuarantineEnabled(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITSGPolicyEngine, ::windows_core::IUnknown);
@@ -1549,10 +1549,10 @@ pub struct ITSGPolicyEngine_Vtbl {
 pub struct ITsSbBaseNotifySink(::windows_core::IUnknown);
 impl ITsSbBaseNotifySink {
     pub unsafe fn OnError(&self, hrerror: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnError)(::windows_core::Interface::as_raw(self), hrerror).ok()
+        ::windows_core::vcall!(self.OnError(hrerror)).ok()
     }
     pub unsafe fn OnReportStatus(&self, messagetype: CLIENT_MESSAGE_TYPE, messageid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnReportStatus)(::windows_core::Interface::as_raw(self), messagetype, messageid).ok()
+        ::windows_core::vcall!(self.OnReportStatus(messagetype, messageid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbBaseNotifySink, ::windows_core::IUnknown);
@@ -1575,23 +1575,23 @@ pub struct ITsSbClientConnection(::windows_core::IUnknown);
 impl ITsSbClientConnection {
     pub unsafe fn UserName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).UserName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.UserName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Domain(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Domain)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Domain(&mut result__)).from_abi(result__)
     }
     pub unsafe fn InitialProgram(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).InitialProgram)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.InitialProgram(&mut result__)).from_abi(result__)
     }
     pub unsafe fn LoadBalanceResult(&self) -> ::windows_core::Result<ITsSbLoadBalanceResult> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).LoadBalanceResult)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.LoadBalanceResult(&mut result__)).from_abi(result__)
     }
     pub unsafe fn FarmName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).FarmName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.FarmName(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1599,7 +1599,7 @@ impl ITsSbClientConnection {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).PutContext)(::windows_core::Interface::as_raw(self), contextid.into_param().abi(), ::core::mem::transmute(context), ::core::mem::transmute(existingcontext.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.PutContext(contextid.into_param().abi(), ::core::mem::transmute(context), ::core::mem::transmute(existingcontext.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1608,42 +1608,42 @@ impl ITsSbClientConnection {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetContext)(::windows_core::Interface::as_raw(self), contextid.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetContext(contextid.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Environment(&self) -> ::windows_core::Result<ITsSbEnvironment> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Environment)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Environment(&mut result__)).from_abi(result__)
     }
     pub unsafe fn get_ConnectionError(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).get_ConnectionError)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.get_ConnectionError()).ok()
     }
     pub unsafe fn SamUserAccount(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SamUserAccount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SamUserAccount(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
     pub unsafe fn ClientConnectionPropertySet(&self) -> ::windows_core::Result<ITsSbClientConnectionPropertySet> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ClientConnectionPropertySet)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ClientConnectionPropertySet(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsFirstAssignment(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsFirstAssignment)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsFirstAssignment(&mut result__)).from_abi(result__)
     }
     pub unsafe fn RdFarmType(&self) -> ::windows_core::Result<RD_FARM_TYPE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RdFarmType)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RdFarmType(&mut result__)).from_abi(result__)
     }
     pub unsafe fn UserSidString(&self) -> ::windows_core::Result<*mut i8> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).UserSidString)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.UserSidString(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetDisconnectedSession(&self) -> ::windows_core::Result<ITsSbSession> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDisconnectedSession)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDisconnectedSession(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbClientConnection, ::windows_core::IUnknown);
@@ -1699,7 +1699,7 @@ impl ITsSbClientConnectionPropertySet {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::Com::IErrorLog>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Read)(::windows_core::Interface::as_raw(self), pszpropname.into_param().abi(), pvar, perrorlog.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.Read(pszpropname.into_param().abi(), pvar, perrorlog.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1707,7 +1707,7 @@ impl ITsSbClientConnectionPropertySet {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Write)(::windows_core::Interface::as_raw(self), pszpropname.into_param().abi(), pvar).ok()
+        ::windows_core::vcall!(self.base__.base__.Write(pszpropname.into_param().abi(), pvar)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -1732,17 +1732,17 @@ pub struct ITsSbEnvironment(::windows_core::IUnknown);
 impl ITsSbEnvironment {
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ServerWeight(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ServerWeight)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ServerWeight(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
     pub unsafe fn EnvironmentPropertySet(&self) -> ::windows_core::Result<ITsSbEnvironmentPropertySet> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnvironmentPropertySet)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnvironmentPropertySet(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -1750,7 +1750,7 @@ impl ITsSbEnvironment {
     where
         P0: ::windows_core::IntoParam<ITsSbEnvironmentPropertySet>,
     {
-        (::windows_core::Interface::vtable(self).SetEnvironmentPropertySet)(::windows_core::Interface::as_raw(self), pval.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetEnvironmentPropertySet(pval.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbEnvironment, ::windows_core::IUnknown);
@@ -1789,7 +1789,7 @@ impl ITsSbEnvironmentPropertySet {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::Com::IErrorLog>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Read)(::windows_core::Interface::as_raw(self), pszpropname.into_param().abi(), pvar, perrorlog.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.Read(pszpropname.into_param().abi(), pvar, perrorlog.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1797,7 +1797,7 @@ impl ITsSbEnvironmentPropertySet {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Write)(::windows_core::Interface::as_raw(self), pszpropname.into_param().abi(), pvar).ok()
+        ::windows_core::vcall!(self.base__.base__.Write(pszpropname.into_param().abi(), pvar)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -1826,19 +1826,19 @@ impl ITsSbFilterPluginStore {
     where
         P0: ::windows_core::IntoParam<ITsSbPropertySet>,
     {
-        (::windows_core::Interface::vtable(self).SaveProperties)(::windows_core::Interface::as_raw(self), ppropertyset.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SaveProperties(ppropertyset.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
     pub unsafe fn EnumerateProperties(&self) -> ::windows_core::Result<ITsSbPropertySet> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumerateProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumerateProperties(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DeleteProperties<P0>(&self, propertyname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeleteProperties)(::windows_core::Interface::as_raw(self), propertyname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeleteProperties(propertyname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbFilterPluginStore, ::windows_core::IUnknown);
@@ -1867,13 +1867,13 @@ pub struct ITsSbFilterPluginStore_Vtbl {
 pub struct ITsSbGenericNotifySink(::windows_core::IUnknown);
 impl ITsSbGenericNotifySink {
     pub unsafe fn OnCompleted(&self, status: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnCompleted)(::windows_core::Interface::as_raw(self), status).ok()
+        ::windows_core::vcall!(self.OnCompleted(status)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetWaitTimeout(&self) -> ::windows_core::Result<super::super::Foundation::FILETIME> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetWaitTimeout)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetWaitTimeout(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbGenericNotifySink, ::windows_core::IUnknown);
@@ -1904,7 +1904,7 @@ impl ITsSbGlobalStore {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueryTarget)(::windows_core::Interface::as_raw(self), providername.into_param().abi(), targetname.into_param().abi(), farmname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueryTarget(providername.into_param().abi(), targetname.into_param().abi(), farmname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn QuerySessionBySessionId<P0, P1>(&self, providername: P0, dwsessionid: u32, targetname: P1) -> ::windows_core::Result<ITsSbSession>
     where
@@ -1912,7 +1912,7 @@ impl ITsSbGlobalStore {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QuerySessionBySessionId)(::windows_core::Interface::as_raw(self), providername.into_param().abi(), dwsessionid, targetname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QuerySessionBySessionId(providername.into_param().abi(), dwsessionid, targetname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -1920,7 +1920,7 @@ impl ITsSbGlobalStore {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumerateFarms)(::windows_core::Interface::as_raw(self), providername.into_param().abi(), pdwcount, pval).ok()
+        ::windows_core::vcall!(self.EnumerateFarms(providername.into_param().abi(), pdwcount, pval)).ok()
     }
     pub unsafe fn EnumerateTargets<P0, P1, P2>(&self, providername: P0, farmname: P1, envname: P2, pdwcount: *mut u32, pval: *mut *mut ::core::option::Option<ITsSbTarget>) -> ::windows_core::Result<()>
     where
@@ -1928,13 +1928,13 @@ impl ITsSbGlobalStore {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumerateTargets)(::windows_core::Interface::as_raw(self), providername.into_param().abi(), farmname.into_param().abi(), envname.into_param().abi(), pdwcount, pval).ok()
+        ::windows_core::vcall!(self.EnumerateTargets(providername.into_param().abi(), farmname.into_param().abi(), envname.into_param().abi(), pdwcount, pval)).ok()
     }
     pub unsafe fn EnumerateEnvironmentsByProvider<P0>(&self, providername: P0, pdwcount: *mut u32, ppval: *mut *mut ::core::option::Option<ITsSbEnvironment>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumerateEnvironmentsByProvider)(::windows_core::Interface::as_raw(self), providername.into_param().abi(), pdwcount, ppval).ok()
+        ::windows_core::vcall!(self.EnumerateEnvironmentsByProvider(providername.into_param().abi(), pdwcount, ppval)).ok()
     }
     pub unsafe fn EnumerateSessions<P0, P1, P2, P3, P4, P5>(&self, providername: P0, targetname: P1, username: P2, userdomain: P3, poolname: P4, initialprogram: P5, psessionstate: *const TSSESSION_STATE, pdwcount: *mut u32, ppval: *mut *mut ::core::option::Option<ITsSbSession>) -> ::windows_core::Result<()>
     where
@@ -1945,7 +1945,7 @@ impl ITsSbGlobalStore {
         P4: ::windows_core::IntoParam<::windows_core::BSTR>,
         P5: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumerateSessions)(::windows_core::Interface::as_raw(self), providername.into_param().abi(), targetname.into_param().abi(), username.into_param().abi(), userdomain.into_param().abi(), poolname.into_param().abi(), initialprogram.into_param().abi(), psessionstate, pdwcount, ppval).ok()
+        ::windows_core::vcall!(self.EnumerateSessions(providername.into_param().abi(), targetname.into_param().abi(), username.into_param().abi(), userdomain.into_param().abi(), poolname.into_param().abi(), initialprogram.into_param().abi(), psessionstate, pdwcount, ppval)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -1954,7 +1954,7 @@ impl ITsSbGlobalStore {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetFarmProperty)(::windows_core::Interface::as_raw(self), farmname.into_param().abi(), propertyname.into_param().abi(), pvarvalue).ok()
+        ::windows_core::vcall!(self.GetFarmProperty(farmname.into_param().abi(), propertyname.into_param().abi(), pvarvalue)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbGlobalStore, ::windows_core::IUnknown);
@@ -1988,7 +1988,7 @@ pub struct ITsSbLoadBalanceResult(::windows_core::IUnknown);
 impl ITsSbLoadBalanceResult {
     pub unsafe fn TargetName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TargetName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TargetName(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbLoadBalanceResult, ::windows_core::IUnknown);
@@ -2016,17 +2016,17 @@ impl ITsSbLoadBalancing {
         P1: ::windows_core::IntoParam<ITsSbPluginNotifySink>,
         P2: ::windows_core::IntoParam<ITsSbPluginPropertySet>,
     {
-        (::windows_core::Interface::vtable(self).base__.Initialize)(::windows_core::Interface::as_raw(self), pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Initialize(pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi())).ok()
     }
     pub unsafe fn Terminate(&self, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Terminate)(::windows_core::Interface::as_raw(self), hr).ok()
+        ::windows_core::vcall!(self.base__.Terminate(hr)).ok()
     }
     pub unsafe fn GetMostSuitableTarget<P0, P1>(&self, pconnection: P0, plbsink: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbClientConnection>,
         P1: ::windows_core::IntoParam<ITsSbLoadBalancingNotifySink>,
     {
-        (::windows_core::Interface::vtable(self).GetMostSuitableTarget)(::windows_core::Interface::as_raw(self), pconnection.into_param().abi(), plbsink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.GetMostSuitableTarget(pconnection.into_param().abi(), plbsink.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbLoadBalancing, ::windows_core::IUnknown, ITsSbPlugin);
@@ -2047,10 +2047,10 @@ pub struct ITsSbLoadBalancing_Vtbl {
 pub struct ITsSbLoadBalancingNotifySink(::windows_core::IUnknown);
 impl ITsSbLoadBalancingNotifySink {
     pub unsafe fn OnError(&self, hrerror: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnError)(::windows_core::Interface::as_raw(self), hrerror).ok()
+        ::windows_core::vcall!(self.base__.OnError(hrerror)).ok()
     }
     pub unsafe fn OnReportStatus(&self, messagetype: CLIENT_MESSAGE_TYPE, messageid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnReportStatus)(::windows_core::Interface::as_raw(self), messagetype, messageid).ok()
+        ::windows_core::vcall!(self.base__.OnReportStatus(messagetype, messageid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2059,7 +2059,7 @@ impl ITsSbLoadBalancingNotifySink {
         P0: ::windows_core::IntoParam<ITsSbLoadBalanceResult>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnGetMostSuitableTarget)(::windows_core::Interface::as_raw(self), plbresult.into_param().abi(), fisnewconnection.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnGetMostSuitableTarget(plbresult.into_param().abi(), fisnewconnection.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbLoadBalancingNotifySink, ::windows_core::IUnknown, ITsSbBaseNotifySink);
@@ -2090,17 +2090,17 @@ impl ITsSbOrchestration {
         P1: ::windows_core::IntoParam<ITsSbPluginNotifySink>,
         P2: ::windows_core::IntoParam<ITsSbPluginPropertySet>,
     {
-        (::windows_core::Interface::vtable(self).base__.Initialize)(::windows_core::Interface::as_raw(self), pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Initialize(pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi())).ok()
     }
     pub unsafe fn Terminate(&self, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Terminate)(::windows_core::Interface::as_raw(self), hr).ok()
+        ::windows_core::vcall!(self.base__.Terminate(hr)).ok()
     }
     pub unsafe fn PrepareTargetForConnect<P0, P1>(&self, pconnection: P0, porchestrationnotifysink: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbClientConnection>,
         P1: ::windows_core::IntoParam<ITsSbOrchestrationNotifySink>,
     {
-        (::windows_core::Interface::vtable(self).PrepareTargetForConnect)(::windows_core::Interface::as_raw(self), pconnection.into_param().abi(), porchestrationnotifysink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.PrepareTargetForConnect(pconnection.into_param().abi(), porchestrationnotifysink.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbOrchestration, ::windows_core::IUnknown, ITsSbPlugin);
@@ -2121,16 +2121,16 @@ pub struct ITsSbOrchestration_Vtbl {
 pub struct ITsSbOrchestrationNotifySink(::windows_core::IUnknown);
 impl ITsSbOrchestrationNotifySink {
     pub unsafe fn OnError(&self, hrerror: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnError)(::windows_core::Interface::as_raw(self), hrerror).ok()
+        ::windows_core::vcall!(self.base__.OnError(hrerror)).ok()
     }
     pub unsafe fn OnReportStatus(&self, messagetype: CLIENT_MESSAGE_TYPE, messageid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnReportStatus)(::windows_core::Interface::as_raw(self), messagetype, messageid).ok()
+        ::windows_core::vcall!(self.base__.OnReportStatus(messagetype, messageid)).ok()
     }
     pub unsafe fn OnReadyToConnect<P0>(&self, ptarget: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbTarget>,
     {
-        (::windows_core::Interface::vtable(self).OnReadyToConnect)(::windows_core::Interface::as_raw(self), ptarget.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnReadyToConnect(ptarget.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbOrchestrationNotifySink, ::windows_core::IUnknown, ITsSbBaseNotifySink);
@@ -2158,17 +2158,17 @@ impl ITsSbPlacement {
         P1: ::windows_core::IntoParam<ITsSbPluginNotifySink>,
         P2: ::windows_core::IntoParam<ITsSbPluginPropertySet>,
     {
-        (::windows_core::Interface::vtable(self).base__.Initialize)(::windows_core::Interface::as_raw(self), pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Initialize(pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi())).ok()
     }
     pub unsafe fn Terminate(&self, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Terminate)(::windows_core::Interface::as_raw(self), hr).ok()
+        ::windows_core::vcall!(self.base__.Terminate(hr)).ok()
     }
     pub unsafe fn QueryEnvironmentForTarget<P0, P1>(&self, pconnection: P0, pplacementsink: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbClientConnection>,
         P1: ::windows_core::IntoParam<ITsSbPlacementNotifySink>,
     {
-        (::windows_core::Interface::vtable(self).QueryEnvironmentForTarget)(::windows_core::Interface::as_raw(self), pconnection.into_param().abi(), pplacementsink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.QueryEnvironmentForTarget(pconnection.into_param().abi(), pplacementsink.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbPlacement, ::windows_core::IUnknown, ITsSbPlugin);
@@ -2189,16 +2189,16 @@ pub struct ITsSbPlacement_Vtbl {
 pub struct ITsSbPlacementNotifySink(::windows_core::IUnknown);
 impl ITsSbPlacementNotifySink {
     pub unsafe fn OnError(&self, hrerror: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnError)(::windows_core::Interface::as_raw(self), hrerror).ok()
+        ::windows_core::vcall!(self.base__.OnError(hrerror)).ok()
     }
     pub unsafe fn OnReportStatus(&self, messagetype: CLIENT_MESSAGE_TYPE, messageid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnReportStatus)(::windows_core::Interface::as_raw(self), messagetype, messageid).ok()
+        ::windows_core::vcall!(self.base__.OnReportStatus(messagetype, messageid)).ok()
     }
     pub unsafe fn OnQueryEnvironmentCompleted<P0>(&self, penvironment: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbEnvironment>,
     {
-        (::windows_core::Interface::vtable(self).OnQueryEnvironmentCompleted)(::windows_core::Interface::as_raw(self), penvironment.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnQueryEnvironmentCompleted(penvironment.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbPlacementNotifySink, ::windows_core::IUnknown, ITsSbBaseNotifySink);
@@ -2226,10 +2226,10 @@ impl ITsSbPlugin {
         P1: ::windows_core::IntoParam<ITsSbPluginNotifySink>,
         P2: ::windows_core::IntoParam<ITsSbPluginPropertySet>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Initialize(pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi())).ok()
     }
     pub unsafe fn Terminate(&self, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Terminate)(::windows_core::Interface::as_raw(self), hr).ok()
+        ::windows_core::vcall!(self.Terminate(hr)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbPlugin, ::windows_core::IUnknown);
@@ -2254,16 +2254,16 @@ pub struct ITsSbPlugin_Vtbl {
 pub struct ITsSbPluginNotifySink(::windows_core::IUnknown);
 impl ITsSbPluginNotifySink {
     pub unsafe fn OnError(&self, hrerror: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnError)(::windows_core::Interface::as_raw(self), hrerror).ok()
+        ::windows_core::vcall!(self.base__.OnError(hrerror)).ok()
     }
     pub unsafe fn OnReportStatus(&self, messagetype: CLIENT_MESSAGE_TYPE, messageid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnReportStatus)(::windows_core::Interface::as_raw(self), messagetype, messageid).ok()
+        ::windows_core::vcall!(self.base__.OnReportStatus(messagetype, messageid)).ok()
     }
     pub unsafe fn OnInitialized(&self, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnInitialized)(::windows_core::Interface::as_raw(self), hr).ok()
+        ::windows_core::vcall!(self.OnInitialized(hr)).ok()
     }
     pub unsafe fn OnTerminated(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnTerminated)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnTerminated()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbPluginNotifySink, ::windows_core::IUnknown, ITsSbBaseNotifySink);
@@ -2294,7 +2294,7 @@ impl ITsSbPluginPropertySet {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::Com::IErrorLog>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Read)(::windows_core::Interface::as_raw(self), pszpropname.into_param().abi(), pvar, perrorlog.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.Read(pszpropname.into_param().abi(), pvar, perrorlog.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2302,7 +2302,7 @@ impl ITsSbPluginPropertySet {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Write)(::windows_core::Interface::as_raw(self), pszpropname.into_param().abi(), pvar).ok()
+        ::windows_core::vcall!(self.base__.base__.Write(pszpropname.into_param().abi(), pvar)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -2335,7 +2335,7 @@ impl ITsSbPropertySet {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::Com::IErrorLog>,
     {
-        (::windows_core::Interface::vtable(self).base__.Read)(::windows_core::Interface::as_raw(self), pszpropname.into_param().abi(), pvar, perrorlog.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Read(pszpropname.into_param().abi(), pvar, perrorlog.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2343,7 +2343,7 @@ impl ITsSbPropertySet {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.Write)(::windows_core::Interface::as_raw(self), pszpropname.into_param().abi(), pvar).ok()
+        ::windows_core::vcall!(self.base__.Write(pszpropname.into_param().abi(), pvar)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -2372,14 +2372,14 @@ impl ITsSbProvider {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateTargetObject)(::windows_core::Interface::as_raw(self), targetname.into_param().abi(), environmentname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateTargetObject(targetname.into_param().abi(), environmentname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn CreateLoadBalanceResultObject<P0>(&self, targetname: P0) -> ::windows_core::Result<ITsSbLoadBalanceResult>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateLoadBalanceResultObject)(::windows_core::Interface::as_raw(self), targetname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateLoadBalanceResultObject(targetname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn CreateSessionObject<P0, P1, P2>(&self, targetname: P0, username: P1, domain: P2, sessionid: u32) -> ::windows_core::Result<ITsSbSession>
     where
@@ -2388,57 +2388,57 @@ impl ITsSbProvider {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateSessionObject)(::windows_core::Interface::as_raw(self), targetname.into_param().abi(), username.into_param().abi(), domain.into_param().abi(), sessionid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateSessionObject(targetname.into_param().abi(), username.into_param().abi(), domain.into_param().abi(), sessionid, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
     pub unsafe fn CreatePluginPropertySet(&self) -> ::windows_core::Result<ITsSbPluginPropertySet> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreatePluginPropertySet)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreatePluginPropertySet(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
     pub unsafe fn CreateTargetPropertySetObject(&self) -> ::windows_core::Result<ITsSbTargetPropertySet> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateTargetPropertySetObject)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateTargetPropertySetObject(&mut result__)).from_abi(result__)
     }
     pub unsafe fn CreateEnvironmentObject<P0>(&self, name: P0, serverweight: u32) -> ::windows_core::Result<ITsSbEnvironment>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateEnvironmentObject)(::windows_core::Interface::as_raw(self), name.into_param().abi(), serverweight, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateEnvironmentObject(name.into_param().abi(), serverweight, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetResourcePluginStore(&self) -> ::windows_core::Result<ITsSbResourcePluginStore> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetResourcePluginStore)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetResourcePluginStore(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetFilterPluginStore(&self) -> ::windows_core::Result<ITsSbFilterPluginStore> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFilterPluginStore)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFilterPluginStore(&mut result__)).from_abi(result__)
     }
     pub unsafe fn RegisterForNotification<P0, P1>(&self, notificationtype: u32, resourcetomonitor: P0, ppluginnotification: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<ITsSbResourceNotification>,
     {
-        (::windows_core::Interface::vtable(self).RegisterForNotification)(::windows_core::Interface::as_raw(self), notificationtype, resourcetomonitor.into_param().abi(), ppluginnotification.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RegisterForNotification(notificationtype, resourcetomonitor.into_param().abi(), ppluginnotification.into_param().abi())).ok()
     }
     pub unsafe fn UnRegisterForNotification<P0>(&self, notificationtype: u32, resourcetomonitor: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).UnRegisterForNotification)(::windows_core::Interface::as_raw(self), notificationtype, resourcetomonitor.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UnRegisterForNotification(notificationtype, resourcetomonitor.into_param().abi())).ok()
     }
     pub unsafe fn GetInstanceOfGlobalStore(&self) -> ::windows_core::Result<ITsSbGlobalStore> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetInstanceOfGlobalStore)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetInstanceOfGlobalStore(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
     pub unsafe fn CreateEnvironmentPropertySetObject(&self) -> ::windows_core::Result<ITsSbEnvironmentPropertySet> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateEnvironmentPropertySetObject)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateEnvironmentPropertySetObject(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbProvider, ::windows_core::IUnknown);
@@ -2486,10 +2486,10 @@ impl ITsSbProvisioning {
         P1: ::windows_core::IntoParam<ITsSbPluginNotifySink>,
         P2: ::windows_core::IntoParam<ITsSbPluginPropertySet>,
     {
-        (::windows_core::Interface::vtable(self).base__.Initialize)(::windows_core::Interface::as_raw(self), pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Initialize(pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi())).ok()
     }
     pub unsafe fn Terminate(&self, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Terminate)(::windows_core::Interface::as_raw(self), hr).ok()
+        ::windows_core::vcall!(self.base__.Terminate(hr)).ok()
     }
     pub unsafe fn CreateVirtualMachines<P0, P1, P2>(&self, jobxmlstring: P0, jobguid: P1, psink: P2) -> ::windows_core::Result<()>
     where
@@ -2497,7 +2497,7 @@ impl ITsSbProvisioning {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<ITsSbProvisioningPluginNotifySink>,
     {
-        (::windows_core::Interface::vtable(self).CreateVirtualMachines)(::windows_core::Interface::as_raw(self), jobxmlstring.into_param().abi(), jobguid.into_param().abi(), psink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateVirtualMachines(jobxmlstring.into_param().abi(), jobguid.into_param().abi(), psink.into_param().abi())).ok()
     }
     pub unsafe fn PatchVirtualMachines<P0, P1, P2>(&self, jobxmlstring: P0, jobguid: P1, psink: P2, pvmpatchinfo: *const VM_PATCH_INFO) -> ::windows_core::Result<()>
     where
@@ -2505,7 +2505,7 @@ impl ITsSbProvisioning {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<ITsSbProvisioningPluginNotifySink>,
     {
-        (::windows_core::Interface::vtable(self).PatchVirtualMachines)(::windows_core::Interface::as_raw(self), jobxmlstring.into_param().abi(), jobguid.into_param().abi(), psink.into_param().abi(), pvmpatchinfo).ok()
+        ::windows_core::vcall!(self.PatchVirtualMachines(jobxmlstring.into_param().abi(), jobguid.into_param().abi(), psink.into_param().abi(), pvmpatchinfo)).ok()
     }
     pub unsafe fn DeleteVirtualMachines<P0, P1, P2>(&self, jobxmlstring: P0, jobguid: P1, psink: P2) -> ::windows_core::Result<()>
     where
@@ -2513,13 +2513,13 @@ impl ITsSbProvisioning {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<ITsSbProvisioningPluginNotifySink>,
     {
-        (::windows_core::Interface::vtable(self).DeleteVirtualMachines)(::windows_core::Interface::as_raw(self), jobxmlstring.into_param().abi(), jobguid.into_param().abi(), psink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeleteVirtualMachines(jobxmlstring.into_param().abi(), jobguid.into_param().abi(), psink.into_param().abi())).ok()
     }
     pub unsafe fn CancelJob<P0>(&self, jobguid: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).CancelJob)(::windows_core::Interface::as_raw(self), jobguid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CancelJob(jobguid.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbProvisioning, ::windows_core::IUnknown, ITsSbPlugin);
@@ -2543,32 +2543,32 @@ pub struct ITsSbProvisioning_Vtbl {
 pub struct ITsSbProvisioningPluginNotifySink(::windows_core::IUnknown);
 impl ITsSbProvisioningPluginNotifySink {
     pub unsafe fn OnJobCreated(&self, pvmnotifyinfo: *const VM_NOTIFY_INFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnJobCreated)(::windows_core::Interface::as_raw(self), pvmnotifyinfo).ok()
+        ::windows_core::vcall!(self.OnJobCreated(pvmnotifyinfo)).ok()
     }
     pub unsafe fn OnVirtualMachineStatusChanged<P0>(&self, pvmnotifyentry: *const VM_NOTIFY_ENTRY, vmnotifystatus: VM_NOTIFY_STATUS, errorcode: ::windows_core::HRESULT, errordescr: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnVirtualMachineStatusChanged)(::windows_core::Interface::as_raw(self), pvmnotifyentry, vmnotifystatus, errorcode, errordescr.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnVirtualMachineStatusChanged(pvmnotifyentry, vmnotifystatus, errorcode, errordescr.into_param().abi())).ok()
     }
     pub unsafe fn OnJobCompleted<P0>(&self, resultcode: ::windows_core::HRESULT, resultdescription: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnJobCompleted)(::windows_core::Interface::as_raw(self), resultcode, resultdescription.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnJobCompleted(resultcode, resultdescription.into_param().abi())).ok()
     }
     pub unsafe fn OnJobCancelled(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnJobCancelled)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnJobCancelled()).ok()
     }
     pub unsafe fn LockVirtualMachine(&self, pvmnotifyentry: *const VM_NOTIFY_ENTRY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).LockVirtualMachine)(::windows_core::Interface::as_raw(self), pvmnotifyentry).ok()
+        ::windows_core::vcall!(self.LockVirtualMachine(pvmnotifyentry)).ok()
     }
     pub unsafe fn OnVirtualMachineHostStatusChanged<P0, P1>(&self, vmhost: P0, vmhostnotifystatus: VM_HOST_NOTIFY_STATUS, errorcode: ::windows_core::HRESULT, errordescr: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnVirtualMachineHostStatusChanged)(::windows_core::Interface::as_raw(self), vmhost.into_param().abi(), vmhostnotifystatus, errorcode, errordescr.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnVirtualMachineHostStatusChanged(vmhost.into_param().abi(), vmhostnotifystatus, errorcode, errordescr.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbProvisioningPluginNotifySink, ::windows_core::IUnknown);
@@ -2597,19 +2597,19 @@ impl ITsSbResourceNotification {
     where
         P0: ::windows_core::IntoParam<ITsSbSession>,
     {
-        (::windows_core::Interface::vtable(self).NotifySessionChange)(::windows_core::Interface::as_raw(self), changetype, psession.into_param().abi()).ok()
+        ::windows_core::vcall!(self.NotifySessionChange(changetype, psession.into_param().abi())).ok()
     }
     pub unsafe fn NotifyTargetChange<P0>(&self, targetchangetype: u32, ptarget: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbTarget>,
     {
-        (::windows_core::Interface::vtable(self).NotifyTargetChange)(::windows_core::Interface::as_raw(self), targetchangetype, ptarget.into_param().abi()).ok()
+        ::windows_core::vcall!(self.NotifyTargetChange(targetchangetype, ptarget.into_param().abi())).ok()
     }
     pub unsafe fn NotifyClientConnectionStateChange<P0>(&self, changetype: CONNECTION_CHANGE_NOTIFICATION, pconnection: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbClientConnection>,
     {
-        (::windows_core::Interface::vtable(self).NotifyClientConnectionStateChange)(::windows_core::Interface::as_raw(self), changetype, pconnection.into_param().abi()).ok()
+        ::windows_core::vcall!(self.NotifyClientConnectionStateChange(changetype, pconnection.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbResourceNotification, ::windows_core::IUnknown);
@@ -2637,13 +2637,13 @@ impl ITsSbResourceNotificationEx {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).NotifySessionChangeEx)(::windows_core::Interface::as_raw(self), targetname.into_param().abi(), username.into_param().abi(), domain.into_param().abi(), sessionid, sessionstate).ok()
+        ::windows_core::vcall!(self.NotifySessionChangeEx(targetname.into_param().abi(), username.into_param().abi(), domain.into_param().abi(), sessionid, sessionstate)).ok()
     }
     pub unsafe fn NotifyTargetChangeEx<P0>(&self, targetname: P0, targetchangetype: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).NotifyTargetChangeEx)(::windows_core::Interface::as_raw(self), targetname.into_param().abi(), targetchangetype).ok()
+        ::windows_core::vcall!(self.NotifyTargetChangeEx(targetname.into_param().abi(), targetchangetype)).ok()
     }
     pub unsafe fn NotifyClientConnectionStateChangeEx<P0, P1, P2, P3, P4>(&self, username: P0, domain: P1, initialprogram: P2, poolname: P3, targetname: P4, connectionchangetype: CONNECTION_CHANGE_NOTIFICATION) -> ::windows_core::Result<()>
     where
@@ -2653,7 +2653,7 @@ impl ITsSbResourceNotificationEx {
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
         P4: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).NotifyClientConnectionStateChangeEx)(::windows_core::Interface::as_raw(self), username.into_param().abi(), domain.into_param().abi(), initialprogram.into_param().abi(), poolname.into_param().abi(), targetname.into_param().abi(), connectionchangetype).ok()
+        ::windows_core::vcall!(self.NotifyClientConnectionStateChangeEx(username.into_param().abi(), domain.into_param().abi(), initialprogram.into_param().abi(), poolname.into_param().abi(), targetname.into_param().abi(), connectionchangetype)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbResourceNotificationEx, ::windows_core::IUnknown);
@@ -2683,10 +2683,10 @@ impl ITsSbResourcePlugin {
         P1: ::windows_core::IntoParam<ITsSbPluginNotifySink>,
         P2: ::windows_core::IntoParam<ITsSbPluginPropertySet>,
     {
-        (::windows_core::Interface::vtable(self).base__.Initialize)(::windows_core::Interface::as_raw(self), pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Initialize(pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi())).ok()
     }
     pub unsafe fn Terminate(&self, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Terminate)(::windows_core::Interface::as_raw(self), hr).ok()
+        ::windows_core::vcall!(self.base__.Terminate(hr)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbResourcePlugin, ::windows_core::IUnknown, ITsSbPlugin);
@@ -2711,32 +2711,32 @@ impl ITsSbResourcePluginStore {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueryTarget)(::windows_core::Interface::as_raw(self), targetname.into_param().abi(), farmname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueryTarget(targetname.into_param().abi(), farmname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn QuerySessionBySessionId<P0>(&self, dwsessionid: u32, targetname: P0) -> ::windows_core::Result<ITsSbSession>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QuerySessionBySessionId)(::windows_core::Interface::as_raw(self), dwsessionid, targetname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QuerySessionBySessionId(dwsessionid, targetname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn AddTargetToStore<P0>(&self, ptarget: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbTarget>,
     {
-        (::windows_core::Interface::vtable(self).AddTargetToStore)(::windows_core::Interface::as_raw(self), ptarget.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AddTargetToStore(ptarget.into_param().abi())).ok()
     }
     pub unsafe fn AddSessionToStore<P0>(&self, psession: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbSession>,
     {
-        (::windows_core::Interface::vtable(self).AddSessionToStore)(::windows_core::Interface::as_raw(self), psession.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AddSessionToStore(psession.into_param().abi())).ok()
     }
     pub unsafe fn AddEnvironmentToStore<P0>(&self, penvironment: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbEnvironment>,
     {
-        (::windows_core::Interface::vtable(self).AddEnvironmentToStore)(::windows_core::Interface::as_raw(self), penvironment.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AddEnvironmentToStore(penvironment.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2745,22 +2745,22 @@ impl ITsSbResourcePluginStore {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).RemoveEnvironmentFromStore)(::windows_core::Interface::as_raw(self), environmentname.into_param().abi(), bignoreowner.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RemoveEnvironmentFromStore(environmentname.into_param().abi(), bignoreowner.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn EnumerateFarms(&self, pdwcount: *mut u32, pval: *mut *mut super::Com::SAFEARRAY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumerateFarms)(::windows_core::Interface::as_raw(self), pdwcount, pval).ok()
+        ::windows_core::vcall!(self.EnumerateFarms(pdwcount, pval)).ok()
     }
     pub unsafe fn QueryEnvironment<P0>(&self, environmentname: P0) -> ::windows_core::Result<ITsSbEnvironment>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueryEnvironment)(::windows_core::Interface::as_raw(self), environmentname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueryEnvironment(environmentname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn EnumerateEnvironments(&self, pdwcount: *mut u32, pval: *mut *mut ::core::option::Option<ITsSbEnvironment>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumerateEnvironments)(::windows_core::Interface::as_raw(self), pdwcount, pval).ok()
+        ::windows_core::vcall!(self.EnumerateEnvironments(pdwcount, pval)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2769,7 +2769,7 @@ impl ITsSbResourcePluginStore {
         P0: ::windows_core::IntoParam<ITsSbTarget>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SaveTarget)(::windows_core::Interface::as_raw(self), ptarget.into_param().abi(), bforcewrite.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SaveTarget(ptarget.into_param().abi(), bforcewrite.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2778,13 +2778,13 @@ impl ITsSbResourcePluginStore {
         P0: ::windows_core::IntoParam<ITsSbEnvironment>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SaveEnvironment)(::windows_core::Interface::as_raw(self), penvironment.into_param().abi(), bforcewrite.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SaveEnvironment(penvironment.into_param().abi(), bforcewrite.into_param().abi())).ok()
     }
     pub unsafe fn SaveSession<P0>(&self, psession: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbSession>,
     {
-        (::windows_core::Interface::vtable(self).SaveSession)(::windows_core::Interface::as_raw(self), psession.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SaveSession(psession.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2793,7 +2793,7 @@ impl ITsSbResourcePluginStore {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTargetProperty)(::windows_core::Interface::as_raw(self), targetname.into_param().abi(), propertyname.into_param().abi(), pproperty).ok()
+        ::windows_core::vcall!(self.SetTargetProperty(targetname.into_param().abi(), propertyname.into_param().abi(), pproperty)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2802,20 +2802,20 @@ impl ITsSbResourcePluginStore {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetEnvironmentProperty)(::windows_core::Interface::as_raw(self), environmentname.into_param().abi(), propertyname.into_param().abi(), pproperty).ok()
+        ::windows_core::vcall!(self.SetEnvironmentProperty(environmentname.into_param().abi(), propertyname.into_param().abi(), pproperty)).ok()
     }
     pub unsafe fn SetTargetState<P0>(&self, targetname: P0, newstate: TARGET_STATE) -> ::windows_core::Result<TARGET_STATE>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SetTargetState)(::windows_core::Interface::as_raw(self), targetname.into_param().abi(), newstate, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SetTargetState(targetname.into_param().abi(), newstate, &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetSessionState<P0>(&self, sbsession: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbSession>,
     {
-        (::windows_core::Interface::vtable(self).SetSessionState)(::windows_core::Interface::as_raw(self), sbsession.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetSessionState(sbsession.into_param().abi())).ok()
     }
     pub unsafe fn EnumerateTargets<P0, P1, P2>(&self, farmname: P0, envname: P1, sortbyfieldid: TS_SB_SORT_BY, sortybypropname: P2, pdwcount: *mut u32, pval: *mut *mut ::core::option::Option<ITsSbTarget>) -> ::windows_core::Result<()>
     where
@@ -2823,7 +2823,7 @@ impl ITsSbResourcePluginStore {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumerateTargets)(::windows_core::Interface::as_raw(self), farmname.into_param().abi(), envname.into_param().abi(), sortbyfieldid, sortybypropname.into_param().abi(), pdwcount, pval).ok()
+        ::windows_core::vcall!(self.EnumerateTargets(farmname.into_param().abi(), envname.into_param().abi(), sortbyfieldid, sortybypropname.into_param().abi(), pdwcount, pval)).ok()
     }
     pub unsafe fn EnumerateSessions<P0, P1, P2, P3, P4>(&self, targetname: P0, username: P1, userdomain: P2, poolname: P3, initialprogram: P4, psessionstate: *const TSSESSION_STATE, pdwcount: *mut u32, ppval: *mut *mut ::core::option::Option<ITsSbSession>) -> ::windows_core::Result<()>
     where
@@ -2833,7 +2833,7 @@ impl ITsSbResourcePluginStore {
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
         P4: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumerateSessions)(::windows_core::Interface::as_raw(self), targetname.into_param().abi(), username.into_param().abi(), userdomain.into_param().abi(), poolname.into_param().abi(), initialprogram.into_param().abi(), psessionstate, pdwcount, ppval).ok()
+        ::windows_core::vcall!(self.EnumerateSessions(targetname.into_param().abi(), username.into_param().abi(), userdomain.into_param().abi(), poolname.into_param().abi(), initialprogram.into_param().abi(), psessionstate, pdwcount, ppval)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2842,14 +2842,14 @@ impl ITsSbResourcePluginStore {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetFarmProperty)(::windows_core::Interface::as_raw(self), farmname.into_param().abi(), propertyname.into_param().abi(), pvarvalue).ok()
+        ::windows_core::vcall!(self.GetFarmProperty(farmname.into_param().abi(), propertyname.into_param().abi(), pvarvalue)).ok()
     }
     pub unsafe fn DeleteTarget<P0, P1>(&self, targetname: P0, hostname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeleteTarget)(::windows_core::Interface::as_raw(self), targetname.into_param().abi(), hostname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeleteTarget(targetname.into_param().abi(), hostname.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2858,7 +2858,7 @@ impl ITsSbResourcePluginStore {
         P0: ::windows_core::IntoParam<ITsSbTarget>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTargetPropertyWithVersionCheck)(::windows_core::Interface::as_raw(self), ptarget.into_param().abi(), propertyname.into_param().abi(), pproperty).ok()
+        ::windows_core::vcall!(self.SetTargetPropertyWithVersionCheck(ptarget.into_param().abi(), propertyname.into_param().abi(), pproperty)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -2867,20 +2867,20 @@ impl ITsSbResourcePluginStore {
         P0: ::windows_core::IntoParam<ITsSbEnvironment>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetEnvironmentPropertyWithVersionCheck)(::windows_core::Interface::as_raw(self), penvironment.into_param().abi(), propertyname.into_param().abi(), pproperty).ok()
+        ::windows_core::vcall!(self.SetEnvironmentPropertyWithVersionCheck(penvironment.into_param().abi(), propertyname.into_param().abi(), pproperty)).ok()
     }
     pub unsafe fn AcquireTargetLock<P0>(&self, targetname: P0, dwtimeout: u32) -> ::windows_core::Result<::windows_core::IUnknown>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AcquireTargetLock)(::windows_core::Interface::as_raw(self), targetname.into_param().abi(), dwtimeout, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AcquireTargetLock(targetname.into_param().abi(), dwtimeout, &mut result__)).from_abi(result__)
     }
     pub unsafe fn ReleaseTargetLock<P0>(&self, pcontext: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).ReleaseTargetLock)(::windows_core::Interface::as_raw(self), pcontext.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ReleaseTargetLock(pcontext.into_param().abi())).ok()
     }
     pub unsafe fn TestAndSetServerState<P0, P1>(&self, poolname: P0, serverfqdn: P1, newstate: TARGET_STATE, teststate: TARGET_STATE) -> ::windows_core::Result<TARGET_STATE>
     where
@@ -2888,14 +2888,14 @@ impl ITsSbResourcePluginStore {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TestAndSetServerState)(::windows_core::Interface::as_raw(self), poolname.into_param().abi(), serverfqdn.into_param().abi(), newstate, teststate, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TestAndSetServerState(poolname.into_param().abi(), serverfqdn.into_param().abi(), newstate, teststate, &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetServerWaitingToStart<P0, P1>(&self, poolname: P0, servername: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetServerWaitingToStart)(::windows_core::Interface::as_raw(self), poolname.into_param().abi(), servername.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetServerWaitingToStart(poolname.into_param().abi(), servername.into_param().abi())).ok()
     }
     pub unsafe fn GetServerState<P0, P1>(&self, poolname: P0, serverfqdn: P1) -> ::windows_core::Result<TARGET_STATE>
     where
@@ -2903,13 +2903,13 @@ impl ITsSbResourcePluginStore {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetServerState)(::windows_core::Interface::as_raw(self), poolname.into_param().abi(), serverfqdn.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetServerState(poolname.into_param().abi(), serverfqdn.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetServerDrainMode<P0>(&self, serverfqdn: P0, drainmode: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetServerDrainMode)(::windows_core::Interface::as_raw(self), serverfqdn.into_param().abi(), drainmode).ok()
+        ::windows_core::vcall!(self.SetServerDrainMode(serverfqdn.into_param().abi(), drainmode)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbResourcePluginStore, ::windows_core::IUnknown);
@@ -2984,10 +2984,10 @@ pub struct ITsSbResourcePluginStore_Vtbl {
 pub struct ITsSbServiceNotification(::windows_core::IUnknown);
 impl ITsSbServiceNotification {
     pub unsafe fn NotifyServiceFailure(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifyServiceFailure)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.NotifyServiceFailure()).ok()
     }
     pub unsafe fn NotifyServiceSuccess(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifyServiceSuccess)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.NotifyServiceSuccess()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbServiceNotification, ::windows_core::IUnknown);
@@ -3010,78 +3010,78 @@ pub struct ITsSbSession(::windows_core::IUnknown);
 impl ITsSbSession {
     pub unsafe fn SessionId(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SessionId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SessionId(&mut result__)).from_abi(result__)
     }
     pub unsafe fn TargetName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TargetName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TargetName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetTargetName<P0>(&self, targetname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTargetName)(::windows_core::Interface::as_raw(self), targetname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTargetName(targetname.into_param().abi())).ok()
     }
     pub unsafe fn Username(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Username)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Username(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Domain(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Domain)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Domain(&mut result__)).from_abi(result__)
     }
     pub unsafe fn State(&self) -> ::windows_core::Result<TSSESSION_STATE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).State)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.State(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetState(&self, state: TSSESSION_STATE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetState)(::windows_core::Interface::as_raw(self), state).ok()
+        ::windows_core::vcall!(self.SetState(state)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn CreateTime(&self) -> ::windows_core::Result<super::super::Foundation::FILETIME> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateTime(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetCreateTime(&self, time: super::super::Foundation::FILETIME) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetCreateTime)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(time)).ok()
+        ::windows_core::vcall!(self.SetCreateTime(::core::mem::transmute(time))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn DisconnectTime(&self) -> ::windows_core::Result<super::super::Foundation::FILETIME> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DisconnectTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DisconnectTime(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetDisconnectTime(&self, time: super::super::Foundation::FILETIME) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetDisconnectTime)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(time)).ok()
+        ::windows_core::vcall!(self.SetDisconnectTime(::core::mem::transmute(time))).ok()
     }
     pub unsafe fn InitialProgram(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).InitialProgram)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.InitialProgram(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetInitialProgram<P0>(&self, application: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetInitialProgram)(::windows_core::Interface::as_raw(self), application.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetInitialProgram(application.into_param().abi())).ok()
     }
     pub unsafe fn ClientDisplay(&self) -> ::windows_core::Result<CLIENT_DISPLAY> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ClientDisplay)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ClientDisplay(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetClientDisplay(&self, pclientdisplay: CLIENT_DISPLAY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetClientDisplay)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pclientdisplay)).ok()
+        ::windows_core::vcall!(self.SetClientDisplay(::core::mem::transmute(pclientdisplay))).ok()
     }
     pub unsafe fn ProtocolType(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ProtocolType)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ProtocolType(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetProtocolType(&self, val: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetProtocolType)(::windows_core::Interface::as_raw(self), val).ok()
+        ::windows_core::vcall!(self.SetProtocolType(val)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbSession, ::windows_core::IUnknown);
@@ -3131,62 +3131,62 @@ pub struct ITsSbTarget(::windows_core::IUnknown);
 impl ITsSbTarget {
     pub unsafe fn TargetName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TargetName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TargetName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetTargetName<P0>(&self, val: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTargetName)(::windows_core::Interface::as_raw(self), val.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTargetName(val.into_param().abi())).ok()
     }
     pub unsafe fn FarmName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).FarmName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.FarmName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetFarmName<P0>(&self, val: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetFarmName)(::windows_core::Interface::as_raw(self), val.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetFarmName(val.into_param().abi())).ok()
     }
     pub unsafe fn TargetFQDN(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TargetFQDN)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TargetFQDN(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetTargetFQDN<P0>(&self, val: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTargetFQDN)(::windows_core::Interface::as_raw(self), val.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTargetFQDN(val.into_param().abi())).ok()
     }
     pub unsafe fn TargetNetbios(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TargetNetbios)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TargetNetbios(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetTargetNetbios<P0>(&self, val: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTargetNetbios)(::windows_core::Interface::as_raw(self), val.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTargetNetbios(val.into_param().abi())).ok()
     }
     pub unsafe fn get_IpAddresses(&self, sockaddr: *mut TSSD_ConnectionPoint, numaddresses: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).get_IpAddresses)(::windows_core::Interface::as_raw(self), sockaddr, numaddresses).ok()
+        ::windows_core::vcall!(self.get_IpAddresses(sockaddr, numaddresses)).ok()
     }
     pub unsafe fn put_IpAddresses(&self, sockaddr: &[TSSD_ConnectionPoint]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).put_IpAddresses)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(sockaddr.as_ptr()), sockaddr.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.put_IpAddresses(::core::mem::transmute(sockaddr.as_ptr()), sockaddr.len().try_into().unwrap())).ok()
     }
     pub unsafe fn TargetState(&self) -> ::windows_core::Result<TARGET_STATE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TargetState)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TargetState(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetTargetState(&self, state: TARGET_STATE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetTargetState)(::windows_core::Interface::as_raw(self), state).ok()
+        ::windows_core::vcall!(self.SetTargetState(state)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
     pub unsafe fn TargetPropertySet(&self) -> ::windows_core::Result<ITsSbTargetPropertySet> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TargetPropertySet)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TargetPropertySet(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -3194,29 +3194,29 @@ impl ITsSbTarget {
     where
         P0: ::windows_core::IntoParam<ITsSbTargetPropertySet>,
     {
-        (::windows_core::Interface::vtable(self).SetTargetPropertySet)(::windows_core::Interface::as_raw(self), pval.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTargetPropertySet(pval.into_param().abi())).ok()
     }
     pub unsafe fn EnvironmentName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnvironmentName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnvironmentName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetEnvironmentName<P0>(&self, val: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetEnvironmentName)(::windows_core::Interface::as_raw(self), val.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetEnvironmentName(val.into_param().abi())).ok()
     }
     pub unsafe fn NumSessions(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).NumSessions)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.NumSessions(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NumPendingConnections(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).NumPendingConnections)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.NumPendingConnections(&mut result__)).from_abi(result__)
     }
     pub unsafe fn TargetLoad(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TargetLoad)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TargetLoad(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbTarget, ::windows_core::IUnknown);
@@ -3270,7 +3270,7 @@ impl ITsSbTargetPropertySet {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::Com::IErrorLog>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Read)(::windows_core::Interface::as_raw(self), pszpropname.into_param().abi(), pvar, perrorlog.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.Read(pszpropname.into_param().abi(), pvar, perrorlog.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -3278,7 +3278,7 @@ impl ITsSbTargetPropertySet {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Write)(::windows_core::Interface::as_raw(self), pszpropname.into_param().abi(), pvar).ok()
+        ::windows_core::vcall!(self.base__.base__.Write(pszpropname.into_param().abi(), pvar)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -3303,47 +3303,47 @@ pub struct ITsSbTaskInfo(::windows_core::IUnknown);
 impl ITsSbTaskInfo {
     pub unsafe fn TargetId(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TargetId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TargetId(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn StartTime(&self) -> ::windows_core::Result<super::super::Foundation::FILETIME> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).StartTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.StartTime(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EndTime(&self) -> ::windows_core::Result<super::super::Foundation::FILETIME> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EndTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EndTime(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Deadline(&self) -> ::windows_core::Result<super::super::Foundation::FILETIME> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Deadline)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Deadline(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Identifier(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Identifier)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Identifier(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Label(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Label)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Label(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Context(&self) -> ::windows_core::Result<*mut super::Com::SAFEARRAY> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Context)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Context(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Plugin(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Plugin)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Plugin(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Status(&self) -> ::windows_core::Result<RDV_TASK_STATUS> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Status)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Status(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbTaskInfo, ::windows_core::IUnknown);
@@ -3391,22 +3391,22 @@ impl ITsSbTaskPlugin {
         P1: ::windows_core::IntoParam<ITsSbPluginNotifySink>,
         P2: ::windows_core::IntoParam<ITsSbPluginPropertySet>,
     {
-        (::windows_core::Interface::vtable(self).base__.Initialize)(::windows_core::Interface::as_raw(self), pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Initialize(pprovider.into_param().abi(), pnotifysink.into_param().abi(), ppropertyset.into_param().abi())).ok()
     }
     pub unsafe fn Terminate(&self, hr: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Terminate)(::windows_core::Interface::as_raw(self), hr).ok()
+        ::windows_core::vcall!(self.base__.Terminate(hr)).ok()
     }
     pub unsafe fn InitializeTaskPlugin<P0>(&self, pitssbtaskpluginnotifysink: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ITsSbTaskPluginNotifySink>,
     {
-        (::windows_core::Interface::vtable(self).InitializeTaskPlugin)(::windows_core::Interface::as_raw(self), pitssbtaskpluginnotifysink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InitializeTaskPlugin(pitssbtaskpluginnotifysink.into_param().abi())).ok()
     }
     pub unsafe fn SetTaskQueue<P0>(&self, pszhostname: P0, pitssbtaskinfo: &[::core::option::Option<ITsSbTaskInfo>]) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTaskQueue)(::windows_core::Interface::as_raw(self), pszhostname.into_param().abi(), pitssbtaskinfo.len().try_into().unwrap(), ::core::mem::transmute(pitssbtaskinfo.as_ptr())).ok()
+        ::windows_core::vcall!(self.SetTaskQueue(pszhostname.into_param().abi(), pitssbtaskinfo.len().try_into().unwrap(), ::core::mem::transmute(pitssbtaskinfo.as_ptr()))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbTaskPlugin, ::windows_core::IUnknown, ITsSbPlugin);
@@ -3428,10 +3428,10 @@ pub struct ITsSbTaskPlugin_Vtbl {
 pub struct ITsSbTaskPluginNotifySink(::windows_core::IUnknown);
 impl ITsSbTaskPluginNotifySink {
     pub unsafe fn OnError(&self, hrerror: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnError)(::windows_core::Interface::as_raw(self), hrerror).ok()
+        ::windows_core::vcall!(self.base__.OnError(hrerror)).ok()
     }
     pub unsafe fn OnReportStatus(&self, messagetype: CLIENT_MESSAGE_TYPE, messageid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnReportStatus)(::windows_core::Interface::as_raw(self), messagetype, messageid).ok()
+        ::windows_core::vcall!(self.base__.OnReportStatus(messagetype, messageid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -3442,27 +3442,27 @@ impl ITsSbTaskPluginNotifySink {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnSetTaskTime)(::windows_core::Interface::as_raw(self), sztargetname.into_param().abi(), ::core::mem::transmute(taskstarttime), ::core::mem::transmute(taskendtime), ::core::mem::transmute(taskdeadline), sztasklabel.into_param().abi(), sztaskidentifier.into_param().abi(), sztaskplugin.into_param().abi(), dwtaskstatus, sacontext).ok()
+        ::windows_core::vcall!(self.OnSetTaskTime(sztargetname.into_param().abi(), ::core::mem::transmute(taskstarttime), ::core::mem::transmute(taskendtime), ::core::mem::transmute(taskdeadline), sztasklabel.into_param().abi(), sztaskidentifier.into_param().abi(), sztaskplugin.into_param().abi(), dwtaskstatus, sacontext)).ok()
     }
     pub unsafe fn OnDeleteTaskTime<P0, P1>(&self, sztargetname: P0, sztaskidentifier: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnDeleteTaskTime)(::windows_core::Interface::as_raw(self), sztargetname.into_param().abi(), sztaskidentifier.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnDeleteTaskTime(sztargetname.into_param().abi(), sztaskidentifier.into_param().abi())).ok()
     }
     pub unsafe fn OnUpdateTaskStatus<P0, P1>(&self, sztargetname: P0, taskidentifier: P1, taskstatus: RDV_TASK_STATUS) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnUpdateTaskStatus)(::windows_core::Interface::as_raw(self), sztargetname.into_param().abi(), taskidentifier.into_param().abi(), taskstatus).ok()
+        ::windows_core::vcall!(self.OnUpdateTaskStatus(sztargetname.into_param().abi(), taskidentifier.into_param().abi(), taskstatus)).ok()
     }
     pub unsafe fn OnReportTasks<P0>(&self, szhostname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnReportTasks)(::windows_core::Interface::as_raw(self), szhostname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnReportTasks(szhostname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITsSbTaskPluginNotifySink, ::windows_core::IUnknown, ITsSbBaseNotifySink);
@@ -3490,7 +3490,7 @@ pub struct IWRdsEnhancedFastReconnectArbitrator(::windows_core::IUnknown);
 impl IWRdsEnhancedFastReconnectArbitrator {
     pub unsafe fn GetSessionForEnhancedFastReconnect(&self, psessionidarray: *const i32, dwsessioncount: u32) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSessionForEnhancedFastReconnect)(::windows_core::Interface::as_raw(self), psessionidarray, dwsessioncount, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSessionForEnhancedFastReconnect(psessionidarray, dwsessioncount, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsEnhancedFastReconnectArbitrator, ::windows_core::IUnknown);
@@ -3514,17 +3514,17 @@ impl IWRdsGraphicsChannel {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).Write)(::windows_core::Interface::as_raw(self), cbsize, pbuffer, pcontext.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Write(cbsize, pbuffer, pcontext.into_param().abi())).ok()
     }
     pub unsafe fn Close(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Close()).ok()
     }
     pub unsafe fn Open<P0, P1>(&self, pchannelevents: P0, popencontext: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IWRdsGraphicsChannelEvents>,
         P1: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).Open)(::windows_core::Interface::as_raw(self), pchannelevents.into_param().abi(), popencontext.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Open(pchannelevents.into_param().abi(), popencontext.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsGraphicsChannel, ::windows_core::IUnknown);
@@ -3547,16 +3547,16 @@ pub struct IWRdsGraphicsChannel_Vtbl {
 pub struct IWRdsGraphicsChannelEvents(::windows_core::IUnknown);
 impl IWRdsGraphicsChannelEvents {
     pub unsafe fn OnDataReceived(&self, cbsize: u32, pbuffer: *const u8) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnDataReceived)(::windows_core::Interface::as_raw(self), cbsize, pbuffer).ok()
+        ::windows_core::vcall!(self.OnDataReceived(cbsize, pbuffer)).ok()
     }
     pub unsafe fn OnClose(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnClose)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnClose()).ok()
     }
     pub unsafe fn OnChannelOpened<P0>(&self, openresult: ::windows_core::HRESULT, popencontext: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).OnChannelOpened)(::windows_core::Interface::as_raw(self), openresult, popencontext.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnChannelOpened(openresult, popencontext.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3565,10 +3565,10 @@ impl IWRdsGraphicsChannelEvents {
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnDataSent)(::windows_core::Interface::as_raw(self), pwritecontext.into_param().abi(), bcancelled.into_param().abi(), pbuffer, cbbuffer).ok()
+        ::windows_core::vcall!(self.OnDataSent(pwritecontext.into_param().abi(), bcancelled.into_param().abi(), pbuffer, cbbuffer)).ok()
     }
     pub unsafe fn OnMetricsUpdate(&self, bandwidth: u32, rtt: u32, lastsentbyteindex: u64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnMetricsUpdate)(::windows_core::Interface::as_raw(self), bandwidth, rtt, lastsentbyteindex).ok()
+        ::windows_core::vcall!(self.OnMetricsUpdate(bandwidth, rtt, lastsentbyteindex)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsGraphicsChannelEvents, ::windows_core::IUnknown);
@@ -3597,7 +3597,7 @@ pub struct IWRdsGraphicsChannelManager(::windows_core::IUnknown);
 impl IWRdsGraphicsChannelManager {
     pub unsafe fn CreateChannel(&self, pszchannelname: *const u8, channeltype: WRdsGraphicsChannelType) -> ::windows_core::Result<IWRdsGraphicsChannel> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateChannel)(::windows_core::Interface::as_raw(self), pszchannelname, channeltype, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateChannel(pszchannelname, channeltype, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsGraphicsChannelManager, ::windows_core::IUnknown);
@@ -3619,28 +3619,28 @@ pub struct IWRdsProtocolConnection(::windows_core::IUnknown);
 impl IWRdsProtocolConnection {
     pub unsafe fn GetLogonErrorRedirector(&self) -> ::windows_core::Result<IWRdsProtocolLogonErrorRedirector> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLogonErrorRedirector)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLogonErrorRedirector(&mut result__)).from_abi(result__)
     }
     pub unsafe fn AcceptConnection(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AcceptConnection)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.AcceptConnection()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetClientData(&self, pclientdata: *mut WTS_CLIENT_DATA) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetClientData)(::windows_core::Interface::as_raw(self), pclientdata).ok()
+        ::windows_core::vcall!(self.GetClientData(pclientdata)).ok()
     }
     pub unsafe fn GetClientMonitorData(&self, pnummonitors: *mut u32, pprimarymonitor: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetClientMonitorData)(::windows_core::Interface::as_raw(self), pnummonitors, pprimarymonitor).ok()
+        ::windows_core::vcall!(self.GetClientMonitorData(pnummonitors, pprimarymonitor)).ok()
     }
     pub unsafe fn GetUserCredentials(&self, pusercreds: *mut WTS_USER_CREDENTIAL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetUserCredentials)(::windows_core::Interface::as_raw(self), pusercreds).ok()
+        ::windows_core::vcall!(self.GetUserCredentials(pusercreds)).ok()
     }
     pub unsafe fn GetLicenseConnection(&self) -> ::windows_core::Result<IWRdsProtocolLicenseConnection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLicenseConnection)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLicenseConnection(&mut result__)).from_abi(result__)
     }
     pub unsafe fn AuthenticateClientToSession(&self, sessionid: *mut WTS_SESSION_ID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AuthenticateClientToSession)(::windows_core::Interface::as_raw(self), sessionid).ok()
+        ::windows_core::vcall!(self.AuthenticateClientToSession(sessionid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3648,21 +3648,21 @@ impl IWRdsProtocolConnection {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE_PTR>,
     {
-        (::windows_core::Interface::vtable(self).NotifySessionId)(::windows_core::Interface::as_raw(self), sessionid, sessionhandle.into_param().abi()).ok()
+        ::windows_core::vcall!(self.NotifySessionId(sessionid, sessionhandle.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetInputHandles(&self, pkeyboardhandle: *mut super::super::Foundation::HANDLE_PTR, pmousehandle: *mut super::super::Foundation::HANDLE_PTR, pbeephandle: *mut super::super::Foundation::HANDLE_PTR) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetInputHandles)(::windows_core::Interface::as_raw(self), pkeyboardhandle, pmousehandle, pbeephandle).ok()
+        ::windows_core::vcall!(self.GetInputHandles(pkeyboardhandle, pmousehandle, pbeephandle)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetVideoHandle(&self) -> ::windows_core::Result<super::super::Foundation::HANDLE_PTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetVideoHandle)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetVideoHandle(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ConnectNotify(&self, sessionid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConnectNotify)(::windows_core::Interface::as_raw(self), sessionid).ok()
+        ::windows_core::vcall!(self.ConnectNotify(sessionid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3672,7 +3672,7 @@ impl IWRdsProtocolConnection {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).IsUserAllowedToLogon)(::windows_core::Interface::as_raw(self), sessionid, usertoken.into_param().abi(), pdomainname.into_param().abi(), pusername.into_param().abi()).ok()
+        ::windows_core::vcall!(self.IsUserAllowedToLogon(sessionid, usertoken.into_param().abi(), pdomainname.into_param().abi(), pusername.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3681,7 +3681,7 @@ impl IWRdsProtocolConnection {
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE_PTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SessionArbitrationEnumeration)(::windows_core::Interface::as_raw(self), husertoken.into_param().abi(), bsinglesessionperuserenabled.into_param().abi(), psessionidarray, pdwsessionidentifiercount).ok()
+        ::windows_core::vcall!(self.SessionArbitrationEnumeration(husertoken.into_param().abi(), bsinglesessionperuserenabled.into_param().abi(), psessionidarray, pdwsessionidentifiercount)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3691,26 +3691,26 @@ impl IWRdsProtocolConnection {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).LogonNotify)(::windows_core::Interface::as_raw(self), hclienttoken.into_param().abi(), wszusername.into_param().abi(), wszdomainname.into_param().abi(), sessionid, pwrdsconnectionsettings).ok()
+        ::windows_core::vcall!(self.LogonNotify(hclienttoken.into_param().abi(), wszusername.into_param().abi(), wszdomainname.into_param().abi(), sessionid, pwrdsconnectionsettings)).ok()
     }
     pub unsafe fn PreDisconnect(&self, disconnectreason: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).PreDisconnect)(::windows_core::Interface::as_raw(self), disconnectreason).ok()
+        ::windows_core::vcall!(self.PreDisconnect(disconnectreason)).ok()
     }
     pub unsafe fn DisconnectNotify(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DisconnectNotify)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.DisconnectNotify()).ok()
     }
     pub unsafe fn Close(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Close()).ok()
     }
     pub unsafe fn GetProtocolStatus(&self, pprotocolstatus: *mut WTS_PROTOCOL_STATUS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetProtocolStatus)(::windows_core::Interface::as_raw(self), pprotocolstatus).ok()
+        ::windows_core::vcall!(self.GetProtocolStatus(pprotocolstatus)).ok()
     }
     pub unsafe fn GetLastInputTime(&self) -> ::windows_core::Result<u64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLastInputTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLastInputTime(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetErrorInfo(&self, ulerror: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetErrorInfo)(::windows_core::Interface::as_raw(self), ulerror).ok()
+        ::windows_core::vcall!(self.SetErrorInfo(ulerror)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3720,17 +3720,17 @@ impl IWRdsProtocolConnection {
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateVirtualChannel)(::windows_core::Interface::as_raw(self), szendpointname.into_param().abi(), bstatic.into_param().abi(), requestedpriority, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateVirtualChannel(szendpointname.into_param().abi(), bstatic.into_param().abi(), requestedpriority, &mut result__)).from_abi(result__)
     }
     pub unsafe fn QueryProperty(&self, querytype: ::windows_core::GUID, ppropertyentriesin: &[WTS_PROPERTY_VALUE], ppropertyentriesout: &mut [WTS_PROPERTY_VALUE]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).QueryProperty)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(querytype), ppropertyentriesin.len().try_into().unwrap(), ppropertyentriesout.len().try_into().unwrap(), ::core::mem::transmute(ppropertyentriesin.as_ptr()), ::core::mem::transmute(ppropertyentriesout.as_ptr())).ok()
+        ::windows_core::vcall!(self.QueryProperty(::core::mem::transmute(querytype), ppropertyentriesin.len().try_into().unwrap(), ppropertyentriesout.len().try_into().unwrap(), ::core::mem::transmute(ppropertyentriesin.as_ptr()), ::core::mem::transmute(ppropertyentriesout.as_ptr()))).ok()
     }
     pub unsafe fn GetShadowConnection(&self) -> ::windows_core::Result<IWRdsProtocolShadowConnection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetShadowConnection)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetShadowConnection(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NotifyCommandProcessCreated(&self, sessionid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifyCommandProcessCreated)(::windows_core::Interface::as_raw(self), sessionid).ok()
+        ::windows_core::vcall!(self.NotifyCommandProcessCreated(sessionid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsProtocolConnection, ::windows_core::IUnknown);
@@ -3798,20 +3798,20 @@ pub struct IWRdsProtocolConnection_Vtbl {
 pub struct IWRdsProtocolConnectionCallback(::windows_core::IUnknown);
 impl IWRdsProtocolConnectionCallback {
     pub unsafe fn OnReady(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnReady)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnReady()).ok()
     }
     pub unsafe fn BrokenConnection(&self, reason: u32, source: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).BrokenConnection)(::windows_core::Interface::as_raw(self), reason, source).ok()
+        ::windows_core::vcall!(self.BrokenConnection(reason, source)).ok()
     }
     pub unsafe fn StopScreenUpdates(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).StopScreenUpdates)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.StopScreenUpdates()).ok()
     }
     pub unsafe fn RedrawWindow(&self, rect: *const WTS_SMALL_RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RedrawWindow)(::windows_core::Interface::as_raw(self), rect).ok()
+        ::windows_core::vcall!(self.RedrawWindow(rect)).ok()
     }
     pub unsafe fn GetConnectionId(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetConnectionId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetConnectionId(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsProtocolConnectionCallback, ::windows_core::IUnknown);
@@ -3836,10 +3836,10 @@ pub struct IWRdsProtocolConnectionCallback_Vtbl {
 pub struct IWRdsProtocolConnectionSettings(::windows_core::IUnknown);
 impl IWRdsProtocolConnectionSettings {
     pub unsafe fn SetConnectionSetting(&self, propertyid: ::windows_core::GUID, ppropertyentriesin: *const WTS_PROPERTY_VALUE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetConnectionSetting)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(propertyid), ppropertyentriesin).ok()
+        ::windows_core::vcall!(self.SetConnectionSetting(::core::mem::transmute(propertyid), ppropertyentriesin)).ok()
     }
     pub unsafe fn GetConnectionSetting(&self, propertyid: ::windows_core::GUID, ppropertyentriesout: *mut WTS_PROPERTY_VALUE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetConnectionSetting)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(propertyid), ppropertyentriesout).ok()
+        ::windows_core::vcall!(self.GetConnectionSetting(::core::mem::transmute(propertyid), ppropertyentriesout)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsProtocolConnectionSettings, ::windows_core::IUnknown);
@@ -3863,16 +3863,16 @@ impl IWRdsProtocolLicenseConnection {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn RequestLicensingCapabilities(&self, pplicensecapabilities: *mut WTS_LICENSE_CAPABILITIES, pcblicensecapabilities: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RequestLicensingCapabilities)(::windows_core::Interface::as_raw(self), pplicensecapabilities, pcblicensecapabilities).ok()
+        ::windows_core::vcall!(self.RequestLicensingCapabilities(pplicensecapabilities, pcblicensecapabilities)).ok()
     }
     pub unsafe fn SendClientLicense(&self, pclientlicense: &[u8]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendClientLicense)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pclientlicense.as_ptr()), pclientlicense.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.SendClientLicense(::core::mem::transmute(pclientlicense.as_ptr()), pclientlicense.len().try_into().unwrap())).ok()
     }
     pub unsafe fn RequestClientLicense(&self, reserve1: &[u8], ppclientlicense: *mut u8, pcbclientlicense: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RequestClientLicense)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(reserve1.as_ptr()), reserve1.len().try_into().unwrap(), ppclientlicense, pcbclientlicense).ok()
+        ::windows_core::vcall!(self.RequestClientLicense(::core::mem::transmute(reserve1.as_ptr()), reserve1.len().try_into().unwrap(), ppclientlicense, pcbclientlicense)).ok()
     }
     pub unsafe fn ProtocolComplete(&self, ulcomplete: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ProtocolComplete)(::windows_core::Interface::as_raw(self), ulcomplete).ok()
+        ::windows_core::vcall!(self.ProtocolComplete(ulcomplete)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsProtocolLicenseConnection, ::windows_core::IUnknown);
@@ -3900,16 +3900,16 @@ pub struct IWRdsProtocolListener(::windows_core::IUnknown);
 impl IWRdsProtocolListener {
     pub unsafe fn GetSettings(&self, wrdslistenersettinglevel: WRDS_LISTENER_SETTING_LEVEL) -> ::windows_core::Result<WRDS_LISTENER_SETTINGS> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSettings)(::windows_core::Interface::as_raw(self), wrdslistenersettinglevel, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSettings(wrdslistenersettinglevel, &mut result__)).from_abi(result__)
     }
     pub unsafe fn StartListen<P0>(&self, pcallback: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IWRdsProtocolListenerCallback>,
     {
-        (::windows_core::Interface::vtable(self).StartListen)(::windows_core::Interface::as_raw(self), pcallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.StartListen(pcallback.into_param().abi())).ok()
     }
     pub unsafe fn StopListen(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).StopListen)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.StopListen()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsProtocolListener, ::windows_core::IUnknown);
@@ -3938,7 +3938,7 @@ impl IWRdsProtocolListenerCallback {
         P0: ::windows_core::IntoParam<IWRdsProtocolConnection>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).OnConnected)(::windows_core::Interface::as_raw(self), pconnection.into_param().abi(), pwrdsconnectionsettings, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.OnConnected(pconnection.into_param().abi(), pwrdsconnectionsettings, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsProtocolListenerCallback, ::windows_core::IUnknown);
@@ -3962,14 +3962,14 @@ pub struct IWRdsProtocolListenerCallback_Vtbl {
 pub struct IWRdsProtocolLogonErrorRedirector(::windows_core::IUnknown);
 impl IWRdsProtocolLogonErrorRedirector {
     pub unsafe fn OnBeginPainting(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnBeginPainting)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnBeginPainting()).ok()
     }
     pub unsafe fn RedirectStatus<P0>(&self, pszmessage: P0) -> ::windows_core::Result<WTS_LOGON_ERROR_REDIRECTOR_RESPONSE>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RedirectStatus)(::windows_core::Interface::as_raw(self), pszmessage.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RedirectStatus(pszmessage.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn RedirectMessage<P0, P1>(&self, pszcaption: P0, pszmessage: P1, utype: u32) -> ::windows_core::Result<WTS_LOGON_ERROR_REDIRECTOR_RESPONSE>
     where
@@ -3977,7 +3977,7 @@ impl IWRdsProtocolLogonErrorRedirector {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RedirectMessage)(::windows_core::Interface::as_raw(self), pszcaption.into_param().abi(), pszmessage.into_param().abi(), utype, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RedirectMessage(pszcaption.into_param().abi(), pszmessage.into_param().abi(), utype, &mut result__)).from_abi(result__)
     }
     pub unsafe fn RedirectLogonError<P0, P1>(&self, ntsstatus: i32, ntssubstatus: i32, pszcaption: P0, pszmessage: P1, utype: u32) -> ::windows_core::Result<WTS_LOGON_ERROR_REDIRECTOR_RESPONSE>
     where
@@ -3985,7 +3985,7 @@ impl IWRdsProtocolLogonErrorRedirector {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RedirectLogonError)(::windows_core::Interface::as_raw(self), ntsstatus, ntssubstatus, pszcaption.into_param().abi(), pszmessage.into_param().abi(), utype, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RedirectLogonError(ntsstatus, ntssubstatus, pszcaption.into_param().abi(), pszmessage.into_param().abi(), utype, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsProtocolLogonErrorRedirector, ::windows_core::IUnknown);
@@ -4014,34 +4014,34 @@ impl IWRdsProtocolManager {
     where
         P0: ::windows_core::IntoParam<IWRdsProtocolSettings>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), piwrdssettings.into_param().abi(), pwrdssettings).ok()
+        ::windows_core::vcall!(self.Initialize(piwrdssettings.into_param().abi(), pwrdssettings)).ok()
     }
     pub unsafe fn CreateListener<P0>(&self, wszlistenername: P0) -> ::windows_core::Result<IWRdsProtocolListener>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateListener)(::windows_core::Interface::as_raw(self), wszlistenername.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateListener(wszlistenername.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn NotifyServiceStateChange(&self, ptsservicestatechange: *const WTS_SERVICE_STATE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifyServiceStateChange)(::windows_core::Interface::as_raw(self), ptsservicestatechange).ok()
+        ::windows_core::vcall!(self.NotifyServiceStateChange(ptsservicestatechange)).ok()
     }
     pub unsafe fn NotifySessionOfServiceStart(&self, sessionid: *const WTS_SESSION_ID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifySessionOfServiceStart)(::windows_core::Interface::as_raw(self), sessionid).ok()
+        ::windows_core::vcall!(self.NotifySessionOfServiceStart(sessionid)).ok()
     }
     pub unsafe fn NotifySessionOfServiceStop(&self, sessionid: *const WTS_SESSION_ID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifySessionOfServiceStop)(::windows_core::Interface::as_raw(self), sessionid).ok()
+        ::windows_core::vcall!(self.NotifySessionOfServiceStop(sessionid)).ok()
     }
     pub unsafe fn NotifySessionStateChange(&self, sessionid: *const WTS_SESSION_ID, eventid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifySessionStateChange)(::windows_core::Interface::as_raw(self), sessionid, eventid).ok()
+        ::windows_core::vcall!(self.NotifySessionStateChange(sessionid, eventid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn NotifySettingsChange(&self, pwrdssettings: *const WRDS_SETTINGS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifySettingsChange)(::windows_core::Interface::as_raw(self), pwrdssettings).ok()
+        ::windows_core::vcall!(self.NotifySettingsChange(pwrdssettings)).ok()
     }
     pub unsafe fn Uninitialize(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Uninitialize)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Uninitialize()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsProtocolManager, ::windows_core::IUnknown);
@@ -4077,12 +4077,12 @@ impl IWRdsProtocolSettings {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetSettings(&self, wrdssettingtype: WRDS_SETTING_TYPE, wrdssettinglevel: WRDS_SETTING_LEVEL, pwrdssettings: *mut WRDS_SETTINGS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetSettings)(::windows_core::Interface::as_raw(self), wrdssettingtype, wrdssettinglevel, pwrdssettings).ok()
+        ::windows_core::vcall!(self.GetSettings(wrdssettingtype, wrdssettinglevel, pwrdssettings)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn MergeSettings(&self, pwrdssettings: *const WRDS_SETTINGS, wrdsconnectionsettinglevel: WRDS_CONNECTION_SETTING_LEVEL, pwrdsconnectionsettings: *mut WRDS_CONNECTION_SETTINGS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).MergeSettings)(::windows_core::Interface::as_raw(self), pwrdssettings, wrdsconnectionsettinglevel, pwrdsconnectionsettings).ok()
+        ::windows_core::vcall!(self.MergeSettings(pwrdssettings, wrdsconnectionsettinglevel, pwrdsconnectionsettings)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsProtocolSettings, ::windows_core::IUnknown);
@@ -4110,14 +4110,14 @@ pub struct IWRdsProtocolSettings_Vtbl {
 pub struct IWRdsProtocolShadowCallback(::windows_core::IUnknown);
 impl IWRdsProtocolShadowCallback {
     pub unsafe fn StopShadow(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).StopShadow)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.StopShadow()).ok()
     }
     pub unsafe fn InvokeTargetShadow<P0, P1>(&self, ptargetservername: P0, targetsessionid: u32, pparam1: &[u8], pparam2: &[u8], pparam3: &[u8], pparam4: &[u8], pclientname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).InvokeTargetShadow)(::windows_core::Interface::as_raw(self), ptargetservername.into_param().abi(), targetsessionid, ::core::mem::transmute(pparam1.as_ptr()), pparam1.len().try_into().unwrap(), ::core::mem::transmute(pparam2.as_ptr()), pparam2.len().try_into().unwrap(), ::core::mem::transmute(pparam3.as_ptr()), pparam3.len().try_into().unwrap(), ::core::mem::transmute(pparam4.as_ptr()), pparam4.len().try_into().unwrap(), pclientname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InvokeTargetShadow(ptargetservername.into_param().abi(), targetsessionid, ::core::mem::transmute(pparam1.as_ptr()), pparam1.len().try_into().unwrap(), ::core::mem::transmute(pparam2.as_ptr()), pparam2.len().try_into().unwrap(), ::core::mem::transmute(pparam3.as_ptr()), pparam3.len().try_into().unwrap(), ::core::mem::transmute(pparam4.as_ptr()), pparam4.len().try_into().unwrap(), pclientname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsProtocolShadowCallback, ::windows_core::IUnknown);
@@ -4143,16 +4143,16 @@ impl IWRdsProtocolShadowConnection {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<IWRdsProtocolShadowCallback>,
     {
-        (::windows_core::Interface::vtable(self).Start)(::windows_core::Interface::as_raw(self), ptargetservername.into_param().abi(), targetsessionid, hotkeyvk, hotkeymodifiers, pshadowcallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Start(ptargetservername.into_param().abi(), targetsessionid, hotkeyvk, hotkeymodifiers, pshadowcallback.into_param().abi())).ok()
     }
     pub unsafe fn Stop(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Stop)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Stop()).ok()
     }
     pub unsafe fn DoTarget<P0>(&self, pparam1: &[u8], pparam2: &[u8], pparam3: &[u8], pparam4: &[u8], pclientname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DoTarget)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pparam1.as_ptr()), pparam1.len().try_into().unwrap(), ::core::mem::transmute(pparam2.as_ptr()), pparam2.len().try_into().unwrap(), ::core::mem::transmute(pparam3.as_ptr()), pparam3.len().try_into().unwrap(), ::core::mem::transmute(pparam4.as_ptr()), pparam4.len().try_into().unwrap(), pclientname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DoTarget(::core::mem::transmute(pparam1.as_ptr()), pparam1.len().try_into().unwrap(), ::core::mem::transmute(pparam2.as_ptr()), pparam2.len().try_into().unwrap(), ::core::mem::transmute(pparam3.as_ptr()), pparam3.len().try_into().unwrap(), ::core::mem::transmute(pparam4.as_ptr()), pparam4.len().try_into().unwrap(), pclientname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsProtocolShadowConnection, ::windows_core::IUnknown);
@@ -4175,7 +4175,7 @@ pub struct IWRdsProtocolShadowConnection_Vtbl {
 pub struct IWRdsWddmIddProps(::windows_core::IUnknown);
 impl IWRdsWddmIddProps {
     pub unsafe fn GetHardwareId(&self, pdisplaydriverhardwareid: &[u16]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetHardwareId)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdisplaydriverhardwareid.as_ptr()), pdisplaydriverhardwareid.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.GetHardwareId(::core::mem::transmute(pdisplaydriverhardwareid.as_ptr()), pdisplaydriverhardwareid.len().try_into().unwrap())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4183,10 +4183,10 @@ impl IWRdsWddmIddProps {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE_PTR>,
     {
-        (::windows_core::Interface::vtable(self).OnDriverLoad)(::windows_core::Interface::as_raw(self), sessionid, driverhandle.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnDriverLoad(sessionid, driverhandle.into_param().abi())).ok()
     }
     pub unsafe fn OnDriverUnload(&self, sessionid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnDriverUnload)(::windows_core::Interface::as_raw(self), sessionid).ok()
+        ::windows_core::vcall!(self.OnDriverUnload(sessionid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4194,7 +4194,7 @@ impl IWRdsWddmIddProps {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).EnableWddmIdd)(::windows_core::Interface::as_raw(self), enabled.into_param().abi()).ok()
+        ::windows_core::vcall!(self.EnableWddmIdd(enabled.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWRdsWddmIddProps, ::windows_core::IUnknown);
@@ -4228,7 +4228,7 @@ impl IWTSBitmapRenderService {
         P0: ::windows_core::IntoParam<IWTSBitmapRendererCallback>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMappedRenderer)(::windows_core::Interface::as_raw(self), mappingid, pmappedrenderercallback.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMappedRenderer(mappingid, pmappedrenderercallback.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSBitmapRenderService, ::windows_core::IUnknown);
@@ -4249,14 +4249,14 @@ pub struct IWTSBitmapRenderService_Vtbl {
 pub struct IWTSBitmapRenderer(::windows_core::IUnknown);
 impl IWTSBitmapRenderer {
     pub unsafe fn Render(&self, imageformat: ::windows_core::GUID, dwwidth: u32, dwheight: u32, cbstride: i32, pimagebuffer: &[u8]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Render)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(imageformat), dwwidth, dwheight, cbstride, pimagebuffer.len().try_into().unwrap(), ::core::mem::transmute(pimagebuffer.as_ptr())).ok()
+        ::windows_core::vcall!(self.Render(::core::mem::transmute(imageformat), dwwidth, dwheight, cbstride, pimagebuffer.len().try_into().unwrap(), ::core::mem::transmute(pimagebuffer.as_ptr()))).ok()
     }
     pub unsafe fn GetRendererStatistics(&self) -> ::windows_core::Result<BITMAP_RENDERER_STATISTICS> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRendererStatistics)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRendererStatistics(&mut result__)).from_abi(result__)
     }
     pub unsafe fn RemoveMapping(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RemoveMapping)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.RemoveMapping()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSBitmapRenderer, ::windows_core::IUnknown);
@@ -4281,7 +4281,7 @@ impl IWTSBitmapRendererCallback {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn OnTargetSizeChanged(&self, rcnewsize: super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnTargetSizeChanged)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(rcnewsize)).ok()
+        ::windows_core::vcall!(self.OnTargetSizeChanged(::core::mem::transmute(rcnewsize))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSBitmapRendererCallback, ::windows_core::IUnknown);
@@ -4308,7 +4308,7 @@ impl IWTSListener {
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
     pub unsafe fn GetConfiguration(&self) -> ::windows_core::Result<super::Com::StructuredStorage::IPropertyBag> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetConfiguration)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetConfiguration(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSListener, ::windows_core::IUnknown);
@@ -4338,7 +4338,7 @@ impl IWTSListenerCallback {
         P0: ::windows_core::IntoParam<IWTSVirtualChannel>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnNewChannelConnection)(::windows_core::Interface::as_raw(self), pchannel.into_param().abi(), data.into_param().abi(), pbaccept, ::core::mem::transmute(ppcallback)).ok()
+        ::windows_core::vcall!(self.OnNewChannelConnection(pchannel.into_param().abi(), data.into_param().abi(), pbaccept, ::core::mem::transmute(ppcallback))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSListenerCallback, ::windows_core::IUnknown);
@@ -4365,16 +4365,16 @@ impl IWTSPlugin {
     where
         P0: ::windows_core::IntoParam<IWTSVirtualChannelManager>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), pchannelmgr.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Initialize(pchannelmgr.into_param().abi())).ok()
     }
     pub unsafe fn Connected(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Connected)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Connected()).ok()
     }
     pub unsafe fn Disconnected(&self, dwdisconnectcode: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Disconnected)(::windows_core::Interface::as_raw(self), dwdisconnectcode).ok()
+        ::windows_core::vcall!(self.Disconnected(dwdisconnectcode)).ok()
     }
     pub unsafe fn Terminated(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Terminated)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Terminated()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSPlugin, ::windows_core::IUnknown);
@@ -4399,7 +4399,7 @@ pub struct IWTSPluginServiceProvider(::windows_core::IUnknown);
 impl IWTSPluginServiceProvider {
     pub unsafe fn GetService(&self, serviceid: ::windows_core::GUID) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetService)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(serviceid), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetService(::core::mem::transmute(serviceid), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSPluginServiceProvider, ::windows_core::IUnknown);
@@ -4421,41 +4421,41 @@ pub struct IWTSProtocolConnection(::windows_core::IUnknown);
 impl IWTSProtocolConnection {
     pub unsafe fn GetLogonErrorRedirector(&self) -> ::windows_core::Result<IWTSProtocolLogonErrorRedirector> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLogonErrorRedirector)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLogonErrorRedirector(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SendPolicyData(&self, ppolicydata: *const WTS_POLICY_DATA) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendPolicyData)(::windows_core::Interface::as_raw(self), ppolicydata).ok()
+        ::windows_core::vcall!(self.SendPolicyData(ppolicydata)).ok()
     }
     pub unsafe fn AcceptConnection(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AcceptConnection)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.AcceptConnection()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetClientData(&self, pclientdata: *mut WTS_CLIENT_DATA) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetClientData)(::windows_core::Interface::as_raw(self), pclientdata).ok()
+        ::windows_core::vcall!(self.GetClientData(pclientdata)).ok()
     }
     pub unsafe fn GetUserCredentials(&self, pusercreds: *mut WTS_USER_CREDENTIAL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetUserCredentials)(::windows_core::Interface::as_raw(self), pusercreds).ok()
+        ::windows_core::vcall!(self.GetUserCredentials(pusercreds)).ok()
     }
     pub unsafe fn GetLicenseConnection(&self) -> ::windows_core::Result<IWTSProtocolLicenseConnection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLicenseConnection)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLicenseConnection(&mut result__)).from_abi(result__)
     }
     pub unsafe fn AuthenticateClientToSession(&self, sessionid: *mut WTS_SESSION_ID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AuthenticateClientToSession)(::windows_core::Interface::as_raw(self), sessionid).ok()
+        ::windows_core::vcall!(self.AuthenticateClientToSession(sessionid)).ok()
     }
     pub unsafe fn NotifySessionId(&self, sessionid: *const WTS_SESSION_ID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifySessionId)(::windows_core::Interface::as_raw(self), sessionid).ok()
+        ::windows_core::vcall!(self.NotifySessionId(sessionid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetProtocolHandles(&self, pkeyboardhandle: *mut super::super::Foundation::HANDLE_PTR, pmousehandle: *mut super::super::Foundation::HANDLE_PTR, pbeephandle: *mut super::super::Foundation::HANDLE_PTR, pvideohandle: *mut super::super::Foundation::HANDLE_PTR) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetProtocolHandles)(::windows_core::Interface::as_raw(self), pkeyboardhandle, pmousehandle, pbeephandle, pvideohandle).ok()
+        ::windows_core::vcall!(self.GetProtocolHandles(pkeyboardhandle, pmousehandle, pbeephandle, pvideohandle)).ok()
     }
     pub unsafe fn ConnectNotify(&self, sessionid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConnectNotify)(::windows_core::Interface::as_raw(self), sessionid).ok()
+        ::windows_core::vcall!(self.ConnectNotify(sessionid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4465,7 +4465,7 @@ impl IWTSProtocolConnection {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).IsUserAllowedToLogon)(::windows_core::Interface::as_raw(self), sessionid, usertoken.into_param().abi(), pdomainname.into_param().abi(), pusername.into_param().abi()).ok()
+        ::windows_core::vcall!(self.IsUserAllowedToLogon(sessionid, usertoken.into_param().abi(), pdomainname.into_param().abi(), pusername.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4474,7 +4474,7 @@ impl IWTSProtocolConnection {
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE_PTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SessionArbitrationEnumeration)(::windows_core::Interface::as_raw(self), husertoken.into_param().abi(), bsinglesessionperuserenabled.into_param().abi(), psessionidarray, pdwsessionidentifiercount).ok()
+        ::windows_core::vcall!(self.SessionArbitrationEnumeration(husertoken.into_param().abi(), bsinglesessionperuserenabled.into_param().abi(), psessionidarray, pdwsessionidentifiercount)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4484,31 +4484,31 @@ impl IWTSProtocolConnection {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).LogonNotify)(::windows_core::Interface::as_raw(self), hclienttoken.into_param().abi(), wszusername.into_param().abi(), wszdomainname.into_param().abi(), sessionid).ok()
+        ::windows_core::vcall!(self.LogonNotify(hclienttoken.into_param().abi(), wszusername.into_param().abi(), wszdomainname.into_param().abi(), sessionid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetUserData(&self, ppolicydata: *const WTS_POLICY_DATA, pclientdata: *mut WTS_USER_DATA) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetUserData)(::windows_core::Interface::as_raw(self), ppolicydata, pclientdata).ok()
+        ::windows_core::vcall!(self.GetUserData(ppolicydata, pclientdata)).ok()
     }
     pub unsafe fn DisconnectNotify(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DisconnectNotify)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.DisconnectNotify()).ok()
     }
     pub unsafe fn Close(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Close()).ok()
     }
     pub unsafe fn GetProtocolStatus(&self, pprotocolstatus: *mut WTS_PROTOCOL_STATUS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetProtocolStatus)(::windows_core::Interface::as_raw(self), pprotocolstatus).ok()
+        ::windows_core::vcall!(self.GetProtocolStatus(pprotocolstatus)).ok()
     }
     pub unsafe fn GetLastInputTime(&self) -> ::windows_core::Result<u64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLastInputTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLastInputTime(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetErrorInfo(&self, ulerror: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetErrorInfo)(::windows_core::Interface::as_raw(self), ulerror).ok()
+        ::windows_core::vcall!(self.SetErrorInfo(ulerror)).ok()
     }
     pub unsafe fn SendBeep(&self, frequency: u32, duration: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendBeep)(::windows_core::Interface::as_raw(self), frequency, duration).ok()
+        ::windows_core::vcall!(self.SendBeep(frequency, duration)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4518,14 +4518,14 @@ impl IWTSProtocolConnection {
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateVirtualChannel)(::windows_core::Interface::as_raw(self), szendpointname.into_param().abi(), bstatic.into_param().abi(), requestedpriority, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateVirtualChannel(szendpointname.into_param().abi(), bstatic.into_param().abi(), requestedpriority, &mut result__)).from_abi(result__)
     }
     pub unsafe fn QueryProperty(&self, querytype: ::windows_core::GUID, ppropertyentriesin: &[WTS_PROPERTY_VALUE], ppropertyentriesout: &mut [WTS_PROPERTY_VALUE]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).QueryProperty)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(querytype), ppropertyentriesin.len().try_into().unwrap(), ppropertyentriesout.len().try_into().unwrap(), ::core::mem::transmute(ppropertyentriesin.as_ptr()), ::core::mem::transmute(ppropertyentriesout.as_ptr())).ok()
+        ::windows_core::vcall!(self.QueryProperty(::core::mem::transmute(querytype), ppropertyentriesin.len().try_into().unwrap(), ppropertyentriesout.len().try_into().unwrap(), ::core::mem::transmute(ppropertyentriesin.as_ptr()), ::core::mem::transmute(ppropertyentriesout.as_ptr()))).ok()
     }
     pub unsafe fn GetShadowConnection(&self) -> ::windows_core::Result<IWTSProtocolShadowConnection> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetShadowConnection)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetShadowConnection(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSProtocolConnection, ::windows_core::IUnknown);
@@ -4592,19 +4592,19 @@ pub struct IWTSProtocolConnection_Vtbl {
 pub struct IWTSProtocolConnectionCallback(::windows_core::IUnknown);
 impl IWTSProtocolConnectionCallback {
     pub unsafe fn OnReady(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnReady)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnReady()).ok()
     }
     pub unsafe fn BrokenConnection(&self, reason: u32, source: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).BrokenConnection)(::windows_core::Interface::as_raw(self), reason, source).ok()
+        ::windows_core::vcall!(self.BrokenConnection(reason, source)).ok()
     }
     pub unsafe fn StopScreenUpdates(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).StopScreenUpdates)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.StopScreenUpdates()).ok()
     }
     pub unsafe fn RedrawWindow(&self, rect: *const WTS_SMALL_RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RedrawWindow)(::windows_core::Interface::as_raw(self), rect).ok()
+        ::windows_core::vcall!(self.RedrawWindow(rect)).ok()
     }
     pub unsafe fn DisplayIOCtl(&self, displayioctl: *const WTS_DISPLAY_IOCTL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DisplayIOCtl)(::windows_core::Interface::as_raw(self), displayioctl).ok()
+        ::windows_core::vcall!(self.DisplayIOCtl(displayioctl)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSProtocolConnectionCallback, ::windows_core::IUnknown);
@@ -4631,16 +4631,16 @@ impl IWTSProtocolLicenseConnection {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn RequestLicensingCapabilities(&self, pplicensecapabilities: *mut WTS_LICENSE_CAPABILITIES, pcblicensecapabilities: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RequestLicensingCapabilities)(::windows_core::Interface::as_raw(self), pplicensecapabilities, pcblicensecapabilities).ok()
+        ::windows_core::vcall!(self.RequestLicensingCapabilities(pplicensecapabilities, pcblicensecapabilities)).ok()
     }
     pub unsafe fn SendClientLicense(&self, pclientlicense: &[u8]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendClientLicense)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pclientlicense.as_ptr()), pclientlicense.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.SendClientLicense(::core::mem::transmute(pclientlicense.as_ptr()), pclientlicense.len().try_into().unwrap())).ok()
     }
     pub unsafe fn RequestClientLicense(&self, reserve1: &[u8], ppclientlicense: *mut u8, pcbclientlicense: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RequestClientLicense)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(reserve1.as_ptr()), reserve1.len().try_into().unwrap(), ppclientlicense, pcbclientlicense).ok()
+        ::windows_core::vcall!(self.RequestClientLicense(::core::mem::transmute(reserve1.as_ptr()), reserve1.len().try_into().unwrap(), ppclientlicense, pcbclientlicense)).ok()
     }
     pub unsafe fn ProtocolComplete(&self, ulcomplete: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ProtocolComplete)(::windows_core::Interface::as_raw(self), ulcomplete).ok()
+        ::windows_core::vcall!(self.ProtocolComplete(ulcomplete)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSProtocolLicenseConnection, ::windows_core::IUnknown);
@@ -4670,10 +4670,10 @@ impl IWTSProtocolListener {
     where
         P0: ::windows_core::IntoParam<IWTSProtocolListenerCallback>,
     {
-        (::windows_core::Interface::vtable(self).StartListen)(::windows_core::Interface::as_raw(self), pcallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.StartListen(pcallback.into_param().abi())).ok()
     }
     pub unsafe fn StopListen(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).StopListen)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.StopListen()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSProtocolListener, ::windows_core::IUnknown);
@@ -4699,7 +4699,7 @@ impl IWTSProtocolListenerCallback {
         P0: ::windows_core::IntoParam<IWTSProtocolConnection>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).OnConnected)(::windows_core::Interface::as_raw(self), pconnection.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.OnConnected(pconnection.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSProtocolListenerCallback, ::windows_core::IUnknown);
@@ -4720,14 +4720,14 @@ pub struct IWTSProtocolListenerCallback_Vtbl {
 pub struct IWTSProtocolLogonErrorRedirector(::windows_core::IUnknown);
 impl IWTSProtocolLogonErrorRedirector {
     pub unsafe fn OnBeginPainting(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnBeginPainting)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnBeginPainting()).ok()
     }
     pub unsafe fn RedirectStatus<P0>(&self, pszmessage: P0) -> ::windows_core::Result<WTS_LOGON_ERROR_REDIRECTOR_RESPONSE>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RedirectStatus)(::windows_core::Interface::as_raw(self), pszmessage.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RedirectStatus(pszmessage.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn RedirectMessage<P0, P1>(&self, pszcaption: P0, pszmessage: P1, utype: u32) -> ::windows_core::Result<WTS_LOGON_ERROR_REDIRECTOR_RESPONSE>
     where
@@ -4735,7 +4735,7 @@ impl IWTSProtocolLogonErrorRedirector {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RedirectMessage)(::windows_core::Interface::as_raw(self), pszcaption.into_param().abi(), pszmessage.into_param().abi(), utype, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RedirectMessage(pszcaption.into_param().abi(), pszmessage.into_param().abi(), utype, &mut result__)).from_abi(result__)
     }
     pub unsafe fn RedirectLogonError<P0, P1>(&self, ntsstatus: i32, ntssubstatus: i32, pszcaption: P0, pszmessage: P1, utype: u32) -> ::windows_core::Result<WTS_LOGON_ERROR_REDIRECTOR_RESPONSE>
     where
@@ -4743,7 +4743,7 @@ impl IWTSProtocolLogonErrorRedirector {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RedirectLogonError)(::windows_core::Interface::as_raw(self), ntsstatus, ntssubstatus, pszcaption.into_param().abi(), pszmessage.into_param().abi(), utype, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RedirectLogonError(ntsstatus, ntssubstatus, pszcaption.into_param().abi(), pszmessage.into_param().abi(), utype, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSProtocolLogonErrorRedirector, ::windows_core::IUnknown);
@@ -4771,19 +4771,19 @@ impl IWTSProtocolManager {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateListener)(::windows_core::Interface::as_raw(self), wszlistenername.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateListener(wszlistenername.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn NotifyServiceStateChange(&self, ptsservicestatechange: *const WTS_SERVICE_STATE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifyServiceStateChange)(::windows_core::Interface::as_raw(self), ptsservicestatechange).ok()
+        ::windows_core::vcall!(self.NotifyServiceStateChange(ptsservicestatechange)).ok()
     }
     pub unsafe fn NotifySessionOfServiceStart(&self, sessionid: *const WTS_SESSION_ID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifySessionOfServiceStart)(::windows_core::Interface::as_raw(self), sessionid).ok()
+        ::windows_core::vcall!(self.NotifySessionOfServiceStart(sessionid)).ok()
     }
     pub unsafe fn NotifySessionOfServiceStop(&self, sessionid: *const WTS_SESSION_ID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifySessionOfServiceStop)(::windows_core::Interface::as_raw(self), sessionid).ok()
+        ::windows_core::vcall!(self.NotifySessionOfServiceStop(sessionid)).ok()
     }
     pub unsafe fn NotifySessionStateChange(&self, sessionid: *const WTS_SESSION_ID, eventid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifySessionStateChange)(::windows_core::Interface::as_raw(self), sessionid, eventid).ok()
+        ::windows_core::vcall!(self.NotifySessionStateChange(sessionid, eventid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSProtocolManager, ::windows_core::IUnknown);
@@ -4808,14 +4808,14 @@ pub struct IWTSProtocolManager_Vtbl {
 pub struct IWTSProtocolShadowCallback(::windows_core::IUnknown);
 impl IWTSProtocolShadowCallback {
     pub unsafe fn StopShadow(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).StopShadow)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.StopShadow()).ok()
     }
     pub unsafe fn InvokeTargetShadow<P0, P1>(&self, ptargetservername: P0, targetsessionid: u32, pparam1: &[u8], pparam2: &[u8], pparam3: &[u8], pparam4: &[u8], pclientname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).InvokeTargetShadow)(::windows_core::Interface::as_raw(self), ptargetservername.into_param().abi(), targetsessionid, ::core::mem::transmute(pparam1.as_ptr()), pparam1.len().try_into().unwrap(), ::core::mem::transmute(pparam2.as_ptr()), pparam2.len().try_into().unwrap(), ::core::mem::transmute(pparam3.as_ptr()), pparam3.len().try_into().unwrap(), ::core::mem::transmute(pparam4.as_ptr()), pparam4.len().try_into().unwrap(), pclientname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InvokeTargetShadow(ptargetservername.into_param().abi(), targetsessionid, ::core::mem::transmute(pparam1.as_ptr()), pparam1.len().try_into().unwrap(), ::core::mem::transmute(pparam2.as_ptr()), pparam2.len().try_into().unwrap(), ::core::mem::transmute(pparam3.as_ptr()), pparam3.len().try_into().unwrap(), ::core::mem::transmute(pparam4.as_ptr()), pparam4.len().try_into().unwrap(), pclientname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSProtocolShadowCallback, ::windows_core::IUnknown);
@@ -4841,16 +4841,16 @@ impl IWTSProtocolShadowConnection {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<IWTSProtocolShadowCallback>,
     {
-        (::windows_core::Interface::vtable(self).Start)(::windows_core::Interface::as_raw(self), ptargetservername.into_param().abi(), targetsessionid, hotkeyvk, hotkeymodifiers, pshadowcallback.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Start(ptargetservername.into_param().abi(), targetsessionid, hotkeyvk, hotkeymodifiers, pshadowcallback.into_param().abi())).ok()
     }
     pub unsafe fn Stop(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Stop)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Stop()).ok()
     }
     pub unsafe fn DoTarget<P0>(&self, pparam1: &[u8], pparam2: &[u8], pparam3: &[u8], pparam4: &[u8], pclientname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DoTarget)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pparam1.as_ptr()), pparam1.len().try_into().unwrap(), ::core::mem::transmute(pparam2.as_ptr()), pparam2.len().try_into().unwrap(), ::core::mem::transmute(pparam3.as_ptr()), pparam3.len().try_into().unwrap(), ::core::mem::transmute(pparam4.as_ptr()), pparam4.len().try_into().unwrap(), pclientname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DoTarget(::core::mem::transmute(pparam1.as_ptr()), pparam1.len().try_into().unwrap(), ::core::mem::transmute(pparam2.as_ptr()), pparam2.len().try_into().unwrap(), ::core::mem::transmute(pparam3.as_ptr()), pparam3.len().try_into().unwrap(), ::core::mem::transmute(pparam4.as_ptr()), pparam4.len().try_into().unwrap(), pclientname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSProtocolShadowConnection, ::windows_core::IUnknown);
@@ -4874,15 +4874,15 @@ pub struct IWTSSBPlugin(::windows_core::IUnknown);
 impl IWTSSBPlugin {
     pub unsafe fn Initialize(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Initialize(&mut result__)).from_abi(result__)
     }
     pub unsafe fn WTSSBX_MachineChangeNotification(&self, notificationtype: WTSSBX_NOTIFICATION_TYPE, machineid: i32, pmachineinfo: *const WTSSBX_MACHINE_INFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).WTSSBX_MachineChangeNotification)(::windows_core::Interface::as_raw(self), notificationtype, machineid, pmachineinfo).ok()
+        ::windows_core::vcall!(self.WTSSBX_MachineChangeNotification(notificationtype, machineid, pmachineinfo)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn WTSSBX_SessionChangeNotification(&self, notificationtype: WTSSBX_NOTIFICATION_TYPE, machineid: i32, sessioninfo: &[WTSSBX_SESSION_INFO]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).WTSSBX_SessionChangeNotification)(::windows_core::Interface::as_raw(self), notificationtype, machineid, sessioninfo.len().try_into().unwrap(), ::core::mem::transmute(sessioninfo.as_ptr())).ok()
+        ::windows_core::vcall!(self.WTSSBX_SessionChangeNotification(notificationtype, machineid, sessioninfo.len().try_into().unwrap(), ::core::mem::transmute(sessioninfo.as_ptr()))).ok()
     }
     pub unsafe fn WTSSBX_GetMostSuitableServer<P0, P1, P2, P3>(&self, username: P0, domainname: P1, applicationtype: P2, farmname: P3, pmachineid: *mut i32) -> ::windows_core::Result<()>
     where
@@ -4891,10 +4891,10 @@ impl IWTSSBPlugin {
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P3: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).WTSSBX_GetMostSuitableServer)(::windows_core::Interface::as_raw(self), username.into_param().abi(), domainname.into_param().abi(), applicationtype.into_param().abi(), farmname.into_param().abi(), pmachineid).ok()
+        ::windows_core::vcall!(self.WTSSBX_GetMostSuitableServer(username.into_param().abi(), domainname.into_param().abi(), applicationtype.into_param().abi(), farmname.into_param().abi(), pmachineid)).ok()
     }
     pub unsafe fn Terminated(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Terminated)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Terminated()).ok()
     }
     pub unsafe fn WTSSBX_GetUserExternalSession<P0, P1, P2>(&self, username: P0, domainname: P1, applicationtype: P2, redirectorinternalip: *const WTSSBX_IP_ADDRESS, psessionid: *mut u32, pmachineconnectinfo: *mut WTSSBX_MACHINE_CONNECT_INFO) -> ::windows_core::Result<()>
     where
@@ -4902,7 +4902,7 @@ impl IWTSSBPlugin {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).WTSSBX_GetUserExternalSession)(::windows_core::Interface::as_raw(self), username.into_param().abi(), domainname.into_param().abi(), applicationtype.into_param().abi(), redirectorinternalip, psessionid, pmachineconnectinfo).ok()
+        ::windows_core::vcall!(self.WTSSBX_GetUserExternalSession(username.into_param().abi(), domainname.into_param().abi(), applicationtype.into_param().abi(), redirectorinternalip, psessionid, pmachineconnectinfo)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSSBPlugin, ::windows_core::IUnknown);
@@ -4934,10 +4934,10 @@ impl IWTSVirtualChannel {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).Write)(::windows_core::Interface::as_raw(self), pbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbuffer.as_ptr()), preserved.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Write(pbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbuffer.as_ptr()), preserved.into_param().abi())).ok()
     }
     pub unsafe fn Close(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Close()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSVirtualChannel, ::windows_core::IUnknown);
@@ -4959,10 +4959,10 @@ pub struct IWTSVirtualChannel_Vtbl {
 pub struct IWTSVirtualChannelCallback(::windows_core::IUnknown);
 impl IWTSVirtualChannelCallback {
     pub unsafe fn OnDataReceived(&self, pbuffer: &[u8]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnDataReceived)(::windows_core::Interface::as_raw(self), pbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbuffer.as_ptr())).ok()
+        ::windows_core::vcall!(self.OnDataReceived(pbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbuffer.as_ptr()))).ok()
     }
     pub unsafe fn OnClose(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnClose)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnClose()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSVirtualChannelCallback, ::windows_core::IUnknown);
@@ -4989,7 +4989,7 @@ impl IWTSVirtualChannelManager {
         P1: ::windows_core::IntoParam<IWTSListenerCallback>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateListener)(::windows_core::Interface::as_raw(self), pszchannelname.into_param().abi(), uflags, plistenercallback.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateListener(pszchannelname.into_param().abi(), uflags, plistenercallback.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWTSVirtualChannelManager, ::windows_core::IUnknown);
@@ -5013,7 +5013,7 @@ impl IWorkspace {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetWorkspaceNames(&self) -> ::windows_core::Result<*mut super::Com::SAFEARRAY> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetWorkspaceNames)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetWorkspaceNames(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5021,11 +5021,11 @@ impl IWorkspace {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).StartRemoteApplication)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), psaparams).ok()
+        ::windows_core::vcall!(self.StartRemoteApplication(bstrworkspaceid.into_param().abi(), psaparams)).ok()
     }
     pub unsafe fn GetProcessId(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetProcessId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetProcessId(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWorkspace, ::windows_core::IUnknown);
@@ -5057,7 +5057,7 @@ impl IWorkspace2 {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetWorkspaceNames(&self) -> ::windows_core::Result<*mut super::Com::SAFEARRAY> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetWorkspaceNames)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetWorkspaceNames(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5065,11 +5065,11 @@ impl IWorkspace2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.StartRemoteApplication)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), psaparams).ok()
+        ::windows_core::vcall!(self.base__.StartRemoteApplication(bstrworkspaceid.into_param().abi(), psaparams)).ok()
     }
     pub unsafe fn GetProcessId(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetProcessId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetProcessId(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -5081,7 +5081,7 @@ impl IWorkspace2 {
         P3: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
         P4: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).StartRemoteApplicationEx)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrrequestingappid.into_param().abi(), bstrrequestingappfamilyname.into_param().abi(), blaunchintoimmersiveclient.into_param().abi(), bstrimmersiveclientactivationcontext.into_param().abi(), psaparams).ok()
+        ::windows_core::vcall!(self.StartRemoteApplicationEx(bstrworkspaceid.into_param().abi(), bstrrequestingappid.into_param().abi(), bstrrequestingappfamilyname.into_param().abi(), blaunchintoimmersiveclient.into_param().abi(), bstrimmersiveclientactivationcontext.into_param().abi(), psaparams)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWorkspace2, ::windows_core::IUnknown, IWorkspace);
@@ -5108,7 +5108,7 @@ impl IWorkspace3 {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetWorkspaceNames(&self) -> ::windows_core::Result<*mut super::Com::SAFEARRAY> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.GetWorkspaceNames)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.GetWorkspaceNames(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5116,11 +5116,11 @@ impl IWorkspace3 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.StartRemoteApplication)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), psaparams).ok()
+        ::windows_core::vcall!(self.base__.base__.StartRemoteApplication(bstrworkspaceid.into_param().abi(), psaparams)).ok()
     }
     pub unsafe fn GetProcessId(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.GetProcessId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.GetProcessId(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -5132,7 +5132,7 @@ impl IWorkspace3 {
         P3: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
         P4: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.StartRemoteApplicationEx)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrrequestingappid.into_param().abi(), bstrrequestingappfamilyname.into_param().abi(), blaunchintoimmersiveclient.into_param().abi(), bstrimmersiveclientactivationcontext.into_param().abi(), psaparams).ok()
+        ::windows_core::vcall!(self.base__.StartRemoteApplicationEx(bstrworkspaceid.into_param().abi(), bstrrequestingappid.into_param().abi(), bstrrequestingappfamilyname.into_param().abi(), blaunchintoimmersiveclient.into_param().abi(), bstrimmersiveclientactivationcontext.into_param().abi(), psaparams)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5142,14 +5142,14 @@ impl IWorkspace3 {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetClaimsToken2)(::windows_core::Interface::as_raw(self), bstrclaimshint.into_param().abi(), bstruserhint.into_param().abi(), claimcookie, hwndcreduiparent, ::core::mem::transmute(rectcreduiparent), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetClaimsToken2(bstrclaimshint.into_param().abi(), bstruserhint.into_param().abi(), claimcookie, hwndcreduiparent, ::core::mem::transmute(rectcreduiparent), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetClaimsToken<P0, P1>(&self, bstraccesstoken: P0, ullaccesstokenexpiration: u64, bstrrefreshtoken: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetClaimsToken)(::windows_core::Interface::as_raw(self), bstraccesstoken.into_param().abi(), ullaccesstokenexpiration, bstrrefreshtoken.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetClaimsToken(bstraccesstoken.into_param().abi(), ullaccesstokenexpiration, bstrrefreshtoken.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWorkspace3, ::windows_core::IUnknown, IWorkspace, IWorkspace2);
@@ -5175,14 +5175,14 @@ pub struct IWorkspaceClientExt(::windows_core::IUnknown);
 impl IWorkspaceClientExt {
     pub unsafe fn GetResourceId(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetResourceId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetResourceId(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetResourceDisplayName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetResourceDisplayName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetResourceDisplayName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn IssueDisconnect(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).IssueDisconnect)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.IssueDisconnect()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWorkspaceClientExt, ::windows_core::IUnknown);
@@ -5209,10 +5209,10 @@ impl IWorkspaceRegistration {
         P0: ::windows_core::IntoParam<IWorkspaceClientExt>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AddResource)(::windows_core::Interface::as_raw(self), punk.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AddResource(punk.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn RemoveResource(&self, dwcookieconnection: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RemoveResource)(::windows_core::Interface::as_raw(self), dwcookieconnection).ok()
+        ::windows_core::vcall!(self.RemoveResource(dwcookieconnection)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWorkspaceRegistration, ::windows_core::IUnknown);
@@ -5238,20 +5238,20 @@ impl IWorkspaceRegistration2 {
         P0: ::windows_core::IntoParam<IWorkspaceClientExt>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.AddResource)(::windows_core::Interface::as_raw(self), punk.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.AddResource(punk.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn RemoveResource(&self, dwcookieconnection: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.RemoveResource)(::windows_core::Interface::as_raw(self), dwcookieconnection).ok()
+        ::windows_core::vcall!(self.base__.RemoveResource(dwcookieconnection)).ok()
     }
     pub unsafe fn AddResourceEx<P0, P1>(&self, punk: P0, bstreventloguploadaddress: P1, pdwcookie: *mut u32, correlationid: ::windows_core::GUID) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IWorkspaceClientExt>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).AddResourceEx)(::windows_core::Interface::as_raw(self), punk.into_param().abi(), bstreventloguploadaddress.into_param().abi(), pdwcookie, ::core::mem::transmute(correlationid)).ok()
+        ::windows_core::vcall!(self.AddResourceEx(punk.into_param().abi(), bstreventloguploadaddress.into_param().abi(), pdwcookie, ::core::mem::transmute(correlationid))).ok()
     }
     pub unsafe fn RemoveResourceEx(&self, dwcookieconnection: u32, correlationid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RemoveResourceEx)(::windows_core::Interface::as_raw(self), dwcookieconnection, ::core::mem::transmute(correlationid)).ok()
+        ::windows_core::vcall!(self.RemoveResourceEx(dwcookieconnection, ::core::mem::transmute(correlationid))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWorkspaceRegistration2, ::windows_core::IUnknown, IWorkspaceRegistration);
@@ -5276,7 +5276,7 @@ impl IWorkspaceReportMessage {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).RegisterErrorLogMessage)(::windows_core::Interface::as_raw(self), bstrmessage.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RegisterErrorLogMessage(bstrmessage.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5286,14 +5286,14 @@ impl IWorkspaceReportMessage {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsErrorMessageRegistered)(::windows_core::Interface::as_raw(self), bstrwkspid.into_param().abi(), dwerrortype, bstrerrormessagetype.into_param().abi(), dwerrorcode, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsErrorMessageRegistered(bstrwkspid.into_param().abi(), dwerrortype, bstrerrormessagetype.into_param().abi(), dwerrorcode, &mut result__)).from_abi(result__)
     }
     pub unsafe fn RegisterErrorEvent<P0, P1>(&self, bstrwkspid: P0, dwerrortype: u32, bstrerrormessagetype: P1, dwerrorcode: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).RegisterErrorEvent)(::windows_core::Interface::as_raw(self), bstrwkspid.into_param().abi(), dwerrortype, bstrerrormessagetype.into_param().abi(), dwerrorcode).ok()
+        ::windows_core::vcall!(self.RegisterErrorEvent(bstrwkspid.into_param().abi(), dwerrortype, bstrerrormessagetype.into_param().abi(), dwerrorcode)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWorkspaceReportMessage, ::windows_core::IUnknown);
@@ -5329,7 +5329,7 @@ impl IWorkspaceResTypeRegistry {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).AddResourceType)(::windows_core::Interface::as_raw(self), fmachinewide.into_param().abi(), bstrfileextension.into_param().abi(), bstrlauncher.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AddResourceType(fmachinewide.into_param().abi(), bstrfileextension.into_param().abi(), bstrlauncher.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5338,7 +5338,7 @@ impl IWorkspaceResTypeRegistry {
         P0: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeleteResourceType)(::windows_core::Interface::as_raw(self), fmachinewide.into_param().abi(), bstrfileextension.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeleteResourceType(fmachinewide.into_param().abi(), bstrfileextension.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -5347,7 +5347,7 @@ impl IWorkspaceResTypeRegistry {
         P0: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRegisteredFileExtensions)(::windows_core::Interface::as_raw(self), fmachinewide.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRegisteredFileExtensions(fmachinewide.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5357,7 +5357,7 @@ impl IWorkspaceResTypeRegistry {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetResourceTypeInfo)(::windows_core::Interface::as_raw(self), fmachinewide.into_param().abi(), bstrfileextension.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetResourceTypeInfo(fmachinewide.into_param().abi(), bstrfileextension.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5367,7 +5367,7 @@ impl IWorkspaceResTypeRegistry {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ModifyResourceType)(::windows_core::Interface::as_raw(self), fmachinewide.into_param().abi(), bstrfileextension.into_param().abi(), bstrlauncher.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ModifyResourceType(fmachinewide.into_param().abi(), bstrfileextension.into_param().abi(), bstrlauncher.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5417,7 +5417,7 @@ impl IWorkspaceScriptable {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).DisconnectWorkspace)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DisconnectWorkspace(bstrworkspaceid.into_param().abi())).ok()
     }
     pub unsafe fn StartWorkspace<P0, P1, P2, P3>(&self, bstrworkspaceid: P0, bstrusername: P1, bstrpassword: P2, bstrworkspaceparams: P3, ltimeout: i32, lflags: i32) -> ::windows_core::Result<()>
     where
@@ -5426,7 +5426,7 @@ impl IWorkspaceScriptable {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).StartWorkspace)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags).ok()
+        ::windows_core::vcall!(self.StartWorkspace(bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5436,32 +5436,32 @@ impl IWorkspaceScriptable {
         P1: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsWorkspaceCredentialSpecified)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bcountunauthenticatedcredentials.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsWorkspaceCredentialSpecified(bstrworkspaceid.into_param().abi(), bcountunauthenticatedcredentials.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsWorkspaceSSOEnabled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsWorkspaceSSOEnabled)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsWorkspaceSSOEnabled(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ClearWorkspaceCredential<P0>(&self, bstrworkspaceid: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ClearWorkspaceCredential)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ClearWorkspaceCredential(bstrworkspaceid.into_param().abi())).ok()
     }
     pub unsafe fn OnAuthenticated<P0, P1>(&self, bstrworkspaceid: P0, bstrusername: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnAuthenticated)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnAuthenticated(bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi())).ok()
     }
     pub unsafe fn DisconnectWorkspaceByFriendlyName<P0>(&self, bstrworkspacefriendlyname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).DisconnectWorkspaceByFriendlyName)(::windows_core::Interface::as_raw(self), bstrworkspacefriendlyname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DisconnectWorkspaceByFriendlyName(bstrworkspacefriendlyname.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5504,7 +5504,7 @@ impl IWorkspaceScriptable2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.DisconnectWorkspace)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.DisconnectWorkspace(bstrworkspaceid.into_param().abi())).ok()
     }
     pub unsafe fn StartWorkspace<P0, P1, P2, P3>(&self, bstrworkspaceid: P0, bstrusername: P1, bstrpassword: P2, bstrworkspaceparams: P3, ltimeout: i32, lflags: i32) -> ::windows_core::Result<()>
     where
@@ -5513,7 +5513,7 @@ impl IWorkspaceScriptable2 {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.StartWorkspace)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags).ok()
+        ::windows_core::vcall!(self.base__.StartWorkspace(bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5523,32 +5523,32 @@ impl IWorkspaceScriptable2 {
         P1: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.IsWorkspaceCredentialSpecified)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bcountunauthenticatedcredentials.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.IsWorkspaceCredentialSpecified(bstrworkspaceid.into_param().abi(), bcountunauthenticatedcredentials.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsWorkspaceSSOEnabled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.IsWorkspaceSSOEnabled)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.IsWorkspaceSSOEnabled(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ClearWorkspaceCredential<P0>(&self, bstrworkspaceid: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.ClearWorkspaceCredential)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ClearWorkspaceCredential(bstrworkspaceid.into_param().abi())).ok()
     }
     pub unsafe fn OnAuthenticated<P0, P1>(&self, bstrworkspaceid: P0, bstrusername: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.OnAuthenticated)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.OnAuthenticated(bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi())).ok()
     }
     pub unsafe fn DisconnectWorkspaceByFriendlyName<P0>(&self, bstrworkspacefriendlyname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.DisconnectWorkspaceByFriendlyName)(::windows_core::Interface::as_raw(self), bstrworkspacefriendlyname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.DisconnectWorkspaceByFriendlyName(bstrworkspacefriendlyname.into_param().abi())).ok()
     }
     pub unsafe fn StartWorkspaceEx<P0, P1, P2, P3, P4, P5, P6>(&self, bstrworkspaceid: P0, bstrworkspacefriendlyname: P1, bstrredirectorname: P2, bstrusername: P3, bstrpassword: P4, bstrappcontainer: P5, bstrworkspaceparams: P6, ltimeout: i32, lflags: i32) -> ::windows_core::Result<()>
     where
@@ -5560,14 +5560,14 @@ impl IWorkspaceScriptable2 {
         P5: ::windows_core::IntoParam<::windows_core::BSTR>,
         P6: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).StartWorkspaceEx)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrworkspacefriendlyname.into_param().abi(), bstrredirectorname.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrappcontainer.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags).ok()
+        ::windows_core::vcall!(self.StartWorkspaceEx(bstrworkspaceid.into_param().abi(), bstrworkspacefriendlyname.into_param().abi(), bstrredirectorname.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrappcontainer.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags)).ok()
     }
     pub unsafe fn ResourceDismissed<P0, P1>(&self, bstrworkspaceid: P0, bstrworkspacefriendlyname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).ResourceDismissed)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrworkspacefriendlyname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ResourceDismissed(bstrworkspaceid.into_param().abi(), bstrworkspacefriendlyname.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5599,7 +5599,7 @@ impl IWorkspaceScriptable3 {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.DisconnectWorkspace)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.DisconnectWorkspace(bstrworkspaceid.into_param().abi())).ok()
     }
     pub unsafe fn StartWorkspace<P0, P1, P2, P3>(&self, bstrworkspaceid: P0, bstrusername: P1, bstrpassword: P2, bstrworkspaceparams: P3, ltimeout: i32, lflags: i32) -> ::windows_core::Result<()>
     where
@@ -5608,7 +5608,7 @@ impl IWorkspaceScriptable3 {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
         P3: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.StartWorkspace)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags).ok()
+        ::windows_core::vcall!(self.base__.base__.StartWorkspace(bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5618,32 +5618,32 @@ impl IWorkspaceScriptable3 {
         P1: ::windows_core::IntoParam<super::super::Foundation::VARIANT_BOOL>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.IsWorkspaceCredentialSpecified)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bcountunauthenticatedcredentials.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.IsWorkspaceCredentialSpecified(bstrworkspaceid.into_param().abi(), bcountunauthenticatedcredentials.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsWorkspaceSSOEnabled(&self) -> ::windows_core::Result<super::super::Foundation::VARIANT_BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.IsWorkspaceSSOEnabled)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.IsWorkspaceSSOEnabled(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ClearWorkspaceCredential<P0>(&self, bstrworkspaceid: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.ClearWorkspaceCredential)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.ClearWorkspaceCredential(bstrworkspaceid.into_param().abi())).ok()
     }
     pub unsafe fn OnAuthenticated<P0, P1>(&self, bstrworkspaceid: P0, bstrusername: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.OnAuthenticated)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.OnAuthenticated(bstrworkspaceid.into_param().abi(), bstrusername.into_param().abi())).ok()
     }
     pub unsafe fn DisconnectWorkspaceByFriendlyName<P0>(&self, bstrworkspacefriendlyname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.DisconnectWorkspaceByFriendlyName)(::windows_core::Interface::as_raw(self), bstrworkspacefriendlyname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.DisconnectWorkspaceByFriendlyName(bstrworkspacefriendlyname.into_param().abi())).ok()
     }
     pub unsafe fn StartWorkspaceEx<P0, P1, P2, P3, P4, P5, P6>(&self, bstrworkspaceid: P0, bstrworkspacefriendlyname: P1, bstrredirectorname: P2, bstrusername: P3, bstrpassword: P4, bstrappcontainer: P5, bstrworkspaceparams: P6, ltimeout: i32, lflags: i32) -> ::windows_core::Result<()>
     where
@@ -5655,14 +5655,14 @@ impl IWorkspaceScriptable3 {
         P5: ::windows_core::IntoParam<::windows_core::BSTR>,
         P6: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.StartWorkspaceEx)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrworkspacefriendlyname.into_param().abi(), bstrredirectorname.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrappcontainer.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags).ok()
+        ::windows_core::vcall!(self.base__.StartWorkspaceEx(bstrworkspaceid.into_param().abi(), bstrworkspacefriendlyname.into_param().abi(), bstrredirectorname.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrappcontainer.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags)).ok()
     }
     pub unsafe fn ResourceDismissed<P0, P1>(&self, bstrworkspaceid: P0, bstrworkspacefriendlyname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.ResourceDismissed)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrworkspacefriendlyname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ResourceDismissed(bstrworkspaceid.into_param().abi(), bstrworkspacefriendlyname.into_param().abi())).ok()
     }
     pub unsafe fn StartWorkspaceEx2<P0, P1, P2, P3, P4, P5, P6, P7>(&self, bstrworkspaceid: P0, bstrworkspacefriendlyname: P1, bstrredirectorname: P2, bstrusername: P3, bstrpassword: P4, bstrappcontainer: P5, bstrworkspaceparams: P6, ltimeout: i32, lflags: i32, bstreventloguploadaddress: P7, correlationid: ::windows_core::GUID) -> ::windows_core::Result<()>
     where
@@ -5675,7 +5675,7 @@ impl IWorkspaceScriptable3 {
         P6: ::windows_core::IntoParam<::windows_core::BSTR>,
         P7: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).StartWorkspaceEx2)(::windows_core::Interface::as_raw(self), bstrworkspaceid.into_param().abi(), bstrworkspacefriendlyname.into_param().abi(), bstrredirectorname.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrappcontainer.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags, bstreventloguploadaddress.into_param().abi(), ::core::mem::transmute(correlationid)).ok()
+        ::windows_core::vcall!(self.StartWorkspaceEx2(bstrworkspaceid.into_param().abi(), bstrworkspacefriendlyname.into_param().abi(), bstrredirectorname.into_param().abi(), bstrusername.into_param().abi(), bstrpassword.into_param().abi(), bstrappcontainer.into_param().abi(), bstrworkspaceparams.into_param().abi(), ltimeout, lflags, bstreventloguploadaddress.into_param().abi(), ::core::mem::transmute(correlationid))).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5703,32 +5703,32 @@ impl ItsPubPlugin {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetResourceList)(::windows_core::Interface::as_raw(self), userid.into_param().abi(), pceapplistsize, resourcelist).ok()
+        ::windows_core::vcall!(self.GetResourceList(userid.into_param().abi(), pceapplistsize, resourcelist)).ok()
     }
     pub unsafe fn GetResource<P0>(&self, alias: P0, flags: i32, resource: *mut pluginResource) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetResource)(::windows_core::Interface::as_raw(self), alias.into_param().abi(), flags, resource).ok()
+        ::windows_core::vcall!(self.GetResource(alias.into_param().abi(), flags, resource)).ok()
     }
     pub unsafe fn GetCacheLastUpdateTime(&self) -> ::windows_core::Result<u64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCacheLastUpdateTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCacheLastUpdateTime(&mut result__)).from_abi(result__)
     }
     pub unsafe fn pluginName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).pluginName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.pluginName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn pluginVersion(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).pluginVersion)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.pluginVersion(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ResolveResource<P0, P1>(&self, resourcetype: *mut u32, resourcelocation: &mut [u16; 256], endpointname: &mut [u16; 256], userid: P0, alias: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).ResolveResource)(::windows_core::Interface::as_raw(self), resourcetype, ::core::mem::transmute(resourcelocation.as_ptr()), ::core::mem::transmute(endpointname.as_ptr()), userid.into_param().abi(), alias.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ResolveResource(resourcetype, ::core::mem::transmute(resourcelocation.as_ptr()), ::core::mem::transmute(endpointname.as_ptr()), userid.into_param().abi(), alias.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ItsPubPlugin, ::windows_core::IUnknown);
@@ -5757,51 +5757,51 @@ impl ItsPubPlugin2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetResourceList)(::windows_core::Interface::as_raw(self), userid.into_param().abi(), pceapplistsize, resourcelist).ok()
+        ::windows_core::vcall!(self.base__.GetResourceList(userid.into_param().abi(), pceapplistsize, resourcelist)).ok()
     }
     pub unsafe fn GetResource<P0>(&self, alias: P0, flags: i32, resource: *mut pluginResource) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetResource)(::windows_core::Interface::as_raw(self), alias.into_param().abi(), flags, resource).ok()
+        ::windows_core::vcall!(self.base__.GetResource(alias.into_param().abi(), flags, resource)).ok()
     }
     pub unsafe fn GetCacheLastUpdateTime(&self) -> ::windows_core::Result<u64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetCacheLastUpdateTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetCacheLastUpdateTime(&mut result__)).from_abi(result__)
     }
     pub unsafe fn pluginName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.pluginName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.pluginName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn pluginVersion(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.pluginVersion)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.pluginVersion(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ResolveResource<P0, P1>(&self, resourcetype: *mut u32, resourcelocation: &mut [u16; 256], endpointname: &mut [u16; 256], userid: P0, alias: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.ResolveResource)(::windows_core::Interface::as_raw(self), resourcetype, ::core::mem::transmute(resourcelocation.as_ptr()), ::core::mem::transmute(endpointname.as_ptr()), userid.into_param().abi(), alias.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ResolveResource(resourcetype, ::core::mem::transmute(resourcelocation.as_ptr()), ::core::mem::transmute(endpointname.as_ptr()), userid.into_param().abi(), alias.into_param().abi())).ok()
     }
     pub unsafe fn GetResource2List<P0>(&self, userid: P0, pceapplistsize: *mut i32, resourcelist: *mut *mut pluginResource2) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetResource2List)(::windows_core::Interface::as_raw(self), userid.into_param().abi(), pceapplistsize, resourcelist).ok()
+        ::windows_core::vcall!(self.GetResource2List(userid.into_param().abi(), pceapplistsize, resourcelist)).ok()
     }
     pub unsafe fn GetResource2<P0>(&self, alias: P0, flags: i32, resource: *mut pluginResource2) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetResource2)(::windows_core::Interface::as_raw(self), alias.into_param().abi(), flags, resource).ok()
+        ::windows_core::vcall!(self.GetResource2(alias.into_param().abi(), flags, resource)).ok()
     }
     pub unsafe fn ResolvePersonalDesktop<P0, P1>(&self, userid: P0, poolid: P1, epdresolutiontype: TSPUB_PLUGIN_PD_RESOLUTION_TYPE, ppdassignmenttype: *mut TSPUB_PLUGIN_PD_ASSIGNMENT_TYPE, endpointname: &mut [u16; 256]) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).ResolvePersonalDesktop)(::windows_core::Interface::as_raw(self), userid.into_param().abi(), poolid.into_param().abi(), epdresolutiontype, ppdassignmenttype, ::core::mem::transmute(endpointname.as_ptr())).ok()
+        ::windows_core::vcall!(self.ResolvePersonalDesktop(userid.into_param().abi(), poolid.into_param().abi(), epdresolutiontype, ppdassignmenttype, ::core::mem::transmute(endpointname.as_ptr()))).ok()
     }
     pub unsafe fn DeletePersonalDesktopAssignment<P0, P1, P2>(&self, userid: P0, poolid: P1, endpointname: P2) -> ::windows_core::Result<()>
     where
@@ -5809,7 +5809,7 @@ impl ItsPubPlugin2 {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeletePersonalDesktopAssignment)(::windows_core::Interface::as_raw(self), userid.into_param().abi(), poolid.into_param().abi(), endpointname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeletePersonalDesktopAssignment(userid.into_param().abi(), poolid.into_param().abi(), endpointname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ItsPubPlugin2, ::windows_core::IUnknown, ItsPubPlugin);

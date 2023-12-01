@@ -9,10 +9,10 @@ pub mod Fxc;
 pub struct ID3DBlob(::windows_core::IUnknown);
 impl ID3DBlob {
     pub unsafe fn GetBufferPointer(&self) -> *mut ::core::ffi::c_void {
-        (::windows_core::Interface::vtable(self).GetBufferPointer)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.GetBufferPointer())
     }
     pub unsafe fn GetBufferSize(&self) -> usize {
-        (::windows_core::Interface::vtable(self).GetBufferSize)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.GetBufferSize())
     }
 }
 ::windows_core::imp::interface_hierarchy!(ID3DBlob, ::windows_core::IUnknown);
@@ -37,10 +37,10 @@ pub struct ID3DDestructionNotifier(::windows_core::IUnknown);
 impl ID3DDestructionNotifier {
     pub unsafe fn RegisterDestructionCallback(&self, callbackfn: PFN_DESTRUCTION_CALLBACK, pdata: *const ::core::ffi::c_void) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RegisterDestructionCallback)(::windows_core::Interface::as_raw(self), callbackfn, pdata, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RegisterDestructionCallback(callbackfn, pdata, &mut result__)).from_abi(result__)
     }
     pub unsafe fn UnregisterDestructionCallback(&self, callbackid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UnregisterDestructionCallback)(::windows_core::Interface::as_raw(self), callbackid).ok()
+        ::windows_core::vcall!(self.UnregisterDestructionCallback(callbackid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ID3DDestructionNotifier, ::windows_core::IUnknown);
@@ -67,10 +67,10 @@ impl ID3DInclude {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).Open)(::windows_core::Interface::as_raw(self), includetype, pfilename.into_param().abi(), pparentdata, ppdata, pbytes).ok()
+        ::windows_core::vcall!(self.Open(includetype, pfilename.into_param().abi(), pparentdata, ppdata, pbytes)).ok()
     }
     pub unsafe fn Close(&self, pdata: *const ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self), pdata).ok()
+        ::windows_core::vcall!(self.Close(pdata)).ok()
     }
 }
 unsafe impl ::core::marker::Send for ID3DInclude {}

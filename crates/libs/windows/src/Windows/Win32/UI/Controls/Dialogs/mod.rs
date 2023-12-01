@@ -150,10 +150,10 @@ pub unsafe fn ReplaceTextW(param0: *mut FINDREPLACEW) -> super::super::super::Fo
 pub struct IPrintDialogCallback(::windows_core::IUnknown);
 impl IPrintDialogCallback {
     pub unsafe fn InitDone(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).InitDone)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.InitDone()).ok()
     }
     pub unsafe fn SelectionChange(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SelectionChange)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SelectionChange()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -163,7 +163,7 @@ impl IPrintDialogCallback {
         P1: ::windows_core::IntoParam<super::super::super::Foundation::WPARAM>,
         P2: ::windows_core::IntoParam<super::super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).HandleMessage)(::windows_core::Interface::as_raw(self), hdlg.into_param().abi(), umsg, wparam.into_param().abi(), lparam.into_param().abi(), presult).ok()
+        ::windows_core::vcall!(self.HandleMessage(hdlg.into_param().abi(), umsg, wparam.into_param().abi(), lparam.into_param().abi(), presult)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintDialogCallback, ::windows_core::IUnknown);
@@ -191,13 +191,13 @@ impl IPrintDialogServices {
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
     pub unsafe fn GetCurrentDevMode(&self, pdevmode: *mut super::super::super::Graphics::Gdi::DEVMODEA, pcbsize: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCurrentDevMode)(::windows_core::Interface::as_raw(self), pdevmode, pcbsize).ok()
+        ::windows_core::vcall!(self.GetCurrentDevMode(pdevmode, pcbsize)).ok()
     }
     pub unsafe fn GetCurrentPrinterName(&self, pprintername: ::windows_core::PWSTR, pcchsize: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCurrentPrinterName)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pprintername), pcchsize).ok()
+        ::windows_core::vcall!(self.GetCurrentPrinterName(::core::mem::transmute(pprintername), pcchsize)).ok()
     }
     pub unsafe fn GetCurrentPortName(&self, pportname: ::windows_core::PWSTR, pcchsize: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCurrentPortName)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pportname), pcchsize).ok()
+        ::windows_core::vcall!(self.GetCurrentPortName(::core::mem::transmute(pportname), pcchsize)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintDialogServices, ::windows_core::IUnknown);

@@ -34,7 +34,7 @@ pub struct IPrintDocumentPackageStatusEvent(::windows_core::IUnknown);
 #[cfg(feature = "Win32_System_Com")]
 impl IPrintDocumentPackageStatusEvent {
     pub unsafe fn PackageStatusUpdated(&self, packagestatus: *const PrintDocumentPackageStatus) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).PackageStatusUpdated)(::windows_core::Interface::as_raw(self), packagestatus).ok()
+        ::windows_core::vcall!(self.PackageStatusUpdated(packagestatus)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -59,17 +59,17 @@ pub struct IPrintDocumentPackageStatusEvent_Vtbl {
 pub struct IPrintDocumentPackageTarget(::windows_core::IUnknown);
 impl IPrintDocumentPackageTarget {
     pub unsafe fn GetPackageTargetTypes(&self, targetcount: *mut u32, targettypes: *mut *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetPackageTargetTypes)(::windows_core::Interface::as_raw(self), targetcount, targettypes).ok()
+        ::windows_core::vcall!(self.GetPackageTargetTypes(targetcount, targettypes)).ok()
     }
     pub unsafe fn GetPackageTarget<T>(&self, guidtargettype: *const ::windows_core::GUID) -> ::windows_core::Result<T>
     where
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).GetPackageTarget)(::windows_core::Interface::as_raw(self), guidtargettype, &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPackageTarget(guidtargettype, &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintDocumentPackageTarget, ::windows_core::IUnknown);
@@ -95,14 +95,14 @@ impl IPrintDocumentPackageTarget2 {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetIsTargetIppPrinter(&self) -> ::windows_core::Result<super::super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetIsTargetIppPrinter)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetIsTargetIppPrinter(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetTargetIppPrintDevice<T>(&self) -> ::windows_core::Result<T>
     where
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).GetTargetIppPrintDevice)(::windows_core::Interface::as_raw(self), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetTargetIppPrintDevice(&<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintDocumentPackageTarget2, ::windows_core::IUnknown);
@@ -136,7 +136,7 @@ impl IPrintDocumentPackageTargetFactory {
         P3: ::windows_core::IntoParam<super::super::super::System::Com::IStream>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateDocumentPackageTargetForPrintJob)(::windows_core::Interface::as_raw(self), printername.into_param().abi(), jobname.into_param().abi(), joboutputstream.into_param().abi(), jobprintticketstream.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateDocumentPackageTargetForPrintJob(printername.into_param().abi(), jobname.into_param().abi(), joboutputstream.into_param().abi(), jobprintticketstream.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintDocumentPackageTargetFactory, ::windows_core::IUnknown);
@@ -160,10 +160,10 @@ pub struct IPrintDocumentPackageTargetFactory_Vtbl {
 pub struct IXpsPrintJob(::windows_core::IUnknown);
 impl IXpsPrintJob {
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
     pub unsafe fn GetJobStatus(&self, jobstatus: *mut XPS_JOB_STATUS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetJobStatus)(::windows_core::Interface::as_raw(self), jobstatus).ok()
+        ::windows_core::vcall!(self.GetJobStatus(jobstatus)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IXpsPrintJob, ::windows_core::IUnknown);
@@ -190,15 +190,15 @@ impl IXpsPrintJobStream {
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Read(&self, pv: *mut ::core::ffi::c_void, cb: u32, pcbread: ::core::option::Option<*mut u32>) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).base__.Read)(::windows_core::Interface::as_raw(self), pv, cb, ::core::mem::transmute(pcbread.unwrap_or(::std::ptr::null_mut())))
+        ::windows_core::vcall!(self.base__.Read(pv, cb, ::core::mem::transmute(pcbread.unwrap_or(::std::ptr::null_mut()))))
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Write(&self, pv: *const ::core::ffi::c_void, cb: u32, pcbwritten: ::core::option::Option<*mut u32>) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).base__.Write)(::windows_core::Interface::as_raw(self), pv, cb, ::core::mem::transmute(pcbwritten.unwrap_or(::std::ptr::null_mut())))
+        ::windows_core::vcall!(self.base__.Write(pv, cb, ::core::mem::transmute(pcbwritten.unwrap_or(::std::ptr::null_mut()))))
     }
     pub unsafe fn Close(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Close()).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]

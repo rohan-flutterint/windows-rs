@@ -28,11 +28,11 @@ impl DisplayRequest {
     }
     pub fn RequestActive(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RequestActive)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.RequestActive()).ok() }
     }
     pub fn RequestRelease(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RequestRelease)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.RequestRelease()).ok() }
     }
 }
 impl ::windows_core::RuntimeType for DisplayRequest {

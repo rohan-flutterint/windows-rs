@@ -3573,7 +3573,7 @@ pub unsafe fn GdiplusStartup(token: *mut usize, input: *const GdiplusStartupInpu
 pub struct GdiplusAbort(::std::ptr::NonNull<::std::ffi::c_void>);
 impl GdiplusAbort {
     pub unsafe fn Abort(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Abort)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Abort()).ok()
     }
 }
 unsafe impl ::windows_core::Interface for GdiplusAbort {
@@ -3589,13 +3589,13 @@ pub struct GdiplusAbort_Vtbl {
 pub struct IImageBytes(::windows_core::IUnknown);
 impl IImageBytes {
     pub unsafe fn CountBytes(&self, pcb: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CountBytes)(::windows_core::Interface::as_raw(self), pcb).ok()
+        ::windows_core::vcall!(self.CountBytes(pcb)).ok()
     }
     pub unsafe fn LockBytes(&self, cb: u32, uloffset: u32, ppvbytes: *const *const ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).LockBytes)(::windows_core::Interface::as_raw(self), cb, uloffset, ppvbytes).ok()
+        ::windows_core::vcall!(self.LockBytes(cb, uloffset, ppvbytes)).ok()
     }
     pub unsafe fn UnlockBytes(&self, pvbytes: *const ::core::ffi::c_void, cb: u32, uloffset: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UnlockBytes)(::windows_core::Interface::as_raw(self), pvbytes, cb, uloffset).ok()
+        ::windows_core::vcall!(self.UnlockBytes(pvbytes, cb, uloffset)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IImageBytes, ::windows_core::IUnknown);

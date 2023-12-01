@@ -31,17 +31,17 @@ impl ID3D11On12Device {
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
         T: ::windows_core::ComInterface,
     {
-        (::windows_core::Interface::vtable(self).CreateWrappedResource)(::windows_core::Interface::as_raw(self), presource12.into_param().abi(), pflags11, instate, outstate, &<T as ::windows_core::ComInterface>::IID, result__ as *mut _ as *mut _).ok()
+        ::windows_core::vcall!(self.CreateWrappedResource(presource12.into_param().abi(), pflags11, instate, outstate, &<T as ::windows_core::ComInterface>::IID, result__ as *mut _ as *mut _)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Direct3D11\"`"]
     #[cfg(feature = "Win32_Graphics_Direct3D11")]
     pub unsafe fn ReleaseWrappedResources(&self, ppresources: &[::core::option::Option<super::Direct3D11::ID3D11Resource>]) {
-        (::windows_core::Interface::vtable(self).ReleaseWrappedResources)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap())
+        ::windows_core::vcall!(self.ReleaseWrappedResources(::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap()))
     }
     #[doc = "Required features: `\"Win32_Graphics_Direct3D11\"`"]
     #[cfg(feature = "Win32_Graphics_Direct3D11")]
     pub unsafe fn AcquireWrappedResources(&self, ppresources: &[::core::option::Option<super::Direct3D11::ID3D11Resource>]) {
-        (::windows_core::Interface::vtable(self).AcquireWrappedResources)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap())
+        ::windows_core::vcall!(self.AcquireWrappedResources(::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap()))
     }
 }
 ::windows_core::imp::interface_hierarchy!(ID3D11On12Device, ::windows_core::IUnknown);
@@ -81,24 +81,24 @@ impl ID3D11On12Device1 {
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
         T: ::windows_core::ComInterface,
     {
-        (::windows_core::Interface::vtable(self).base__.CreateWrappedResource)(::windows_core::Interface::as_raw(self), presource12.into_param().abi(), pflags11, instate, outstate, &<T as ::windows_core::ComInterface>::IID, result__ as *mut _ as *mut _).ok()
+        ::windows_core::vcall!(self.base__.CreateWrappedResource(presource12.into_param().abi(), pflags11, instate, outstate, &<T as ::windows_core::ComInterface>::IID, result__ as *mut _ as *mut _)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Direct3D11\"`"]
     #[cfg(feature = "Win32_Graphics_Direct3D11")]
     pub unsafe fn ReleaseWrappedResources(&self, ppresources: &[::core::option::Option<super::Direct3D11::ID3D11Resource>]) {
-        (::windows_core::Interface::vtable(self).base__.ReleaseWrappedResources)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap())
+        ::windows_core::vcall!(self.base__.ReleaseWrappedResources(::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap()))
     }
     #[doc = "Required features: `\"Win32_Graphics_Direct3D11\"`"]
     #[cfg(feature = "Win32_Graphics_Direct3D11")]
     pub unsafe fn AcquireWrappedResources(&self, ppresources: &[::core::option::Option<super::Direct3D11::ID3D11Resource>]) {
-        (::windows_core::Interface::vtable(self).base__.AcquireWrappedResources)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap())
+        ::windows_core::vcall!(self.base__.AcquireWrappedResources(::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap()))
     }
     pub unsafe fn GetD3D12Device<T>(&self) -> ::windows_core::Result<T>
     where
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).GetD3D12Device)(::windows_core::Interface::as_raw(self), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetD3D12Device(&<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ID3D11On12Device1, ::windows_core::IUnknown, ID3D11On12Device);
@@ -127,24 +127,24 @@ impl ID3D11On12Device2 {
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
         T: ::windows_core::ComInterface,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.CreateWrappedResource)(::windows_core::Interface::as_raw(self), presource12.into_param().abi(), pflags11, instate, outstate, &<T as ::windows_core::ComInterface>::IID, result__ as *mut _ as *mut _).ok()
+        ::windows_core::vcall!(self.base__.base__.CreateWrappedResource(presource12.into_param().abi(), pflags11, instate, outstate, &<T as ::windows_core::ComInterface>::IID, result__ as *mut _ as *mut _)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Direct3D11\"`"]
     #[cfg(feature = "Win32_Graphics_Direct3D11")]
     pub unsafe fn ReleaseWrappedResources(&self, ppresources: &[::core::option::Option<super::Direct3D11::ID3D11Resource>]) {
-        (::windows_core::Interface::vtable(self).base__.base__.ReleaseWrappedResources)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap())
+        ::windows_core::vcall!(self.base__.base__.ReleaseWrappedResources(::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap()))
     }
     #[doc = "Required features: `\"Win32_Graphics_Direct3D11\"`"]
     #[cfg(feature = "Win32_Graphics_Direct3D11")]
     pub unsafe fn AcquireWrappedResources(&self, ppresources: &[::core::option::Option<super::Direct3D11::ID3D11Resource>]) {
-        (::windows_core::Interface::vtable(self).base__.base__.AcquireWrappedResources)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap())
+        ::windows_core::vcall!(self.base__.base__.AcquireWrappedResources(::core::mem::transmute(ppresources.as_ptr()), ppresources.len().try_into().unwrap()))
     }
     pub unsafe fn GetD3D12Device<T>(&self) -> ::windows_core::Result<T>
     where
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).base__.GetD3D12Device)(::windows_core::Interface::as_raw(self), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetD3D12Device(&<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Graphics_Direct3D11\"`, `\"Win32_Graphics_Direct3D12\"`"]
     #[cfg(all(feature = "Win32_Graphics_Direct3D11", feature = "Win32_Graphics_Direct3D12"))]
@@ -155,7 +155,7 @@ impl ID3D11On12Device2 {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).UnwrapUnderlyingResource)(::windows_core::Interface::as_raw(self), presource11.into_param().abi(), pcommandqueue.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.UnwrapUnderlyingResource(presource11.into_param().abi(), pcommandqueue.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Graphics_Direct3D11\"`, `\"Win32_Graphics_Direct3D12\"`"]
     #[cfg(all(feature = "Win32_Graphics_Direct3D11", feature = "Win32_Graphics_Direct3D12"))]
@@ -163,7 +163,7 @@ impl ID3D11On12Device2 {
     where
         P0: ::windows_core::IntoParam<super::Direct3D11::ID3D11Resource>,
     {
-        (::windows_core::Interface::vtable(self).ReturnUnderlyingResource)(::windows_core::Interface::as_raw(self), presource11.into_param().abi(), numsync, psignalvalues, ::core::mem::transmute(ppfences)).ok()
+        ::windows_core::vcall!(self.ReturnUnderlyingResource(presource11.into_param().abi(), numsync, psignalvalues, ::core::mem::transmute(ppfences))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ID3D11On12Device2, ::windows_core::IUnknown, ID3D11On12Device, ID3D11On12Device1);

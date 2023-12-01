@@ -19,7 +19,7 @@ impl HtmlUtilities {
     pub fn ConvertToText(html: &::windows_core::HSTRING) -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IHtmlUtilities(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ConvertToText)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(html), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ConvertToText(::core::mem::transmute_copy(html), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

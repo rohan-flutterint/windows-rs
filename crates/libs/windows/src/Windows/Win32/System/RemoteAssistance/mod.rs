@@ -29,7 +29,7 @@ impl IRendezvousApplication {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).SetRendezvousSession)(::windows_core::Interface::as_raw(self), prendezvoussession.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetRendezvousSession(prendezvoussession.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IRendezvousApplication, ::windows_core::IUnknown);
@@ -51,27 +51,27 @@ pub struct IRendezvousSession(::windows_core::IUnknown);
 impl IRendezvousSession {
     pub unsafe fn State(&self) -> ::windows_core::Result<RENDEZVOUS_SESSION_STATE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).State)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.State(&mut result__)).from_abi(result__)
     }
     pub unsafe fn RemoteUser(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RemoteUser)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RemoteUser(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Flags(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Flags)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Flags(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SendContextData<P0>(&self, bstrdata: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SendContextData)(::windows_core::Interface::as_raw(self), bstrdata.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SendContextData(bstrdata.into_param().abi())).ok()
     }
     pub unsafe fn Terminate<P0>(&self, hr: ::windows_core::HRESULT, bstrappdata: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).Terminate)(::windows_core::Interface::as_raw(self), hr, bstrappdata.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Terminate(hr, bstrappdata.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IRendezvousSession, ::windows_core::IUnknown);

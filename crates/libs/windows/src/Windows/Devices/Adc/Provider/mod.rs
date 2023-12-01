@@ -6,61 +6,61 @@ impl IAdcControllerProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ChannelCount)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ChannelCount(&mut result__)).from_abi(result__)
         }
     }
     pub fn ResolutionInBits(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ResolutionInBits)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ResolutionInBits(&mut result__)).from_abi(result__)
         }
     }
     pub fn MinValue(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MinValue)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MinValue(&mut result__)).from_abi(result__)
         }
     }
     pub fn MaxValue(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MaxValue)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MaxValue(&mut result__)).from_abi(result__)
         }
     }
     pub fn ChannelMode(&self) -> ::windows_core::Result<ProviderAdcChannelMode> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ChannelMode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ChannelMode(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetChannelMode(&self, value: ProviderAdcChannelMode) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetChannelMode)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetChannelMode(value)).ok() }
     }
     pub fn IsChannelModeSupported(&self, channelmode: ProviderAdcChannelMode) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsChannelModeSupported)(::windows_core::Interface::as_raw(this), channelmode, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsChannelModeSupported(channelmode, &mut result__)).from_abi(result__)
         }
     }
     pub fn AcquireChannel(&self, channel: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).AcquireChannel)(::windows_core::Interface::as_raw(this), channel).ok() }
+        unsafe { ::windows_core::vcall!(this.AcquireChannel(channel)).ok() }
     }
     pub fn ReleaseChannel(&self, channel: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ReleaseChannel)(::windows_core::Interface::as_raw(this), channel).ok() }
+        unsafe { ::windows_core::vcall!(this.ReleaseChannel(channel)).ok() }
     }
     pub fn ReadValue(&self, channelnumber: i32) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ReadValue)(::windows_core::Interface::as_raw(this), channelnumber, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ReadValue(channelnumber, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -99,7 +99,7 @@ impl IAdcProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetControllers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetControllers(&mut result__)).from_abi(result__)
         }
     }
 }

@@ -1758,7 +1758,7 @@ impl ICcgDomainAuthCredentials {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetPasswordCredentials)(::windows_core::Interface::as_raw(self), plugininput.into_param().abi(), domainname, username, password).ok()
+        ::windows_core::vcall!(self.GetPasswordCredentials(plugininput.into_param().abi(), domainname, username, password)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICcgDomainAuthCredentials, ::windows_core::IUnknown);

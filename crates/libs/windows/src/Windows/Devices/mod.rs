@@ -95,7 +95,7 @@ impl ILowLevelDevicesAggregateProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AdcControllerProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AdcControllerProvider(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Pwm_Provider\"`"]
@@ -104,7 +104,7 @@ impl ILowLevelDevicesAggregateProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PwmControllerProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PwmControllerProvider(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Gpio_Provider\"`"]
@@ -113,7 +113,7 @@ impl ILowLevelDevicesAggregateProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GpioControllerProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GpioControllerProvider(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_I2c_Provider\"`"]
@@ -122,7 +122,7 @@ impl ILowLevelDevicesAggregateProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).I2cControllerProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.I2cControllerProvider(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Spi_Provider\"`"]
@@ -131,7 +131,7 @@ impl ILowLevelDevicesAggregateProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SpiControllerProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SpiControllerProvider(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -231,7 +231,7 @@ impl LowLevelDevicesAggregateProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AdcControllerProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AdcControllerProvider(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Pwm_Provider\"`"]
@@ -240,7 +240,7 @@ impl LowLevelDevicesAggregateProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PwmControllerProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PwmControllerProvider(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Gpio_Provider\"`"]
@@ -249,7 +249,7 @@ impl LowLevelDevicesAggregateProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GpioControllerProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GpioControllerProvider(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_I2c_Provider\"`"]
@@ -258,7 +258,7 @@ impl LowLevelDevicesAggregateProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).I2cControllerProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.I2cControllerProvider(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Spi_Provider\"`"]
@@ -267,7 +267,7 @@ impl LowLevelDevicesAggregateProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SpiControllerProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SpiControllerProvider(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Devices_Adc_Provider\"`, `\"Devices_Gpio_Provider\"`, `\"Devices_I2c_Provider\"`, `\"Devices_Pwm_Provider\"`, `\"Devices_Spi_Provider\"`"]
@@ -282,7 +282,7 @@ impl LowLevelDevicesAggregateProvider {
     {
         Self::ILowLevelDevicesAggregateProviderFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Create)(::windows_core::Interface::as_raw(this), adc.try_into_param()?.abi(), pwm.try_into_param()?.abi(), gpio.try_into_param()?.abi(), i2c.try_into_param()?.abi(), spi.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Create(adc.try_into_param()?.abi(), pwm.try_into_param()?.abi(), gpio.try_into_param()?.abi(), i2c.try_into_param()?.abi(), spi.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -314,14 +314,14 @@ impl LowLevelDevicesController {
     pub fn DefaultProvider() -> ::windows_core::Result<ILowLevelDevicesAggregateProvider> {
         Self::ILowLevelDevicesControllerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DefaultProvider)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DefaultProvider(&mut result__)).from_abi(result__)
         })
     }
     pub fn SetDefaultProvider<P0>(value: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::TryIntoParam<ILowLevelDevicesAggregateProvider>,
     {
-        Self::ILowLevelDevicesControllerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).SetDefaultProvider)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() })
+        Self::ILowLevelDevicesControllerStatics(|this| unsafe { ::windows_core::vcall!(this.SetDefaultProvider(value.try_into_param()?.abi())).ok() })
     }
     #[doc(hidden)]
     pub fn ILowLevelDevicesControllerStatics<R, F: FnOnce(&ILowLevelDevicesControllerStatics) -> ::windows_core::Result<R>>(callback: F) -> ::windows_core::Result<R> {

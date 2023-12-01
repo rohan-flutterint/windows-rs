@@ -3525,12 +3525,12 @@ impl IAdviseSinkEx {
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com_StructuredStorage"))]
     pub unsafe fn OnDataChange(&self, pformatetc: *const super::Com::FORMATETC, pstgmed: *const super::Com::STGMEDIUM) {
-        (::windows_core::Interface::vtable(self).base__.OnDataChange)(::windows_core::Interface::as_raw(self), pformatetc, pstgmed)
+        ::windows_core::vcall!(self.base__.OnDataChange(pformatetc, pstgmed))
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn OnViewChange(&self, dwaspect: u32, lindex: i32) {
-        (::windows_core::Interface::vtable(self).base__.OnViewChange)(::windows_core::Interface::as_raw(self), dwaspect, lindex)
+        ::windows_core::vcall!(self.base__.OnViewChange(dwaspect, lindex))
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -3538,20 +3538,20 @@ impl IAdviseSinkEx {
     where
         P0: ::windows_core::IntoParam<super::Com::IMoniker>,
     {
-        (::windows_core::Interface::vtable(self).base__.OnRename)(::windows_core::Interface::as_raw(self), pmk.into_param().abi())
+        ::windows_core::vcall!(self.base__.OnRename(pmk.into_param().abi()))
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn OnSave(&self) {
-        (::windows_core::Interface::vtable(self).base__.OnSave)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.base__.OnSave())
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn OnClose(&self) {
-        (::windows_core::Interface::vtable(self).base__.OnClose)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.base__.OnClose())
     }
     pub unsafe fn OnViewStatusChange(&self, dwviewstatus: u32) {
-        (::windows_core::Interface::vtable(self).OnViewStatusChange)(::windows_core::Interface::as_raw(self), dwviewstatus)
+        ::windows_core::vcall!(self.OnViewStatusChange(dwviewstatus))
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -3578,7 +3578,7 @@ impl ICanHandleException {
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn CanHandleException(&self, pexcepinfo: *const super::Com::EXCEPINFO, pvar: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CanHandleException)(::windows_core::Interface::as_raw(self), pexcepinfo, pvar).ok()
+        ::windows_core::vcall!(self.CanHandleException(pexcepinfo, pvar)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICanHandleException, ::windows_core::IUnknown);
@@ -3612,7 +3612,7 @@ impl IClassFactory2 {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).base__.CreateInstance)(::windows_core::Interface::as_raw(self), punkouter.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.CreateInstance(punkouter.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -3620,16 +3620,16 @@ impl IClassFactory2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.LockServer)(::windows_core::Interface::as_raw(self), flock.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.LockServer(flock.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetLicInfo(&self, plicinfo: *mut LICINFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetLicInfo)(::windows_core::Interface::as_raw(self), plicinfo).ok()
+        ::windows_core::vcall!(self.GetLicInfo(plicinfo)).ok()
     }
     pub unsafe fn RequestLicKey(&self, dwreserved: u32) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RequestLicKey)(::windows_core::Interface::as_raw(self), dwreserved, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RequestLicKey(dwreserved, &mut result__)).from_abi(result__)
     }
     pub unsafe fn CreateInstanceLic<P0, P1, P2, T>(&self, punkouter: P0, punkreserved: P1, bstrkey: P2) -> ::windows_core::Result<T>
     where
@@ -3639,7 +3639,7 @@ impl IClassFactory2 {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).CreateInstanceLic)(::windows_core::Interface::as_raw(self), punkouter.into_param().abi(), punkreserved.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, bstrkey.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateInstanceLic(punkouter.into_param().abi(), punkreserved.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, bstrkey.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -3669,7 +3669,7 @@ pub struct IClassFactory2_Vtbl {
 pub struct IContinue(::windows_core::IUnknown);
 impl IContinue {
     pub unsafe fn FContinue(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FContinue)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.FContinue()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IContinue, ::windows_core::IUnknown);
@@ -3690,13 +3690,13 @@ pub struct IContinue_Vtbl {
 pub struct IContinueCallback(::windows_core::IUnknown);
 impl IContinueCallback {
     pub unsafe fn FContinue(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FContinue)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.FContinue()).ok()
     }
     pub unsafe fn FContinuePrinting<P0>(&self, ncntprinted: i32, ncurpage: i32, pwszprintstatus: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).FContinuePrinting)(::windows_core::Interface::as_raw(self), ncntprinted, ncurpage, pwszprintstatus.into_param().abi()).ok()
+        ::windows_core::vcall!(self.FContinuePrinting(ncntprinted, ncurpage, pwszprintstatus.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IContinueCallback, ::windows_core::IUnknown);
@@ -3718,28 +3718,28 @@ pub struct IContinueCallback_Vtbl {
 pub struct ICreateErrorInfo(::windows_core::IUnknown);
 impl ICreateErrorInfo {
     pub unsafe fn SetGUID(&self, rguid: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetGUID)(::windows_core::Interface::as_raw(self), rguid).ok()
+        ::windows_core::vcall!(self.SetGUID(rguid)).ok()
     }
     pub unsafe fn SetSource<P0>(&self, szsource: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetSource)(::windows_core::Interface::as_raw(self), szsource.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetSource(szsource.into_param().abi())).ok()
     }
     pub unsafe fn SetDescription<P0>(&self, szdescription: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetDescription)(::windows_core::Interface::as_raw(self), szdescription.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetDescription(szdescription.into_param().abi())).ok()
     }
     pub unsafe fn SetHelpFile<P0>(&self, szhelpfile: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetHelpFile)(::windows_core::Interface::as_raw(self), szhelpfile.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetHelpFile(szhelpfile.into_param().abi())).ok()
     }
     pub unsafe fn SetHelpContext(&self, dwhelpcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetHelpContext)(::windows_core::Interface::as_raw(self), dwhelpcontext).ok()
+        ::windows_core::vcall!(self.SetHelpContext(dwhelpcontext)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICreateErrorInfo, ::windows_core::IUnknown);
@@ -3764,22 +3764,22 @@ pub struct ICreateErrorInfo_Vtbl {
 pub struct ICreateTypeInfo(::windows_core::IUnknown);
 impl ICreateTypeInfo {
     pub unsafe fn SetGuid(&self, guid: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetGuid)(::windows_core::Interface::as_raw(self), guid).ok()
+        ::windows_core::vcall!(self.SetGuid(guid)).ok()
     }
     pub unsafe fn SetTypeFlags(&self, utypeflags: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetTypeFlags)(::windows_core::Interface::as_raw(self), utypeflags).ok()
+        ::windows_core::vcall!(self.SetTypeFlags(utypeflags)).ok()
     }
     pub unsafe fn SetDocString<P0>(&self, pstrdoc: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetDocString)(::windows_core::Interface::as_raw(self), pstrdoc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetDocString(pstrdoc.into_param().abi())).ok()
     }
     pub unsafe fn SetHelpContext(&self, dwhelpcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetHelpContext)(::windows_core::Interface::as_raw(self), dwhelpcontext).ok()
+        ::windows_core::vcall!(self.SetHelpContext(dwhelpcontext)).ok()
     }
     pub unsafe fn SetVersion(&self, wmajorvernum: u16, wminorvernum: u16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetVersion)(::windows_core::Interface::as_raw(self), wmajorvernum, wminorvernum).ok()
+        ::windows_core::vcall!(self.SetVersion(wmajorvernum, wminorvernum)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -3787,87 +3787,87 @@ impl ICreateTypeInfo {
     where
         P0: ::windows_core::IntoParam<super::Com::ITypeInfo>,
     {
-        (::windows_core::Interface::vtable(self).AddRefTypeInfo)(::windows_core::Interface::as_raw(self), ptinfo.into_param().abi(), phreftype).ok()
+        ::windows_core::vcall!(self.AddRefTypeInfo(ptinfo.into_param().abi(), phreftype)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn AddFuncDesc(&self, index: u32, pfuncdesc: *const super::Com::FUNCDESC) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AddFuncDesc)(::windows_core::Interface::as_raw(self), index, pfuncdesc).ok()
+        ::windows_core::vcall!(self.AddFuncDesc(index, pfuncdesc)).ok()
     }
     pub unsafe fn AddImplType(&self, index: u32, hreftype: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AddImplType)(::windows_core::Interface::as_raw(self), index, hreftype).ok()
+        ::windows_core::vcall!(self.AddImplType(index, hreftype)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn SetImplTypeFlags(&self, index: u32, impltypeflags: super::Com::IMPLTYPEFLAGS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetImplTypeFlags)(::windows_core::Interface::as_raw(self), index, impltypeflags).ok()
+        ::windows_core::vcall!(self.SetImplTypeFlags(index, impltypeflags)).ok()
     }
     pub unsafe fn SetAlignment(&self, cbalignment: u16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetAlignment)(::windows_core::Interface::as_raw(self), cbalignment).ok()
+        ::windows_core::vcall!(self.SetAlignment(cbalignment)).ok()
     }
     pub unsafe fn SetSchema<P0>(&self, pstrschema: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetSchema)(::windows_core::Interface::as_raw(self), pstrschema.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetSchema(pstrschema.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn AddVarDesc(&self, index: u32, pvardesc: *const super::Com::VARDESC) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AddVarDesc)(::windows_core::Interface::as_raw(self), index, pvardesc).ok()
+        ::windows_core::vcall!(self.AddVarDesc(index, pvardesc)).ok()
     }
     pub unsafe fn SetFuncAndParamNames(&self, index: u32, rgsznames: &[::windows_core::PCWSTR]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetFuncAndParamNames)(::windows_core::Interface::as_raw(self), index, ::core::mem::transmute(rgsznames.as_ptr()), rgsznames.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.SetFuncAndParamNames(index, ::core::mem::transmute(rgsznames.as_ptr()), rgsznames.len().try_into().unwrap())).ok()
     }
     pub unsafe fn SetVarName<P0>(&self, index: u32, szname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetVarName)(::windows_core::Interface::as_raw(self), index, szname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetVarName(index, szname.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn SetTypeDescAlias(&self, ptdescalias: *const super::Com::TYPEDESC) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetTypeDescAlias)(::windows_core::Interface::as_raw(self), ptdescalias).ok()
+        ::windows_core::vcall!(self.SetTypeDescAlias(ptdescalias)).ok()
     }
     pub unsafe fn DefineFuncAsDllEntry<P0, P1>(&self, index: u32, szdllname: P0, szprocname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DefineFuncAsDllEntry)(::windows_core::Interface::as_raw(self), index, szdllname.into_param().abi(), szprocname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DefineFuncAsDllEntry(index, szdllname.into_param().abi(), szprocname.into_param().abi())).ok()
     }
     pub unsafe fn SetFuncDocString<P0>(&self, index: u32, szdocstring: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetFuncDocString)(::windows_core::Interface::as_raw(self), index, szdocstring.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetFuncDocString(index, szdocstring.into_param().abi())).ok()
     }
     pub unsafe fn SetVarDocString<P0>(&self, index: u32, szdocstring: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetVarDocString)(::windows_core::Interface::as_raw(self), index, szdocstring.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetVarDocString(index, szdocstring.into_param().abi())).ok()
     }
     pub unsafe fn SetFuncHelpContext(&self, index: u32, dwhelpcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetFuncHelpContext)(::windows_core::Interface::as_raw(self), index, dwhelpcontext).ok()
+        ::windows_core::vcall!(self.SetFuncHelpContext(index, dwhelpcontext)).ok()
     }
     pub unsafe fn SetVarHelpContext(&self, index: u32, dwhelpcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetVarHelpContext)(::windows_core::Interface::as_raw(self), index, dwhelpcontext).ok()
+        ::windows_core::vcall!(self.SetVarHelpContext(index, dwhelpcontext)).ok()
     }
     pub unsafe fn SetMops<P0>(&self, index: u32, bstrmops: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetMops)(::windows_core::Interface::as_raw(self), index, bstrmops.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetMops(index, bstrmops.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn SetTypeIdldesc(&self, pidldesc: *const super::Com::IDLDESC) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetTypeIdldesc)(::windows_core::Interface::as_raw(self), pidldesc).ok()
+        ::windows_core::vcall!(self.SetTypeIdldesc(pidldesc)).ok()
     }
     pub unsafe fn LayOut(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).LayOut)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.LayOut()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICreateTypeInfo, ::windows_core::IUnknown);
@@ -3928,22 +3928,22 @@ pub struct ICreateTypeInfo_Vtbl {
 pub struct ICreateTypeInfo2(::windows_core::IUnknown);
 impl ICreateTypeInfo2 {
     pub unsafe fn SetGuid(&self, guid: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetGuid)(::windows_core::Interface::as_raw(self), guid).ok()
+        ::windows_core::vcall!(self.base__.SetGuid(guid)).ok()
     }
     pub unsafe fn SetTypeFlags(&self, utypeflags: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetTypeFlags)(::windows_core::Interface::as_raw(self), utypeflags).ok()
+        ::windows_core::vcall!(self.base__.SetTypeFlags(utypeflags)).ok()
     }
     pub unsafe fn SetDocString<P0>(&self, pstrdoc: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetDocString)(::windows_core::Interface::as_raw(self), pstrdoc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetDocString(pstrdoc.into_param().abi())).ok()
     }
     pub unsafe fn SetHelpContext(&self, dwhelpcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetHelpContext)(::windows_core::Interface::as_raw(self), dwhelpcontext).ok()
+        ::windows_core::vcall!(self.base__.SetHelpContext(dwhelpcontext)).ok()
     }
     pub unsafe fn SetVersion(&self, wmajorvernum: u16, wminorvernum: u16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetVersion)(::windows_core::Interface::as_raw(self), wmajorvernum, wminorvernum).ok()
+        ::windows_core::vcall!(self.base__.SetVersion(wmajorvernum, wminorvernum)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -3951,147 +3951,147 @@ impl ICreateTypeInfo2 {
     where
         P0: ::windows_core::IntoParam<super::Com::ITypeInfo>,
     {
-        (::windows_core::Interface::vtable(self).base__.AddRefTypeInfo)(::windows_core::Interface::as_raw(self), ptinfo.into_param().abi(), phreftype).ok()
+        ::windows_core::vcall!(self.base__.AddRefTypeInfo(ptinfo.into_param().abi(), phreftype)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn AddFuncDesc(&self, index: u32, pfuncdesc: *const super::Com::FUNCDESC) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.AddFuncDesc)(::windows_core::Interface::as_raw(self), index, pfuncdesc).ok()
+        ::windows_core::vcall!(self.base__.AddFuncDesc(index, pfuncdesc)).ok()
     }
     pub unsafe fn AddImplType(&self, index: u32, hreftype: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.AddImplType)(::windows_core::Interface::as_raw(self), index, hreftype).ok()
+        ::windows_core::vcall!(self.base__.AddImplType(index, hreftype)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn SetImplTypeFlags(&self, index: u32, impltypeflags: super::Com::IMPLTYPEFLAGS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetImplTypeFlags)(::windows_core::Interface::as_raw(self), index, impltypeflags).ok()
+        ::windows_core::vcall!(self.base__.SetImplTypeFlags(index, impltypeflags)).ok()
     }
     pub unsafe fn SetAlignment(&self, cbalignment: u16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetAlignment)(::windows_core::Interface::as_raw(self), cbalignment).ok()
+        ::windows_core::vcall!(self.base__.SetAlignment(cbalignment)).ok()
     }
     pub unsafe fn SetSchema<P0>(&self, pstrschema: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetSchema)(::windows_core::Interface::as_raw(self), pstrschema.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetSchema(pstrschema.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn AddVarDesc(&self, index: u32, pvardesc: *const super::Com::VARDESC) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.AddVarDesc)(::windows_core::Interface::as_raw(self), index, pvardesc).ok()
+        ::windows_core::vcall!(self.base__.AddVarDesc(index, pvardesc)).ok()
     }
     pub unsafe fn SetFuncAndParamNames(&self, index: u32, rgsznames: &[::windows_core::PCWSTR]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetFuncAndParamNames)(::windows_core::Interface::as_raw(self), index, ::core::mem::transmute(rgsznames.as_ptr()), rgsznames.len().try_into().unwrap()).ok()
+        ::windows_core::vcall!(self.base__.SetFuncAndParamNames(index, ::core::mem::transmute(rgsznames.as_ptr()), rgsznames.len().try_into().unwrap())).ok()
     }
     pub unsafe fn SetVarName<P0>(&self, index: u32, szname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetVarName)(::windows_core::Interface::as_raw(self), index, szname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetVarName(index, szname.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn SetTypeDescAlias(&self, ptdescalias: *const super::Com::TYPEDESC) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetTypeDescAlias)(::windows_core::Interface::as_raw(self), ptdescalias).ok()
+        ::windows_core::vcall!(self.base__.SetTypeDescAlias(ptdescalias)).ok()
     }
     pub unsafe fn DefineFuncAsDllEntry<P0, P1>(&self, index: u32, szdllname: P0, szprocname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.DefineFuncAsDllEntry)(::windows_core::Interface::as_raw(self), index, szdllname.into_param().abi(), szprocname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.DefineFuncAsDllEntry(index, szdllname.into_param().abi(), szprocname.into_param().abi())).ok()
     }
     pub unsafe fn SetFuncDocString<P0>(&self, index: u32, szdocstring: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetFuncDocString)(::windows_core::Interface::as_raw(self), index, szdocstring.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetFuncDocString(index, szdocstring.into_param().abi())).ok()
     }
     pub unsafe fn SetVarDocString<P0>(&self, index: u32, szdocstring: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetVarDocString)(::windows_core::Interface::as_raw(self), index, szdocstring.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetVarDocString(index, szdocstring.into_param().abi())).ok()
     }
     pub unsafe fn SetFuncHelpContext(&self, index: u32, dwhelpcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetFuncHelpContext)(::windows_core::Interface::as_raw(self), index, dwhelpcontext).ok()
+        ::windows_core::vcall!(self.base__.SetFuncHelpContext(index, dwhelpcontext)).ok()
     }
     pub unsafe fn SetVarHelpContext(&self, index: u32, dwhelpcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetVarHelpContext)(::windows_core::Interface::as_raw(self), index, dwhelpcontext).ok()
+        ::windows_core::vcall!(self.base__.SetVarHelpContext(index, dwhelpcontext)).ok()
     }
     pub unsafe fn SetMops<P0>(&self, index: u32, bstrmops: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetMops)(::windows_core::Interface::as_raw(self), index, bstrmops.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetMops(index, bstrmops.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn SetTypeIdldesc(&self, pidldesc: *const super::Com::IDLDESC) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetTypeIdldesc)(::windows_core::Interface::as_raw(self), pidldesc).ok()
+        ::windows_core::vcall!(self.base__.SetTypeIdldesc(pidldesc)).ok()
     }
     pub unsafe fn LayOut(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.LayOut)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.LayOut()).ok()
     }
     pub unsafe fn DeleteFuncDesc(&self, index: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeleteFuncDesc)(::windows_core::Interface::as_raw(self), index).ok()
+        ::windows_core::vcall!(self.DeleteFuncDesc(index)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn DeleteFuncDescByMemId(&self, memid: i32, invkind: super::Com::INVOKEKIND) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeleteFuncDescByMemId)(::windows_core::Interface::as_raw(self), memid, invkind).ok()
+        ::windows_core::vcall!(self.DeleteFuncDescByMemId(memid, invkind)).ok()
     }
     pub unsafe fn DeleteVarDesc(&self, index: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeleteVarDesc)(::windows_core::Interface::as_raw(self), index).ok()
+        ::windows_core::vcall!(self.DeleteVarDesc(index)).ok()
     }
     pub unsafe fn DeleteVarDescByMemId(&self, memid: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeleteVarDescByMemId)(::windows_core::Interface::as_raw(self), memid).ok()
+        ::windows_core::vcall!(self.DeleteVarDescByMemId(memid)).ok()
     }
     pub unsafe fn DeleteImplType(&self, index: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeleteImplType)(::windows_core::Interface::as_raw(self), index).ok()
+        ::windows_core::vcall!(self.DeleteImplType(index)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn SetCustData(&self, guid: *const ::windows_core::GUID, pvarval: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetCustData)(::windows_core::Interface::as_raw(self), guid, pvarval).ok()
+        ::windows_core::vcall!(self.SetCustData(guid, pvarval)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn SetFuncCustData(&self, index: u32, guid: *const ::windows_core::GUID, pvarval: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetFuncCustData)(::windows_core::Interface::as_raw(self), index, guid, pvarval).ok()
+        ::windows_core::vcall!(self.SetFuncCustData(index, guid, pvarval)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn SetParamCustData(&self, indexfunc: u32, indexparam: u32, guid: *const ::windows_core::GUID, pvarval: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetParamCustData)(::windows_core::Interface::as_raw(self), indexfunc, indexparam, guid, pvarval).ok()
+        ::windows_core::vcall!(self.SetParamCustData(indexfunc, indexparam, guid, pvarval)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn SetVarCustData(&self, index: u32, guid: *const ::windows_core::GUID, pvarval: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetVarCustData)(::windows_core::Interface::as_raw(self), index, guid, pvarval).ok()
+        ::windows_core::vcall!(self.SetVarCustData(index, guid, pvarval)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn SetImplTypeCustData(&self, index: u32, guid: *const ::windows_core::GUID, pvarval: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetImplTypeCustData)(::windows_core::Interface::as_raw(self), index, guid, pvarval).ok()
+        ::windows_core::vcall!(self.SetImplTypeCustData(index, guid, pvarval)).ok()
     }
     pub unsafe fn SetHelpStringContext(&self, dwhelpstringcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetHelpStringContext)(::windows_core::Interface::as_raw(self), dwhelpstringcontext).ok()
+        ::windows_core::vcall!(self.SetHelpStringContext(dwhelpstringcontext)).ok()
     }
     pub unsafe fn SetFuncHelpStringContext(&self, index: u32, dwhelpstringcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetFuncHelpStringContext)(::windows_core::Interface::as_raw(self), index, dwhelpstringcontext).ok()
+        ::windows_core::vcall!(self.SetFuncHelpStringContext(index, dwhelpstringcontext)).ok()
     }
     pub unsafe fn SetVarHelpStringContext(&self, index: u32, dwhelpstringcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetVarHelpStringContext)(::windows_core::Interface::as_raw(self), index, dwhelpstringcontext).ok()
+        ::windows_core::vcall!(self.SetVarHelpStringContext(index, dwhelpstringcontext)).ok()
     }
     pub unsafe fn Invalidate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Invalidate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Invalidate()).ok()
     }
     pub unsafe fn SetName<P0>(&self, szname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetName)(::windows_core::Interface::as_raw(self), szname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetName(szname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICreateTypeInfo2, ::windows_core::IUnknown, ICreateTypeInfo);
@@ -4150,43 +4150,43 @@ impl ICreateTypeLib {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateTypeInfo)(::windows_core::Interface::as_raw(self), szname.into_param().abi(), tkind, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateTypeInfo(szname.into_param().abi(), tkind, &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetName<P0>(&self, szname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetName)(::windows_core::Interface::as_raw(self), szname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetName(szname.into_param().abi())).ok()
     }
     pub unsafe fn SetVersion(&self, wmajorvernum: u16, wminorvernum: u16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetVersion)(::windows_core::Interface::as_raw(self), wmajorvernum, wminorvernum).ok()
+        ::windows_core::vcall!(self.SetVersion(wmajorvernum, wminorvernum)).ok()
     }
     pub unsafe fn SetGuid(&self, guid: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetGuid)(::windows_core::Interface::as_raw(self), guid).ok()
+        ::windows_core::vcall!(self.SetGuid(guid)).ok()
     }
     pub unsafe fn SetDocString<P0>(&self, szdoc: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetDocString)(::windows_core::Interface::as_raw(self), szdoc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetDocString(szdoc.into_param().abi())).ok()
     }
     pub unsafe fn SetHelpFileName<P0>(&self, szhelpfilename: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetHelpFileName)(::windows_core::Interface::as_raw(self), szhelpfilename.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetHelpFileName(szhelpfilename.into_param().abi())).ok()
     }
     pub unsafe fn SetHelpContext(&self, dwhelpcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetHelpContext)(::windows_core::Interface::as_raw(self), dwhelpcontext).ok()
+        ::windows_core::vcall!(self.SetHelpContext(dwhelpcontext)).ok()
     }
     pub unsafe fn SetLcid(&self, lcid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetLcid)(::windows_core::Interface::as_raw(self), lcid).ok()
+        ::windows_core::vcall!(self.SetLcid(lcid)).ok()
     }
     pub unsafe fn SetLibFlags(&self, ulibflags: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetLibFlags)(::windows_core::Interface::as_raw(self), ulibflags).ok()
+        ::windows_core::vcall!(self.SetLibFlags(ulibflags)).ok()
     }
     pub unsafe fn SaveAllChanges(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SaveAllChanges)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SaveAllChanges()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICreateTypeLib, ::windows_core::IUnknown);
@@ -4225,63 +4225,63 @@ impl ICreateTypeLib2 {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.CreateTypeInfo)(::windows_core::Interface::as_raw(self), szname.into_param().abi(), tkind, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.CreateTypeInfo(szname.into_param().abi(), tkind, &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetName<P0>(&self, szname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetName)(::windows_core::Interface::as_raw(self), szname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetName(szname.into_param().abi())).ok()
     }
     pub unsafe fn SetVersion(&self, wmajorvernum: u16, wminorvernum: u16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetVersion)(::windows_core::Interface::as_raw(self), wmajorvernum, wminorvernum).ok()
+        ::windows_core::vcall!(self.base__.SetVersion(wmajorvernum, wminorvernum)).ok()
     }
     pub unsafe fn SetGuid(&self, guid: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetGuid)(::windows_core::Interface::as_raw(self), guid).ok()
+        ::windows_core::vcall!(self.base__.SetGuid(guid)).ok()
     }
     pub unsafe fn SetDocString<P0>(&self, szdoc: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetDocString)(::windows_core::Interface::as_raw(self), szdoc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetDocString(szdoc.into_param().abi())).ok()
     }
     pub unsafe fn SetHelpFileName<P0>(&self, szhelpfilename: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetHelpFileName)(::windows_core::Interface::as_raw(self), szhelpfilename.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetHelpFileName(szhelpfilename.into_param().abi())).ok()
     }
     pub unsafe fn SetHelpContext(&self, dwhelpcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetHelpContext)(::windows_core::Interface::as_raw(self), dwhelpcontext).ok()
+        ::windows_core::vcall!(self.base__.SetHelpContext(dwhelpcontext)).ok()
     }
     pub unsafe fn SetLcid(&self, lcid: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetLcid)(::windows_core::Interface::as_raw(self), lcid).ok()
+        ::windows_core::vcall!(self.base__.SetLcid(lcid)).ok()
     }
     pub unsafe fn SetLibFlags(&self, ulibflags: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetLibFlags)(::windows_core::Interface::as_raw(self), ulibflags).ok()
+        ::windows_core::vcall!(self.base__.SetLibFlags(ulibflags)).ok()
     }
     pub unsafe fn SaveAllChanges(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SaveAllChanges)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.SaveAllChanges()).ok()
     }
     pub unsafe fn DeleteTypeInfo<P0>(&self, szname: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeleteTypeInfo)(::windows_core::Interface::as_raw(self), szname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeleteTypeInfo(szname.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn SetCustData(&self, guid: *const ::windows_core::GUID, pvarval: *const super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetCustData)(::windows_core::Interface::as_raw(self), guid, pvarval).ok()
+        ::windows_core::vcall!(self.SetCustData(guid, pvarval)).ok()
     }
     pub unsafe fn SetHelpStringContext(&self, dwhelpstringcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetHelpStringContext)(::windows_core::Interface::as_raw(self), dwhelpstringcontext).ok()
+        ::windows_core::vcall!(self.SetHelpStringContext(dwhelpstringcontext)).ok()
     }
     pub unsafe fn SetHelpStringDll<P0>(&self, szfilename: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetHelpStringDll)(::windows_core::Interface::as_raw(self), szfilename.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetHelpStringDll(szfilename.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICreateTypeLib2, ::windows_core::IUnknown, ICreateTypeLib);
@@ -4309,26 +4309,26 @@ pub struct IDispError(::windows_core::IUnknown);
 impl IDispError {
     pub unsafe fn QueryErrorInfo(&self, guiderrortype: ::windows_core::GUID) -> ::windows_core::Result<IDispError> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueryErrorInfo)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(guiderrortype), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueryErrorInfo(::core::mem::transmute(guiderrortype), &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetNext(&self) -> ::windows_core::Result<IDispError> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetNext)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetNext(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetHresult(&self) -> ::windows_core::Result<::windows_core::HRESULT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetHresult)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetHresult(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetSource(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSource)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSource(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetHelpInfo(&self, pbstrfilename: *mut ::windows_core::BSTR, pdwcontext: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetHelpInfo)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pbstrfilename), pdwcontext).ok()
+        ::windows_core::vcall!(self.GetHelpInfo(::core::mem::transmute(pbstrfilename), pdwcontext)).ok()
     }
     pub unsafe fn GetDescription(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDescription)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDescription(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDispError, ::windows_core::IUnknown);
@@ -4361,7 +4361,7 @@ impl IDispatchEx {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDispID)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), grfdex, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDispID(bstrname.into_param().abi(), grfdex, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
@@ -4369,32 +4369,32 @@ impl IDispatchEx {
     where
         P0: ::windows_core::IntoParam<super::Com::IServiceProvider>,
     {
-        (::windows_core::Interface::vtable(self).InvokeEx)(::windows_core::Interface::as_raw(self), id, lcid, wflags, pdp, ::core::mem::transmute(pvarres.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pei.unwrap_or(::std::ptr::null_mut())), pspcaller.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InvokeEx(id, lcid, wflags, pdp, ::core::mem::transmute(pvarres.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pei.unwrap_or(::std::ptr::null_mut())), pspcaller.into_param().abi())).ok()
     }
     pub unsafe fn DeleteMemberByName<P0>(&self, bstrname: P0, grfdex: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeleteMemberByName)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), grfdex).ok()
+        ::windows_core::vcall!(self.DeleteMemberByName(bstrname.into_param().abi(), grfdex)).ok()
     }
     pub unsafe fn DeleteMemberByDispID(&self, id: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeleteMemberByDispID)(::windows_core::Interface::as_raw(self), id).ok()
+        ::windows_core::vcall!(self.DeleteMemberByDispID(id)).ok()
     }
     pub unsafe fn GetMemberProperties(&self, id: i32, grfdexfetch: u32) -> ::windows_core::Result<FDEX_PROP_FLAGS> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMemberProperties)(::windows_core::Interface::as_raw(self), id, grfdexfetch, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMemberProperties(id, grfdexfetch, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetMemberName(&self, id: i32) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMemberName)(::windows_core::Interface::as_raw(self), id, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMemberName(id, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetNextDispID(&self, grfdex: u32, id: i32) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetNextDispID)(::windows_core::Interface::as_raw(self), grfdex, id, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetNextDispID(grfdex, id, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetNameSpaceParent(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetNameSpaceParent)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetNameSpaceParent(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4434,10 +4434,10 @@ impl IDropSource {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).QueryContinueDrag)(::windows_core::Interface::as_raw(self), fescapepressed.into_param().abi(), grfkeystate)
+        ::windows_core::vcall!(self.QueryContinueDrag(fescapepressed.into_param().abi(), grfkeystate))
     }
     pub unsafe fn GiveFeedback(&self, dweffect: DROPEFFECT) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).GiveFeedback)(::windows_core::Interface::as_raw(self), dweffect)
+        ::windows_core::vcall!(self.GiveFeedback(dweffect))
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDropSource, ::windows_core::IUnknown);
@@ -4467,10 +4467,10 @@ impl IDropSourceNotify {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).DragEnterTarget)(::windows_core::Interface::as_raw(self), hwndtarget.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DragEnterTarget(hwndtarget.into_param().abi())).ok()
     }
     pub unsafe fn DragLeaveTarget(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DragLeaveTarget)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.DragLeaveTarget()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDropSourceNotify, ::windows_core::IUnknown);
@@ -4500,15 +4500,15 @@ impl IDropTarget {
     where
         P0: ::windows_core::IntoParam<super::Com::IDataObject>,
     {
-        (::windows_core::Interface::vtable(self).DragEnter)(::windows_core::Interface::as_raw(self), pdataobj.into_param().abi(), grfkeystate, ::core::mem::transmute(pt), pdweffect).ok()
+        ::windows_core::vcall!(self.DragEnter(pdataobj.into_param().abi(), grfkeystate, ::core::mem::transmute(pt), pdweffect)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_SystemServices\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_SystemServices"))]
     pub unsafe fn DragOver(&self, grfkeystate: super::SystemServices::MODIFIERKEYS_FLAGS, pt: super::super::Foundation::POINTL, pdweffect: *mut DROPEFFECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DragOver)(::windows_core::Interface::as_raw(self), grfkeystate, ::core::mem::transmute(pt), pdweffect).ok()
+        ::windows_core::vcall!(self.DragOver(grfkeystate, ::core::mem::transmute(pt), pdweffect)).ok()
     }
     pub unsafe fn DragLeave(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DragLeave)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.DragLeave()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_SystemServices\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_SystemServices"))]
@@ -4516,7 +4516,7 @@ impl IDropTarget {
     where
         P0: ::windows_core::IntoParam<super::Com::IDataObject>,
     {
-        (::windows_core::Interface::vtable(self).Drop)(::windows_core::Interface::as_raw(self), pdataobj.into_param().abi(), grfkeystate, ::core::mem::transmute(pt), pdweffect).ok()
+        ::windows_core::vcall!(self.Drop(pdataobj.into_param().abi(), grfkeystate, ::core::mem::transmute(pt), pdweffect)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDropTarget, ::windows_core::IUnknown);
@@ -4552,13 +4552,13 @@ impl IEnterpriseDropTarget {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetDropSourceEnterpriseId)(::windows_core::Interface::as_raw(self), identity.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetDropSourceEnterpriseId(identity.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsEvaluatingEdpPolicy(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).IsEvaluatingEdpPolicy)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.IsEvaluatingEdpPolicy(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnterpriseDropTarget, ::windows_core::IUnknown);
@@ -4585,17 +4585,17 @@ impl IEnumOLEVERB {
     #[doc = "Required features: `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
     pub unsafe fn Next(&self, rgelt: &mut [OLEVERB], pceltfetched: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), rgelt.len().try_into().unwrap(), ::core::mem::transmute(rgelt.as_ptr()), ::core::mem::transmute(pceltfetched.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.Next(rgelt.len().try_into().unwrap(), ::core::mem::transmute(rgelt.as_ptr()), ::core::mem::transmute(pceltfetched.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn Skip(&self, celt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Skip)(::windows_core::Interface::as_raw(self), celt).ok()
+        ::windows_core::vcall!(self.Skip(celt)).ok()
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Clone(&self) -> ::windows_core::Result<IEnumOLEVERB> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumOLEVERB, ::windows_core::IUnknown);
@@ -4622,17 +4622,17 @@ pub struct IEnumOLEVERB_Vtbl {
 pub struct IEnumOleDocumentViews(::windows_core::IUnknown);
 impl IEnumOleDocumentViews {
     pub unsafe fn Next(&self, cviews: u32, rgpview: *mut ::core::option::Option<IOleDocumentView>, pcfetched: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), cviews, ::core::mem::transmute(rgpview), pcfetched).ok()
+        ::windows_core::vcall!(self.Next(cviews, ::core::mem::transmute(rgpview), pcfetched)).ok()
     }
     pub unsafe fn Skip(&self, cviews: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Skip)(::windows_core::Interface::as_raw(self), cviews).ok()
+        ::windows_core::vcall!(self.Skip(cviews)).ok()
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Clone(&self) -> ::windows_core::Result<IEnumOleDocumentViews> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumOleDocumentViews, ::windows_core::IUnknown);
@@ -4656,17 +4656,17 @@ pub struct IEnumOleDocumentViews_Vtbl {
 pub struct IEnumOleUndoUnits(::windows_core::IUnknown);
 impl IEnumOleUndoUnits {
     pub unsafe fn Next(&self, rgelt: &mut [::core::option::Option<IOleUndoUnit>], pceltfetched: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), rgelt.len().try_into().unwrap(), ::core::mem::transmute(rgelt.as_ptr()), pceltfetched).ok()
+        ::windows_core::vcall!(self.Next(rgelt.len().try_into().unwrap(), ::core::mem::transmute(rgelt.as_ptr()), pceltfetched)).ok()
     }
     pub unsafe fn Skip(&self, celt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Skip)(::windows_core::Interface::as_raw(self), celt).ok()
+        ::windows_core::vcall!(self.Skip(celt)).ok()
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Clone(&self) -> ::windows_core::Result<IEnumOleUndoUnits> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumOleUndoUnits, ::windows_core::IUnknown);
@@ -4692,17 +4692,17 @@ impl IEnumVARIANT {
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn Next(&self, rgvar: &mut [super::Variant::VARIANT], pceltfetched: *mut u32) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), rgvar.len().try_into().unwrap(), ::core::mem::transmute(rgvar.as_ptr()), pceltfetched)
+        ::windows_core::vcall!(self.Next(rgvar.len().try_into().unwrap(), ::core::mem::transmute(rgvar.as_ptr()), pceltfetched))
     }
     pub unsafe fn Skip(&self, celt: u32) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).Skip)(::windows_core::Interface::as_raw(self), celt)
+        ::windows_core::vcall!(self.Skip(celt))
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Clone(&self) -> ::windows_core::Result<IEnumVARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumVARIANT, ::windows_core::IUnknown);
@@ -4730,30 +4730,30 @@ pub struct IFont(::windows_core::IUnknown);
 impl IFont {
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetName<P0>(&self, name: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetName)(::windows_core::Interface::as_raw(self), name.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetName(name.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Size(&self) -> ::windows_core::Result<super::Com::CY> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Size)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Size(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn SetSize(&self, size: super::Com::CY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetSize)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(size)).ok()
+        ::windows_core::vcall!(self.SetSize(::core::mem::transmute(size))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Bold(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Bold)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Bold(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4761,13 +4761,13 @@ impl IFont {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetBold)(::windows_core::Interface::as_raw(self), bold.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetBold(bold.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Italic(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Italic)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Italic(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4775,13 +4775,13 @@ impl IFont {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetItalic)(::windows_core::Interface::as_raw(self), italic.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetItalic(italic.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Underline(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Underline)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Underline(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4789,13 +4789,13 @@ impl IFont {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetUnderline)(::windows_core::Interface::as_raw(self), underline.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetUnderline(underline.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Strikethrough(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Strikethrough)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Strikethrough(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4803,45 +4803,45 @@ impl IFont {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetStrikethrough)(::windows_core::Interface::as_raw(self), strikethrough.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetStrikethrough(strikethrough.into_param().abi())).ok()
     }
     pub unsafe fn Weight(&self) -> ::windows_core::Result<i16> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Weight)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Weight(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetWeight(&self, weight: i16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetWeight)(::windows_core::Interface::as_raw(self), weight).ok()
+        ::windows_core::vcall!(self.SetWeight(weight)).ok()
     }
     pub unsafe fn Charset(&self) -> ::windows_core::Result<i16> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Charset)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Charset(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetCharset(&self, charset: i16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetCharset)(::windows_core::Interface::as_raw(self), charset).ok()
+        ::windows_core::vcall!(self.SetCharset(charset)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
     pub unsafe fn hFont(&self) -> ::windows_core::Result<super::super::Graphics::Gdi::HFONT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).hFont)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.hFont(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Clone(&self) -> ::windows_core::Result<IFont> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(&mut result__)).from_abi(result__)
     }
     pub unsafe fn IsEqual<P0>(&self, pfontother: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IFont>,
     {
-        (::windows_core::Interface::vtable(self).IsEqual)(::windows_core::Interface::as_raw(self), pfontother.into_param().abi()).ok()
+        ::windows_core::vcall!(self.IsEqual(pfontother.into_param().abi())).ok()
     }
     pub unsafe fn SetRatio(&self, cylogical: i32, cyhimetric: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetRatio)(::windows_core::Interface::as_raw(self), cylogical, cyhimetric).ok()
+        ::windows_core::vcall!(self.SetRatio(cylogical, cyhimetric)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
     pub unsafe fn QueryTextMetrics(&self, ptm: *mut super::super::Graphics::Gdi::TEXTMETRICW) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).QueryTextMetrics)(::windows_core::Interface::as_raw(self), ptm).ok()
+        ::windows_core::vcall!(self.QueryTextMetrics(ptm)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -4849,7 +4849,7 @@ impl IFont {
     where
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HFONT>,
     {
-        (::windows_core::Interface::vtable(self).AddRefHfont)(::windows_core::Interface::as_raw(self), hfont.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AddRefHfont(hfont.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -4857,7 +4857,7 @@ impl IFont {
     where
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HFONT>,
     {
-        (::windows_core::Interface::vtable(self).ReleaseHfont)(::windows_core::Interface::as_raw(self), hfont.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ReleaseHfont(hfont.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -4865,7 +4865,7 @@ impl IFont {
     where
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).SetHdc)(::windows_core::Interface::as_raw(self), hdc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetHdc(hdc.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IFont, ::windows_core::IUnknown);
@@ -5000,7 +5000,7 @@ pub struct IFontEventsDisp_Vtbl {
 pub struct IGetOleObject(::windows_core::IUnknown);
 impl IGetOleObject {
     pub unsafe fn GetOleObject(&self, riid: *const ::windows_core::GUID, ppvobj: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetOleObject)(::windows_core::Interface::as_raw(self), riid, ppvobj).ok()
+        ::windows_core::vcall!(self.GetOleObject(riid, ppvobj)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IGetOleObject, ::windows_core::IUnknown);
@@ -5021,7 +5021,7 @@ pub struct IGetOleObject_Vtbl {
 pub struct IGetVBAObject(::windows_core::IUnknown);
 impl IGetVBAObject {
     pub unsafe fn GetObject(&self, riid: *const ::windows_core::GUID, ppvobj: *mut *mut ::core::ffi::c_void, dwreserved: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetObject)(::windows_core::Interface::as_raw(self), riid, ppvobj, dwreserved).ok()
+        ::windows_core::vcall!(self.GetObject(riid, ppvobj, dwreserved)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IGetVBAObject, ::windows_core::IUnknown);
@@ -5045,7 +5045,7 @@ impl IObjectIdentity {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).IsEqualObject)(::windows_core::Interface::as_raw(self), punk.into_param().abi()).ok()
+        ::windows_core::vcall!(self.IsEqualObject(punk.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IObjectIdentity, ::windows_core::IUnknown);
@@ -5069,14 +5069,14 @@ impl IObjectWithSite {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).SetSite)(::windows_core::Interface::as_raw(self), punksite.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetSite(punksite.into_param().abi())).ok()
     }
     pub unsafe fn GetSite<T>(&self) -> ::windows_core::Result<T>
     where
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).GetSite)(::windows_core::Interface::as_raw(self), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSite(&<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IObjectWithSite, ::windows_core::IUnknown);
@@ -5104,16 +5104,16 @@ impl IOleAdviseHolder {
         P0: ::windows_core::IntoParam<super::Com::IAdviseSink>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Advise)(::windows_core::Interface::as_raw(self), padvise.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Advise(padvise.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Unadvise(&self, dwconnection: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unadvise)(::windows_core::Interface::as_raw(self), dwconnection).ok()
+        ::windows_core::vcall!(self.Unadvise(dwconnection)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn EnumAdvise(&self) -> ::windows_core::Result<super::Com::IEnumSTATDATA> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumAdvise)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumAdvise(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5121,13 +5121,13 @@ impl IOleAdviseHolder {
     where
         P0: ::windows_core::IntoParam<super::Com::IMoniker>,
     {
-        (::windows_core::Interface::vtable(self).SendOnRename)(::windows_core::Interface::as_raw(self), pmk.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SendOnRename(pmk.into_param().abi())).ok()
     }
     pub unsafe fn SendOnSave(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendOnSave)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SendOnSave()).ok()
     }
     pub unsafe fn SendOnClose(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendOnClose)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SendOnClose()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleAdviseHolder, ::windows_core::IUnknown);
@@ -5165,16 +5165,16 @@ impl IOleCache {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Cache(&self, pformatetc: *const super::Com::FORMATETC, advf: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Cache)(::windows_core::Interface::as_raw(self), pformatetc, advf, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Cache(pformatetc, advf, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Uncache(&self, dwconnection: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Uncache)(::windows_core::Interface::as_raw(self), dwconnection).ok()
+        ::windows_core::vcall!(self.Uncache(dwconnection)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn EnumCache(&self) -> ::windows_core::Result<super::Com::IEnumSTATDATA> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumCache)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumCache(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5182,7 +5182,7 @@ impl IOleCache {
     where
         P0: ::windows_core::IntoParam<super::Com::IDataObject>,
     {
-        (::windows_core::Interface::vtable(self).InitCache)(::windows_core::Interface::as_raw(self), pdataobject.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InitCache(pdataobject.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com_StructuredStorage"))]
@@ -5190,7 +5190,7 @@ impl IOleCache {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetData)(::windows_core::Interface::as_raw(self), pformatetc, pmedium, frelease.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetData(pformatetc, pmedium, frelease.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleCache, ::windows_core::IUnknown);
@@ -5230,16 +5230,16 @@ impl IOleCache2 {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Cache(&self, pformatetc: *const super::Com::FORMATETC, advf: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Cache)(::windows_core::Interface::as_raw(self), pformatetc, advf, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Cache(pformatetc, advf, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Uncache(&self, dwconnection: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Uncache)(::windows_core::Interface::as_raw(self), dwconnection).ok()
+        ::windows_core::vcall!(self.base__.Uncache(dwconnection)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn EnumCache(&self) -> ::windows_core::Result<super::Com::IEnumSTATDATA> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.EnumCache)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.EnumCache(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5247,7 +5247,7 @@ impl IOleCache2 {
     where
         P0: ::windows_core::IntoParam<super::Com::IDataObject>,
     {
-        (::windows_core::Interface::vtable(self).base__.InitCache)(::windows_core::Interface::as_raw(self), pdataobject.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.InitCache(pdataobject.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com_StructuredStorage"))]
@@ -5255,7 +5255,7 @@ impl IOleCache2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetData)(::windows_core::Interface::as_raw(self), pformatetc, pmedium, frelease.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetData(pformatetc, pmedium, frelease.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5263,10 +5263,10 @@ impl IOleCache2 {
     where
         P0: ::windows_core::IntoParam<super::Com::IDataObject>,
     {
-        (::windows_core::Interface::vtable(self).UpdateCache)(::windows_core::Interface::as_raw(self), pdataobject.into_param().abi(), grfupdf, ::core::mem::transmute(preserved.unwrap_or(::std::ptr::null()))).ok()
+        ::windows_core::vcall!(self.UpdateCache(pdataobject.into_param().abi(), grfupdf, ::core::mem::transmute(preserved.unwrap_or(::std::ptr::null())))).ok()
     }
     pub unsafe fn DiscardCache(&self, dwdiscardoptions: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DiscardCache)(::windows_core::Interface::as_raw(self), dwdiscardoptions).ok()
+        ::windows_core::vcall!(self.DiscardCache(dwdiscardoptions)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleCache2, ::windows_core::IUnknown, IOleCache);
@@ -5296,10 +5296,10 @@ impl IOleCacheControl {
     where
         P0: ::windows_core::IntoParam<super::Com::IDataObject>,
     {
-        (::windows_core::Interface::vtable(self).OnRun)(::windows_core::Interface::as_raw(self), pdataobject.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnRun(pdataobject.into_param().abi())).ok()
     }
     pub unsafe fn OnStop(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnStop)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnStop()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleCacheControl, ::windows_core::IUnknown);
@@ -5324,20 +5324,20 @@ pub struct IOleCacheControl_Vtbl {
 pub struct IOleClientSite(::windows_core::IUnknown);
 impl IOleClientSite {
     pub unsafe fn SaveObject(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SaveObject)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SaveObject()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetMoniker(&self, dwassign: OLEGETMONIKER, dwwhichmoniker: OLEWHICHMK) -> ::windows_core::Result<super::Com::IMoniker> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMoniker)(::windows_core::Interface::as_raw(self), dwassign.0 as _, dwwhichmoniker.0 as _, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMoniker(dwassign.0 as _, dwwhichmoniker.0 as _, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetContainer(&self) -> ::windows_core::Result<IOleContainer> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetContainer)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetContainer(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ShowObject(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ShowObject)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ShowObject()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5345,10 +5345,10 @@ impl IOleClientSite {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnShowWindow)(::windows_core::Interface::as_raw(self), fshow.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnShowWindow(fshow.into_param().abi())).ok()
     }
     pub unsafe fn RequestNewObjectLayout(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RequestNewObjectLayout)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.RequestNewObjectLayout()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleClientSite, ::windows_core::IUnknown);
@@ -5380,12 +5380,12 @@ pub struct IOleClientSite_Vtbl {
 pub struct IOleCommandTarget(::windows_core::IUnknown);
 impl IOleCommandTarget {
     pub unsafe fn QueryStatus(&self, pguidcmdgroup: *const ::windows_core::GUID, ccmds: u32, prgcmds: *mut OLECMD, pcmdtext: *mut OLECMDTEXT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).QueryStatus)(::windows_core::Interface::as_raw(self), pguidcmdgroup, ccmds, prgcmds, pcmdtext).ok()
+        ::windows_core::vcall!(self.QueryStatus(pguidcmdgroup, ccmds, prgcmds, pcmdtext)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn Exec(&self, pguidcmdgroup: *const ::windows_core::GUID, ncmdid: u32, ncmdexecopt: u32, pvain: *const super::Variant::VARIANT, pvaout: *mut super::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Exec)(::windows_core::Interface::as_raw(self), pguidcmdgroup, ncmdid, ncmdexecopt, pvain, pvaout).ok()
+        ::windows_core::vcall!(self.Exec(pguidcmdgroup, ncmdid, ncmdexecopt, pvain, pvaout)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleCommandTarget, ::windows_core::IUnknown);
@@ -5416,13 +5416,13 @@ impl IOleContainer {
         P0: ::windows_core::IntoParam<super::Com::IBindCtx>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.ParseDisplayName)(::windows_core::Interface::as_raw(self), pbc.into_param().abi(), pszdisplayname.into_param().abi(), pcheaten, ::core::mem::transmute(ppmkout)).ok()
+        ::windows_core::vcall!(self.base__.ParseDisplayName(pbc.into_param().abi(), pszdisplayname.into_param().abi(), pcheaten, ::core::mem::transmute(ppmkout))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn EnumObjects(&self, grfflags: OLECONTF) -> ::windows_core::Result<super::Com::IEnumUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumObjects)(::windows_core::Interface::as_raw(self), grfflags.0 as _, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumObjects(grfflags.0 as _, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5430,7 +5430,7 @@ impl IOleContainer {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).LockContainer)(::windows_core::Interface::as_raw(self), flock.into_param().abi()).ok()
+        ::windows_core::vcall!(self.LockContainer(flock.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleContainer, ::windows_core::IUnknown, IParseDisplayName);
@@ -5460,15 +5460,15 @@ impl IOleControl {
     #[doc = "Required features: `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
     pub unsafe fn GetControlInfo(&self, pci: *mut CONTROLINFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetControlInfo)(::windows_core::Interface::as_raw(self), pci).ok()
+        ::windows_core::vcall!(self.GetControlInfo(pci)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn OnMnemonic(&self, pmsg: *const super::super::UI::WindowsAndMessaging::MSG) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnMnemonic)(::windows_core::Interface::as_raw(self), pmsg).ok()
+        ::windows_core::vcall!(self.OnMnemonic(pmsg)).ok()
     }
     pub unsafe fn OnAmbientPropertyChange(&self, dispid: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnAmbientPropertyChange)(::windows_core::Interface::as_raw(self), dispid).ok()
+        ::windows_core::vcall!(self.OnAmbientPropertyChange(dispid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5476,7 +5476,7 @@ impl IOleControl {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).FreezeEvents)(::windows_core::Interface::as_raw(self), bfreeze.into_param().abi()).ok()
+        ::windows_core::vcall!(self.FreezeEvents(bfreeze.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleControl, ::windows_core::IUnknown);
@@ -5509,7 +5509,7 @@ pub struct IOleControl_Vtbl {
 pub struct IOleControlSite(::windows_core::IUnknown);
 impl IOleControlSite {
     pub unsafe fn OnControlInfoChanged(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnControlInfoChanged)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnControlInfoChanged()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5517,23 +5517,23 @@ impl IOleControlSite {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).LockInPlaceActive)(::windows_core::Interface::as_raw(self), flock.into_param().abi()).ok()
+        ::windows_core::vcall!(self.LockInPlaceActive(flock.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetExtendedControl(&self) -> ::windows_core::Result<super::Com::IDispatch> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetExtendedControl)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetExtendedControl(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn TransformCoords(&self, pptlhimetric: *mut super::super::Foundation::POINTL, pptfcontainer: *mut POINTF, dwflags: XFORMCOORDS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).TransformCoords)(::windows_core::Interface::as_raw(self), pptlhimetric, pptfcontainer, dwflags.0 as _).ok()
+        ::windows_core::vcall!(self.TransformCoords(pptlhimetric, pptfcontainer, dwflags.0 as _)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn TranslateAccelerator(&self, pmsg: *const super::super::UI::WindowsAndMessaging::MSG, grfmodifiers: KEYMODIFIERS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).TranslateAccelerator)(::windows_core::Interface::as_raw(self), pmsg, grfmodifiers).ok()
+        ::windows_core::vcall!(self.TranslateAccelerator(pmsg, grfmodifiers)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5541,10 +5541,10 @@ impl IOleControlSite {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnFocus)(::windows_core::Interface::as_raw(self), fgotfocus.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnFocus(fgotfocus.into_param().abi())).ok()
     }
     pub unsafe fn ShowPropertyFrame(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ShowPropertyFrame)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ShowPropertyFrame()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleControlSite, ::windows_core::IUnknown);
@@ -5593,14 +5593,14 @@ impl IOleDocument {
         P1: ::windows_core::IntoParam<super::Com::IStream>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateView)(::windows_core::Interface::as_raw(self), pipsite.into_param().abi(), pstm.into_param().abi(), dwreserved, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateView(pipsite.into_param().abi(), pstm.into_param().abi(), dwreserved, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetDocMiscStatus(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDocMiscStatus)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDocMiscStatus(&mut result__)).from_abi(result__)
     }
     pub unsafe fn EnumViews(&self, ppenum: *mut ::core::option::Option<IEnumOleDocumentViews>, ppview: *mut ::core::option::Option<IOleDocumentView>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumViews)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppenum), ::core::mem::transmute(ppview)).ok()
+        ::windows_core::vcall!(self.EnumViews(::core::mem::transmute(ppenum), ::core::mem::transmute(ppview))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleDocument, ::windows_core::IUnknown);
@@ -5629,7 +5629,7 @@ impl IOleDocumentSite {
     where
         P0: ::windows_core::IntoParam<IOleDocumentView>,
     {
-        (::windows_core::Interface::vtable(self).ActivateMe)(::windows_core::Interface::as_raw(self), pviewtoactivate.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ActivateMe(pviewtoactivate.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleDocumentSite, ::windows_core::IUnknown);
@@ -5653,31 +5653,31 @@ impl IOleDocumentView {
     where
         P0: ::windows_core::IntoParam<IOleInPlaceSite>,
     {
-        (::windows_core::Interface::vtable(self).SetInPlaceSite)(::windows_core::Interface::as_raw(self), pipsite.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetInPlaceSite(pipsite.into_param().abi())).ok()
     }
     pub unsafe fn GetInPlaceSite(&self) -> ::windows_core::Result<IOleInPlaceSite> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetInPlaceSite)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetInPlaceSite(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetDocument(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDocument)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDocument(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetRect(&self, prcview: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetRect)(::windows_core::Interface::as_raw(self), prcview).ok()
+        ::windows_core::vcall!(self.SetRect(prcview)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetRect(&self) -> ::windows_core::Result<super::super::Foundation::RECT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRect)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRect(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetRectComplex(&self, prcview: *const super::super::Foundation::RECT, prchscroll: *const super::super::Foundation::RECT, prcvscroll: *const super::super::Foundation::RECT, prcsizebox: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetRectComplex)(::windows_core::Interface::as_raw(self), prcview, prchscroll, prcvscroll, prcsizebox).ok()
+        ::windows_core::vcall!(self.SetRectComplex(prcview, prchscroll, prcvscroll, prcsizebox)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5685,7 +5685,7 @@ impl IOleDocumentView {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).Show)(::windows_core::Interface::as_raw(self), fshow.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Show(fshow.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5693,13 +5693,13 @@ impl IOleDocumentView {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).UIActivate)(::windows_core::Interface::as_raw(self), fuiactivate.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UIActivate(fuiactivate.into_param().abi())).ok()
     }
     pub unsafe fn Open(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Open)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Open()).ok()
     }
     pub unsafe fn CloseView(&self, dwreserved: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CloseView)(::windows_core::Interface::as_raw(self), dwreserved).ok()
+        ::windows_core::vcall!(self.CloseView(dwreserved)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5707,7 +5707,7 @@ impl IOleDocumentView {
     where
         P0: ::windows_core::IntoParam<super::Com::IStream>,
     {
-        (::windows_core::Interface::vtable(self).SaveViewState)(::windows_core::Interface::as_raw(self), pstm.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SaveViewState(pstm.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5715,14 +5715,14 @@ impl IOleDocumentView {
     where
         P0: ::windows_core::IntoParam<super::Com::IStream>,
     {
-        (::windows_core::Interface::vtable(self).ApplyViewState)(::windows_core::Interface::as_raw(self), pstm.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ApplyViewState(pstm.into_param().abi())).ok()
     }
     pub unsafe fn Clone<P0>(&self, pipsitenew: P0) -> ::windows_core::Result<IOleDocumentView>
     where
         P0: ::windows_core::IntoParam<IOleInPlaceSite>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), pipsitenew.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(pipsitenew.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleDocumentView, ::windows_core::IUnknown);
@@ -5779,7 +5779,7 @@ impl IOleInPlaceActiveObject {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetWindow(&self) -> ::windows_core::Result<super::super::Foundation::HWND> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetWindow)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetWindow(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5787,12 +5787,12 @@ impl IOleInPlaceActiveObject {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.ContextSensitiveHelp)(::windows_core::Interface::as_raw(self), fentermode.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ContextSensitiveHelp(fentermode.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn TranslateAccelerator(&self, lpmsg: ::core::option::Option<*const super::super::UI::WindowsAndMessaging::MSG>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).TranslateAccelerator)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(lpmsg.unwrap_or(::std::ptr::null()))).ok()
+        ::windows_core::vcall!(self.TranslateAccelerator(::core::mem::transmute(lpmsg.unwrap_or(::std::ptr::null())))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5800,7 +5800,7 @@ impl IOleInPlaceActiveObject {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnFrameWindowActivate)(::windows_core::Interface::as_raw(self), factivate.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnFrameWindowActivate(factivate.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5808,7 +5808,7 @@ impl IOleInPlaceActiveObject {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnDocWindowActivate)(::windows_core::Interface::as_raw(self), factivate.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnDocWindowActivate(factivate.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5817,7 +5817,7 @@ impl IOleInPlaceActiveObject {
         P0: ::windows_core::IntoParam<IOleInPlaceUIWindow>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).ResizeBorder)(::windows_core::Interface::as_raw(self), prcborder, puiwindow.into_param().abi(), fframewindow.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ResizeBorder(prcborder, puiwindow.into_param().abi(), fframewindow.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5825,7 +5825,7 @@ impl IOleInPlaceActiveObject {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).EnableModeless)(::windows_core::Interface::as_raw(self), fenable.into_param().abi()).ok()
+        ::windows_core::vcall!(self.EnableModeless(fenable.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleInPlaceActiveObject, ::windows_core::IUnknown, IOleWindow);
@@ -5868,7 +5868,7 @@ impl IOleInPlaceFrame {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetWindow(&self) -> ::windows_core::Result<super::super::Foundation::HWND> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.GetWindow)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.GetWindow(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5876,30 +5876,30 @@ impl IOleInPlaceFrame {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.ContextSensitiveHelp)(::windows_core::Interface::as_raw(self), fentermode.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.ContextSensitiveHelp(fentermode.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetBorder(&self) -> ::windows_core::Result<super::super::Foundation::RECT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetBorder)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetBorder(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn RequestBorderSpace(&self, pborderwidths: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.RequestBorderSpace)(::windows_core::Interface::as_raw(self), pborderwidths).ok()
+        ::windows_core::vcall!(self.base__.RequestBorderSpace(pborderwidths)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetBorderSpace(&self, pborderwidths: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetBorderSpace)(::windows_core::Interface::as_raw(self), pborderwidths).ok()
+        ::windows_core::vcall!(self.base__.SetBorderSpace(pborderwidths)).ok()
     }
     pub unsafe fn SetActiveObject<P0, P1>(&self, pactiveobject: P0, pszobjname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IOleInPlaceActiveObject>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetActiveObject)(::windows_core::Interface::as_raw(self), pactiveobject.into_param().abi(), pszobjname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetActiveObject(pactiveobject.into_param().abi(), pszobjname.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
@@ -5907,7 +5907,7 @@ impl IOleInPlaceFrame {
     where
         P0: ::windows_core::IntoParam<super::super::UI::WindowsAndMessaging::HMENU>,
     {
-        (::windows_core::Interface::vtable(self).InsertMenus)(::windows_core::Interface::as_raw(self), hmenushared.into_param().abi(), lpmenuwidths).ok()
+        ::windows_core::vcall!(self.InsertMenus(hmenushared.into_param().abi(), lpmenuwidths)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -5916,7 +5916,7 @@ impl IOleInPlaceFrame {
         P0: ::windows_core::IntoParam<super::super::UI::WindowsAndMessaging::HMENU>,
         P1: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).SetMenu)(::windows_core::Interface::as_raw(self), hmenushared.into_param().abi(), holemenu, hwndactiveobject.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetMenu(hmenushared.into_param().abi(), holemenu, hwndactiveobject.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
@@ -5924,13 +5924,13 @@ impl IOleInPlaceFrame {
     where
         P0: ::windows_core::IntoParam<super::super::UI::WindowsAndMessaging::HMENU>,
     {
-        (::windows_core::Interface::vtable(self).RemoveMenus)(::windows_core::Interface::as_raw(self), hmenushared.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RemoveMenus(hmenushared.into_param().abi())).ok()
     }
     pub unsafe fn SetStatusText<P0>(&self, pszstatustext: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetStatusText)(::windows_core::Interface::as_raw(self), pszstatustext.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetStatusText(pszstatustext.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5938,12 +5938,12 @@ impl IOleInPlaceFrame {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).EnableModeless)(::windows_core::Interface::as_raw(self), fenable.into_param().abi()).ok()
+        ::windows_core::vcall!(self.EnableModeless(fenable.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn TranslateAccelerator(&self, lpmsg: *const super::super::UI::WindowsAndMessaging::MSG, wid: u16) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).TranslateAccelerator)(::windows_core::Interface::as_raw(self), lpmsg, wid).ok()
+        ::windows_core::vcall!(self.TranslateAccelerator(lpmsg, wid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleInPlaceFrame, ::windows_core::IUnknown, IOleWindow, IOleInPlaceUIWindow);
@@ -5987,7 +5987,7 @@ impl IOleInPlaceObject {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetWindow(&self) -> ::windows_core::Result<super::super::Foundation::HWND> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetWindow)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetWindow(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5995,21 +5995,21 @@ impl IOleInPlaceObject {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.ContextSensitiveHelp)(::windows_core::Interface::as_raw(self), fentermode.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ContextSensitiveHelp(fentermode.into_param().abi())).ok()
     }
     pub unsafe fn InPlaceDeactivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).InPlaceDeactivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.InPlaceDeactivate()).ok()
     }
     pub unsafe fn UIDeactivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UIDeactivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.UIDeactivate()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetObjectRects(&self, lprcposrect: *const super::super::Foundation::RECT, lprccliprect: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetObjectRects)(::windows_core::Interface::as_raw(self), lprcposrect, lprccliprect).ok()
+        ::windows_core::vcall!(self.SetObjectRects(lprcposrect, lprccliprect)).ok()
     }
     pub unsafe fn ReactivateAndUndo(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ReactivateAndUndo)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ReactivateAndUndo()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleInPlaceObject, ::windows_core::IUnknown, IOleWindow);
@@ -6039,7 +6039,7 @@ impl IOleInPlaceObjectWindowless {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetWindow(&self) -> ::windows_core::Result<super::super::Foundation::HWND> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.GetWindow)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.GetWindow(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6047,21 +6047,21 @@ impl IOleInPlaceObjectWindowless {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.ContextSensitiveHelp)(::windows_core::Interface::as_raw(self), fentermode.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.ContextSensitiveHelp(fentermode.into_param().abi())).ok()
     }
     pub unsafe fn InPlaceDeactivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.InPlaceDeactivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.InPlaceDeactivate()).ok()
     }
     pub unsafe fn UIDeactivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.UIDeactivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.UIDeactivate()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetObjectRects(&self, lprcposrect: *const super::super::Foundation::RECT, lprccliprect: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetObjectRects)(::windows_core::Interface::as_raw(self), lprcposrect, lprccliprect).ok()
+        ::windows_core::vcall!(self.base__.SetObjectRects(lprcposrect, lprccliprect)).ok()
     }
     pub unsafe fn ReactivateAndUndo(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.ReactivateAndUndo)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.ReactivateAndUndo()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6071,11 +6071,11 @@ impl IOleInPlaceObjectWindowless {
         P1: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).OnWindowMessage)(::windows_core::Interface::as_raw(self), msg, wparam.into_param().abi(), lparam.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.OnWindowMessage(msg, wparam.into_param().abi(), lparam.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetDropTarget(&self) -> ::windows_core::Result<IDropTarget> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDropTarget)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDropTarget(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleInPlaceObjectWindowless, ::windows_core::IUnknown, IOleWindow, IOleInPlaceObject);
@@ -6103,7 +6103,7 @@ impl IOleInPlaceSite {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetWindow(&self) -> ::windows_core::Result<super::super::Foundation::HWND> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetWindow)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetWindow(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6111,26 +6111,26 @@ impl IOleInPlaceSite {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.ContextSensitiveHelp)(::windows_core::Interface::as_raw(self), fentermode.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ContextSensitiveHelp(fentermode.into_param().abi())).ok()
     }
     pub unsafe fn CanInPlaceActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CanInPlaceActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.CanInPlaceActivate()).ok()
     }
     pub unsafe fn OnInPlaceActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnInPlaceActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnInPlaceActivate()).ok()
     }
     pub unsafe fn OnUIActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnUIActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnUIActivate()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn GetWindowContext(&self, ppframe: *mut ::core::option::Option<IOleInPlaceFrame>, ppdoc: *mut ::core::option::Option<IOleInPlaceUIWindow>, lprcposrect: *mut super::super::Foundation::RECT, lprccliprect: *mut super::super::Foundation::RECT, lpframeinfo: *mut OLEINPLACEFRAMEINFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetWindowContext)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppframe), ::core::mem::transmute(ppdoc), lprcposrect, lprccliprect, lpframeinfo).ok()
+        ::windows_core::vcall!(self.GetWindowContext(::core::mem::transmute(ppframe), ::core::mem::transmute(ppdoc), lprcposrect, lprccliprect, lpframeinfo)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Scroll(&self, scrollextant: super::super::Foundation::SIZE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Scroll)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(scrollextant)).ok()
+        ::windows_core::vcall!(self.Scroll(::core::mem::transmute(scrollextant))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6138,21 +6138,21 @@ impl IOleInPlaceSite {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnUIDeactivate)(::windows_core::Interface::as_raw(self), fundoable.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnUIDeactivate(fundoable.into_param().abi())).ok()
     }
     pub unsafe fn OnInPlaceDeactivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnInPlaceDeactivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnInPlaceDeactivate()).ok()
     }
     pub unsafe fn DiscardUndoState(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DiscardUndoState)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.DiscardUndoState()).ok()
     }
     pub unsafe fn DeactivateAndUndo(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeactivateAndUndo)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.DeactivateAndUndo()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn OnPosRectChange(&self, lprcposrect: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnPosRectChange)(::windows_core::Interface::as_raw(self), lprcposrect).ok()
+        ::windows_core::vcall!(self.OnPosRectChange(lprcposrect)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleInPlaceSite, ::windows_core::IUnknown, IOleWindow);
@@ -6197,7 +6197,7 @@ impl IOleInPlaceSiteEx {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetWindow(&self) -> ::windows_core::Result<super::super::Foundation::HWND> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.GetWindow)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.GetWindow(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6205,26 +6205,26 @@ impl IOleInPlaceSiteEx {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.ContextSensitiveHelp)(::windows_core::Interface::as_raw(self), fentermode.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.ContextSensitiveHelp(fentermode.into_param().abi())).ok()
     }
     pub unsafe fn CanInPlaceActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.CanInPlaceActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.CanInPlaceActivate()).ok()
     }
     pub unsafe fn OnInPlaceActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnInPlaceActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.OnInPlaceActivate()).ok()
     }
     pub unsafe fn OnUIActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnUIActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.OnUIActivate()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn GetWindowContext(&self, ppframe: *mut ::core::option::Option<IOleInPlaceFrame>, ppdoc: *mut ::core::option::Option<IOleInPlaceUIWindow>, lprcposrect: *mut super::super::Foundation::RECT, lprccliprect: *mut super::super::Foundation::RECT, lpframeinfo: *mut OLEINPLACEFRAMEINFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetWindowContext)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppframe), ::core::mem::transmute(ppdoc), lprcposrect, lprccliprect, lpframeinfo).ok()
+        ::windows_core::vcall!(self.base__.GetWindowContext(::core::mem::transmute(ppframe), ::core::mem::transmute(ppdoc), lprcposrect, lprccliprect, lpframeinfo)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Scroll(&self, scrollextant: super::super::Foundation::SIZE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Scroll)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(scrollextant)).ok()
+        ::windows_core::vcall!(self.base__.Scroll(::core::mem::transmute(scrollextant))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6232,26 +6232,26 @@ impl IOleInPlaceSiteEx {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.OnUIDeactivate)(::windows_core::Interface::as_raw(self), fundoable.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.OnUIDeactivate(fundoable.into_param().abi())).ok()
     }
     pub unsafe fn OnInPlaceDeactivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnInPlaceDeactivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.OnInPlaceDeactivate()).ok()
     }
     pub unsafe fn DiscardUndoState(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.DiscardUndoState)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.DiscardUndoState()).ok()
     }
     pub unsafe fn DeactivateAndUndo(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.DeactivateAndUndo)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.DeactivateAndUndo()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn OnPosRectChange(&self, lprcposrect: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnPosRectChange)(::windows_core::Interface::as_raw(self), lprcposrect).ok()
+        ::windows_core::vcall!(self.base__.OnPosRectChange(lprcposrect)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn OnInPlaceActivateEx(&self, pfnoredraw: *mut super::super::Foundation::BOOL, dwflags: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnInPlaceActivateEx)(::windows_core::Interface::as_raw(self), pfnoredraw, dwflags).ok()
+        ::windows_core::vcall!(self.OnInPlaceActivateEx(pfnoredraw, dwflags)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6259,10 +6259,10 @@ impl IOleInPlaceSiteEx {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnInPlaceDeactivateEx)(::windows_core::Interface::as_raw(self), fnoredraw.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnInPlaceDeactivateEx(fnoredraw.into_param().abi())).ok()
     }
     pub unsafe fn RequestUIActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RequestUIActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.RequestUIActivate()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleInPlaceSiteEx, ::windows_core::IUnknown, IOleWindow, IOleInPlaceSite);
@@ -6294,7 +6294,7 @@ impl IOleInPlaceSiteWindowless {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetWindow(&self) -> ::windows_core::Result<super::super::Foundation::HWND> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.base__.GetWindow)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.base__.GetWindow(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6302,26 +6302,26 @@ impl IOleInPlaceSiteWindowless {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.base__.ContextSensitiveHelp)(::windows_core::Interface::as_raw(self), fentermode.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.base__.ContextSensitiveHelp(fentermode.into_param().abi())).ok()
     }
     pub unsafe fn CanInPlaceActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.CanInPlaceActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.base__.CanInPlaceActivate()).ok()
     }
     pub unsafe fn OnInPlaceActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.OnInPlaceActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.base__.OnInPlaceActivate()).ok()
     }
     pub unsafe fn OnUIActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.OnUIActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.base__.OnUIActivate()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn GetWindowContext(&self, ppframe: *mut ::core::option::Option<IOleInPlaceFrame>, ppdoc: *mut ::core::option::Option<IOleInPlaceUIWindow>, lprcposrect: *mut super::super::Foundation::RECT, lprccliprect: *mut super::super::Foundation::RECT, lpframeinfo: *mut OLEINPLACEFRAMEINFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetWindowContext)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppframe), ::core::mem::transmute(ppdoc), lprcposrect, lprccliprect, lpframeinfo).ok()
+        ::windows_core::vcall!(self.base__.base__.GetWindowContext(::core::mem::transmute(ppframe), ::core::mem::transmute(ppdoc), lprcposrect, lprccliprect, lpframeinfo)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Scroll(&self, scrollextant: super::super::Foundation::SIZE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.Scroll)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(scrollextant)).ok()
+        ::windows_core::vcall!(self.base__.base__.Scroll(::core::mem::transmute(scrollextant))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6329,26 +6329,26 @@ impl IOleInPlaceSiteWindowless {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.OnUIDeactivate)(::windows_core::Interface::as_raw(self), fundoable.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.OnUIDeactivate(fundoable.into_param().abi())).ok()
     }
     pub unsafe fn OnInPlaceDeactivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.OnInPlaceDeactivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.base__.OnInPlaceDeactivate()).ok()
     }
     pub unsafe fn DiscardUndoState(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.DiscardUndoState)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.base__.DiscardUndoState()).ok()
     }
     pub unsafe fn DeactivateAndUndo(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.DeactivateAndUndo)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.base__.DeactivateAndUndo()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn OnPosRectChange(&self, lprcposrect: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.OnPosRectChange)(::windows_core::Interface::as_raw(self), lprcposrect).ok()
+        ::windows_core::vcall!(self.base__.base__.OnPosRectChange(lprcposrect)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn OnInPlaceActivateEx(&self, pfnoredraw: *mut super::super::Foundation::BOOL, dwflags: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnInPlaceActivateEx)(::windows_core::Interface::as_raw(self), pfnoredraw, dwflags).ok()
+        ::windows_core::vcall!(self.base__.OnInPlaceActivateEx(pfnoredraw, dwflags)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6356,16 +6356,16 @@ impl IOleInPlaceSiteWindowless {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.OnInPlaceDeactivateEx)(::windows_core::Interface::as_raw(self), fnoredraw.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.OnInPlaceDeactivateEx(fnoredraw.into_param().abi())).ok()
     }
     pub unsafe fn RequestUIActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.RequestUIActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.RequestUIActivate()).ok()
     }
     pub unsafe fn CanWindowlessActivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CanWindowlessActivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.CanWindowlessActivate()).ok()
     }
     pub unsafe fn GetCapture(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCapture)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.GetCapture()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6373,10 +6373,10 @@ impl IOleInPlaceSiteWindowless {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetCapture)(::windows_core::Interface::as_raw(self), fcapture.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetCapture(fcapture.into_param().abi())).ok()
     }
     pub unsafe fn GetFocus(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetFocus)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.GetFocus()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6384,13 +6384,13 @@ impl IOleInPlaceSiteWindowless {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetFocus)(::windows_core::Interface::as_raw(self), ffocus.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetFocus(ffocus.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
     pub unsafe fn GetDC(&self, prect: *const super::super::Foundation::RECT, grfflags: u32) -> ::windows_core::Result<super::super::Graphics::Gdi::HDC> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDC)(::windows_core::Interface::as_raw(self), prect, grfflags, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDC(prect, grfflags, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -6398,7 +6398,7 @@ impl IOleInPlaceSiteWindowless {
     where
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).ReleaseDC)(::windows_core::Interface::as_raw(self), hdc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ReleaseDC(hdc.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6406,7 +6406,7 @@ impl IOleInPlaceSiteWindowless {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).InvalidateRect)(::windows_core::Interface::as_raw(self), prect, ferase.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InvalidateRect(prect, ferase.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -6415,17 +6415,17 @@ impl IOleInPlaceSiteWindowless {
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HRGN>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).InvalidateRgn)(::windows_core::Interface::as_raw(self), hrgn.into_param().abi(), ferase.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InvalidateRgn(hrgn.into_param().abi(), ferase.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn ScrollRect(&self, dx: i32, dy: i32, prectscroll: *const super::super::Foundation::RECT, prectclip: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ScrollRect)(::windows_core::Interface::as_raw(self), dx, dy, prectscroll, prectclip).ok()
+        ::windows_core::vcall!(self.ScrollRect(dx, dy, prectscroll, prectclip)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn AdjustRect(&self, prc: *mut super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AdjustRect)(::windows_core::Interface::as_raw(self), prc).ok()
+        ::windows_core::vcall!(self.AdjustRect(prc)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6435,7 +6435,7 @@ impl IOleInPlaceSiteWindowless {
         P1: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).OnDefWindowMessage)(::windows_core::Interface::as_raw(self), msg, wparam.into_param().abi(), lparam.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.OnDefWindowMessage(msg, wparam.into_param().abi(), lparam.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleInPlaceSiteWindowless, ::windows_core::IUnknown, IOleWindow, IOleInPlaceSite, IOleInPlaceSiteEx);
@@ -6497,7 +6497,7 @@ impl IOleInPlaceUIWindow {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetWindow(&self) -> ::windows_core::Result<super::super::Foundation::HWND> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetWindow)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetWindow(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6505,30 +6505,30 @@ impl IOleInPlaceUIWindow {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.ContextSensitiveHelp)(::windows_core::Interface::as_raw(self), fentermode.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ContextSensitiveHelp(fentermode.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetBorder(&self) -> ::windows_core::Result<super::super::Foundation::RECT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetBorder)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetBorder(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn RequestBorderSpace(&self, pborderwidths: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RequestBorderSpace)(::windows_core::Interface::as_raw(self), pborderwidths).ok()
+        ::windows_core::vcall!(self.RequestBorderSpace(pborderwidths)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetBorderSpace(&self, pborderwidths: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetBorderSpace)(::windows_core::Interface::as_raw(self), pborderwidths).ok()
+        ::windows_core::vcall!(self.SetBorderSpace(pborderwidths)).ok()
     }
     pub unsafe fn SetActiveObject<P0, P1>(&self, pactiveobject: P0, pszobjname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IOleInPlaceActiveObject>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetActiveObject)(::windows_core::Interface::as_raw(self), pactiveobject.into_param().abi(), pszobjname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetActiveObject(pactiveobject.into_param().abi(), pszobjname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleInPlaceUIWindow, ::windows_core::IUnknown, IOleWindow);
@@ -6567,13 +6567,13 @@ impl IOleItemContainer {
         P0: ::windows_core::IntoParam<super::Com::IBindCtx>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.ParseDisplayName)(::windows_core::Interface::as_raw(self), pbc.into_param().abi(), pszdisplayname.into_param().abi(), pcheaten, ::core::mem::transmute(ppmkout)).ok()
+        ::windows_core::vcall!(self.base__.base__.ParseDisplayName(pbc.into_param().abi(), pszdisplayname.into_param().abi(), pcheaten, ::core::mem::transmute(ppmkout))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn EnumObjects(&self, grfflags: OLECONTF) -> ::windows_core::Result<super::Com::IEnumUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.EnumObjects)(::windows_core::Interface::as_raw(self), grfflags.0 as _, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.EnumObjects(grfflags.0 as _, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6581,7 +6581,7 @@ impl IOleItemContainer {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.LockContainer)(::windows_core::Interface::as_raw(self), flock.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.LockContainer(flock.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6592,7 +6592,7 @@ impl IOleItemContainer {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).GetObject)(::windows_core::Interface::as_raw(self), pszitem.into_param().abi(), dwspeedneeded, pbc.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetObject(pszitem.into_param().abi(), dwspeedneeded, pbc.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6603,13 +6603,13 @@ impl IOleItemContainer {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).GetObjectStorage)(::windows_core::Interface::as_raw(self), pszitem.into_param().abi(), pbc.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetObjectStorage(pszitem.into_param().abi(), pbc.into_param().abi(), &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     pub unsafe fn IsRunning<P0>(&self, pszitem: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).IsRunning)(::windows_core::Interface::as_raw(self), pszitem.into_param().abi()).ok()
+        ::windows_core::vcall!(self.IsRunning(pszitem.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleItemContainer, ::windows_core::IUnknown, IParseDisplayName, IOleContainer);
@@ -6638,11 +6638,11 @@ pub struct IOleItemContainer_Vtbl {
 pub struct IOleLink(::windows_core::IUnknown);
 impl IOleLink {
     pub unsafe fn SetUpdateOptions(&self, dwupdateopt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetUpdateOptions)(::windows_core::Interface::as_raw(self), dwupdateopt).ok()
+        ::windows_core::vcall!(self.SetUpdateOptions(dwupdateopt)).ok()
     }
     pub unsafe fn GetUpdateOptions(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUpdateOptions)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUpdateOptions(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6650,23 +6650,23 @@ impl IOleLink {
     where
         P0: ::windows_core::IntoParam<super::Com::IMoniker>,
     {
-        (::windows_core::Interface::vtable(self).SetSourceMoniker)(::windows_core::Interface::as_raw(self), pmk.into_param().abi(), rclsid).ok()
+        ::windows_core::vcall!(self.SetSourceMoniker(pmk.into_param().abi(), rclsid)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetSourceMoniker(&self) -> ::windows_core::Result<super::Com::IMoniker> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSourceMoniker)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSourceMoniker(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetSourceDisplayName<P0>(&self, pszstatustext: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetSourceDisplayName)(::windows_core::Interface::as_raw(self), pszstatustext.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetSourceDisplayName(pszstatustext.into_param().abi())).ok()
     }
     pub unsafe fn GetSourceDisplayName(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSourceDisplayName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSourceDisplayName(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6674,17 +6674,17 @@ impl IOleLink {
     where
         P0: ::windows_core::IntoParam<super::Com::IBindCtx>,
     {
-        (::windows_core::Interface::vtable(self).BindToSource)(::windows_core::Interface::as_raw(self), bindflags, pbc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.BindToSource(bindflags, pbc.into_param().abi())).ok()
     }
     pub unsafe fn BindIfRunning(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).BindIfRunning)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.BindIfRunning()).ok()
     }
     pub unsafe fn GetBoundSource(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetBoundSource)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetBoundSource(&mut result__)).from_abi(result__)
     }
     pub unsafe fn UnbindSource(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UnbindSource)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.UnbindSource()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6692,7 +6692,7 @@ impl IOleLink {
     where
         P0: ::windows_core::IntoParam<super::Com::IBindCtx>,
     {
-        (::windows_core::Interface::vtable(self).Update)(::windows_core::Interface::as_raw(self), pbc.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Update(pbc.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleLink, ::windows_core::IUnknown);
@@ -6738,21 +6738,21 @@ impl IOleObject {
     where
         P0: ::windows_core::IntoParam<IOleClientSite>,
     {
-        (::windows_core::Interface::vtable(self).SetClientSite)(::windows_core::Interface::as_raw(self), pclientsite.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetClientSite(pclientsite.into_param().abi())).ok()
     }
     pub unsafe fn GetClientSite(&self) -> ::windows_core::Result<IOleClientSite> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetClientSite)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetClientSite(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetHostNames<P0, P1>(&self, szcontainerapp: P0, szcontainerobj: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetHostNames)(::windows_core::Interface::as_raw(self), szcontainerapp.into_param().abi(), szcontainerobj.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetHostNames(szcontainerapp.into_param().abi(), szcontainerobj.into_param().abi())).ok()
     }
     pub unsafe fn Close(&self, dwsaveoption: OLECLOSE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self), dwsaveoption.0 as _).ok()
+        ::windows_core::vcall!(self.Close(dwsaveoption.0 as _)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6760,13 +6760,13 @@ impl IOleObject {
     where
         P0: ::windows_core::IntoParam<super::Com::IMoniker>,
     {
-        (::windows_core::Interface::vtable(self).SetMoniker)(::windows_core::Interface::as_raw(self), dwwhichmoniker.0 as _, pmk.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetMoniker(dwwhichmoniker.0 as _, pmk.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetMoniker(&self, dwassign: OLEGETMONIKER, dwwhichmoniker: OLEWHICHMK) -> ::windows_core::Result<super::Com::IMoniker> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMoniker)(::windows_core::Interface::as_raw(self), dwassign.0 as _, dwwhichmoniker.0 as _, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMoniker(dwassign.0 as _, dwwhichmoniker.0 as _, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -6775,13 +6775,13 @@ impl IOleObject {
         P0: ::windows_core::IntoParam<super::Com::IDataObject>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).InitFromData)(::windows_core::Interface::as_raw(self), pdataobject.into_param().abi(), fcreation.into_param().abi(), dwreserved).ok()
+        ::windows_core::vcall!(self.InitFromData(pdataobject.into_param().abi(), fcreation.into_param().abi(), dwreserved)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetClipboardData(&self, dwreserved: u32) -> ::windows_core::Result<super::Com::IDataObject> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetClipboardData)(::windows_core::Interface::as_raw(self), dwreserved, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetClipboardData(dwreserved, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
@@ -6790,36 +6790,36 @@ impl IOleObject {
         P0: ::windows_core::IntoParam<IOleClientSite>,
         P1: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).DoVerb)(::windows_core::Interface::as_raw(self), iverb, lpmsg, pactivesite.into_param().abi(), lindex, hwndparent.into_param().abi(), lprcposrect).ok()
+        ::windows_core::vcall!(self.DoVerb(iverb, lpmsg, pactivesite.into_param().abi(), lindex, hwndparent.into_param().abi(), lprcposrect)).ok()
     }
     pub unsafe fn EnumVerbs(&self) -> ::windows_core::Result<IEnumOLEVERB> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumVerbs)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumVerbs(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Update(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Update)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Update()).ok()
     }
     pub unsafe fn IsUpToDate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).IsUpToDate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.IsUpToDate()).ok()
     }
     pub unsafe fn GetUserClassID(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUserClassID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUserClassID(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetUserType(&self, dwformoftype: USERCLASSTYPE) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUserType)(::windows_core::Interface::as_raw(self), dwformoftype.0 as _, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUserType(dwformoftype.0 as _, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
     pub unsafe fn SetExtent(&self, dwdrawaspect: super::Com::DVASPECT, psizel: *const super::super::Foundation::SIZE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetExtent)(::windows_core::Interface::as_raw(self), dwdrawaspect, psizel).ok()
+        ::windows_core::vcall!(self.SetExtent(dwdrawaspect, psizel)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
     pub unsafe fn GetExtent(&self, dwdrawaspect: super::Com::DVASPECT) -> ::windows_core::Result<super::super::Foundation::SIZE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetExtent)(::windows_core::Interface::as_raw(self), dwdrawaspect, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetExtent(dwdrawaspect, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6828,27 +6828,27 @@ impl IOleObject {
         P0: ::windows_core::IntoParam<super::Com::IAdviseSink>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Advise)(::windows_core::Interface::as_raw(self), padvsink.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Advise(padvsink.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Unadvise(&self, dwconnection: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unadvise)(::windows_core::Interface::as_raw(self), dwconnection).ok()
+        ::windows_core::vcall!(self.Unadvise(dwconnection)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn EnumAdvise(&self) -> ::windows_core::Result<super::Com::IEnumSTATDATA> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumAdvise)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumAdvise(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetMiscStatus(&self, dwaspect: super::Com::DVASPECT) -> ::windows_core::Result<OLEMISC> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMiscStatus)(::windows_core::Interface::as_raw(self), dwaspect, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMiscStatus(dwaspect, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
     pub unsafe fn SetColorScheme(&self, plogpal: *const super::super::Graphics::Gdi::LOGPALETTE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetColorScheme)(::windows_core::Interface::as_raw(self), plogpal).ok()
+        ::windows_core::vcall!(self.SetColorScheme(plogpal)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleObject, ::windows_core::IUnknown);
@@ -6925,23 +6925,23 @@ impl IOleParentUndoUnit {
     where
         P0: ::windows_core::IntoParam<IOleUndoManager>,
     {
-        (::windows_core::Interface::vtable(self).base__.Do)(::windows_core::Interface::as_raw(self), pundomanager.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Do(pundomanager.into_param().abi())).ok()
     }
     pub unsafe fn GetDescription(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetDescription)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetDescription(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetUnitType(&self, pclsid: *mut ::windows_core::GUID, plid: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetUnitType)(::windows_core::Interface::as_raw(self), pclsid, plid).ok()
+        ::windows_core::vcall!(self.base__.GetUnitType(pclsid, plid)).ok()
     }
     pub unsafe fn OnNextAdd(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OnNextAdd)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.OnNextAdd()).ok()
     }
     pub unsafe fn Open<P0>(&self, ppuu: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IOleParentUndoUnit>,
     {
-        (::windows_core::Interface::vtable(self).Open)(::windows_core::Interface::as_raw(self), ppuu.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Open(ppuu.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6950,23 +6950,23 @@ impl IOleParentUndoUnit {
         P0: ::windows_core::IntoParam<IOleParentUndoUnit>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self), ppuu.into_param().abi(), fcommit.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Close(ppuu.into_param().abi(), fcommit.into_param().abi())).ok()
     }
     pub unsafe fn Add<P0>(&self, puu: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IOleUndoUnit>,
     {
-        (::windows_core::Interface::vtable(self).Add)(::windows_core::Interface::as_raw(self), puu.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Add(puu.into_param().abi())).ok()
     }
     pub unsafe fn FindUnit<P0>(&self, puu: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IOleUndoUnit>,
     {
-        (::windows_core::Interface::vtable(self).FindUnit)(::windows_core::Interface::as_raw(self), puu.into_param().abi()).ok()
+        ::windows_core::vcall!(self.FindUnit(puu.into_param().abi())).ok()
     }
     pub unsafe fn GetParentState(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetParentState)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetParentState(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleParentUndoUnit, ::windows_core::IUnknown, IOleUndoUnit);
@@ -6994,14 +6994,14 @@ pub struct IOleParentUndoUnit_Vtbl {
 pub struct IOleUILinkContainerA(::windows_core::IUnknown);
 impl IOleUILinkContainerA {
     pub unsafe fn GetNextLink(&self, dwlink: u32) -> u32 {
-        (::windows_core::Interface::vtable(self).GetNextLink)(::windows_core::Interface::as_raw(self), dwlink)
+        ::windows_core::vcall!(self.GetNextLink(dwlink))
     }
     pub unsafe fn SetLinkUpdateOptions(&self, dwlink: u32, dwupdateopt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetLinkUpdateOptions)(::windows_core::Interface::as_raw(self), dwlink, dwupdateopt).ok()
+        ::windows_core::vcall!(self.SetLinkUpdateOptions(dwlink, dwupdateopt)).ok()
     }
     pub unsafe fn GetLinkUpdateOptions(&self, dwlink: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLinkUpdateOptions)(::windows_core::Interface::as_raw(self), dwlink, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLinkUpdateOptions(dwlink, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7010,15 +7010,15 @@ impl IOleUILinkContainerA {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetLinkSource)(::windows_core::Interface::as_raw(self), dwlink, lpszdisplayname.into_param().abi(), lenfilename, pcheaten, fvalidatesource.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetLinkSource(dwlink, lpszdisplayname.into_param().abi(), lenfilename, pcheaten, fvalidatesource.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetLinkSource(&self, dwlink: u32, lplpszdisplayname: ::core::option::Option<*mut ::windows_core::PSTR>, lplenfilename: *mut u32, lplpszfulllinktype: ::core::option::Option<*mut ::windows_core::PSTR>, lplpszshortlinktype: ::core::option::Option<*mut ::windows_core::PSTR>, lpfsourceavailable: *mut super::super::Foundation::BOOL, lpfisselected: *mut super::super::Foundation::BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetLinkSource)(::windows_core::Interface::as_raw(self), dwlink, ::core::mem::transmute(lplpszdisplayname.unwrap_or(::std::ptr::null_mut())), lplenfilename, ::core::mem::transmute(lplpszfulllinktype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshortlinktype.unwrap_or(::std::ptr::null_mut())), lpfsourceavailable, lpfisselected).ok()
+        ::windows_core::vcall!(self.GetLinkSource(dwlink, ::core::mem::transmute(lplpszdisplayname.unwrap_or(::std::ptr::null_mut())), lplenfilename, ::core::mem::transmute(lplpszfulllinktype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshortlinktype.unwrap_or(::std::ptr::null_mut())), lpfsourceavailable, lpfisselected)).ok()
     }
     pub unsafe fn OpenLinkSource(&self, dwlink: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OpenLinkSource)(::windows_core::Interface::as_raw(self), dwlink).ok()
+        ::windows_core::vcall!(self.OpenLinkSource(dwlink)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7027,10 +7027,10 @@ impl IOleUILinkContainerA {
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).UpdateLink)(::windows_core::Interface::as_raw(self), dwlink, ferrormessage.into_param().abi(), freserved.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UpdateLink(dwlink, ferrormessage.into_param().abi(), freserved.into_param().abi())).ok()
     }
     pub unsafe fn CancelLink(&self, dwlink: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CancelLink)(::windows_core::Interface::as_raw(self), dwlink).ok()
+        ::windows_core::vcall!(self.CancelLink(dwlink)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleUILinkContainerA, ::windows_core::IUnknown);
@@ -7067,14 +7067,14 @@ pub struct IOleUILinkContainerA_Vtbl {
 pub struct IOleUILinkContainerW(::windows_core::IUnknown);
 impl IOleUILinkContainerW {
     pub unsafe fn GetNextLink(&self, dwlink: u32) -> u32 {
-        (::windows_core::Interface::vtable(self).GetNextLink)(::windows_core::Interface::as_raw(self), dwlink)
+        ::windows_core::vcall!(self.GetNextLink(dwlink))
     }
     pub unsafe fn SetLinkUpdateOptions(&self, dwlink: u32, dwupdateopt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetLinkUpdateOptions)(::windows_core::Interface::as_raw(self), dwlink, dwupdateopt).ok()
+        ::windows_core::vcall!(self.SetLinkUpdateOptions(dwlink, dwupdateopt)).ok()
     }
     pub unsafe fn GetLinkUpdateOptions(&self, dwlink: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLinkUpdateOptions)(::windows_core::Interface::as_raw(self), dwlink, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLinkUpdateOptions(dwlink, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7083,15 +7083,15 @@ impl IOleUILinkContainerW {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetLinkSource)(::windows_core::Interface::as_raw(self), dwlink, lpszdisplayname.into_param().abi(), lenfilename, pcheaten, fvalidatesource.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetLinkSource(dwlink, lpszdisplayname.into_param().abi(), lenfilename, pcheaten, fvalidatesource.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetLinkSource(&self, dwlink: u32, lplpszdisplayname: ::core::option::Option<*mut ::windows_core::PWSTR>, lplenfilename: *mut u32, lplpszfulllinktype: ::core::option::Option<*mut ::windows_core::PWSTR>, lplpszshortlinktype: ::core::option::Option<*mut ::windows_core::PWSTR>, lpfsourceavailable: *mut super::super::Foundation::BOOL, lpfisselected: *mut super::super::Foundation::BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetLinkSource)(::windows_core::Interface::as_raw(self), dwlink, ::core::mem::transmute(lplpszdisplayname.unwrap_or(::std::ptr::null_mut())), lplenfilename, ::core::mem::transmute(lplpszfulllinktype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshortlinktype.unwrap_or(::std::ptr::null_mut())), lpfsourceavailable, lpfisselected).ok()
+        ::windows_core::vcall!(self.GetLinkSource(dwlink, ::core::mem::transmute(lplpszdisplayname.unwrap_or(::std::ptr::null_mut())), lplenfilename, ::core::mem::transmute(lplpszfulllinktype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshortlinktype.unwrap_or(::std::ptr::null_mut())), lpfsourceavailable, lpfisselected)).ok()
     }
     pub unsafe fn OpenLinkSource(&self, dwlink: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OpenLinkSource)(::windows_core::Interface::as_raw(self), dwlink).ok()
+        ::windows_core::vcall!(self.OpenLinkSource(dwlink)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7100,10 +7100,10 @@ impl IOleUILinkContainerW {
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).UpdateLink)(::windows_core::Interface::as_raw(self), dwlink, ferrormessage.into_param().abi(), freserved.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UpdateLink(dwlink, ferrormessage.into_param().abi(), freserved.into_param().abi())).ok()
     }
     pub unsafe fn CancelLink(&self, dwlink: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CancelLink)(::windows_core::Interface::as_raw(self), dwlink).ok()
+        ::windows_core::vcall!(self.CancelLink(dwlink)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleUILinkContainerW, ::windows_core::IUnknown);
@@ -7140,14 +7140,14 @@ pub struct IOleUILinkContainerW_Vtbl {
 pub struct IOleUILinkInfoA(::windows_core::IUnknown);
 impl IOleUILinkInfoA {
     pub unsafe fn GetNextLink(&self, dwlink: u32) -> u32 {
-        (::windows_core::Interface::vtable(self).base__.GetNextLink)(::windows_core::Interface::as_raw(self), dwlink)
+        ::windows_core::vcall!(self.base__.GetNextLink(dwlink))
     }
     pub unsafe fn SetLinkUpdateOptions(&self, dwlink: u32, dwupdateopt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetLinkUpdateOptions)(::windows_core::Interface::as_raw(self), dwlink, dwupdateopt).ok()
+        ::windows_core::vcall!(self.base__.SetLinkUpdateOptions(dwlink, dwupdateopt)).ok()
     }
     pub unsafe fn GetLinkUpdateOptions(&self, dwlink: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetLinkUpdateOptions)(::windows_core::Interface::as_raw(self), dwlink, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetLinkUpdateOptions(dwlink, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7156,15 +7156,15 @@ impl IOleUILinkInfoA {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetLinkSource)(::windows_core::Interface::as_raw(self), dwlink, lpszdisplayname.into_param().abi(), lenfilename, pcheaten, fvalidatesource.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetLinkSource(dwlink, lpszdisplayname.into_param().abi(), lenfilename, pcheaten, fvalidatesource.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetLinkSource(&self, dwlink: u32, lplpszdisplayname: ::core::option::Option<*mut ::windows_core::PSTR>, lplenfilename: *mut u32, lplpszfulllinktype: ::core::option::Option<*mut ::windows_core::PSTR>, lplpszshortlinktype: ::core::option::Option<*mut ::windows_core::PSTR>, lpfsourceavailable: *mut super::super::Foundation::BOOL, lpfisselected: *mut super::super::Foundation::BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetLinkSource)(::windows_core::Interface::as_raw(self), dwlink, ::core::mem::transmute(lplpszdisplayname.unwrap_or(::std::ptr::null_mut())), lplenfilename, ::core::mem::transmute(lplpszfulllinktype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshortlinktype.unwrap_or(::std::ptr::null_mut())), lpfsourceavailable, lpfisselected).ok()
+        ::windows_core::vcall!(self.base__.GetLinkSource(dwlink, ::core::mem::transmute(lplpszdisplayname.unwrap_or(::std::ptr::null_mut())), lplenfilename, ::core::mem::transmute(lplpszfulllinktype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshortlinktype.unwrap_or(::std::ptr::null_mut())), lpfsourceavailable, lpfisselected)).ok()
     }
     pub unsafe fn OpenLinkSource(&self, dwlink: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OpenLinkSource)(::windows_core::Interface::as_raw(self), dwlink).ok()
+        ::windows_core::vcall!(self.base__.OpenLinkSource(dwlink)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7173,16 +7173,16 @@ impl IOleUILinkInfoA {
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.UpdateLink)(::windows_core::Interface::as_raw(self), dwlink, ferrormessage.into_param().abi(), freserved.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.UpdateLink(dwlink, ferrormessage.into_param().abi(), freserved.into_param().abi())).ok()
     }
     pub unsafe fn CancelLink(&self, dwlink: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.CancelLink)(::windows_core::Interface::as_raw(self), dwlink).ok()
+        ::windows_core::vcall!(self.base__.CancelLink(dwlink)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetLastUpdate(&self, dwlink: u32) -> ::windows_core::Result<super::super::Foundation::FILETIME> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLastUpdate)(::windows_core::Interface::as_raw(self), dwlink, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLastUpdate(dwlink, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleUILinkInfoA, ::windows_core::IUnknown, IOleUILinkContainerA);
@@ -7206,14 +7206,14 @@ pub struct IOleUILinkInfoA_Vtbl {
 pub struct IOleUILinkInfoW(::windows_core::IUnknown);
 impl IOleUILinkInfoW {
     pub unsafe fn GetNextLink(&self, dwlink: u32) -> u32 {
-        (::windows_core::Interface::vtable(self).base__.GetNextLink)(::windows_core::Interface::as_raw(self), dwlink)
+        ::windows_core::vcall!(self.base__.GetNextLink(dwlink))
     }
     pub unsafe fn SetLinkUpdateOptions(&self, dwlink: u32, dwupdateopt: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetLinkUpdateOptions)(::windows_core::Interface::as_raw(self), dwlink, dwupdateopt).ok()
+        ::windows_core::vcall!(self.base__.SetLinkUpdateOptions(dwlink, dwupdateopt)).ok()
     }
     pub unsafe fn GetLinkUpdateOptions(&self, dwlink: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetLinkUpdateOptions)(::windows_core::Interface::as_raw(self), dwlink, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetLinkUpdateOptions(dwlink, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7222,15 +7222,15 @@ impl IOleUILinkInfoW {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetLinkSource)(::windows_core::Interface::as_raw(self), dwlink, lpszdisplayname.into_param().abi(), lenfilename, pcheaten, fvalidatesource.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetLinkSource(dwlink, lpszdisplayname.into_param().abi(), lenfilename, pcheaten, fvalidatesource.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetLinkSource(&self, dwlink: u32, lplpszdisplayname: ::core::option::Option<*mut ::windows_core::PWSTR>, lplenfilename: *mut u32, lplpszfulllinktype: ::core::option::Option<*mut ::windows_core::PWSTR>, lplpszshortlinktype: ::core::option::Option<*mut ::windows_core::PWSTR>, lpfsourceavailable: *mut super::super::Foundation::BOOL, lpfisselected: *mut super::super::Foundation::BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetLinkSource)(::windows_core::Interface::as_raw(self), dwlink, ::core::mem::transmute(lplpszdisplayname.unwrap_or(::std::ptr::null_mut())), lplenfilename, ::core::mem::transmute(lplpszfulllinktype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshortlinktype.unwrap_or(::std::ptr::null_mut())), lpfsourceavailable, lpfisselected).ok()
+        ::windows_core::vcall!(self.base__.GetLinkSource(dwlink, ::core::mem::transmute(lplpszdisplayname.unwrap_or(::std::ptr::null_mut())), lplenfilename, ::core::mem::transmute(lplpszfulllinktype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshortlinktype.unwrap_or(::std::ptr::null_mut())), lpfsourceavailable, lpfisselected)).ok()
     }
     pub unsafe fn OpenLinkSource(&self, dwlink: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.OpenLinkSource)(::windows_core::Interface::as_raw(self), dwlink).ok()
+        ::windows_core::vcall!(self.base__.OpenLinkSource(dwlink)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7239,16 +7239,16 @@ impl IOleUILinkInfoW {
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.UpdateLink)(::windows_core::Interface::as_raw(self), dwlink, ferrormessage.into_param().abi(), freserved.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.UpdateLink(dwlink, ferrormessage.into_param().abi(), freserved.into_param().abi())).ok()
     }
     pub unsafe fn CancelLink(&self, dwlink: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.CancelLink)(::windows_core::Interface::as_raw(self), dwlink).ok()
+        ::windows_core::vcall!(self.base__.CancelLink(dwlink)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetLastUpdate(&self, dwlink: u32) -> ::windows_core::Result<super::super::Foundation::FILETIME> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLastUpdate)(::windows_core::Interface::as_raw(self), dwlink, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLastUpdate(dwlink, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleUILinkInfoW, ::windows_core::IUnknown, IOleUILinkContainerW);
@@ -7272,18 +7272,18 @@ pub struct IOleUILinkInfoW_Vtbl {
 pub struct IOleUIObjInfoA(::windows_core::IUnknown);
 impl IOleUIObjInfoA {
     pub unsafe fn GetObjectInfo(&self, dwobject: u32, lpdwobjsize: *mut u32, lplpszlabel: ::core::option::Option<*mut ::windows_core::PSTR>, lplpsztype: ::core::option::Option<*mut ::windows_core::PSTR>, lplpszshorttype: ::core::option::Option<*mut ::windows_core::PSTR>, lplpszlocation: ::core::option::Option<*mut ::windows_core::PSTR>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetObjectInfo)(::windows_core::Interface::as_raw(self), dwobject, lpdwobjsize, ::core::mem::transmute(lplpszlabel.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpsztype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshorttype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszlocation.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetObjectInfo(dwobject, lpdwobjsize, ::core::mem::transmute(lplpszlabel.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpsztype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshorttype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszlocation.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn GetConvertInfo(&self, dwobject: u32, lpclassid: *mut ::windows_core::GUID, lpwformat: *mut u16, lpconvertdefaultclassid: *mut ::windows_core::GUID, lplpclsidexclude: *mut *mut ::windows_core::GUID, lpcclsidexclude: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetConvertInfo)(::windows_core::Interface::as_raw(self), dwobject, lpclassid, lpwformat, lpconvertdefaultclassid, lplpclsidexclude, ::core::mem::transmute(lpcclsidexclude.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetConvertInfo(dwobject, lpclassid, lpwformat, lpconvertdefaultclassid, lplpclsidexclude, ::core::mem::transmute(lpcclsidexclude.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ConvertObject(&self, dwobject: u32, clsidnew: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConvertObject)(::windows_core::Interface::as_raw(self), dwobject, clsidnew).ok()
+        ::windows_core::vcall!(self.ConvertObject(dwobject, clsidnew)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetViewInfo(&self, dwobject: u32, phmetapict: ::core::option::Option<*const super::super::Foundation::HGLOBAL>, pdvaspect: ::core::option::Option<*const u32>, pncurrentscale: ::core::option::Option<*const i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetViewInfo)(::windows_core::Interface::as_raw(self), dwobject, ::core::mem::transmute(phmetapict.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pdvaspect.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pncurrentscale.unwrap_or(::std::ptr::null()))).ok()
+        ::windows_core::vcall!(self.GetViewInfo(dwobject, ::core::mem::transmute(phmetapict.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pdvaspect.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pncurrentscale.unwrap_or(::std::ptr::null())))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7292,7 +7292,7 @@ impl IOleUIObjInfoA {
         P0: ::windows_core::IntoParam<super::super::Foundation::HGLOBAL>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetViewInfo)(::windows_core::Interface::as_raw(self), dwobject, hmetapict.into_param().abi(), dvaspect, ncurrentscale, brelativetoorig.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetViewInfo(dwobject, hmetapict.into_param().abi(), dvaspect, ncurrentscale, brelativetoorig.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleUIObjInfoA, ::windows_core::IUnknown);
@@ -7323,18 +7323,18 @@ pub struct IOleUIObjInfoA_Vtbl {
 pub struct IOleUIObjInfoW(::windows_core::IUnknown);
 impl IOleUIObjInfoW {
     pub unsafe fn GetObjectInfo(&self, dwobject: u32, lpdwobjsize: *mut u32, lplpszlabel: ::core::option::Option<*mut ::windows_core::PWSTR>, lplpsztype: ::core::option::Option<*mut ::windows_core::PWSTR>, lplpszshorttype: ::core::option::Option<*mut ::windows_core::PWSTR>, lplpszlocation: ::core::option::Option<*mut ::windows_core::PWSTR>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetObjectInfo)(::windows_core::Interface::as_raw(self), dwobject, lpdwobjsize, ::core::mem::transmute(lplpszlabel.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpsztype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshorttype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszlocation.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetObjectInfo(dwobject, lpdwobjsize, ::core::mem::transmute(lplpszlabel.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpsztype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszshorttype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(lplpszlocation.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn GetConvertInfo(&self, dwobject: u32, lpclassid: *mut ::windows_core::GUID, lpwformat: *mut u16, lpconvertdefaultclassid: *mut ::windows_core::GUID, lplpclsidexclude: *mut *mut ::windows_core::GUID, lpcclsidexclude: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetConvertInfo)(::windows_core::Interface::as_raw(self), dwobject, lpclassid, lpwformat, lpconvertdefaultclassid, lplpclsidexclude, ::core::mem::transmute(lpcclsidexclude.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.GetConvertInfo(dwobject, lpclassid, lpwformat, lpconvertdefaultclassid, lplpclsidexclude, ::core::mem::transmute(lpcclsidexclude.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ConvertObject(&self, dwobject: u32, clsidnew: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConvertObject)(::windows_core::Interface::as_raw(self), dwobject, clsidnew).ok()
+        ::windows_core::vcall!(self.ConvertObject(dwobject, clsidnew)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetViewInfo(&self, dwobject: u32, phmetapict: ::core::option::Option<*const super::super::Foundation::HGLOBAL>, pdvaspect: ::core::option::Option<*const u32>, pncurrentscale: ::core::option::Option<*const i32>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetViewInfo)(::windows_core::Interface::as_raw(self), dwobject, ::core::mem::transmute(phmetapict.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pdvaspect.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pncurrentscale.unwrap_or(::std::ptr::null()))).ok()
+        ::windows_core::vcall!(self.GetViewInfo(dwobject, ::core::mem::transmute(phmetapict.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pdvaspect.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pncurrentscale.unwrap_or(::std::ptr::null())))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7343,7 +7343,7 @@ impl IOleUIObjInfoW {
         P0: ::windows_core::IntoParam<super::super::Foundation::HGLOBAL>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetViewInfo)(::windows_core::Interface::as_raw(self), dwobject, hmetapict.into_param().abi(), dvaspect, ncurrentscale, brelativetoorig.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetViewInfo(dwobject, hmetapict.into_param().abi(), dvaspect, ncurrentscale, brelativetoorig.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleUIObjInfoW, ::windows_core::IUnknown);
@@ -7377,7 +7377,7 @@ impl IOleUndoManager {
     where
         P0: ::windows_core::IntoParam<IOleParentUndoUnit>,
     {
-        (::windows_core::Interface::vtable(self).Open)(::windows_core::Interface::as_raw(self), ppuu.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Open(ppuu.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7386,51 +7386,51 @@ impl IOleUndoManager {
         P0: ::windows_core::IntoParam<IOleParentUndoUnit>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self), ppuu.into_param().abi(), fcommit.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Close(ppuu.into_param().abi(), fcommit.into_param().abi())).ok()
     }
     pub unsafe fn Add<P0>(&self, puu: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IOleUndoUnit>,
     {
-        (::windows_core::Interface::vtable(self).Add)(::windows_core::Interface::as_raw(self), puu.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Add(puu.into_param().abi())).ok()
     }
     pub unsafe fn GetOpenParentState(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetOpenParentState)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetOpenParentState(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DiscardFrom<P0>(&self, puu: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IOleUndoUnit>,
     {
-        (::windows_core::Interface::vtable(self).DiscardFrom)(::windows_core::Interface::as_raw(self), puu.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DiscardFrom(puu.into_param().abi())).ok()
     }
     pub unsafe fn UndoTo<P0>(&self, puu: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IOleUndoUnit>,
     {
-        (::windows_core::Interface::vtable(self).UndoTo)(::windows_core::Interface::as_raw(self), puu.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UndoTo(puu.into_param().abi())).ok()
     }
     pub unsafe fn RedoTo<P0>(&self, puu: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IOleUndoUnit>,
     {
-        (::windows_core::Interface::vtable(self).RedoTo)(::windows_core::Interface::as_raw(self), puu.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RedoTo(puu.into_param().abi())).ok()
     }
     pub unsafe fn EnumUndoable(&self) -> ::windows_core::Result<IEnumOleUndoUnits> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumUndoable)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumUndoable(&mut result__)).from_abi(result__)
     }
     pub unsafe fn EnumRedoable(&self) -> ::windows_core::Result<IEnumOleUndoUnits> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumRedoable)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumRedoable(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetLastUndoDescription(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLastUndoDescription)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLastUndoDescription(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetLastRedoDescription(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLastRedoDescription)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLastRedoDescription(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7438,7 +7438,7 @@ impl IOleUndoManager {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).Enable)(::windows_core::Interface::as_raw(self), fenable.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Enable(fenable.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleUndoManager, ::windows_core::IUnknown);
@@ -7479,17 +7479,17 @@ impl IOleUndoUnit {
     where
         P0: ::windows_core::IntoParam<IOleUndoManager>,
     {
-        (::windows_core::Interface::vtable(self).Do)(::windows_core::Interface::as_raw(self), pundomanager.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Do(pundomanager.into_param().abi())).ok()
     }
     pub unsafe fn GetDescription(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDescription)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDescription(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetUnitType(&self, pclsid: *mut ::windows_core::GUID, plid: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetUnitType)(::windows_core::Interface::as_raw(self), pclsid, plid).ok()
+        ::windows_core::vcall!(self.GetUnitType(pclsid, plid)).ok()
     }
     pub unsafe fn OnNextAdd(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnNextAdd)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.OnNextAdd()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleUndoUnit, ::windows_core::IUnknown);
@@ -7516,7 +7516,7 @@ impl IOleWindow {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetWindow(&self) -> ::windows_core::Result<super::super::Foundation::HWND> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetWindow)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetWindow(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7524,7 +7524,7 @@ impl IOleWindow {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).ContextSensitiveHelp)(::windows_core::Interface::as_raw(self), fentermode.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ContextSensitiveHelp(fentermode.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IOleWindow, ::windows_core::IUnknown);
@@ -7558,7 +7558,7 @@ impl IParseDisplayName {
         P0: ::windows_core::IntoParam<super::Com::IBindCtx>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).ParseDisplayName)(::windows_core::Interface::as_raw(self), pbc.into_param().abi(), pszdisplayname.into_param().abi(), pcheaten, ::core::mem::transmute(ppmkout)).ok()
+        ::windows_core::vcall!(self.ParseDisplayName(pbc.into_param().abi(), pszdisplayname.into_param().abi(), pcheaten, ::core::mem::transmute(ppmkout))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IParseDisplayName, ::windows_core::IUnknown);
@@ -7583,20 +7583,20 @@ pub struct IPerPropertyBrowsing(::windows_core::IUnknown);
 impl IPerPropertyBrowsing {
     pub unsafe fn GetDisplayString(&self, dispid: i32) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDisplayString)(::windows_core::Interface::as_raw(self), dispid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDisplayString(dispid, &mut result__)).from_abi(result__)
     }
     pub unsafe fn MapPropertyToPage(&self, dispid: i32) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).MapPropertyToPage)(::windows_core::Interface::as_raw(self), dispid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.MapPropertyToPage(dispid, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPredefinedStrings(&self, dispid: i32, pcastringsout: *mut CALPOLESTR, pcacookiesout: *mut CADWORD) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetPredefinedStrings)(::windows_core::Interface::as_raw(self), dispid, pcastringsout, pcacookiesout).ok()
+        ::windows_core::vcall!(self.GetPredefinedStrings(dispid, pcastringsout, pcacookiesout)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn GetPredefinedValue(&self, dispid: i32, dwcookie: u32) -> ::windows_core::Result<super::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPredefinedValue)(::windows_core::Interface::as_raw(self), dispid, dwcookie, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPredefinedValue(dispid, dwcookie, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPerPropertyBrowsing, ::windows_core::IUnknown);
@@ -7629,10 +7629,10 @@ impl IPersistPropertyBag {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetClassID(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetClassID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetClassID(&mut result__)).from_abi(result__)
     }
     pub unsafe fn InitNew(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).InitNew)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.InitNew()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -7641,7 +7641,7 @@ impl IPersistPropertyBag {
         P0: ::windows_core::IntoParam<super::Com::StructuredStorage::IPropertyBag>,
         P1: ::windows_core::IntoParam<super::Com::IErrorLog>,
     {
-        (::windows_core::Interface::vtable(self).Load)(::windows_core::Interface::as_raw(self), ppropbag.into_param().abi(), perrorlog.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Load(ppropbag.into_param().abi(), perrorlog.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage"))]
@@ -7651,7 +7651,7 @@ impl IPersistPropertyBag {
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
         P2: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).Save)(::windows_core::Interface::as_raw(self), ppropbag.into_param().abi(), fcleardirty.into_param().abi(), fsaveallproperties.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Save(ppropbag.into_param().abi(), fcleardirty.into_param().abi(), fsaveallproperties.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -7690,10 +7690,10 @@ impl IPersistPropertyBag2 {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetClassID(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetClassID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetClassID(&mut result__)).from_abi(result__)
     }
     pub unsafe fn InitNew(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).InitNew)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.InitNew()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -7702,7 +7702,7 @@ impl IPersistPropertyBag2 {
         P0: ::windows_core::IntoParam<super::Com::StructuredStorage::IPropertyBag2>,
         P1: ::windows_core::IntoParam<super::Com::IErrorLog>,
     {
-        (::windows_core::Interface::vtable(self).Load)(::windows_core::Interface::as_raw(self), ppropbag.into_param().abi(), perrlog.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Load(ppropbag.into_param().abi(), perrlog.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com_StructuredStorage"))]
@@ -7712,10 +7712,10 @@ impl IPersistPropertyBag2 {
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
         P2: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).Save)(::windows_core::Interface::as_raw(self), ppropbag.into_param().abi(), fcleardirty.into_param().abi(), fsaveallproperties.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Save(ppropbag.into_param().abi(), fcleardirty.into_param().abi(), fsaveallproperties.into_param().abi())).ok()
     }
     pub unsafe fn IsDirty(&self) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).IsDirty)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.IsDirty())
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -7750,23 +7750,23 @@ pub struct IPicture(::windows_core::IUnknown);
 impl IPicture {
     pub unsafe fn Handle(&self) -> ::windows_core::Result<OLE_HANDLE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Handle)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Handle(&mut result__)).from_abi(result__)
     }
     pub unsafe fn hPal(&self) -> ::windows_core::Result<OLE_HANDLE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).hPal)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.hPal(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Type(&self) -> ::windows_core::Result<PICTYPE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Type)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Type(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Width(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Width)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Width(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Height(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Height)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Height(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -7774,19 +7774,19 @@ impl IPicture {
     where
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).Render)(::windows_core::Interface::as_raw(self), hdc.into_param().abi(), x, y, cx, cy, xsrc, ysrc, cxsrc, cysrc, prcwbounds).ok()
+        ::windows_core::vcall!(self.Render(hdc.into_param().abi(), x, y, cx, cy, xsrc, ysrc, cxsrc, cysrc, prcwbounds)).ok()
     }
     pub unsafe fn set_hPal<P0>(&self, hpal: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<OLE_HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).set_hPal)(::windows_core::Interface::as_raw(self), hpal.into_param().abi()).ok()
+        ::windows_core::vcall!(self.set_hPal(hpal.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
     pub unsafe fn CurDC(&self) -> ::windows_core::Result<super::super::Graphics::Gdi::HDC> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CurDC)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CurDC(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -7794,13 +7794,13 @@ impl IPicture {
     where
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).SelectPicture)(::windows_core::Interface::as_raw(self), hdcin.into_param().abi(), phdcout, phbmpout).ok()
+        ::windows_core::vcall!(self.SelectPicture(hdcin.into_param().abi(), phdcout, phbmpout)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn KeepOriginalFormat(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).KeepOriginalFormat)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.KeepOriginalFormat(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7808,10 +7808,10 @@ impl IPicture {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetKeepOriginalFormat)(::windows_core::Interface::as_raw(self), keep.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetKeepOriginalFormat(keep.into_param().abi())).ok()
     }
     pub unsafe fn PictureChanged(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).PictureChanged)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.PictureChanged()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -7821,11 +7821,11 @@ impl IPicture {
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SaveAsFile)(::windows_core::Interface::as_raw(self), pstream.into_param().abi(), fsavememcopy.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SaveAsFile(pstream.into_param().abi(), fsavememcopy.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Attributes(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Attributes)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Attributes(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPicture, ::windows_core::IUnknown);
@@ -7878,23 +7878,23 @@ pub struct IPicture2(::windows_core::IUnknown);
 impl IPicture2 {
     pub unsafe fn Handle(&self) -> ::windows_core::Result<usize> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Handle)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Handle(&mut result__)).from_abi(result__)
     }
     pub unsafe fn hPal(&self) -> ::windows_core::Result<usize> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).hPal)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.hPal(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Type(&self) -> ::windows_core::Result<i16> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Type)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Type(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Width(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Width)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Width(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Height(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Height)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Height(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -7902,16 +7902,16 @@ impl IPicture2 {
     where
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).Render)(::windows_core::Interface::as_raw(self), hdc.into_param().abi(), x, y, cx, cy, xsrc, ysrc, cxsrc, cysrc, prcwbounds).ok()
+        ::windows_core::vcall!(self.Render(hdc.into_param().abi(), x, y, cx, cy, xsrc, ysrc, cxsrc, cysrc, prcwbounds)).ok()
     }
     pub unsafe fn set_hPal(&self, hpal: usize) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).set_hPal)(::windows_core::Interface::as_raw(self), hpal).ok()
+        ::windows_core::vcall!(self.set_hPal(hpal)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
     pub unsafe fn CurDC(&self) -> ::windows_core::Result<super::super::Graphics::Gdi::HDC> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CurDC)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CurDC(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`"]
     #[cfg(feature = "Win32_Graphics_Gdi")]
@@ -7919,13 +7919,13 @@ impl IPicture2 {
     where
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).SelectPicture)(::windows_core::Interface::as_raw(self), hdcin.into_param().abi(), phdcout, phbmpout).ok()
+        ::windows_core::vcall!(self.SelectPicture(hdcin.into_param().abi(), phdcout, phbmpout)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn KeepOriginalFormat(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).KeepOriginalFormat)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.KeepOriginalFormat(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7933,10 +7933,10 @@ impl IPicture2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetKeepOriginalFormat)(::windows_core::Interface::as_raw(self), keep.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetKeepOriginalFormat(keep.into_param().abi())).ok()
     }
     pub unsafe fn PictureChanged(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).PictureChanged)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.PictureChanged()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
@@ -7946,11 +7946,11 @@ impl IPicture2 {
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SaveAsFile)(::windows_core::Interface::as_raw(self), pstream.into_param().abi(), fsavememcopy.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SaveAsFile(pstream.into_param().abi(), fsavememcopy.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Attributes(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Attributes)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Attributes(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPicture2, ::windows_core::IUnknown);
@@ -8026,12 +8026,12 @@ pub struct IPointerInactive(::windows_core::IUnknown);
 impl IPointerInactive {
     pub unsafe fn GetActivationPolicy(&self) -> ::windows_core::Result<POINTERINACTIVE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetActivationPolicy)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetActivationPolicy(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn OnInactiveMouseMove(&self, prectbounds: *const super::super::Foundation::RECT, x: i32, y: i32, grfkeystate: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnInactiveMouseMove)(::windows_core::Interface::as_raw(self), prectbounds, x, y, grfkeystate).ok()
+        ::windows_core::vcall!(self.OnInactiveMouseMove(prectbounds, x, y, grfkeystate)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -8039,7 +8039,7 @@ impl IPointerInactive {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).OnInactiveSetCursor)(::windows_core::Interface::as_raw(self), prectbounds, x, y, dwmousemsg, fsetalways.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnInactiveSetCursor(prectbounds, x, y, dwmousemsg, fsetalways.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPointerInactive, ::windows_core::IUnknown);
@@ -8068,10 +8068,10 @@ pub struct IPointerInactive_Vtbl {
 pub struct IPrint(::windows_core::IUnknown);
 impl IPrint {
     pub unsafe fn SetInitialPageNum(&self, nfirstpage: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetInitialPageNum)(::windows_core::Interface::as_raw(self), nfirstpage).ok()
+        ::windows_core::vcall!(self.SetInitialPageNum(nfirstpage)).ok()
     }
     pub unsafe fn GetPageInfo(&self, pnfirstpage: *mut i32, pcpages: *mut i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetPageInfo)(::windows_core::Interface::as_raw(self), pnfirstpage, pcpages).ok()
+        ::windows_core::vcall!(self.GetPageInfo(pnfirstpage, pcpages)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com_StructuredStorage"))]
@@ -8079,7 +8079,7 @@ impl IPrint {
     where
         P0: ::windows_core::IntoParam<IContinueCallback>,
     {
-        (::windows_core::Interface::vtable(self).Print)(::windows_core::Interface::as_raw(self), grfflags, pptd, pppageset, pstgmoptions, pcallback.into_param().abi(), nfirstpage, pcpagesprinted, pnlastpage).ok()
+        ::windows_core::vcall!(self.Print(grfflags, pptd, pppageset, pstgmoptions, pcallback.into_param().abi(), nfirstpage, pcpagesprinted, pnlastpage)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrint, ::windows_core::IUnknown);
@@ -8105,10 +8105,10 @@ pub struct IPrint_Vtbl {
 pub struct IPropertyNotifySink(::windows_core::IUnknown);
 impl IPropertyNotifySink {
     pub unsafe fn OnChanged(&self, dispid: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnChanged)(::windows_core::Interface::as_raw(self), dispid).ok()
+        ::windows_core::vcall!(self.OnChanged(dispid)).ok()
     }
     pub unsafe fn OnRequestEdit(&self, dispid: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnRequestEdit)(::windows_core::Interface::as_raw(self), dispid).ok()
+        ::windows_core::vcall!(self.OnRequestEdit(dispid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPropertyNotifySink, ::windows_core::IUnknown);
@@ -8133,7 +8133,7 @@ impl IPropertyPage {
     where
         P0: ::windows_core::IntoParam<IPropertyPageSite>,
     {
-        (::windows_core::Interface::vtable(self).SetPageSite)(::windows_core::Interface::as_raw(self), ppagesite.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetPageSite(ppagesite.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -8142,43 +8142,43 @@ impl IPropertyPage {
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).Activate)(::windows_core::Interface::as_raw(self), hwndparent.into_param().abi(), prect, bmodal.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Activate(hwndparent.into_param().abi(), prect, bmodal.into_param().abi())).ok()
     }
     pub unsafe fn Deactivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Deactivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Deactivate()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetPageInfo(&self, ppageinfo: *mut PROPPAGEINFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetPageInfo)(::windows_core::Interface::as_raw(self), ppageinfo).ok()
+        ::windows_core::vcall!(self.GetPageInfo(ppageinfo)).ok()
     }
     pub unsafe fn SetObjects(&self, ppunk: &[::core::option::Option<::windows_core::IUnknown>]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetObjects)(::windows_core::Interface::as_raw(self), ppunk.len().try_into().unwrap(), ::core::mem::transmute(ppunk.as_ptr())).ok()
+        ::windows_core::vcall!(self.SetObjects(ppunk.len().try_into().unwrap(), ::core::mem::transmute(ppunk.as_ptr()))).ok()
     }
     pub unsafe fn Show(&self, ncmdshow: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Show)(::windows_core::Interface::as_raw(self), ncmdshow).ok()
+        ::windows_core::vcall!(self.Show(ncmdshow)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Move(&self, prect: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Move)(::windows_core::Interface::as_raw(self), prect).ok()
+        ::windows_core::vcall!(self.Move(prect)).ok()
     }
     pub unsafe fn IsPageDirty(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).IsPageDirty)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.IsPageDirty()).ok()
     }
     pub unsafe fn Apply(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Apply)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Apply()).ok()
     }
     pub unsafe fn Help<P0>(&self, pszhelpdir: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).Help)(::windows_core::Interface::as_raw(self), pszhelpdir.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Help(pszhelpdir.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn TranslateAccelerator(&self, pmsg: *const super::super::UI::WindowsAndMessaging::MSG) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).TranslateAccelerator)(::windows_core::Interface::as_raw(self), pmsg).ok()
+        ::windows_core::vcall!(self.TranslateAccelerator(pmsg)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPropertyPage, ::windows_core::IUnknown);
@@ -8224,7 +8224,7 @@ impl IPropertyPage2 {
     where
         P0: ::windows_core::IntoParam<IPropertyPageSite>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetPageSite)(::windows_core::Interface::as_raw(self), ppagesite.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetPageSite(ppagesite.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -8233,46 +8233,46 @@ impl IPropertyPage2 {
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.Activate)(::windows_core::Interface::as_raw(self), hwndparent.into_param().abi(), prect, bmodal.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Activate(hwndparent.into_param().abi(), prect, bmodal.into_param().abi())).ok()
     }
     pub unsafe fn Deactivate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Deactivate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Deactivate()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetPageInfo(&self, ppageinfo: *mut PROPPAGEINFO) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetPageInfo)(::windows_core::Interface::as_raw(self), ppageinfo).ok()
+        ::windows_core::vcall!(self.base__.GetPageInfo(ppageinfo)).ok()
     }
     pub unsafe fn SetObjects(&self, ppunk: &[::core::option::Option<::windows_core::IUnknown>]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetObjects)(::windows_core::Interface::as_raw(self), ppunk.len().try_into().unwrap(), ::core::mem::transmute(ppunk.as_ptr())).ok()
+        ::windows_core::vcall!(self.base__.SetObjects(ppunk.len().try_into().unwrap(), ::core::mem::transmute(ppunk.as_ptr()))).ok()
     }
     pub unsafe fn Show(&self, ncmdshow: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Show)(::windows_core::Interface::as_raw(self), ncmdshow).ok()
+        ::windows_core::vcall!(self.base__.Show(ncmdshow)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Move(&self, prect: *const super::super::Foundation::RECT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Move)(::windows_core::Interface::as_raw(self), prect).ok()
+        ::windows_core::vcall!(self.base__.Move(prect)).ok()
     }
     pub unsafe fn IsPageDirty(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.IsPageDirty)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.IsPageDirty()).ok()
     }
     pub unsafe fn Apply(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Apply)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Apply()).ok()
     }
     pub unsafe fn Help<P0>(&self, pszhelpdir: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.Help)(::windows_core::Interface::as_raw(self), pszhelpdir.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.Help(pszhelpdir.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn TranslateAccelerator(&self, pmsg: *const super::super::UI::WindowsAndMessaging::MSG) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.TranslateAccelerator)(::windows_core::Interface::as_raw(self), pmsg).ok()
+        ::windows_core::vcall!(self.base__.TranslateAccelerator(pmsg)).ok()
     }
     pub unsafe fn EditProperty(&self, dispid: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EditProperty)(::windows_core::Interface::as_raw(self), dispid).ok()
+        ::windows_core::vcall!(self.EditProperty(dispid)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPropertyPage2, ::windows_core::IUnknown, IPropertyPage);
@@ -8293,20 +8293,20 @@ pub struct IPropertyPage2_Vtbl {
 pub struct IPropertyPageSite(::windows_core::IUnknown);
 impl IPropertyPageSite {
     pub unsafe fn OnStatusChange(&self, dwflags: PROPPAGESTATUS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnStatusChange)(::windows_core::Interface::as_raw(self), dwflags.0 as _).ok()
+        ::windows_core::vcall!(self.OnStatusChange(dwflags.0 as _)).ok()
     }
     pub unsafe fn GetLocaleID(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetLocaleID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetLocaleID(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPageContainer(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPageContainer)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPageContainer(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn TranslateAccelerator(&self, pmsg: *const super::super::UI::WindowsAndMessaging::MSG) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).TranslateAccelerator)(::windows_core::Interface::as_raw(self), pmsg).ok()
+        ::windows_core::vcall!(self.TranslateAccelerator(pmsg)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPropertyPageSite, ::windows_core::IUnknown);
@@ -8336,7 +8336,7 @@ impl IProtectFocus {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn AllowFocusChange(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AllowFocusChange)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AllowFocusChange(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IProtectFocus, ::windows_core::IUnknown);
@@ -8363,7 +8363,7 @@ impl IProtectedModeMenuServices {
     #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
     pub unsafe fn CreateMenu(&self) -> ::windows_core::Result<super::super::UI::WindowsAndMessaging::HMENU> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateMenu)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateMenu(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
@@ -8373,7 +8373,7 @@ impl IProtectedModeMenuServices {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).LoadMenu)(::windows_core::Interface::as_raw(self), pszmodulename.into_param().abi(), pszmenuname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.LoadMenu(pszmodulename.into_param().abi(), pszmenuname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
@@ -8382,7 +8382,7 @@ impl IProtectedModeMenuServices {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).LoadMenuID)(::windows_core::Interface::as_raw(self), pszmodulename.into_param().abi(), wresourceid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.LoadMenuID(pszmodulename.into_param().abi(), wresourceid, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IProtectedModeMenuServices, ::windows_core::IUnknown);
@@ -8417,7 +8417,7 @@ impl IProvideClassInfo {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetClassInfo(&self) -> ::windows_core::Result<super::Com::ITypeInfo> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetClassInfo)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetClassInfo(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IProvideClassInfo, ::windows_core::IUnknown);
@@ -8444,11 +8444,11 @@ impl IProvideClassInfo2 {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetClassInfo(&self) -> ::windows_core::Result<super::Com::ITypeInfo> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetClassInfo)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetClassInfo(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetGUID(&self, dwguidkind: u32) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetGUID)(::windows_core::Interface::as_raw(self), dwguidkind, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetGUID(dwguidkind, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IProvideClassInfo2, ::windows_core::IUnknown, IProvideClassInfo);
@@ -8472,20 +8472,20 @@ impl IProvideMultipleClassInfo {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetClassInfo(&self) -> ::windows_core::Result<super::Com::ITypeInfo> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.GetClassInfo)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.GetClassInfo(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetGUID(&self, dwguidkind: u32) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetGUID)(::windows_core::Interface::as_raw(self), dwguidkind, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetGUID(dwguidkind, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetMultiTypeInfoCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetMultiTypeInfoCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetMultiTypeInfoCount(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetInfoOfIndex(&self, iti: u32, dwflags: MULTICLASSINFO_FLAGS, ppticoclass: *mut ::core::option::Option<super::Com::ITypeInfo>, pdwtiflags: *mut u32, pcdispidreserved: *mut u32, piidprimary: *mut ::windows_core::GUID, piidsource: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetInfoOfIndex)(::windows_core::Interface::as_raw(self), iti, dwflags, ::core::mem::transmute(ppticoclass), pdwtiflags, pcdispidreserved, piidprimary, piidsource).ok()
+        ::windows_core::vcall!(self.GetInfoOfIndex(iti, dwflags, ::core::mem::transmute(ppticoclass), pdwtiflags, pcdispidreserved, piidprimary, piidsource)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IProvideMultipleClassInfo, ::windows_core::IUnknown, IProvideClassInfo, IProvideClassInfo2);
@@ -8512,7 +8512,7 @@ impl IProvideRuntimeContext {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetCurrentSourceContext(&self, pdwcontext: *mut usize, pfexecutingglobalcode: *mut super::super::Foundation::VARIANT_BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCurrentSourceContext)(::windows_core::Interface::as_raw(self), pdwcontext, pfexecutingglobalcode).ok()
+        ::windows_core::vcall!(self.GetCurrentSourceContext(pdwcontext, pfexecutingglobalcode)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IProvideRuntimeContext, ::windows_core::IUnknown);
@@ -8538,18 +8538,18 @@ impl IQuickActivate {
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com"))]
     pub unsafe fn QuickActivate(&self, pqacontainer: *const QACONTAINER, pqacontrol: *mut QACONTROL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).QuickActivate)(::windows_core::Interface::as_raw(self), pqacontainer, pqacontrol).ok()
+        ::windows_core::vcall!(self.QuickActivate(pqacontainer, pqacontrol)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetContentExtent(&self, psizel: *const super::super::Foundation::SIZE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetContentExtent)(::windows_core::Interface::as_raw(self), psizel).ok()
+        ::windows_core::vcall!(self.SetContentExtent(psizel)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetContentExtent(&self) -> ::windows_core::Result<super::super::Foundation::SIZE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetContentExtent)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetContentExtent(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IQuickActivate, ::windows_core::IUnknown);
@@ -8581,31 +8581,31 @@ pub struct IQuickActivate_Vtbl {
 pub struct IRecordInfo(::windows_core::IUnknown);
 impl IRecordInfo {
     pub unsafe fn RecordInit(&self, pvnew: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RecordInit)(::windows_core::Interface::as_raw(self), pvnew).ok()
+        ::windows_core::vcall!(self.RecordInit(pvnew)).ok()
     }
     pub unsafe fn RecordClear(&self, pvexisting: *const ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RecordClear)(::windows_core::Interface::as_raw(self), pvexisting).ok()
+        ::windows_core::vcall!(self.RecordClear(pvexisting)).ok()
     }
     pub unsafe fn RecordCopy(&self, pvexisting: *const ::core::ffi::c_void, pvnew: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RecordCopy)(::windows_core::Interface::as_raw(self), pvexisting, pvnew).ok()
+        ::windows_core::vcall!(self.RecordCopy(pvexisting, pvnew)).ok()
     }
     pub unsafe fn GetGuid(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetGuid)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetGuid(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetName(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetSize(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSize)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSize(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetTypeInfo(&self) -> ::windows_core::Result<super::Com::ITypeInfo> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetTypeInfo)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetTypeInfo(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
@@ -8614,7 +8614,7 @@ impl IRecordInfo {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetField)(::windows_core::Interface::as_raw(self), pvdata, szfieldname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetField(pvdata, szfieldname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
@@ -8622,7 +8622,7 @@ impl IRecordInfo {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetFieldNoCopy)(::windows_core::Interface::as_raw(self), pvdata, szfieldname.into_param().abi(), pvarfield, ppvdatacarray).ok()
+        ::windows_core::vcall!(self.GetFieldNoCopy(pvdata, szfieldname.into_param().abi(), pvarfield, ppvdatacarray)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
@@ -8630,7 +8630,7 @@ impl IRecordInfo {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).PutField)(::windows_core::Interface::as_raw(self), wflags, pvdata, szfieldname.into_param().abi(), pvarfield).ok()
+        ::windows_core::vcall!(self.PutField(wflags, pvdata, szfieldname.into_param().abi(), pvarfield)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
@@ -8638,10 +8638,10 @@ impl IRecordInfo {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).PutFieldNoCopy)(::windows_core::Interface::as_raw(self), wflags, pvdata, szfieldname.into_param().abi(), pvarfield).ok()
+        ::windows_core::vcall!(self.PutFieldNoCopy(wflags, pvdata, szfieldname.into_param().abi(), pvarfield)).ok()
     }
     pub unsafe fn GetFieldNames(&self, pcnames: *mut u32, rgbstrnames: *mut ::windows_core::BSTR) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetFieldNames)(::windows_core::Interface::as_raw(self), pcnames, ::core::mem::transmute(rgbstrnames)).ok()
+        ::windows_core::vcall!(self.GetFieldNames(pcnames, ::core::mem::transmute(rgbstrnames))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -8649,16 +8649,16 @@ impl IRecordInfo {
     where
         P0: ::windows_core::IntoParam<IRecordInfo>,
     {
-        (::windows_core::Interface::vtable(self).IsMatchingType)(::windows_core::Interface::as_raw(self), precordinfo.into_param().abi())
+        ::windows_core::vcall!(self.IsMatchingType(precordinfo.into_param().abi()))
     }
     pub unsafe fn RecordCreate(&self) -> *mut ::core::ffi::c_void {
-        (::windows_core::Interface::vtable(self).RecordCreate)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.RecordCreate())
     }
     pub unsafe fn RecordCreateCopy(&self, pvsource: *const ::core::ffi::c_void, ppvdest: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RecordCreateCopy)(::windows_core::Interface::as_raw(self), pvsource, ppvdest).ok()
+        ::windows_core::vcall!(self.RecordCreateCopy(pvsource, ppvdest)).ok()
     }
     pub unsafe fn RecordDestroy(&self, pvrecord: *const ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RecordDestroy)(::windows_core::Interface::as_raw(self), pvrecord).ok()
+        ::windows_core::vcall!(self.RecordDestroy(pvrecord)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IRecordInfo, ::windows_core::IUnknown);
@@ -8719,7 +8719,7 @@ impl ISimpleFrameSite {
         P1: ::windows_core::IntoParam<super::super::Foundation::WPARAM>,
         P2: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).PreMessageFilter)(::windows_core::Interface::as_raw(self), hwnd.into_param().abi(), msg, wp.into_param().abi(), lp.into_param().abi(), plresult, pdwcookie).ok()
+        ::windows_core::vcall!(self.PreMessageFilter(hwnd.into_param().abi(), msg, wp.into_param().abi(), lp.into_param().abi(), plresult, pdwcookie)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -8729,7 +8729,7 @@ impl ISimpleFrameSite {
         P1: ::windows_core::IntoParam<super::super::Foundation::WPARAM>,
         P2: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).PostMessageFilter)(::windows_core::Interface::as_raw(self), hwnd.into_param().abi(), msg, wp.into_param().abi(), lp.into_param().abi(), plresult, dwcookie).ok()
+        ::windows_core::vcall!(self.PostMessageFilter(hwnd.into_param().abi(), msg, wp.into_param().abi(), lp.into_param().abi(), plresult, dwcookie)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISimpleFrameSite, ::windows_core::IUnknown);
@@ -8758,7 +8758,7 @@ pub struct ISpecifyPropertyPages(::windows_core::IUnknown);
 impl ISpecifyPropertyPages {
     pub unsafe fn GetPages(&self) -> ::windows_core::Result<CAUUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPages)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPages(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISpecifyPropertyPages, ::windows_core::IUnknown);
@@ -8786,7 +8786,7 @@ impl ITypeChangeEvents {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RequestTypeChange)(::windows_core::Interface::as_raw(self), changekind, ptinfobefore.into_param().abi(), pstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RequestTypeChange(changekind, ptinfobefore.into_param().abi(), pstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -8795,7 +8795,7 @@ impl ITypeChangeEvents {
         P0: ::windows_core::IntoParam<super::Com::ITypeInfo>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).AfterTypeChange)(::windows_core::Interface::as_raw(self), changekind, ptinfoafter.into_param().abi(), pstrname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AfterTypeChange(changekind, ptinfoafter.into_param().abi(), pstrname.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITypeChangeEvents, ::windows_core::IUnknown);
@@ -8829,7 +8829,7 @@ impl ITypeFactory {
         P0: ::windows_core::IntoParam<super::Com::ITypeInfo>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateFromTypeInfo)(::windows_core::Interface::as_raw(self), ptypeinfo.into_param().abi(), riid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateFromTypeInfo(ptypeinfo.into_param().abi(), riid, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITypeFactory, ::windows_core::IUnknown);
@@ -8854,16 +8854,16 @@ pub struct ITypeMarshal(::windows_core::IUnknown);
 impl ITypeMarshal {
     pub unsafe fn Size(&self, pvtype: *const ::core::ffi::c_void, dwdestcontext: u32, pvdestcontext: *const ::core::ffi::c_void) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Size)(::windows_core::Interface::as_raw(self), pvtype, dwdestcontext, pvdestcontext, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Size(pvtype, dwdestcontext, pvdestcontext, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Marshal(&self, pvtype: *const ::core::ffi::c_void, dwdestcontext: u32, pvdestcontext: *const ::core::ffi::c_void, pbuffer: &mut [u8], pcbwritten: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Marshal)(::windows_core::Interface::as_raw(self), pvtype, dwdestcontext, pvdestcontext, pbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbuffer.as_ptr()), pcbwritten).ok()
+        ::windows_core::vcall!(self.Marshal(pvtype, dwdestcontext, pvdestcontext, pbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbuffer.as_ptr()), pcbwritten)).ok()
     }
     pub unsafe fn Unmarshal(&self, pvtype: *mut ::core::ffi::c_void, dwflags: u32, pbuffer: &[u8], pcbread: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unmarshal)(::windows_core::Interface::as_raw(self), pvtype, dwflags, pbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbuffer.as_ptr()), pcbread).ok()
+        ::windows_core::vcall!(self.Unmarshal(pvtype, dwflags, pbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbuffer.as_ptr()), pcbread)).ok()
     }
     pub unsafe fn Free(&self, pvtype: *const ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Free)(::windows_core::Interface::as_raw(self), pvtype).ok()
+        ::windows_core::vcall!(self.Free(pvtype)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ITypeMarshal, ::windows_core::IUnknown);
@@ -8892,7 +8892,7 @@ impl IVBFormat {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).Format)(::windows_core::Interface::as_raw(self), vdata, bstrformat.into_param().abi(), lpbuffer, cb, lcid, sfirstdayofweek, sfirstweekofyear, rcb).ok()
+        ::windows_core::vcall!(self.Format(vdata, bstrformat.into_param().abi(), lpbuffer, cb, lcid, sfirstdayofweek, sfirstweekofyear, rcb)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IVBFormat, ::windows_core::IUnknown);
@@ -8919,7 +8919,7 @@ impl IVBGetControl {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn EnumControls(&self, dwolecontf: OLECONTF, dwwhich: ENUM_CONTROLS_WHICH_FLAGS) -> ::windows_core::Result<super::Com::IEnumUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).EnumControls)(::windows_core::Interface::as_raw(self), dwolecontf.0 as _, dwwhich, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.EnumControls(dwolecontf.0 as _, dwwhich, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IVBGetControl, ::windows_core::IUnknown);
@@ -8945,7 +8945,7 @@ impl IVariantChangeType {
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Variant"))]
     pub unsafe fn ChangeType(&self, pvardst: *mut super::Variant::VARIANT, pvarsrc: *const super::Variant::VARIANT, lcid: u32, vtnew: super::Variant::VARENUM) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ChangeType)(::windows_core::Interface::as_raw(self), pvardst, pvarsrc, lcid, vtnew).ok()
+        ::windows_core::vcall!(self.ChangeType(pvardst, pvarsrc, lcid, vtnew)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IVariantChangeType, ::windows_core::IUnknown);
@@ -8975,7 +8975,7 @@ impl IViewObject {
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
         P1: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).Draw)(::windows_core::Interface::as_raw(self), dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hdctargetdev.into_param().abi(), hdcdraw.into_param().abi(), ::core::mem::transmute(lprcbounds.unwrap_or(::std::ptr::null())), ::core::mem::transmute(lprcwbounds.unwrap_or(::std::ptr::null())), pfncontinue, dwcontinue).ok()
+        ::windows_core::vcall!(self.Draw(dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hdctargetdev.into_param().abi(), hdcdraw.into_param().abi(), ::core::mem::transmute(lprcbounds.unwrap_or(::std::ptr::null())), ::core::mem::transmute(lprcwbounds.unwrap_or(::std::ptr::null())), pfncontinue, dwcontinue)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com"))]
@@ -8983,15 +8983,15 @@ impl IViewObject {
     where
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).GetColorSet)(::windows_core::Interface::as_raw(self), dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hictargetdev.into_param().abi(), ppcolorset).ok()
+        ::windows_core::vcall!(self.GetColorSet(dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hictargetdev.into_param().abi(), ppcolorset)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Freeze(&self, dwdrawaspect: super::Com::DVASPECT, lindex: i32, pvaspect: *mut ::core::ffi::c_void, pdwfreeze: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Freeze)(::windows_core::Interface::as_raw(self), dwdrawaspect, lindex, pvaspect, pdwfreeze).ok()
+        ::windows_core::vcall!(self.Freeze(dwdrawaspect, lindex, pvaspect, pdwfreeze)).ok()
     }
     pub unsafe fn Unfreeze(&self, dwfreeze: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unfreeze)(::windows_core::Interface::as_raw(self), dwfreeze).ok()
+        ::windows_core::vcall!(self.Unfreeze(dwfreeze)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -8999,12 +8999,12 @@ impl IViewObject {
     where
         P0: ::windows_core::IntoParam<super::Com::IAdviseSink>,
     {
-        (::windows_core::Interface::vtable(self).SetAdvise)(::windows_core::Interface::as_raw(self), aspects, advf, padvsink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetAdvise(aspects, advf, padvsink.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetAdvise(&self, paspects: ::core::option::Option<*mut u32>, padvf: ::core::option::Option<*mut u32>, ppadvsink: *mut ::core::option::Option<super::Com::IAdviseSink>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetAdvise)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(paspects.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(padvf.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppadvsink)).ok()
+        ::windows_core::vcall!(self.GetAdvise(::core::mem::transmute(paspects.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(padvf.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppadvsink))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IViewObject, ::windows_core::IUnknown);
@@ -9051,7 +9051,7 @@ impl IViewObject2 {
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
         P1: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).base__.Draw)(::windows_core::Interface::as_raw(self), dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hdctargetdev.into_param().abi(), hdcdraw.into_param().abi(), ::core::mem::transmute(lprcbounds.unwrap_or(::std::ptr::null())), ::core::mem::transmute(lprcwbounds.unwrap_or(::std::ptr::null())), pfncontinue, dwcontinue).ok()
+        ::windows_core::vcall!(self.base__.Draw(dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hdctargetdev.into_param().abi(), hdcdraw.into_param().abi(), ::core::mem::transmute(lprcbounds.unwrap_or(::std::ptr::null())), ::core::mem::transmute(lprcwbounds.unwrap_or(::std::ptr::null())), pfncontinue, dwcontinue)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com"))]
@@ -9059,15 +9059,15 @@ impl IViewObject2 {
     where
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetColorSet)(::windows_core::Interface::as_raw(self), dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hictargetdev.into_param().abi(), ppcolorset).ok()
+        ::windows_core::vcall!(self.base__.GetColorSet(dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hictargetdev.into_param().abi(), ppcolorset)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Freeze(&self, dwdrawaspect: super::Com::DVASPECT, lindex: i32, pvaspect: *mut ::core::ffi::c_void, pdwfreeze: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Freeze)(::windows_core::Interface::as_raw(self), dwdrawaspect, lindex, pvaspect, pdwfreeze).ok()
+        ::windows_core::vcall!(self.base__.Freeze(dwdrawaspect, lindex, pvaspect, pdwfreeze)).ok()
     }
     pub unsafe fn Unfreeze(&self, dwfreeze: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Unfreeze)(::windows_core::Interface::as_raw(self), dwfreeze).ok()
+        ::windows_core::vcall!(self.base__.Unfreeze(dwfreeze)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -9075,18 +9075,18 @@ impl IViewObject2 {
     where
         P0: ::windows_core::IntoParam<super::Com::IAdviseSink>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetAdvise)(::windows_core::Interface::as_raw(self), aspects, advf, padvsink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetAdvise(aspects, advf, padvsink.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetAdvise(&self, paspects: ::core::option::Option<*mut u32>, padvf: ::core::option::Option<*mut u32>, ppadvsink: *mut ::core::option::Option<super::Com::IAdviseSink>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetAdvise)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(paspects.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(padvf.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppadvsink)).ok()
+        ::windows_core::vcall!(self.base__.GetAdvise(::core::mem::transmute(paspects.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(padvf.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppadvsink))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
     pub unsafe fn GetExtent(&self, dwdrawaspect: super::Com::DVASPECT, lindex: i32, ptd: *const super::Com::DVTARGETDEVICE) -> ::windows_core::Result<super::super::Foundation::SIZE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetExtent)(::windows_core::Interface::as_raw(self), dwdrawaspect, lindex, ptd, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetExtent(dwdrawaspect, lindex, ptd, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IViewObject2, ::windows_core::IUnknown, IViewObject);
@@ -9116,7 +9116,7 @@ impl IViewObjectEx {
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
         P1: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Draw)(::windows_core::Interface::as_raw(self), dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hdctargetdev.into_param().abi(), hdcdraw.into_param().abi(), ::core::mem::transmute(lprcbounds.unwrap_or(::std::ptr::null())), ::core::mem::transmute(lprcwbounds.unwrap_or(::std::ptr::null())), pfncontinue, dwcontinue).ok()
+        ::windows_core::vcall!(self.base__.base__.Draw(dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hdctargetdev.into_param().abi(), hdcdraw.into_param().abi(), ::core::mem::transmute(lprcbounds.unwrap_or(::std::ptr::null())), ::core::mem::transmute(lprcwbounds.unwrap_or(::std::ptr::null())), pfncontinue, dwcontinue)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com"))]
@@ -9124,15 +9124,15 @@ impl IViewObjectEx {
     where
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.GetColorSet)(::windows_core::Interface::as_raw(self), dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hictargetdev.into_param().abi(), ppcolorset).ok()
+        ::windows_core::vcall!(self.base__.base__.GetColorSet(dwdrawaspect, lindex, pvaspect, ::core::mem::transmute(ptd.unwrap_or(::std::ptr::null())), hictargetdev.into_param().abi(), ppcolorset)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Freeze(&self, dwdrawaspect: super::Com::DVASPECT, lindex: i32, pvaspect: *mut ::core::ffi::c_void, pdwfreeze: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.Freeze)(::windows_core::Interface::as_raw(self), dwdrawaspect, lindex, pvaspect, pdwfreeze).ok()
+        ::windows_core::vcall!(self.base__.base__.Freeze(dwdrawaspect, lindex, pvaspect, pdwfreeze)).ok()
     }
     pub unsafe fn Unfreeze(&self, dwfreeze: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.Unfreeze)(::windows_core::Interface::as_raw(self), dwfreeze).ok()
+        ::windows_core::vcall!(self.base__.base__.Unfreeze(dwfreeze)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -9140,40 +9140,40 @@ impl IViewObjectEx {
     where
         P0: ::windows_core::IntoParam<super::Com::IAdviseSink>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.SetAdvise)(::windows_core::Interface::as_raw(self), aspects, advf, padvsink.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.SetAdvise(aspects, advf, padvsink.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetAdvise(&self, paspects: ::core::option::Option<*mut u32>, padvf: ::core::option::Option<*mut u32>, ppadvsink: *mut ::core::option::Option<super::Com::IAdviseSink>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetAdvise)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(paspects.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(padvf.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppadvsink)).ok()
+        ::windows_core::vcall!(self.base__.base__.GetAdvise(::core::mem::transmute(paspects.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(padvf.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppadvsink))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com"))]
     pub unsafe fn GetExtent(&self, dwdrawaspect: super::Com::DVASPECT, lindex: i32, ptd: *const super::Com::DVTARGETDEVICE) -> ::windows_core::Result<super::super::Foundation::SIZE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetExtent)(::windows_core::Interface::as_raw(self), dwdrawaspect, lindex, ptd, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetExtent(dwdrawaspect, lindex, ptd, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetRect(&self, dwaspect: u32) -> ::windows_core::Result<super::super::Foundation::RECTL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRect)(::windows_core::Interface::as_raw(self), dwaspect, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRect(dwaspect, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetViewStatus(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetViewStatus)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetViewStatus(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn QueryHitPoint(&self, dwaspect: u32, prectbounds: *const super::super::Foundation::RECT, ptlloc: super::super::Foundation::POINT, lclosehint: i32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueryHitPoint)(::windows_core::Interface::as_raw(self), dwaspect, prectbounds, ::core::mem::transmute(ptlloc), lclosehint, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueryHitPoint(dwaspect, prectbounds, ::core::mem::transmute(ptlloc), lclosehint, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn QueryHitRect(&self, dwaspect: u32, prectbounds: *const super::super::Foundation::RECT, prectloc: *const super::super::Foundation::RECT, lclosehint: i32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueryHitRect)(::windows_core::Interface::as_raw(self), dwaspect, prectbounds, prectloc, lclosehint, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueryHitRect(dwaspect, prectbounds, prectloc, lclosehint, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com"))]
@@ -9182,7 +9182,7 @@ impl IViewObjectEx {
         P0: ::windows_core::IntoParam<super::super::Graphics::Gdi::HDC>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetNaturalExtent)(::windows_core::Interface::as_raw(self), dwaspect, lindex, ptd, hictargetdev.into_param().abi(), pextentinfo, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetNaturalExtent(dwaspect, lindex, ptd, hictargetdev.into_param().abi(), pextentinfo, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IViewObjectEx, ::windows_core::IUnknown, IViewObject, IViewObject2);
@@ -9219,7 +9219,7 @@ pub struct IViewObjectEx_Vtbl {
 pub struct IZoomEvents(::windows_core::IUnknown);
 impl IZoomEvents {
     pub unsafe fn OnZoomPercentChanged(&self, ulzoompercent: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OnZoomPercentChanged)(::windows_core::Interface::as_raw(self), ulzoompercent).ok()
+        ::windows_core::vcall!(self.OnZoomPercentChanged(ulzoompercent)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IZoomEvents, ::windows_core::IUnknown);

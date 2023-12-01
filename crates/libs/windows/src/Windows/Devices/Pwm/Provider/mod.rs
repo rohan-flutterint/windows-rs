@@ -6,56 +6,56 @@ impl IPwmControllerProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PinCount)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PinCount(&mut result__)).from_abi(result__)
         }
     }
     pub fn ActualFrequency(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ActualFrequency)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ActualFrequency(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDesiredFrequency(&self, frequency: f64) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SetDesiredFrequency)(::windows_core::Interface::as_raw(this), frequency, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SetDesiredFrequency(frequency, &mut result__)).from_abi(result__)
         }
     }
     pub fn MaxFrequency(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MaxFrequency)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MaxFrequency(&mut result__)).from_abi(result__)
         }
     }
     pub fn MinFrequency(&self) -> ::windows_core::Result<f64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MinFrequency)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MinFrequency(&mut result__)).from_abi(result__)
         }
     }
     pub fn AcquirePin(&self, pin: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).AcquirePin)(::windows_core::Interface::as_raw(this), pin).ok() }
+        unsafe { ::windows_core::vcall!(this.AcquirePin(pin)).ok() }
     }
     pub fn ReleasePin(&self, pin: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ReleasePin)(::windows_core::Interface::as_raw(this), pin).ok() }
+        unsafe { ::windows_core::vcall!(this.ReleasePin(pin)).ok() }
     }
     pub fn EnablePin(&self, pin: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).EnablePin)(::windows_core::Interface::as_raw(this), pin).ok() }
+        unsafe { ::windows_core::vcall!(this.EnablePin(pin)).ok() }
     }
     pub fn DisablePin(&self, pin: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).DisablePin)(::windows_core::Interface::as_raw(this), pin).ok() }
+        unsafe { ::windows_core::vcall!(this.DisablePin(pin)).ok() }
     }
     pub fn SetPulseParameters(&self, pin: i32, dutycycle: f64, invertpolarity: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPulseParameters)(::windows_core::Interface::as_raw(this), pin, dutycycle, invertpolarity).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPulseParameters(pin, dutycycle, invertpolarity)).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPwmControllerProvider, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -93,7 +93,7 @@ impl IPwmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetControllers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetControllers(&mut result__)).from_abi(result__)
         }
     }
 }

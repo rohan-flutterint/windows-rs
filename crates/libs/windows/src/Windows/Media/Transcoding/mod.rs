@@ -109,7 +109,7 @@ impl MediaTranscoder {
     #[cfg(feature = "Foundation")]
     pub fn SetTrimStartTime(&self, value: super::super::Foundation::TimeSpan) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTrimStartTime)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTrimStartTime(value)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -117,14 +117,14 @@ impl MediaTranscoder {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TrimStartTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TrimStartTime(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn SetTrimStopTime(&self, value: super::super::Foundation::TimeSpan) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTrimStopTime)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTrimStopTime(value)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -132,34 +132,34 @@ impl MediaTranscoder {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TrimStopTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TrimStopTime(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAlwaysReencode(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAlwaysReencode)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAlwaysReencode(value)).ok() }
     }
     pub fn AlwaysReencode(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AlwaysReencode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AlwaysReencode(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetHardwareAccelerationEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetHardwareAccelerationEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetHardwareAccelerationEnabled(value)).ok() }
     }
     pub fn HardwareAccelerationEnabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HardwareAccelerationEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HardwareAccelerationEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn AddAudioEffect(&self, activatableclassid: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).AddAudioEffect)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(activatableclassid)).ok() }
+        unsafe { ::windows_core::vcall!(this.AddAudioEffect(::core::mem::transmute_copy(activatableclassid))).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -168,11 +168,11 @@ impl MediaTranscoder {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IPropertySet>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).AddAudioEffectWithSettings)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(activatableclassid), effectrequired, configuration.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.AddAudioEffectWithSettings(::core::mem::transmute_copy(activatableclassid), effectrequired, configuration.try_into_param()?.abi())).ok() }
     }
     pub fn AddVideoEffect(&self, activatableclassid: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).AddVideoEffect)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(activatableclassid)).ok() }
+        unsafe { ::windows_core::vcall!(this.AddVideoEffect(::core::mem::transmute_copy(activatableclassid))).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -181,11 +181,11 @@ impl MediaTranscoder {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IPropertySet>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).AddVideoEffectWithSettings)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(activatableclassid), effectrequired, configuration.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.AddVideoEffectWithSettings(::core::mem::transmute_copy(activatableclassid), effectrequired, configuration.try_into_param()?.abi())).ok() }
     }
     pub fn ClearEffects(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ClearEffects)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.ClearEffects()).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Media_MediaProperties\"`, `\"Storage\"`"]
     #[cfg(all(feature = "Foundation", feature = "Media_MediaProperties", feature = "Storage"))]
@@ -198,7 +198,7 @@ impl MediaTranscoder {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PrepareFileTranscodeAsync)(::windows_core::Interface::as_raw(this), source.try_into_param()?.abi(), destination.try_into_param()?.abi(), profile.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PrepareFileTranscodeAsync(source.try_into_param()?.abi(), destination.try_into_param()?.abi(), profile.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Media_MediaProperties\"`, `\"Storage_Streams\"`"]
@@ -212,7 +212,7 @@ impl MediaTranscoder {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PrepareStreamTranscodeAsync)(::windows_core::Interface::as_raw(this), source.try_into_param()?.abi(), destination.try_into_param()?.abi(), profile.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PrepareStreamTranscodeAsync(source.try_into_param()?.abi(), destination.try_into_param()?.abi(), profile.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Media_Core\"`, `\"Media_MediaProperties\"`, `\"Storage_Streams\"`"]
@@ -226,18 +226,18 @@ impl MediaTranscoder {
         let this = &::windows_core::ComInterface::cast::<IMediaTranscoder2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PrepareMediaStreamSourceTranscodeAsync)(::windows_core::Interface::as_raw(this), source.try_into_param()?.abi(), destination.try_into_param()?.abi(), profile.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PrepareMediaStreamSourceTranscodeAsync(source.try_into_param()?.abi(), destination.try_into_param()?.abi(), profile.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn SetVideoProcessingAlgorithm(&self, value: MediaVideoProcessingAlgorithm) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IMediaTranscoder2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetVideoProcessingAlgorithm)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetVideoProcessingAlgorithm(value)).ok() }
     }
     pub fn VideoProcessingAlgorithm(&self) -> ::windows_core::Result<MediaVideoProcessingAlgorithm> {
         let this = &::windows_core::ComInterface::cast::<IMediaTranscoder2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).VideoProcessingAlgorithm)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.VideoProcessingAlgorithm(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -264,14 +264,14 @@ impl PrepareTranscodeResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CanTranscode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CanTranscode(&mut result__)).from_abi(result__)
         }
     }
     pub fn FailureReason(&self) -> ::windows_core::Result<TranscodeFailureReason> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FailureReason)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FailureReason(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -280,7 +280,7 @@ impl PrepareTranscodeResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TranscodeAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TranscodeAsync(&mut result__)).from_abi(result__)
         }
     }
 }

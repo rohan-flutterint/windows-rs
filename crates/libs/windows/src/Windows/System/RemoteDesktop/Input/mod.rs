@@ -42,30 +42,30 @@ impl RemoteTextConnection {
     #[cfg(feature = "Foundation")]
     pub fn Close(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<super::super::super::Foundation::IClosable>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).Close)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Close()).ok() }
     }
     pub fn IsEnabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetIsEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsEnabled(value)).ok() }
     }
     pub fn RegisterThread(&self, threadid: u32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RegisterThread)(::windows_core::Interface::as_raw(this), threadid).ok() }
+        unsafe { ::windows_core::vcall!(this.RegisterThread(threadid)).ok() }
     }
     pub fn UnregisterThread(&self, threadid: u32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).UnregisterThread)(::windows_core::Interface::as_raw(this), threadid).ok() }
+        unsafe { ::windows_core::vcall!(this.UnregisterThread(threadid)).ok() }
     }
     pub fn ReportDataReceived(&self, pdudata: &[u8]) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ReportDataReceived)(::windows_core::Interface::as_raw(this), pdudata.len().try_into().unwrap(), pdudata.as_ptr()).ok() }
+        unsafe { ::windows_core::vcall!(this.ReportDataReceived(pdudata.len().try_into().unwrap(), pdudata.as_ptr())).ok() }
     }
     pub fn CreateInstance<P0>(connectionid: ::windows_core::GUID, pduforwarder: P0) -> ::windows_core::Result<RemoteTextConnection>
     where
@@ -73,7 +73,7 @@ impl RemoteTextConnection {
     {
         Self::IRemoteTextConnectionFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateInstance)(::windows_core::Interface::as_raw(this), connectionid, pduforwarder.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateInstance(connectionid, pduforwarder.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -111,7 +111,7 @@ impl RemoteTextConnectionDataHandler {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), pdudata.len().try_into().unwrap(), pdudata.as_ptr(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Invoke(pdudata.len().try_into().unwrap(), pdudata.as_ptr(), &mut result__)).from_abi(result__)
         }
     }
 }

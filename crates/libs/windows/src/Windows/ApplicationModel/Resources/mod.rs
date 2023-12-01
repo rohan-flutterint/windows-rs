@@ -143,7 +143,7 @@ impl ResourceLoader {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetString)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(resource), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetString(::core::mem::transmute_copy(resource), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -155,13 +155,13 @@ impl ResourceLoader {
         let this = &::windows_core::ComInterface::cast::<IResourceLoader2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetStringForUri)(::windows_core::Interface::as_raw(this), uri.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetStringForUri(uri.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn CreateResourceLoaderByName(name: &::windows_core::HSTRING) -> ::windows_core::Result<ResourceLoader> {
         Self::IResourceLoaderFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateResourceLoaderByName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateResourceLoaderByName(::core::mem::transmute_copy(name), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -172,31 +172,31 @@ impl ResourceLoader {
     {
         Self::IResourceLoaderStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetStringForReference)(::windows_core::Interface::as_raw(this), uri.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetStringForReference(uri.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     pub fn GetForCurrentView() -> ::windows_core::Result<ResourceLoader> {
         Self::IResourceLoaderStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForCurrentView)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForCurrentView(&mut result__)).from_abi(result__)
         })
     }
     pub fn GetForCurrentViewWithName(name: &::windows_core::HSTRING) -> ::windows_core::Result<ResourceLoader> {
         Self::IResourceLoaderStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForCurrentViewWithName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForCurrentViewWithName(::core::mem::transmute_copy(name), &mut result__)).from_abi(result__)
         })
     }
     pub fn GetForViewIndependentUse() -> ::windows_core::Result<ResourceLoader> {
         Self::IResourceLoaderStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForViewIndependentUse)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForViewIndependentUse(&mut result__)).from_abi(result__)
         })
     }
     pub fn GetForViewIndependentUseWithName(name: &::windows_core::HSTRING) -> ::windows_core::Result<ResourceLoader> {
         Self::IResourceLoaderStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForViewIndependentUseWithName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForViewIndependentUseWithName(::core::mem::transmute_copy(name), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"UI\"`"]
@@ -207,13 +207,13 @@ impl ResourceLoader {
     {
         Self::IResourceLoaderStatics3(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetForUIContext)(::windows_core::Interface::as_raw(this), context.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetForUIContext(context.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     pub fn GetDefaultPriPath(packagefullname: &::windows_core::HSTRING) -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IResourceLoaderStatics4(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDefaultPriPath)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(packagefullname), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDefaultPriPath(::core::mem::transmute_copy(packagefullname), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

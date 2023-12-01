@@ -3,10 +3,10 @@
 pub struct IWCNConnectNotify(::windows_core::IUnknown);
 impl IWCNConnectNotify {
     pub unsafe fn ConnectSucceeded(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConnectSucceeded)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ConnectSucceeded()).ok()
     }
     pub unsafe fn ConnectFailed(&self, hrfailure: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConnectFailed)(::windows_core::Interface::as_raw(self), hrfailure).ok()
+        ::windows_core::vcall!(self.ConnectFailed(hrfailure)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IWCNConnectNotify, ::windows_core::IUnknown);
@@ -28,45 +28,44 @@ pub struct IWCNConnectNotify_Vtbl {
 pub struct IWCNDevice(::windows_core::IUnknown);
 impl IWCNDevice {
     pub unsafe fn SetPassword(&self, r#type: WCN_PASSWORD_TYPE, pbpassword: &[u8]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetPassword)(::windows_core::Interface::as_raw(self), r#type, pbpassword.len().try_into().unwrap(), ::core::mem::transmute(pbpassword.as_ptr())).ok()
+        ::windows_core::vcall!(self.SetPassword(r#type, pbpassword.len().try_into().unwrap(), ::core::mem::transmute(pbpassword.as_ptr()))).ok()
     }
     pub unsafe fn Connect<P0>(&self, pnotify: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IWCNConnectNotify>,
     {
-        (::windows_core::Interface::vtable(self).Connect)(::windows_core::Interface::as_raw(self), pnotify.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Connect(pnotify.into_param().abi())).ok()
     }
     pub unsafe fn GetAttribute(&self, attributetype: WCN_ATTRIBUTE_TYPE, pbbuffer: &mut [u8], pdwbufferused: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetAttribute)(::windows_core::Interface::as_raw(self), attributetype, pbbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbbuffer.as_ptr()), pdwbufferused).ok()
+        ::windows_core::vcall!(self.GetAttribute(attributetype, pbbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbbuffer.as_ptr()), pdwbufferused)).ok()
     }
     pub unsafe fn GetIntegerAttribute(&self, attributetype: WCN_ATTRIBUTE_TYPE) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetIntegerAttribute)(::windows_core::Interface::as_raw(self), attributetype, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetIntegerAttribute(attributetype, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStringAttribute(&self, attributetype: WCN_ATTRIBUTE_TYPE, wszstring: &mut [u16]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetStringAttribute)(::windows_core::Interface::as_raw(self), attributetype, wszstring.len().try_into().unwrap(), ::core::mem::transmute(wszstring.as_ptr())).ok()
+        ::windows_core::vcall!(self.GetStringAttribute(attributetype, wszstring.len().try_into().unwrap(), ::core::mem::transmute(wszstring.as_ptr()))).ok()
     }
     pub unsafe fn GetNetworkProfile(&self, wszprofile: &mut [u16]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetNetworkProfile)(::windows_core::Interface::as_raw(self), wszprofile.len().try_into().unwrap(), ::core::mem::transmute(wszprofile.as_ptr())).ok()
+        ::windows_core::vcall!(self.GetNetworkProfile(wszprofile.len().try_into().unwrap(), ::core::mem::transmute(wszprofile.as_ptr()))).ok()
     }
     pub unsafe fn SetNetworkProfile<P0>(&self, pszprofilexml: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetNetworkProfile)(::windows_core::Interface::as_raw(self), pszprofilexml.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetNetworkProfile(pszprofilexml.into_param().abi())).ok()
     }
     pub unsafe fn GetVendorExtension(&self, pvendorextspec: *const WCN_VENDOR_EXTENSION_SPEC, pbbuffer: &mut [u8], pdwbufferused: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetVendorExtension)(::windows_core::Interface::as_raw(self), pvendorextspec, pbbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbbuffer.as_ptr()), pdwbufferused).ok()
+        ::windows_core::vcall!(self.GetVendorExtension(pvendorextspec, pbbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbbuffer.as_ptr()), pdwbufferused)).ok()
     }
     pub unsafe fn SetVendorExtension(&self, pvendorextspec: *const WCN_VENDOR_EXTENSION_SPEC, pbbuffer: &[u8]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetVendorExtension)(::windows_core::Interface::as_raw(self), pvendorextspec, pbbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbbuffer.as_ptr())).ok()
+        ::windows_core::vcall!(self.SetVendorExtension(pvendorextspec, pbbuffer.len().try_into().unwrap(), ::core::mem::transmute(pbbuffer.as_ptr()))).ok()
     }
     pub unsafe fn Unadvise(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unadvise)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Unadvise()).ok()
     }
     pub unsafe fn SetNFCPasswordParams(&self, r#type: WCN_PASSWORD_TYPE, dwoobpasswordid: u32, pbpassword: ::core::option::Option<&[u8]>, pbremotepublickeyhash: ::core::option::Option<&[u8]>, pbdhkeyblob: ::core::option::Option<&[u8]>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetNFCPasswordParams)(
-            ::windows_core::Interface::as_raw(self),
+        ::windows_core::vcall!(self.SetNFCPasswordParams(
             r#type,
             dwoobpasswordid,
             pbpassword.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()),
@@ -74,8 +73,8 @@ impl IWCNDevice {
             pbremotepublickeyhash.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()),
             ::core::mem::transmute(pbremotepublickeyhash.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())),
             pbdhkeyblob.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()),
-            ::core::mem::transmute(pbdhkeyblob.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())),
-        )
+            ::core::mem::transmute(pbdhkeyblob.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr()))
+        ))
         .ok()
     }
 }

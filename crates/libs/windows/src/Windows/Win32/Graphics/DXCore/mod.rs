@@ -12,39 +12,39 @@ where
 pub struct IDXCoreAdapter(::windows_core::IUnknown);
 impl IDXCoreAdapter {
     pub unsafe fn IsValid(&self) -> bool {
-        (::windows_core::Interface::vtable(self).IsValid)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.IsValid())
     }
     pub unsafe fn IsAttributeSupported(&self, attributeguid: *const ::windows_core::GUID) -> bool {
-        (::windows_core::Interface::vtable(self).IsAttributeSupported)(::windows_core::Interface::as_raw(self), attributeguid)
+        ::windows_core::vcall!(self.IsAttributeSupported(attributeguid))
     }
     pub unsafe fn IsPropertySupported(&self, property: DXCoreAdapterProperty) -> bool {
-        (::windows_core::Interface::vtable(self).IsPropertySupported)(::windows_core::Interface::as_raw(self), property)
+        ::windows_core::vcall!(self.IsPropertySupported(property))
     }
     pub unsafe fn GetProperty(&self, property: DXCoreAdapterProperty, buffersize: usize, propertydata: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetProperty)(::windows_core::Interface::as_raw(self), property, buffersize, propertydata).ok()
+        ::windows_core::vcall!(self.GetProperty(property, buffersize, propertydata)).ok()
     }
     pub unsafe fn GetPropertySize(&self, property: DXCoreAdapterProperty) -> ::windows_core::Result<usize> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPropertySize)(::windows_core::Interface::as_raw(self), property, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPropertySize(property, &mut result__)).from_abi(result__)
     }
     pub unsafe fn IsQueryStateSupported(&self, property: DXCoreAdapterState) -> bool {
-        (::windows_core::Interface::vtable(self).IsQueryStateSupported)(::windows_core::Interface::as_raw(self), property)
+        ::windows_core::vcall!(self.IsQueryStateSupported(property))
     }
     pub unsafe fn QueryState(&self, state: DXCoreAdapterState, inputstatedetailssize: usize, inputstatedetails: ::core::option::Option<*const ::core::ffi::c_void>, outputbuffersize: usize, outputbuffer: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).QueryState)(::windows_core::Interface::as_raw(self), state, inputstatedetailssize, ::core::mem::transmute(inputstatedetails.unwrap_or(::std::ptr::null())), outputbuffersize, outputbuffer).ok()
+        ::windows_core::vcall!(self.QueryState(state, inputstatedetailssize, ::core::mem::transmute(inputstatedetails.unwrap_or(::std::ptr::null())), outputbuffersize, outputbuffer)).ok()
     }
     pub unsafe fn IsSetStateSupported(&self, property: DXCoreAdapterState) -> bool {
-        (::windows_core::Interface::vtable(self).IsSetStateSupported)(::windows_core::Interface::as_raw(self), property)
+        ::windows_core::vcall!(self.IsSetStateSupported(property))
     }
     pub unsafe fn SetState(&self, state: DXCoreAdapterState, inputstatedetailssize: usize, inputstatedetails: ::core::option::Option<*const ::core::ffi::c_void>, inputdatasize: usize, inputdata: *const ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetState)(::windows_core::Interface::as_raw(self), state, inputstatedetailssize, ::core::mem::transmute(inputstatedetails.unwrap_or(::std::ptr::null())), inputdatasize, inputdata).ok()
+        ::windows_core::vcall!(self.SetState(state, inputstatedetailssize, ::core::mem::transmute(inputstatedetails.unwrap_or(::std::ptr::null())), inputdatasize, inputdata)).ok()
     }
     pub unsafe fn GetFactory<T>(&self) -> ::windows_core::Result<T>
     where
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).GetFactory)(::windows_core::Interface::as_raw(self), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFactory(&<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDXCoreAdapter, ::windows_core::IUnknown);
@@ -78,7 +78,7 @@ impl IDXCoreAdapterFactory {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).CreateAdapterList)(::windows_core::Interface::as_raw(self), filterattributes.len().try_into().unwrap(), ::core::mem::transmute(filterattributes.as_ptr()), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateAdapterList(filterattributes.len().try_into().unwrap(), ::core::mem::transmute(filterattributes.as_ptr()), &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -87,20 +87,20 @@ impl IDXCoreAdapterFactory {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).GetAdapterByLuid)(::windows_core::Interface::as_raw(self), adapterluid, &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetAdapterByLuid(adapterluid, &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     pub unsafe fn IsNotificationTypeSupported(&self, notificationtype: DXCoreNotificationType) -> bool {
-        (::windows_core::Interface::vtable(self).IsNotificationTypeSupported)(::windows_core::Interface::as_raw(self), notificationtype)
+        ::windows_core::vcall!(self.IsNotificationTypeSupported(notificationtype))
     }
     pub unsafe fn RegisterEventNotification<P0>(&self, dxcoreobject: P0, notificationtype: DXCoreNotificationType, callbackfunction: PFN_DXCORE_NOTIFICATION_CALLBACK, callbackcontext: ::core::option::Option<*const ::core::ffi::c_void>) -> ::windows_core::Result<u32>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RegisterEventNotification)(::windows_core::Interface::as_raw(self), dxcoreobject.into_param().abi(), notificationtype, callbackfunction, ::core::mem::transmute(callbackcontext.unwrap_or(::std::ptr::null())), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RegisterEventNotification(dxcoreobject.into_param().abi(), notificationtype, callbackfunction, ::core::mem::transmute(callbackcontext.unwrap_or(::std::ptr::null())), &mut result__)).from_abi(result__)
     }
     pub unsafe fn UnregisterEventNotification(&self, eventcookie: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UnregisterEventNotification)(::windows_core::Interface::as_raw(self), eventcookie).ok()
+        ::windows_core::vcall!(self.UnregisterEventNotification(eventcookie)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDXCoreAdapterFactory, ::windows_core::IUnknown);
@@ -132,26 +132,26 @@ impl IDXCoreAdapterList {
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).GetAdapter)(::windows_core::Interface::as_raw(self), index, &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetAdapter(index, &<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetAdapterCount(&self) -> u32 {
-        (::windows_core::Interface::vtable(self).GetAdapterCount)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.GetAdapterCount())
     }
     pub unsafe fn IsStale(&self) -> bool {
-        (::windows_core::Interface::vtable(self).IsStale)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.IsStale())
     }
     pub unsafe fn GetFactory<T>(&self) -> ::windows_core::Result<T>
     where
         T: ::windows_core::ComInterface,
     {
         let mut result__ = ::std::ptr::null_mut();
-        (::windows_core::Interface::vtable(self).GetFactory)(::windows_core::Interface::as_raw(self), &<T as ::windows_core::ComInterface>::IID, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFactory(&<T as ::windows_core::ComInterface>::IID, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Sort(&self, preferences: &[DXCoreAdapterPreference]) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Sort)(::windows_core::Interface::as_raw(self), preferences.len().try_into().unwrap(), ::core::mem::transmute(preferences.as_ptr())).ok()
+        ::windows_core::vcall!(self.Sort(preferences.len().try_into().unwrap(), ::core::mem::transmute(preferences.as_ptr()))).ok()
     }
     pub unsafe fn IsAdapterPreferenceSupported(&self, preference: DXCoreAdapterPreference) -> bool {
-        (::windows_core::Interface::vtable(self).IsAdapterPreferenceSupported)(::windows_core::Interface::as_raw(self), preference)
+        ::windows_core::vcall!(self.IsAdapterPreferenceSupported(preference))
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDXCoreAdapterList, ::windows_core::IUnknown);

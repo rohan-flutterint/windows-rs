@@ -43,14 +43,14 @@ impl ISysStorageProviderEventSource {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EventReceived)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EventReceived(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveEventReceived(&self, token: super::super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveEventReceived)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveEventReceived(token)).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISysStorageProviderEventSource, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -84,14 +84,14 @@ impl ISysStorageProviderHandlerFactory {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetHttpRequestProvider)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(syncrootid), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetHttpRequestProvider(::core::mem::transmute_copy(syncrootid), &mut result__)).from_abi(result__)
         }
     }
     pub fn GetEventSource(&self, syncrootid: &::windows_core::HSTRING, eventname: &::windows_core::HSTRING) -> ::windows_core::Result<ISysStorageProviderEventSource> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetEventSource)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(syncrootid), ::core::mem::transmute_copy(eventname), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetEventSource(::core::mem::transmute_copy(syncrootid), ::core::mem::transmute_copy(eventname), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -125,7 +125,7 @@ impl ISysStorageProviderHttpRequestProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SendRequestAsync)(::windows_core::Interface::as_raw(this), request.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SendRequestAsync(request.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -156,13 +156,13 @@ impl SysStorageProviderEventReceivedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Json)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Json(&mut result__)).from_abi(result__)
         }
     }
     pub fn CreateInstance(json: &::windows_core::HSTRING) -> ::windows_core::Result<SysStorageProviderEventReceivedEventArgs> {
         Self::ISysStorageProviderEventReceivedEventArgsFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateInstance)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(json), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateInstance(::core::mem::transmute_copy(json), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

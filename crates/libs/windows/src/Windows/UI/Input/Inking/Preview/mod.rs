@@ -44,7 +44,7 @@ impl PalmRejectionDelayZonePreview {
     #[cfg(feature = "Foundation")]
     pub fn Close(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<super::super::super::super::Foundation::IClosable>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).Close)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Close()).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"UI_Composition\"`"]
     #[cfg(all(feature = "Foundation", feature = "UI_Composition"))]
@@ -54,7 +54,7 @@ impl PalmRejectionDelayZonePreview {
     {
         Self::IPalmRejectionDelayZonePreviewStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateForVisual)(::windows_core::Interface::as_raw(this), inputpanelvisual.try_into_param()?.abi(), inputpanelrect, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateForVisual(inputpanelvisual.try_into_param()?.abi(), inputpanelrect, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"UI_Composition\"`"]
@@ -66,7 +66,7 @@ impl PalmRejectionDelayZonePreview {
     {
         Self::IPalmRejectionDelayZonePreviewStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateForVisualWithViewportClip)(::windows_core::Interface::as_raw(this), inputpanelvisual.try_into_param()?.abi(), inputpanelrect, viewportvisual.try_into_param()?.abi(), viewportrect, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateForVisualWithViewportClip(inputpanelvisual.try_into_param()?.abi(), inputpanelrect, viewportvisual.try_into_param()?.abi(), viewportrect, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

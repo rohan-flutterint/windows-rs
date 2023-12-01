@@ -3,19 +3,19 @@
 pub struct ISceSvcAttachmentData(::windows_core::IUnknown);
 impl ISceSvcAttachmentData {
     pub unsafe fn GetData(&self, scesvchandle: *mut ::core::ffi::c_void, scetype: SCESVC_INFO_TYPE, ppvdata: *mut *mut ::core::ffi::c_void, psceenumhandle: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetData)(::windows_core::Interface::as_raw(self), scesvchandle, scetype, ppvdata, psceenumhandle).ok()
+        ::windows_core::vcall!(self.GetData(scesvchandle, scetype, ppvdata, psceenumhandle)).ok()
     }
     pub unsafe fn Initialize<P0>(&self, lpservicename: *mut i8, lptemplatename: *mut i8, lpscesvcpersistinfo: P0, pscesvchandle: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<ISceSvcAttachmentPersistInfo>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), lpservicename, lptemplatename, lpscesvcpersistinfo.into_param().abi(), pscesvchandle).ok()
+        ::windows_core::vcall!(self.Initialize(lpservicename, lptemplatename, lpscesvcpersistinfo.into_param().abi(), pscesvchandle)).ok()
     }
     pub unsafe fn FreeBuffer(&self, pvdata: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FreeBuffer)(::windows_core::Interface::as_raw(self), pvdata).ok()
+        ::windows_core::vcall!(self.FreeBuffer(pvdata)).ok()
     }
     pub unsafe fn CloseHandle(&self, scesvchandle: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CloseHandle)(::windows_core::Interface::as_raw(self), scesvchandle).ok()
+        ::windows_core::vcall!(self.CloseHandle(scesvchandle)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISceSvcAttachmentData, ::windows_core::IUnknown);
@@ -41,13 +41,13 @@ impl ISceSvcAttachmentPersistInfo {
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Save(&self, lptemplatename: *mut i8, scesvchandle: *mut *mut ::core::ffi::c_void, ppvdata: *mut *mut ::core::ffi::c_void, pboverwriteall: *mut super::super::Foundation::BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Save)(::windows_core::Interface::as_raw(self), lptemplatename, scesvchandle, ppvdata, pboverwriteall).ok()
+        ::windows_core::vcall!(self.Save(lptemplatename, scesvchandle, ppvdata, pboverwriteall)).ok()
     }
     pub unsafe fn IsDirty(&self, lptemplatename: *mut i8) -> ::windows_core::HRESULT {
-        (::windows_core::Interface::vtable(self).IsDirty)(::windows_core::Interface::as_raw(self), lptemplatename)
+        ::windows_core::vcall!(self.IsDirty(lptemplatename))
     }
     pub unsafe fn FreeBuffer(&self, pvdata: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FreeBuffer)(::windows_core::Interface::as_raw(self), pvdata).ok()
+        ::windows_core::vcall!(self.FreeBuffer(pvdata)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ISceSvcAttachmentPersistInfo, ::windows_core::IUnknown);

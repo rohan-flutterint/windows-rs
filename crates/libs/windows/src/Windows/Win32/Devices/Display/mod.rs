@@ -950,19 +950,19 @@ impl ICloneViewHelper {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetConnectedIDs)(::windows_core::Interface::as_raw(self), wszadaptorname.into_param().abi(), pulcount, pulid, ulflags).ok()
+        ::windows_core::vcall!(self.GetConnectedIDs(wszadaptorname.into_param().abi(), pulcount, pulid, ulflags)).ok()
     }
     pub unsafe fn GetActiveTopology<P0>(&self, wszadaptorname: P0, ulsourceid: u32, pulcount: *mut u32, pultargetid: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetActiveTopology)(::windows_core::Interface::as_raw(self), wszadaptorname.into_param().abi(), ulsourceid, pulcount, pultargetid).ok()
+        ::windows_core::vcall!(self.GetActiveTopology(wszadaptorname.into_param().abi(), ulsourceid, pulcount, pultargetid)).ok()
     }
     pub unsafe fn SetActiveTopology<P0>(&self, wszadaptorname: P0, ulsourceid: u32, ulcount: u32, pultargetid: *const u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetActiveTopology)(::windows_core::Interface::as_raw(self), wszadaptorname.into_param().abi(), ulsourceid, ulcount, pultargetid).ok()
+        ::windows_core::vcall!(self.SetActiveTopology(wszadaptorname.into_param().abi(), ulsourceid, ulcount, pultargetid)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -970,7 +970,7 @@ impl ICloneViewHelper {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).Commit)(::windows_core::Interface::as_raw(self), ffinalcall.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Commit(ffinalcall.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(ICloneViewHelper, ::windows_core::IUnknown);
@@ -1000,22 +1000,22 @@ impl IViewHelper {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetConnectedIDs)(::windows_core::Interface::as_raw(self), wszadaptorname.into_param().abi(), pulcount, pulid, ulflags).ok()
+        ::windows_core::vcall!(self.GetConnectedIDs(wszadaptorname.into_param().abi(), pulcount, pulid, ulflags)).ok()
     }
     pub unsafe fn GetActiveTopology<P0>(&self, wszadaptorname: P0, ulsourceid: u32, pulcount: *mut u32, pultargetid: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetActiveTopology)(::windows_core::Interface::as_raw(self), wszadaptorname.into_param().abi(), ulsourceid, pulcount, pultargetid).ok()
+        ::windows_core::vcall!(self.GetActiveTopology(wszadaptorname.into_param().abi(), ulsourceid, pulcount, pultargetid)).ok()
     }
     pub unsafe fn SetActiveTopology<P0>(&self, wszadaptorname: P0, ulsourceid: u32, ulcount: u32, pultargetid: *const u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetActiveTopology)(::windows_core::Interface::as_raw(self), wszadaptorname.into_param().abi(), ulsourceid, ulcount, pultargetid).ok()
+        ::windows_core::vcall!(self.SetActiveTopology(wszadaptorname.into_param().abi(), ulsourceid, ulcount, pultargetid)).ok()
     }
     pub unsafe fn Commit(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Commit)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Commit()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -1024,10 +1024,10 @@ impl IViewHelper {
         P0: ::windows_core::IntoParam<super::super::System::Com::IStream>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SetConfiguration)(::windows_core::Interface::as_raw(self), pistream.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SetConfiguration(pistream.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetProceedOnNewConfiguration(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetProceedOnNewConfiguration)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.GetProceedOnNewConfiguration()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IViewHelper, ::windows_core::IUnknown);

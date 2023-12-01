@@ -280,7 +280,7 @@ impl IVpnChannelStatics {
         P1: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).ProcessEventAsync)(::windows_core::Interface::as_raw(this), thirdpartyplugin.into_param().abi(), event.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.ProcessEventAsync(thirdpartyplugin.into_param().abi(), event.into_param().abi())).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IVpnChannelStatics, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -309,7 +309,7 @@ impl IVpnCredential {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PasskeyCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PasskeyCredential(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Cryptography_Certificates\"`"]
@@ -318,14 +318,14 @@ impl IVpnCredential {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CertificateCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CertificateCredential(&mut result__)).from_abi(result__)
         }
     }
     pub fn AdditionalPin(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AdditionalPin)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AdditionalPin(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -334,7 +334,7 @@ impl IVpnCredential {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OldPasswordCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OldPasswordCredential(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -449,35 +449,35 @@ pub struct IVpnCustomPrompt(::windows_core::IUnknown);
 impl IVpnCustomPrompt {
     pub fn SetLabel(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetLabel)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLabel(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Label(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Label)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Label(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCompulsory(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetCompulsory)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCompulsory(value)).ok() }
     }
     pub fn Compulsory(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compulsory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Compulsory(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetBordered(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetBordered)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetBordered(value)).ok() }
     }
     pub fn Bordered(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Bordered)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Bordered(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -526,35 +526,35 @@ pub struct IVpnCustomPromptElement(::windows_core::IUnknown);
 impl IVpnCustomPromptElement {
     pub fn SetDisplayName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDisplayName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDisplayName(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn DisplayName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCompulsory(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetCompulsory)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCompulsory(value)).ok() }
     }
     pub fn Compulsory(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compulsory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Compulsory(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetEmphasized(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetEmphasized)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetEmphasized(value)).ok() }
     }
     pub fn Emphasized(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Emphasized)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Emphasized(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -740,7 +740,7 @@ impl IVpnDomainNameInfoFactory {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateVpnDomainNameInfo)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), nametype, dnsserverlist.try_into_param()?.abi(), proxyserverlist.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateVpnDomainNameInfo(::core::mem::transmute_copy(name), nametype, dnsserverlist.try_into_param()?.abi(), proxyserverlist.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -827,7 +827,7 @@ impl IVpnInterfaceIdFactory {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateVpnInterfaceId)(::windows_core::Interface::as_raw(this), address.len().try_into().unwrap(), address.as_ptr(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateVpnInterfaceId(address.len().try_into().unwrap(), address.as_ptr(), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -976,7 +976,7 @@ impl IVpnNamespaceInfoFactory {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateVpnNamespaceInfo)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), dnsserverlist.try_into_param()?.abi(), proxyserverlist.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateVpnNamespaceInfo(::core::mem::transmute_copy(name), dnsserverlist.try_into_param()?.abi(), proxyserverlist.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -1113,7 +1113,7 @@ impl IVpnPacketBufferFactory {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateVpnPacketBuffer)(::windows_core::Interface::as_raw(this), parentbuffer.into_param().abi(), offset, length, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateVpnPacketBuffer(parentbuffer.into_param().abi(), offset, length, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -1208,21 +1208,21 @@ impl IVpnPlugIn {
         P0: ::windows_core::IntoParam<VpnChannel>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Connect)(::windows_core::Interface::as_raw(this), channel.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Connect(channel.into_param().abi())).ok() }
     }
     pub fn Disconnect<P0>(&self, channel: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<VpnChannel>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Disconnect)(::windows_core::Interface::as_raw(this), channel.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Disconnect(channel.into_param().abi())).ok() }
     }
     pub fn GetKeepAlivePayload<P0>(&self, channel: P0, keepalivepacket: &mut ::core::option::Option<VpnPacketBuffer>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<VpnChannel>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).GetKeepAlivePayload)(::windows_core::Interface::as_raw(this), channel.into_param().abi(), keepalivepacket as *mut _ as _).ok() }
+        unsafe { ::windows_core::vcall!(this.GetKeepAlivePayload(channel.into_param().abi(), keepalivepacket as *mut _ as _)).ok() }
     }
     pub fn Encapsulate<P0, P1, P2>(&self, channel: P0, packets: P1, encapulatedpackets: P2) -> ::windows_core::Result<()>
     where
@@ -1231,7 +1231,7 @@ impl IVpnPlugIn {
         P2: ::windows_core::IntoParam<VpnPacketBufferList>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Encapsulate)(::windows_core::Interface::as_raw(this), channel.into_param().abi(), packets.into_param().abi(), encapulatedpackets.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Encapsulate(channel.into_param().abi(), packets.into_param().abi(), encapulatedpackets.into_param().abi())).ok() }
     }
     pub fn Decapsulate<P0, P1, P2, P3>(&self, channel: P0, encapbuffer: P1, decapsulatedpackets: P2, controlpacketstosend: P3) -> ::windows_core::Result<()>
     where
@@ -1241,7 +1241,7 @@ impl IVpnPlugIn {
         P3: ::windows_core::IntoParam<VpnPacketBufferList>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Decapsulate)(::windows_core::Interface::as_raw(this), channel.into_param().abi(), encapbuffer.into_param().abi(), decapsulatedpackets.into_param().abi(), controlpacketstosend.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Decapsulate(channel.into_param().abi(), encapbuffer.into_param().abi(), decapsulatedpackets.into_param().abi(), controlpacketstosend.into_param().abi())).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IVpnPlugIn, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -1313,12 +1313,12 @@ impl IVpnProfile {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProfileName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProfileName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetProfileName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetProfileName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetProfileName(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -1326,7 +1326,7 @@ impl IVpnProfile {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AppTriggers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AppTriggers(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1335,7 +1335,7 @@ impl IVpnProfile {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Routes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Routes(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1344,7 +1344,7 @@ impl IVpnProfile {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DomainNameInfoList)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DomainNameInfoList(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1353,30 +1353,30 @@ impl IVpnProfile {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TrafficFilters)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TrafficFilters(&mut result__)).from_abi(result__)
         }
     }
     pub fn RememberCredentials(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RememberCredentials)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RememberCredentials(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRememberCredentials(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetRememberCredentials)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRememberCredentials(value)).ok() }
     }
     pub fn AlwaysOn(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AlwaysOn)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AlwaysOn(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAlwaysOn(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAlwaysOn)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAlwaysOn(value)).ok() }
     }
 }
 ::windows_core::imp::interface_hierarchy!(IVpnProfile, ::windows_core::IUnknown, ::windows_core::IInspectable);
@@ -1495,7 +1495,7 @@ impl IVpnRouteFactory {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateVpnRoute)(::windows_core::Interface::as_raw(this), address.into_param().abi(), prefixsize, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateVpnRoute(address.into_param().abi(), prefixsize, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -1622,28 +1622,28 @@ impl VpnAppId {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Type)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Type(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetType(&self, value: VpnAppIdType) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetType)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetType(value)).ok() }
     }
     pub fn Value(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetValue(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetValue)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetValue(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Create(r#type: VpnAppIdType, value: &::windows_core::HSTRING) -> ::windows_core::Result<VpnAppId> {
         Self::IVpnAppIdFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Create)(::windows_core::Interface::as_raw(this), r#type, ::core::mem::transmute_copy(value), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Create(r#type, ::core::mem::transmute_copy(value), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1677,7 +1677,7 @@ impl VpnChannel {
         P1: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).AssociateTransport)(::windows_core::Interface::as_raw(this), mainoutertunneltransport.into_param().abi(), optionaloutertunneltransport.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.AssociateTransport(mainoutertunneltransport.into_param().abi(), optionaloutertunneltransport.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -1692,11 +1692,11 @@ impl VpnChannel {
         P6: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Start)(::windows_core::Interface::as_raw(this), assignedclientipv4list.try_into_param()?.abi(), assignedclientipv6list.try_into_param()?.abi(), vpninterfaceid.into_param().abi(), routescope.into_param().abi(), namespacescope.into_param().abi(), mtusize, maxframesize, optimizeforlowcostnetwork, mainoutertunneltransport.into_param().abi(), optionaloutertunneltransport.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Start(assignedclientipv4list.try_into_param()?.abi(), assignedclientipv6list.try_into_param()?.abi(), vpninterfaceid.into_param().abi(), routescope.into_param().abi(), namespacescope.into_param().abi(), mtusize, maxframesize, optimizeforlowcostnetwork, mainoutertunneltransport.into_param().abi(), optionaloutertunneltransport.into_param().abi())).ok() }
     }
     pub fn Stop(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Stop)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Stop()).ok() }
     }
     #[doc = "Required features: `\"Security_Cryptography_Certificates\"`"]
     #[cfg(feature = "Security_Cryptography_Certificates")]
@@ -1707,29 +1707,29 @@ impl VpnChannel {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestCredentials)(::windows_core::Interface::as_raw(this), credtype, isretry, issinglesignoncredential, certificate.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestCredentials(credtype, isretry, issinglesignoncredential, certificate.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn RequestVpnPacketBuffer(&self, r#type: VpnDataPathType, vpnpacketbuffer: &mut ::core::option::Option<VpnPacketBuffer>) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RequestVpnPacketBuffer)(::windows_core::Interface::as_raw(this), r#type, vpnpacketbuffer as *mut _ as _).ok() }
+        unsafe { ::windows_core::vcall!(this.RequestVpnPacketBuffer(r#type, vpnpacketbuffer as *mut _ as _)).ok() }
     }
     pub fn LogDiagnosticMessage(&self, message: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).LogDiagnosticMessage)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(message)).ok() }
+        unsafe { ::windows_core::vcall!(this.LogDiagnosticMessage(::core::mem::transmute_copy(message))).ok() }
     }
     pub fn Id(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
     pub fn Configuration(&self) -> ::windows_core::Result<VpnChannelConfiguration> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Configuration)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Configuration(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1741,34 +1741,34 @@ impl VpnChannel {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ActivityChange)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ActivityChange(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveActivityChange(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveActivityChange)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveActivityChange(token)).ok() }
     }
     pub fn SetPlugInContext<P0>(&self, value: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPlugInContext)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPlugInContext(value.into_param().abi())).ok() }
     }
     pub fn PlugInContext(&self) -> ::windows_core::Result<::windows_core::IInspectable> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PlugInContext)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PlugInContext(&mut result__)).from_abi(result__)
         }
     }
     pub fn SystemHealth(&self) -> ::windows_core::Result<VpnSystemHealth> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SystemHealth)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SystemHealth(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1778,18 +1778,18 @@ impl VpnChannel {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IVectorView<IVpnCustomPrompt>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RequestCustomPrompt)(::windows_core::Interface::as_raw(this), customprompt.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.RequestCustomPrompt(customprompt.try_into_param()?.abi())).ok() }
     }
     pub fn SetErrorMessage(&self, message: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetErrorMessage)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(message)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetErrorMessage(::core::mem::transmute_copy(message))).ok() }
     }
     pub fn SetAllowedSslTlsVersions<P0>(&self, tunneltransport: P0, usetls12: bool) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAllowedSslTlsVersions)(::windows_core::Interface::as_raw(this), tunneltransport.into_param().abi(), usetls12).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAllowedSslTlsVersions(tunneltransport.into_param().abi(), usetls12)).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -1803,7 +1803,7 @@ impl VpnChannel {
         P5: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).StartWithMainTransport)(::windows_core::Interface::as_raw(this), assignedclientipv4list.try_into_param()?.abi(), assignedclientipv6list.try_into_param()?.abi(), vpninterfaceid.into_param().abi(), assignedroutes.into_param().abi(), assigneddomainname.into_param().abi(), mtusize, maxframesize, reserved, mainoutertunneltransport.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.StartWithMainTransport(assignedclientipv4list.try_into_param()?.abi(), assignedclientipv6list.try_into_param()?.abi(), vpninterfaceid.into_param().abi(), assignedroutes.into_param().abi(), assigneddomainname.into_param().abi(), mtusize, maxframesize, reserved, mainoutertunneltransport.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -1816,7 +1816,7 @@ impl VpnChannel {
         P4: ::windows_core::IntoParam<VpnDomainNameAssignment>,
     {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).StartExistingTransports)(::windows_core::Interface::as_raw(this), assignedclientipv4list.try_into_param()?.abi(), assignedclientipv6list.try_into_param()?.abi(), vpninterfaceid.into_param().abi(), assignedroutes.into_param().abi(), assigneddomainname.into_param().abi(), mtusize, maxframesize, reserved).ok() }
+        unsafe { ::windows_core::vcall!(this.StartExistingTransports(assignedclientipv4list.try_into_param()?.abi(), assignedclientipv6list.try_into_param()?.abi(), vpninterfaceid.into_param().abi(), assignedroutes.into_param().abi(), assigneddomainname.into_param().abi(), mtusize, maxframesize, reserved)).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1827,27 +1827,27 @@ impl VpnChannel {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ActivityStateChange)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ActivityStateChange(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveActivityStateChange(&self, token: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveActivityStateChange)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveActivityStateChange(token)).ok() }
     }
     pub fn GetVpnSendPacketBuffer(&self) -> ::windows_core::Result<VpnPacketBuffer> {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetVpnSendPacketBuffer)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetVpnSendPacketBuffer(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetVpnReceivePacketBuffer(&self) -> ::windows_core::Result<VpnPacketBuffer> {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetVpnReceivePacketBuffer)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetVpnReceivePacketBuffer(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1859,7 +1859,7 @@ impl VpnChannel {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestCustomPromptAsync)(::windows_core::Interface::as_raw(this), custompromptelement.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestCustomPromptAsync(custompromptelement.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Security_Cryptography_Certificates\"`"]
@@ -1871,7 +1871,7 @@ impl VpnChannel {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestCredentialsWithCertificateAsync)(::windows_core::Interface::as_raw(this), credtype, credoptions, certificate.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestCredentialsWithCertificateAsync(credtype, credoptions, certificate.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1880,7 +1880,7 @@ impl VpnChannel {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestCredentialsWithOptionsAsync)(::windows_core::Interface::as_raw(this), credtype, credoptions, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestCredentialsWithOptionsAsync(credtype, credoptions, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1889,12 +1889,12 @@ impl VpnChannel {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequestCredentialsSimpleAsync)(::windows_core::Interface::as_raw(this), credtype, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequestCredentialsSimpleAsync(credtype, &mut result__)).from_abi(result__)
         }
     }
     pub fn TerminateConnection(&self, message: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).TerminateConnection)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(message)).ok() }
+        unsafe { ::windows_core::vcall!(this.TerminateConnection(::core::mem::transmute_copy(message))).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -1910,7 +1910,7 @@ impl VpnChannel {
         P7: ::windows_core::IntoParam<VpnTrafficFilterAssignment>,
     {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).StartWithTrafficFilter)(::windows_core::Interface::as_raw(this), assignedclientipv4list.try_into_param()?.abi(), assignedclientipv6list.try_into_param()?.abi(), vpninterfaceid.into_param().abi(), assignedroutes.into_param().abi(), assignednamespace.into_param().abi(), mtusize, maxframesize, reserved, mainoutertunneltransport.into_param().abi(), optionaloutertunneltransport.into_param().abi(), assignedtrafficfilters.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.StartWithTrafficFilter(assignedclientipv4list.try_into_param()?.abi(), assignedclientipv6list.try_into_param()?.abi(), vpninterfaceid.into_param().abi(), assignedroutes.into_param().abi(), assignednamespace.into_param().abi(), mtusize, maxframesize, reserved, mainoutertunneltransport.into_param().abi(), optionaloutertunneltransport.into_param().abi(), assignedtrafficfilters.into_param().abi())).ok() }
     }
     pub fn AddAndAssociateTransport<P0, P1>(&self, transport: P0, context: P1) -> ::windows_core::Result<()>
     where
@@ -1918,7 +1918,7 @@ impl VpnChannel {
         P1: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel4>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).AddAndAssociateTransport)(::windows_core::Interface::as_raw(this), transport.into_param().abi(), context.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.AddAndAssociateTransport(transport.into_param().abi(), context.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -1933,7 +1933,7 @@ impl VpnChannel {
         P6: ::windows_core::IntoParam<VpnTrafficFilterAssignment>,
     {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel4>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).StartWithMultipleTransports)(::windows_core::Interface::as_raw(this), assignedclientipv4addresses.try_into_param()?.abi(), assignedclientipv6addresses.try_into_param()?.abi(), vpninterfaceid.into_param().abi(), assignedroutes.into_param().abi(), assignednamespace.into_param().abi(), mtusize, maxframesize, reserved, transports.try_into_param()?.abi(), assignedtrafficfilters.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.StartWithMultipleTransports(assignedclientipv4addresses.try_into_param()?.abi(), assignedclientipv6addresses.try_into_param()?.abi(), vpninterfaceid.into_param().abi(), assignedroutes.into_param().abi(), assignednamespace.into_param().abi(), mtusize, maxframesize, reserved, transports.try_into_param()?.abi(), assignedtrafficfilters.into_param().abi())).ok() }
     }
     pub fn ReplaceAndAssociateTransport<P0, P1>(&self, transport: P0, context: P1) -> ::windows_core::Result<()>
     where
@@ -1941,7 +1941,7 @@ impl VpnChannel {
         P1: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel4>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).ReplaceAndAssociateTransport)(::windows_core::Interface::as_raw(this), transport.into_param().abi(), context.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.ReplaceAndAssociateTransport(transport.into_param().abi(), context.into_param().abi())).ok() }
     }
     pub fn StartReconnectingTransport<P0, P1>(&self, transport: P0, context: P1) -> ::windows_core::Result<()>
     where
@@ -1949,7 +1949,7 @@ impl VpnChannel {
         P1: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel4>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).StartReconnectingTransport)(::windows_core::Interface::as_raw(this), transport.into_param().abi(), context.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.StartReconnectingTransport(transport.into_param().abi(), context.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Networking_Sockets\"`"]
     #[cfg(feature = "Networking_Sockets")]
@@ -1960,14 +1960,14 @@ impl VpnChannel {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel4>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetSlotTypeForTransportContext)(::windows_core::Interface::as_raw(this), context.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetSlotTypeForTransportContext(context.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn CurrentRequestTransportContext(&self) -> ::windows_core::Result<::windows_core::IInspectable> {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel4>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CurrentRequestTransportContext)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CurrentRequestTransportContext(&mut result__)).from_abi(result__)
         }
     }
     pub fn AppendVpnReceivePacketBuffer<P0>(&self, decapsulatedpacketbuffer: P0) -> ::windows_core::Result<()>
@@ -1975,22 +1975,22 @@ impl VpnChannel {
         P0: ::windows_core::IntoParam<VpnPacketBuffer>,
     {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel5>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).AppendVpnReceivePacketBuffer)(::windows_core::Interface::as_raw(this), decapsulatedpacketbuffer.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.AppendVpnReceivePacketBuffer(decapsulatedpacketbuffer.into_param().abi())).ok() }
     }
     pub fn AppendVpnSendPacketBuffer<P0>(&self, encapsulatedpacketbuffer: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<VpnPacketBuffer>,
     {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel5>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).AppendVpnSendPacketBuffer)(::windows_core::Interface::as_raw(this), encapsulatedpacketbuffer.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.AppendVpnSendPacketBuffer(encapsulatedpacketbuffer.into_param().abi())).ok() }
     }
     pub fn FlushVpnReceivePacketBuffers(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel5>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).FlushVpnReceivePacketBuffers)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.FlushVpnReceivePacketBuffers()).ok() }
     }
     pub fn FlushVpnSendPacketBuffers(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel5>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).FlushVpnSendPacketBuffers)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.FlushVpnSendPacketBuffers()).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -2001,7 +2001,7 @@ impl VpnChannel {
         let this = &::windows_core::ComInterface::cast::<IVpnChannel6>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ActivateForeground)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(packagerelativeappid), sharedcontext.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ActivateForeground(::core::mem::transmute_copy(packagerelativeappid), sharedcontext.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn ProcessEventAsync<P0, P1>(thirdpartyplugin: P0, event: P1) -> ::windows_core::Result<()>
@@ -2009,7 +2009,7 @@ impl VpnChannel {
         P0: ::windows_core::IntoParam<::windows_core::IInspectable>,
         P1: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
-        Self::IVpnChannelStatics(|this| unsafe { (::windows_core::Interface::vtable(this).ProcessEventAsync)(::windows_core::Interface::as_raw(this), thirdpartyplugin.into_param().abi(), event.into_param().abi()).ok() })
+        Self::IVpnChannelStatics(|this| unsafe { ::windows_core::vcall!(this.ProcessEventAsync(thirdpartyplugin.into_param().abi(), event.into_param().abi())).ok() })
     }
     #[doc(hidden)]
     pub fn IVpnChannelStatics<R, F: FnOnce(&IVpnChannelStatics) -> ::windows_core::Result<R>>(callback: F) -> ::windows_core::Result<R> {
@@ -2040,7 +2040,7 @@ impl VpnChannelActivityEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Type)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Type(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2067,7 +2067,7 @@ impl VpnChannelActivityStateChangedArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ActivityState)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ActivityState(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2094,7 +2094,7 @@ impl VpnChannelConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ServerServiceName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ServerServiceName(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2103,14 +2103,14 @@ impl VpnChannelConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ServerHostNameList)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ServerHostNameList(&mut result__)).from_abi(result__)
         }
     }
     pub fn CustomField(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CustomField)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CustomField(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2119,7 +2119,7 @@ impl VpnChannelConfiguration {
         let this = &::windows_core::ComInterface::cast::<IVpnChannelConfiguration2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ServerUris)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ServerUris(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2148,7 +2148,7 @@ impl VpnCredential {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PasskeyCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PasskeyCredential(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Cryptography_Certificates\"`"]
@@ -2157,14 +2157,14 @@ impl VpnCredential {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CertificateCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CertificateCredential(&mut result__)).from_abi(result__)
         }
     }
     pub fn AdditionalPin(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AdditionalPin)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AdditionalPin(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -2173,7 +2173,7 @@ impl VpnCredential {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OldPasswordCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OldPasswordCredential(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2206,53 +2206,53 @@ impl VpnCustomCheckBox {
     }
     pub fn SetInitialCheckState(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetInitialCheckState)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetInitialCheckState(value)).ok() }
     }
     pub fn InitialCheckState(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).InitialCheckState)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.InitialCheckState(&mut result__)).from_abi(result__)
         }
     }
     pub fn Checked(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Checked)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Checked(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetLabel(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetLabel)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLabel(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Label(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Label)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Label(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCompulsory(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCompulsory)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCompulsory(value)).ok() }
     }
     pub fn Compulsory(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compulsory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Compulsory(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetBordered(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetBordered)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetBordered(value)).ok() }
     }
     pub fn Bordered(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Bordered)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Bordered(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2290,7 +2290,7 @@ impl VpnCustomComboBox {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IVectorView<::windows_core::HSTRING>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetOptionsText)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetOptionsText(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -2298,47 +2298,47 @@ impl VpnCustomComboBox {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OptionsText)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OptionsText(&mut result__)).from_abi(result__)
         }
     }
     pub fn Selected(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Selected)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Selected(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetLabel(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetLabel)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLabel(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Label(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Label)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Label(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCompulsory(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCompulsory)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCompulsory(value)).ok() }
     }
     pub fn Compulsory(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compulsory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Compulsory(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetBordered(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetBordered)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetBordered(value)).ok() }
     }
     pub fn Bordered(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Bordered)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Bordered(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2371,64 +2371,64 @@ impl VpnCustomEditBox {
     }
     pub fn SetDefaultText(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDefaultText)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDefaultText(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn DefaultText(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DefaultText)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DefaultText(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetNoEcho(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetNoEcho)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetNoEcho(value)).ok() }
     }
     pub fn NoEcho(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NoEcho)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NoEcho(&mut result__)).from_abi(result__)
         }
     }
     pub fn Text(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Text)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Text(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetLabel(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetLabel)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLabel(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Label(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Label)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Label(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCompulsory(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCompulsory)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCompulsory(value)).ok() }
     }
     pub fn Compulsory(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compulsory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Compulsory(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetBordered(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetBordered)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetBordered(value)).ok() }
     }
     pub fn Bordered(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Bordered)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Bordered(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2461,35 +2461,35 @@ impl VpnCustomErrorBox {
     }
     pub fn SetLabel(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetLabel)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLabel(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Label(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Label)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Label(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCompulsory(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCompulsory)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCompulsory(value)).ok() }
     }
     pub fn Compulsory(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compulsory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Compulsory(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetBordered(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetBordered)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetBordered(value)).ok() }
     }
     pub fn Bordered(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Bordered)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Bordered(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2522,53 +2522,53 @@ impl VpnCustomPromptBooleanInput {
     }
     pub fn SetInitialValue(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetInitialValue)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetInitialValue(value)).ok() }
     }
     pub fn InitialValue(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).InitialValue)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.InitialValue(&mut result__)).from_abi(result__)
         }
     }
     pub fn Value(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDisplayName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetDisplayName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDisplayName(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn DisplayName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCompulsory(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCompulsory)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCompulsory(value)).ok() }
     }
     pub fn Compulsory(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compulsory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Compulsory(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetEmphasized(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetEmphasized)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetEmphasized(value)).ok() }
     }
     pub fn Emphasized(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Emphasized)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Emphasized(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2601,35 +2601,35 @@ impl VpnCustomPromptOptionSelector {
     }
     pub fn SetDisplayName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetDisplayName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDisplayName(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn DisplayName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCompulsory(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCompulsory)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCompulsory(value)).ok() }
     }
     pub fn Compulsory(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compulsory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Compulsory(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetEmphasized(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetEmphasized)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetEmphasized(value)).ok() }
     }
     pub fn Emphasized(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Emphasized)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Emphasized(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2638,14 +2638,14 @@ impl VpnCustomPromptOptionSelector {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Options)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Options(&mut result__)).from_abi(result__)
         }
     }
     pub fn SelectedIndex(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SelectedIndex)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SelectedIndex(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2678,46 +2678,46 @@ impl VpnCustomPromptText {
     }
     pub fn SetDisplayName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetDisplayName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDisplayName(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn DisplayName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCompulsory(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCompulsory)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCompulsory(value)).ok() }
     }
     pub fn Compulsory(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compulsory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Compulsory(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetEmphasized(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetEmphasized)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetEmphasized(value)).ok() }
     }
     pub fn Emphasized(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Emphasized)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Emphasized(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetText(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetText)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetText(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Text(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Text)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Text(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2750,64 +2750,64 @@ impl VpnCustomPromptTextInput {
     }
     pub fn SetDisplayName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetDisplayName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDisplayName(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn DisplayName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCompulsory(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCompulsory)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCompulsory(value)).ok() }
     }
     pub fn Compulsory(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compulsory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Compulsory(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetEmphasized(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetEmphasized)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetEmphasized(value)).ok() }
     }
     pub fn Emphasized(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPromptElement>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Emphasized)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Emphasized(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPlaceholderText(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPlaceholderText)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPlaceholderText(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn PlaceholderText(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PlaceholderText)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PlaceholderText(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetIsTextHidden(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsTextHidden)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsTextHidden(value)).ok() }
     }
     pub fn IsTextHidden(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsTextHidden)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsTextHidden(&mut result__)).from_abi(result__)
         }
     }
     pub fn Text(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Text)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Text(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2840,46 +2840,46 @@ impl VpnCustomTextBox {
     }
     pub fn SetLabel(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetLabel)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetLabel(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Label(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Label)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Label(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCompulsory(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCompulsory)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCompulsory(value)).ok() }
     }
     pub fn Compulsory(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compulsory)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Compulsory(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetBordered(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetBordered)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetBordered(value)).ok() }
     }
     pub fn Bordered(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnCustomPrompt>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Bordered)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Bordered(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDisplayText(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDisplayText)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDisplayText(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn DisplayText(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisplayText)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisplayText(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2916,7 +2916,7 @@ impl VpnDomainNameAssignment {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DomainNameList)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DomainNameList(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2926,7 +2926,7 @@ impl VpnDomainNameAssignment {
         P0: ::windows_core::IntoParam<super::super::Foundation::Uri>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetProxyAutoConfigurationUri)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetProxyAutoConfigurationUri(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -2934,7 +2934,7 @@ impl VpnDomainNameAssignment {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProxyAutoConfigurationUri)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProxyAutoConfigurationUri(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2962,24 +2962,24 @@ impl VpnDomainNameInfo {
         P0: ::windows_core::IntoParam<super::HostName>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDomainName)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDomainName(value.into_param().abi())).ok() }
     }
     pub fn DomainName(&self) -> ::windows_core::Result<super::HostName> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DomainName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DomainName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDomainNameType(&self, value: VpnDomainNameType) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDomainNameType)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDomainNameType(value)).ok() }
     }
     pub fn DomainNameType(&self) -> ::windows_core::Result<VpnDomainNameType> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DomainNameType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DomainNameType(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2988,7 +2988,7 @@ impl VpnDomainNameInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DnsServers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DnsServers(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2997,7 +2997,7 @@ impl VpnDomainNameInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WebProxyServers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WebProxyServers(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3006,7 +3006,7 @@ impl VpnDomainNameInfo {
         let this = &::windows_core::ComInterface::cast::<IVpnDomainNameInfo2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WebProxyUris)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WebProxyUris(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3018,7 +3018,7 @@ impl VpnDomainNameInfo {
     {
         Self::IVpnDomainNameInfoFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateVpnDomainNameInfo)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), nametype, dnsserverlist.try_into_param()?.abi(), proxyserverlist.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateVpnDomainNameInfo(::core::mem::transmute_copy(name), nametype, dnsserverlist.try_into_param()?.abi(), proxyserverlist.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -3052,7 +3052,7 @@ impl VpnForegroundActivatedEventArgs {
         let this = &::windows_core::ComInterface::cast::<super::super::ApplicationModel::Activation::IActivatedEventArgs>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Kind)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Kind(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"ApplicationModel_Activation\"`"]
@@ -3061,7 +3061,7 @@ impl VpnForegroundActivatedEventArgs {
         let this = &::windows_core::ComInterface::cast::<super::super::ApplicationModel::Activation::IActivatedEventArgs>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PreviousExecutionState)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PreviousExecutionState(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"ApplicationModel_Activation\"`"]
@@ -3070,7 +3070,7 @@ impl VpnForegroundActivatedEventArgs {
         let this = &::windows_core::ComInterface::cast::<super::super::ApplicationModel::Activation::IActivatedEventArgs>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SplashScreen)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SplashScreen(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"ApplicationModel_Activation\"`, `\"System\"`"]
@@ -3079,14 +3079,14 @@ impl VpnForegroundActivatedEventArgs {
         let this = &::windows_core::ComInterface::cast::<super::super::ApplicationModel::Activation::IActivatedEventArgsWithUser>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).User)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.User(&mut result__)).from_abi(result__)
         }
     }
     pub fn ProfileName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProfileName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProfileName(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3095,14 +3095,14 @@ impl VpnForegroundActivatedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SharedContext)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SharedContext(&mut result__)).from_abi(result__)
         }
     }
     pub fn ActivationOperation(&self) -> ::windows_core::Result<VpnForegroundActivationOperation> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ActivationOperation)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ActivationOperation(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3136,7 +3136,7 @@ impl VpnForegroundActivationOperation {
         P0: ::windows_core::IntoParam<super::super::Foundation::Collections::ValueSet>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Complete)(::windows_core::Interface::as_raw(this), result.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Complete(result.into_param().abi())).ok() }
     }
 }
 impl ::windows_core::RuntimeType for VpnForegroundActivationOperation {
@@ -3160,12 +3160,12 @@ pub struct VpnInterfaceId(::windows_core::IUnknown);
 impl VpnInterfaceId {
     pub fn GetAddressInfo(&self, id: &mut ::windows_core::Array<u8>) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).GetAddressInfo)(::windows_core::Interface::as_raw(this), id.set_abi_len(), id as *mut _ as _).ok() }
+        unsafe { ::windows_core::vcall!(this.GetAddressInfo(id.set_abi_len(), id as *mut _ as _)).ok() }
     }
     pub fn CreateVpnInterfaceId(address: &[u8]) -> ::windows_core::Result<VpnInterfaceId> {
         Self::IVpnInterfaceIdFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateVpnInterfaceId)(::windows_core::Interface::as_raw(this), address.len().try_into().unwrap(), address.as_ptr(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateVpnInterfaceId(address.len().try_into().unwrap(), address.as_ptr(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -3206,7 +3206,7 @@ impl VpnManagementAgent {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AddProfileFromXmlAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(xml), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AddProfileFromXmlAsync(::core::mem::transmute_copy(xml), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3218,7 +3218,7 @@ impl VpnManagementAgent {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AddProfileFromObjectAsync)(::windows_core::Interface::as_raw(this), profile.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AddProfileFromObjectAsync(profile.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3227,7 +3227,7 @@ impl VpnManagementAgent {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UpdateProfileFromXmlAsync)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(xml), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UpdateProfileFromXmlAsync(::core::mem::transmute_copy(xml), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3239,7 +3239,7 @@ impl VpnManagementAgent {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UpdateProfileFromObjectAsync)(::windows_core::Interface::as_raw(this), profile.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UpdateProfileFromObjectAsync(profile.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3248,7 +3248,7 @@ impl VpnManagementAgent {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetProfilesAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetProfilesAsync(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3260,7 +3260,7 @@ impl VpnManagementAgent {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DeleteProfileAsync)(::windows_core::Interface::as_raw(this), profile.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DeleteProfileAsync(profile.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3272,7 +3272,7 @@ impl VpnManagementAgent {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ConnectProfileAsync)(::windows_core::Interface::as_raw(this), profile.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ConnectProfileAsync(profile.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Security_Credentials\"`"]
@@ -3285,7 +3285,7 @@ impl VpnManagementAgent {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ConnectProfileWithPasswordCredentialAsync)(::windows_core::Interface::as_raw(this), profile.try_into_param()?.abi(), passwordcredential.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ConnectProfileWithPasswordCredentialAsync(profile.try_into_param()?.abi(), passwordcredential.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3297,7 +3297,7 @@ impl VpnManagementAgent {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DisconnectProfileAsync)(::windows_core::Interface::as_raw(this), profile.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DisconnectProfileAsync(profile.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
 }
@@ -3334,7 +3334,7 @@ impl VpnNamespaceAssignment {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IVector<VpnNamespaceInfo>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetNamespaceList)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetNamespaceList(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -3342,7 +3342,7 @@ impl VpnNamespaceAssignment {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NamespaceList)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NamespaceList(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -3352,7 +3352,7 @@ impl VpnNamespaceAssignment {
         P0: ::windows_core::IntoParam<super::super::Foundation::Uri>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetProxyAutoConfigUri)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetProxyAutoConfigUri(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -3360,7 +3360,7 @@ impl VpnNamespaceAssignment {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProxyAutoConfigUri)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProxyAutoConfigUri(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3385,13 +3385,13 @@ pub struct VpnNamespaceInfo(::windows_core::IUnknown);
 impl VpnNamespaceInfo {
     pub fn SetNamespace(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetNamespace)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetNamespace(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Namespace(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Namespace)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Namespace(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3401,7 +3401,7 @@ impl VpnNamespaceInfo {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IVector<super::HostName>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetDnsServers)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetDnsServers(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -3409,7 +3409,7 @@ impl VpnNamespaceInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DnsServers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DnsServers(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3419,7 +3419,7 @@ impl VpnNamespaceInfo {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IVector<super::HostName>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetWebProxyServers)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetWebProxyServers(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -3427,7 +3427,7 @@ impl VpnNamespaceInfo {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WebProxyServers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WebProxyServers(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3439,7 +3439,7 @@ impl VpnNamespaceInfo {
     {
         Self::IVpnNamespaceInfoFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateVpnNamespaceInfo)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(name), dnsserverlist.try_into_param()?.abi(), proxyserverlist.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateVpnNamespaceInfo(::core::mem::transmute_copy(name), dnsserverlist.try_into_param()?.abi(), proxyserverlist.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -3480,92 +3480,92 @@ impl VpnNativeProfile {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Servers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Servers(&mut result__)).from_abi(result__)
         }
     }
     pub fn RoutingPolicyType(&self) -> ::windows_core::Result<VpnRoutingPolicyType> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RoutingPolicyType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RoutingPolicyType(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRoutingPolicyType(&self, value: VpnRoutingPolicyType) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetRoutingPolicyType)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRoutingPolicyType(value)).ok() }
     }
     pub fn NativeProtocolType(&self) -> ::windows_core::Result<VpnNativeProtocolType> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NativeProtocolType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NativeProtocolType(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetNativeProtocolType(&self, value: VpnNativeProtocolType) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetNativeProtocolType)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetNativeProtocolType(value)).ok() }
     }
     pub fn UserAuthenticationMethod(&self) -> ::windows_core::Result<VpnAuthenticationMethod> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UserAuthenticationMethod)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UserAuthenticationMethod(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetUserAuthenticationMethod(&self, value: VpnAuthenticationMethod) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetUserAuthenticationMethod)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetUserAuthenticationMethod(value)).ok() }
     }
     pub fn TunnelAuthenticationMethod(&self) -> ::windows_core::Result<VpnAuthenticationMethod> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TunnelAuthenticationMethod)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TunnelAuthenticationMethod(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTunnelAuthenticationMethod(&self, value: VpnAuthenticationMethod) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTunnelAuthenticationMethod)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTunnelAuthenticationMethod(value)).ok() }
     }
     pub fn EapConfiguration(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EapConfiguration)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EapConfiguration(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetEapConfiguration(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetEapConfiguration)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetEapConfiguration(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn RequireVpnClientAppUI(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnNativeProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequireVpnClientAppUI)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequireVpnClientAppUI(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRequireVpnClientAppUI(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnNativeProfile2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetRequireVpnClientAppUI)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRequireVpnClientAppUI(value)).ok() }
     }
     pub fn ConnectionStatus(&self) -> ::windows_core::Result<VpnManagementConnectionStatus> {
         let this = &::windows_core::ComInterface::cast::<IVpnNativeProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ConnectionStatus)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ConnectionStatus(&mut result__)).from_abi(result__)
         }
     }
     pub fn ProfileName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProfileName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProfileName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetProfileName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetProfileName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetProfileName(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -3573,7 +3573,7 @@ impl VpnNativeProfile {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AppTriggers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AppTriggers(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3582,7 +3582,7 @@ impl VpnNativeProfile {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Routes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Routes(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3591,7 +3591,7 @@ impl VpnNativeProfile {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DomainNameInfoList)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DomainNameInfoList(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3600,30 +3600,30 @@ impl VpnNativeProfile {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TrafficFilters)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TrafficFilters(&mut result__)).from_abi(result__)
         }
     }
     pub fn RememberCredentials(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RememberCredentials)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RememberCredentials(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRememberCredentials(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetRememberCredentials)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRememberCredentials(value)).ok() }
     }
     pub fn AlwaysOn(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AlwaysOn)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AlwaysOn(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAlwaysOn(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetAlwaysOn)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAlwaysOn(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for VpnNativeProfile {
@@ -3652,36 +3652,36 @@ impl VpnPacketBuffer {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Buffer)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Buffer(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetStatus(&self, value: VpnPacketBufferStatus) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetStatus)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetStatus(value)).ok() }
     }
     pub fn Status(&self) -> ::windows_core::Result<VpnPacketBufferStatus> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTransportAffinity(&self, value: u32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetTransportAffinity)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTransportAffinity(value)).ok() }
     }
     pub fn TransportAffinity(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TransportAffinity)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TransportAffinity(&mut result__)).from_abi(result__)
         }
     }
     pub fn AppId(&self) -> ::windows_core::Result<VpnAppId> {
         let this = &::windows_core::ComInterface::cast::<IVpnPacketBuffer2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AppId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AppId(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetTransportContext<P0>(&self, value: P0) -> ::windows_core::Result<()>
@@ -3689,13 +3689,13 @@ impl VpnPacketBuffer {
         P0: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = &::windows_core::ComInterface::cast::<IVpnPacketBuffer3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetTransportContext)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetTransportContext(value.into_param().abi())).ok() }
     }
     pub fn TransportContext(&self) -> ::windows_core::Result<::windows_core::IInspectable> {
         let this = &::windows_core::ComInterface::cast::<IVpnPacketBuffer3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TransportContext)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TransportContext(&mut result__)).from_abi(result__)
         }
     }
     pub fn CreateVpnPacketBuffer<P0>(parentbuffer: P0, offset: u32, length: u32) -> ::windows_core::Result<VpnPacketBuffer>
@@ -3704,7 +3704,7 @@ impl VpnPacketBuffer {
     {
         Self::IVpnPacketBufferFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateVpnPacketBuffer)(::windows_core::Interface::as_raw(this), parentbuffer.into_param().abi(), offset, length, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateVpnPacketBuffer(parentbuffer.into_param().abi(), offset, length, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -3738,7 +3738,7 @@ impl VpnPacketBufferList {
         let this = &::windows_core::ComInterface::cast::<super::super::Foundation::Collections::IIterable<VpnPacketBuffer>>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).First)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.First(&mut result__)).from_abi(result__)
         }
     }
     pub fn Append<P0>(&self, nextvpnpacketbuffer: P0) -> ::windows_core::Result<()>
@@ -3746,49 +3746,49 @@ impl VpnPacketBufferList {
         P0: ::windows_core::IntoParam<VpnPacketBuffer>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Append)(::windows_core::Interface::as_raw(this), nextvpnpacketbuffer.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Append(nextvpnpacketbuffer.into_param().abi())).ok() }
     }
     pub fn AddAtBegin<P0>(&self, nextvpnpacketbuffer: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<VpnPacketBuffer>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).AddAtBegin)(::windows_core::Interface::as_raw(this), nextvpnpacketbuffer.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.AddAtBegin(nextvpnpacketbuffer.into_param().abi())).ok() }
     }
     pub fn RemoveAtEnd(&self) -> ::windows_core::Result<VpnPacketBuffer> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RemoveAtEnd)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RemoveAtEnd(&mut result__)).from_abi(result__)
         }
     }
     pub fn RemoveAtBegin(&self) -> ::windows_core::Result<VpnPacketBuffer> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RemoveAtBegin)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RemoveAtBegin(&mut result__)).from_abi(result__)
         }
     }
     pub fn Clear(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Clear)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Clear()).ok() }
     }
     pub fn SetStatus(&self, value: VpnPacketBufferStatus) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetStatus)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetStatus(value)).ok() }
     }
     pub fn Status(&self) -> ::windows_core::Result<VpnPacketBufferStatus> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Status)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Status(&mut result__)).from_abi(result__)
         }
     }
     pub fn Size(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Size)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Size(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3835,14 +3835,14 @@ impl VpnPickedCredential {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PasskeyCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PasskeyCredential(&mut result__)).from_abi(result__)
         }
     }
     pub fn AdditionalPin(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AdditionalPin)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AdditionalPin(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Security_Credentials\"`"]
@@ -3851,7 +3851,7 @@ impl VpnPickedCredential {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OldPasswordCredential)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OldPasswordCredential(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3887,59 +3887,59 @@ impl VpnPlugInProfile {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ServerUris)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ServerUris(&mut result__)).from_abi(result__)
         }
     }
     pub fn CustomConfiguration(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CustomConfiguration)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CustomConfiguration(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCustomConfiguration(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetCustomConfiguration)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCustomConfiguration(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn VpnPluginPackageFamilyName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).VpnPluginPackageFamilyName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.VpnPluginPackageFamilyName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetVpnPluginPackageFamilyName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetVpnPluginPackageFamilyName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetVpnPluginPackageFamilyName(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn RequireVpnClientAppUI(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnPlugInProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RequireVpnClientAppUI)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RequireVpnClientAppUI(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRequireVpnClientAppUI(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnPlugInProfile2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetRequireVpnClientAppUI)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRequireVpnClientAppUI(value)).ok() }
     }
     pub fn ConnectionStatus(&self) -> ::windows_core::Result<VpnManagementConnectionStatus> {
         let this = &::windows_core::ComInterface::cast::<IVpnPlugInProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ConnectionStatus)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ConnectionStatus(&mut result__)).from_abi(result__)
         }
     }
     pub fn ProfileName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProfileName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProfileName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetProfileName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetProfileName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetProfileName(::core::mem::transmute_copy(value))).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -3947,7 +3947,7 @@ impl VpnPlugInProfile {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AppTriggers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AppTriggers(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3956,7 +3956,7 @@ impl VpnPlugInProfile {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Routes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Routes(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3965,7 +3965,7 @@ impl VpnPlugInProfile {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DomainNameInfoList)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DomainNameInfoList(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -3974,30 +3974,30 @@ impl VpnPlugInProfile {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TrafficFilters)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TrafficFilters(&mut result__)).from_abi(result__)
         }
     }
     pub fn RememberCredentials(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RememberCredentials)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RememberCredentials(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRememberCredentials(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetRememberCredentials)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRememberCredentials(value)).ok() }
     }
     pub fn AlwaysOn(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AlwaysOn)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AlwaysOn(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAlwaysOn(&self, value: bool) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IVpnProfile>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetAlwaysOn)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAlwaysOn(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for VpnPlugInProfile {
@@ -4025,24 +4025,24 @@ impl VpnRoute {
         P0: ::windows_core::IntoParam<super::HostName>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAddress)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAddress(value.into_param().abi())).ok() }
     }
     pub fn Address(&self) -> ::windows_core::Result<super::HostName> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Address)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Address(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPrefixSize(&self, value: u8) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPrefixSize)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPrefixSize(value)).ok() }
     }
     pub fn PrefixSize(&self) -> ::windows_core::Result<u8> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PrefixSize)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PrefixSize(&mut result__)).from_abi(result__)
         }
     }
     pub fn CreateVpnRoute<P0>(address: P0, prefixsize: u8) -> ::windows_core::Result<VpnRoute>
@@ -4051,7 +4051,7 @@ impl VpnRoute {
     {
         Self::IVpnRouteFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateVpnRoute)(::windows_core::Interface::as_raw(this), address.into_param().abi(), prefixsize, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateVpnRoute(address.into_param().abi(), prefixsize, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -4093,7 +4093,7 @@ impl VpnRouteAssignment {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IVector<VpnRoute>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIpv4InclusionRoutes)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIpv4InclusionRoutes(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -4102,7 +4102,7 @@ impl VpnRouteAssignment {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IVector<VpnRoute>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIpv6InclusionRoutes)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIpv6InclusionRoutes(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -4110,7 +4110,7 @@ impl VpnRouteAssignment {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Ipv4InclusionRoutes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Ipv4InclusionRoutes(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -4119,7 +4119,7 @@ impl VpnRouteAssignment {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Ipv6InclusionRoutes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Ipv6InclusionRoutes(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -4129,7 +4129,7 @@ impl VpnRouteAssignment {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IVector<VpnRoute>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIpv4ExclusionRoutes)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIpv4ExclusionRoutes(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -4138,7 +4138,7 @@ impl VpnRouteAssignment {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::Collections::IVector<VpnRoute>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIpv6ExclusionRoutes)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIpv6ExclusionRoutes(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -4146,7 +4146,7 @@ impl VpnRouteAssignment {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Ipv4ExclusionRoutes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Ipv4ExclusionRoutes(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -4155,18 +4155,18 @@ impl VpnRouteAssignment {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Ipv6ExclusionRoutes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Ipv6ExclusionRoutes(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetExcludeLocalSubnets(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetExcludeLocalSubnets)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetExcludeLocalSubnets(value)).ok() }
     }
     pub fn ExcludeLocalSubnets(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExcludeLocalSubnets)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExcludeLocalSubnets(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -4195,7 +4195,7 @@ impl VpnSystemHealth {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).StatementOfHealth)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.StatementOfHealth(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -4222,7 +4222,7 @@ impl VpnTrafficFilter {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AppId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AppId(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAppId<P0>(&self, value: P0) -> ::windows_core::Result<()>
@@ -4230,7 +4230,7 @@ impl VpnTrafficFilter {
         P0: ::windows_core::IntoParam<VpnAppId>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAppId)(::windows_core::Interface::as_raw(this), value.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAppId(value.into_param().abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -4238,19 +4238,19 @@ impl VpnTrafficFilter {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AppClaims)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AppClaims(&mut result__)).from_abi(result__)
         }
     }
     pub fn Protocol(&self) -> ::windows_core::Result<VpnIPProtocol> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Protocol)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Protocol(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetProtocol(&self, value: VpnIPProtocol) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetProtocol)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetProtocol(value)).ok() }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -4258,7 +4258,7 @@ impl VpnTrafficFilter {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LocalPortRanges)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LocalPortRanges(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -4267,7 +4267,7 @@ impl VpnTrafficFilter {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RemotePortRanges)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RemotePortRanges(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -4276,7 +4276,7 @@ impl VpnTrafficFilter {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LocalAddressRanges)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LocalAddressRanges(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -4285,19 +4285,19 @@ impl VpnTrafficFilter {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RemoteAddressRanges)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RemoteAddressRanges(&mut result__)).from_abi(result__)
         }
     }
     pub fn RoutingPolicyType(&self) -> ::windows_core::Result<VpnRoutingPolicyType> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RoutingPolicyType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RoutingPolicyType(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetRoutingPolicyType(&self, value: VpnRoutingPolicyType) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetRoutingPolicyType)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetRoutingPolicyType(value)).ok() }
     }
     pub fn Create<P0>(appid: P0) -> ::windows_core::Result<VpnTrafficFilter>
     where
@@ -4305,7 +4305,7 @@ impl VpnTrafficFilter {
     {
         Self::IVpnTrafficFilterFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Create)(::windows_core::Interface::as_raw(this), appid.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Create(appid.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -4346,30 +4346,30 @@ impl VpnTrafficFilterAssignment {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TrafficFilterList)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TrafficFilterList(&mut result__)).from_abi(result__)
         }
     }
     pub fn AllowOutbound(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AllowOutbound)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AllowOutbound(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAllowOutbound(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAllowOutbound)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAllowOutbound(value)).ok() }
     }
     pub fn AllowInbound(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AllowInbound)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AllowInbound(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAllowInbound(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAllowInbound)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAllowInbound(value)).ok() }
     }
 }
 impl ::windows_core::RuntimeType for VpnTrafficFilterAssignment {

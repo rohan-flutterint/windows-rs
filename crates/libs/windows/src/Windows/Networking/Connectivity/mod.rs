@@ -856,28 +856,28 @@ impl AttributedNetworkUsage {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BytesSent)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BytesSent(&mut result__)).from_abi(result__)
         }
     }
     pub fn BytesReceived(&self) -> ::windows_core::Result<u64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BytesReceived)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BytesReceived(&mut result__)).from_abi(result__)
         }
     }
     pub fn AttributionId(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AttributionId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AttributionId(&mut result__)).from_abi(result__)
         }
     }
     pub fn AttributionName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AttributionName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AttributionName(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -886,7 +886,7 @@ impl AttributedNetworkUsage {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AttributionThumbnail)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AttributionThumbnail(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -920,78 +920,78 @@ impl CellularApnContext {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProviderId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProviderId(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetProviderId(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetProviderId)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetProviderId(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn AccessPointName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AccessPointName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AccessPointName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAccessPointName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAccessPointName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAccessPointName(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn UserName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).UserName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.UserName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetUserName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetUserName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetUserName(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn Password(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Password)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Password(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPassword(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetPassword)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPassword(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn IsCompressionEnabled(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsCompressionEnabled)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsCompressionEnabled(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetIsCompressionEnabled(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsCompressionEnabled)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsCompressionEnabled(value)).ok() }
     }
     pub fn AuthenticationType(&self) -> ::windows_core::Result<CellularApnAuthenticationType> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AuthenticationType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AuthenticationType(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetAuthenticationType(&self, value: CellularApnAuthenticationType) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetAuthenticationType)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetAuthenticationType(value)).ok() }
     }
     pub fn ProfileName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<ICellularApnContext2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProfileName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProfileName(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetProfileName(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<ICellularApnContext2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetProfileName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(value)).ok() }
+        unsafe { ::windows_core::vcall!(this.SetProfileName(::core::mem::transmute_copy(value))).ok() }
     }
 }
 impl ::windows_core::RuntimeType for CellularApnContext {
@@ -1017,35 +1017,35 @@ impl ConnectionCost {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkCostType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkCostType(&mut result__)).from_abi(result__)
         }
     }
     pub fn Roaming(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Roaming)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Roaming(&mut result__)).from_abi(result__)
         }
     }
     pub fn OverDataLimit(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OverDataLimit)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OverDataLimit(&mut result__)).from_abi(result__)
         }
     }
     pub fn ApproachingDataLimit(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ApproachingDataLimit)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ApproachingDataLimit(&mut result__)).from_abi(result__)
         }
     }
     pub fn BackgroundDataUsageRestricted(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IConnectionCost2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BackgroundDataUsageRestricted)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BackgroundDataUsageRestricted(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1072,14 +1072,14 @@ impl ConnectionProfile {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProfileName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProfileName(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetNetworkConnectivityLevel(&self) -> ::windows_core::Result<NetworkConnectivityLevel> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetNetworkConnectivityLevel)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetNetworkConnectivityLevel(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1088,28 +1088,28 @@ impl ConnectionProfile {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetNetworkNames)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetNetworkNames(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetConnectionCost(&self) -> ::windows_core::Result<ConnectionCost> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetConnectionCost)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetConnectionCost(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetDataPlanStatus(&self) -> ::windows_core::Result<DataPlanStatus> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDataPlanStatus)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDataPlanStatus(&mut result__)).from_abi(result__)
         }
     }
     pub fn NetworkAdapter(&self) -> ::windows_core::Result<NetworkAdapter> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkAdapter)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkAdapter(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"deprecated\"`"]
@@ -1118,7 +1118,7 @@ impl ConnectionProfile {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetLocalUsage)(::windows_core::Interface::as_raw(this), starttime, endtime, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetLocalUsage(starttime, endtime, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`, `\"deprecated\"`"]
@@ -1127,42 +1127,42 @@ impl ConnectionProfile {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetLocalUsagePerRoamingStates)(::windows_core::Interface::as_raw(this), starttime, endtime, states, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetLocalUsagePerRoamingStates(starttime, endtime, states, &mut result__)).from_abi(result__)
         }
     }
     pub fn NetworkSecuritySettings(&self) -> ::windows_core::Result<NetworkSecuritySettings> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkSecuritySettings)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkSecuritySettings(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsWwanConnectionProfile(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsWwanConnectionProfile)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsWwanConnectionProfile(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsWlanConnectionProfile(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsWlanConnectionProfile)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsWlanConnectionProfile(&mut result__)).from_abi(result__)
         }
     }
     pub fn WwanConnectionProfileDetails(&self) -> ::windows_core::Result<WwanConnectionProfileDetails> {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WwanConnectionProfileDetails)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WwanConnectionProfileDetails(&mut result__)).from_abi(result__)
         }
     }
     pub fn WlanConnectionProfileDetails(&self) -> ::windows_core::Result<WlanConnectionProfileDetails> {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).WlanConnectionProfileDetails)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.WlanConnectionProfileDetails(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1171,7 +1171,7 @@ impl ConnectionProfile {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ServiceProviderGuid)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ServiceProviderGuid(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1180,14 +1180,14 @@ impl ConnectionProfile {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetSignalBars)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetSignalBars(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetDomainConnectivityLevel(&self) -> ::windows_core::Result<DomainConnectivityLevel> {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDomainConnectivityLevel)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetDomainConnectivityLevel(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1196,7 +1196,7 @@ impl ConnectionProfile {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetNetworkUsageAsync)(::windows_core::Interface::as_raw(this), starttime, endtime, granularity, states, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetNetworkUsageAsync(starttime, endtime, granularity, states, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1205,7 +1205,7 @@ impl ConnectionProfile {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetConnectivityIntervalsAsync)(::windows_core::Interface::as_raw(this), starttime, endtime, states, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetConnectivityIntervalsAsync(starttime, endtime, states, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1214,7 +1214,7 @@ impl ConnectionProfile {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetAttributedNetworkUsageAsync)(::windows_core::Interface::as_raw(this), starttime, endtime, states, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetAttributedNetworkUsageAsync(starttime, endtime, states, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1223,14 +1223,14 @@ impl ConnectionProfile {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile4>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetProviderNetworkUsageAsync)(::windows_core::Interface::as_raw(this), starttime, endtime, states, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetProviderNetworkUsageAsync(starttime, endtime, states, &mut result__)).from_abi(result__)
         }
     }
     pub fn CanDelete(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile5>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CanDelete)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CanDelete(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1239,14 +1239,14 @@ impl ConnectionProfile {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile5>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TryDeleteAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TryDeleteAsync(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsDomainAuthenticatedBy(&self, kind: DomainAuthenticationKind) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfile6>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsDomainAuthenticatedBy)(::windows_core::Interface::as_raw(this), kind, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsDomainAuthenticatedBy(kind, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -1278,46 +1278,46 @@ impl ConnectionProfileFilter {
     }
     pub fn SetIsConnected(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsConnected)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsConnected(value)).ok() }
     }
     pub fn IsConnected(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsConnected)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsConnected(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetIsWwanConnectionProfile(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsWwanConnectionProfile)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsWwanConnectionProfile(value)).ok() }
     }
     pub fn IsWwanConnectionProfile(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsWwanConnectionProfile)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsWwanConnectionProfile(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetIsWlanConnectionProfile(&self, value: bool) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsWlanConnectionProfile)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsWlanConnectionProfile(value)).ok() }
     }
     pub fn IsWlanConnectionProfile(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsWlanConnectionProfile)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsWlanConnectionProfile(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetNetworkCostType(&self, value: NetworkCostType) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetNetworkCostType)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetNetworkCostType(value)).ok() }
     }
     pub fn NetworkCostType(&self) -> ::windows_core::Result<NetworkCostType> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkCostType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkCostType(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1327,7 +1327,7 @@ impl ConnectionProfileFilter {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<::windows_core::GUID>>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetServiceProviderGuid)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetServiceProviderGuid(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1335,7 +1335,7 @@ impl ConnectionProfileFilter {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ServiceProviderGuid)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ServiceProviderGuid(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1345,7 +1345,7 @@ impl ConnectionProfileFilter {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<bool>>,
     {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfileFilter2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsRoaming)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsRoaming(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1353,7 +1353,7 @@ impl ConnectionProfileFilter {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfileFilter2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsRoaming)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsRoaming(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1363,7 +1363,7 @@ impl ConnectionProfileFilter {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<bool>>,
     {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfileFilter2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsOverDataLimit)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsOverDataLimit(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1371,7 +1371,7 @@ impl ConnectionProfileFilter {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfileFilter2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsOverDataLimit)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsOverDataLimit(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1381,7 +1381,7 @@ impl ConnectionProfileFilter {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<bool>>,
     {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfileFilter2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetIsBackgroundDataUsageRestricted)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetIsBackgroundDataUsageRestricted(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1389,7 +1389,7 @@ impl ConnectionProfileFilter {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfileFilter2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsBackgroundDataUsageRestricted)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IsBackgroundDataUsageRestricted(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1398,7 +1398,7 @@ impl ConnectionProfileFilter {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfileFilter2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RawData)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RawData(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1408,7 +1408,7 @@ impl ConnectionProfileFilter {
         P0: ::windows_core::TryIntoParam<super::super::Foundation::IReference<::windows_core::GUID>>,
     {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfileFilter3>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetPurposeGuid)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetPurposeGuid(value.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -1416,7 +1416,7 @@ impl ConnectionProfileFilter {
         let this = &::windows_core::ComInterface::cast::<IConnectionProfileFilter3>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PurposeGuid)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PurposeGuid(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1443,13 +1443,13 @@ impl ConnectionSession {
     #[cfg(feature = "Foundation")]
     pub fn Close(&self) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<super::super::Foundation::IClosable>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).Close)(::windows_core::Interface::as_raw(this)).ok() }
+        unsafe { ::windows_core::vcall!(this.Close()).ok() }
     }
     pub fn ConnectionProfile(&self) -> ::windows_core::Result<ConnectionProfile> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ConnectionProfile)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ConnectionProfile(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1480,7 +1480,7 @@ impl ConnectivityInterval {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).StartTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.StartTime(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1489,7 +1489,7 @@ impl ConnectivityInterval {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ConnectionDuration)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ConnectionDuration(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1518,20 +1518,20 @@ impl ConnectivityManager {
     {
         Self::IConnectivityManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AcquireConnectionAsync)(::windows_core::Interface::as_raw(this), cellularapncontext.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AcquireConnectionAsync(cellularapncontext.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     pub fn AddHttpRoutePolicy<P0>(routepolicy: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<RoutePolicy>,
     {
-        Self::IConnectivityManagerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).AddHttpRoutePolicy)(::windows_core::Interface::as_raw(this), routepolicy.into_param().abi()).ok() })
+        Self::IConnectivityManagerStatics(|this| unsafe { ::windows_core::vcall!(this.AddHttpRoutePolicy(routepolicy.into_param().abi())).ok() })
     }
     pub fn RemoveHttpRoutePolicy<P0>(routepolicy: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<RoutePolicy>,
     {
-        Self::IConnectivityManagerStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RemoveHttpRoutePolicy)(::windows_core::Interface::as_raw(this), routepolicy.into_param().abi()).ok() })
+        Self::IConnectivityManagerStatics(|this| unsafe { ::windows_core::vcall!(this.RemoveHttpRoutePolicy(routepolicy.into_param().abi())).ok() })
     }
     #[doc(hidden)]
     pub fn IConnectivityManagerStatics<R, F: FnOnce(&IConnectivityManagerStatics) -> ::windows_core::Result<R>>(callback: F) -> ::windows_core::Result<R> {
@@ -1550,7 +1550,7 @@ impl DataPlanStatus {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DataPlanUsage)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DataPlanUsage(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1559,7 +1559,7 @@ impl DataPlanStatus {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DataLimitInMegabytes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DataLimitInMegabytes(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1568,7 +1568,7 @@ impl DataPlanStatus {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).InboundBitsPerSecond)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.InboundBitsPerSecond(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1577,7 +1577,7 @@ impl DataPlanStatus {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OutboundBitsPerSecond)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OutboundBitsPerSecond(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1586,7 +1586,7 @@ impl DataPlanStatus {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NextBillingCycle)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NextBillingCycle(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1595,7 +1595,7 @@ impl DataPlanStatus {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MaxTransferSizeInMegabytes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MaxTransferSizeInMegabytes(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1622,7 +1622,7 @@ impl DataPlanUsage {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MegabytesUsed)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MegabytesUsed(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1631,7 +1631,7 @@ impl DataPlanUsage {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LastSyncTime)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.LastSyncTime(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1663,7 +1663,7 @@ impl DataUsage {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BytesSent)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BytesSent(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"deprecated\"`"]
@@ -1672,7 +1672,7 @@ impl DataUsage {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BytesReceived)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BytesReceived(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1706,7 +1706,7 @@ impl IPInformation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkAdapter)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkAdapter(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1715,7 +1715,7 @@ impl IPInformation {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PrefixLength)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PrefixLength(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1742,21 +1742,21 @@ impl LanIdentifier {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).InfrastructureId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.InfrastructureId(&mut result__)).from_abi(result__)
         }
     }
     pub fn PortId(&self) -> ::windows_core::Result<LanIdentifierData> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PortId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PortId(&mut result__)).from_abi(result__)
         }
     }
     pub fn NetworkAdapterId(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkAdapterId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkAdapterId(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1783,7 +1783,7 @@ impl LanIdentifierData {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Type)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Type(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1792,7 +1792,7 @@ impl LanIdentifierData {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Value)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Value(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1819,35 +1819,35 @@ impl NetworkAdapter {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OutboundMaxBitsPerSecond)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OutboundMaxBitsPerSecond(&mut result__)).from_abi(result__)
         }
     }
     pub fn InboundMaxBitsPerSecond(&self) -> ::windows_core::Result<u64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).InboundMaxBitsPerSecond)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.InboundMaxBitsPerSecond(&mut result__)).from_abi(result__)
         }
     }
     pub fn IanaInterfaceType(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IanaInterfaceType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IanaInterfaceType(&mut result__)).from_abi(result__)
         }
     }
     pub fn NetworkItem(&self) -> ::windows_core::Result<NetworkItem> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkItem)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkItem(&mut result__)).from_abi(result__)
         }
     }
     pub fn NetworkAdapterId(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkAdapterId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkAdapterId(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1856,7 +1856,7 @@ impl NetworkAdapter {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetConnectedProfileAsync)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetConnectedProfileAsync(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1882,13 +1882,13 @@ impl NetworkInformation {
     pub fn GetConnectionProfiles() -> ::windows_core::Result<super::super::Foundation::Collections::IVectorView<ConnectionProfile>> {
         Self::INetworkInformationStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetConnectionProfiles)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetConnectionProfiles(&mut result__)).from_abi(result__)
         })
     }
     pub fn GetInternetConnectionProfile() -> ::windows_core::Result<ConnectionProfile> {
         Self::INetworkInformationStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetInternetConnectionProfile)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetInternetConnectionProfile(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1896,7 +1896,7 @@ impl NetworkInformation {
     pub fn GetLanIdentifiers() -> ::windows_core::Result<super::super::Foundation::Collections::IVectorView<LanIdentifier>> {
         Self::INetworkInformationStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetLanIdentifiers)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetLanIdentifiers(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1904,7 +1904,7 @@ impl NetworkInformation {
     pub fn GetHostNames() -> ::windows_core::Result<super::super::Foundation::Collections::IVectorView<super::HostName>> {
         Self::INetworkInformationStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetHostNames)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetHostNames(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1915,7 +1915,7 @@ impl NetworkInformation {
     {
         Self::INetworkInformationStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetProxyConfigurationAsync)(::windows_core::Interface::as_raw(this), uri.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetProxyConfigurationAsync(uri.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1926,7 +1926,7 @@ impl NetworkInformation {
     {
         Self::INetworkInformationStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetSortedEndpointPairs)(::windows_core::Interface::as_raw(this), destinationlist.try_into_param()?.abi(), sortoptions, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetSortedEndpointPairs(destinationlist.try_into_param()?.abi(), sortoptions, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -1937,13 +1937,13 @@ impl NetworkInformation {
     {
         Self::INetworkInformationStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkStatusChanged)(::windows_core::Interface::as_raw(this), networkstatushandler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkStatusChanged(networkstatushandler.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveNetworkStatusChanged(eventcookie: super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
-        Self::INetworkInformationStatics(|this| unsafe { (::windows_core::Interface::vtable(this).RemoveNetworkStatusChanged)(::windows_core::Interface::as_raw(this), eventcookie).ok() })
+        Self::INetworkInformationStatics(|this| unsafe { ::windows_core::vcall!(this.RemoveNetworkStatusChanged(eventcookie)).ok() })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -1953,7 +1953,7 @@ impl NetworkInformation {
     {
         Self::INetworkInformationStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FindConnectionProfilesAsync)(::windows_core::Interface::as_raw(this), pprofilefilter.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.FindConnectionProfilesAsync(pprofilefilter.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1978,14 +1978,14 @@ impl NetworkItem {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkId(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetNetworkTypes(&self) -> ::windows_core::Result<NetworkTypes> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetNetworkTypes)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetNetworkTypes(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2012,14 +2012,14 @@ impl NetworkSecuritySettings {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkAuthenticationType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkAuthenticationType(&mut result__)).from_abi(result__)
         }
     }
     pub fn NetworkEncryptionType(&self) -> ::windows_core::Result<NetworkEncryptionType> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NetworkEncryptionType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NetworkEncryptionType(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2046,56 +2046,56 @@ impl NetworkStateChangeEventDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasNewInternetConnectionProfile)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HasNewInternetConnectionProfile(&mut result__)).from_abi(result__)
         }
     }
     pub fn HasNewConnectionCost(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasNewConnectionCost)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HasNewConnectionCost(&mut result__)).from_abi(result__)
         }
     }
     pub fn HasNewNetworkConnectivityLevel(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasNewNetworkConnectivityLevel)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HasNewNetworkConnectivityLevel(&mut result__)).from_abi(result__)
         }
     }
     pub fn HasNewDomainConnectivityLevel(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasNewDomainConnectivityLevel)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HasNewDomainConnectivityLevel(&mut result__)).from_abi(result__)
         }
     }
     pub fn HasNewHostNameList(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasNewHostNameList)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HasNewHostNameList(&mut result__)).from_abi(result__)
         }
     }
     pub fn HasNewWwanRegistrationState(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasNewWwanRegistrationState)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HasNewWwanRegistrationState(&mut result__)).from_abi(result__)
         }
     }
     pub fn HasNewTetheringOperationalState(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<INetworkStateChangeEventDetails2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasNewTetheringOperationalState)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HasNewTetheringOperationalState(&mut result__)).from_abi(result__)
         }
     }
     pub fn HasNewTetheringClientCount(&self) -> ::windows_core::Result<bool> {
         let this = &::windows_core::ComInterface::cast::<INetworkStateChangeEventDetails2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasNewTetheringClientCount)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HasNewTetheringClientCount(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2122,14 +2122,14 @@ impl NetworkUsage {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BytesSent)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BytesSent(&mut result__)).from_abi(result__)
         }
     }
     pub fn BytesReceived(&self) -> ::windows_core::Result<u64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BytesReceived)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BytesReceived(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -2138,7 +2138,7 @@ impl NetworkUsage {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ConnectionDuration)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ConnectionDuration(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2165,21 +2165,21 @@ impl ProviderNetworkUsage {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BytesSent)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BytesSent(&mut result__)).from_abi(result__)
         }
     }
     pub fn BytesReceived(&self) -> ::windows_core::Result<u64> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BytesReceived)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BytesReceived(&mut result__)).from_abi(result__)
         }
     }
     pub fn ProviderId(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProviderId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProviderId(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2208,14 +2208,14 @@ impl ProxyConfiguration {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ProxyUris)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ProxyUris(&mut result__)).from_abi(result__)
         }
     }
     pub fn CanConnectDirectly(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CanConnectDirectly)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CanConnectDirectly(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2242,21 +2242,21 @@ impl RoutePolicy {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ConnectionProfile)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ConnectionProfile(&mut result__)).from_abi(result__)
         }
     }
     pub fn HostName(&self) -> ::windows_core::Result<super::HostName> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HostName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HostName(&mut result__)).from_abi(result__)
         }
     }
     pub fn HostNameType(&self) -> ::windows_core::Result<super::DomainNameType> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HostNameType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HostNameType(&mut result__)).from_abi(result__)
         }
     }
     pub fn CreateRoutePolicy<P0, P1>(connectionprofile: P0, hostname: P1, r#type: super::DomainNameType) -> ::windows_core::Result<RoutePolicy>
@@ -2266,7 +2266,7 @@ impl RoutePolicy {
     {
         Self::IRoutePolicyFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateRoutePolicy)(::windows_core::Interface::as_raw(this), connectionprofile.into_param().abi(), hostname.into_param().abi(), r#type, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateRoutePolicy(connectionprofile.into_param().abi(), hostname.into_param().abi(), r#type, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2298,7 +2298,7 @@ impl WlanConnectionProfileDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetConnectedSsid)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetConnectedSsid(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -2325,35 +2325,35 @@ impl WwanConnectionProfileDetails {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HomeProviderId)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HomeProviderId(&mut result__)).from_abi(result__)
         }
     }
     pub fn AccessPointName(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AccessPointName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AccessPointName(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetNetworkRegistrationState(&self) -> ::windows_core::Result<WwanNetworkRegistrationState> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetNetworkRegistrationState)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetNetworkRegistrationState(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetCurrentDataClass(&self) -> ::windows_core::Result<WwanDataClass> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCurrentDataClass)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetCurrentDataClass(&mut result__)).from_abi(result__)
         }
     }
     pub fn IPKind(&self) -> ::windows_core::Result<WwanNetworkIPKind> {
         let this = &::windows_core::ComInterface::cast::<IWwanConnectionProfileDetails2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IPKind)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IPKind(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -2362,7 +2362,7 @@ impl WwanConnectionProfileDetails {
         let this = &::windows_core::ComInterface::cast::<IWwanConnectionProfileDetails2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PurposeGuids)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.PurposeGuids(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -3020,7 +3020,7 @@ impl NetworkStatusChangedEventHandler {
         P0: ::windows_core::IntoParam<::windows_core::IInspectable>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Invoke)(::windows_core::Interface::as_raw(this), sender.into_param().abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Invoke(sender.into_param().abi())).ok() }
     }
 }
 #[repr(C)]

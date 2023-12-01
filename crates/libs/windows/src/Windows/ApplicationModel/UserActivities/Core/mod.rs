@@ -26,7 +26,7 @@ impl CoreUserActivityManager {
     {
         Self::ICoreUserActivityManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateUserActivitySessionInBackground)(::windows_core::Interface::as_raw(this), activity.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateUserActivitySessionInBackground(activity.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -37,7 +37,7 @@ impl CoreUserActivityManager {
     {
         Self::ICoreUserActivityManagerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DeleteUserActivitySessionsInTimeRangeAsync)(::windows_core::Interface::as_raw(this), channel.into_param().abi(), starttime, endtime, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DeleteUserActivitySessionsInTimeRangeAsync(channel.into_param().abi(), starttime, endtime, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

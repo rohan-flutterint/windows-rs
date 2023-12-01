@@ -81,18 +81,18 @@ impl ContactPickerUI {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AddContact)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(id), contact.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AddContact(::core::mem::transmute_copy(id), contact.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn RemoveContact(&self, id: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveContact)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(id)).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveContact(::core::mem::transmute_copy(id))).ok() }
     }
     pub fn ContainsContact(&self, id: &::windows_core::HSTRING) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ContainsContact)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(id), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ContainsContact(::core::mem::transmute_copy(id), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`, `\"deprecated\"`"]
@@ -101,14 +101,14 @@ impl ContactPickerUI {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DesiredFields)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DesiredFields(&mut result__)).from_abi(result__)
         }
     }
     pub fn SelectionMode(&self) -> ::windows_core::Result<super::ContactSelectionMode> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SelectionMode)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SelectionMode(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -120,14 +120,14 @@ impl ContactPickerUI {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ContactRemoved)(::windows_core::Interface::as_raw(this), handler.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ContactRemoved(handler.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
     pub fn RemoveContactRemoved(&self, token: super::super::super::Foundation::EventRegistrationToken) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).RemoveContactRemoved)(::windows_core::Interface::as_raw(this), token).ok() }
+        unsafe { ::windows_core::vcall!(this.RemoveContactRemoved(token)).ok() }
     }
     pub fn AddContact2<P0>(&self, contact: P0) -> ::windows_core::Result<AddContactResult>
     where
@@ -136,7 +136,7 @@ impl ContactPickerUI {
         let this = &::windows_core::ComInterface::cast::<IContactPickerUI2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AddContact)(::windows_core::Interface::as_raw(this), contact.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AddContact(contact.into_param().abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -145,7 +145,7 @@ impl ContactPickerUI {
         let this = &::windows_core::ComInterface::cast::<IContactPickerUI2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DesiredFieldsWithContactFieldType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DesiredFieldsWithContactFieldType(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -170,7 +170,7 @@ impl ContactRemovedEventArgs {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Id)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Id(&mut result__)).from_abi(result__)
         }
     }
 }

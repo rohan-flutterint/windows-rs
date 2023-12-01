@@ -95,7 +95,7 @@ impl WebAuthenticationBroker {
     {
         Self::IWebAuthenticationBrokerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AuthenticateWithCallbackUriAsync)(::windows_core::Interface::as_raw(this), options, requesturi.into_param().abi(), callbackuri.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AuthenticateWithCallbackUriAsync(options, requesturi.into_param().abi(), callbackuri.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -106,7 +106,7 @@ impl WebAuthenticationBroker {
     {
         Self::IWebAuthenticationBrokerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AuthenticateWithoutCallbackUriAsync)(::windows_core::Interface::as_raw(this), options, requesturi.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AuthenticateWithoutCallbackUriAsync(options, requesturi.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -114,7 +114,7 @@ impl WebAuthenticationBroker {
     pub fn GetCurrentApplicationCallbackUri() -> ::windows_core::Result<super::super::super::Foundation::Uri> {
         Self::IWebAuthenticationBrokerStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCurrentApplicationCallbackUri)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetCurrentApplicationCallbackUri(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -123,7 +123,7 @@ impl WebAuthenticationBroker {
     where
         P0: ::windows_core::IntoParam<super::super::super::Foundation::Uri>,
     {
-        Self::IWebAuthenticationBrokerStatics2(|this| unsafe { (::windows_core::Interface::vtable(this).AuthenticateAndContinue)(::windows_core::Interface::as_raw(this), requesturi.into_param().abi()).ok() })
+        Self::IWebAuthenticationBrokerStatics2(|this| unsafe { ::windows_core::vcall!(this.AuthenticateAndContinue(requesturi.into_param().abi())).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -132,7 +132,7 @@ impl WebAuthenticationBroker {
         P0: ::windows_core::IntoParam<super::super::super::Foundation::Uri>,
         P1: ::windows_core::IntoParam<super::super::super::Foundation::Uri>,
     {
-        Self::IWebAuthenticationBrokerStatics2(|this| unsafe { (::windows_core::Interface::vtable(this).AuthenticateWithCallbackUriAndContinue)(::windows_core::Interface::as_raw(this), requesturi.into_param().abi(), callbackuri.into_param().abi()).ok() })
+        Self::IWebAuthenticationBrokerStatics2(|this| unsafe { ::windows_core::vcall!(this.AuthenticateWithCallbackUriAndContinue(requesturi.into_param().abi(), callbackuri.into_param().abi())).ok() })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
     #[cfg(feature = "Foundation_Collections")]
@@ -142,7 +142,7 @@ impl WebAuthenticationBroker {
         P1: ::windows_core::IntoParam<super::super::super::Foundation::Uri>,
         P2: ::windows_core::IntoParam<super::super::super::Foundation::Collections::ValueSet>,
     {
-        Self::IWebAuthenticationBrokerStatics2(|this| unsafe { (::windows_core::Interface::vtable(this).AuthenticateWithCallbackUriContinuationDataAndOptionsAndContinue)(::windows_core::Interface::as_raw(this), requesturi.into_param().abi(), callbackuri.into_param().abi(), continuationdata.into_param().abi(), options).ok() })
+        Self::IWebAuthenticationBrokerStatics2(|this| unsafe { ::windows_core::vcall!(this.AuthenticateWithCallbackUriContinuationDataAndOptionsAndContinue(requesturi.into_param().abi(), callbackuri.into_param().abi(), continuationdata.into_param().abi(), options)).ok() })
     }
     #[doc = "Required features: `\"Foundation\"`"]
     #[cfg(feature = "Foundation")]
@@ -152,7 +152,7 @@ impl WebAuthenticationBroker {
     {
         Self::IWebAuthenticationBrokerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AuthenticateSilentlyAsync)(::windows_core::Interface::as_raw(this), requesturi.into_param().abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AuthenticateSilentlyAsync(requesturi.into_param().abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`"]
@@ -163,7 +163,7 @@ impl WebAuthenticationBroker {
     {
         Self::IWebAuthenticationBrokerStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AuthenticateSilentlyWithOptionsAsync)(::windows_core::Interface::as_raw(this), requesturi.into_param().abi(), options, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AuthenticateSilentlyWithOptionsAsync(requesturi.into_param().abi(), options, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -188,21 +188,21 @@ impl WebAuthenticationResult {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ResponseData)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ResponseData(&mut result__)).from_abi(result__)
         }
     }
     pub fn ResponseStatus(&self) -> ::windows_core::Result<WebAuthenticationStatus> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ResponseStatus)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ResponseStatus(&mut result__)).from_abi(result__)
         }
     }
     pub fn ResponseErrorDetail(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ResponseErrorDetail)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ResponseErrorDetail(&mut result__)).from_abi(result__)
         }
     }
 }

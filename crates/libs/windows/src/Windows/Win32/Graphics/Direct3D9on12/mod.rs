@@ -17,7 +17,7 @@ pub unsafe fn Direct3DCreate9On12Ex(sdkversion: u32, poverridelist: *mut D3D9ON1
 pub struct IDirect3DDevice9On12(::windows_core::IUnknown);
 impl IDirect3DDevice9On12 {
     pub unsafe fn GetD3D12Device(&self, riid: *const ::windows_core::GUID, ppvdevice: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetD3D12Device)(::windows_core::Interface::as_raw(self), riid, ppvdevice).ok()
+        ::windows_core::vcall!(self.GetD3D12Device(riid, ppvdevice)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Direct3D9\"`"]
     #[cfg(all(feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Direct3D9"))]
@@ -26,7 +26,7 @@ impl IDirect3DDevice9On12 {
         P0: ::windows_core::IntoParam<super::Direct3D9::IDirect3DResource9>,
         P1: ::windows_core::IntoParam<super::Direct3D12::ID3D12CommandQueue>,
     {
-        (::windows_core::Interface::vtable(self).UnwrapUnderlyingResource)(::windows_core::Interface::as_raw(self), presource.into_param().abi(), pcommandqueue.into_param().abi(), riid, ppvresource12).ok()
+        ::windows_core::vcall!(self.UnwrapUnderlyingResource(presource.into_param().abi(), pcommandqueue.into_param().abi(), riid, ppvresource12)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Direct3D12\"`, `\"Win32_Graphics_Direct3D9\"`"]
     #[cfg(all(feature = "Win32_Graphics_Direct3D12", feature = "Win32_Graphics_Direct3D9"))]
@@ -34,7 +34,7 @@ impl IDirect3DDevice9On12 {
     where
         P0: ::windows_core::IntoParam<super::Direct3D9::IDirect3DResource9>,
     {
-        (::windows_core::Interface::vtable(self).ReturnUnderlyingResource)(::windows_core::Interface::as_raw(self), presource.into_param().abi(), numsync, psignalvalues, ::core::mem::transmute(ppfences)).ok()
+        ::windows_core::vcall!(self.ReturnUnderlyingResource(presource.into_param().abi(), numsync, psignalvalues, ::core::mem::transmute(ppfences))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirect3DDevice9On12, ::windows_core::IUnknown);

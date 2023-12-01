@@ -2233,10 +2233,10 @@ where
 pub struct IAsyncGetSendNotificationCookie(::windows_core::IUnknown);
 impl IAsyncGetSendNotificationCookie {
     pub unsafe fn FinishAsyncCall(&self, param0: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.FinishAsyncCall)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.FinishAsyncCall(param0)).ok()
     }
     pub unsafe fn CancelAsyncCall(&self, param0: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.CancelAsyncCall)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.CancelAsyncCall(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2245,7 +2245,7 @@ impl IAsyncGetSendNotificationCookie {
         P0: ::windows_core::IntoParam<IPrintAsyncNotifyDataObject>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).FinishAsyncCallWithData)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1.into_param().abi()).ok()
+        ::windows_core::vcall!(self.FinishAsyncCallWithData(param0.into_param().abi(), param1.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAsyncGetSendNotificationCookie, ::windows_core::IUnknown, IPrintAsyncCookie);
@@ -2269,16 +2269,16 @@ pub struct IAsyncGetSendNotificationCookie_Vtbl {
 pub struct IAsyncGetSrvReferralCookie(::windows_core::IUnknown);
 impl IAsyncGetSrvReferralCookie {
     pub unsafe fn FinishAsyncCall(&self, param0: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FinishAsyncCall)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.FinishAsyncCall(param0)).ok()
     }
     pub unsafe fn CancelAsyncCall(&self, param0: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CancelAsyncCall)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.CancelAsyncCall(param0)).ok()
     }
     pub unsafe fn FinishAsyncCallWithData<P0>(&self, param0: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).FinishAsyncCallWithData)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.FinishAsyncCallWithData(param0.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IAsyncGetSrvReferralCookie, ::windows_core::IUnknown);
@@ -2304,36 +2304,36 @@ impl IBidiAsyncNotifyChannel {
     where
         P0: ::windows_core::IntoParam<IPrintAsyncNotifyDataObject>,
     {
-        (::windows_core::Interface::vtable(self).base__.SendNotification)(::windows_core::Interface::as_raw(self), pdata.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SendNotification(pdata.into_param().abi())).ok()
     }
     pub unsafe fn CloseChannel<P0>(&self, pdata: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPrintAsyncNotifyDataObject>,
     {
-        (::windows_core::Interface::vtable(self).base__.CloseChannel)(::windows_core::Interface::as_raw(self), pdata.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.CloseChannel(pdata.into_param().abi())).ok()
     }
     pub unsafe fn CreateNotificationChannel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CreateNotificationChannel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.CreateNotificationChannel()).ok()
     }
     pub unsafe fn GetPrintName(&self, param0: *const ::core::option::Option<IPrintAsyncNotifyDataObject>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetPrintName)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(param0)).ok()
+        ::windows_core::vcall!(self.GetPrintName(::core::mem::transmute(param0))).ok()
     }
     pub unsafe fn GetChannelNotificationType(&self, param0: *const ::core::option::Option<IPrintAsyncNotifyDataObject>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetChannelNotificationType)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(param0)).ok()
+        ::windows_core::vcall!(self.GetChannelNotificationType(::core::mem::transmute(param0))).ok()
     }
     pub unsafe fn AsyncGetNotificationSendResponse<P0, P1>(&self, param0: P0, param1: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPrintAsyncNotifyDataObject>,
         P1: ::windows_core::IntoParam<IAsyncGetSendNotificationCookie>,
     {
-        (::windows_core::Interface::vtable(self).AsyncGetNotificationSendResponse)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AsyncGetNotificationSendResponse(param0.into_param().abi(), param1.into_param().abi())).ok()
     }
     pub unsafe fn AsyncCloseChannel<P0, P1>(&self, param0: P0, param1: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPrintAsyncNotifyDataObject>,
         P1: ::windows_core::IntoParam<IPrintAsyncCookie>,
     {
-        (::windows_core::Interface::vtable(self).AsyncCloseChannel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AsyncCloseChannel(param0.into_param().abi(), param1.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IBidiAsyncNotifyChannel, ::windows_core::IUnknown, IPrintAsyncNotifyChannel);
@@ -2361,21 +2361,21 @@ impl IBidiRequest {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetSchema)(::windows_core::Interface::as_raw(self), pszschema.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetSchema(pszschema.into_param().abi())).ok()
     }
     pub unsafe fn SetInputData(&self, dwtype: u32, pdata: *const u8, usize: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetInputData)(::windows_core::Interface::as_raw(self), dwtype, pdata, usize).ok()
+        ::windows_core::vcall!(self.SetInputData(dwtype, pdata, usize)).ok()
     }
     pub unsafe fn GetResult(&self) -> ::windows_core::Result<::windows_core::HRESULT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetResult)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetResult(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetOutputData(&self, dwindex: u32, ppszschema: *mut ::windows_core::PWSTR, pdwtype: *mut u32, ppdata: *mut *mut u8, usize: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetOutputData)(::windows_core::Interface::as_raw(self), dwindex, ppszschema, pdwtype, ppdata, usize).ok()
+        ::windows_core::vcall!(self.GetOutputData(dwindex, ppszschema, pdwtype, ppdata, usize)).ok()
     }
     pub unsafe fn GetEnumCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetEnumCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetEnumCount(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IBidiRequest, ::windows_core::IUnknown);
@@ -2403,17 +2403,17 @@ impl IBidiRequestContainer {
     where
         P0: ::windows_core::IntoParam<IBidiRequest>,
     {
-        (::windows_core::Interface::vtable(self).AddRequest)(::windows_core::Interface::as_raw(self), prequest.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AddRequest(prequest.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetEnumObject(&self) -> ::windows_core::Result<super::super::System::Com::IEnumUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetEnumObject)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetEnumObject(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetRequestCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetRequestCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetRequestCount(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IBidiRequestContainer, ::windows_core::IUnknown);
@@ -2442,24 +2442,24 @@ impl IBidiSpl {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).BindDevice)(::windows_core::Interface::as_raw(self), pszdevicename.into_param().abi(), dwaccess).ok()
+        ::windows_core::vcall!(self.BindDevice(pszdevicename.into_param().abi(), dwaccess)).ok()
     }
     pub unsafe fn UnbindDevice(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UnbindDevice)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.UnbindDevice()).ok()
     }
     pub unsafe fn SendRecv<P0, P1>(&self, pszaction: P0, prequest: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<IBidiRequest>,
     {
-        (::windows_core::Interface::vtable(self).SendRecv)(::windows_core::Interface::as_raw(self), pszaction.into_param().abi(), prequest.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SendRecv(pszaction.into_param().abi(), prequest.into_param().abi())).ok()
     }
     pub unsafe fn MultiSendRecv<P0, P1>(&self, pszaction: P0, prequestcontainer: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<IBidiRequestContainer>,
     {
-        (::windows_core::Interface::vtable(self).MultiSendRecv)(::windows_core::Interface::as_raw(self), pszaction.into_param().abi(), prequestcontainer.into_param().abi()).ok()
+        ::windows_core::vcall!(self.MultiSendRecv(pszaction.into_param().abi(), prequestcontainer.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IBidiSpl, ::windows_core::IUnknown);
@@ -2486,17 +2486,17 @@ impl IBidiSpl2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).BindDevice)(::windows_core::Interface::as_raw(self), pszdevicename.into_param().abi(), dwaccess).ok()
+        ::windows_core::vcall!(self.BindDevice(pszdevicename.into_param().abi(), dwaccess)).ok()
     }
     pub unsafe fn UnbindDevice(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UnbindDevice)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.UnbindDevice()).ok()
     }
     pub unsafe fn SendRecvXMLString<P0>(&self, bstrrequest: P0) -> ::windows_core::Result<::windows_core::BSTR>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SendRecvXMLString)(::windows_core::Interface::as_raw(self), bstrrequest.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SendRecvXMLString(bstrrequest.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -2505,7 +2505,7 @@ impl IBidiSpl2 {
         P0: ::windows_core::IntoParam<super::super::System::Com::IStream>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SendRecvXMLStream)(::windows_core::Interface::as_raw(self), psrequest.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SendRecvXMLStream(psrequest.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IBidiSpl2, ::windows_core::IUnknown);
@@ -2533,17 +2533,17 @@ pub struct IFixedDocument(::windows_core::IUnknown);
 impl IFixedDocument {
     pub unsafe fn GetUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPrintTicket(&self) -> ::windows_core::Result<IPartPrintTicket> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPrintTicket)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPrintTicket(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPrintTicket<P0>(&self, pprintticket: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPartPrintTicket>,
     {
-        (::windows_core::Interface::vtable(self).SetPrintTicket)(::windows_core::Interface::as_raw(self), pprintticket.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetPrintTicket(pprintticket.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IFixedDocument, ::windows_core::IUnknown);
@@ -2567,17 +2567,17 @@ pub struct IFixedDocumentSequence(::windows_core::IUnknown);
 impl IFixedDocumentSequence {
     pub unsafe fn GetUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPrintTicket(&self) -> ::windows_core::Result<IPartPrintTicket> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPrintTicket)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPrintTicket(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPrintTicket<P0>(&self, pprintticket: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPartPrintTicket>,
     {
-        (::windows_core::Interface::vtable(self).SetPrintTicket)(::windows_core::Interface::as_raw(self), pprintticket.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetPrintTicket(pprintticket.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IFixedDocumentSequence, ::windows_core::IUnknown);
@@ -2601,55 +2601,55 @@ pub struct IFixedPage(::windows_core::IUnknown);
 impl IFixedPage {
     pub unsafe fn GetUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStream(&self) -> ::windows_core::Result<IPrintReadStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetStream)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetStream(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPartCompression(&self) -> ::windows_core::Result<EXpsCompressionOptions> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetPartCompression)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetPartCompression(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPartCompression(&self, compression: EXpsCompressionOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetPartCompression)(::windows_core::Interface::as_raw(self), compression).ok()
+        ::windows_core::vcall!(self.base__.SetPartCompression(compression)).ok()
     }
     pub unsafe fn GetPrintTicket(&self) -> ::windows_core::Result<IPartPrintTicket> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPrintTicket)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPrintTicket(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPagePart<P0>(&self, uri: P0) -> ::windows_core::Result<::windows_core::IUnknown>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPagePart)(::windows_core::Interface::as_raw(self), uri.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPagePart(uri.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetWriteStream(&self) -> ::windows_core::Result<IPrintWriteStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetWriteStream)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetWriteStream(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPrintTicket<P0>(&self, ppprintticket: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPartPrintTicket>,
     {
-        (::windows_core::Interface::vtable(self).SetPrintTicket)(::windows_core::Interface::as_raw(self), ppprintticket.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetPrintTicket(ppprintticket.into_param().abi())).ok()
     }
     pub unsafe fn SetPagePart<P0>(&self, punk: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).SetPagePart)(::windows_core::Interface::as_raw(self), punk.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetPagePart(punk.into_param().abi())).ok()
     }
     pub unsafe fn DeleteResource<P0>(&self, uri: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeleteResource)(::windows_core::Interface::as_raw(self), uri.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeleteResource(uri.into_param().abi())).ok()
     }
     pub unsafe fn GetXpsPartIterator(&self) -> ::windows_core::Result<IXpsPartIterator> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetXpsPartIterator)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetXpsPartIterator(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IFixedPage, ::windows_core::IUnknown, IPartBase);
@@ -2681,7 +2681,7 @@ impl IImgCreateErrorInfo {
     #[doc = "Required features: `\"Win32_System_Ole\"`"]
     #[cfg(feature = "Win32_System_Ole")]
     pub unsafe fn SetGUID(&self, rguid: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetGUID)(::windows_core::Interface::as_raw(self), rguid).ok()
+        ::windows_core::vcall!(self.base__.SetGUID(rguid)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Ole\"`"]
     #[cfg(feature = "Win32_System_Ole")]
@@ -2689,7 +2689,7 @@ impl IImgCreateErrorInfo {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetSource)(::windows_core::Interface::as_raw(self), szsource.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetSource(szsource.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Ole\"`"]
     #[cfg(feature = "Win32_System_Ole")]
@@ -2697,7 +2697,7 @@ impl IImgCreateErrorInfo {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetDescription)(::windows_core::Interface::as_raw(self), szdescription.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetDescription(szdescription.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Ole\"`"]
     #[cfg(feature = "Win32_System_Ole")]
@@ -2705,15 +2705,15 @@ impl IImgCreateErrorInfo {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetHelpFile)(::windows_core::Interface::as_raw(self), szhelpfile.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetHelpFile(szhelpfile.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Ole\"`"]
     #[cfg(feature = "Win32_System_Ole")]
     pub unsafe fn SetHelpContext(&self, dwhelpcontext: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetHelpContext)(::windows_core::Interface::as_raw(self), dwhelpcontext).ok()
+        ::windows_core::vcall!(self.base__.SetHelpContext(dwhelpcontext)).ok()
     }
     pub unsafe fn AttachToErrorInfo(&self, perrorinfo: *mut ImgErrorInfo) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AttachToErrorInfo)(::windows_core::Interface::as_raw(self), perrorinfo).ok()
+        ::windows_core::vcall!(self.AttachToErrorInfo(perrorinfo)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Ole")]
@@ -2744,58 +2744,58 @@ impl IImgErrorInfo {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetGUID(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetGUID)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetGUID(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetSource(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetSource)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetSource(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetDescription(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetDescription)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetDescription(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetHelpFile(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetHelpFile)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetHelpFile(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetHelpContext(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetHelpContext)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetHelpContext(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetDeveloperDescription(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetDeveloperDescription)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetDeveloperDescription(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetUserErrorId(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUserErrorId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUserErrorId(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetUserParameterCount(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUserParameterCount)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUserParameterCount(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetUserParameter(&self, cparam: u32) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUserParameter)(::windows_core::Interface::as_raw(self), cparam, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUserParameter(cparam, &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetUserFallback(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUserFallback)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUserFallback(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetExceptionId(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetExceptionId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetExceptionId(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DetachErrorInfo(&self, perrorinfo: *mut ImgErrorInfo) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DetachErrorInfo)(::windows_core::Interface::as_raw(self), perrorinfo).ok()
+        ::windows_core::vcall!(self.DetachErrorInfo(perrorinfo)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -2826,10 +2826,10 @@ pub struct IImgErrorInfo_Vtbl {
 pub struct IInterFilterCommunicator(::windows_core::IUnknown);
 impl IInterFilterCommunicator {
     pub unsafe fn RequestReader(&self, ppireader: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RequestReader)(::windows_core::Interface::as_raw(self), ppireader).ok()
+        ::windows_core::vcall!(self.RequestReader(ppireader)).ok()
     }
     pub unsafe fn RequestWriter(&self, ppiwriter: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RequestWriter)(::windows_core::Interface::as_raw(self), ppiwriter).ok()
+        ::windows_core::vcall!(self.RequestWriter(ppiwriter)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IInterFilterCommunicator, ::windows_core::IUnknown);
@@ -2852,18 +2852,18 @@ pub struct IPartBase(::windows_core::IUnknown);
 impl IPartBase {
     pub unsafe fn GetUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStream(&self) -> ::windows_core::Result<IPrintReadStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetStream)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetStream(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPartCompression(&self) -> ::windows_core::Result<EXpsCompressionOptions> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPartCompression)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPartCompression(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPartCompression(&self, compression: EXpsCompressionOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetPartCompression)(::windows_core::Interface::as_raw(self), compression).ok()
+        ::windows_core::vcall!(self.SetPartCompression(compression)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPartBase, ::windows_core::IUnknown);
@@ -2888,18 +2888,18 @@ pub struct IPartColorProfile(::windows_core::IUnknown);
 impl IPartColorProfile {
     pub unsafe fn GetUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStream(&self) -> ::windows_core::Result<IPrintReadStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetStream)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetStream(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPartCompression(&self) -> ::windows_core::Result<EXpsCompressionOptions> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetPartCompression)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetPartCompression(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPartCompression(&self, compression: EXpsCompressionOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetPartCompression)(::windows_core::Interface::as_raw(self), compression).ok()
+        ::windows_core::vcall!(self.base__.SetPartCompression(compression)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPartColorProfile, ::windows_core::IUnknown, IPartBase);
@@ -2919,7 +2919,7 @@ pub struct IPartColorProfile_Vtbl {
 pub struct IPartDiscardControl(::windows_core::IUnknown);
 impl IPartDiscardControl {
     pub unsafe fn GetDiscardProperties(&self, urisentinelpage: *mut ::windows_core::BSTR, uriparttodiscard: *mut ::windows_core::BSTR) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDiscardProperties)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(urisentinelpage), ::core::mem::transmute(uriparttodiscard)).ok()
+        ::windows_core::vcall!(self.GetDiscardProperties(::core::mem::transmute(urisentinelpage), ::core::mem::transmute(uriparttodiscard))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPartDiscardControl, ::windows_core::IUnknown);
@@ -2941,30 +2941,30 @@ pub struct IPartFont(::windows_core::IUnknown);
 impl IPartFont {
     pub unsafe fn GetUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStream(&self) -> ::windows_core::Result<IPrintReadStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetStream)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetStream(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPartCompression(&self) -> ::windows_core::Result<EXpsCompressionOptions> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetPartCompression)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetPartCompression(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPartCompression(&self, compression: EXpsCompressionOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetPartCompression)(::windows_core::Interface::as_raw(self), compression).ok()
+        ::windows_core::vcall!(self.base__.SetPartCompression(compression)).ok()
     }
     pub unsafe fn GetFontProperties(&self, pcontenttype: *mut ::windows_core::BSTR, pfontoptions: *mut EXpsFontOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetFontProperties)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pcontenttype), pfontoptions).ok()
+        ::windows_core::vcall!(self.GetFontProperties(::core::mem::transmute(pcontenttype), pfontoptions)).ok()
     }
     pub unsafe fn SetFontContent<P0>(&self, pcontenttype: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetFontContent)(::windows_core::Interface::as_raw(self), pcontenttype.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetFontContent(pcontenttype.into_param().abi())).ok()
     }
     pub unsafe fn SetFontOptions(&self, options: EXpsFontOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetFontOptions)(::windows_core::Interface::as_raw(self), options).ok()
+        ::windows_core::vcall!(self.SetFontOptions(options)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPartFont, ::windows_core::IUnknown, IPartBase);
@@ -2988,34 +2988,34 @@ pub struct IPartFont2(::windows_core::IUnknown);
 impl IPartFont2 {
     pub unsafe fn GetUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.GetUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.GetUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStream(&self) -> ::windows_core::Result<IPrintReadStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.GetStream)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.GetStream(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPartCompression(&self) -> ::windows_core::Result<EXpsCompressionOptions> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.GetPartCompression)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.GetPartCompression(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPartCompression(&self, compression: EXpsCompressionOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.SetPartCompression)(::windows_core::Interface::as_raw(self), compression).ok()
+        ::windows_core::vcall!(self.base__.base__.SetPartCompression(compression)).ok()
     }
     pub unsafe fn GetFontProperties(&self, pcontenttype: *mut ::windows_core::BSTR, pfontoptions: *mut EXpsFontOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetFontProperties)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pcontenttype), pfontoptions).ok()
+        ::windows_core::vcall!(self.base__.GetFontProperties(::core::mem::transmute(pcontenttype), pfontoptions)).ok()
     }
     pub unsafe fn SetFontContent<P0>(&self, pcontenttype: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetFontContent)(::windows_core::Interface::as_raw(self), pcontenttype.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetFontContent(pcontenttype.into_param().abi())).ok()
     }
     pub unsafe fn SetFontOptions(&self, options: EXpsFontOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetFontOptions)(::windows_core::Interface::as_raw(self), options).ok()
+        ::windows_core::vcall!(self.base__.SetFontOptions(options)).ok()
     }
     pub unsafe fn GetFontRestriction(&self) -> ::windows_core::Result<EXpsFontRestriction> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFontRestriction)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFontRestriction(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPartFont2, ::windows_core::IUnknown, IPartBase, IPartFont);
@@ -3037,28 +3037,28 @@ pub struct IPartImage(::windows_core::IUnknown);
 impl IPartImage {
     pub unsafe fn GetUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStream(&self) -> ::windows_core::Result<IPrintReadStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetStream)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetStream(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPartCompression(&self) -> ::windows_core::Result<EXpsCompressionOptions> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetPartCompression)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetPartCompression(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPartCompression(&self, compression: EXpsCompressionOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetPartCompression)(::windows_core::Interface::as_raw(self), compression).ok()
+        ::windows_core::vcall!(self.base__.SetPartCompression(compression)).ok()
     }
     pub unsafe fn GetImageProperties(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetImageProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetImageProperties(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetImageContent<P0>(&self, pcontenttype: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetImageContent)(::windows_core::Interface::as_raw(self), pcontenttype.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetImageContent(pcontenttype.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPartImage, ::windows_core::IUnknown, IPartBase);
@@ -3081,18 +3081,18 @@ pub struct IPartPrintTicket(::windows_core::IUnknown);
 impl IPartPrintTicket {
     pub unsafe fn GetUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStream(&self) -> ::windows_core::Result<IPrintReadStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetStream)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetStream(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPartCompression(&self) -> ::windows_core::Result<EXpsCompressionOptions> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetPartCompression)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetPartCompression(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPartCompression(&self, compression: EXpsCompressionOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetPartCompression)(::windows_core::Interface::as_raw(self), compression).ok()
+        ::windows_core::vcall!(self.base__.SetPartCompression(compression)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPartPrintTicket, ::windows_core::IUnknown, IPartBase);
@@ -3113,18 +3113,18 @@ pub struct IPartResourceDictionary(::windows_core::IUnknown);
 impl IPartResourceDictionary {
     pub unsafe fn GetUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStream(&self) -> ::windows_core::Result<IPrintReadStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetStream)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetStream(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPartCompression(&self) -> ::windows_core::Result<EXpsCompressionOptions> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetPartCompression)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetPartCompression(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPartCompression(&self, compression: EXpsCompressionOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetPartCompression)(::windows_core::Interface::as_raw(self), compression).ok()
+        ::windows_core::vcall!(self.base__.SetPartCompression(compression)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPartResourceDictionary, ::windows_core::IUnknown, IPartBase);
@@ -3145,28 +3145,28 @@ pub struct IPartThumbnail(::windows_core::IUnknown);
 impl IPartThumbnail {
     pub unsafe fn GetUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetStream(&self) -> ::windows_core::Result<IPrintReadStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetStream)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetStream(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPartCompression(&self) -> ::windows_core::Result<EXpsCompressionOptions> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetPartCompression)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetPartCompression(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetPartCompression(&self, compression: EXpsCompressionOptions) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetPartCompression)(::windows_core::Interface::as_raw(self), compression).ok()
+        ::windows_core::vcall!(self.base__.SetPartCompression(compression)).ok()
     }
     pub unsafe fn GetThumbnailProperties(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetThumbnailProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetThumbnailProperties(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetThumbnailContent<P0>(&self, pcontenttype: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetThumbnailContent)(::windows_core::Interface::as_raw(self), pcontenttype.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetThumbnailContent(pcontenttype.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPartThumbnail, ::windows_core::IUnknown, IPartBase);
@@ -3188,10 +3188,10 @@ pub struct IPartThumbnail_Vtbl {
 pub struct IPrintAsyncCookie(::windows_core::IUnknown);
 impl IPrintAsyncCookie {
     pub unsafe fn FinishAsyncCall(&self, param0: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FinishAsyncCall)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.FinishAsyncCall(param0)).ok()
     }
     pub unsafe fn CancelAsyncCall(&self, param0: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CancelAsyncCall)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.CancelAsyncCall(param0)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintAsyncCookie, ::windows_core::IUnknown);
@@ -3213,13 +3213,13 @@ pub struct IPrintAsyncCookie_Vtbl {
 pub struct IPrintAsyncNewChannelCookie(::windows_core::IUnknown);
 impl IPrintAsyncNewChannelCookie {
     pub unsafe fn FinishAsyncCall(&self, param0: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.FinishAsyncCall)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.FinishAsyncCall(param0)).ok()
     }
     pub unsafe fn CancelAsyncCall(&self, param0: ::windows_core::HRESULT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.CancelAsyncCall)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.CancelAsyncCall(param0)).ok()
     }
     pub unsafe fn FinishAsyncCallWithData(&self, param0: *const ::core::option::Option<IPrintAsyncNotifyChannel>, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FinishAsyncCallWithData)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(param0), param1).ok()
+        ::windows_core::vcall!(self.FinishAsyncCallWithData(::core::mem::transmute(param0), param1)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintAsyncNewChannelCookie, ::windows_core::IUnknown, IPrintAsyncCookie);
@@ -3244,14 +3244,14 @@ impl IPrintAsyncNotify {
         P0: ::windows_core::IntoParam<IPrintAsyncNotifyCallback>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreatePrintAsyncNotifyChannel)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3, param4.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreatePrintAsyncNotifyChannel(param0, param1, param2, param3, param4.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn CreatePrintAsyncNotifyRegistration<P0>(&self, param0: *const ::windows_core::GUID, param1: PrintAsyncNotifyUserFilter, param2: PrintAsyncNotifyConversationStyle, param3: P0) -> ::windows_core::Result<IPrintAsyncNotifyRegistration>
     where
         P0: ::windows_core::IntoParam<IPrintAsyncNotifyCallback>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreatePrintAsyncNotifyRegistration)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreatePrintAsyncNotifyRegistration(param0, param1, param2, param3.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintAsyncNotify, ::windows_core::IUnknown);
@@ -3277,14 +3277,14 @@ impl IPrintAsyncNotifyCallback {
         P0: ::windows_core::IntoParam<IPrintAsyncNotifyChannel>,
         P1: ::windows_core::IntoParam<IPrintAsyncNotifyDataObject>,
     {
-        (::windows_core::Interface::vtable(self).OnEventNotify)(::windows_core::Interface::as_raw(self), pchannel.into_param().abi(), pdata.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnEventNotify(pchannel.into_param().abi(), pdata.into_param().abi())).ok()
     }
     pub unsafe fn ChannelClosed<P0, P1>(&self, pchannel: P0, pdata: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPrintAsyncNotifyChannel>,
         P1: ::windows_core::IntoParam<IPrintAsyncNotifyDataObject>,
     {
-        (::windows_core::Interface::vtable(self).ChannelClosed)(::windows_core::Interface::as_raw(self), pchannel.into_param().abi(), pdata.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ChannelClosed(pchannel.into_param().abi(), pdata.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintAsyncNotifyCallback, ::windows_core::IUnknown);
@@ -3309,13 +3309,13 @@ impl IPrintAsyncNotifyChannel {
     where
         P0: ::windows_core::IntoParam<IPrintAsyncNotifyDataObject>,
     {
-        (::windows_core::Interface::vtable(self).SendNotification)(::windows_core::Interface::as_raw(self), pdata.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SendNotification(pdata.into_param().abi())).ok()
     }
     pub unsafe fn CloseChannel<P0>(&self, pdata: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPrintAsyncNotifyDataObject>,
     {
-        (::windows_core::Interface::vtable(self).CloseChannel)(::windows_core::Interface::as_raw(self), pdata.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CloseChannel(pdata.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintAsyncNotifyChannel, ::windows_core::IUnknown);
@@ -3337,10 +3337,10 @@ pub struct IPrintAsyncNotifyChannel_Vtbl {
 pub struct IPrintAsyncNotifyDataObject(::windows_core::IUnknown);
 impl IPrintAsyncNotifyDataObject {
     pub unsafe fn AcquireData(&self, ppnotificationdata: ::core::option::Option<*mut *mut u8>, psize: ::core::option::Option<*mut u32>, ppschema: ::core::option::Option<*mut *mut ::windows_core::GUID>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).AcquireData)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(ppnotificationdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(psize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppschema.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.AcquireData(::core::mem::transmute(ppnotificationdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(psize.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(ppschema.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     pub unsafe fn ReleaseData(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ReleaseData)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ReleaseData()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintAsyncNotifyDataObject, ::windows_core::IUnknown);
@@ -3362,10 +3362,10 @@ pub struct IPrintAsyncNotifyDataObject_Vtbl {
 pub struct IPrintAsyncNotifyRegistration(::windows_core::IUnknown);
 impl IPrintAsyncNotifyRegistration {
     pub unsafe fn RegisterForNotifications(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RegisterForNotifications)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.RegisterForNotifications()).ok()
     }
     pub unsafe fn UnregisterForNotifications(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UnregisterForNotifications)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.UnregisterForNotifications()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintAsyncNotifyRegistration, ::windows_core::IUnknown);
@@ -3388,19 +3388,19 @@ pub struct IPrintAsyncNotifyServerReferral(::windows_core::IUnknown);
 impl IPrintAsyncNotifyServerReferral {
     pub unsafe fn GetServerReferral(&self) -> ::windows_core::Result<::windows_core::PWSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetServerReferral)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetServerReferral(&mut result__)).from_abi(result__)
     }
     pub unsafe fn AsyncGetServerReferral<P0>(&self, param0: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IAsyncGetSrvReferralCookie>,
     {
-        (::windows_core::Interface::vtable(self).AsyncGetServerReferral)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AsyncGetServerReferral(param0.into_param().abi())).ok()
     }
     pub unsafe fn SetServerReferral<P0>(&self, prmtserverreferral: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetServerReferral)(::windows_core::Interface::as_raw(self), prmtserverreferral.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetServerReferral(prmtserverreferral.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintAsyncNotifyServerReferral, ::windows_core::IUnknown);
@@ -3423,16 +3423,16 @@ pub struct IPrintAsyncNotifyServerReferral_Vtbl {
 pub struct IPrintBidiAsyncNotifyRegistration(::windows_core::IUnknown);
 impl IPrintBidiAsyncNotifyRegistration {
     pub unsafe fn RegisterForNotifications(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.RegisterForNotifications)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.RegisterForNotifications()).ok()
     }
     pub unsafe fn UnregisterForNotifications(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.UnregisterForNotifications)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.UnregisterForNotifications()).ok()
     }
     pub unsafe fn AsyncGetNewChannel<P0>(&self, param0: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPrintAsyncNewChannelCookie>,
     {
-        (::windows_core::Interface::vtable(self).AsyncGetNewChannel)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AsyncGetNewChannel(param0.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintBidiAsyncNotifyRegistration, ::windows_core::IUnknown, IPrintAsyncNotifyRegistration);
@@ -3456,7 +3456,7 @@ impl IPrintClassObjectFactory {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetPrintClassObject)(::windows_core::Interface::as_raw(self), pszprintername.into_param().abi(), riid, ppnewobject).ok()
+        ::windows_core::vcall!(self.GetPrintClassObject(pszprintername.into_param().abi(), riid, ppnewobject)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintClassObjectFactory, ::windows_core::IUnknown);
@@ -3483,7 +3483,7 @@ impl IPrintCoreHelper {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetOption)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturerequested.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetOption(::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturerequested.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3491,7 +3491,7 @@ impl IPrintCoreHelper {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetOptions)(::windows_core::Interface::as_raw(self), pdevmode, cbsize, bresolveconflicts.into_param().abi(), pfopairs, cpairs, pcpairswritten, pdwresult).ok()
+        ::windows_core::vcall!(self.SetOptions(pdevmode, cbsize, bresolveconflicts.into_param().abi(), pfopairs, cpairs, pcpairswritten, pdwresult)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3499,7 +3499,7 @@ impl IPrintCoreHelper {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumConstrainedOptions)(::windows_core::Interface::as_raw(self), pdevmode, cbsize, pszfeaturekeyword.into_param().abi(), pconstrainedoptionlist, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.EnumConstrainedOptions(pdevmode, cbsize, pszfeaturekeyword.into_param().abi(), pconstrainedoptionlist, pdwnumoptions)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3508,35 +3508,35 @@ impl IPrintCoreHelper {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).WhyConstrained)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), ppfoconstraints, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.WhyConstrained(::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), ppfoconstraints, pdwnumoptions)).ok()
     }
     pub unsafe fn EnumFeatures(&self, pfeaturelist: *mut *mut *mut ::windows_core::PCSTR, pdwnumfeatures: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumFeatures)(::windows_core::Interface::as_raw(self), pfeaturelist, pdwnumfeatures).ok()
+        ::windows_core::vcall!(self.EnumFeatures(pfeaturelist, pdwnumfeatures)).ok()
     }
     pub unsafe fn EnumOptions<P0>(&self, pszfeaturekeyword: P0, poptionlist: *mut *mut *mut ::windows_core::PCSTR, pdwnumoptions: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumOptions)(::windows_core::Interface::as_raw(self), pszfeaturekeyword.into_param().abi(), poptionlist, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.EnumOptions(pszfeaturekeyword.into_param().abi(), poptionlist, pdwnumoptions)).ok()
     }
     pub unsafe fn GetFontSubstitution<P0>(&self, psztruetypefontname: P0, ppszdevfontname: *const ::windows_core::PCWSTR) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetFontSubstitution)(::windows_core::Interface::as_raw(self), psztruetypefontname.into_param().abi(), ppszdevfontname).ok()
+        ::windows_core::vcall!(self.GetFontSubstitution(psztruetypefontname.into_param().abi(), ppszdevfontname)).ok()
     }
     pub unsafe fn SetFontSubstitution<P0, P1>(&self, psztruetypefontname: P0, pszdevfontname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetFontSubstitution)(::windows_core::Interface::as_raw(self), psztruetypefontname.into_param().abi(), pszdevfontname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetFontSubstitution(psztruetypefontname.into_param().abi(), pszdevfontname.into_param().abi())).ok()
     }
     pub unsafe fn CreateInstanceOfMSXMLObject<P0>(&self, rclsid: *const ::windows_core::GUID, punkouter: P0, dwclscontext: u32, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateInstanceOfMSXMLObject)(::windows_core::Interface::as_raw(self), rclsid, punkouter.into_param().abi(), dwclscontext, riid, ppv).ok()
+        ::windows_core::vcall!(self.CreateInstanceOfMSXMLObject(rclsid, punkouter.into_param().abi(), dwclscontext, riid, ppv)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintCoreHelper, ::windows_core::IUnknown);
@@ -3583,7 +3583,7 @@ impl IPrintCoreHelperPS {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetOption)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturerequested.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetOption(::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturerequested.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3591,7 +3591,7 @@ impl IPrintCoreHelperPS {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetOptions)(::windows_core::Interface::as_raw(self), pdevmode, cbsize, bresolveconflicts.into_param().abi(), pfopairs, cpairs, pcpairswritten, pdwresult).ok()
+        ::windows_core::vcall!(self.base__.SetOptions(pdevmode, cbsize, bresolveconflicts.into_param().abi(), pfopairs, cpairs, pcpairswritten, pdwresult)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3599,7 +3599,7 @@ impl IPrintCoreHelperPS {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.EnumConstrainedOptions)(::windows_core::Interface::as_raw(self), pdevmode, cbsize, pszfeaturekeyword.into_param().abi(), pconstrainedoptionlist, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.base__.EnumConstrainedOptions(pdevmode, cbsize, pszfeaturekeyword.into_param().abi(), pconstrainedoptionlist, pdwnumoptions)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3608,48 +3608,48 @@ impl IPrintCoreHelperPS {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.WhyConstrained)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), ppfoconstraints, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.base__.WhyConstrained(::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), ppfoconstraints, pdwnumoptions)).ok()
     }
     pub unsafe fn EnumFeatures(&self, pfeaturelist: *mut *mut *mut ::windows_core::PCSTR, pdwnumfeatures: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.EnumFeatures)(::windows_core::Interface::as_raw(self), pfeaturelist, pdwnumfeatures).ok()
+        ::windows_core::vcall!(self.base__.EnumFeatures(pfeaturelist, pdwnumfeatures)).ok()
     }
     pub unsafe fn EnumOptions<P0>(&self, pszfeaturekeyword: P0, poptionlist: *mut *mut *mut ::windows_core::PCSTR, pdwnumoptions: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.EnumOptions)(::windows_core::Interface::as_raw(self), pszfeaturekeyword.into_param().abi(), poptionlist, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.base__.EnumOptions(pszfeaturekeyword.into_param().abi(), poptionlist, pdwnumoptions)).ok()
     }
     pub unsafe fn GetFontSubstitution<P0>(&self, psztruetypefontname: P0, ppszdevfontname: *const ::windows_core::PCWSTR) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetFontSubstitution)(::windows_core::Interface::as_raw(self), psztruetypefontname.into_param().abi(), ppszdevfontname).ok()
+        ::windows_core::vcall!(self.base__.GetFontSubstitution(psztruetypefontname.into_param().abi(), ppszdevfontname)).ok()
     }
     pub unsafe fn SetFontSubstitution<P0, P1>(&self, psztruetypefontname: P0, pszdevfontname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetFontSubstitution)(::windows_core::Interface::as_raw(self), psztruetypefontname.into_param().abi(), pszdevfontname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetFontSubstitution(psztruetypefontname.into_param().abi(), pszdevfontname.into_param().abi())).ok()
     }
     pub unsafe fn CreateInstanceOfMSXMLObject<P0>(&self, rclsid: *const ::windows_core::GUID, punkouter: P0, dwclscontext: u32, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.CreateInstanceOfMSXMLObject)(::windows_core::Interface::as_raw(self), rclsid, punkouter.into_param().abi(), dwclscontext, riid, ppv).ok()
+        ::windows_core::vcall!(self.base__.CreateInstanceOfMSXMLObject(rclsid, punkouter.into_param().abi(), dwclscontext, riid, ppv)).ok()
     }
     pub unsafe fn GetGlobalAttribute<P0>(&self, pszattribute: P0, pdwdatatype: *mut u32, ppbdata: *mut *mut u8, pcbsize: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetGlobalAttribute)(::windows_core::Interface::as_raw(self), pszattribute.into_param().abi(), pdwdatatype, ppbdata, pcbsize).ok()
+        ::windows_core::vcall!(self.GetGlobalAttribute(pszattribute.into_param().abi(), pdwdatatype, ppbdata, pcbsize)).ok()
     }
     pub unsafe fn GetFeatureAttribute<P0, P1>(&self, pszfeaturekeyword: P0, pszattribute: P1, pdwdatatype: *mut u32, ppbdata: *mut *mut u8, pcbsize: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetFeatureAttribute)(::windows_core::Interface::as_raw(self), pszfeaturekeyword.into_param().abi(), pszattribute.into_param().abi(), pdwdatatype, ppbdata, pcbsize).ok()
+        ::windows_core::vcall!(self.GetFeatureAttribute(pszfeaturekeyword.into_param().abi(), pszattribute.into_param().abi(), pdwdatatype, ppbdata, pcbsize)).ok()
     }
     pub unsafe fn GetOptionAttribute<P0, P1, P2>(&self, pszfeaturekeyword: P0, pszoptionkeyword: P1, pszattribute: P2, pdwdatatype: *mut u32, ppbdata: *mut *mut u8, pcbsize: *mut u32) -> ::windows_core::Result<()>
     where
@@ -3657,7 +3657,7 @@ impl IPrintCoreHelperPS {
         P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetOptionAttribute)(::windows_core::Interface::as_raw(self), pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), pszattribute.into_param().abi(), pdwdatatype, ppbdata, pcbsize).ok()
+        ::windows_core::vcall!(self.GetOptionAttribute(pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), pszattribute.into_param().abi(), pdwdatatype, ppbdata, pcbsize)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintCoreHelperPS, ::windows_core::IUnknown, IPrintCoreHelper);
@@ -3686,7 +3686,7 @@ impl IPrintCoreHelperUni {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetOption)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturerequested.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetOption(::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturerequested.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3694,7 +3694,7 @@ impl IPrintCoreHelperUni {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetOptions)(::windows_core::Interface::as_raw(self), pdevmode, cbsize, bresolveconflicts.into_param().abi(), pfopairs, cpairs, pcpairswritten, pdwresult).ok()
+        ::windows_core::vcall!(self.base__.SetOptions(pdevmode, cbsize, bresolveconflicts.into_param().abi(), pfopairs, cpairs, pcpairswritten, pdwresult)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3702,7 +3702,7 @@ impl IPrintCoreHelperUni {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.EnumConstrainedOptions)(::windows_core::Interface::as_raw(self), pdevmode, cbsize, pszfeaturekeyword.into_param().abi(), pconstrainedoptionlist, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.base__.EnumConstrainedOptions(pdevmode, cbsize, pszfeaturekeyword.into_param().abi(), pconstrainedoptionlist, pdwnumoptions)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3711,46 +3711,46 @@ impl IPrintCoreHelperUni {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.WhyConstrained)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), ppfoconstraints, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.base__.WhyConstrained(::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), ppfoconstraints, pdwnumoptions)).ok()
     }
     pub unsafe fn EnumFeatures(&self, pfeaturelist: *mut *mut *mut ::windows_core::PCSTR, pdwnumfeatures: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.EnumFeatures)(::windows_core::Interface::as_raw(self), pfeaturelist, pdwnumfeatures).ok()
+        ::windows_core::vcall!(self.base__.EnumFeatures(pfeaturelist, pdwnumfeatures)).ok()
     }
     pub unsafe fn EnumOptions<P0>(&self, pszfeaturekeyword: P0, poptionlist: *mut *mut *mut ::windows_core::PCSTR, pdwnumoptions: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.EnumOptions)(::windows_core::Interface::as_raw(self), pszfeaturekeyword.into_param().abi(), poptionlist, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.base__.EnumOptions(pszfeaturekeyword.into_param().abi(), poptionlist, pdwnumoptions)).ok()
     }
     pub unsafe fn GetFontSubstitution<P0>(&self, psztruetypefontname: P0, ppszdevfontname: *const ::windows_core::PCWSTR) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetFontSubstitution)(::windows_core::Interface::as_raw(self), psztruetypefontname.into_param().abi(), ppszdevfontname).ok()
+        ::windows_core::vcall!(self.base__.GetFontSubstitution(psztruetypefontname.into_param().abi(), ppszdevfontname)).ok()
     }
     pub unsafe fn SetFontSubstitution<P0, P1>(&self, psztruetypefontname: P0, pszdevfontname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetFontSubstitution)(::windows_core::Interface::as_raw(self), psztruetypefontname.into_param().abi(), pszdevfontname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetFontSubstitution(psztruetypefontname.into_param().abi(), pszdevfontname.into_param().abi())).ok()
     }
     pub unsafe fn CreateInstanceOfMSXMLObject<P0>(&self, rclsid: *const ::windows_core::GUID, punkouter: P0, dwclscontext: u32, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.CreateInstanceOfMSXMLObject)(::windows_core::Interface::as_raw(self), rclsid, punkouter.into_param().abi(), dwclscontext, riid, ppv).ok()
+        ::windows_core::vcall!(self.base__.CreateInstanceOfMSXMLObject(rclsid, punkouter.into_param().abi(), dwclscontext, riid, ppv)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com"))]
     pub unsafe fn CreateGDLSnapshot(&self, pdevmode: *mut super::Gdi::DEVMODEA, cbsize: u32, dwflags: u32, ppsnapshotstream: *mut ::core::option::Option<super::super::System::Com::IStream>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CreateGDLSnapshot)(::windows_core::Interface::as_raw(self), pdevmode, cbsize, dwflags, ::core::mem::transmute(ppsnapshotstream)).ok()
+        ::windows_core::vcall!(self.CreateGDLSnapshot(pdevmode, cbsize, dwflags, ::core::mem::transmute(ppsnapshotstream))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn CreateDefaultGDLSnapshot(&self, dwflags: u32) -> ::windows_core::Result<super::super::System::Com::IStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateDefaultGDLSnapshot)(::windows_core::Interface::as_raw(self), dwflags, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateDefaultGDLSnapshot(dwflags, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintCoreHelperUni, ::windows_core::IUnknown, IPrintCoreHelper);
@@ -3784,7 +3784,7 @@ impl IPrintCoreHelperUni2 {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.GetOption)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturerequested.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.GetOption(::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturerequested.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3792,7 +3792,7 @@ impl IPrintCoreHelperUni2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.SetOptions)(::windows_core::Interface::as_raw(self), pdevmode, cbsize, bresolveconflicts.into_param().abi(), pfopairs, cpairs, pcpairswritten, pdwresult).ok()
+        ::windows_core::vcall!(self.base__.base__.SetOptions(pdevmode, cbsize, bresolveconflicts.into_param().abi(), pfopairs, cpairs, pcpairswritten, pdwresult)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3800,7 +3800,7 @@ impl IPrintCoreHelperUni2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.EnumConstrainedOptions)(::windows_core::Interface::as_raw(self), pdevmode, cbsize, pszfeaturekeyword.into_param().abi(), pconstrainedoptionlist, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.base__.base__.EnumConstrainedOptions(pdevmode, cbsize, pszfeaturekeyword.into_param().abi(), pconstrainedoptionlist, pdwnumoptions)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3809,46 +3809,46 @@ impl IPrintCoreHelperUni2 {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.WhyConstrained)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), ppfoconstraints, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.base__.base__.WhyConstrained(::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), ppfoconstraints, pdwnumoptions)).ok()
     }
     pub unsafe fn EnumFeatures(&self, pfeaturelist: *mut *mut *mut ::windows_core::PCSTR, pdwnumfeatures: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.EnumFeatures)(::windows_core::Interface::as_raw(self), pfeaturelist, pdwnumfeatures).ok()
+        ::windows_core::vcall!(self.base__.base__.EnumFeatures(pfeaturelist, pdwnumfeatures)).ok()
     }
     pub unsafe fn EnumOptions<P0>(&self, pszfeaturekeyword: P0, poptionlist: *mut *mut *mut ::windows_core::PCSTR, pdwnumoptions: *mut u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.EnumOptions)(::windows_core::Interface::as_raw(self), pszfeaturekeyword.into_param().abi(), poptionlist, pdwnumoptions).ok()
+        ::windows_core::vcall!(self.base__.base__.EnumOptions(pszfeaturekeyword.into_param().abi(), poptionlist, pdwnumoptions)).ok()
     }
     pub unsafe fn GetFontSubstitution<P0>(&self, psztruetypefontname: P0, ppszdevfontname: *const ::windows_core::PCWSTR) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.GetFontSubstitution)(::windows_core::Interface::as_raw(self), psztruetypefontname.into_param().abi(), ppszdevfontname).ok()
+        ::windows_core::vcall!(self.base__.base__.GetFontSubstitution(psztruetypefontname.into_param().abi(), ppszdevfontname)).ok()
     }
     pub unsafe fn SetFontSubstitution<P0, P1>(&self, psztruetypefontname: P0, pszdevfontname: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.SetFontSubstitution)(::windows_core::Interface::as_raw(self), psztruetypefontname.into_param().abi(), pszdevfontname.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.SetFontSubstitution(psztruetypefontname.into_param().abi(), pszdevfontname.into_param().abi())).ok()
     }
     pub unsafe fn CreateInstanceOfMSXMLObject<P0>(&self, rclsid: *const ::windows_core::GUID, punkouter: P0, dwclscontext: u32, riid: *const ::windows_core::GUID, ppv: *mut *mut ::core::ffi::c_void) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.CreateInstanceOfMSXMLObject)(::windows_core::Interface::as_raw(self), rclsid, punkouter.into_param().abi(), dwclscontext, riid, ppv).ok()
+        ::windows_core::vcall!(self.base__.base__.CreateInstanceOfMSXMLObject(rclsid, punkouter.into_param().abi(), dwclscontext, riid, ppv)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com"))]
     pub unsafe fn CreateGDLSnapshot(&self, pdevmode: *mut super::Gdi::DEVMODEA, cbsize: u32, dwflags: u32, ppsnapshotstream: *mut ::core::option::Option<super::super::System::Com::IStream>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.CreateGDLSnapshot)(::windows_core::Interface::as_raw(self), pdevmode, cbsize, dwflags, ::core::mem::transmute(ppsnapshotstream)).ok()
+        ::windows_core::vcall!(self.base__.CreateGDLSnapshot(pdevmode, cbsize, dwflags, ::core::mem::transmute(ppsnapshotstream))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn CreateDefaultGDLSnapshot(&self, dwflags: u32) -> ::windows_core::Result<super::super::System::Com::IStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.CreateDefaultGDLSnapshot)(::windows_core::Interface::as_raw(self), dwflags, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.CreateDefaultGDLSnapshot(dwflags, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -3856,7 +3856,7 @@ impl IPrintCoreHelperUni2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetNamedCommand)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszcommandname.into_param().abi(), ppcommandbytes, pcbcommandsize).ok()
+        ::windows_core::vcall!(self.GetNamedCommand(::core::mem::transmute(pdevmode.unwrap_or(::std::ptr::null())), cbsize, pszcommandname.into_param().abi(), ppcommandbytes, pcbcommandsize)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintCoreHelperUni2, ::windows_core::IUnknown, IPrintCoreHelper, IPrintCoreHelperUni);
@@ -3883,7 +3883,7 @@ impl IPrintCoreUI2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.DrvGetDriverSetting)(::windows_core::Interface::as_raw(self), pci, feature.into_param().abi(), poutput, cbsize, pcbneeded, pdwoptionsreturned).ok()
+        ::windows_core::vcall!(self.base__.DrvGetDriverSetting(pci, feature.into_param().abi(), poutput, cbsize, pcbneeded, pdwoptionsreturned)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3893,21 +3893,21 @@ impl IPrintCoreUI2 {
         P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.DrvUpgradeRegistrySetting)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), pfeature.into_param().abi(), poption.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.DrvUpgradeRegistrySetting(hprinter.into_param().abi(), pfeature.into_param().abi(), poption.into_param().abi())).ok()
     }
     pub unsafe fn DrvUpdateUISetting(&self, pci: *mut ::core::ffi::c_void, poptitem: *mut ::core::ffi::c_void, dwpreviousselection: u32, dwmode: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.DrvUpdateUISetting)(::windows_core::Interface::as_raw(self), pci, poptitem, dwpreviousselection, dwmode).ok()
+        ::windows_core::vcall!(self.base__.DrvUpdateUISetting(pci, poptitem, dwpreviousselection, dwmode)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetOptions(&self, poemuiobj: *const OEMUIOBJ, dwflags: u32, pmszfeaturesrequested: ::core::option::Option<&[u8]>, pmszfeatureoptionbuf: ::core::option::Option<&mut [u8]>, pcbneeded: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetOptions)(::windows_core::Interface::as_raw(self), poemuiobj, dwflags, ::core::mem::transmute(pmszfeaturesrequested.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszfeaturesrequested.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), ::core::mem::transmute(pmszfeatureoptionbuf.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszfeatureoptionbuf.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded).ok()
+        ::windows_core::vcall!(self.GetOptions(poemuiobj, dwflags, ::core::mem::transmute(pmszfeaturesrequested.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszfeaturesrequested.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), ::core::mem::transmute(pmszfeatureoptionbuf.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszfeatureoptionbuf.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn SetOptions(&self, poemuiobj: *const OEMUIOBJ, dwflags: u32, pmszfeatureoptionbuf: &[u8]) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SetOptions)(::windows_core::Interface::as_raw(self), poemuiobj, dwflags, ::core::mem::transmute(pmszfeatureoptionbuf.as_ptr()), pmszfeatureoptionbuf.len().try_into().unwrap(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SetOptions(poemuiobj, dwflags, ::core::mem::transmute(pmszfeatureoptionbuf.as_ptr()), pmszfeatureoptionbuf.len().try_into().unwrap(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3915,7 +3915,7 @@ impl IPrintCoreUI2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumConstrainedOptions)(::windows_core::Interface::as_raw(self), poemuiobj, dwflags, pszfeaturekeyword.into_param().abi(), ::core::mem::transmute(pmszconstrainedoptionlist.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszconstrainedoptionlist.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded).ok()
+        ::windows_core::vcall!(self.EnumConstrainedOptions(poemuiobj, dwflags, pszfeaturekeyword.into_param().abi(), ::core::mem::transmute(pmszconstrainedoptionlist.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszconstrainedoptionlist.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3924,7 +3924,7 @@ impl IPrintCoreUI2 {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).WhyConstrained)(::windows_core::Interface::as_raw(self), poemuiobj, dwflags, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), ::core::mem::transmute(pmszreasonlist.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszreasonlist.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded).ok()
+        ::windows_core::vcall!(self.WhyConstrained(poemuiobj, dwflags, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), ::core::mem::transmute(pmszreasonlist.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszreasonlist.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3932,7 +3932,7 @@ impl IPrintCoreUI2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetGlobalAttribute)(::windows_core::Interface::as_raw(self), poemuiobj, dwflags, pszattribute.into_param().abi(), pdwdatatype, ::core::mem::transmute(pbdata.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pbdata.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded).ok()
+        ::windows_core::vcall!(self.GetGlobalAttribute(poemuiobj, dwflags, pszattribute.into_param().abi(), pdwdatatype, ::core::mem::transmute(pbdata.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pbdata.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3941,7 +3941,7 @@ impl IPrintCoreUI2 {
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetFeatureAttribute)(::windows_core::Interface::as_raw(self), poemuiobj, dwflags, pszfeaturekeyword.into_param().abi(), pszattribute.into_param().abi(), pdwdatatype, ::core::mem::transmute(pbdata.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pbdata.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded).ok()
+        ::windows_core::vcall!(self.GetFeatureAttribute(poemuiobj, dwflags, pszfeaturekeyword.into_param().abi(), pszattribute.into_param().abi(), pdwdatatype, ::core::mem::transmute(pbdata.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pbdata.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3951,12 +3951,12 @@ impl IPrintCoreUI2 {
         P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetOptionAttribute)(::windows_core::Interface::as_raw(self), poemuiobj, dwflags, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), pszattribute.into_param().abi(), pdwdatatype, ::core::mem::transmute(pbdata.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pbdata.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded).ok()
+        ::windows_core::vcall!(self.GetOptionAttribute(poemuiobj, dwflags, pszfeaturekeyword.into_param().abi(), pszoptionkeyword.into_param().abi(), pszattribute.into_param().abi(), pdwdatatype, ::core::mem::transmute(pbdata.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pbdata.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumFeatures(&self, poemuiobj: *const OEMUIOBJ, dwflags: u32, pmszfeaturelist: ::core::option::Option<&mut [u8]>, pcbneeded: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumFeatures)(::windows_core::Interface::as_raw(self), poemuiobj, dwflags, ::core::mem::transmute(pmszfeaturelist.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszfeaturelist.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded).ok()
+        ::windows_core::vcall!(self.EnumFeatures(poemuiobj, dwflags, ::core::mem::transmute(pmszfeaturelist.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszfeaturelist.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3964,7 +3964,7 @@ impl IPrintCoreUI2 {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumOptions)(::windows_core::Interface::as_raw(self), poemuiobj, dwflags, pszfeaturekeyword.into_param().abi(), ::core::mem::transmute(pmszoptionlist.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszoptionlist.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded).ok()
+        ::windows_core::vcall!(self.EnumOptions(poemuiobj, dwflags, pszfeaturekeyword.into_param().abi(), ::core::mem::transmute(pmszoptionlist.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pmszoptionlist.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3972,7 +3972,7 @@ impl IPrintCoreUI2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).QuerySimulationSupport)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), dwlevel, ::core::mem::transmute(pcaps.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pcaps.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded).ok()
+        ::windows_core::vcall!(self.QuerySimulationSupport(hprinter.into_param().abi(), dwlevel, ::core::mem::transmute(pcaps.as_deref().map_or(::core::ptr::null(), |slice| slice.as_ptr())), pcaps.as_deref().map_or(0, |slice| slice.len().try_into().unwrap()), pcbneeded)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintCoreUI2, ::windows_core::IUnknown, IPrintOemDriverUI);
@@ -4033,30 +4033,30 @@ pub struct IPrintJob(::windows_core::IUnknown);
 impl IPrintJob {
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Id(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Id)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Id(&mut result__)).from_abi(result__)
     }
     pub unsafe fn PrintedPages(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).PrintedPages)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.PrintedPages(&mut result__)).from_abi(result__)
     }
     pub unsafe fn TotalPages(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).TotalPages)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.TotalPages(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Status(&self) -> ::windows_core::Result<PrintJobStatus> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Status)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Status(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SubmissionTime(&self) -> ::windows_core::Result<f64> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SubmissionTime)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SubmissionTime(&mut result__)).from_abi(result__)
     }
     pub unsafe fn RequestCancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RequestCancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.RequestCancel()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintJob, ::windows_core::IUnknown);
@@ -4087,15 +4087,15 @@ pub struct IPrintJobCollection(::windows_core::IUnknown);
 impl IPrintJobCollection {
     pub unsafe fn Count(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetAt(&self, ulindex: u32) -> ::windows_core::Result<IPrintJob> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetAt)(::windows_core::Interface::as_raw(self), ulindex, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetAt(ulindex, &mut result__)).from_abi(result__)
     }
     pub unsafe fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self)._NewEnum)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self._NewEnum(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4122,12 +4122,12 @@ pub struct IPrintJobCollection_Vtbl {
 pub struct IPrintOemCommon(::windows_core::IUnknown);
 impl IPrintOemCommon {
     pub unsafe fn GetInfo(&self, dwmode: u32, pbuffer: *mut ::core::ffi::c_void, cbsize: u32, pcbneeded: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetInfo)(::windows_core::Interface::as_raw(self), dwmode, pbuffer, cbsize, pcbneeded).ok()
+        ::windows_core::vcall!(self.GetInfo(dwmode, pbuffer, cbsize, pcbneeded)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
     pub unsafe fn DevMode(&self, dwmode: u32, poemdmparam: *mut OEMDMPARAM) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DevMode)(::windows_core::Interface::as_raw(self), dwmode, poemdmparam).ok()
+        ::windows_core::vcall!(self.DevMode(dwmode, poemdmparam)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintOemCommon, ::windows_core::IUnknown);
@@ -4155,7 +4155,7 @@ impl IPrintOemDriverUI {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).DrvGetDriverSetting)(::windows_core::Interface::as_raw(self), pci, feature.into_param().abi(), poutput, cbsize, pcbneeded, pdwoptionsreturned).ok()
+        ::windows_core::vcall!(self.DrvGetDriverSetting(pci, feature.into_param().abi(), poutput, cbsize, pcbneeded, pdwoptionsreturned)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4165,10 +4165,10 @@ impl IPrintOemDriverUI {
         P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).DrvUpgradeRegistrySetting)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), pfeature.into_param().abi(), poption.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DrvUpgradeRegistrySetting(hprinter.into_param().abi(), pfeature.into_param().abi(), poption.into_param().abi())).ok()
     }
     pub unsafe fn DrvUpdateUISetting(&self, pci: *mut ::core::ffi::c_void, poptitem: *mut ::core::ffi::c_void, dwpreviousselection: u32, dwmode: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DrvUpdateUISetting)(::windows_core::Interface::as_raw(self), pci, poptitem, dwpreviousselection, dwmode).ok()
+        ::windows_core::vcall!(self.DrvUpdateUISetting(pci, poptitem, dwpreviousselection, dwmode)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintOemDriverUI, ::windows_core::IUnknown);
@@ -4194,23 +4194,23 @@ pub struct IPrintOemDriverUI_Vtbl {
 pub struct IPrintOemUI(::windows_core::IUnknown);
 impl IPrintOemUI {
     pub unsafe fn GetInfo(&self, dwmode: u32, pbuffer: *mut ::core::ffi::c_void, cbsize: u32, pcbneeded: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetInfo)(::windows_core::Interface::as_raw(self), dwmode, pbuffer, cbsize, pcbneeded).ok()
+        ::windows_core::vcall!(self.base__.GetInfo(dwmode, pbuffer, cbsize, pcbneeded)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
     pub unsafe fn DevMode(&self, dwmode: u32, poemdmparam: *mut OEMDMPARAM) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.DevMode)(::windows_core::Interface::as_raw(self), dwmode, poemdmparam).ok()
+        ::windows_core::vcall!(self.base__.DevMode(dwmode, poemdmparam)).ok()
     }
     pub unsafe fn PublishDriverInterface<P0>(&self, piunknown: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).PublishDriverInterface)(::windows_core::Interface::as_raw(self), piunknown.into_param().abi()).ok()
+        ::windows_core::vcall!(self.PublishDriverInterface(piunknown.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn CommonUIProp(&self, dwmode: u32, poemcuipparam: *const OEMCUIPPARAM) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CommonUIProp)(::windows_core::Interface::as_raw(self), dwmode, poemcuipparam).ok()
+        ::windows_core::vcall!(self.CommonUIProp(dwmode, poemcuipparam)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4218,7 +4218,7 @@ impl IPrintOemUI {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).DocumentPropertySheets)(::windows_core::Interface::as_raw(self), ppsuiinfo, lparam.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DocumentPropertySheets(ppsuiinfo, lparam.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4226,12 +4226,12 @@ impl IPrintOemUI {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).DevicePropertySheets)(::windows_core::Interface::as_raw(self), ppsuiinfo, lparam.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DevicePropertySheets(ppsuiinfo, lparam.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
     pub unsafe fn DevQueryPrintEx(&self, poemuiobj: *const OEMUIOBJ, pdqpinfo: *const DEVQUERYPRINT_INFO, ppublicdm: *const super::Gdi::DEVMODEA, poemdm: *const ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DevQueryPrintEx)(::windows_core::Interface::as_raw(self), poemuiobj, pdqpinfo, ppublicdm, poemdm).ok()
+        ::windows_core::vcall!(self.DevQueryPrintEx(poemuiobj, pdqpinfo, ppublicdm, poemdm)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -4240,10 +4240,10 @@ impl IPrintOemUI {
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeviceCapabilitiesA)(::windows_core::Interface::as_raw(self), poemuiobj, hprinter.into_param().abi(), pdevicename.into_param().abi(), wcapability, poutput, ppublicdm, poemdm, dwold, dwresult).ok()
+        ::windows_core::vcall!(self.DeviceCapabilitiesA(poemuiobj, hprinter.into_param().abi(), pdevicename.into_param().abi(), wcapability, poutput, ppublicdm, poemdm, dwold, dwresult)).ok()
     }
     pub unsafe fn UpgradePrinter(&self, dwlevel: u32, pdriverupgradeinfo: *const u8) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).UpgradePrinter)(::windows_core::Interface::as_raw(self), dwlevel, pdriverupgradeinfo).ok()
+        ::windows_core::vcall!(self.UpgradePrinter(dwlevel, pdriverupgradeinfo)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4252,7 +4252,7 @@ impl IPrintOemUI {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).PrinterEvent)(::windows_core::Interface::as_raw(self), pprintername.into_param().abi(), idriverevent, dwflags, lparam.into_param().abi()).ok()
+        ::windows_core::vcall!(self.PrinterEvent(pprintername.into_param().abi(), idriverevent, dwflags, lparam.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4260,7 +4260,7 @@ impl IPrintOemUI {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).DriverEvent)(::windows_core::Interface::as_raw(self), dwdriverevent, dwlevel, pdriverinfo, lparam.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DriverEvent(dwdriverevent, dwlevel, pdriverinfo, lparam.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -4268,7 +4268,7 @@ impl IPrintOemUI {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).QueryColorProfile)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), poemuiobj, ppublicdm, poemdm, ulquerymode, pvprofiledata, pcbprofiledata, pflprofiledata).ok()
+        ::windows_core::vcall!(self.QueryColorProfile(hprinter.into_param().abi(), poemuiobj, ppublicdm, poemdm, ulquerymode, pvprofiledata, pcbprofiledata, pflprofiledata)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4278,7 +4278,7 @@ impl IPrintOemUI {
         P1: ::windows_core::IntoParam<super::super::Foundation::WPARAM>,
         P2: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).FontInstallerDlgProc)(::windows_core::Interface::as_raw(self), hwnd.into_param().abi(), usmsg, wparam.into_param().abi(), lparam.into_param().abi()).ok()
+        ::windows_core::vcall!(self.FontInstallerDlgProc(hwnd.into_param().abi(), usmsg, wparam.into_param().abi(), lparam.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4288,7 +4288,7 @@ impl IPrintOemUI {
         P1: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).UpdateExternalFonts)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), hheap.into_param().abi(), pwstrcartridges.into_param().abi()).ok()
+        ::windows_core::vcall!(self.UpdateExternalFonts(hprinter.into_param().abi(), hheap.into_param().abi(), pwstrcartridges.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintOemUI, ::windows_core::IUnknown, IPrintOemCommon);
@@ -4350,23 +4350,23 @@ pub struct IPrintOemUI_Vtbl {
 pub struct IPrintOemUI2(::windows_core::IUnknown);
 impl IPrintOemUI2 {
     pub unsafe fn GetInfo(&self, dwmode: u32, pbuffer: *mut ::core::ffi::c_void, cbsize: u32, pcbneeded: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetInfo)(::windows_core::Interface::as_raw(self), dwmode, pbuffer, cbsize, pcbneeded).ok()
+        ::windows_core::vcall!(self.base__.base__.GetInfo(dwmode, pbuffer, cbsize, pcbneeded)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
     pub unsafe fn DevMode(&self, dwmode: u32, poemdmparam: *mut OEMDMPARAM) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.DevMode)(::windows_core::Interface::as_raw(self), dwmode, poemdmparam).ok()
+        ::windows_core::vcall!(self.base__.base__.DevMode(dwmode, poemdmparam)).ok()
     }
     pub unsafe fn PublishDriverInterface<P0>(&self, piunknown: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.PublishDriverInterface)(::windows_core::Interface::as_raw(self), piunknown.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.PublishDriverInterface(piunknown.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_UI_WindowsAndMessaging\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_UI_WindowsAndMessaging"))]
     pub unsafe fn CommonUIProp(&self, dwmode: u32, poemcuipparam: *const OEMCUIPPARAM) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.CommonUIProp)(::windows_core::Interface::as_raw(self), dwmode, poemcuipparam).ok()
+        ::windows_core::vcall!(self.base__.CommonUIProp(dwmode, poemcuipparam)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4374,7 +4374,7 @@ impl IPrintOemUI2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).base__.DocumentPropertySheets)(::windows_core::Interface::as_raw(self), ppsuiinfo, lparam.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.DocumentPropertySheets(ppsuiinfo, lparam.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4382,12 +4382,12 @@ impl IPrintOemUI2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).base__.DevicePropertySheets)(::windows_core::Interface::as_raw(self), ppsuiinfo, lparam.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.DevicePropertySheets(ppsuiinfo, lparam.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
     pub unsafe fn DevQueryPrintEx(&self, poemuiobj: *const OEMUIOBJ, pdqpinfo: *const DEVQUERYPRINT_INFO, ppublicdm: *const super::Gdi::DEVMODEA, poemdm: *const ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.DevQueryPrintEx)(::windows_core::Interface::as_raw(self), poemuiobj, pdqpinfo, ppublicdm, poemdm).ok()
+        ::windows_core::vcall!(self.base__.DevQueryPrintEx(poemuiobj, pdqpinfo, ppublicdm, poemdm)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -4396,10 +4396,10 @@ impl IPrintOemUI2 {
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.DeviceCapabilitiesA)(::windows_core::Interface::as_raw(self), poemuiobj, hprinter.into_param().abi(), pdevicename.into_param().abi(), wcapability, poutput, ppublicdm, poemdm, dwold, dwresult).ok()
+        ::windows_core::vcall!(self.base__.DeviceCapabilitiesA(poemuiobj, hprinter.into_param().abi(), pdevicename.into_param().abi(), wcapability, poutput, ppublicdm, poemdm, dwold, dwresult)).ok()
     }
     pub unsafe fn UpgradePrinter(&self, dwlevel: u32, pdriverupgradeinfo: *const u8) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.UpgradePrinter)(::windows_core::Interface::as_raw(self), dwlevel, pdriverupgradeinfo).ok()
+        ::windows_core::vcall!(self.base__.UpgradePrinter(dwlevel, pdriverupgradeinfo)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4408,7 +4408,7 @@ impl IPrintOemUI2 {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).base__.PrinterEvent)(::windows_core::Interface::as_raw(self), pprintername.into_param().abi(), idriverevent, dwflags, lparam.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.PrinterEvent(pprintername.into_param().abi(), idriverevent, dwflags, lparam.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4416,7 +4416,7 @@ impl IPrintOemUI2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).base__.DriverEvent)(::windows_core::Interface::as_raw(self), dwdriverevent, dwlevel, pdriverinfo, lparam.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.DriverEvent(dwdriverevent, dwlevel, pdriverinfo, lparam.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -4424,7 +4424,7 @@ impl IPrintOemUI2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).base__.QueryColorProfile)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), poemuiobj, ppublicdm, poemdm, ulquerymode, pvprofiledata, pcbprofiledata, pflprofiledata).ok()
+        ::windows_core::vcall!(self.base__.QueryColorProfile(hprinter.into_param().abi(), poemuiobj, ppublicdm, poemdm, ulquerymode, pvprofiledata, pcbprofiledata, pflprofiledata)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4434,7 +4434,7 @@ impl IPrintOemUI2 {
         P1: ::windows_core::IntoParam<super::super::Foundation::WPARAM>,
         P2: ::windows_core::IntoParam<super::super::Foundation::LPARAM>,
     {
-        (::windows_core::Interface::vtable(self).base__.FontInstallerDlgProc)(::windows_core::Interface::as_raw(self), hwnd.into_param().abi(), usmsg, wparam.into_param().abi(), lparam.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.FontInstallerDlgProc(hwnd.into_param().abi(), usmsg, wparam.into_param().abi(), lparam.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4444,7 +4444,7 @@ impl IPrintOemUI2 {
         P1: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.UpdateExternalFonts)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), hheap.into_param().abi(), pwstrcartridges.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.UpdateExternalFonts(hprinter.into_param().abi(), hheap.into_param().abi(), pwstrcartridges.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -4452,10 +4452,10 @@ impl IPrintOemUI2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).QueryJobAttributes)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), pdevmode, dwlevel, lpattributeinfo).ok()
+        ::windows_core::vcall!(self.QueryJobAttributes(hprinter.into_param().abi(), pdevmode, dwlevel, lpattributeinfo)).ok()
     }
     pub unsafe fn HideStandardUI(&self, dwmode: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).HideStandardUI)(::windows_core::Interface::as_raw(self), dwmode).ok()
+        ::windows_core::vcall!(self.HideStandardUI(dwmode)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -4464,7 +4464,7 @@ impl IPrintOemUI2 {
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
         P1: ::windows_core::IntoParam<super::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).DocumentEvent)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), hdc.into_param().abi(), iesc, cbin, pvin, cbout, pvout, piresult).ok()
+        ::windows_core::vcall!(self.DocumentEvent(hprinter.into_param().abi(), hdc.into_param().abi(), iesc, cbin, pvin, cbout, pvout, piresult)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintOemUI2, ::windows_core::IUnknown, IPrintOemCommon, IPrintOemUI);
@@ -4498,7 +4498,7 @@ impl IPrintOemUIMXDC {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).AdjustImageableArea)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), cbdevmode, pdevmode, cboemdm, poemdm, prclimageablearea).ok()
+        ::windows_core::vcall!(self.AdjustImageableArea(hprinter.into_param().abi(), cbdevmode, pdevmode, cboemdm, poemdm, prclimageablearea)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -4506,7 +4506,7 @@ impl IPrintOemUIMXDC {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).AdjustImageCompression)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), cbdevmode, pdevmode, cboemdm, poemdm, pcompressionmode).ok()
+        ::windows_core::vcall!(self.AdjustImageCompression(hprinter.into_param().abi(), cbdevmode, pdevmode, cboemdm, poemdm, pcompressionmode)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi"))]
@@ -4514,7 +4514,7 @@ impl IPrintOemUIMXDC {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).AdjustDPI)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), cbdevmode, pdevmode, cboemdm, poemdm, pdpi).ok()
+        ::windows_core::vcall!(self.AdjustDPI(hprinter.into_param().abi(), cbdevmode, pdevmode, cboemdm, poemdm, pdpi)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintOemUIMXDC, ::windows_core::IUnknown);
@@ -4551,13 +4551,13 @@ impl IPrintPipelineFilter {
         P1: ::windows_core::IntoParam<IPrintPipelinePropertyBag>,
         P2: ::windows_core::IntoParam<IPrintPipelineManagerControl>,
     {
-        (::windows_core::Interface::vtable(self).InitializeFilter)(::windows_core::Interface::as_raw(self), pinegotiation.into_param().abi(), pipropertybag.into_param().abi(), pipipelinecontrol.into_param().abi()).ok()
+        ::windows_core::vcall!(self.InitializeFilter(pinegotiation.into_param().abi(), pipropertybag.into_param().abi(), pipipelinecontrol.into_param().abi())).ok()
     }
     pub unsafe fn ShutdownOperation(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ShutdownOperation)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ShutdownOperation()).ok()
     }
     pub unsafe fn StartOperation(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).StartOperation)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.StartOperation()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintPipelineFilter, ::windows_core::IUnknown);
@@ -4585,10 +4585,10 @@ impl IPrintPipelineManagerControl {
     where
         P0: ::windows_core::IntoParam<IImgErrorInfo>,
     {
-        (::windows_core::Interface::vtable(self).RequestShutdown)(::windows_core::Interface::as_raw(self), hrreason, preason.into_param().abi()).ok()
+        ::windows_core::vcall!(self.RequestShutdown(hrreason, preason.into_param().abi())).ok()
     }
     pub unsafe fn FilterFinished(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FilterFinished)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.FilterFinished()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintPipelineManagerControl, ::windows_core::IUnknown);
@@ -4613,7 +4613,7 @@ pub struct IPrintPipelineManagerControl_Vtbl {
 pub struct IPrintPipelineProgressReport(::windows_core::IUnknown);
 impl IPrintPipelineProgressReport {
     pub unsafe fn ReportProgress(&self, update: EXpsJobConsumption) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ReportProgress)(::windows_core::Interface::as_raw(self), update).ok()
+        ::windows_core::vcall!(self.ReportProgress(update)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintPipelineProgressReport, ::windows_core::IUnknown);
@@ -4639,7 +4639,7 @@ impl IPrintPipelinePropertyBag {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).AddProperty)(::windows_core::Interface::as_raw(self), pszname.into_param().abi(), pvar).ok()
+        ::windows_core::vcall!(self.AddProperty(pszname.into_param().abi(), pvar)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -4648,7 +4648,7 @@ impl IPrintPipelinePropertyBag {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetProperty)(::windows_core::Interface::as_raw(self), pszname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetProperty(pszname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4656,7 +4656,7 @@ impl IPrintPipelinePropertyBag {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeleteProperty)(::windows_core::Interface::as_raw(self), pszname.into_param().abi())
+        ::windows_core::vcall!(self.DeleteProperty(pszname.into_param().abi()))
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintPipelinePropertyBag, ::windows_core::IUnknown);
@@ -4688,7 +4688,7 @@ pub struct IPrintPipelinePropertyBag_Vtbl {
 pub struct IPrintPreviewDxgiPackageTarget(::windows_core::IUnknown);
 impl IPrintPreviewDxgiPackageTarget {
     pub unsafe fn SetJobPageCount(&self, counttype: PageCountType, count: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetJobPageCount)(::windows_core::Interface::as_raw(self), counttype, count).ok()
+        ::windows_core::vcall!(self.SetJobPageCount(counttype, count)).ok()
     }
     #[doc = "Required features: `\"Win32_Graphics_Dxgi\"`"]
     #[cfg(feature = "Win32_Graphics_Dxgi")]
@@ -4696,10 +4696,10 @@ impl IPrintPreviewDxgiPackageTarget {
     where
         P0: ::windows_core::IntoParam<super::Dxgi::IDXGISurface>,
     {
-        (::windows_core::Interface::vtable(self).DrawPage)(::windows_core::Interface::as_raw(self), jobpagenumber, pageimage.into_param().abi(), dpix, dpiy).ok()
+        ::windows_core::vcall!(self.DrawPage(jobpagenumber, pageimage.into_param().abi(), dpix, dpiy)).ok()
     }
     pub unsafe fn InvalidatePreview(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).InvalidatePreview)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.InvalidatePreview()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintPreviewDxgiPackageTarget, ::windows_core::IUnknown);
@@ -4725,12 +4725,12 @@ pub struct IPrintPreviewDxgiPackageTarget_Vtbl {
 pub struct IPrintReadStream(::windows_core::IUnknown);
 impl IPrintReadStream {
     pub unsafe fn Seek(&self, dlibmove: i64, dworigin: u32, plibnewposition: ::core::option::Option<*mut u64>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Seek)(::windows_core::Interface::as_raw(self), dlibmove, dworigin, ::core::mem::transmute(plibnewposition.unwrap_or(::std::ptr::null_mut()))).ok()
+        ::windows_core::vcall!(self.Seek(dlibmove, dworigin, ::core::mem::transmute(plibnewposition.unwrap_or(::std::ptr::null_mut())))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn ReadBytes(&self, pvbuffer: *mut ::core::ffi::c_void, cbrequested: u32, pcbread: *mut u32, pbendoffile: *mut super::super::Foundation::BOOL) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ReadBytes)(::windows_core::Interface::as_raw(self), pvbuffer, cbrequested, pcbread, pbendoffile).ok()
+        ::windows_core::vcall!(self.ReadBytes(pvbuffer, cbrequested, pcbread, pbendoffile)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintReadStream, ::windows_core::IUnknown);
@@ -4756,7 +4756,7 @@ pub struct IPrintReadStreamFactory(::windows_core::IUnknown);
 impl IPrintReadStreamFactory {
     pub unsafe fn GetStream(&self) -> ::windows_core::Result<IPrintReadStream> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetStream)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetStream(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintReadStreamFactory, ::windows_core::IUnknown);
@@ -4780,10 +4780,10 @@ pub struct IPrintSchemaAsyncOperation(::windows_core::IUnknown);
 #[cfg(feature = "Win32_System_Com")]
 impl IPrintSchemaAsyncOperation {
     pub unsafe fn Start(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Start)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Start()).ok()
     }
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4817,7 +4817,7 @@ impl IPrintSchemaAsyncOperationEvent {
     where
         P0: ::windows_core::IntoParam<IPrintSchemaTicket>,
     {
-        (::windows_core::Interface::vtable(self).Completed)(::windows_core::Interface::as_raw(self), pticket.into_param().abi(), hroperation).ok()
+        ::windows_core::vcall!(self.Completed(pticket.into_param().abi(), hroperation)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4849,15 +4849,15 @@ pub struct IPrintSchemaCapabilities(::windows_core::IUnknown);
 impl IPrintSchemaCapabilities {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -4866,7 +4866,7 @@ impl IPrintSchemaCapabilities {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFeatureByKeyName)(::windows_core::Interface::as_raw(self), bstrkeyname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFeatureByKeyName(bstrkeyname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -4876,21 +4876,21 @@ impl IPrintSchemaCapabilities {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFeature)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFeature(bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn PageImageableSize(&self) -> ::windows_core::Result<IPrintSchemaPageImageableSize> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).PageImageableSize)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.PageImageableSize(&mut result__)).from_abi(result__)
     }
     pub unsafe fn JobCopiesAllDocumentsMinValue(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).JobCopiesAllDocumentsMinValue)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.JobCopiesAllDocumentsMinValue(&mut result__)).from_abi(result__)
     }
     pub unsafe fn JobCopiesAllDocumentsMaxValue(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).JobCopiesAllDocumentsMaxValue)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.JobCopiesAllDocumentsMaxValue(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -4899,7 +4899,7 @@ impl IPrintSchemaCapabilities {
         P0: ::windows_core::IntoParam<IPrintSchemaFeature>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetSelectedOptionInPrintTicket)(::windows_core::Interface::as_raw(self), pfeature.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetSelectedOptionInPrintTicket(pfeature.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -4908,7 +4908,7 @@ impl IPrintSchemaCapabilities {
         P0: ::windows_core::IntoParam<IPrintSchemaFeature>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetOptions)(::windows_core::Interface::as_raw(self), pfeature.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetOptions(pfeature.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4958,15 +4958,15 @@ pub struct IPrintSchemaCapabilities2(::windows_core::IUnknown);
 impl IPrintSchemaCapabilities2 {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -4975,7 +4975,7 @@ impl IPrintSchemaCapabilities2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetFeatureByKeyName)(::windows_core::Interface::as_raw(self), bstrkeyname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetFeatureByKeyName(bstrkeyname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -4985,21 +4985,21 @@ impl IPrintSchemaCapabilities2 {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetFeature)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetFeature(bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn PageImageableSize(&self) -> ::windows_core::Result<IPrintSchemaPageImageableSize> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.PageImageableSize)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.PageImageableSize(&mut result__)).from_abi(result__)
     }
     pub unsafe fn JobCopiesAllDocumentsMinValue(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.JobCopiesAllDocumentsMinValue)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.JobCopiesAllDocumentsMinValue(&mut result__)).from_abi(result__)
     }
     pub unsafe fn JobCopiesAllDocumentsMaxValue(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.JobCopiesAllDocumentsMaxValue)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.JobCopiesAllDocumentsMaxValue(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5008,7 +5008,7 @@ impl IPrintSchemaCapabilities2 {
         P0: ::windows_core::IntoParam<IPrintSchemaFeature>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetSelectedOptionInPrintTicket)(::windows_core::Interface::as_raw(self), pfeature.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetSelectedOptionInPrintTicket(pfeature.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5017,7 +5017,7 @@ impl IPrintSchemaCapabilities2 {
         P0: ::windows_core::IntoParam<IPrintSchemaFeature>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetOptions)(::windows_core::Interface::as_raw(self), pfeature.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetOptions(pfeature.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5027,7 +5027,7 @@ impl IPrintSchemaCapabilities2 {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetParameterDefinition)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetParameterDefinition(bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5059,19 +5059,19 @@ pub struct IPrintSchemaDisplayableElement(::windows_core::IUnknown);
 impl IPrintSchemaDisplayableElement {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DisplayName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DisplayName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DisplayName(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5100,15 +5100,15 @@ pub struct IPrintSchemaElement(::windows_core::IUnknown);
 impl IPrintSchemaElement {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.NamespaceUri(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5139,25 +5139,25 @@ pub struct IPrintSchemaFeature(::windows_core::IUnknown);
 impl IPrintSchemaFeature {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DisplayName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.DisplayName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.DisplayName(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn SelectedOption(&self) -> ::windows_core::Result<IPrintSchemaOption> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SelectedOption)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SelectedOption(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5165,11 +5165,11 @@ impl IPrintSchemaFeature {
     where
         P0: ::windows_core::IntoParam<IPrintSchemaOption>,
     {
-        (::windows_core::Interface::vtable(self).SetSelectedOption)(::windows_core::Interface::as_raw(self), poption.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetSelectedOption(poption.into_param().abi())).ok()
     }
     pub unsafe fn SelectionType(&self) -> ::windows_core::Result<PrintSchemaSelectionType> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SelectionType)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SelectionType(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5179,13 +5179,13 @@ impl IPrintSchemaFeature {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetOption)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetOption(bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn DisplayUI(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DisplayUI)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DisplayUI(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5230,29 +5230,29 @@ pub struct IPrintSchemaNUpOption(::windows_core::IUnknown);
 impl IPrintSchemaNUpOption {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DisplayName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.DisplayName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.DisplayName(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Selected(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Selected)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Selected(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Constrained(&self) -> ::windows_core::Result<PrintSchemaConstrainedSetting> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Constrained)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Constrained(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPropertyValue<P0, P1>(&self, bstrname: P0, bstrnamespaceuri: P1) -> ::windows_core::Result<::windows_core::IUnknown>
     where
@@ -5260,11 +5260,11 @@ impl IPrintSchemaNUpOption {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetPropertyValue)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetPropertyValue(bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn PagesPerSheet(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).PagesPerSheet)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.PagesPerSheet(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5293,29 +5293,29 @@ pub struct IPrintSchemaOption(::windows_core::IUnknown);
 impl IPrintSchemaOption {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DisplayName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.DisplayName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.DisplayName(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Selected(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Selected)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Selected(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Constrained(&self) -> ::windows_core::Result<PrintSchemaConstrainedSetting> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Constrained)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Constrained(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPropertyValue<P0, P1>(&self, bstrname: P0, bstrnamespaceuri: P1) -> ::windows_core::Result<::windows_core::IUnknown>
     where
@@ -5323,7 +5323,7 @@ impl IPrintSchemaOption {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPropertyValue)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPropertyValue(bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5357,17 +5357,17 @@ pub struct IPrintSchemaOptionCollection(::windows_core::IUnknown);
 impl IPrintSchemaOptionCollection {
     pub unsafe fn Count(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetAt(&self, ulindex: u32) -> ::windows_core::Result<IPrintSchemaOption> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetAt)(::windows_core::Interface::as_raw(self), ulindex, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetAt(ulindex, &mut result__)).from_abi(result__)
     }
     pub unsafe fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self)._NewEnum)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self._NewEnum(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5401,39 +5401,39 @@ pub struct IPrintSchemaPageImageableSize(::windows_core::IUnknown);
 impl IPrintSchemaPageImageableSize {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ImageableSizeWidthInMicrons(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ImageableSizeWidthInMicrons)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ImageableSizeWidthInMicrons(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ImageableSizeHeightInMicrons(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ImageableSizeHeightInMicrons)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ImageableSizeHeightInMicrons(&mut result__)).from_abi(result__)
     }
     pub unsafe fn OriginWidthInMicrons(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).OriginWidthInMicrons)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.OriginWidthInMicrons(&mut result__)).from_abi(result__)
     }
     pub unsafe fn OriginHeightInMicrons(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).OriginHeightInMicrons)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.OriginHeightInMicrons(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ExtentWidthInMicrons(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ExtentWidthInMicrons)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ExtentWidthInMicrons(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ExtentHeightInMicrons(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ExtentHeightInMicrons)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ExtentHeightInMicrons(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5467,29 +5467,29 @@ pub struct IPrintSchemaPageMediaSizeOption(::windows_core::IUnknown);
 impl IPrintSchemaPageMediaSizeOption {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DisplayName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.DisplayName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.DisplayName(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Selected(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Selected)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Selected(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Constrained(&self) -> ::windows_core::Result<PrintSchemaConstrainedSetting> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Constrained)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Constrained(&mut result__)).from_abi(result__)
     }
     pub unsafe fn GetPropertyValue<P0, P1>(&self, bstrname: P0, bstrnamespaceuri: P1) -> ::windows_core::Result<::windows_core::IUnknown>
     where
@@ -5497,15 +5497,15 @@ impl IPrintSchemaPageMediaSizeOption {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetPropertyValue)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetPropertyValue(bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn WidthInMicrons(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).WidthInMicrons)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.WidthInMicrons(&mut result__)).from_abi(result__)
     }
     pub unsafe fn HeightInMicrons(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).HeightInMicrons)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.HeightInMicrons(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5535,41 +5535,41 @@ pub struct IPrintSchemaParameterDefinition(::windows_core::IUnknown);
 impl IPrintSchemaParameterDefinition {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DisplayName(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.DisplayName)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.DisplayName(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn UserInputRequired(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).UserInputRequired)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.UserInputRequired(&mut result__)).from_abi(result__)
     }
     pub unsafe fn UnitType(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).UnitType)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.UnitType(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DataType(&self) -> ::windows_core::Result<PrintSchemaParameterDataType> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DataType)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DataType(&mut result__)).from_abi(result__)
     }
     pub unsafe fn RangeMin(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RangeMin)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RangeMin(&mut result__)).from_abi(result__)
     }
     pub unsafe fn RangeMax(&self) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RangeMax)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RangeMax(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5605,26 +5605,26 @@ pub struct IPrintSchemaParameterInitializer(::windows_core::IUnknown);
 impl IPrintSchemaParameterInitializer {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn Value(&self) -> ::windows_core::Result<super::super::System::Variant::VARIANT> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Value)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Value(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Com\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Com", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
     pub unsafe fn SetValue(&self, pvar: *const super::super::System::Variant::VARIANT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetValue)(::windows_core::Interface::as_raw(self), pvar).ok()
+        ::windows_core::vcall!(self.SetValue(pvar)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5660,15 +5660,15 @@ pub struct IPrintSchemaTicket(::windows_core::IUnknown);
 impl IPrintSchemaTicket {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5677,7 +5677,7 @@ impl IPrintSchemaTicket {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFeatureByKeyName)(::windows_core::Interface::as_raw(self), bstrkeyname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFeatureByKeyName(bstrkeyname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5687,13 +5687,13 @@ impl IPrintSchemaTicket {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetFeature)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetFeature(bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn ValidateAsync(&self) -> ::windows_core::Result<IPrintSchemaAsyncOperation> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ValidateAsync)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ValidateAsync(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5702,23 +5702,23 @@ impl IPrintSchemaTicket {
         P0: ::windows_core::IntoParam<IPrintSchemaTicket>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CommitAsync)(::windows_core::Interface::as_raw(self), pprintticketcommit.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CommitAsync(pprintticketcommit.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn NotifyXmlChanged(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).NotifyXmlChanged)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.NotifyXmlChanged()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetCapabilities(&self) -> ::windows_core::Result<IPrintSchemaCapabilities> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetCapabilities)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetCapabilities(&mut result__)).from_abi(result__)
     }
     pub unsafe fn JobCopiesAllDocuments(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).JobCopiesAllDocuments)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.JobCopiesAllDocuments(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetJobCopiesAllDocuments(&self, uljobcopiesalldocuments: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetJobCopiesAllDocuments)(::windows_core::Interface::as_raw(self), uljobcopiesalldocuments).ok()
+        ::windows_core::vcall!(self.SetJobCopiesAllDocuments(uljobcopiesalldocuments)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5769,15 +5769,15 @@ pub struct IPrintSchemaTicket2(::windows_core::IUnknown);
 impl IPrintSchemaTicket2 {
     pub unsafe fn XmlNode(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.XmlNode)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.XmlNode(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn NamespaceUri(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.base__.NamespaceUri)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.base__.NamespaceUri(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5786,7 +5786,7 @@ impl IPrintSchemaTicket2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetFeatureByKeyName)(::windows_core::Interface::as_raw(self), bstrkeyname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetFeatureByKeyName(bstrkeyname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5796,13 +5796,13 @@ impl IPrintSchemaTicket2 {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetFeature)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetFeature(bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn ValidateAsync(&self) -> ::windows_core::Result<IPrintSchemaAsyncOperation> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.ValidateAsync)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.ValidateAsync(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5811,23 +5811,23 @@ impl IPrintSchemaTicket2 {
         P0: ::windows_core::IntoParam<IPrintSchemaTicket>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.CommitAsync)(::windows_core::Interface::as_raw(self), pprintticketcommit.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.CommitAsync(pprintticketcommit.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn NotifyXmlChanged(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.NotifyXmlChanged)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.NotifyXmlChanged()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetCapabilities(&self) -> ::windows_core::Result<IPrintSchemaCapabilities> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetCapabilities)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetCapabilities(&mut result__)).from_abi(result__)
     }
     pub unsafe fn JobCopiesAllDocuments(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.JobCopiesAllDocuments)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.JobCopiesAllDocuments(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetJobCopiesAllDocuments(&self, uljobcopiesalldocuments: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetJobCopiesAllDocuments)(::windows_core::Interface::as_raw(self), uljobcopiesalldocuments).ok()
+        ::windows_core::vcall!(self.base__.SetJobCopiesAllDocuments(uljobcopiesalldocuments)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -5837,7 +5837,7 @@ impl IPrintSchemaTicket2 {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetParameterInitializer)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetParameterInitializer(bstrname.into_param().abi(), bstrnamespaceuri.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -5870,7 +5870,7 @@ impl IPrintTicketProvider {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).GetSupportedVersions)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), ppversions, cversions).ok()
+        ::windows_core::vcall!(self.GetSupportedVersions(hprinter.into_param().abi(), ppversions, cversions)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5878,10 +5878,10 @@ impl IPrintTicketProvider {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).BindPrinter)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), version, poptions, pdevmodeflags, cnamespaces, ppnamespaces).ok()
+        ::windows_core::vcall!(self.BindPrinter(hprinter.into_param().abi(), version, poptions, pdevmodeflags, cnamespaces, ppnamespaces)).ok()
     }
     pub unsafe fn QueryDeviceNamespace(&self, pdefaultnamespace: *mut ::windows_core::BSTR) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).QueryDeviceNamespace)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdefaultnamespace)).ok()
+        ::windows_core::vcall!(self.QueryDeviceNamespace(::core::mem::transmute(pdefaultnamespace))).ok()
     }
     #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com"))]
@@ -5889,7 +5889,7 @@ impl IPrintTicketProvider {
     where
         P0: ::windows_core::IntoParam<super::super::Data::Xml::MsXml::IXMLDOMDocument2>,
     {
-        (::windows_core::Interface::vtable(self).ConvertPrintTicketToDevMode)(::windows_core::Interface::as_raw(self), pprintticket.into_param().abi(), cbdevmodein, pdevmodein, pcbdevmodeout, ppdevmodeout).ok()
+        ::windows_core::vcall!(self.ConvertPrintTicketToDevMode(pprintticket.into_param().abi(), cbdevmodein, pdevmodein, pcbdevmodeout, ppdevmodeout)).ok()
     }
     #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com"))]
@@ -5897,7 +5897,7 @@ impl IPrintTicketProvider {
     where
         P0: ::windows_core::IntoParam<super::super::Data::Xml::MsXml::IXMLDOMDocument2>,
     {
-        (::windows_core::Interface::vtable(self).ConvertDevModeToPrintTicket)(::windows_core::Interface::as_raw(self), cbdevmode, pdevmode, pprintticket.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ConvertDevModeToPrintTicket(cbdevmode, pdevmode, pprintticket.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_System_Com"))]
@@ -5906,7 +5906,7 @@ impl IPrintTicketProvider {
         P0: ::windows_core::IntoParam<super::super::Data::Xml::MsXml::IXMLDOMDocument2>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPrintCapabilities)(::windows_core::Interface::as_raw(self), pprintticket.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPrintCapabilities(pprintticket.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_System_Com"))]
@@ -5914,7 +5914,7 @@ impl IPrintTicketProvider {
     where
         P0: ::windows_core::IntoParam<super::super::Data::Xml::MsXml::IXMLDOMDocument2>,
     {
-        (::windows_core::Interface::vtable(self).ValidatePrintTicket)(::windows_core::Interface::as_raw(self), pbaseticket.into_param().abi()).ok()
+        ::windows_core::vcall!(self.ValidatePrintTicket(pbaseticket.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintTicketProvider, ::windows_core::IUnknown);
@@ -5964,7 +5964,7 @@ impl IPrintTicketProvider2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).base__.GetSupportedVersions)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), ppversions, cversions).ok()
+        ::windows_core::vcall!(self.base__.GetSupportedVersions(hprinter.into_param().abi(), ppversions, cversions)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -5972,10 +5972,10 @@ impl IPrintTicketProvider2 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).base__.BindPrinter)(::windows_core::Interface::as_raw(self), hprinter.into_param().abi(), version, poptions, pdevmodeflags, cnamespaces, ppnamespaces).ok()
+        ::windows_core::vcall!(self.base__.BindPrinter(hprinter.into_param().abi(), version, poptions, pdevmodeflags, cnamespaces, ppnamespaces)).ok()
     }
     pub unsafe fn QueryDeviceNamespace(&self, pdefaultnamespace: *mut ::windows_core::BSTR) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.QueryDeviceNamespace)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(pdefaultnamespace)).ok()
+        ::windows_core::vcall!(self.base__.QueryDeviceNamespace(::core::mem::transmute(pdefaultnamespace))).ok()
     }
     #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com"))]
@@ -5983,7 +5983,7 @@ impl IPrintTicketProvider2 {
     where
         P0: ::windows_core::IntoParam<super::super::Data::Xml::MsXml::IXMLDOMDocument2>,
     {
-        (::windows_core::Interface::vtable(self).base__.ConvertPrintTicketToDevMode)(::windows_core::Interface::as_raw(self), pprintticket.into_param().abi(), cbdevmodein, pdevmodein, pcbdevmodeout, ppdevmodeout).ok()
+        ::windows_core::vcall!(self.base__.ConvertPrintTicketToDevMode(pprintticket.into_param().abi(), cbdevmodein, pdevmodein, pcbdevmodeout, ppdevmodeout)).ok()
     }
     #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_Foundation\"`, `\"Win32_Graphics_Gdi\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_Foundation", feature = "Win32_Graphics_Gdi", feature = "Win32_System_Com"))]
@@ -5991,7 +5991,7 @@ impl IPrintTicketProvider2 {
     where
         P0: ::windows_core::IntoParam<super::super::Data::Xml::MsXml::IXMLDOMDocument2>,
     {
-        (::windows_core::Interface::vtable(self).base__.ConvertDevModeToPrintTicket)(::windows_core::Interface::as_raw(self), cbdevmode, pdevmode, pprintticket.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ConvertDevModeToPrintTicket(cbdevmode, pdevmode, pprintticket.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_System_Com"))]
@@ -6000,7 +6000,7 @@ impl IPrintTicketProvider2 {
         P0: ::windows_core::IntoParam<super::super::Data::Xml::MsXml::IXMLDOMDocument2>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetPrintCapabilities)(::windows_core::Interface::as_raw(self), pprintticket.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetPrintCapabilities(pprintticket.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_System_Com"))]
@@ -6008,7 +6008,7 @@ impl IPrintTicketProvider2 {
     where
         P0: ::windows_core::IntoParam<super::super::Data::Xml::MsXml::IXMLDOMDocument2>,
     {
-        (::windows_core::Interface::vtable(self).base__.ValidatePrintTicket)(::windows_core::Interface::as_raw(self), pbaseticket.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.ValidatePrintTicket(pbaseticket.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_System_Com"))]
@@ -6017,7 +6017,7 @@ impl IPrintTicketProvider2 {
         P0: ::windows_core::IntoParam<super::super::Data::Xml::MsXml::IXMLDOMDocument2>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPrintDeviceCapabilities)(::windows_core::Interface::as_raw(self), pprintticket.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPrintDeviceCapabilities(pprintticket.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Data_Xml_MsXml\"`, `\"Win32_System_Com\"`"]
     #[cfg(all(feature = "Win32_Data_Xml_MsXml", feature = "Win32_System_Com"))]
@@ -6027,7 +6027,7 @@ impl IPrintTicketProvider2 {
         P1: ::windows_core::IntoParam<super::super::Data::Xml::MsXml::IXMLDOMDocument2>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPrintDeviceResources)(::windows_core::Interface::as_raw(self), pszlocalename.into_param().abi(), pprintticket.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPrintDeviceResources(pszlocalename.into_param().abi(), pprintticket.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintTicketProvider2, ::windows_core::IUnknown, IPrintTicketProvider);
@@ -6055,16 +6055,16 @@ pub struct IPrintTicketProvider2_Vtbl {
 pub struct IPrintUnidiAsyncNotifyRegistration(::windows_core::IUnknown);
 impl IPrintUnidiAsyncNotifyRegistration {
     pub unsafe fn RegisterForNotifications(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.RegisterForNotifications)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.RegisterForNotifications()).ok()
     }
     pub unsafe fn UnregisterForNotifications(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.UnregisterForNotifications)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.UnregisterForNotifications()).ok()
     }
     pub unsafe fn AsyncGetNotification<P0>(&self, param0: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IAsyncGetSendNotificationCookie>,
     {
-        (::windows_core::Interface::vtable(self).AsyncGetNotification)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.AsyncGetNotification(param0.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintUnidiAsyncNotifyRegistration, ::windows_core::IUnknown, IPrintAsyncNotifyRegistration);
@@ -6086,10 +6086,10 @@ pub struct IPrintWriteStream(::windows_core::IUnknown);
 impl IPrintWriteStream {
     pub unsafe fn WriteBytes(&self, pvbuffer: *const ::core::ffi::c_void, cbbuffer: u32) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).WriteBytes)(::windows_core::Interface::as_raw(self), pvbuffer, cbbuffer, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.WriteBytes(pvbuffer, cbbuffer, &mut result__)).from_abi(result__)
     }
     pub unsafe fn Close(&self) {
-        (::windows_core::Interface::vtable(self).Close)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Close())
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintWriteStream, ::windows_core::IUnknown);
@@ -6111,7 +6111,7 @@ pub struct IPrintWriteStream_Vtbl {
 pub struct IPrintWriteStreamFlush(::windows_core::IUnknown);
 impl IPrintWriteStreamFlush {
     pub unsafe fn FlushData(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FlushData)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.FlushData()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrintWriteStreamFlush, ::windows_core::IUnknown);
@@ -6135,7 +6135,7 @@ impl IPrinterBidiSetRequestCallback {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).Completed)(::windows_core::Interface::as_raw(self), bstrresponse.into_param().abi(), hrstatus).ok()
+        ::windows_core::vcall!(self.Completed(bstrresponse.into_param().abi(), hrstatus)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrinterBidiSetRequestCallback, ::windows_core::IUnknown);
@@ -6156,7 +6156,7 @@ pub struct IPrinterBidiSetRequestCallback_Vtbl {
 pub struct IPrinterExtensionAsyncOperation(::windows_core::IUnknown);
 impl IPrinterExtensionAsyncOperation {
     pub unsafe fn Cancel(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Cancel()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrinterExtensionAsyncOperation, ::windows_core::IUnknown);
@@ -6183,25 +6183,25 @@ impl IPrinterExtensionContext {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn PrinterQueue(&self) -> ::windows_core::Result<IPrinterQueue> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).PrinterQueue)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.PrinterQueue(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn PrintSchemaTicket(&self) -> ::windows_core::Result<IPrintSchemaTicket> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).PrintSchemaTicket)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.PrintSchemaTicket(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn DriverProperties(&self) -> ::windows_core::Result<IPrinterPropertyBag> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DriverProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DriverProperties(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn UserProperties(&self) -> ::windows_core::Result<IPrinterPropertyBag> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).UserProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.UserProperties(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6245,17 +6245,17 @@ pub struct IPrinterExtensionContextCollection(::windows_core::IUnknown);
 impl IPrinterExtensionContextCollection {
     pub unsafe fn Count(&self) -> ::windows_core::Result<u32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Count)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Count(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetAt(&self, ulindex: u32) -> ::windows_core::Result<IPrinterExtensionContext> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetAt)(::windows_core::Interface::as_raw(self), ulindex, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetAt(ulindex, &mut result__)).from_abi(result__)
     }
     pub unsafe fn _NewEnum(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self)._NewEnum)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self._NewEnum(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6293,7 +6293,7 @@ impl IPrinterExtensionEvent {
     where
         P0: ::windows_core::IntoParam<IPrinterExtensionEventArgs>,
     {
-        (::windows_core::Interface::vtable(self).OnDriverEvent)(::windows_core::Interface::as_raw(self), peventargs.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnDriverEvent(peventargs.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6301,7 +6301,7 @@ impl IPrinterExtensionEvent {
     where
         P0: ::windows_core::IntoParam<IPrinterExtensionContextCollection>,
     {
-        (::windows_core::Interface::vtable(self).OnPrinterQueuesEnumerated)(::windows_core::Interface::as_raw(self), pcontextcollection.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnPrinterQueuesEnumerated(pcontextcollection.into_param().abi())).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6339,59 +6339,59 @@ impl IPrinterExtensionEventArgs {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn PrinterQueue(&self) -> ::windows_core::Result<IPrinterQueue> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.PrinterQueue)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.PrinterQueue(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn PrintSchemaTicket(&self) -> ::windows_core::Result<IPrintSchemaTicket> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.PrintSchemaTicket)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.PrintSchemaTicket(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn DriverProperties(&self) -> ::windows_core::Result<IPrinterPropertyBag> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.DriverProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.DriverProperties(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn UserProperties(&self) -> ::windows_core::Result<IPrinterPropertyBag> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.UserProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.UserProperties(&mut result__)).from_abi(result__)
     }
     pub unsafe fn BidiNotification(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).BidiNotification)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.BidiNotification(&mut result__)).from_abi(result__)
     }
     pub unsafe fn ReasonId(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).ReasonId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.ReasonId(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Request(&self) -> ::windows_core::Result<IPrinterExtensionRequest> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Request)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Request(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SourceApplication(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SourceApplication)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SourceApplication(&mut result__)).from_abi(result__)
     }
     pub unsafe fn DetailedReasonId(&self) -> ::windows_core::Result<::windows_core::GUID> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DetailedReasonId)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DetailedReasonId(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn WindowModal(&self) -> ::windows_core::Result<super::super::Foundation::BOOL> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).WindowModal)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.WindowModal(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn WindowParent(&self) -> ::windows_core::Result<super::super::Foundation::HANDLE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).WindowParent)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.WindowParent(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6431,10 +6431,10 @@ pub struct IPrinterExtensionEventArgs_Vtbl {
 pub struct IPrinterExtensionManager(::windows_core::IUnknown);
 impl IPrinterExtensionManager {
     pub unsafe fn EnableEvents(&self, printerdriverid: ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnableEvents)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(printerdriverid)).ok()
+        ::windows_core::vcall!(self.EnableEvents(::core::mem::transmute(printerdriverid))).ok()
     }
     pub unsafe fn DisableEvents(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DisableEvents)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.DisableEvents()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IPrinterExtensionManager, ::windows_core::IUnknown);
@@ -6462,10 +6462,10 @@ impl IPrinterExtensionRequest {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).Cancel)(::windows_core::Interface::as_raw(self), hrstatus, bstrlogmessage.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Cancel(hrstatus, bstrlogmessage.into_param().abi())).ok()
     }
     pub unsafe fn Complete(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Complete)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Complete()).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6500,7 +6500,7 @@ impl IPrinterPropertyBag {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetBool)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetBool(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6509,46 +6509,46 @@ impl IPrinterPropertyBag {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetBool)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetBool(bstrname.into_param().abi(), bvalue.into_param().abi())).ok()
     }
     pub unsafe fn GetInt32<P0>(&self, bstrname: P0) -> ::windows_core::Result<i32>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetInt32)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetInt32(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetInt32<P0>(&self, bstrname: P0, nvalue: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetInt32)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), nvalue).ok()
+        ::windows_core::vcall!(self.SetInt32(bstrname.into_param().abi(), nvalue)).ok()
     }
     pub unsafe fn GetString<P0>(&self, bstrname: P0) -> ::windows_core::Result<::windows_core::BSTR>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetString)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetString(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetString<P0, P1>(&self, bstrname: P0, bstrvalue: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetString)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetString(bstrname.into_param().abi(), bstrvalue.into_param().abi())).ok()
     }
     pub unsafe fn GetBytes<P0>(&self, bstrname: P0, pcbvalue: *mut u32, ppvalue: *mut *mut u8) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetBytes)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), pcbvalue, ppvalue).ok()
+        ::windows_core::vcall!(self.GetBytes(bstrname.into_param().abi(), pcbvalue, ppvalue)).ok()
     }
     pub unsafe fn SetBytes<P0>(&self, bstrname: P0, pvalue: &[u8]) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetBytes)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), pvalue.len().try_into().unwrap(), ::core::mem::transmute(pvalue.as_ptr())).ok()
+        ::windows_core::vcall!(self.SetBytes(bstrname.into_param().abi(), pvalue.len().try_into().unwrap(), ::core::mem::transmute(pvalue.as_ptr()))).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6557,7 +6557,7 @@ impl IPrinterPropertyBag {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetReadStream)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetReadStream(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6566,7 +6566,7 @@ impl IPrinterPropertyBag {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetWriteStream)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetWriteStream(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6618,23 +6618,23 @@ impl IPrinterQueue {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Handle(&self) -> ::windows_core::Result<super::super::Foundation::HANDLE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Handle)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Handle(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SendBidiQuery<P0>(&self, bstrbidiquery: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SendBidiQuery)(::windows_core::Interface::as_raw(self), bstrbidiquery.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SendBidiQuery(bstrbidiquery.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetProperties(&self) -> ::windows_core::Result<IPrinterPropertyBag> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetProperties(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6674,23 +6674,23 @@ impl IPrinterQueue2 {
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn Handle(&self) -> ::windows_core::Result<super::super::Foundation::HANDLE> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Handle)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Handle(&mut result__)).from_abi(result__)
     }
     pub unsafe fn Name(&self) -> ::windows_core::Result<::windows_core::BSTR> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Name)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Name(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SendBidiQuery<P0>(&self, bstrbidiquery: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SendBidiQuery)(::windows_core::Interface::as_raw(self), bstrbidiquery.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SendBidiQuery(bstrbidiquery.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetProperties(&self) -> ::windows_core::Result<IPrinterPropertyBag> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetProperties(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SendBidiSetRequestAsync<P0, P1>(&self, bstrbidirequest: P0, pcallback: P1) -> ::windows_core::Result<IPrinterExtensionAsyncOperation>
     where
@@ -6698,13 +6698,13 @@ impl IPrinterQueue2 {
         P1: ::windows_core::IntoParam<IPrinterBidiSetRequestCallback>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).SendBidiSetRequestAsync)(::windows_core::Interface::as_raw(self), bstrbidirequest.into_param().abi(), pcallback.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.SendBidiSetRequestAsync(bstrbidirequest.into_param().abi(), pcallback.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn GetPrinterQueueView(&self, ulviewoffset: u32, ulviewsize: u32) -> ::windows_core::Result<IPrinterQueueView> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetPrinterQueueView)(::windows_core::Interface::as_raw(self), ulviewoffset, ulviewsize, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetPrinterQueueView(ulviewoffset, ulviewsize, &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6739,7 +6739,7 @@ impl IPrinterQueueEvent {
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).OnBidiResponseReceived)(::windows_core::Interface::as_raw(self), bstrresponse.into_param().abi(), hrstatus).ok()
+        ::windows_core::vcall!(self.OnBidiResponseReceived(bstrresponse.into_param().abi(), hrstatus)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6767,7 +6767,7 @@ pub struct IPrinterQueueView(::windows_core::IUnknown);
 #[cfg(feature = "Win32_System_Com")]
 impl IPrinterQueueView {
     pub unsafe fn SetViewRange(&self, ulviewoffset: u32, ulviewsize: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetViewRange)(::windows_core::Interface::as_raw(self), ulviewoffset, ulviewsize).ok()
+        ::windows_core::vcall!(self.SetViewRange(ulviewoffset, ulviewsize)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6800,7 +6800,7 @@ impl IPrinterQueueViewEvent {
     where
         P0: ::windows_core::IntoParam<IPrintJobCollection>,
     {
-        (::windows_core::Interface::vtable(self).OnChanged)(::windows_core::Interface::as_raw(self), pcollection.into_param().abi(), ulviewoffset, ulviewsize, ulcountjobsinprintqueue).ok()
+        ::windows_core::vcall!(self.OnChanged(pcollection.into_param().abi(), ulviewoffset, ulviewsize, ulcountjobsinprintqueue)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6834,19 +6834,19 @@ impl IPrinterScriptContext {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn DriverProperties(&self) -> ::windows_core::Result<IPrinterScriptablePropertyBag> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).DriverProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.DriverProperties(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn QueueProperties(&self) -> ::windows_core::Result<IPrinterScriptablePropertyBag> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).QueueProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.QueueProperties(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn UserProperties(&self) -> ::windows_core::Result<IPrinterScriptablePropertyBag> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).UserProperties)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.UserProperties(&mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -6891,7 +6891,7 @@ impl IPrinterScriptablePropertyBag {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetBool)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetBool(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -6900,34 +6900,34 @@ impl IPrinterScriptablePropertyBag {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetBool)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetBool(bstrname.into_param().abi(), bvalue.into_param().abi())).ok()
     }
     pub unsafe fn GetInt32<P0>(&self, bstrname: P0) -> ::windows_core::Result<i32>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetInt32)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetInt32(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetInt32<P0>(&self, bstrname: P0, nvalue: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetInt32)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), nvalue).ok()
+        ::windows_core::vcall!(self.SetInt32(bstrname.into_param().abi(), nvalue)).ok()
     }
     pub unsafe fn GetString<P0>(&self, bstrname: P0) -> ::windows_core::Result<::windows_core::BSTR>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetString)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetString(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetString<P0, P1>(&self, bstrname: P0, bstrvalue: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetString)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetString(bstrname.into_param().abi(), bstrvalue.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6936,7 +6936,7 @@ impl IPrinterScriptablePropertyBag {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetBytes)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetBytes(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6945,7 +6945,7 @@ impl IPrinterScriptablePropertyBag {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<super::super::System::Com::IDispatch>,
     {
-        (::windows_core::Interface::vtable(self).SetBytes)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), parray.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetBytes(bstrname.into_param().abi(), parray.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6954,7 +6954,7 @@ impl IPrinterScriptablePropertyBag {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetReadStream)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetReadStream(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -6963,7 +6963,7 @@ impl IPrinterScriptablePropertyBag {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetWriteStream)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetWriteStream(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -7024,7 +7024,7 @@ impl IPrinterScriptablePropertyBag2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetBool)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetBool(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -7033,34 +7033,34 @@ impl IPrinterScriptablePropertyBag2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetBool)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetBool(bstrname.into_param().abi(), bvalue.into_param().abi())).ok()
     }
     pub unsafe fn GetInt32<P0>(&self, bstrname: P0) -> ::windows_core::Result<i32>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetInt32)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetInt32(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetInt32<P0>(&self, bstrname: P0, nvalue: i32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetInt32)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), nvalue).ok()
+        ::windows_core::vcall!(self.base__.SetInt32(bstrname.into_param().abi(), nvalue)).ok()
     }
     pub unsafe fn GetString<P0>(&self, bstrname: P0) -> ::windows_core::Result<::windows_core::BSTR>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetString)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetString(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetString<P0, P1>(&self, bstrname: P0, bstrvalue: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetString)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), bstrvalue.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetString(bstrname.into_param().abi(), bstrvalue.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -7069,7 +7069,7 @@ impl IPrinterScriptablePropertyBag2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetBytes)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetBytes(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -7078,7 +7078,7 @@ impl IPrinterScriptablePropertyBag2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<super::super::System::Com::IDispatch>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetBytes)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), parray.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetBytes(bstrname.into_param().abi(), parray.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -7087,7 +7087,7 @@ impl IPrinterScriptablePropertyBag2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetReadStream)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetReadStream(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -7096,14 +7096,14 @@ impl IPrinterScriptablePropertyBag2 {
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.GetWriteStream)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.GetWriteStream(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn GetReadStreamAsXML<P0>(&self, bstrname: P0) -> ::windows_core::Result<::windows_core::IUnknown>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetReadStreamAsXML)(::windows_core::Interface::as_raw(self), bstrname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetReadStreamAsXML(bstrname.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -7134,7 +7134,7 @@ impl IPrinterScriptableSequentialStream {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Read(&self, cbread: i32) -> ::windows_core::Result<super::super::System::Com::IDispatch> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Read)(::windows_core::Interface::as_raw(self), cbread, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Read(cbread, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -7143,7 +7143,7 @@ impl IPrinterScriptableSequentialStream {
         P0: ::windows_core::IntoParam<super::super::System::Com::IDispatch>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Write)(::windows_core::Interface::as_raw(self), parray.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Write(parray.into_param().abi(), &mut result__)).from_abi(result__)
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -7181,7 +7181,7 @@ impl IPrinterScriptableStream {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Read(&self, cbread: i32) -> ::windows_core::Result<super::super::System::Com::IDispatch> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Read)(::windows_core::Interface::as_raw(self), cbread, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Read(cbread, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
@@ -7190,19 +7190,19 @@ impl IPrinterScriptableStream {
         P0: ::windows_core::IntoParam<super::super::System::Com::IDispatch>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.Write)(::windows_core::Interface::as_raw(self), parray.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.Write(parray.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn Commit(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Commit)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Commit()).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn Seek(&self, loffset: i32, streamseek: super::super::System::Com::STREAM_SEEK) -> ::windows_core::Result<i32> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Seek)(::windows_core::Interface::as_raw(self), loffset, streamseek, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Seek(loffset, streamseek, &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetSize(&self, lsize: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetSize)(::windows_core::Interface::as_raw(self), lsize).ok()
+        ::windows_core::vcall!(self.SetSize(lsize)).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -7233,13 +7233,13 @@ pub struct IXpsDocument(::windows_core::IUnknown);
 impl IXpsDocument {
     pub unsafe fn GetThumbnail(&self) -> ::windows_core::Result<IPartThumbnail> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetThumbnail)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetThumbnail(&mut result__)).from_abi(result__)
     }
     pub unsafe fn SetThumbnail<P0>(&self, pthumbnail: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IPartThumbnail>,
     {
-        (::windows_core::Interface::vtable(self).SetThumbnail)(::windows_core::Interface::as_raw(self), pthumbnail.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetThumbnail(pthumbnail.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IXpsDocument, ::windows_core::IUnknown);
@@ -7264,40 +7264,40 @@ impl IXpsDocumentConsumer {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).SendXpsUnknown)(::windows_core::Interface::as_raw(self), punknown.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SendXpsUnknown(punknown.into_param().abi())).ok()
     }
     pub unsafe fn SendXpsDocument<P0>(&self, pixpsdocument: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IXpsDocument>,
     {
-        (::windows_core::Interface::vtable(self).SendXpsDocument)(::windows_core::Interface::as_raw(self), pixpsdocument.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SendXpsDocument(pixpsdocument.into_param().abi())).ok()
     }
     pub unsafe fn SendFixedDocumentSequence<P0>(&self, pifixeddocumentsequence: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IFixedDocumentSequence>,
     {
-        (::windows_core::Interface::vtable(self).SendFixedDocumentSequence)(::windows_core::Interface::as_raw(self), pifixeddocumentsequence.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SendFixedDocumentSequence(pifixeddocumentsequence.into_param().abi())).ok()
     }
     pub unsafe fn SendFixedDocument<P0>(&self, pifixeddocument: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IFixedDocument>,
     {
-        (::windows_core::Interface::vtable(self).SendFixedDocument)(::windows_core::Interface::as_raw(self), pifixeddocument.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SendFixedDocument(pifixeddocument.into_param().abi())).ok()
     }
     pub unsafe fn SendFixedPage<P0>(&self, pifixedpage: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IFixedPage>,
     {
-        (::windows_core::Interface::vtable(self).SendFixedPage)(::windows_core::Interface::as_raw(self), pifixedpage.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SendFixedPage(pifixedpage.into_param().abi())).ok()
     }
     pub unsafe fn CloseSender(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CloseSender)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.CloseSender()).ok()
     }
     pub unsafe fn GetNewEmptyPart<P0>(&self, uri: P0, riid: *const ::windows_core::GUID, ppnewobject: *mut *mut ::core::ffi::c_void, ppwritestream: *mut ::core::option::Option<IPrintWriteStream>) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetNewEmptyPart)(::windows_core::Interface::as_raw(self), uri.into_param().abi(), riid, ppnewobject, ::core::mem::transmute(ppwritestream)).ok()
+        ::windows_core::vcall!(self.GetNewEmptyPart(uri.into_param().abi(), riid, ppnewobject, ::core::mem::transmute(ppwritestream))).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IXpsDocumentConsumer, ::windows_core::IUnknown);
@@ -7325,7 +7325,7 @@ pub struct IXpsDocumentProvider(::windows_core::IUnknown);
 impl IXpsDocumentProvider {
     pub unsafe fn GetXpsPart(&self) -> ::windows_core::Result<::windows_core::IUnknown> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).GetXpsPart)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.GetXpsPart(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IXpsDocumentProvider, ::windows_core::IUnknown);
@@ -7346,18 +7346,18 @@ pub struct IXpsDocumentProvider_Vtbl {
 pub struct IXpsPartIterator(::windows_core::IUnknown);
 impl IXpsPartIterator {
     pub unsafe fn Reset(&self) {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Reset())
     }
     pub unsafe fn Current(&self, puri: *mut ::windows_core::BSTR, ppxpspart: *mut ::core::option::Option<::windows_core::IUnknown>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Current)(::windows_core::Interface::as_raw(self), ::core::mem::transmute(puri), ::core::mem::transmute(ppxpspart)).ok()
+        ::windows_core::vcall!(self.Current(::core::mem::transmute(puri), ::core::mem::transmute(ppxpspart))).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn IsDone(&self) -> super::super::Foundation::BOOL {
-        (::windows_core::Interface::vtable(self).IsDone)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.IsDone())
     }
     pub unsafe fn Next(&self) {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self))
+        ::windows_core::vcall!(self.Next())
     }
 }
 ::windows_core::imp::interface_hierarchy!(IXpsPartIterator, ::windows_core::IUnknown);
@@ -7390,7 +7390,7 @@ impl IXpsRasterizationFactory {
         P0: ::windows_core::IntoParam<super::super::Storage::Xps::IXpsOMPage>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateRasterizer)(::windows_core::Interface::as_raw(self), xpspage.into_param().abi(), dpi, nontextrenderingmode, textrenderingmode, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateRasterizer(xpspage.into_param().abi(), dpi, nontextrenderingmode, textrenderingmode, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IXpsRasterizationFactory, ::windows_core::IUnknown);
@@ -7420,7 +7420,7 @@ impl IXpsRasterizationFactory1 {
         P0: ::windows_core::IntoParam<super::super::Storage::Xps::IXpsOMPage>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateRasterizer)(::windows_core::Interface::as_raw(self), xpspage.into_param().abi(), dpi, nontextrenderingmode, textrenderingmode, pixelformat, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateRasterizer(xpspage.into_param().abi(), dpi, nontextrenderingmode, textrenderingmode, pixelformat, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IXpsRasterizationFactory1, ::windows_core::IUnknown);
@@ -7450,7 +7450,7 @@ impl IXpsRasterizationFactory2 {
         P0: ::windows_core::IntoParam<super::super::Storage::Xps::IXpsOMPage>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateRasterizer)(::windows_core::Interface::as_raw(self), xpspage.into_param().abi(), dpix, dpiy, nontextrenderingmode, textrenderingmode, pixelformat, backgroundcolor, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateRasterizer(xpspage.into_param().abi(), dpix, dpiy, nontextrenderingmode, textrenderingmode, pixelformat, backgroundcolor, &mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IXpsRasterizationFactory2, ::windows_core::IUnknown);
@@ -7480,10 +7480,10 @@ impl IXpsRasterizer {
         P0: ::windows_core::IntoParam<IXpsRasterizerNotificationCallback>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).RasterizeRect)(::windows_core::Interface::as_raw(self), x, y, width, height, notificationcallback.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.RasterizeRect(x, y, width, height, notificationcallback.into_param().abi(), &mut result__)).from_abi(result__)
     }
     pub unsafe fn SetMinimalLineWidth(&self, width: i32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetMinimalLineWidth)(::windows_core::Interface::as_raw(self), width).ok()
+        ::windows_core::vcall!(self.SetMinimalLineWidth(width)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IXpsRasterizer, ::windows_core::IUnknown);
@@ -7508,7 +7508,7 @@ pub struct IXpsRasterizer_Vtbl {
 pub struct IXpsRasterizerNotificationCallback(::windows_core::IUnknown);
 impl IXpsRasterizerNotificationCallback {
     pub unsafe fn Continue(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Continue)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Continue()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IXpsRasterizerNotificationCallback, ::windows_core::IUnknown);

@@ -739,127 +739,127 @@ impl AsymmetricAlgorithmNames {
     pub fn RsaPkcs1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaPkcs1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaPkcs1(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaOaepSha1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaOaepSha1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaOaepSha1(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaOaepSha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaOaepSha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaOaepSha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaOaepSha384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaOaepSha384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaOaepSha384(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaOaepSha512() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaOaepSha512)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaOaepSha512(&mut result__)).from_abi(result__)
         })
     }
     pub fn EcdsaP256Sha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EcdsaP256Sha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EcdsaP256Sha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn EcdsaP384Sha384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EcdsaP384Sha384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EcdsaP384Sha384(&mut result__)).from_abi(result__)
         })
     }
     pub fn EcdsaP521Sha512() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EcdsaP521Sha512)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EcdsaP521Sha512(&mut result__)).from_abi(result__)
         })
     }
     pub fn DsaSha1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DsaSha1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DsaSha1(&mut result__)).from_abi(result__)
         })
     }
     pub fn DsaSha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DsaSha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DsaSha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaSignPkcs1Sha1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaSignPkcs1Sha1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaSignPkcs1Sha1(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaSignPkcs1Sha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaSignPkcs1Sha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaSignPkcs1Sha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaSignPkcs1Sha384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaSignPkcs1Sha384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaSignPkcs1Sha384(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaSignPkcs1Sha512() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaSignPkcs1Sha512)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaSignPkcs1Sha512(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaSignPssSha1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaSignPssSha1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaSignPssSha1(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaSignPssSha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaSignPssSha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaSignPssSha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaSignPssSha384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaSignPssSha384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaSignPssSha384(&mut result__)).from_abi(result__)
         })
     }
     pub fn RsaSignPssSha512() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).RsaSignPssSha512)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.RsaSignPssSha512(&mut result__)).from_abi(result__)
         })
     }
     pub fn EcdsaSha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EcdsaSha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EcdsaSha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn EcdsaSha384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EcdsaSha384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EcdsaSha384(&mut result__)).from_abi(result__)
         })
     }
     pub fn EcdsaSha512() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IAsymmetricAlgorithmNamesStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EcdsaSha512)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EcdsaSha512(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -884,14 +884,14 @@ impl AsymmetricKeyAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AlgorithmName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AlgorithmName(&mut result__)).from_abi(result__)
         }
     }
     pub fn CreateKeyPair(&self, keysize: u32) -> ::windows_core::Result<CryptographicKey> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateKeyPair)(::windows_core::Interface::as_raw(this), keysize, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateKeyPair(keysize, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -903,7 +903,7 @@ impl AsymmetricKeyAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ImportDefaultPrivateKeyBlob)(::windows_core::Interface::as_raw(this), keyblob.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ImportDefaultPrivateKeyBlob(keyblob.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -915,7 +915,7 @@ impl AsymmetricKeyAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ImportKeyPairWithBlobType)(::windows_core::Interface::as_raw(this), keyblob.try_into_param()?.abi(), blobtype, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ImportKeyPairWithBlobType(keyblob.try_into_param()?.abi(), blobtype, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -927,7 +927,7 @@ impl AsymmetricKeyAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ImportDefaultPublicKeyBlob)(::windows_core::Interface::as_raw(this), keyblob.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ImportDefaultPublicKeyBlob(keyblob.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -939,27 +939,27 @@ impl AsymmetricKeyAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ImportPublicKeyWithBlobType)(::windows_core::Interface::as_raw(this), keyblob.try_into_param()?.abi(), blobtype, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ImportPublicKeyWithBlobType(keyblob.try_into_param()?.abi(), blobtype, &mut result__)).from_abi(result__)
         }
     }
     pub fn CreateKeyPairWithCurveName(&self, curvename: &::windows_core::HSTRING) -> ::windows_core::Result<CryptographicKey> {
         let this = &::windows_core::ComInterface::cast::<IAsymmetricKeyAlgorithmProvider2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateKeyPairWithCurveName)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(curvename), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateKeyPairWithCurveName(::core::mem::transmute_copy(curvename), &mut result__)).from_abi(result__)
         }
     }
     pub fn CreateKeyPairWithCurveParameters(&self, parameters: &[u8]) -> ::windows_core::Result<CryptographicKey> {
         let this = &::windows_core::ComInterface::cast::<IAsymmetricKeyAlgorithmProvider2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateKeyPairWithCurveParameters)(::windows_core::Interface::as_raw(this), parameters.len().try_into().unwrap(), parameters.as_ptr(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateKeyPairWithCurveParameters(parameters.len().try_into().unwrap(), parameters.as_ptr(), &mut result__)).from_abi(result__)
         }
     }
     pub fn OpenAlgorithm(algorithm: &::windows_core::HSTRING) -> ::windows_core::Result<AsymmetricKeyAlgorithmProvider> {
         Self::IAsymmetricKeyAlgorithmProviderStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OpenAlgorithm)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(algorithm), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OpenAlgorithm(::core::mem::transmute_copy(algorithm), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -995,7 +995,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Encrypt)(::windows_core::Interface::as_raw(this), key.into_param().abi(), data.try_into_param()?.abi(), iv.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Encrypt(key.into_param().abi(), data.try_into_param()?.abi(), iv.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1008,7 +1008,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Decrypt)(::windows_core::Interface::as_raw(this), key.into_param().abi(), data.try_into_param()?.abi(), iv.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Decrypt(key.into_param().abi(), data.try_into_param()?.abi(), iv.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1022,7 +1022,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EncryptAndAuthenticate)(::windows_core::Interface::as_raw(this), key.into_param().abi(), data.try_into_param()?.abi(), nonce.try_into_param()?.abi(), authenticateddata.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EncryptAndAuthenticate(key.into_param().abi(), data.try_into_param()?.abi(), nonce.try_into_param()?.abi(), authenticateddata.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1037,7 +1037,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DecryptAndAuthenticate)(::windows_core::Interface::as_raw(this), key.into_param().abi(), data.try_into_param()?.abi(), nonce.try_into_param()?.abi(), authenticationtag.try_into_param()?.abi(), authenticateddata.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DecryptAndAuthenticate(key.into_param().abi(), data.try_into_param()?.abi(), nonce.try_into_param()?.abi(), authenticationtag.try_into_param()?.abi(), authenticateddata.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1049,7 +1049,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sign)(::windows_core::Interface::as_raw(this), key.into_param().abi(), data.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sign(key.into_param().abi(), data.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1062,7 +1062,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).VerifySignature)(::windows_core::Interface::as_raw(this), key.into_param().abi(), data.try_into_param()?.abi(), signature.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.VerifySignature(key.into_param().abi(), data.try_into_param()?.abi(), signature.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1074,7 +1074,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DeriveKeyMaterial)(::windows_core::Interface::as_raw(this), key.into_param().abi(), parameters.into_param().abi(), desiredkeysize, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DeriveKeyMaterial(key.into_param().abi(), parameters.into_param().abi(), desiredkeysize, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1086,7 +1086,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SignHashedData)(::windows_core::Interface::as_raw(this), key.into_param().abi(), data.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SignHashedData(key.into_param().abi(), data.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1099,7 +1099,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).VerifySignatureWithHashInput)(::windows_core::Interface::as_raw(this), key.into_param().abi(), data.try_into_param()?.abi(), signature.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.VerifySignatureWithHashInput(key.into_param().abi(), data.try_into_param()?.abi(), signature.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -1112,7 +1112,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DecryptAsync)(::windows_core::Interface::as_raw(this), key.into_param().abi(), data.try_into_param()?.abi(), iv.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DecryptAsync(key.into_param().abi(), data.try_into_param()?.abi(), iv.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -1124,7 +1124,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SignAsync)(::windows_core::Interface::as_raw(this), key.into_param().abi(), data.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SignAsync(key.into_param().abi(), data.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation\"`, `\"Storage_Streams\"`"]
@@ -1136,7 +1136,7 @@ impl CryptographicEngine {
     {
         Self::ICryptographicEngineStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SignHashedDataAsync)(::windows_core::Interface::as_raw(this), key.into_param().abi(), data.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SignHashedDataAsync(key.into_param().abi(), data.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1164,7 +1164,7 @@ impl CryptographicHash {
         P0: ::windows_core::TryIntoParam<super::super::super::Storage::Streams::IBuffer>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).Append)(::windows_core::Interface::as_raw(this), data.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.Append(data.try_into_param()?.abi())).ok() }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
     #[cfg(feature = "Storage_Streams")]
@@ -1172,7 +1172,7 @@ impl CryptographicHash {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetValueAndReset)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.GetValueAndReset(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1199,7 +1199,7 @@ impl CryptographicKey {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).KeySize)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.KeySize(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1208,7 +1208,7 @@ impl CryptographicKey {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExportDefaultPrivateKeyBlobType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExportDefaultPrivateKeyBlobType(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1217,7 +1217,7 @@ impl CryptographicKey {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExportPrivateKeyWithBlobType)(::windows_core::Interface::as_raw(this), blobtype, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExportPrivateKeyWithBlobType(blobtype, &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1226,7 +1226,7 @@ impl CryptographicKey {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExportDefaultPublicKeyBlobType)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExportDefaultPublicKeyBlobType(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1235,7 +1235,7 @@ impl CryptographicKey {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ExportPublicKeyWithBlobType)(::windows_core::Interface::as_raw(this), blobtype, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.ExportPublicKeyWithBlobType(blobtype, &mut result__)).from_abi(result__)
         }
     }
 }
@@ -1259,271 +1259,271 @@ impl EccCurveNames {
     pub fn BrainpoolP160r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP160r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP160r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP160t1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP160t1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP160t1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP192r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP192r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP192r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP192t1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP192t1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP192t1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP224r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP224r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP224r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP224t1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP224t1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP224t1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP256r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP256r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP256r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP256t1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP256t1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP256t1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP320r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP320r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP320r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP320t1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP320t1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP320t1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP384r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP384r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP384r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP384t1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP384t1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP384t1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP512r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP512r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP512r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn BrainpoolP512t1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BrainpoolP512t1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BrainpoolP512t1(&mut result__)).from_abi(result__)
         })
     }
     pub fn Curve25519() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Curve25519)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Curve25519(&mut result__)).from_abi(result__)
         })
     }
     pub fn Ec192wapi() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Ec192wapi)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Ec192wapi(&mut result__)).from_abi(result__)
         })
     }
     pub fn NistP192() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NistP192)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NistP192(&mut result__)).from_abi(result__)
         })
     }
     pub fn NistP224() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NistP224)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NistP224(&mut result__)).from_abi(result__)
         })
     }
     pub fn NistP256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NistP256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NistP256(&mut result__)).from_abi(result__)
         })
     }
     pub fn NistP384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NistP384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NistP384(&mut result__)).from_abi(result__)
         })
     }
     pub fn NistP521() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NistP521)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NistP521(&mut result__)).from_abi(result__)
         })
     }
     pub fn NumsP256t1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumsP256t1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NumsP256t1(&mut result__)).from_abi(result__)
         })
     }
     pub fn NumsP384t1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumsP384t1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NumsP384t1(&mut result__)).from_abi(result__)
         })
     }
     pub fn NumsP512t1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumsP512t1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.NumsP512t1(&mut result__)).from_abi(result__)
         })
     }
     pub fn SecP160k1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecP160k1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SecP160k1(&mut result__)).from_abi(result__)
         })
     }
     pub fn SecP160r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecP160r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SecP160r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn SecP160r2() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecP160r2)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SecP160r2(&mut result__)).from_abi(result__)
         })
     }
     pub fn SecP192k1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecP192k1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SecP192k1(&mut result__)).from_abi(result__)
         })
     }
     pub fn SecP192r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecP192r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SecP192r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn SecP224k1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecP224k1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SecP224k1(&mut result__)).from_abi(result__)
         })
     }
     pub fn SecP224r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecP224r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SecP224r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn SecP256k1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecP256k1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SecP256k1(&mut result__)).from_abi(result__)
         })
     }
     pub fn SecP256r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecP256r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SecP256r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn SecP384r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecP384r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SecP384r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn SecP521r1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecP521r1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.SecP521r1(&mut result__)).from_abi(result__)
         })
     }
     pub fn Wtls7() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Wtls7)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Wtls7(&mut result__)).from_abi(result__)
         })
     }
     pub fn Wtls9() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Wtls9)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Wtls9(&mut result__)).from_abi(result__)
         })
     }
     pub fn Wtls12() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Wtls12)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Wtls12(&mut result__)).from_abi(result__)
         })
     }
     pub fn X962P192v1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).X962P192v1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.X962P192v1(&mut result__)).from_abi(result__)
         })
     }
     pub fn X962P192v2() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).X962P192v2)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.X962P192v2(&mut result__)).from_abi(result__)
         })
     }
     pub fn X962P192v3() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).X962P192v3)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.X962P192v3(&mut result__)).from_abi(result__)
         })
     }
     pub fn X962P239v1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).X962P239v1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.X962P239v1(&mut result__)).from_abi(result__)
         })
     }
     pub fn X962P239v2() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).X962P239v2)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.X962P239v2(&mut result__)).from_abi(result__)
         })
     }
     pub fn X962P239v3() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).X962P239v3)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.X962P239v3(&mut result__)).from_abi(result__)
         })
     }
     pub fn X962P256v1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).X962P256v1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.X962P256v1(&mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Foundation_Collections\"`"]
@@ -1531,7 +1531,7 @@ impl EccCurveNames {
     pub fn AllEccCurveNames() -> ::windows_core::Result<super::super::super::Foundation::Collections::IVectorView<::windows_core::HSTRING>> {
         Self::IEccCurveNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AllEccCurveNames)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AllEccCurveNames(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1553,7 +1553,7 @@ impl EncryptedAndAuthenticatedData {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EncryptedData)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.EncryptedData(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1562,7 +1562,7 @@ impl EncryptedAndAuthenticatedData {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AuthenticationTag)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AuthenticationTag(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1586,31 +1586,31 @@ impl HashAlgorithmNames {
     pub fn Md5() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IHashAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Md5)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Md5(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sha1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IHashAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sha1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sha1(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IHashAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sha384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IHashAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sha384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sha384(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sha512() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IHashAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sha512)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sha512(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1630,14 +1630,14 @@ impl HashAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AlgorithmName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AlgorithmName(&mut result__)).from_abi(result__)
         }
     }
     pub fn HashLength(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HashLength)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HashLength(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1649,20 +1649,20 @@ impl HashAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HashData)(::windows_core::Interface::as_raw(this), data.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HashData(data.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn CreateHash(&self) -> ::windows_core::Result<CryptographicHash> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateHash)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateHash(&mut result__)).from_abi(result__)
         }
     }
     pub fn OpenAlgorithm(algorithm: &::windows_core::HSTRING) -> ::windows_core::Result<HashAlgorithmProvider> {
         Self::IHashAlgorithmProviderStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OpenAlgorithm)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(algorithm), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OpenAlgorithm(::core::mem::transmute_copy(algorithm), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1691,121 +1691,121 @@ impl KeyDerivationAlgorithmNames {
     pub fn Pbkdf2Md5() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Pbkdf2Md5)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Pbkdf2Md5(&mut result__)).from_abi(result__)
         })
     }
     pub fn Pbkdf2Sha1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Pbkdf2Sha1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Pbkdf2Sha1(&mut result__)).from_abi(result__)
         })
     }
     pub fn Pbkdf2Sha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Pbkdf2Sha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Pbkdf2Sha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn Pbkdf2Sha384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Pbkdf2Sha384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Pbkdf2Sha384(&mut result__)).from_abi(result__)
         })
     }
     pub fn Pbkdf2Sha512() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Pbkdf2Sha512)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Pbkdf2Sha512(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sp800108CtrHmacMd5() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sp800108CtrHmacMd5)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sp800108CtrHmacMd5(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sp800108CtrHmacSha1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sp800108CtrHmacSha1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sp800108CtrHmacSha1(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sp800108CtrHmacSha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sp800108CtrHmacSha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sp800108CtrHmacSha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sp800108CtrHmacSha384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sp800108CtrHmacSha384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sp800108CtrHmacSha384(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sp800108CtrHmacSha512() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sp800108CtrHmacSha512)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sp800108CtrHmacSha512(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sp80056aConcatMd5() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sp80056aConcatMd5)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sp80056aConcatMd5(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sp80056aConcatSha1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sp80056aConcatSha1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sp80056aConcatSha1(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sp80056aConcatSha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sp80056aConcatSha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sp80056aConcatSha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sp80056aConcatSha384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sp80056aConcatSha384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sp80056aConcatSha384(&mut result__)).from_abi(result__)
         })
     }
     pub fn Sp80056aConcatSha512() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Sp80056aConcatSha512)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Sp80056aConcatSha512(&mut result__)).from_abi(result__)
         })
     }
     pub fn CapiKdfMd5() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CapiKdfMd5)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CapiKdfMd5(&mut result__)).from_abi(result__)
         })
     }
     pub fn CapiKdfSha1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CapiKdfSha1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CapiKdfSha1(&mut result__)).from_abi(result__)
         })
     }
     pub fn CapiKdfSha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CapiKdfSha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CapiKdfSha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn CapiKdfSha384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CapiKdfSha384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CapiKdfSha384(&mut result__)).from_abi(result__)
         })
     }
     pub fn CapiKdfSha512() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IKeyDerivationAlgorithmNamesStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CapiKdfSha512)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CapiKdfSha512(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1830,7 +1830,7 @@ impl KeyDerivationAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AlgorithmName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AlgorithmName(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1842,13 +1842,13 @@ impl KeyDerivationAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateKey)(::windows_core::Interface::as_raw(this), keymaterial.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateKey(keymaterial.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn OpenAlgorithm(algorithm: &::windows_core::HSTRING) -> ::windows_core::Result<KeyDerivationAlgorithmProvider> {
         Self::IKeyDerivationAlgorithmProviderStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OpenAlgorithm)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(algorithm), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OpenAlgorithm(::core::mem::transmute_copy(algorithm), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1882,7 +1882,7 @@ impl KeyDerivationParameters {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).KdfGenericBinary)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.KdfGenericBinary(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1892,25 +1892,25 @@ impl KeyDerivationParameters {
         P0: ::windows_core::TryIntoParam<super::super::super::Storage::Streams::IBuffer>,
     {
         let this = self;
-        unsafe { (::windows_core::Interface::vtable(this).SetKdfGenericBinary)(::windows_core::Interface::as_raw(this), value.try_into_param()?.abi()).ok() }
+        unsafe { ::windows_core::vcall!(this.SetKdfGenericBinary(value.try_into_param()?.abi())).ok() }
     }
     pub fn IterationCount(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IterationCount)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.IterationCount(&mut result__)).from_abi(result__)
         }
     }
     pub fn Capi1KdfTargetAlgorithm(&self) -> ::windows_core::Result<Capi1KdfTargetAlgorithm> {
         let this = &::windows_core::ComInterface::cast::<IKeyDerivationParameters2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Capi1KdfTargetAlgorithm)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Capi1KdfTargetAlgorithm(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetCapi1KdfTargetAlgorithm(&self, value: Capi1KdfTargetAlgorithm) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<IKeyDerivationParameters2>(self)?;
-        unsafe { (::windows_core::Interface::vtable(this).SetCapi1KdfTargetAlgorithm)(::windows_core::Interface::as_raw(this), value).ok() }
+        unsafe { ::windows_core::vcall!(this.SetCapi1KdfTargetAlgorithm(value)).ok() }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
     #[cfg(feature = "Storage_Streams")]
@@ -1920,7 +1920,7 @@ impl KeyDerivationParameters {
     {
         Self::IKeyDerivationParametersStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BuildForPbkdf2)(::windows_core::Interface::as_raw(this), pbkdf2salt.try_into_param()?.abi(), iterationcount, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BuildForPbkdf2(pbkdf2salt.try_into_param()?.abi(), iterationcount, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1932,7 +1932,7 @@ impl KeyDerivationParameters {
     {
         Self::IKeyDerivationParametersStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BuildForSP800108)(::windows_core::Interface::as_raw(this), label.try_into_param()?.abi(), context.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BuildForSP800108(label.try_into_param()?.abi(), context.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -1947,13 +1947,13 @@ impl KeyDerivationParameters {
     {
         Self::IKeyDerivationParametersStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BuildForSP80056a)(::windows_core::Interface::as_raw(this), algorithmid.try_into_param()?.abi(), partyuinfo.try_into_param()?.abi(), partyvinfo.try_into_param()?.abi(), supppubinfo.try_into_param()?.abi(), suppprivinfo.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BuildForSP80056a(algorithmid.try_into_param()?.abi(), partyuinfo.try_into_param()?.abi(), partyvinfo.try_into_param()?.abi(), supppubinfo.try_into_param()?.abi(), suppprivinfo.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         })
     }
     pub fn BuildForCapi1Kdf(capi1kdftargetalgorithm: Capi1KdfTargetAlgorithm) -> ::windows_core::Result<KeyDerivationParameters> {
         Self::IKeyDerivationParametersStatics2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BuildForCapi1Kdf)(::windows_core::Interface::as_raw(this), capi1kdftargetalgorithm, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BuildForCapi1Kdf(capi1kdftargetalgorithm, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -1987,37 +1987,37 @@ impl MacAlgorithmNames {
     pub fn HmacMd5() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IMacAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HmacMd5)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HmacMd5(&mut result__)).from_abi(result__)
         })
     }
     pub fn HmacSha1() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IMacAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HmacSha1)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HmacSha1(&mut result__)).from_abi(result__)
         })
     }
     pub fn HmacSha256() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IMacAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HmacSha256)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HmacSha256(&mut result__)).from_abi(result__)
         })
     }
     pub fn HmacSha384() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IMacAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HmacSha384)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HmacSha384(&mut result__)).from_abi(result__)
         })
     }
     pub fn HmacSha512() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IMacAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HmacSha512)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.HmacSha512(&mut result__)).from_abi(result__)
         })
     }
     pub fn AesCmac() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::IMacAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AesCmac)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AesCmac(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2037,14 +2037,14 @@ impl MacAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AlgorithmName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AlgorithmName(&mut result__)).from_abi(result__)
         }
     }
     pub fn MacLength(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MacLength)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.MacLength(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -2056,7 +2056,7 @@ impl MacAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateKey)(::windows_core::Interface::as_raw(this), keymaterial.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateKey(keymaterial.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -2068,13 +2068,13 @@ impl MacAlgorithmProvider {
         let this = &::windows_core::ComInterface::cast::<IMacAlgorithmProvider2>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateHash)(::windows_core::Interface::as_raw(this), keymaterial.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateHash(keymaterial.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn OpenAlgorithm(algorithm: &::windows_core::HSTRING) -> ::windows_core::Result<MacAlgorithmProvider> {
         Self::IMacAlgorithmProviderStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OpenAlgorithm)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(algorithm), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OpenAlgorithm(::core::mem::transmute_copy(algorithm), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2108,7 +2108,7 @@ impl PersistedKeyProvider {
     {
         Self::IPersistedKeyProviderStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OpenKeyPairFromCertificateAsync)(::windows_core::Interface::as_raw(this), certificate.into_param().abi(), ::core::mem::transmute_copy(hashalgorithmname), padding, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OpenKeyPairFromCertificateAsync(certificate.into_param().abi(), ::core::mem::transmute_copy(hashalgorithmname), padding, &mut result__)).from_abi(result__)
         })
     }
     #[doc = "Required features: `\"Security_Cryptography_Certificates\"`"]
@@ -2119,7 +2119,7 @@ impl PersistedKeyProvider {
     {
         Self::IPersistedKeyProviderStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OpenPublicKeyFromCertificate)(::windows_core::Interface::as_raw(this), certificate.into_param().abi(), ::core::mem::transmute_copy(hashalgorithmname), padding, &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OpenPublicKeyFromCertificate(certificate.into_param().abi(), ::core::mem::transmute_copy(hashalgorithmname), padding, &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2136,115 +2136,115 @@ impl SymmetricAlgorithmNames {
     pub fn DesCbc() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DesCbc)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DesCbc(&mut result__)).from_abi(result__)
         })
     }
     pub fn DesEcb() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DesEcb)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DesEcb(&mut result__)).from_abi(result__)
         })
     }
     pub fn TripleDesCbc() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TripleDesCbc)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TripleDesCbc(&mut result__)).from_abi(result__)
         })
     }
     pub fn TripleDesEcb() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TripleDesEcb)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TripleDesEcb(&mut result__)).from_abi(result__)
         })
     }
     pub fn Rc2Cbc() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Rc2Cbc)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Rc2Cbc(&mut result__)).from_abi(result__)
         })
     }
     pub fn Rc2Ecb() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Rc2Ecb)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Rc2Ecb(&mut result__)).from_abi(result__)
         })
     }
     pub fn AesCbc() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AesCbc)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AesCbc(&mut result__)).from_abi(result__)
         })
     }
     pub fn AesEcb() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AesEcb)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AesEcb(&mut result__)).from_abi(result__)
         })
     }
     pub fn AesGcm() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AesGcm)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AesGcm(&mut result__)).from_abi(result__)
         })
     }
     pub fn AesCcm() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AesCcm)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AesCcm(&mut result__)).from_abi(result__)
         })
     }
     pub fn AesCbcPkcs7() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AesCbcPkcs7)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AesCbcPkcs7(&mut result__)).from_abi(result__)
         })
     }
     pub fn AesEcbPkcs7() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AesEcbPkcs7)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AesEcbPkcs7(&mut result__)).from_abi(result__)
         })
     }
     pub fn DesCbcPkcs7() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DesCbcPkcs7)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DesCbcPkcs7(&mut result__)).from_abi(result__)
         })
     }
     pub fn DesEcbPkcs7() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DesEcbPkcs7)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.DesEcbPkcs7(&mut result__)).from_abi(result__)
         })
     }
     pub fn TripleDesCbcPkcs7() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TripleDesCbcPkcs7)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TripleDesCbcPkcs7(&mut result__)).from_abi(result__)
         })
     }
     pub fn TripleDesEcbPkcs7() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TripleDesEcbPkcs7)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.TripleDesEcbPkcs7(&mut result__)).from_abi(result__)
         })
     }
     pub fn Rc2CbcPkcs7() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Rc2CbcPkcs7)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Rc2CbcPkcs7(&mut result__)).from_abi(result__)
         })
     }
     pub fn Rc2EcbPkcs7() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Rc2EcbPkcs7)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Rc2EcbPkcs7(&mut result__)).from_abi(result__)
         })
     }
     pub fn Rc4() -> ::windows_core::Result<::windows_core::HSTRING> {
         Self::ISymmetricAlgorithmNamesStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Rc4)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.Rc4(&mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]
@@ -2264,14 +2264,14 @@ impl SymmetricKeyAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).AlgorithmName)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.AlgorithmName(&mut result__)).from_abi(result__)
         }
     }
     pub fn BlockLength(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).BlockLength)(::windows_core::Interface::as_raw(this), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.BlockLength(&mut result__)).from_abi(result__)
         }
     }
     #[doc = "Required features: `\"Storage_Streams\"`"]
@@ -2283,13 +2283,13 @@ impl SymmetricKeyAlgorithmProvider {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateSymmetricKey)(::windows_core::Interface::as_raw(this), keymaterial.try_into_param()?.abi(), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.CreateSymmetricKey(keymaterial.try_into_param()?.abi(), &mut result__)).from_abi(result__)
         }
     }
     pub fn OpenAlgorithm(algorithm: &::windows_core::HSTRING) -> ::windows_core::Result<SymmetricKeyAlgorithmProvider> {
         Self::ISymmetricKeyAlgorithmProviderStatics(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).OpenAlgorithm)(::windows_core::Interface::as_raw(this), ::core::mem::transmute_copy(algorithm), &mut result__).from_abi(result__)
+            ::windows_core::vcall!(this.OpenAlgorithm(::core::mem::transmute_copy(algorithm), &mut result__)).from_abi(result__)
         })
     }
     #[doc(hidden)]

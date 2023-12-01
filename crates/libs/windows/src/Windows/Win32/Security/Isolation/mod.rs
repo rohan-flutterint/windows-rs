@@ -113,7 +113,7 @@ impl IIsolatedAppLauncher {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).Launch)(::windows_core::Interface::as_raw(self), appusermodelid.into_param().abi(), arguments.into_param().abi(), telemetryparameters).ok()
+        ::windows_core::vcall!(self.Launch(appusermodelid.into_param().abi(), arguments.into_param().abi(), telemetryparameters)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IIsolatedAppLauncher, ::windows_core::IUnknown);

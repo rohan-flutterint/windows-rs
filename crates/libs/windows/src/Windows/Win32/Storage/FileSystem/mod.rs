@@ -3915,13 +3915,13 @@ impl IDiskQuotaControl {
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn EnumConnectionPoints(&self) -> ::windows_core::Result<super::super::System::Com::IEnumConnectionPoints> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.EnumConnectionPoints)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.EnumConnectionPoints(&mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_System_Com\"`"]
     #[cfg(feature = "Win32_System_Com")]
     pub unsafe fn FindConnectionPoint(&self, riid: *const ::windows_core::GUID) -> ::windows_core::Result<super::super::System::Com::IConnectionPoint> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).base__.FindConnectionPoint)(::windows_core::Interface::as_raw(self), riid, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.base__.FindConnectionPoint(riid, &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3930,43 +3930,43 @@ impl IDiskQuotaControl {
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), pszpath.into_param().abi(), breadwrite.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Initialize(pszpath.into_param().abi(), breadwrite.into_param().abi())).ok()
     }
     pub unsafe fn SetQuotaState(&self, dwstate: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetQuotaState)(::windows_core::Interface::as_raw(self), dwstate).ok()
+        ::windows_core::vcall!(self.SetQuotaState(dwstate)).ok()
     }
     pub unsafe fn GetQuotaState(&self, pdwstate: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetQuotaState)(::windows_core::Interface::as_raw(self), pdwstate).ok()
+        ::windows_core::vcall!(self.GetQuotaState(pdwstate)).ok()
     }
     pub unsafe fn SetQuotaLogFlags(&self, dwflags: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetQuotaLogFlags)(::windows_core::Interface::as_raw(self), dwflags).ok()
+        ::windows_core::vcall!(self.SetQuotaLogFlags(dwflags)).ok()
     }
     pub unsafe fn GetQuotaLogFlags(&self, pdwflags: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetQuotaLogFlags)(::windows_core::Interface::as_raw(self), pdwflags).ok()
+        ::windows_core::vcall!(self.GetQuotaLogFlags(pdwflags)).ok()
     }
     pub unsafe fn SetDefaultQuotaThreshold(&self, llthreshold: i64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetDefaultQuotaThreshold)(::windows_core::Interface::as_raw(self), llthreshold).ok()
+        ::windows_core::vcall!(self.SetDefaultQuotaThreshold(llthreshold)).ok()
     }
     pub unsafe fn GetDefaultQuotaThreshold(&self, pllthreshold: *mut i64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDefaultQuotaThreshold)(::windows_core::Interface::as_raw(self), pllthreshold).ok()
+        ::windows_core::vcall!(self.GetDefaultQuotaThreshold(pllthreshold)).ok()
     }
     pub unsafe fn GetDefaultQuotaThresholdText<P0>(&self, psztext: P0, cchtext: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetDefaultQuotaThresholdText)(::windows_core::Interface::as_raw(self), psztext.into_param().abi(), cchtext).ok()
+        ::windows_core::vcall!(self.GetDefaultQuotaThresholdText(psztext.into_param().abi(), cchtext)).ok()
     }
     pub unsafe fn SetDefaultQuotaLimit(&self, lllimit: i64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetDefaultQuotaLimit)(::windows_core::Interface::as_raw(self), lllimit).ok()
+        ::windows_core::vcall!(self.SetDefaultQuotaLimit(lllimit)).ok()
     }
     pub unsafe fn GetDefaultQuotaLimit(&self, plllimit: *mut i64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDefaultQuotaLimit)(::windows_core::Interface::as_raw(self), plllimit).ok()
+        ::windows_core::vcall!(self.GetDefaultQuotaLimit(plllimit)).ok()
     }
     pub unsafe fn GetDefaultQuotaLimitText<P0>(&self, psztext: P0, cchtext: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetDefaultQuotaLimitText)(::windows_core::Interface::as_raw(self), psztext.into_param().abi(), cchtext).ok()
+        ::windows_core::vcall!(self.GetDefaultQuotaLimitText(psztext.into_param().abi(), cchtext)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3975,20 +3975,20 @@ impl IDiskQuotaControl {
         P0: ::windows_core::IntoParam<super::super::Foundation::PSID>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AddUserSid)(::windows_core::Interface::as_raw(self), pusersid.into_param().abi(), fnameresolution, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AddUserSid(pusersid.into_param().abi(), fnameresolution, &mut result__)).from_abi(result__)
     }
     pub unsafe fn AddUserName<P0>(&self, pszlogonname: P0, fnameresolution: DISKQUOTA_USERNAME_RESOLVE) -> ::windows_core::Result<IDiskQuotaUser>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).AddUserName)(::windows_core::Interface::as_raw(self), pszlogonname.into_param().abi(), fnameresolution, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.AddUserName(pszlogonname.into_param().abi(), fnameresolution, &mut result__)).from_abi(result__)
     }
     pub unsafe fn DeleteUser<P0>(&self, puser: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IDiskQuotaUser>,
     {
-        (::windows_core::Interface::vtable(self).DeleteUser)(::windows_core::Interface::as_raw(self), puser.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeleteUser(puser.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -3997,35 +3997,35 @@ impl IDiskQuotaControl {
         P0: ::windows_core::IntoParam<super::super::Foundation::PSID>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).FindUserSid)(::windows_core::Interface::as_raw(self), pusersid.into_param().abi(), fnameresolution, &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.FindUserSid(pusersid.into_param().abi(), fnameresolution, &mut result__)).from_abi(result__)
     }
     pub unsafe fn FindUserName<P0>(&self, pszlogonname: P0) -> ::windows_core::Result<IDiskQuotaUser>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).FindUserName)(::windows_core::Interface::as_raw(self), pszlogonname.into_param().abi(), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.FindUserName(pszlogonname.into_param().abi(), &mut result__)).from_abi(result__)
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn CreateEnumUsers(&self, rgpusersids: *mut super::super::Foundation::PSID, cpsids: u32, fnameresolution: DISKQUOTA_USERNAME_RESOLVE, ppenum: *mut ::core::option::Option<IEnumDiskQuotaUsers>) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).CreateEnumUsers)(::windows_core::Interface::as_raw(self), rgpusersids, cpsids, fnameresolution, ::core::mem::transmute(ppenum)).ok()
+        ::windows_core::vcall!(self.CreateEnumUsers(rgpusersids, cpsids, fnameresolution, ::core::mem::transmute(ppenum))).ok()
     }
     pub unsafe fn CreateUserBatch(&self) -> ::windows_core::Result<IDiskQuotaUserBatch> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).CreateUserBatch)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.CreateUserBatch(&mut result__)).from_abi(result__)
     }
     pub unsafe fn InvalidateSidNameCache(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).InvalidateSidNameCache)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.InvalidateSidNameCache()).ok()
     }
     pub unsafe fn GiveUserNameResolutionPriority<P0>(&self, puser: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IDiskQuotaUser>,
     {
-        (::windows_core::Interface::vtable(self).GiveUserNameResolutionPriority)(::windows_core::Interface::as_raw(self), puser.into_param().abi()).ok()
+        ::windows_core::vcall!(self.GiveUserNameResolutionPriority(puser.into_param().abi())).ok()
     }
     pub unsafe fn ShutdownNameResolution(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ShutdownNameResolution)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.ShutdownNameResolution()).ok()
     }
 }
 #[cfg(feature = "Win32_System_Com")]
@@ -4085,7 +4085,7 @@ impl IDiskQuotaEvents {
     where
         P0: ::windows_core::IntoParam<IDiskQuotaUser>,
     {
-        (::windows_core::Interface::vtable(self).OnUserNameChanged)(::windows_core::Interface::as_raw(self), puser.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnUserNameChanged(puser.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDiskQuotaEvents, ::windows_core::IUnknown);
@@ -4106,7 +4106,7 @@ pub struct IDiskQuotaEvents_Vtbl {
 pub struct IDiskQuotaUser(::windows_core::IUnknown);
 impl IDiskQuotaUser {
     pub unsafe fn GetID(&self, pulid: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetID)(::windows_core::Interface::as_raw(self), pulid).ok()
+        ::windows_core::vcall!(self.GetID(pulid)).ok()
     }
     pub unsafe fn GetName<P0, P1, P2>(&self, pszaccountcontainer: P0, cchaccountcontainer: u32, pszlogonname: P1, cchlogonname: u32, pszdisplayname: P2, cchdisplayname: u32) -> ::windows_core::Result<()>
     where
@@ -4114,43 +4114,43 @@ impl IDiskQuotaUser {
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetName)(::windows_core::Interface::as_raw(self), pszaccountcontainer.into_param().abi(), cchaccountcontainer, pszlogonname.into_param().abi(), cchlogonname, pszdisplayname.into_param().abi(), cchdisplayname).ok()
+        ::windows_core::vcall!(self.GetName(pszaccountcontainer.into_param().abi(), cchaccountcontainer, pszlogonname.into_param().abi(), cchlogonname, pszdisplayname.into_param().abi(), cchdisplayname)).ok()
     }
     pub unsafe fn GetSidLength(&self, pdwlength: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetSidLength)(::windows_core::Interface::as_raw(self), pdwlength).ok()
+        ::windows_core::vcall!(self.GetSidLength(pdwlength)).ok()
     }
     pub unsafe fn GetSid(&self, pbsidbuffer: *mut u8, cbsidbuffer: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetSid)(::windows_core::Interface::as_raw(self), pbsidbuffer, cbsidbuffer).ok()
+        ::windows_core::vcall!(self.GetSid(pbsidbuffer, cbsidbuffer)).ok()
     }
     pub unsafe fn GetQuotaThreshold(&self, pllthreshold: *mut i64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetQuotaThreshold)(::windows_core::Interface::as_raw(self), pllthreshold).ok()
+        ::windows_core::vcall!(self.GetQuotaThreshold(pllthreshold)).ok()
     }
     pub unsafe fn GetQuotaThresholdText<P0>(&self, psztext: P0, cchtext: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetQuotaThresholdText)(::windows_core::Interface::as_raw(self), psztext.into_param().abi(), cchtext).ok()
+        ::windows_core::vcall!(self.GetQuotaThresholdText(psztext.into_param().abi(), cchtext)).ok()
     }
     pub unsafe fn GetQuotaLimit(&self, plllimit: *mut i64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetQuotaLimit)(::windows_core::Interface::as_raw(self), plllimit).ok()
+        ::windows_core::vcall!(self.GetQuotaLimit(plllimit)).ok()
     }
     pub unsafe fn GetQuotaLimitText<P0>(&self, psztext: P0, cchtext: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetQuotaLimitText)(::windows_core::Interface::as_raw(self), psztext.into_param().abi(), cchtext).ok()
+        ::windows_core::vcall!(self.GetQuotaLimitText(psztext.into_param().abi(), cchtext)).ok()
     }
     pub unsafe fn GetQuotaUsed(&self, pllused: *mut i64) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetQuotaUsed)(::windows_core::Interface::as_raw(self), pllused).ok()
+        ::windows_core::vcall!(self.GetQuotaUsed(pllused)).ok()
     }
     pub unsafe fn GetQuotaUsedText<P0>(&self, psztext: P0, cchtext: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetQuotaUsedText)(::windows_core::Interface::as_raw(self), psztext.into_param().abi(), cchtext).ok()
+        ::windows_core::vcall!(self.GetQuotaUsedText(psztext.into_param().abi(), cchtext)).ok()
     }
     pub unsafe fn GetQuotaInformation(&self, pbquotainfo: *mut ::core::ffi::c_void, cbquotainfo: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetQuotaInformation)(::windows_core::Interface::as_raw(self), pbquotainfo, cbquotainfo).ok()
+        ::windows_core::vcall!(self.GetQuotaInformation(pbquotainfo, cbquotainfo)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4158,7 +4158,7 @@ impl IDiskQuotaUser {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetQuotaThreshold)(::windows_core::Interface::as_raw(self), llthreshold, fwritethrough.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetQuotaThreshold(llthreshold, fwritethrough.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -4166,13 +4166,13 @@ impl IDiskQuotaUser {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetQuotaLimit)(::windows_core::Interface::as_raw(self), lllimit, fwritethrough.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetQuotaLimit(lllimit, fwritethrough.into_param().abi())).ok()
     }
     pub unsafe fn Invalidate(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Invalidate)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Invalidate()).ok()
     }
     pub unsafe fn GetAccountStatus(&self, pdwstatus: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetAccountStatus)(::windows_core::Interface::as_raw(self), pdwstatus).ok()
+        ::windows_core::vcall!(self.GetAccountStatus(pdwstatus)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDiskQuotaUser, ::windows_core::IUnknown);
@@ -4216,19 +4216,19 @@ impl IDiskQuotaUserBatch {
     where
         P0: ::windows_core::IntoParam<IDiskQuotaUser>,
     {
-        (::windows_core::Interface::vtable(self).Add)(::windows_core::Interface::as_raw(self), puser.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Add(puser.into_param().abi())).ok()
     }
     pub unsafe fn Remove<P0>(&self, puser: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<IDiskQuotaUser>,
     {
-        (::windows_core::Interface::vtable(self).Remove)(::windows_core::Interface::as_raw(self), puser.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Remove(puser.into_param().abi())).ok()
     }
     pub unsafe fn RemoveAll(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).RemoveAll)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.RemoveAll()).ok()
     }
     pub unsafe fn FlushToDisk(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).FlushToDisk)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.FlushToDisk()).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDiskQuotaUserBatch, ::windows_core::IUnknown);
@@ -4252,17 +4252,17 @@ pub struct IDiskQuotaUserBatch_Vtbl {
 pub struct IEnumDiskQuotaUsers(::windows_core::IUnknown);
 impl IEnumDiskQuotaUsers {
     pub unsafe fn Next(&self, cusers: u32, rgusers: *mut ::core::option::Option<IDiskQuotaUser>, pcusersfetched: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Next)(::windows_core::Interface::as_raw(self), cusers, ::core::mem::transmute(rgusers), pcusersfetched).ok()
+        ::windows_core::vcall!(self.Next(cusers, ::core::mem::transmute(rgusers), pcusersfetched)).ok()
     }
     pub unsafe fn Skip(&self, cusers: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Skip)(::windows_core::Interface::as_raw(self), cusers).ok()
+        ::windows_core::vcall!(self.Skip(cusers)).ok()
     }
     pub unsafe fn Reset(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Reset)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Reset()).ok()
     }
     pub unsafe fn Clone(&self) -> ::windows_core::Result<IEnumDiskQuotaUsers> {
         let mut result__ = ::std::mem::zeroed();
-        (::windows_core::Interface::vtable(self).Clone)(::windows_core::Interface::as_raw(self), &mut result__).from_abi(result__)
+        ::windows_core::vcall!(self.Clone(&mut result__)).from_abi(result__)
     }
 }
 ::windows_core::imp::interface_hierarchy!(IEnumDiskQuotaUsers, ::windows_core::IUnknown);

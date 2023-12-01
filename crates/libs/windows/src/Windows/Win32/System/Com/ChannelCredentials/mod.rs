@@ -11,14 +11,14 @@ impl IChannelCredentials {
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
         P3: ::windows_core::IntoParam<super::super::super::Foundation::BOOL>,
     {
-        (::windows_core::Interface::vtable(self).SetWindowsCredential)(::windows_core::Interface::as_raw(self), domain.into_param().abi(), username.into_param().abi(), password.into_param().abi(), impersonationlevel, allowntlm.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetWindowsCredential(domain.into_param().abi(), username.into_param().abi(), password.into_param().abi(), impersonationlevel, allowntlm.into_param().abi())).ok()
     }
     pub unsafe fn SetUserNameCredential<P0, P1>(&self, username: P0, password: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::BSTR>,
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetUserNameCredential)(::windows_core::Interface::as_raw(self), username.into_param().abi(), password.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetUserNameCredential(username.into_param().abi(), password.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -28,7 +28,7 @@ impl IChannelCredentials {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetClientCertificateFromStore)(::windows_core::Interface::as_raw(self), storelocation.into_param().abi(), storename.into_param().abi(), findyype.into_param().abi(), ::core::mem::transmute(findvalue)).ok()
+        ::windows_core::vcall!(self.SetClientCertificateFromStore(storelocation.into_param().abi(), storename.into_param().abi(), findyype.into_param().abi(), ::core::mem::transmute(findvalue))).ok()
     }
     pub unsafe fn SetClientCertificateFromStoreByName<P0, P1, P2>(&self, subjectname: P0, storelocation: P1, storename: P2) -> ::windows_core::Result<()>
     where
@@ -36,7 +36,7 @@ impl IChannelCredentials {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetClientCertificateFromStoreByName)(::windows_core::Interface::as_raw(self), subjectname.into_param().abi(), storelocation.into_param().abi(), storename.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetClientCertificateFromStoreByName(subjectname.into_param().abi(), storelocation.into_param().abi(), storename.into_param().abi())).ok()
     }
     pub unsafe fn SetClientCertificateFromFile<P0, P1, P2>(&self, filename: P0, password: P1, keystorageflags: P2) -> ::windows_core::Result<()>
     where
@@ -44,7 +44,7 @@ impl IChannelCredentials {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetClientCertificateFromFile)(::windows_core::Interface::as_raw(self), filename.into_param().abi(), password.into_param().abi(), keystorageflags.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetClientCertificateFromFile(filename.into_param().abi(), password.into_param().abi(), keystorageflags.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`, `\"Win32_System_Ole\"`, `\"Win32_System_Variant\"`"]
     #[cfg(all(feature = "Win32_Foundation", feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
@@ -54,7 +54,7 @@ impl IChannelCredentials {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetDefaultServiceCertificateFromStore)(::windows_core::Interface::as_raw(self), storelocation.into_param().abi(), storename.into_param().abi(), findtype.into_param().abi(), ::core::mem::transmute(findvalue)).ok()
+        ::windows_core::vcall!(self.SetDefaultServiceCertificateFromStore(storelocation.into_param().abi(), storename.into_param().abi(), findtype.into_param().abi(), ::core::mem::transmute(findvalue))).ok()
     }
     pub unsafe fn SetDefaultServiceCertificateFromStoreByName<P0, P1, P2>(&self, subjectname: P0, storelocation: P1, storename: P2) -> ::windows_core::Result<()>
     where
@@ -62,7 +62,7 @@ impl IChannelCredentials {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetDefaultServiceCertificateFromStoreByName)(::windows_core::Interface::as_raw(self), subjectname.into_param().abi(), storelocation.into_param().abi(), storename.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetDefaultServiceCertificateFromStoreByName(subjectname.into_param().abi(), storelocation.into_param().abi(), storename.into_param().abi())).ok()
     }
     pub unsafe fn SetDefaultServiceCertificateFromFile<P0, P1, P2>(&self, filename: P0, password: P1, keystorageflags: P2) -> ::windows_core::Result<()>
     where
@@ -70,7 +70,7 @@ impl IChannelCredentials {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetDefaultServiceCertificateFromFile)(::windows_core::Interface::as_raw(self), filename.into_param().abi(), password.into_param().abi(), keystorageflags.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetDefaultServiceCertificateFromFile(filename.into_param().abi(), password.into_param().abi(), keystorageflags.into_param().abi())).ok()
     }
     pub unsafe fn SetServiceCertificateAuthentication<P0, P1, P2>(&self, storelocation: P0, revocationmode: P1, certificatevalidationmode: P2) -> ::windows_core::Result<()>
     where
@@ -78,7 +78,7 @@ impl IChannelCredentials {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetServiceCertificateAuthentication)(::windows_core::Interface::as_raw(self), storelocation.into_param().abi(), revocationmode.into_param().abi(), certificatevalidationmode.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetServiceCertificateAuthentication(storelocation.into_param().abi(), revocationmode.into_param().abi(), certificatevalidationmode.into_param().abi())).ok()
     }
     pub unsafe fn SetIssuedToken<P0, P1, P2>(&self, localissueraddres: P0, localissuerbindingtype: P1, localissuerbinding: P2) -> ::windows_core::Result<()>
     where
@@ -86,7 +86,7 @@ impl IChannelCredentials {
         P1: ::windows_core::IntoParam<::windows_core::BSTR>,
         P2: ::windows_core::IntoParam<::windows_core::BSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetIssuedToken)(::windows_core::Interface::as_raw(self), localissueraddres.into_param().abi(), localissuerbindingtype.into_param().abi(), localissuerbinding.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetIssuedToken(localissueraddres.into_param().abi(), localissuerbindingtype.into_param().abi(), localissuerbinding.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IChannelCredentials, ::windows_core::IUnknown, super::IDispatch);

@@ -25,7 +25,7 @@ impl CorePerceptionAutomation {
     where
         P0: ::windows_core::TryIntoParam<super::super::super::Foundation::IGetActivationFactory>,
     {
-        Self::ICorePerceptionAutomationStatics(|this| unsafe { (::windows_core::Interface::vtable(this).SetActivationFactoryProvider)(::windows_core::Interface::as_raw(this), provider.try_into_param()?.abi()).ok() })
+        Self::ICorePerceptionAutomationStatics(|this| unsafe { ::windows_core::vcall!(this.SetActivationFactoryProvider(provider.try_into_param()?.abi())).ok() })
     }
     #[doc(hidden)]
     pub fn ICorePerceptionAutomationStatics<R, F: FnOnce(&ICorePerceptionAutomationStatics) -> ::windows_core::Result<R>>(callback: F) -> ::windows_core::Result<R> {

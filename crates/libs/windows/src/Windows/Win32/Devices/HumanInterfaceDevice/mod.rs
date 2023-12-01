@@ -459,15 +459,15 @@ impl IDirectInput2A {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.CreateDevice)(::windows_core::Interface::as_raw(self), param0, ::core::mem::transmute(param1), param2.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.CreateDevice(param0, ::core::mem::transmute(param1), param2.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumDevices(&self, param0: u32, param1: LPDIENUMDEVICESCALLBACKA, param2: *mut ::core::ffi::c_void, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.EnumDevices)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.base__.EnumDevices(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn GetDeviceStatus(&self, param0: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetDeviceStatus)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.GetDeviceStatus(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -475,7 +475,7 @@ impl IDirectInput2A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -483,13 +483,13 @@ impl IDirectInput2A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).base__.Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.Initialize(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn FindDevice<P0>(&self, param0: *const ::windows_core::GUID, param1: P0, param2: *mut ::windows_core::GUID) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).FindDevice)(::windows_core::Interface::as_raw(self), param0, param1.into_param().abi(), param2).ok()
+        ::windows_core::vcall!(self.FindDevice(param0, param1.into_param().abi(), param2)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInput2A, ::windows_core::IUnknown, IDirectInputA);
@@ -513,15 +513,15 @@ impl IDirectInput2W {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.CreateDevice)(::windows_core::Interface::as_raw(self), param0, ::core::mem::transmute(param1), param2.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.CreateDevice(param0, ::core::mem::transmute(param1), param2.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumDevices(&self, param0: u32, param1: LPDIENUMDEVICESCALLBACKW, param2: *mut ::core::ffi::c_void, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.EnumDevices)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.base__.EnumDevices(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn GetDeviceStatus(&self, param0: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetDeviceStatus)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.GetDeviceStatus(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -529,7 +529,7 @@ impl IDirectInput2W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -537,13 +537,13 @@ impl IDirectInput2W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).base__.Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.Initialize(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn FindDevice<P0>(&self, param0: *const ::windows_core::GUID, param1: P0, param2: *mut ::windows_core::GUID) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).FindDevice)(::windows_core::Interface::as_raw(self), param0, param1.into_param().abi(), param2).ok()
+        ::windows_core::vcall!(self.FindDevice(param0, param1.into_param().abi(), param2)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInput2W, ::windows_core::IUnknown, IDirectInputW);
@@ -567,15 +567,15 @@ impl IDirectInput7A {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.CreateDevice)(::windows_core::Interface::as_raw(self), param0, ::core::mem::transmute(param1), param2.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.CreateDevice(param0, ::core::mem::transmute(param1), param2.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumDevices(&self, param0: u32, param1: LPDIENUMDEVICESCALLBACKA, param2: *mut ::core::ffi::c_void, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.EnumDevices)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.base__.base__.EnumDevices(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn GetDeviceStatus(&self, param0: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetDeviceStatus)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.base__.GetDeviceStatus(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -583,7 +583,7 @@ impl IDirectInput7A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.base__.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -591,19 +591,19 @@ impl IDirectInput7A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.base__.Initialize(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn FindDevice<P0>(&self, param0: *const ::windows_core::GUID, param1: P0, param2: *mut ::windows_core::GUID) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.FindDevice)(::windows_core::Interface::as_raw(self), param0, param1.into_param().abi(), param2).ok()
+        ::windows_core::vcall!(self.base__.FindDevice(param0, param1.into_param().abi(), param2)).ok()
     }
     pub unsafe fn CreateDeviceEx<P0>(&self, param0: *const ::windows_core::GUID, param1: *const ::windows_core::GUID, param2: *mut *mut ::core::ffi::c_void, param3: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateDeviceEx)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateDeviceEx(param0, param1, param2, param3.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInput7A, ::windows_core::IUnknown, IDirectInputA, IDirectInput2A);
@@ -627,15 +627,15 @@ impl IDirectInput7W {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.CreateDevice)(::windows_core::Interface::as_raw(self), param0, ::core::mem::transmute(param1), param2.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.CreateDevice(param0, ::core::mem::transmute(param1), param2.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumDevices(&self, param0: u32, param1: LPDIENUMDEVICESCALLBACKW, param2: *mut ::core::ffi::c_void, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.EnumDevices)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.base__.base__.EnumDevices(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn GetDeviceStatus(&self, param0: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetDeviceStatus)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.base__.GetDeviceStatus(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -643,7 +643,7 @@ impl IDirectInput7W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.base__.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -651,19 +651,19 @@ impl IDirectInput7W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.base__.Initialize(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn FindDevice<P0>(&self, param0: *const ::windows_core::GUID, param1: P0, param2: *mut ::windows_core::GUID) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).base__.FindDevice)(::windows_core::Interface::as_raw(self), param0, param1.into_param().abi(), param2).ok()
+        ::windows_core::vcall!(self.base__.FindDevice(param0, param1.into_param().abi(), param2)).ok()
     }
     pub unsafe fn CreateDeviceEx<P0>(&self, param0: *const ::windows_core::GUID, param1: *const ::windows_core::GUID, param2: *mut *mut ::core::ffi::c_void, param3: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateDeviceEx)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateDeviceEx(param0, param1, param2, param3.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInput7W, ::windows_core::IUnknown, IDirectInputW, IDirectInput2W);
@@ -687,15 +687,15 @@ impl IDirectInput8A {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateDevice)(::windows_core::Interface::as_raw(self), param0, ::core::mem::transmute(param1), param2.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateDevice(param0, ::core::mem::transmute(param1), param2.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumDevices(&self, param0: u32, param1: LPDIENUMDEVICESCALLBACKA, param2: *mut ::core::ffi::c_void, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumDevices)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.EnumDevices(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn GetDeviceStatus(&self, param0: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceStatus)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetDeviceStatus(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -703,7 +703,7 @@ impl IDirectInput8A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -711,13 +711,13 @@ impl IDirectInput8A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.Initialize(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn FindDevice<P0>(&self, param0: *const ::windows_core::GUID, param1: P0, param2: *mut ::windows_core::GUID) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).FindDevice)(::windows_core::Interface::as_raw(self), param0, param1.into_param().abi(), param2).ok()
+        ::windows_core::vcall!(self.FindDevice(param0, param1.into_param().abi(), param2)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -725,12 +725,12 @@ impl IDirectInput8A {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumDevicesBySemantics)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2, param3, param4).ok()
+        ::windows_core::vcall!(self.EnumDevicesBySemantics(param0.into_param().abi(), param1, param2, param3, param4)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn ConfigureDevices(&self, param0: LPDICONFIGUREDEVICESCALLBACK, param1: *mut DICONFIGUREDEVICESPARAMSA, param2: u32, param3: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConfigureDevices)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.ConfigureDevices(param0, param1, param2, param3)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInput8A, ::windows_core::IUnknown);
@@ -776,15 +776,15 @@ impl IDirectInput8W {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateDevice)(::windows_core::Interface::as_raw(self), param0, ::core::mem::transmute(param1), param2.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateDevice(param0, ::core::mem::transmute(param1), param2.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumDevices(&self, param0: u32, param1: LPDIENUMDEVICESCALLBACKW, param2: *mut ::core::ffi::c_void, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumDevices)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.EnumDevices(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn GetDeviceStatus(&self, param0: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceStatus)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetDeviceStatus(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -792,7 +792,7 @@ impl IDirectInput8W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -800,13 +800,13 @@ impl IDirectInput8W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.Initialize(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn FindDevice<P0>(&self, param0: *const ::windows_core::GUID, param1: P0, param2: *mut ::windows_core::GUID) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).FindDevice)(::windows_core::Interface::as_raw(self), param0, param1.into_param().abi(), param2).ok()
+        ::windows_core::vcall!(self.FindDevice(param0, param1.into_param().abi(), param2)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -814,12 +814,12 @@ impl IDirectInput8W {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumDevicesBySemantics)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2, param3, param4).ok()
+        ::windows_core::vcall!(self.EnumDevicesBySemantics(param0.into_param().abi(), param1, param2, param3, param4)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn ConfigureDevices(&self, param0: LPDICONFIGUREDEVICESCALLBACK, param1: *mut DICONFIGUREDEVICESPARAMSW, param2: u32, param3: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).ConfigureDevices)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.ConfigureDevices(param0, param1, param2, param3)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInput8W, ::windows_core::IUnknown);
@@ -865,15 +865,15 @@ impl IDirectInputA {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateDevice)(::windows_core::Interface::as_raw(self), param0, ::core::mem::transmute(param1), param2.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateDevice(param0, ::core::mem::transmute(param1), param2.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumDevices(&self, param0: u32, param1: LPDIENUMDEVICESCALLBACKA, param2: *mut ::core::ffi::c_void, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumDevices)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.EnumDevices(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn GetDeviceStatus(&self, param0: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceStatus)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetDeviceStatus(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -881,7 +881,7 @@ impl IDirectInputA {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -889,7 +889,7 @@ impl IDirectInputA {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.Initialize(param0.into_param().abi(), param1)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputA, ::windows_core::IUnknown);
@@ -923,33 +923,33 @@ pub struct IDirectInputA_Vtbl {
 pub struct IDirectInputDevice2A(::windows_core::IUnknown);
 impl IDirectInputDevice2A {
     pub unsafe fn GetCapabilities(&self, param0: *mut DIDEVCAPS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetCapabilities)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.GetCapabilities(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumObjects(&self, param0: LPDIENUMDEVICEOBJECTSCALLBACKA, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.EnumObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.EnumObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.GetProperty(param0, param1)).ok()
     }
     pub unsafe fn SetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.SetProperty(param0, param1)).ok()
     }
     pub unsafe fn Acquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Acquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Acquire()).ok()
     }
     pub unsafe fn Unacquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Unacquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Unacquire()).ok()
     }
     pub unsafe fn GetDeviceState(&self, param0: u32, param1: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetDeviceState)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.GetDeviceState(param0, param1)).ok()
     }
     pub unsafe fn GetDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.base__.GetDeviceData(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn SetDataFormat(&self, param0: *mut DIDATAFORMAT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetDataFormat)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.SetDataFormat(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -957,7 +957,7 @@ impl IDirectInputDevice2A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetEventNotification)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetEventNotification(param0.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -965,13 +965,13 @@ impl IDirectInputDevice2A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetCooperativeLevel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.SetCooperativeLevel(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn GetObjectInfo(&self, param0: *mut DIDEVICEOBJECTINSTANCEA, param1: u32, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetObjectInfo)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.GetObjectInfo(param0, param1, param2)).ok()
     }
     pub unsafe fn GetDeviceInfo(&self, param0: *mut DIDEVICEINSTANCEA) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetDeviceInfo)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.GetDeviceInfo(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -979,7 +979,7 @@ impl IDirectInputDevice2A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -987,41 +987,41 @@ impl IDirectInputDevice2A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).base__.Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.base__.Initialize(param0.into_param().abi(), param1, param2)).ok()
     }
     pub unsafe fn CreateEffect<P0>(&self, param0: *const ::windows_core::GUID, param1: *mut DIEFFECT, param2: *mut ::core::option::Option<IDirectInputEffect>, param3: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateEffect)(::windows_core::Interface::as_raw(self), param0, param1, ::core::mem::transmute(param2), param3.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateEffect(param0, param1, ::core::mem::transmute(param2), param3.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumEffects(&self, param0: LPDIENUMEFFECTSCALLBACKA, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumEffects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumEffects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetEffectInfo(&self, param0: *mut DIEFFECTINFOA, param1: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetEffectInfo)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetEffectInfo(param0, param1)).ok()
     }
     pub unsafe fn GetForceFeedbackState(&self, param0: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetForceFeedbackState)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetForceFeedbackState(param0)).ok()
     }
     pub unsafe fn SendForceFeedbackCommand(&self, param0: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendForceFeedbackCommand)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.SendForceFeedbackCommand(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumCreatedEffectObjects(&self, param0: LPDIENUMCREATEDEFFECTOBJECTSCALLBACK, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumCreatedEffectObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumCreatedEffectObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn Escape(&self, param0: *mut DIEFFESCAPE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Escape)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.Escape(param0)).ok()
     }
     pub unsafe fn Poll(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Poll)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Poll()).ok()
     }
     pub unsafe fn SendDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.SendDeviceData(param0, param1, param2, param3)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputDevice2A, ::windows_core::IUnknown, IDirectInputDeviceA);
@@ -1056,33 +1056,33 @@ pub struct IDirectInputDevice2A_Vtbl {
 pub struct IDirectInputDevice2W(::windows_core::IUnknown);
 impl IDirectInputDevice2W {
     pub unsafe fn GetCapabilities(&self, param0: *mut DIDEVCAPS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetCapabilities)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.GetCapabilities(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumObjects(&self, param0: LPDIENUMDEVICEOBJECTSCALLBACKW, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.EnumObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.EnumObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.GetProperty(param0, param1)).ok()
     }
     pub unsafe fn SetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.SetProperty(param0, param1)).ok()
     }
     pub unsafe fn Acquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Acquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Acquire()).ok()
     }
     pub unsafe fn Unacquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Unacquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Unacquire()).ok()
     }
     pub unsafe fn GetDeviceState(&self, param0: u32, param1: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetDeviceState)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.GetDeviceState(param0, param1)).ok()
     }
     pub unsafe fn GetDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.base__.GetDeviceData(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn SetDataFormat(&self, param0: *mut DIDATAFORMAT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SetDataFormat)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.SetDataFormat(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1090,7 +1090,7 @@ impl IDirectInputDevice2W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetEventNotification)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.SetEventNotification(param0.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1098,13 +1098,13 @@ impl IDirectInputDevice2W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.SetCooperativeLevel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.SetCooperativeLevel(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn GetObjectInfo(&self, param0: *mut DIDEVICEOBJECTINSTANCEW, param1: u32, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetObjectInfo)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.GetObjectInfo(param0, param1, param2)).ok()
     }
     pub unsafe fn GetDeviceInfo(&self, param0: *mut DIDEVICEINSTANCEW) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetDeviceInfo)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.GetDeviceInfo(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1112,7 +1112,7 @@ impl IDirectInputDevice2W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1120,41 +1120,41 @@ impl IDirectInputDevice2W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).base__.Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.base__.Initialize(param0.into_param().abi(), param1, param2)).ok()
     }
     pub unsafe fn CreateEffect<P0>(&self, param0: *const ::windows_core::GUID, param1: *mut DIEFFECT, param2: *mut ::core::option::Option<IDirectInputEffect>, param3: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateEffect)(::windows_core::Interface::as_raw(self), param0, param1, ::core::mem::transmute(param2), param3.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateEffect(param0, param1, ::core::mem::transmute(param2), param3.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumEffects(&self, param0: LPDIENUMEFFECTSCALLBACKW, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumEffects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumEffects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetEffectInfo(&self, param0: *mut DIEFFECTINFOW, param1: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetEffectInfo)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetEffectInfo(param0, param1)).ok()
     }
     pub unsafe fn GetForceFeedbackState(&self, param0: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetForceFeedbackState)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetForceFeedbackState(param0)).ok()
     }
     pub unsafe fn SendForceFeedbackCommand(&self, param0: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendForceFeedbackCommand)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.SendForceFeedbackCommand(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumCreatedEffectObjects(&self, param0: LPDIENUMCREATEDEFFECTOBJECTSCALLBACK, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumCreatedEffectObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumCreatedEffectObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn Escape(&self, param0: *mut DIEFFESCAPE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Escape)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.Escape(param0)).ok()
     }
     pub unsafe fn Poll(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Poll)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Poll()).ok()
     }
     pub unsafe fn SendDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.SendDeviceData(param0, param1, param2, param3)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputDevice2W, ::windows_core::IUnknown, IDirectInputDeviceW);
@@ -1189,33 +1189,33 @@ pub struct IDirectInputDevice2W_Vtbl {
 pub struct IDirectInputDevice7A(::windows_core::IUnknown);
 impl IDirectInputDevice7A {
     pub unsafe fn GetCapabilities(&self, param0: *mut DIDEVCAPS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetCapabilities)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.base__.GetCapabilities(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumObjects(&self, param0: LPDIENUMDEVICEOBJECTSCALLBACKA, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.EnumObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.base__.EnumObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.base__.GetProperty(param0, param1)).ok()
     }
     pub unsafe fn SetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.SetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.base__.SetProperty(param0, param1)).ok()
     }
     pub unsafe fn Acquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.Acquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.base__.Acquire()).ok()
     }
     pub unsafe fn Unacquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.Unacquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.base__.Unacquire()).ok()
     }
     pub unsafe fn GetDeviceState(&self, param0: u32, param1: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetDeviceState)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.base__.GetDeviceState(param0, param1)).ok()
     }
     pub unsafe fn GetDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.base__.base__.GetDeviceData(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn SetDataFormat(&self, param0: *mut DIDATAFORMAT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.SetDataFormat)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.base__.SetDataFormat(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1223,7 +1223,7 @@ impl IDirectInputDevice7A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.SetEventNotification)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.SetEventNotification(param0.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1231,13 +1231,13 @@ impl IDirectInputDevice7A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.SetCooperativeLevel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.base__.SetCooperativeLevel(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn GetObjectInfo(&self, param0: *mut DIDEVICEOBJECTINSTANCEA, param1: u32, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetObjectInfo)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.base__.GetObjectInfo(param0, param1, param2)).ok()
     }
     pub unsafe fn GetDeviceInfo(&self, param0: *mut DIDEVICEINSTANCEA) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetDeviceInfo)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.base__.GetDeviceInfo(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1245,7 +1245,7 @@ impl IDirectInputDevice7A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.base__.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1253,41 +1253,41 @@ impl IDirectInputDevice7A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.base__.base__.Initialize(param0.into_param().abi(), param1, param2)).ok()
     }
     pub unsafe fn CreateEffect<P0>(&self, param0: *const ::windows_core::GUID, param1: *mut DIEFFECT, param2: *mut ::core::option::Option<IDirectInputEffect>, param3: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.CreateEffect)(::windows_core::Interface::as_raw(self), param0, param1, ::core::mem::transmute(param2), param3.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.CreateEffect(param0, param1, ::core::mem::transmute(param2), param3.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumEffects(&self, param0: LPDIENUMEFFECTSCALLBACKA, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.EnumEffects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.EnumEffects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetEffectInfo(&self, param0: *mut DIEFFECTINFOA, param1: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetEffectInfo)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.GetEffectInfo(param0, param1)).ok()
     }
     pub unsafe fn GetForceFeedbackState(&self, param0: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetForceFeedbackState)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.GetForceFeedbackState(param0)).ok()
     }
     pub unsafe fn SendForceFeedbackCommand(&self, param0: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SendForceFeedbackCommand)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.SendForceFeedbackCommand(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumCreatedEffectObjects(&self, param0: LPDIENUMCREATEDEFFECTOBJECTSCALLBACK, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.EnumCreatedEffectObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.EnumCreatedEffectObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn Escape(&self, param0: *mut DIEFFESCAPE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Escape)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.Escape(param0)).ok()
     }
     pub unsafe fn Poll(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Poll)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Poll()).ok()
     }
     pub unsafe fn SendDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SendDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.base__.SendDeviceData(param0, param1, param2, param3)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1295,13 +1295,13 @@ impl IDirectInputDevice7A {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumEffectsInFile)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2, param3).ok()
+        ::windows_core::vcall!(self.EnumEffectsInFile(param0.into_param().abi(), param1, param2, param3)).ok()
     }
     pub unsafe fn WriteEffectToFile<P0>(&self, param0: P0, param1: u32, param2: *mut DIFILEEFFECT, param3: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).WriteEffectToFile)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2, param3).ok()
+        ::windows_core::vcall!(self.WriteEffectToFile(param0.into_param().abi(), param1, param2, param3)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputDevice7A, ::windows_core::IUnknown, IDirectInputDeviceA, IDirectInputDevice2A);
@@ -1326,33 +1326,33 @@ pub struct IDirectInputDevice7A_Vtbl {
 pub struct IDirectInputDevice7W(::windows_core::IUnknown);
 impl IDirectInputDevice7W {
     pub unsafe fn GetCapabilities(&self, param0: *mut DIDEVCAPS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetCapabilities)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.base__.GetCapabilities(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumObjects(&self, param0: LPDIENUMDEVICEOBJECTSCALLBACKW, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.EnumObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.base__.EnumObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.base__.GetProperty(param0, param1)).ok()
     }
     pub unsafe fn SetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.SetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.base__.SetProperty(param0, param1)).ok()
     }
     pub unsafe fn Acquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.Acquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.base__.Acquire()).ok()
     }
     pub unsafe fn Unacquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.Unacquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.base__.Unacquire()).ok()
     }
     pub unsafe fn GetDeviceState(&self, param0: u32, param1: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetDeviceState)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.base__.GetDeviceState(param0, param1)).ok()
     }
     pub unsafe fn GetDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.base__.base__.GetDeviceData(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn SetDataFormat(&self, param0: *mut DIDATAFORMAT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.SetDataFormat)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.base__.SetDataFormat(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1360,7 +1360,7 @@ impl IDirectInputDevice7W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.SetEventNotification)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.base__.SetEventNotification(param0.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1368,13 +1368,13 @@ impl IDirectInputDevice7W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.SetCooperativeLevel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.base__.SetCooperativeLevel(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn GetObjectInfo(&self, param0: *mut DIDEVICEOBJECTINSTANCEW, param1: u32, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetObjectInfo)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.base__.GetObjectInfo(param0, param1, param2)).ok()
     }
     pub unsafe fn GetDeviceInfo(&self, param0: *mut DIDEVICEINSTANCEW) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.base__.GetDeviceInfo)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.base__.GetDeviceInfo(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1382,7 +1382,7 @@ impl IDirectInputDevice7W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.base__.base__.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1390,41 +1390,41 @@ impl IDirectInputDevice7W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).base__.base__.Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.base__.base__.Initialize(param0.into_param().abi(), param1, param2)).ok()
     }
     pub unsafe fn CreateEffect<P0>(&self, param0: *const ::windows_core::GUID, param1: *mut DIEFFECT, param2: *mut ::core::option::Option<IDirectInputEffect>, param3: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).base__.CreateEffect)(::windows_core::Interface::as_raw(self), param0, param1, ::core::mem::transmute(param2), param3.into_param().abi()).ok()
+        ::windows_core::vcall!(self.base__.CreateEffect(param0, param1, ::core::mem::transmute(param2), param3.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumEffects(&self, param0: LPDIENUMEFFECTSCALLBACKW, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.EnumEffects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.EnumEffects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetEffectInfo(&self, param0: *mut DIEFFECTINFOW, param1: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetEffectInfo)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.base__.GetEffectInfo(param0, param1)).ok()
     }
     pub unsafe fn GetForceFeedbackState(&self, param0: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.GetForceFeedbackState)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.GetForceFeedbackState(param0)).ok()
     }
     pub unsafe fn SendForceFeedbackCommand(&self, param0: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SendForceFeedbackCommand)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.SendForceFeedbackCommand(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumCreatedEffectObjects(&self, param0: LPDIENUMCREATEDEFFECTOBJECTSCALLBACK, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.EnumCreatedEffectObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.base__.EnumCreatedEffectObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn Escape(&self, param0: *mut DIEFFESCAPE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Escape)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.base__.Escape(param0)).ok()
     }
     pub unsafe fn Poll(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.Poll)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.base__.Poll()).ok()
     }
     pub unsafe fn SendDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).base__.SendDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.base__.SendDeviceData(param0, param1, param2, param3)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1432,13 +1432,13 @@ impl IDirectInputDevice7W {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumEffectsInFile)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2, param3).ok()
+        ::windows_core::vcall!(self.EnumEffectsInFile(param0.into_param().abi(), param1, param2, param3)).ok()
     }
     pub unsafe fn WriteEffectToFile<P0>(&self, param0: P0, param1: u32, param2: *mut DIFILEEFFECT, param3: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).WriteEffectToFile)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2, param3).ok()
+        ::windows_core::vcall!(self.WriteEffectToFile(param0.into_param().abi(), param1, param2, param3)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputDevice7W, ::windows_core::IUnknown, IDirectInputDeviceW, IDirectInputDevice2W);
@@ -1463,33 +1463,33 @@ pub struct IDirectInputDevice7W_Vtbl {
 pub struct IDirectInputDevice8A(::windows_core::IUnknown);
 impl IDirectInputDevice8A {
     pub unsafe fn GetCapabilities(&self, param0: *mut DIDEVCAPS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCapabilities)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetCapabilities(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumObjects(&self, param0: LPDIENUMDEVICEOBJECTSCALLBACKA, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetProperty(param0, param1)).ok()
     }
     pub unsafe fn SetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.SetProperty(param0, param1)).ok()
     }
     pub unsafe fn Acquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Acquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Acquire()).ok()
     }
     pub unsafe fn Unacquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unacquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Unacquire()).ok()
     }
     pub unsafe fn GetDeviceState(&self, param0: u32, param1: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceState)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetDeviceState(param0, param1)).ok()
     }
     pub unsafe fn GetDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.GetDeviceData(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn SetDataFormat(&self, param0: *mut DIDATAFORMAT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetDataFormat)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.SetDataFormat(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1497,7 +1497,7 @@ impl IDirectInputDevice8A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).SetEventNotification)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetEventNotification(param0.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1505,13 +1505,13 @@ impl IDirectInputDevice8A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).SetCooperativeLevel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.SetCooperativeLevel(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn GetObjectInfo(&self, param0: *mut DIDEVICEOBJECTINSTANCEA, param1: u32, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetObjectInfo)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.GetObjectInfo(param0, param1, param2)).ok()
     }
     pub unsafe fn GetDeviceInfo(&self, param0: *mut DIDEVICEINSTANCEA) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceInfo)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetDeviceInfo(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1519,7 +1519,7 @@ impl IDirectInputDevice8A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1527,41 +1527,41 @@ impl IDirectInputDevice8A {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.Initialize(param0.into_param().abi(), param1, param2)).ok()
     }
     pub unsafe fn CreateEffect<P0>(&self, param0: *const ::windows_core::GUID, param1: *mut DIEFFECT, param2: *mut ::core::option::Option<IDirectInputEffect>, param3: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateEffect)(::windows_core::Interface::as_raw(self), param0, param1, ::core::mem::transmute(param2), param3.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateEffect(param0, param1, ::core::mem::transmute(param2), param3.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumEffects(&self, param0: LPDIENUMEFFECTSCALLBACKA, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumEffects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumEffects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetEffectInfo(&self, param0: *mut DIEFFECTINFOA, param1: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetEffectInfo)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetEffectInfo(param0, param1)).ok()
     }
     pub unsafe fn GetForceFeedbackState(&self, param0: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetForceFeedbackState)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetForceFeedbackState(param0)).ok()
     }
     pub unsafe fn SendForceFeedbackCommand(&self, param0: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendForceFeedbackCommand)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.SendForceFeedbackCommand(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumCreatedEffectObjects(&self, param0: LPDIENUMCREATEDEFFECTOBJECTSCALLBACK, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumCreatedEffectObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumCreatedEffectObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn Escape(&self, param0: *mut DIEFFESCAPE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Escape)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.Escape(param0)).ok()
     }
     pub unsafe fn Poll(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Poll)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Poll()).ok()
     }
     pub unsafe fn SendDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.SendDeviceData(param0, param1, param2, param3)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1569,13 +1569,13 @@ impl IDirectInputDevice8A {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumEffectsInFile)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2, param3).ok()
+        ::windows_core::vcall!(self.EnumEffectsInFile(param0.into_param().abi(), param1, param2, param3)).ok()
     }
     pub unsafe fn WriteEffectToFile<P0>(&self, param0: P0, param1: u32, param2: *mut DIFILEEFFECT, param3: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).WriteEffectToFile)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2, param3).ok()
+        ::windows_core::vcall!(self.WriteEffectToFile(param0.into_param().abi(), param1, param2, param3)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1583,7 +1583,7 @@ impl IDirectInputDevice8A {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).BuildActionMap)(::windows_core::Interface::as_raw(self), param0, param1.into_param().abi(), param2).ok()
+        ::windows_core::vcall!(self.BuildActionMap(param0, param1.into_param().abi(), param2)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1591,12 +1591,12 @@ impl IDirectInputDevice8A {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetActionMap)(::windows_core::Interface::as_raw(self), param0, param1.into_param().abi(), param2).ok()
+        ::windows_core::vcall!(self.SetActionMap(param0, param1.into_param().abi(), param2)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetImageInfo(&self, param0: *mut DIDEVICEIMAGEINFOHEADERA) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetImageInfo)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetImageInfo(param0)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputDevice8A, ::windows_core::IUnknown);
@@ -1678,33 +1678,33 @@ pub struct IDirectInputDevice8A_Vtbl {
 pub struct IDirectInputDevice8W(::windows_core::IUnknown);
 impl IDirectInputDevice8W {
     pub unsafe fn GetCapabilities(&self, param0: *mut DIDEVCAPS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCapabilities)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetCapabilities(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumObjects(&self, param0: LPDIENUMDEVICEOBJECTSCALLBACKW, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetProperty(param0, param1)).ok()
     }
     pub unsafe fn SetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.SetProperty(param0, param1)).ok()
     }
     pub unsafe fn Acquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Acquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Acquire()).ok()
     }
     pub unsafe fn Unacquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unacquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Unacquire()).ok()
     }
     pub unsafe fn GetDeviceState(&self, param0: u32, param1: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceState)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetDeviceState(param0, param1)).ok()
     }
     pub unsafe fn GetDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.GetDeviceData(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn SetDataFormat(&self, param0: *mut DIDATAFORMAT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetDataFormat)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.SetDataFormat(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1712,7 +1712,7 @@ impl IDirectInputDevice8W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).SetEventNotification)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetEventNotification(param0.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1720,13 +1720,13 @@ impl IDirectInputDevice8W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).SetCooperativeLevel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.SetCooperativeLevel(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn GetObjectInfo(&self, param0: *mut DIDEVICEOBJECTINSTANCEW, param1: u32, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetObjectInfo)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.GetObjectInfo(param0, param1, param2)).ok()
     }
     pub unsafe fn GetDeviceInfo(&self, param0: *mut DIDEVICEINSTANCEW) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceInfo)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetDeviceInfo(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1734,7 +1734,7 @@ impl IDirectInputDevice8W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1742,41 +1742,41 @@ impl IDirectInputDevice8W {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.Initialize(param0.into_param().abi(), param1, param2)).ok()
     }
     pub unsafe fn CreateEffect<P0>(&self, param0: *const ::windows_core::GUID, param1: *mut DIEFFECT, param2: *mut ::core::option::Option<IDirectInputEffect>, param3: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateEffect)(::windows_core::Interface::as_raw(self), param0, param1, ::core::mem::transmute(param2), param3.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateEffect(param0, param1, ::core::mem::transmute(param2), param3.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumEffects(&self, param0: LPDIENUMEFFECTSCALLBACKW, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumEffects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumEffects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetEffectInfo(&self, param0: *mut DIEFFECTINFOW, param1: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetEffectInfo)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetEffectInfo(param0, param1)).ok()
     }
     pub unsafe fn GetForceFeedbackState(&self, param0: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetForceFeedbackState)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetForceFeedbackState(param0)).ok()
     }
     pub unsafe fn SendForceFeedbackCommand(&self, param0: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendForceFeedbackCommand)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.SendForceFeedbackCommand(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumCreatedEffectObjects(&self, param0: LPDIENUMCREATEDEFFECTOBJECTSCALLBACK, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumCreatedEffectObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumCreatedEffectObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn Escape(&self, param0: *mut DIEFFESCAPE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Escape)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.Escape(param0)).ok()
     }
     pub unsafe fn Poll(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Poll)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Poll()).ok()
     }
     pub unsafe fn SendDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.SendDeviceData(param0, param1, param2, param3)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1784,13 +1784,13 @@ impl IDirectInputDevice8W {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).EnumEffectsInFile)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2, param3).ok()
+        ::windows_core::vcall!(self.EnumEffectsInFile(param0.into_param().abi(), param1, param2, param3)).ok()
     }
     pub unsafe fn WriteEffectToFile<P0>(&self, param0: P0, param1: u32, param2: *mut DIFILEEFFECT, param3: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).WriteEffectToFile)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2, param3).ok()
+        ::windows_core::vcall!(self.WriteEffectToFile(param0.into_param().abi(), param1, param2, param3)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1798,7 +1798,7 @@ impl IDirectInputDevice8W {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).BuildActionMap)(::windows_core::Interface::as_raw(self), param0, param1.into_param().abi(), param2).ok()
+        ::windows_core::vcall!(self.BuildActionMap(param0, param1.into_param().abi(), param2)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1806,12 +1806,12 @@ impl IDirectInputDevice8W {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetActionMap)(::windows_core::Interface::as_raw(self), param0, param1.into_param().abi(), param2).ok()
+        ::windows_core::vcall!(self.SetActionMap(param0, param1.into_param().abi(), param2)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn GetImageInfo(&self, param0: *mut DIDEVICEIMAGEINFOHEADERW) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetImageInfo)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetImageInfo(param0)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputDevice8W, ::windows_core::IUnknown);
@@ -1893,33 +1893,33 @@ pub struct IDirectInputDevice8W_Vtbl {
 pub struct IDirectInputDeviceA(::windows_core::IUnknown);
 impl IDirectInputDeviceA {
     pub unsafe fn GetCapabilities(&self, param0: *mut DIDEVCAPS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCapabilities)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetCapabilities(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumObjects(&self, param0: LPDIENUMDEVICEOBJECTSCALLBACKA, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetProperty(param0, param1)).ok()
     }
     pub unsafe fn SetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.SetProperty(param0, param1)).ok()
     }
     pub unsafe fn Acquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Acquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Acquire()).ok()
     }
     pub unsafe fn Unacquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unacquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Unacquire()).ok()
     }
     pub unsafe fn GetDeviceState(&self, param0: u32, param1: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceState)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetDeviceState(param0, param1)).ok()
     }
     pub unsafe fn GetDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.GetDeviceData(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn SetDataFormat(&self, param0: *mut DIDATAFORMAT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetDataFormat)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.SetDataFormat(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1927,7 +1927,7 @@ impl IDirectInputDeviceA {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).SetEventNotification)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetEventNotification(param0.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1935,13 +1935,13 @@ impl IDirectInputDeviceA {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).SetCooperativeLevel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.SetCooperativeLevel(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn GetObjectInfo(&self, param0: *mut DIDEVICEOBJECTINSTANCEA, param1: u32, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetObjectInfo)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.GetObjectInfo(param0, param1, param2)).ok()
     }
     pub unsafe fn GetDeviceInfo(&self, param0: *mut DIDEVICEINSTANCEA) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceInfo)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetDeviceInfo(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1949,7 +1949,7 @@ impl IDirectInputDeviceA {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -1957,7 +1957,7 @@ impl IDirectInputDeviceA {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.Initialize(param0.into_param().abi(), param1, param2)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputDeviceA, ::windows_core::IUnknown);
@@ -2007,33 +2007,33 @@ pub struct IDirectInputDeviceA_Vtbl {
 pub struct IDirectInputDeviceW(::windows_core::IUnknown);
 impl IDirectInputDeviceW {
     pub unsafe fn GetCapabilities(&self, param0: *mut DIDEVCAPS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetCapabilities)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetCapabilities(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumObjects(&self, param0: LPDIENUMDEVICEOBJECTSCALLBACKW, param1: *mut ::core::ffi::c_void, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumObjects)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.EnumObjects(param0, param1, param2)).ok()
     }
     pub unsafe fn GetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetProperty(param0, param1)).ok()
     }
     pub unsafe fn SetProperty(&self, param0: *const ::windows_core::GUID, param1: *mut DIPROPHEADER) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetProperty)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.SetProperty(param0, param1)).ok()
     }
     pub unsafe fn Acquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Acquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Acquire()).ok()
     }
     pub unsafe fn Unacquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unacquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Unacquire()).ok()
     }
     pub unsafe fn GetDeviceState(&self, param0: u32, param1: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceState)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetDeviceState(param0, param1)).ok()
     }
     pub unsafe fn GetDeviceData(&self, param0: u32, param1: *mut DIDEVICEOBJECTDATA, param2: *mut u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceData)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.GetDeviceData(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn SetDataFormat(&self, param0: *mut DIDATAFORMAT) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetDataFormat)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.SetDataFormat(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2041,7 +2041,7 @@ impl IDirectInputDeviceW {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HANDLE>,
     {
-        (::windows_core::Interface::vtable(self).SetEventNotification)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetEventNotification(param0.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2049,13 +2049,13 @@ impl IDirectInputDeviceW {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).SetCooperativeLevel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.SetCooperativeLevel(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn GetObjectInfo(&self, param0: *mut DIDEVICEOBJECTINSTANCEW, param1: u32, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetObjectInfo)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.GetObjectInfo(param0, param1, param2)).ok()
     }
     pub unsafe fn GetDeviceInfo(&self, param0: *mut DIDEVICEINSTANCEW) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceInfo)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetDeviceInfo(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2063,7 +2063,7 @@ impl IDirectInputDeviceW {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2071,7 +2071,7 @@ impl IDirectInputDeviceW {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.Initialize(param0.into_param().abi(), param1, param2)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputDeviceW, ::windows_core::IUnknown);
@@ -2126,34 +2126,34 @@ impl IDirectInputEffect {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.Initialize(param0.into_param().abi(), param1, param2)).ok()
     }
     pub unsafe fn GetEffectGuid(&self, param0: *mut ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetEffectGuid)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetEffectGuid(param0)).ok()
     }
     pub unsafe fn GetParameters(&self, param0: *mut DIEFFECT, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetParameters)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetParameters(param0, param1)).ok()
     }
     pub unsafe fn SetParameters(&self, param0: *mut DIEFFECT, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetParameters)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.SetParameters(param0, param1)).ok()
     }
     pub unsafe fn Start(&self, param0: u32, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Start)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.Start(param0, param1)).ok()
     }
     pub unsafe fn Stop(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Stop)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Stop()).ok()
     }
     pub unsafe fn GetEffectStatus(&self, param0: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetEffectStatus)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetEffectStatus(param0)).ok()
     }
     pub unsafe fn Download(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Download)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Download()).ok()
     }
     pub unsafe fn Unload(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unload)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Unload()).ok()
     }
     pub unsafe fn Escape(&self, param0: *mut DIEFFESCAPE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Escape)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.Escape(param0)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputEffect, ::windows_core::IUnknown);
@@ -2186,37 +2186,37 @@ pub struct IDirectInputEffect_Vtbl {
 pub struct IDirectInputEffectDriver(::windows_core::IUnknown);
 impl IDirectInputEffectDriver {
     pub unsafe fn DeviceID(&self, param0: u32, param1: u32, param2: u32, param3: u32, param4: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeviceID)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3, param4).ok()
+        ::windows_core::vcall!(self.DeviceID(param0, param1, param2, param3, param4)).ok()
     }
     pub unsafe fn GetVersions(&self, param0: *mut DIDRIVERVERSIONS) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetVersions)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetVersions(param0)).ok()
     }
     pub unsafe fn Escape(&self, param0: u32, param1: u32, param2: *mut DIEFFESCAPE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Escape)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.Escape(param0, param1, param2)).ok()
     }
     pub unsafe fn SetGain(&self, param0: u32, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetGain)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.SetGain(param0, param1)).ok()
     }
     pub unsafe fn SendForceFeedbackCommand(&self, param0: u32, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendForceFeedbackCommand)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.SendForceFeedbackCommand(param0, param1)).ok()
     }
     pub unsafe fn GetForceFeedbackState(&self, param0: u32, param1: *mut DIDEVICESTATE) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetForceFeedbackState)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetForceFeedbackState(param0, param1)).ok()
     }
     pub unsafe fn DownloadEffect(&self, param0: u32, param1: u32, param2: *mut u32, param3: *mut DIEFFECT, param4: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DownloadEffect)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3, param4).ok()
+        ::windows_core::vcall!(self.DownloadEffect(param0, param1, param2, param3, param4)).ok()
     }
     pub unsafe fn DestroyEffect(&self, param0: u32, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DestroyEffect)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.DestroyEffect(param0, param1)).ok()
     }
     pub unsafe fn StartEffect(&self, param0: u32, param1: u32, param2: u32, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).StartEffect)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.StartEffect(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn StopEffect(&self, param0: u32, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).StopEffect)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.StopEffect(param0, param1)).ok()
     }
     pub unsafe fn GetEffectStatus(&self, param0: u32, param1: u32, param2: *mut u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetEffectStatus)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.GetEffectStatus(param0, param1, param2)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputEffectDriver, ::windows_core::IUnknown);
@@ -2247,10 +2247,10 @@ pub struct IDirectInputEffectDriver_Vtbl {
 pub struct IDirectInputJoyConfig(::windows_core::IUnknown);
 impl IDirectInputJoyConfig {
     pub unsafe fn Acquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Acquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Acquire()).ok()
     }
     pub unsafe fn Unacquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unacquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Unacquire()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2258,48 +2258,48 @@ impl IDirectInputJoyConfig {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).SetCooperativeLevel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.SetCooperativeLevel(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn SendNotify(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendNotify)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SendNotify()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumTypes(&self, param0: LPDIJOYTYPECALLBACK, param1: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumTypes)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.EnumTypes(param0, param1)).ok()
     }
     pub unsafe fn GetTypeInfo<P0>(&self, param0: P0, param1: *mut DIJOYTYPEINFO, param2: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetTypeInfo)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.GetTypeInfo(param0.into_param().abi(), param1, param2)).ok()
     }
     pub unsafe fn SetTypeInfo<P0>(&self, param0: P0, param1: *mut DIJOYTYPEINFO, param2: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTypeInfo)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.SetTypeInfo(param0.into_param().abi(), param1, param2)).ok()
     }
     pub unsafe fn DeleteType<P0>(&self, param0: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeleteType)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeleteType(param0.into_param().abi())).ok()
     }
     pub unsafe fn GetConfig(&self, param0: u32, param1: *mut DIJOYCONFIG, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetConfig)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.GetConfig(param0, param1, param2)).ok()
     }
     pub unsafe fn SetConfig(&self, param0: u32, param1: *mut DIJOYCONFIG, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetConfig)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.SetConfig(param0, param1, param2)).ok()
     }
     pub unsafe fn DeleteConfig(&self, param0: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeleteConfig)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.DeleteConfig(param0)).ok()
     }
     pub unsafe fn GetUserValues(&self, param0: *mut DIJOYUSERVALUES, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetUserValues)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetUserValues(param0, param1)).ok()
     }
     pub unsafe fn SetUserValues(&self, param0: *mut DIJOYUSERVALUES, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetUserValues)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.SetUserValues(param0, param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2307,7 +2307,7 @@ impl IDirectInputJoyConfig {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).AddNewHardware)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.AddNewHardware(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Registry\"`"]
     #[cfg(feature = "Win32_System_Registry")]
@@ -2315,12 +2315,12 @@ impl IDirectInputJoyConfig {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).OpenTypeKey)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.OpenTypeKey(param0.into_param().abi(), param1, param2)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Registry\"`"]
     #[cfg(feature = "Win32_System_Registry")]
     pub unsafe fn OpenConfigKey(&self, param0: u32, param1: u32, param2: *mut super::super::System::Registry::HKEY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OpenConfigKey)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.OpenConfigKey(param0, param1, param2)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputJoyConfig, ::windows_core::IUnknown);
@@ -2371,10 +2371,10 @@ pub struct IDirectInputJoyConfig_Vtbl {
 pub struct IDirectInputJoyConfig8(::windows_core::IUnknown);
 impl IDirectInputJoyConfig8 {
     pub unsafe fn Acquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Acquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Acquire()).ok()
     }
     pub unsafe fn Unacquire(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).Unacquire)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.Unacquire()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2382,49 +2382,49 @@ impl IDirectInputJoyConfig8 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).SetCooperativeLevel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.SetCooperativeLevel(param0.into_param().abi(), param1)).ok()
     }
     pub unsafe fn SendNotify(&self) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SendNotify)(::windows_core::Interface::as_raw(self)).ok()
+        ::windows_core::vcall!(self.SendNotify()).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumTypes(&self, param0: LPDIJOYTYPECALLBACK, param1: *mut ::core::ffi::c_void) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumTypes)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.EnumTypes(param0, param1)).ok()
     }
     pub unsafe fn GetTypeInfo<P0>(&self, param0: P0, param1: *mut DIJOYTYPEINFO, param2: u32) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).GetTypeInfo)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.GetTypeInfo(param0.into_param().abi(), param1, param2)).ok()
     }
     pub unsafe fn SetTypeInfo<P0, P1>(&self, param0: P0, param1: *mut DIJOYTYPEINFO, param2: u32, param3: P1) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
         P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).SetTypeInfo)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2, param3.into_param().abi()).ok()
+        ::windows_core::vcall!(self.SetTypeInfo(param0.into_param().abi(), param1, param2, param3.into_param().abi())).ok()
     }
     pub unsafe fn DeleteType<P0>(&self, param0: P0) -> ::windows_core::Result<()>
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).DeleteType)(::windows_core::Interface::as_raw(self), param0.into_param().abi()).ok()
+        ::windows_core::vcall!(self.DeleteType(param0.into_param().abi())).ok()
     }
     pub unsafe fn GetConfig(&self, param0: u32, param1: *mut DIJOYCONFIG, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetConfig)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.GetConfig(param0, param1, param2)).ok()
     }
     pub unsafe fn SetConfig(&self, param0: u32, param1: *mut DIJOYCONFIG, param2: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetConfig)(::windows_core::Interface::as_raw(self), param0, param1, param2).ok()
+        ::windows_core::vcall!(self.SetConfig(param0, param1, param2)).ok()
     }
     pub unsafe fn DeleteConfig(&self, param0: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).DeleteConfig)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.DeleteConfig(param0)).ok()
     }
     pub unsafe fn GetUserValues(&self, param0: *mut DIJOYUSERVALUES, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetUserValues)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.GetUserValues(param0, param1)).ok()
     }
     pub unsafe fn SetUserValues(&self, param0: *mut DIJOYUSERVALUES, param1: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).SetUserValues)(::windows_core::Interface::as_raw(self), param0, param1).ok()
+        ::windows_core::vcall!(self.SetUserValues(param0, param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2432,7 +2432,7 @@ impl IDirectInputJoyConfig8 {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).AddNewHardware)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.AddNewHardware(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Registry\"`"]
     #[cfg(feature = "Win32_System_Registry")]
@@ -2440,12 +2440,12 @@ impl IDirectInputJoyConfig8 {
     where
         P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     {
-        (::windows_core::Interface::vtable(self).OpenTypeKey)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1, param2).ok()
+        ::windows_core::vcall!(self.OpenTypeKey(param0.into_param().abi(), param1, param2)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Registry\"`"]
     #[cfg(feature = "Win32_System_Registry")]
     pub unsafe fn OpenAppStatusKey(&self, param0: *mut super::super::System::Registry::HKEY) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).OpenAppStatusKey)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.OpenAppStatusKey(param0)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputJoyConfig8, ::windows_core::IUnknown);
@@ -2499,15 +2499,15 @@ impl IDirectInputW {
     where
         P0: ::windows_core::IntoParam<::windows_core::IUnknown>,
     {
-        (::windows_core::Interface::vtable(self).CreateDevice)(::windows_core::Interface::as_raw(self), param0, ::core::mem::transmute(param1), param2.into_param().abi()).ok()
+        ::windows_core::vcall!(self.CreateDevice(param0, ::core::mem::transmute(param1), param2.into_param().abi())).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
     pub unsafe fn EnumDevices(&self, param0: u32, param1: LPDIENUMDEVICESCALLBACKW, param2: *mut ::core::ffi::c_void, param3: u32) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).EnumDevices)(::windows_core::Interface::as_raw(self), param0, param1, param2, param3).ok()
+        ::windows_core::vcall!(self.EnumDevices(param0, param1, param2, param3)).ok()
     }
     pub unsafe fn GetDeviceStatus(&self, param0: *const ::windows_core::GUID) -> ::windows_core::Result<()> {
-        (::windows_core::Interface::vtable(self).GetDeviceStatus)(::windows_core::Interface::as_raw(self), param0).ok()
+        ::windows_core::vcall!(self.GetDeviceStatus(param0)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2515,7 +2515,7 @@ impl IDirectInputW {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HWND>,
     {
-        (::windows_core::Interface::vtable(self).RunControlPanel)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.RunControlPanel(param0.into_param().abi(), param1)).ok()
     }
     #[doc = "Required features: `\"Win32_Foundation\"`"]
     #[cfg(feature = "Win32_Foundation")]
@@ -2523,7 +2523,7 @@ impl IDirectInputW {
     where
         P0: ::windows_core::IntoParam<super::super::Foundation::HINSTANCE>,
     {
-        (::windows_core::Interface::vtable(self).Initialize)(::windows_core::Interface::as_raw(self), param0.into_param().abi(), param1).ok()
+        ::windows_core::vcall!(self.Initialize(param0.into_param().abi(), param1)).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDirectInputW, ::windows_core::IUnknown);

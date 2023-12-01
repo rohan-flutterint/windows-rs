@@ -9,7 +9,7 @@ impl IDummyHICONIncluder {
         P0: ::windows_core::IntoParam<super::super::super::UI::WindowsAndMessaging::HICON>,
         P1: ::windows_core::IntoParam<super::super::super::Graphics::Gdi::HDC>,
     {
-        (::windows_core::Interface::vtable(self).Dummy)(::windows_core::Interface::as_raw(self), h1.into_param().abi(), h2.into_param().abi()).ok()
+        ::windows_core::vcall!(self.Dummy(h1.into_param().abi(), h2.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IDummyHICONIncluder, ::windows_core::IUnknown);
@@ -38,7 +38,7 @@ impl IThumbnailExtractor {
     where
         P0: ::windows_core::IntoParam<super::StructuredStorage::IStorage>,
     {
-        (::windows_core::Interface::vtable(self).ExtractThumbnail)(::windows_core::Interface::as_raw(self), pstg.into_param().abi(), ullength, ulheight, puloutputlength, puloutputheight, phoutputbitmap).ok()
+        ::windows_core::vcall!(self.ExtractThumbnail(pstg.into_param().abi(), ullength, ulheight, puloutputlength, puloutputheight, phoutputbitmap)).ok()
     }
     #[doc = "Required features: `\"Win32_System_Com_StructuredStorage\"`"]
     #[cfg(feature = "Win32_System_Com_StructuredStorage")]
@@ -46,7 +46,7 @@ impl IThumbnailExtractor {
     where
         P0: ::windows_core::IntoParam<super::StructuredStorage::IStorage>,
     {
-        (::windows_core::Interface::vtable(self).OnFileUpdated)(::windows_core::Interface::as_raw(self), pstg.into_param().abi()).ok()
+        ::windows_core::vcall!(self.OnFileUpdated(pstg.into_param().abi())).ok()
     }
 }
 ::windows_core::imp::interface_hierarchy!(IThumbnailExtractor, ::windows_core::IUnknown);
