@@ -53,3 +53,11 @@ macro_rules! interface_hierarchy {
 
 #[doc(hidden)]
 pub use interface_hierarchy;
+
+#[doc(hidden)]
+#[macro_export]
+macro_rules! vcall {
+    ($this:ident.$($method:ident).*($($args:tt)*)) => {
+        (::windows_core::Interface::vtable($this).$($method).*)(::windows_core::Interface::as_raw($this), $($args)*)
+    }
+}

@@ -28,35 +28,39 @@ pub fn writer(writer: &Writer, def: TypeDef, generic_types: &[Type], kind: Inter
         }
     };
 
-    let return_arg = match &signature.return_type {
+    let mut return_arg = match &signature.return_type {
         Type::Void => quote! {},
         _ => {
             if signature.return_type.is_winrt_array() {
                 let return_type = writer.type_name(&signature.return_type);
-                quote! { ::windows_core::Array::<#return_type>::set_abi_len(::std::mem::transmute(&mut result__)), result__.as_mut_ptr() as *mut _ as _ }
+                quote! { , ::windows_core::Array::<#return_type>::set_abi_len(::std::mem::transmute(&mut result__)), result__.as_mut_ptr() as *mut _ as _ }
             } else {
-                quote! { &mut result__ }
+                quote! { , &mut result__ }
             }
         }
     };
 
+    if args.is_empty() && !return_arg.is_empty() {
+        return_arg.0.remove(0);
+    }
+
     let vcall = match &signature.return_type {
         Type::Void => {
             quote! {
-                (::windows_core::Interface::vtable(this).#vname)(::windows_core::Interface::as_raw(this), #args).ok()
+                ::windows_core::vcall!(this. #vname(#args)).ok()
             }
         }
         _ if signature.return_type.is_winrt_array() => {
             quote! {
                 let mut result__ = ::core::mem::MaybeUninit::zeroed();
-                (::windows_core::Interface::vtable(this).#vname)(::windows_core::Interface::as_raw(this), #args #return_arg)
+                ::windows_core::vcall!(this. #vname(#args #return_arg))
                     .and_then(|| result__.assume_init())
             }
         }
         _ => {
             quote! {
                 let mut result__ = ::std::mem::zeroed();
-                    (::windows_core::Interface::vtable(this).#vname)(::windows_core::Interface::as_raw(this), #args #return_arg)
+                    ::windows_core::vcall!(this. #vname(#args #return_arg))
                         .from_abi(result__)
             }
         }
@@ -138,38 +142,43 @@ fn gen_winrt_abi_args(writer: &Writer, params: &[SignatureParam]) -> TokenStream
         let param = if param.def.flags().contains(ParamAttributes::In) {
             if param.ty.is_winrt_array() {
                 if type_is_blittable(&param.ty) {
-                    quote! { #name.len().try_into().unwrap(), #name.as_ptr(), }
+                    quote! { , #name.len().try_into().unwrap(), #name.as_ptr() }
                 } else {
-                    quote! { #name.len().try_into().unwrap(), ::core::mem::transmute(#name.as_ptr()), }
+                    quote! { , #name.len().try_into().unwrap(), ::core::mem::transmute(#name.as_ptr()) }
                 }
             } else if type_is_non_exclusive_winrt_interface(&param.ty) {
-                quote! { #name.try_into_param()?.abi(), }
+                quote! { , #name.try_into_param()?.abi() }
             } else if type_is_borrowed(&param.ty) {
-                quote! { #name.into_param().abi(), }
+                quote! { , #name.into_param().abi() }
             } else if type_is_blittable(&param.ty) {
                 if param.ty.is_const_ref() {
-                    quote! { &#name, }
+                    quote! { , &#name }
                 } else {
-                    quote! { #name, }
+                    quote! { , #name }
                 }
             } else {
-                quote! { ::core::mem::transmute_copy(#name), }
+                quote! { , ::core::mem::transmute_copy(#name) }
             }
         } else if param.ty.is_winrt_array() {
             if type_is_blittable(&param.ty) {
-                quote! { #name.len().try_into().unwrap(), #name.as_mut_ptr(), }
+                quote! { , #name.len().try_into().unwrap(), #name.as_mut_ptr() }
             } else {
-                quote! { #name.len().try_into().unwrap(), ::core::mem::transmute_copy(&#name), }
+                quote! { , #name.len().try_into().unwrap(), ::core::mem::transmute_copy(&#name) }
             }
         } else if param.ty.is_winrt_array_ref() {
-            quote! { #name.set_abi_len(), #name as *mut _ as _, }
+            quote! { , #name.set_abi_len(), #name as *mut _ as _ }
         } else if type_is_blittable(&param.ty) {
-            quote! { #name, }
+            quote! { , #name }
         } else {
-            quote! { #name as *mut _ as _, }
+            quote! { , #name as *mut _ as _ }
         };
         tokens.combine(&param);
     }
+
+    if !tokens.is_empty() {
+        tokens.0.remove(0);
+    }
+
     tokens
 }
 

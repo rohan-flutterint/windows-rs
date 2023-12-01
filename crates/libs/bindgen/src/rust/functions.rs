@@ -40,10 +40,11 @@ fn gen_win_function(writer: &Writer, namespace: &str, def: MethodDef) -> TokenSt
     let link = gen_link(writer, namespace, &signature, &cfg);
 
     let kind = signature.kind();
+    let args = writer.win32_args(&signature.params, kind);
+    let params = writer.win32_params(&signature.params, kind);
+
     match kind {
         SignatureKind::Query(_) => {
-            let args = writer.win32_args(&signature.params, kind);
-            let params = writer.win32_params(&signature.params, kind);
             let generics = expand_generics(generics, quote!(T));
             let where_clause = expand_where_clause(where_clause, quote!(T: ::windows_core::ComInterface));
 
@@ -59,8 +60,6 @@ fn gen_win_function(writer: &Writer, namespace: &str, def: MethodDef) -> TokenSt
             }
         }
         SignatureKind::QueryOptional(_) => {
-            let args = writer.win32_args(&signature.params, kind);
-            let params = writer.win32_params(&signature.params, kind);
             let generics = expand_generics(generics, quote!(T));
             let where_clause = expand_where_clause(where_clause, quote!(T: ::windows_core::ComInterface));
 
@@ -75,8 +74,6 @@ fn gen_win_function(writer: &Writer, namespace: &str, def: MethodDef) -> TokenSt
             }
         }
         SignatureKind::ResultValue => {
-            let args = writer.win32_args(&signature.params, kind);
-            let params = writer.win32_params(&signature.params, kind);
             let return_type = signature.params[signature.params.len() - 1].ty.deref();
             let return_type = writer.type_name(&return_type);
 
@@ -92,9 +89,6 @@ fn gen_win_function(writer: &Writer, namespace: &str, def: MethodDef) -> TokenSt
             }
         }
         SignatureKind::ResultVoid => {
-            let args = writer.win32_args(&signature.params, kind);
-            let params = writer.win32_params(&signature.params, kind);
-
             quote! {
                 #doc
                 #features
@@ -106,8 +100,6 @@ fn gen_win_function(writer: &Writer, namespace: &str, def: MethodDef) -> TokenSt
             }
         }
         SignatureKind::ReturnValue => {
-            let args = writer.win32_args(&signature.params, kind);
-            let params = writer.win32_params(&signature.params, kind);
             let return_type = signature.params[signature.params.len() - 1].ty.deref();
             let is_nullable = type_is_nullable(&return_type);
             let return_type = writer.type_name(&return_type);
@@ -140,8 +132,6 @@ fn gen_win_function(writer: &Writer, namespace: &str, def: MethodDef) -> TokenSt
         }
         SignatureKind::ReturnStruct | SignatureKind::PreserveSig => {
             if handle_last_error(def, &signature) {
-                let args = writer.win32_args(&signature.params, kind);
-                let params = writer.win32_params(&signature.params, kind);
                 let return_type = writer.type_name(&signature.return_type);
 
                 quote! {
@@ -155,9 +145,6 @@ fn gen_win_function(writer: &Writer, namespace: &str, def: MethodDef) -> TokenSt
                     }
                 }
             } else {
-                let args = writer.win32_args(&signature.params, kind);
-                let params = writer.win32_params(&signature.params, kind);
-
                 quote! {
                     #doc
                     #features
@@ -170,8 +157,6 @@ fn gen_win_function(writer: &Writer, namespace: &str, def: MethodDef) -> TokenSt
             }
         }
         SignatureKind::ReturnVoid => {
-            let args = writer.win32_args(&signature.params, kind);
-            let params = writer.win32_params(&signature.params, kind);
             let does_not_return = does_not_return(def);
 
             quote! {

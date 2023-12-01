@@ -893,16 +893,16 @@ impl Writer {
         for (position, param) in params.iter().enumerate() {
             let new = match kind {
                 SignatureKind::Query(query) if query.object == position => {
-                    quote! { &mut result__, }
+                    quote! { , &mut result__ }
                 }
                 SignatureKind::ReturnValue | SignatureKind::ResultValue if params.len() - 1 == position => {
-                    quote! { &mut result__, }
+                    quote! { , &mut result__ }
                 }
                 SignatureKind::QueryOptional(query) if query.object == position => {
-                    quote! { result__ as *mut _ as *mut _, }
+                    quote! { , result__ as *mut _ as *mut _ }
                 }
                 SignatureKind::Query(query) | SignatureKind::QueryOptional(query) if query.guid == position => {
-                    quote! { &<T as ::windows_core::ComInterface>::IID, }
+                    quote! { , &<T as ::windows_core::ComInterface>::IID }
                 }
                 _ => {
                     let name = self.param_name(param.def);
@@ -914,47 +914,51 @@ impl Writer {
                             } else {
                                 quote! { #name.as_ptr() }
                             };
-                            quote! { ::core::mem::transmute(#map), }
+                            quote! { , ::core::mem::transmute(#map) }
                         }
                         SignatureParamKind::ArrayRelativePtr(relative) => {
                             let name = self.param_name(params[relative].def);
                             let flags = params[relative].def.flags();
                             if flags.contains(ParamAttributes::Optional) {
-                                quote! { #name.as_deref().map_or(0, |slice|slice.len().try_into().unwrap()), }
+                                quote! { , #name.as_deref().map_or(0, |slice|slice.len().try_into().unwrap()) }
                             } else {
-                                quote! { #name.len().try_into().unwrap(), }
+                                quote! { , #name.len().try_into().unwrap() }
                             }
                         }
                         SignatureParamKind::TryInto => {
-                            quote! { #name.try_into_param()?.abi(), }
+                            quote! { , #name.try_into_param()?.abi() }
                         }
                         SignatureParamKind::IntoParam => {
-                            quote! { #name.into_param().abi(), }
+                            quote! { , #name.into_param().abi() }
                         }
                         SignatureParamKind::OptionalPointer => {
                             if flags.contains(ParamAttributes::Out) {
-                                quote! { ::core::mem::transmute(#name.unwrap_or(::std::ptr::null_mut())), }
+                                quote! { , ::core::mem::transmute(#name.unwrap_or(::std::ptr::null_mut())) }
                             } else {
-                                quote! { ::core::mem::transmute(#name.unwrap_or(::std::ptr::null())), }
+                                quote! { , ::core::mem::transmute(#name.unwrap_or(::std::ptr::null())) }
                             }
                         }
                         SignatureParamKind::ValueType => {
-                            quote! { #name, }
+                            quote! { , #name }
                         }
                         SignatureParamKind::Blittable => {
                             if matches!(param.ty, Type::PrimitiveOrEnum(_, _)) {
-                                quote! { #name.0 as _, }
+                                quote! { , #name.0 as _ }
                             } else {
-                                quote! { ::core::mem::transmute(#name), }
+                                quote! { , ::core::mem::transmute(#name) }
                             }
                         }
                         SignatureParamKind::Other => {
-                            quote! { ::core::mem::transmute_copy(#name), }
+                            quote! { , ::core::mem::transmute_copy(#name) }
                         }
                     }
                 }
             };
             tokens.combine(&new)
+        }
+
+        if !tokens.is_empty() {
+            tokens.0.remove(0);
         }
 
         tokens
