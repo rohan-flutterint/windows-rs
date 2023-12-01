@@ -30,72 +30,42 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Clone)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Clone(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetToMin(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetToMin)(::windows_core::Interface::as_raw(
-                this,
-            ))
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetToMin()).ok() }
     }
     pub fn SetToMax(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetToMax)(::windows_core::Interface::as_raw(
-                this,
-            ))
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetToMax()).ok() }
     }
     pub fn Languages(&self) -> ::windows_core::Result<IVectorView<::windows_core::HSTRING>> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Languages)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Languages(&mut result__)).from_abi(result__)
         }
     }
     pub fn NumeralSystem(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumeralSystem)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.NumeralSystem(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetNumeralSystem(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
         unsafe {
-            (::windows_core::Interface::vtable(this).SetNumeralSystem)(
-                ::windows_core::Interface::as_raw(this),
-                ::core::mem::transmute_copy(value),
-            )
-            .ok()
+            ::windows_core::vcall!(this.SetNumeralSystem(::core::mem::transmute_copy(value))).ok()
         }
     }
     pub fn GetCalendarSystem(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetCalendarSystem)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.GetCalendarSystem(&mut result__)).from_abi(result__)
         }
     }
     pub fn ChangeCalendarSystem(
@@ -104,224 +74,127 @@ impl Calendar {
     ) -> ::windows_core::Result<()> {
         let this = self;
         unsafe {
-            (::windows_core::Interface::vtable(this).ChangeCalendarSystem)(
-                ::windows_core::Interface::as_raw(this),
-                ::core::mem::transmute_copy(value),
-            )
-            .ok()
+            ::windows_core::vcall!(this.ChangeCalendarSystem(::core::mem::transmute_copy(value)))
+                .ok()
         }
     }
     pub fn GetClock(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetClock)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.GetClock(&mut result__)).from_abi(result__)
         }
     }
     pub fn ChangeClock(&self, value: &::windows_core::HSTRING) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).ChangeClock)(
-                ::windows_core::Interface::as_raw(this),
-                ::core::mem::transmute_copy(value),
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.ChangeClock(::core::mem::transmute_copy(value))).ok() }
     }
     pub fn GetDateTime(&self) -> ::windows_core::Result<DateTime> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetDateTime)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.GetDateTime(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDateTime(&self, value: DateTime) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetDateTime)(
-                ::windows_core::Interface::as_raw(this),
-                value,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetDateTime(value)).ok() }
     }
     pub fn SetToNow(&self) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetToNow)(::windows_core::Interface::as_raw(
-                this,
-            ))
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetToNow()).ok() }
     }
     pub fn FirstEra(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirstEra)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.FirstEra(&mut result__)).from_abi(result__)
         }
     }
     pub fn LastEra(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LastEra)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.LastEra(&mut result__)).from_abi(result__)
         }
     }
     pub fn NumberOfEras(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumberOfEras)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.NumberOfEras(&mut result__)).from_abi(result__)
         }
     }
     pub fn Era(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Era)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Era(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetEra(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetEra)(
-                ::windows_core::Interface::as_raw(this),
-                value,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetEra(value)).ok() }
     }
     pub fn AddEras(&self, eras: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).AddEras)(
-                ::windows_core::Interface::as_raw(this),
-                eras,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.AddEras(eras)).ok() }
     }
     pub fn EraAsFullString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EraAsFullString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.EraAsFullString(&mut result__)).from_abi(result__)
         }
     }
     pub fn EraAsString(&self, ideallength: i32) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).EraAsString)(
-                ::windows_core::Interface::as_raw(this),
-                ideallength,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.EraAsString(ideallength, &mut result__)).from_abi(result__)
         }
     }
     pub fn FirstYearInThisEra(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirstYearInThisEra)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.FirstYearInThisEra(&mut result__)).from_abi(result__)
         }
     }
     pub fn LastYearInThisEra(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LastYearInThisEra)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.LastYearInThisEra(&mut result__)).from_abi(result__)
         }
     }
     pub fn NumberOfYearsInThisEra(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumberOfYearsInThisEra)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.NumberOfYearsInThisEra(&mut result__)).from_abi(result__)
         }
     }
     pub fn Year(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Year)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Year(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetYear(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetYear)(
-                ::windows_core::Interface::as_raw(this),
-                value,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetYear(value)).ok() }
     }
     pub fn AddYears(&self, years: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).AddYears)(
-                ::windows_core::Interface::as_raw(this),
-                years,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.AddYears(years)).ok() }
     }
     pub fn YearAsString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).YearAsString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.YearAsString(&mut result__)).from_abi(result__)
         }
     }
     pub fn YearAsTruncatedString(
@@ -331,12 +204,8 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).YearAsTruncatedString)(
-                ::windows_core::Interface::as_raw(this),
-                remainingdigits,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.YearAsTruncatedString(remainingdigits, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn YearAsPaddedString(
@@ -346,87 +215,51 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).YearAsPaddedString)(
-                ::windows_core::Interface::as_raw(this),
-                mindigits,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.YearAsPaddedString(mindigits, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn FirstMonthInThisYear(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirstMonthInThisYear)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.FirstMonthInThisYear(&mut result__)).from_abi(result__)
         }
     }
     pub fn LastMonthInThisYear(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LastMonthInThisYear)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.LastMonthInThisYear(&mut result__)).from_abi(result__)
         }
     }
     pub fn NumberOfMonthsInThisYear(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumberOfMonthsInThisYear)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.NumberOfMonthsInThisYear(&mut result__)).from_abi(result__)
         }
     }
     pub fn Month(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Month)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Month(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMonth(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetMonth)(
-                ::windows_core::Interface::as_raw(this),
-                value,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetMonth(value)).ok() }
     }
     pub fn AddMonths(&self, months: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).AddMonths)(
-                ::windows_core::Interface::as_raw(this),
-                months,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.AddMonths(months)).ok() }
     }
     pub fn MonthAsFullString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MonthAsFullString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.MonthAsFullString(&mut result__)).from_abi(result__)
         }
     }
     pub fn MonthAsString(
@@ -436,23 +269,15 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MonthAsString)(
-                ::windows_core::Interface::as_raw(this),
-                ideallength,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.MonthAsString(ideallength, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn MonthAsFullSoloString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MonthAsFullSoloString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.MonthAsFullSoloString(&mut result__)).from_abi(result__)
         }
     }
     pub fn MonthAsSoloString(
@@ -462,23 +287,15 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MonthAsSoloString)(
-                ::windows_core::Interface::as_raw(this),
-                ideallength,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.MonthAsSoloString(ideallength, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn MonthAsNumericString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MonthAsNumericString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.MonthAsNumericString(&mut result__)).from_abi(result__)
         }
     }
     pub fn MonthAsPaddedNumericString(
@@ -488,97 +305,55 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MonthAsPaddedNumericString)(
-                ::windows_core::Interface::as_raw(this),
-                mindigits,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.MonthAsPaddedNumericString(mindigits, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn AddWeeks(&self, weeks: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).AddWeeks)(
-                ::windows_core::Interface::as_raw(this),
-                weeks,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.AddWeeks(weeks)).ok() }
     }
     pub fn FirstDayInThisMonth(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirstDayInThisMonth)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.FirstDayInThisMonth(&mut result__)).from_abi(result__)
         }
     }
     pub fn LastDayInThisMonth(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LastDayInThisMonth)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.LastDayInThisMonth(&mut result__)).from_abi(result__)
         }
     }
     pub fn NumberOfDaysInThisMonth(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumberOfDaysInThisMonth)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.NumberOfDaysInThisMonth(&mut result__)).from_abi(result__)
         }
     }
     pub fn Day(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Day)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Day(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetDay(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetDay)(
-                ::windows_core::Interface::as_raw(this),
-                value,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetDay(value)).ok() }
     }
     pub fn AddDays(&self, days: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).AddDays)(
-                ::windows_core::Interface::as_raw(this),
-                days,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.AddDays(days)).ok() }
     }
     pub fn DayAsString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DayAsString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.DayAsString(&mut result__)).from_abi(result__)
         }
     }
     pub fn DayAsPaddedString(
@@ -588,34 +363,22 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DayAsPaddedString)(
-                ::windows_core::Interface::as_raw(this),
-                mindigits,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.DayAsPaddedString(mindigits, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn DayOfWeek(&self) -> ::windows_core::Result<DayOfWeek> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DayOfWeek)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.DayOfWeek(&mut result__)).from_abi(result__)
         }
     }
     pub fn DayOfWeekAsFullString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DayOfWeekAsFullString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.DayOfWeekAsFullString(&mut result__)).from_abi(result__)
         }
     }
     pub fn DayOfWeekAsString(
@@ -625,23 +388,15 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DayOfWeekAsString)(
-                ::windows_core::Interface::as_raw(this),
-                ideallength,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.DayOfWeekAsString(ideallength, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn DayOfWeekAsFullSoloString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DayOfWeekAsFullSoloString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.DayOfWeekAsFullSoloString(&mut result__)).from_abi(result__)
         }
     }
     pub fn DayOfWeekAsSoloString(
@@ -651,87 +406,51 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).DayOfWeekAsSoloString)(
-                ::windows_core::Interface::as_raw(this),
-                ideallength,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.DayOfWeekAsSoloString(ideallength, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn FirstPeriodInThisDay(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirstPeriodInThisDay)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.FirstPeriodInThisDay(&mut result__)).from_abi(result__)
         }
     }
     pub fn LastPeriodInThisDay(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LastPeriodInThisDay)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.LastPeriodInThisDay(&mut result__)).from_abi(result__)
         }
     }
     pub fn NumberOfPeriodsInThisDay(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumberOfPeriodsInThisDay)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.NumberOfPeriodsInThisDay(&mut result__)).from_abi(result__)
         }
     }
     pub fn Period(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Period)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Period(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetPeriod(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetPeriod)(
-                ::windows_core::Interface::as_raw(this),
-                value,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetPeriod(value)).ok() }
     }
     pub fn AddPeriods(&self, periods: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).AddPeriods)(
-                ::windows_core::Interface::as_raw(this),
-                periods,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.AddPeriods(periods)).ok() }
     }
     pub fn PeriodAsFullString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PeriodAsFullString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.PeriodAsFullString(&mut result__)).from_abi(result__)
         }
     }
     pub fn PeriodAsString(
@@ -741,87 +460,51 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).PeriodAsString)(
-                ::windows_core::Interface::as_raw(this),
-                ideallength,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.PeriodAsString(ideallength, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn FirstHourInThisPeriod(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirstHourInThisPeriod)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.FirstHourInThisPeriod(&mut result__)).from_abi(result__)
         }
     }
     pub fn LastHourInThisPeriod(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LastHourInThisPeriod)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.LastHourInThisPeriod(&mut result__)).from_abi(result__)
         }
     }
     pub fn NumberOfHoursInThisPeriod(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumberOfHoursInThisPeriod)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.NumberOfHoursInThisPeriod(&mut result__)).from_abi(result__)
         }
     }
     pub fn Hour(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Hour)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Hour(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetHour(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetHour)(
-                ::windows_core::Interface::as_raw(this),
-                value,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetHour(value)).ok() }
     }
     pub fn AddHours(&self, hours: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).AddHours)(
-                ::windows_core::Interface::as_raw(this),
-                hours,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.AddHours(hours)).ok() }
     }
     pub fn HourAsString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HourAsString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.HourAsString(&mut result__)).from_abi(result__)
         }
     }
     pub fn HourAsPaddedString(
@@ -831,54 +514,30 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HourAsPaddedString)(
-                ::windows_core::Interface::as_raw(this),
-                mindigits,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.HourAsPaddedString(mindigits, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn Minute(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Minute)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Minute(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetMinute(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetMinute)(
-                ::windows_core::Interface::as_raw(this),
-                value,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetMinute(value)).ok() }
     }
     pub fn AddMinutes(&self, minutes: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).AddMinutes)(
-                ::windows_core::Interface::as_raw(this),
-                minutes,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.AddMinutes(minutes)).ok() }
     }
     pub fn MinuteAsString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MinuteAsString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.MinuteAsString(&mut result__)).from_abi(result__)
         }
     }
     pub fn MinuteAsPaddedString(
@@ -888,54 +547,30 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MinuteAsPaddedString)(
-                ::windows_core::Interface::as_raw(this),
-                mindigits,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.MinuteAsPaddedString(mindigits, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn Second(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Second)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Second(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetSecond(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetSecond)(
-                ::windows_core::Interface::as_raw(this),
-                value,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetSecond(value)).ok() }
     }
     pub fn AddSeconds(&self, seconds: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).AddSeconds)(
-                ::windows_core::Interface::as_raw(this),
-                seconds,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.AddSeconds(seconds)).ok() }
     }
     pub fn SecondAsString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecondAsString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.SecondAsString(&mut result__)).from_abi(result__)
         }
     }
     pub fn SecondAsPaddedString(
@@ -945,54 +580,30 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).SecondAsPaddedString)(
-                ::windows_core::Interface::as_raw(this),
-                mindigits,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.SecondAsPaddedString(mindigits, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn Nanosecond(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Nanosecond)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Nanosecond(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetNanosecond(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetNanosecond)(
-                ::windows_core::Interface::as_raw(this),
-                value,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetNanosecond(value)).ok() }
     }
     pub fn AddNanoseconds(&self, nanoseconds: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).AddNanoseconds)(
-                ::windows_core::Interface::as_raw(this),
-                nanoseconds,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.AddNanoseconds(nanoseconds)).ok() }
     }
     pub fn NanosecondAsString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NanosecondAsString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.NanosecondAsString(&mut result__)).from_abi(result__)
         }
     }
     pub fn NanosecondAsPaddedString(
@@ -1002,12 +613,8 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NanosecondAsPaddedString)(
-                ::windows_core::Interface::as_raw(this),
-                mindigits,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.NanosecondAsPaddedString(mindigits, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn Compare<P0>(&self, other: P0) -> ::windows_core::Result<i32>
@@ -1017,24 +624,15 @@ impl Calendar {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Compare)(
-                ::windows_core::Interface::as_raw(this),
-                other.into_param().abi(),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Compare(other.into_param().abi(), &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn CompareDateTime(&self, other: DateTime) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CompareDateTime)(
-                ::windows_core::Interface::as_raw(this),
-                other,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.CompareDateTime(other, &mut result__)).from_abi(result__)
         }
     }
     pub fn CopyTo<P0>(&self, other: P0) -> ::windows_core::Result<()>
@@ -1042,100 +640,63 @@ impl Calendar {
         P0: ::windows_core::IntoParam<Calendar>,
     {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).CopyTo)(
-                ::windows_core::Interface::as_raw(this),
-                other.into_param().abi(),
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.CopyTo(other.into_param().abi())).ok() }
     }
     pub fn FirstMinuteInThisHour(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirstMinuteInThisHour)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.FirstMinuteInThisHour(&mut result__)).from_abi(result__)
         }
     }
     pub fn LastMinuteInThisHour(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LastMinuteInThisHour)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.LastMinuteInThisHour(&mut result__)).from_abi(result__)
         }
     }
     pub fn NumberOfMinutesInThisHour(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumberOfMinutesInThisHour)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.NumberOfMinutesInThisHour(&mut result__)).from_abi(result__)
         }
     }
     pub fn FirstSecondInThisMinute(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).FirstSecondInThisMinute)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.FirstSecondInThisMinute(&mut result__)).from_abi(result__)
         }
     }
     pub fn LastSecondInThisMinute(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).LastSecondInThisMinute)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.LastSecondInThisMinute(&mut result__)).from_abi(result__)
         }
     }
     pub fn NumberOfSecondsInThisMinute(&self) -> ::windows_core::Result<i32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).NumberOfSecondsInThisMinute)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.NumberOfSecondsInThisMinute(&mut result__))
+                .from_abi(result__)
         }
     }
     pub fn ResolvedLanguage(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).ResolvedLanguage)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.ResolvedLanguage(&mut result__)).from_abi(result__)
         }
     }
     pub fn IsDaylightSavingTime(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IsDaylightSavingTime)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.IsDaylightSavingTime(&mut result__)).from_abi(result__)
         }
     }
     pub fn CreateCalendarDefaultCalendarAndClock<P0>(
@@ -1146,11 +707,10 @@ impl Calendar {
     {
         Self::ICalendarFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateCalendarDefaultCalendarAndClock)(
-                ::windows_core::Interface::as_raw(this),
+            ::windows_core::vcall!(this.CreateCalendarDefaultCalendarAndClock(
                 languages.try_into_param()?.abi(),
-                &mut result__,
-            )
+                &mut result__
+            ))
             .from_abi(result__)
         })
     }
@@ -1164,13 +724,12 @@ impl Calendar {
     {
         Self::ICalendarFactory(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateCalendar)(
-                ::windows_core::Interface::as_raw(this),
+            ::windows_core::vcall!(this.CreateCalendar(
                 languages.try_into_param()?.abi(),
                 ::core::mem::transmute_copy(calendar),
                 ::core::mem::transmute_copy(clock),
-                &mut result__,
-            )
+                &mut result__
+            ))
             .from_abi(result__)
         })
     }
@@ -1185,14 +744,13 @@ impl Calendar {
     {
         Self::ICalendarFactory2(|this| unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).CreateCalendarWithTimeZone)(
-                ::windows_core::Interface::as_raw(this),
+            ::windows_core::vcall!(this.CreateCalendarWithTimeZone(
                 languages.try_into_param()?.abi(),
                 ::core::mem::transmute_copy(calendar),
                 ::core::mem::transmute_copy(clock),
                 ::core::mem::transmute_copy(timezoneid),
-                &mut result__,
-            )
+                &mut result__
+            ))
             .from_abi(result__)
         })
     }
@@ -1200,11 +758,7 @@ impl Calendar {
         let this = &::windows_core::ComInterface::cast::<ITimeZoneOnCalendar>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetTimeZone)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.GetTimeZone(&mut result__)).from_abi(result__)
         }
     }
     pub fn ChangeTimeZone(
@@ -1213,22 +767,15 @@ impl Calendar {
     ) -> ::windows_core::Result<()> {
         let this = &::windows_core::ComInterface::cast::<ITimeZoneOnCalendar>(self)?;
         unsafe {
-            (::windows_core::Interface::vtable(this).ChangeTimeZone)(
-                ::windows_core::Interface::as_raw(this),
-                ::core::mem::transmute_copy(timezoneid),
-            )
-            .ok()
+            ::windows_core::vcall!(this.ChangeTimeZone(::core::mem::transmute_copy(timezoneid)))
+                .ok()
         }
     }
     pub fn TimeZoneAsFullString(&self) -> ::windows_core::Result<::windows_core::HSTRING> {
         let this = &::windows_core::ComInterface::cast::<ITimeZoneOnCalendar>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TimeZoneAsFullString)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.TimeZoneAsFullString(&mut result__)).from_abi(result__)
         }
     }
     pub fn TimeZoneAsString(
@@ -1238,12 +785,8 @@ impl Calendar {
         let this = &::windows_core::ComInterface::cast::<ITimeZoneOnCalendar>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).TimeZoneAsString)(
-                ::windows_core::Interface::as_raw(this),
-                ideallength,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.TimeZoneAsString(ideallength, &mut result__))
+                .from_abi(result__)
         }
     }
     #[doc(hidden)]
@@ -1836,11 +1379,7 @@ impl<T: ::windows_core::RuntimeType + 'static> IIterable<T> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).First)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.First(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -1908,33 +1447,21 @@ impl<T: ::windows_core::RuntimeType + 'static> IIterator<T> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Current)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Current(&mut result__)).from_abi(result__)
         }
     }
     pub fn HasCurrent(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasCurrent)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.HasCurrent(&mut result__)).from_abi(result__)
         }
     }
     pub fn MoveNext(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MoveNext)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.MoveNext(&mut result__)).from_abi(result__)
         }
     }
     pub fn GetMany(
@@ -1944,12 +1471,11 @@ impl<T: ::windows_core::RuntimeType + 'static> IIterator<T> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetMany)(
-                ::windows_core::Interface::as_raw(this),
+            ::windows_core::vcall!(this.GetMany(
                 items.len().try_into().unwrap(),
                 ::core::mem::transmute_copy(&items),
-                &mut result__,
-            )
+                &mut result__
+            ))
             .from_abi(result__)
         }
     }
@@ -2061,23 +1587,14 @@ impl<T: ::windows_core::RuntimeType + 'static> IVectorView<T> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetAt)(
-                ::windows_core::Interface::as_raw(this),
-                index,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.GetAt(index, &mut result__)).from_abi(result__)
         }
     }
     pub fn Size(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Size)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Size(&mut result__)).from_abi(result__)
         }
     }
     pub fn IndexOf<P0>(&self, value: P0, index: &mut u32) -> ::windows_core::Result<bool>
@@ -2087,13 +1604,8 @@ impl<T: ::windows_core::RuntimeType + 'static> IVectorView<T> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).IndexOf)(
-                ::windows_core::Interface::as_raw(this),
-                value.into_param().abi(),
-                index,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.IndexOf(value.into_param().abi(), index, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn GetMany(
@@ -2104,13 +1616,12 @@ impl<T: ::windows_core::RuntimeType + 'static> IVectorView<T> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).GetMany)(
-                ::windows_core::Interface::as_raw(this),
+            ::windows_core::vcall!(this.GetMany(
                 startindex,
                 items.len().try_into().unwrap(),
                 ::core::mem::transmute_copy(&items),
-                &mut result__,
-            )
+                &mut result__
+            ))
             .from_abi(result__)
         }
     }
@@ -2118,11 +1629,7 @@ impl<T: ::windows_core::RuntimeType + 'static> IVectorView<T> {
         let this = &::windows_core::ComInterface::cast::<IIterable<T>>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).First)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.First(&mut result__)).from_abi(result__)
         }
     }
 }

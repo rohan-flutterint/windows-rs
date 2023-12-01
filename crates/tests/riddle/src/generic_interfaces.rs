@@ -17,11 +17,7 @@ impl<T: ::windows_core::RuntimeType + 'static> IIterable<T> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).First)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.First(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -75,33 +71,21 @@ impl<T: ::windows_core::RuntimeType + 'static> IIterator<T> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).get_Current)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.get_Current(&mut result__)).from_abi(result__)
         }
     }
     pub fn get_HasCurrent(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).get_HasCurrent)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.get_HasCurrent(&mut result__)).from_abi(result__)
         }
     }
     pub fn MoveNext(&self) -> ::windows_core::Result<bool> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).MoveNext)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.MoveNext(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -170,22 +154,14 @@ impl<K: ::windows_core::RuntimeType + 'static, V: ::windows_core::RuntimeType + 
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).get_Key)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.get_Key(&mut result__)).from_abi(result__)
         }
     }
     pub fn get_Value(&self) -> ::windows_core::Result<V> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).get_Value)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.get_Value(&mut result__)).from_abi(result__)
         }
     }
 }
@@ -264,23 +240,15 @@ impl<K: ::windows_core::RuntimeType + 'static, V: ::windows_core::RuntimeType + 
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Lookup)(
-                ::windows_core::Interface::as_raw(this),
-                key as *mut _ as _,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Lookup(key as *mut _ as _, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn get_Size(&self) -> ::windows_core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).get_Size)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.get_Size(&mut result__)).from_abi(result__)
         }
     }
     pub fn HasKey<P0>(
@@ -293,23 +261,15 @@ impl<K: ::windows_core::RuntimeType + 'static, V: ::windows_core::RuntimeType + 
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).HasKey)(
-                ::windows_core::Interface::as_raw(this),
-                key as *mut _ as _,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.HasKey(key as *mut _ as _, &mut result__))
+                .from_abi(result__)
         }
     }
     pub fn First(&self) -> ::windows_core::Result<IIterator<IKeyValuePair<K, V>>> {
         let this = &::windows_core::ComInterface::cast::<IIterable<IKeyValuePair<K, V>>>(self)?;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).First)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.First(&mut result__)).from_abi(result__)
         }
     }
 }
