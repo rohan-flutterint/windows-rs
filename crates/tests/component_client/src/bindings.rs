@@ -14,12 +14,7 @@ pub mod Nested {
     impl IThing {
         pub fn Method(&self) -> ::windows_core::Result<()> {
             let this = self;
-            unsafe {
-                (::windows_core::Interface::vtable(this).Method)(::windows_core::Interface::as_raw(
-                    this,
-                ))
-                .ok()
-            }
+            unsafe { ::windows_core::vcall!(this.Method()).ok() }
         }
     }
     ::windows_core::imp::interface_hierarchy!(
@@ -126,32 +121,18 @@ impl Class {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Property)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Property(&mut result__)).from_abi(result__)
         }
     }
     pub fn SetProperty(&self, value: i32) -> ::windows_core::Result<()> {
         let this = self;
-        unsafe {
-            (::windows_core::Interface::vtable(this).SetProperty)(
-                ::windows_core::Interface::as_raw(this),
-                value,
-            )
-            .ok()
-        }
+        unsafe { ::windows_core::vcall!(this.SetProperty(value)).ok() }
     }
     pub fn Flags(&self) -> ::windows_core::Result<Flags> {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Flags)(
-                ::windows_core::Interface::as_raw(this),
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Flags(&mut result__)).from_abi(result__)
         }
     }
     pub fn Int32Array(
@@ -163,8 +144,7 @@ impl Class {
         let this = self;
         unsafe {
             let mut result__ = ::core::mem::MaybeUninit::zeroed();
-            (::windows_core::Interface::vtable(this).Int32Array)(
-                ::windows_core::Interface::as_raw(this),
+            ::windows_core::vcall!(this.Int32Array(
                 a.len().try_into().unwrap(),
                 a.as_ptr(),
                 b.len().try_into().unwrap(),
@@ -172,8 +152,8 @@ impl Class {
                 c.set_abi_len(),
                 c as *mut _ as _,
                 ::windows_core::Array::<i32>::set_abi_len(::std::mem::transmute(&mut result__)),
-                result__.as_mut_ptr() as *mut _ as _,
-            )
+                result__.as_mut_ptr() as *mut _ as _
+            ))
             .and_then(|| result__.assume_init())
         }
     }
@@ -186,8 +166,7 @@ impl Class {
         let this = self;
         unsafe {
             let mut result__ = ::core::mem::MaybeUninit::zeroed();
-            (::windows_core::Interface::vtable(this).StringArray)(
-                ::windows_core::Interface::as_raw(this),
+            ::windows_core::vcall!(this.StringArray(
                 a.len().try_into().unwrap(),
                 ::core::mem::transmute(a.as_ptr()),
                 b.len().try_into().unwrap(),
@@ -195,10 +174,10 @@ impl Class {
                 c.set_abi_len(),
                 c as *mut _ as _,
                 ::windows_core::Array::<::windows_core::HSTRING>::set_abi_len(
-                    ::std::mem::transmute(&mut result__),
+                    ::std::mem::transmute(&mut result__)
                 ),
-                result__.as_mut_ptr() as *mut _ as _,
-            )
+                result__.as_mut_ptr() as *mut _ as _
+            ))
             .and_then(|| result__.assume_init())
         }
     }
@@ -211,13 +190,12 @@ impl Class {
     {
         let this = self;
         unsafe {
-            (::windows_core::Interface::vtable(this).Input)(
-                ::windows_core::Interface::as_raw(this),
+            ::windows_core::vcall!(this.Input(
                 a.into_param().abi(),
                 b.into_param().abi(),
                 c.try_into_param()?.abi(),
-                d.into_param().abi(),
-            )
+                d.into_param().abi()
+            ))
             .ok()
         }
     }
@@ -324,12 +302,7 @@ impl Callback {
         let this = self;
         unsafe {
             let mut result__ = ::std::mem::zeroed();
-            (::windows_core::Interface::vtable(this).Invoke)(
-                ::windows_core::Interface::as_raw(this),
-                a,
-                &mut result__,
-            )
-            .from_abi(result__)
+            ::windows_core::vcall!(this.Invoke(a, &mut result__)).from_abi(result__)
         }
     }
 }
