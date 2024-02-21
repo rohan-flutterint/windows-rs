@@ -26,3 +26,6 @@ use decode::*;
 
 mod bstr;
 pub use bstr::*;
+
+mod hstring;
+pub use hstring::*;

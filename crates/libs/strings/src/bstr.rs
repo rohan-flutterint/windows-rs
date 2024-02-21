@@ -48,15 +48,18 @@ impl BSTR {
             return Some(Self::new());
         }
 
-        if let Ok(len) = u32::try_from(value.len()) {
-            let result = unsafe { Self(bindings::SysAllocStringLen(value.as_ptr(), len)) };
+        let result = unsafe {
+            Self(bindings::SysAllocStringLen(
+                value.as_ptr(),
+                value.len().try_into().ok()?,
+            ))
+        };
 
-            if !result.is_empty() {
-                return Some(result);
-            }
+        if result.is_empty() {
+            None
+        } else {
+            Some(result)
         }
-
-        None
     }
 
     /// # Safety
