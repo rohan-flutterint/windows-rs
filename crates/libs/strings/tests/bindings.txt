@@ -1,0 +1,7 @@
+--out src/bindings.rs
+--config flatten sys minimal vtbl
+
+--filter
+    Windows.Win32.Foundation.SysAllocStringLen
+    Windows.Win32.Foundation.SysFreeString
+    Windows.Win32.Foundation.SysStringLen
