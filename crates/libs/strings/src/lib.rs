@@ -27,6 +27,9 @@ pub use pcwstr::*;
 mod pwstr;
 pub use pwstr::*;
 
+mod literals;
+pub use literals::*;
+
 #[cfg(not(feature = "std"))]
 mod disambiguate {
     extern crate alloc;
