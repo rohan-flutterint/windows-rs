@@ -2,7 +2,7 @@
 #[macro_export]
 macro_rules! s {
     ($s:literal) => {
-        $crate::PCSTR::from_raw(::std::concat!($s, '\0').as_ptr())
+        $crate::PCSTR::from_raw(::core::concat!($s, '\0').as_ptr())
     };
 }
 
@@ -43,7 +43,7 @@ macro_rules! h {
         const OUTPUT_LEN: usize = $crate::utf16_len(INPUT) + 1;
         const RESULT: $crate::HSTRING = {
             if OUTPUT_LEN == 1 {
-                unsafe { ::std::mem::transmute(::std::ptr::null::<u16>()) }
+                unsafe { ::core::mem::transmute(::core::ptr::null::<u16>()) }
             } else {
                 const OUTPUT: $crate::PCWSTR = $crate::w!($s);
                 const HEADER: $crate::HSTRING_HEADER = $crate::HSTRING_HEADER {
@@ -55,7 +55,7 @@ macro_rules! h {
                 };
                 // SAFETY: an `HSTRING` is exactly equivalent to a pointer to an `HSTRING_HEADER`
                 unsafe {
-                    ::std::mem::transmute::<&$crate::HSTRING_HEADER, $crate::HSTRING>(&HEADER)
+                    ::core::mem::transmute::<&$crate::HSTRING_HEADER, $crate::HSTRING>(&HEADER)
                 }
             }
         };
