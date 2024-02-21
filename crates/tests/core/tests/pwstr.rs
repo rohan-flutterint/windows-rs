@@ -19,7 +19,7 @@ fn test() -> Result<()> {
     );
 
     let p = PWSTR::from_raw(w!("world").as_ptr() as *mut _);
-    let s: HSTRING = unsafe { p.to_hstring()? };
+    let s: HSTRING = unsafe { p.to_hstring().unwrap() };
     assert_eq!("world", s);
 
     Ok(())

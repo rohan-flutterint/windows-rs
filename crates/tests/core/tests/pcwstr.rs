@@ -19,7 +19,7 @@ fn test() -> Result<()> {
     );
 
     let p: PCWSTR = w!("world");
-    let s: HSTRING = unsafe { p.to_hstring()? };
+    let s: HSTRING = unsafe { p.to_hstring().unwrap() };
     assert_eq!("world", s);
 
     Ok(())
