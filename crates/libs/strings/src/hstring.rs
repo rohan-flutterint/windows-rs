@@ -1,9 +1,8 @@
 use super::*;
 
-/// A WinRT string ([HSTRING](https://docs.microsoft.com/en-us/windows/win32/winrt/hstring))
-/// is reference-counted and immutable.
+/// An HSTRING is reference-counted and immutable, typically used with with WinRT APIs.
 #[repr(transparent)]
-pub struct HSTRING(Option<std::ptr::NonNull<Header>>);
+pub struct HSTRING(Option<core::ptr::NonNull<Header>>);
 
 impl HSTRING {
     /// Create an empty `HSTRING`.
@@ -30,7 +29,7 @@ impl HSTRING {
 
     /// Get the string as 16-bit wide characters (wchars).
     pub fn as_wide(&self) -> &[u16] {
-        unsafe { std::slice::from_raw_parts(self.as_ptr(), self.len()) }
+        unsafe { core::slice::from_raw_parts(self.as_ptr(), self.len()) }
     }
 
     /// Returns a raw pointer to the `HSTRING` buffer.
@@ -54,9 +53,9 @@ impl HSTRING {
     }
 
     /// Get the contents of this `HSTRING` as a OsString.
-    #[cfg(windows)]
-    pub fn to_os_string(&self) -> std::ffi::OsString {
-        std::os::windows::ffi::OsStringExt::from_wide(self.as_wide())
+    #[cfg(all(windows, feature = "core"))]
+    pub fn to_os_string(&self) -> core::ffi::OsString {
+        core::os::windows::ffi::OsStringExt::from_wide(self.as_wide())
     }
 
     /// # Safety
@@ -73,13 +72,13 @@ impl HSTRING {
         for (index, wide) in iter.enumerate() {
             debug_assert!(index < len);
 
-            std::ptr::write((*ptr).data.add(index), wide);
+            core::ptr::write((*ptr).data.add(index), wide);
             (*ptr).len = index as u32 + 1;
         }
 
         // Write a 0 byte to the end of the buffer.
-        std::ptr::write((*ptr).data.offset((*ptr).len as isize), 0);
-        Some(Self(std::ptr::NonNull::new(ptr)))
+        core::ptr::write((*ptr).data.offset((*ptr).len as isize), 0);
+        Some(Self(core::ptr::NonNull::new(ptr)))
     }
 
     fn get_header(&self) -> Option<&Header> {
@@ -96,7 +95,7 @@ impl Default for HSTRING {
 impl Clone for HSTRING {
     fn clone(&self) -> Self {
         if let Some(header) = self.get_header() {
-            Self(std::ptr::NonNull::new(header.duplicate().unwrap()))
+            Self(core::ptr::NonNull::new(header.duplicate().unwrap()))
         } else {
             Self::new()
         }
@@ -125,18 +124,18 @@ impl Drop for HSTRING {
 unsafe impl Send for HSTRING {}
 unsafe impl Sync for HSTRING {}
 
-impl std::fmt::Display for HSTRING {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+impl core::fmt::Display for HSTRING {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(
             f,
             "{}",
-            Decode(|| std::char::decode_utf16(self.as_wide().iter().cloned()))
+            Decode(|| core::char::decode_utf16(self.as_wide().iter().cloned()))
         )
     }
 }
 
-impl std::fmt::Debug for HSTRING {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+impl core::fmt::Debug for HSTRING {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "\"{}\"", self)
     }
 }
@@ -159,19 +158,19 @@ impl From<&String> for HSTRING {
     }
 }
 
-#[cfg(windows)]
-impl From<&std::path::Path> for HSTRING {
-    fn from(value: &std::path::Path) -> Self {
+#[cfg(all(windows, feature = "core"))]
+impl From<&core::path::Path> for HSTRING {
+    fn from(value: &core::path::Path) -> Self {
         value.as_os_str().into()
     }
 }
 
-#[cfg(windows)]
-impl From<&std::ffi::OsStr> for HSTRING {
-    fn from(value: &std::ffi::OsStr) -> Self {
+#[cfg(all(windows, feature = "core"))]
+impl From<&core::ffi::OsStr> for HSTRING {
+    fn from(value: &core::ffi::OsStr) -> Self {
         unsafe {
             Self::from_wide_iter(
-                std::os::windows::ffi::OsStrExt::encode_wide(value),
+                core::os::windows::ffi::OsStrExt::encode_wide(value),
                 value.len(),
             )
             .unwrap()
@@ -179,16 +178,16 @@ impl From<&std::ffi::OsStr> for HSTRING {
     }
 }
 
-#[cfg(windows)]
-impl From<std::ffi::OsString> for HSTRING {
-    fn from(value: std::ffi::OsString) -> Self {
+#[cfg(all(windows, feature = "core"))]
+impl From<core::ffi::OsString> for HSTRING {
+    fn from(value: core::ffi::OsString) -> Self {
         value.as_os_str().into()
     }
 }
 
-#[cfg(windows)]
-impl From<&std::ffi::OsString> for HSTRING {
-    fn from(value: &std::ffi::OsString) -> Self {
+#[cfg(all(windows, feature = "core"))]
+impl From<&core::ffi::OsString> for HSTRING {
+    fn from(value: &core::ffi::OsString) -> Self {
         value.as_os_str().into()
     }
 }
@@ -196,13 +195,13 @@ impl From<&std::ffi::OsString> for HSTRING {
 impl Eq for HSTRING {}
 
 impl Ord for HSTRING {
-    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+    fn cmp(&self, other: &Self) -> core::cmp::Ordering {
         self.as_wide().cmp(other.as_wide())
     }
 }
 
 impl PartialOrd for HSTRING {
-    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+    fn partial_cmp(&self, other: &Self) -> Option<core::cmp::Ordering> {
         Some(self.cmp(other))
     }
 }
@@ -285,88 +284,88 @@ impl PartialEq<&HSTRING> for String {
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<std::ffi::OsString> for HSTRING {
-    fn eq(&self, other: &std::ffi::OsString) -> bool {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<core::ffi::OsString> for HSTRING {
+    fn eq(&self, other: &core::ffi::OsString) -> bool {
         *self == **other
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<std::ffi::OsString> for &HSTRING {
-    fn eq(&self, other: &std::ffi::OsString) -> bool {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<core::ffi::OsString> for &HSTRING {
+    fn eq(&self, other: &core::ffi::OsString) -> bool {
         **self == **other
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<&std::ffi::OsString> for HSTRING {
-    fn eq(&self, other: &&std::ffi::OsString) -> bool {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<&core::ffi::OsString> for HSTRING {
+    fn eq(&self, other: &&core::ffi::OsString) -> bool {
         *self == ***other
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<std::ffi::OsStr> for HSTRING {
-    fn eq(&self, other: &std::ffi::OsStr) -> bool {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<core::ffi::OsStr> for HSTRING {
+    fn eq(&self, other: &core::ffi::OsStr) -> bool {
         self.as_wide()
             .iter()
             .copied()
-            .eq(std::os::windows::ffi::OsStrExt::encode_wide(other))
+            .eq(core::os::windows::ffi::OsStrExt::encode_wide(other))
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<std::ffi::OsStr> for &HSTRING {
-    fn eq(&self, other: &std::ffi::OsStr) -> bool {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<core::ffi::OsStr> for &HSTRING {
+    fn eq(&self, other: &core::ffi::OsStr) -> bool {
         **self == *other
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<&std::ffi::OsStr> for HSTRING {
-    fn eq(&self, other: &&std::ffi::OsStr) -> bool {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<&core::ffi::OsStr> for HSTRING {
+    fn eq(&self, other: &&core::ffi::OsStr) -> bool {
         *self == **other
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<HSTRING> for std::ffi::OsStr {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<HSTRING> for core::ffi::OsStr {
     fn eq(&self, other: &HSTRING) -> bool {
         *other == *self
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<HSTRING> for &std::ffi::OsStr {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<HSTRING> for &core::ffi::OsStr {
     fn eq(&self, other: &HSTRING) -> bool {
         *other == **self
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<&HSTRING> for std::ffi::OsStr {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<&HSTRING> for core::ffi::OsStr {
     fn eq(&self, other: &&HSTRING) -> bool {
         **other == *self
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<HSTRING> for std::ffi::OsString {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<HSTRING> for core::ffi::OsString {
     fn eq(&self, other: &HSTRING) -> bool {
         *other == **self
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<HSTRING> for &std::ffi::OsString {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<HSTRING> for &core::ffi::OsString {
     fn eq(&self, other: &HSTRING) -> bool {
         *other == ***self
     }
 }
 
-#[cfg(windows)]
-impl PartialEq<&HSTRING> for std::ffi::OsString {
+#[cfg(all(windows, feature = "core"))]
+impl PartialEq<&HSTRING> for core::ffi::OsString {
     fn eq(&self, other: &&HSTRING) -> bool {
         **other == **self
     }
@@ -388,15 +387,15 @@ impl TryFrom<HSTRING> for String {
     }
 }
 
-#[cfg(windows)]
-impl<'a> From<&'a HSTRING> for std::ffi::OsString {
+#[cfg(all(windows, feature = "core"))]
+impl<'a> From<&'a HSTRING> for core::ffi::OsString {
     fn from(hstring: &HSTRING) -> Self {
         hstring.to_os_string()
     }
 }
 
-#[cfg(windows)]
-impl From<HSTRING> for std::ffi::OsString {
+#[cfg(all(windows, feature = "core"))]
+impl From<HSTRING> for core::ffi::OsString {
     fn from(hstring: HSTRING) -> Self {
         Self::from(&hstring)
     }
@@ -420,13 +419,13 @@ impl Header {
         debug_assert!(len != 0);
         // Allocate enough space for header and two bytes per character.
         // The space for the terminating null character is already accounted for inside of `Header`.
-        let alloc_size = std::mem::size_of::<Header>() + 2 * len as usize;
+        let alloc_size = core::mem::size_of::<Header>() + 2 * len as usize;
 
         let header = heap_alloc(alloc_size)? as *mut Header;
 
-        // SAFETY: uses `std::ptr::write` (since `header` is unintialized). `Header` is safe to be all zeros.
+        // SAFETY: uses `core::ptr::write` (since `header` is unintialized). `Header` is safe to be all zeros.
         unsafe {
-            header.write(std::mem::MaybeUninit::<Header>::zeroed().assume_init());
+            header.write(core::mem::MaybeUninit::<Header>::zeroed().assume_init());
             (*header).len = len;
             (*header).count = RefCount::new(1);
             (*header).data = &mut (*header).buffer_start;
@@ -447,7 +446,7 @@ impl Header {
             // SAFETY: since we are duplicating the string it is safe to copy all data from self to the initialized `copy`.
             // We copy `len + 1` characters since `len` does not account for the terminating null character.
             unsafe {
-                std::ptr::copy_nonoverlapping(self.data, (*copy).data, self.len as usize + 1);
+                core::ptr::copy_nonoverlapping(self.data, (*copy).data, self.len as usize + 1);
             }
 
             Some(copy)
@@ -455,7 +454,7 @@ impl Header {
     }
 }
 
-fn heap_alloc(bytes: usize) -> Option<*mut std::ffi::c_void> {
+fn heap_alloc(bytes: usize) -> Option<*mut core::ffi::c_void> {
     let ptr = unsafe { bindings::HeapAlloc(bindings::GetProcessHeap(), 0, bytes) };
 
     if ptr.is_null() {
@@ -465,22 +464,22 @@ fn heap_alloc(bytes: usize) -> Option<*mut std::ffi::c_void> {
     }
 }
 
-unsafe fn heap_free(ptr: *mut std::ffi::c_void) {
+unsafe fn heap_free(ptr: *mut core::ffi::c_void) {
     bindings::HeapFree(bindings::GetProcessHeap(), 0, ptr);
 }
 
 #[repr(transparent)]
-struct RefCount(std::sync::atomic::AtomicI32);
+struct RefCount(core::sync::atomic::AtomicI32);
 
 impl RefCount {
     // Creates a new `RefCount` with an initial value of `1`.
     fn new(count: u32) -> Self {
-        Self(std::sync::atomic::AtomicI32::new(count as i32))
+        Self(core::sync::atomic::AtomicI32::new(count as i32))
     }
 
     // Increments the reference count, returning the new value.
     fn add_ref(&self) -> u32 {
-        (self.0.fetch_add(1, std::sync::atomic::Ordering::Relaxed) + 1) as u32
+        (self.0.fetch_add(1, core::sync::atomic::Ordering::Relaxed) + 1) as u32
     }
 
     // Decrements the reference count, returning the new value.
@@ -488,14 +487,14 @@ impl RefCount {
     // This operation inserts an `Acquire` fence when the reference count reaches zero.
     // This prevents reordering before the object is destroyed.
     fn release(&self) -> u32 {
-        let remaining = self.0.fetch_sub(1, std::sync::atomic::Ordering::Release) - 1;
+        let remaining = self.0.fetch_sub(1, core::sync::atomic::Ordering::Release) - 1;
 
         match remaining.cmp(&0) {
-            std::cmp::Ordering::Equal => {
-                std::sync::atomic::fence(std::sync::atomic::Ordering::Acquire)
+            core::cmp::Ordering::Equal => {
+                core::sync::atomic::fence(core::sync::atomic::Ordering::Acquire)
             }
-            std::cmp::Ordering::Less => panic!("Object has been over-released."),
-            std::cmp::Ordering::Greater => {}
+            core::cmp::Ordering::Less => panic!("Object has been over-released."),
+            core::cmp::Ordering::Greater => {}
         }
 
         remaining as u32

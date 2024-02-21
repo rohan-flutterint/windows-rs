@@ -1,7 +1,6 @@
 use super::*;
 
-/// A BSTR string ([BSTR](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/automat/string-manipulation-functions))
-/// is a length-prefixed wide string.
+/// A BSTR or Basic string is a length-prefixed wide string, typically used with COM and OLE APIs.
 #[repr(transparent)]
 pub struct BSTR(*const u16);
 
