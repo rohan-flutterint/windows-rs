@@ -233,7 +233,7 @@ pub const SELCERT_PROPERTIES: u32 = 100u32;
 pub const SELCERT_SERIAL_NUM: u32 = 106u32;
 pub const SELCERT_THUMBPRINT: u32 = 107u32;
 pub const SELCERT_VALIDITY: u32 = 104u32;
-pub const szCERT_CERTIFICATE_ACTION_VERIFY: ::windows_core::PCSTR = ::windows_core::s!("{7801ebd0-cf4b-11d0-851f-0060979387ea}");
+pub const szCERT_CERTIFICATE_ACTION_VERIFY: ::windows_strings::PCSTR = ::windows_strings::s!("{7801ebd0-cf4b-11d0-851f-0060979387ea}");
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq, ::core::marker::Copy, ::core::clone::Clone, ::core::default::Default)]
 pub struct CERT_SELECT_STRUCT_FLAGS(pub u32);

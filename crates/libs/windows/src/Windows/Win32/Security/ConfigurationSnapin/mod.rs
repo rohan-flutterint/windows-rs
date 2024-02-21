@@ -45,8 +45,8 @@ pub struct ISceSvcAttachmentPersistInfo_Vtbl {
     pub IsDirty: unsafe extern "system" fn(*mut ::core::ffi::c_void, *mut i8) -> ::windows_core::HRESULT,
     pub FreeBuffer: unsafe extern "system" fn(*mut ::core::ffi::c_void, *mut ::core::ffi::c_void) -> ::windows_core::HRESULT,
 }
-pub const CCF_SCESVC_ATTACHMENT: ::windows_core::PCWSTR = ::windows_core::w!("CCF_SCESVC_ATTACHMENT");
-pub const CCF_SCESVC_ATTACHMENT_DATA: ::windows_core::PCWSTR = ::windows_core::w!("CCF_SCESVC_ATTACHMENT_DATA");
+pub const CCF_SCESVC_ATTACHMENT: ::windows_strings::PCWSTR = ::windows_strings::w!("CCF_SCESVC_ATTACHMENT");
+pub const CCF_SCESVC_ATTACHMENT_DATA: ::windows_strings::PCWSTR = ::windows_strings::w!("CCF_SCESVC_ATTACHMENT_DATA");
 pub const SCESTATUS_ACCESS_DENIED: i32 = 9i32;
 pub const SCESTATUS_ALREADY_RUNNING: i32 = 13i32;
 pub const SCESTATUS_BAD_FORMAT: i32 = 7i32;
@@ -72,7 +72,7 @@ pub const SCE_LOG_LEVEL_ALWAYS: SCE_LOG_ERR_LEVEL = SCE_LOG_ERR_LEVEL(0i32);
 pub const SCE_LOG_LEVEL_DEBUG: SCE_LOG_ERR_LEVEL = SCE_LOG_ERR_LEVEL(3i32);
 pub const SCE_LOG_LEVEL_DETAIL: SCE_LOG_ERR_LEVEL = SCE_LOG_ERR_LEVEL(2i32);
 pub const SCE_LOG_LEVEL_ERROR: SCE_LOG_ERR_LEVEL = SCE_LOG_ERR_LEVEL(1i32);
-pub const SCE_ROOT_PATH: ::windows_core::PCWSTR = ::windows_core::w!("Software\\Microsoft\\Windows NT\\CurrentVersion\\SeCEdit");
+pub const SCE_ROOT_PATH: ::windows_strings::PCWSTR = ::windows_strings::w!("Software\\Microsoft\\Windows NT\\CurrentVersion\\SeCEdit");
 pub const SceSvcAnalysisInfo: SCESVC_INFO_TYPE = SCESVC_INFO_TYPE(2i32);
 pub const SceSvcConfigurationInfo: SCESVC_INFO_TYPE = SCESVC_INFO_TYPE(0i32);
 pub const SceSvcInternalUse: SCESVC_INFO_TYPE = SCESVC_INFO_TYPE(3i32);
@@ -80,12 +80,12 @@ pub const SceSvcMergedPolicyInfo: SCESVC_INFO_TYPE = SCESVC_INFO_TYPE(1i32);
 pub const cNodetypeSceAnalysisServices: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x678050c7_1ff8_11d1_affb_00c04fb984f9);
 pub const cNodetypeSceEventLog: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x2ce06698_4bf3_11d1_8c30_00c04fb984f9);
 pub const cNodetypeSceTemplateServices: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x24a7f717_1f0c_11d1_affb_00c04fb984f9);
-pub const lstruuidNodetypeSceAnalysisServices: ::windows_core::PCWSTR = ::windows_core::w!("{678050c7-1ff8-11d1-affb-00c04fb984f9}");
-pub const lstruuidNodetypeSceEventLog: ::windows_core::PCWSTR = ::windows_core::w!("{2ce06698-4bf3-11d1-8c30-00c04fb984f9}");
-pub const lstruuidNodetypeSceTemplateServices: ::windows_core::PCWSTR = ::windows_core::w!("{24a7f717-1f0c-11d1-affb-00c04fb984f9}");
-pub const struuidNodetypeSceAnalysisServices: ::windows_core::PCSTR = ::windows_core::s!("{678050c7-1ff8-11d1-affb-00c04fb984f9}");
-pub const struuidNodetypeSceEventLog: ::windows_core::PCSTR = ::windows_core::s!("{2ce06698-4bf3-11d1-8c30-00c04fb984f9}");
-pub const struuidNodetypeSceTemplateServices: ::windows_core::PCSTR = ::windows_core::s!("{24a7f717-1f0c-11d1-affb-00c04fb984f9}");
+pub const lstruuidNodetypeSceAnalysisServices: ::windows_strings::PCWSTR = ::windows_strings::w!("{678050c7-1ff8-11d1-affb-00c04fb984f9}");
+pub const lstruuidNodetypeSceEventLog: ::windows_strings::PCWSTR = ::windows_strings::w!("{2ce06698-4bf3-11d1-8c30-00c04fb984f9}");
+pub const lstruuidNodetypeSceTemplateServices: ::windows_strings::PCWSTR = ::windows_strings::w!("{24a7f717-1f0c-11d1-affb-00c04fb984f9}");
+pub const struuidNodetypeSceAnalysisServices: ::windows_strings::PCSTR = ::windows_strings::s!("{678050c7-1ff8-11d1-affb-00c04fb984f9}");
+pub const struuidNodetypeSceEventLog: ::windows_strings::PCSTR = ::windows_strings::s!("{2ce06698-4bf3-11d1-8c30-00c04fb984f9}");
+pub const struuidNodetypeSceTemplateServices: ::windows_strings::PCSTR = ::windows_strings::s!("{24a7f717-1f0c-11d1-affb-00c04fb984f9}");
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq, ::core::marker::Copy, ::core::clone::Clone, ::core::default::Default)]
 pub struct SCESVC_INFO_TYPE(pub i32);

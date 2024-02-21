@@ -78,12 +78,12 @@ pub const TSF_Authenticated: u32 = 2u32;
 pub const TSF_Hardware: u32 = 1u32;
 pub const TSF_IPv6: u32 = 4u32;
 pub const TSF_SignatureAuthenticated: u32 = 8u32;
-pub const wszW32TimeRegKeyPolicyTimeProviders: ::windows_core::PCWSTR = ::windows_core::w!("Software\\Policies\\Microsoft\\W32Time\\TimeProviders");
-pub const wszW32TimeRegKeyTimeProviders: ::windows_core::PCWSTR = ::windows_core::w!("System\\CurrentControlSet\\Services\\W32Time\\TimeProviders");
-pub const wszW32TimeRegValueDllName: ::windows_core::PCWSTR = ::windows_core::w!("DllName");
-pub const wszW32TimeRegValueEnabled: ::windows_core::PCWSTR = ::windows_core::w!("Enabled");
-pub const wszW32TimeRegValueInputProvider: ::windows_core::PCWSTR = ::windows_core::w!("InputProvider");
-pub const wszW32TimeRegValueMetaDataProvider: ::windows_core::PCWSTR = ::windows_core::w!("MetaDataProvider");
+pub const wszW32TimeRegKeyPolicyTimeProviders: ::windows_strings::PCWSTR = ::windows_strings::w!("Software\\Policies\\Microsoft\\W32Time\\TimeProviders");
+pub const wszW32TimeRegKeyTimeProviders: ::windows_strings::PCWSTR = ::windows_strings::w!("System\\CurrentControlSet\\Services\\W32Time\\TimeProviders");
+pub const wszW32TimeRegValueDllName: ::windows_strings::PCWSTR = ::windows_strings::w!("DllName");
+pub const wszW32TimeRegValueEnabled: ::windows_strings::PCWSTR = ::windows_strings::w!("Enabled");
+pub const wszW32TimeRegValueInputProvider: ::windows_strings::PCWSTR = ::windows_strings::w!("InputProvider");
+pub const wszW32TimeRegValueMetaDataProvider: ::windows_strings::PCWSTR = ::windows_strings::w!("MetaDataProvider");
 #[repr(C)]
 pub struct DYNAMIC_TIME_ZONE_INFORMATION {
     pub Bias: i32,

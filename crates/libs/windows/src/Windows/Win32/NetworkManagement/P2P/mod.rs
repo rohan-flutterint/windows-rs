@@ -1509,7 +1509,7 @@ pub const PEER_MEMBER_UPDATED: PEER_MEMBER_CHANGE_TYPE = PEER_MEMBER_CHANGE_TYPE
 pub const PEER_NODE_CHANGE_CONNECTED: PEER_NODE_CHANGE_TYPE = PEER_NODE_CHANGE_TYPE(1i32);
 pub const PEER_NODE_CHANGE_DISCONNECTED: PEER_NODE_CHANGE_TYPE = PEER_NODE_CHANGE_TYPE(2i32);
 pub const PEER_NODE_CHANGE_UPDATED: PEER_NODE_CHANGE_TYPE = PEER_NODE_CHANGE_TYPE(3i32);
-pub const PEER_PNRP_ALL_LINK_CLOUDS: ::windows_core::PCWSTR = ::windows_core::w!("PEER_PNRP_ALL_LINKS");
+pub const PEER_PNRP_ALL_LINK_CLOUDS: ::windows_strings::PCWSTR = ::windows_strings::w!("PEER_PNRP_ALL_LINKS");
 pub const PEER_PRESENCE_AWAY: PEER_PRESENCE_STATUS = PEER_PRESENCE_STATUS(2i32);
 pub const PEER_PRESENCE_BE_RIGHT_BACK: PEER_PRESENCE_STATUS = PEER_PRESENCE_STATUS(3i32);
 pub const PEER_PRESENCE_BUSY: PEER_PRESENCE_STATUS = PEER_PRESENCE_STATUS(5i32);
@@ -1577,9 +1577,9 @@ pub const WSA_PNRP_DUPLICATE_PEER_NAME: u32 = 11508u32;
 pub const WSA_PNRP_ERROR_BASE: u32 = 11500u32;
 pub const WSA_PNRP_INVALID_IDENTITY: u32 = 11503u32;
 pub const WSA_PNRP_TOO_MUCH_LOAD: u32 = 11504u32;
-pub const WSZ_SCOPE_GLOBAL: ::windows_core::PCWSTR = ::windows_core::w!("GLOBAL");
-pub const WSZ_SCOPE_LINKLOCAL: ::windows_core::PCWSTR = ::windows_core::w!("LINKLOCAL");
-pub const WSZ_SCOPE_SITELOCAL: ::windows_core::PCWSTR = ::windows_core::w!("SITELOCAL");
+pub const WSZ_SCOPE_GLOBAL: ::windows_strings::PCWSTR = ::windows_strings::w!("GLOBAL");
+pub const WSZ_SCOPE_LINKLOCAL: ::windows_strings::PCWSTR = ::windows_strings::w!("LINKLOCAL");
+pub const WSZ_SCOPE_SITELOCAL: ::windows_strings::PCWSTR = ::windows_strings::w!("SITELOCAL");
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq, ::core::marker::Copy, ::core::clone::Clone, ::core::default::Default)]
 pub struct DRT_ADDRESS_FLAGS(pub i32);

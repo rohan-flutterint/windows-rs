@@ -207,7 +207,7 @@ pub struct ISecurityObjectTypeInfo_Vtbl {
     pub base__: ::windows_core::IUnknown_Vtbl,
     pub GetInheritSource: unsafe extern "system" fn(*mut ::core::ffi::c_void, u32, *mut super::super::ACL, *mut *mut super::INHERITED_FROMA) -> ::windows_core::HRESULT,
 }
-pub const CFSTR_ACLUI_SID_INFO_LIST: ::windows_core::PCWSTR = ::windows_core::w!("CFSTR_ACLUI_SID_INFO_LIST");
+pub const CFSTR_ACLUI_SID_INFO_LIST: ::windows_strings::PCWSTR = ::windows_strings::w!("CFSTR_ACLUI_SID_INFO_LIST");
 pub const DOBJ_COND_NTACLS: i32 = 8i32;
 pub const DOBJ_RES_CONT: i32 = 1i32;
 pub const DOBJ_RES_ROOT: i32 = 2i32;

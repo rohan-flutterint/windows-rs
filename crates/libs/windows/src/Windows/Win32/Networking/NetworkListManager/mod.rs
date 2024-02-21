@@ -537,19 +537,19 @@ pub struct INetworkListManagerEvents_Vtbl {
     pub base__: ::windows_core::IUnknown_Vtbl,
     pub ConnectivityChanged: unsafe extern "system" fn(*mut ::core::ffi::c_void, NLM_CONNECTIVITY) -> ::windows_core::HRESULT,
 }
-pub const NA_AllowMerge: ::windows_core::PCWSTR = ::windows_core::w!("NA_AllowMerge");
-pub const NA_CategoryReadOnly: ::windows_core::PCWSTR = ::windows_core::w!("NA_CategoryReadOnly");
-pub const NA_CategorySetByPolicy: ::windows_core::PCWSTR = ::windows_core::w!("NA_CategorySetByPolicy");
-pub const NA_DescriptionReadOnly: ::windows_core::PCWSTR = ::windows_core::w!("NA_DescriptionReadOnly");
-pub const NA_DescriptionSetByPolicy: ::windows_core::PCWSTR = ::windows_core::w!("NA_DescriptionSetByPolicy");
-pub const NA_DomainAuthenticationFailed: ::windows_core::PCWSTR = ::windows_core::w!("NA_DomainAuthenticationFailed");
-pub const NA_IconReadOnly: ::windows_core::PCWSTR = ::windows_core::w!("NA_IconReadOnly");
-pub const NA_IconSetByPolicy: ::windows_core::PCWSTR = ::windows_core::w!("NA_IconSetByPolicy");
-pub const NA_InternetConnectivityV4: ::windows_core::PCWSTR = ::windows_core::w!("NA_InternetConnectivityV4");
-pub const NA_InternetConnectivityV6: ::windows_core::PCWSTR = ::windows_core::w!("NA_InternetConnectivityV6");
-pub const NA_NameReadOnly: ::windows_core::PCWSTR = ::windows_core::w!("NA_NameReadOnly");
-pub const NA_NameSetByPolicy: ::windows_core::PCWSTR = ::windows_core::w!("NA_NameSetByPolicy");
-pub const NA_NetworkClass: ::windows_core::PCWSTR = ::windows_core::w!("NA_NetworkClass");
+pub const NA_AllowMerge: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_AllowMerge");
+pub const NA_CategoryReadOnly: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_CategoryReadOnly");
+pub const NA_CategorySetByPolicy: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_CategorySetByPolicy");
+pub const NA_DescriptionReadOnly: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_DescriptionReadOnly");
+pub const NA_DescriptionSetByPolicy: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_DescriptionSetByPolicy");
+pub const NA_DomainAuthenticationFailed: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_DomainAuthenticationFailed");
+pub const NA_IconReadOnly: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_IconReadOnly");
+pub const NA_IconSetByPolicy: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_IconSetByPolicy");
+pub const NA_InternetConnectivityV4: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_InternetConnectivityV4");
+pub const NA_InternetConnectivityV6: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_InternetConnectivityV6");
+pub const NA_NameReadOnly: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_NameReadOnly");
+pub const NA_NameSetByPolicy: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_NameSetByPolicy");
+pub const NA_NetworkClass: ::windows_strings::PCWSTR = ::windows_strings::w!("NA_NetworkClass");
 pub const NLM_CONNECTION_COST_APPROACHINGDATALIMIT: NLM_CONNECTION_COST = NLM_CONNECTION_COST(524288i32);
 pub const NLM_CONNECTION_COST_CONGESTED: NLM_CONNECTION_COST = NLM_CONNECTION_COST(131072i32);
 pub const NLM_CONNECTION_COST_FIXED: NLM_CONNECTION_COST = NLM_CONNECTION_COST(2i32);

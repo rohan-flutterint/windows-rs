@@ -314,13 +314,13 @@ where
     ::windows_targets::link!("kernel32.dll" "system" fn WerUnregisterRuntimeExceptionModule(pwszoutofprocesscallbackdll : ::windows_core::PCWSTR, pcontext : *const ::core::ffi::c_void) -> ::windows_core::HRESULT);
     WerUnregisterRuntimeExceptionModule(pwszoutofprocesscallbackdll.into_param().abi(), pcontext).ok()
 }
-pub const APPCRASH_EVENT: ::windows_core::PCWSTR = ::windows_core::w!("APPCRASH");
+pub const APPCRASH_EVENT: ::windows_strings::PCWSTR = ::windows_strings::w!("APPCRASH");
 pub const E_STORE_INVALID: REPORT_STORE_TYPES = REPORT_STORE_TYPES(4i32);
 pub const E_STORE_MACHINE_ARCHIVE: REPORT_STORE_TYPES = REPORT_STORE_TYPES(2i32);
 pub const E_STORE_MACHINE_QUEUE: REPORT_STORE_TYPES = REPORT_STORE_TYPES(3i32);
 pub const E_STORE_USER_ARCHIVE: REPORT_STORE_TYPES = REPORT_STORE_TYPES(0i32);
 pub const E_STORE_USER_QUEUE: REPORT_STORE_TYPES = REPORT_STORE_TYPES(1i32);
-pub const PACKAGED_APPCRASH_EVENT: ::windows_core::PCWSTR = ::windows_core::w!("MoAppCrash");
+pub const PACKAGED_APPCRASH_EVENT: ::windows_strings::PCWSTR = ::windows_strings::w!("MoAppCrash");
 pub const WER_DUMP_AUXILIARY: u32 = 2u32;
 pub const WER_DUMP_MASK_START: u32 = 1u32;
 pub const WER_DUMP_NOHEAP_ONQUEUE: u32 = 1u32;
@@ -366,9 +366,9 @@ pub const WER_P6: u32 = 6u32;
 pub const WER_P7: u32 = 7u32;
 pub const WER_P8: u32 = 8u32;
 pub const WER_P9: u32 = 9u32;
-pub const WER_RUNTIME_EXCEPTION_DEBUGGER_LAUNCH: ::windows_core::PCSTR = ::windows_core::s!("OutOfProcessExceptionEventDebuggerLaunchCallback");
-pub const WER_RUNTIME_EXCEPTION_EVENT_FUNCTION: ::windows_core::PCSTR = ::windows_core::s!("OutOfProcessExceptionEventCallback");
-pub const WER_RUNTIME_EXCEPTION_EVENT_SIGNATURE_FUNCTION: ::windows_core::PCSTR = ::windows_core::s!("OutOfProcessExceptionEventSignatureCallback");
+pub const WER_RUNTIME_EXCEPTION_DEBUGGER_LAUNCH: ::windows_strings::PCSTR = ::windows_strings::s!("OutOfProcessExceptionEventDebuggerLaunchCallback");
+pub const WER_RUNTIME_EXCEPTION_EVENT_FUNCTION: ::windows_strings::PCSTR = ::windows_strings::s!("OutOfProcessExceptionEventCallback");
+pub const WER_RUNTIME_EXCEPTION_EVENT_SIGNATURE_FUNCTION: ::windows_strings::PCSTR = ::windows_strings::s!("OutOfProcessExceptionEventSignatureCallback");
 pub const WER_SUBMIT_ADD_REGISTERED_DATA: WER_SUBMIT_FLAGS = WER_SUBMIT_FLAGS(16u32);
 pub const WER_SUBMIT_ARCHIVE_PARAMETERS_ONLY: WER_SUBMIT_FLAGS = WER_SUBMIT_FLAGS(4096u32);
 pub const WER_SUBMIT_BYPASS_DATA_THROTTLING: WER_SUBMIT_FLAGS = WER_SUBMIT_FLAGS(2048u32);

@@ -136,9 +136,9 @@ pub const MS_INVERTCOLORS: i32 = 4i32;
 pub const MS_SHOWMAGNIFIEDCURSOR: i32 = 1i32;
 pub const MW_FILTERMODE_EXCLUDE: MW_FILTERMODE = MW_FILTERMODE(0u32);
 pub const MW_FILTERMODE_INCLUDE: MW_FILTERMODE = MW_FILTERMODE(1u32);
-pub const WC_MAGNIFIER: ::windows_core::PCWSTR = ::windows_core::w!("Magnifier");
-pub const WC_MAGNIFIERA: ::windows_core::PCSTR = ::windows_core::s!("Magnifier");
-pub const WC_MAGNIFIERW: ::windows_core::PCWSTR = ::windows_core::w!("Magnifier");
+pub const WC_MAGNIFIER: ::windows_strings::PCWSTR = ::windows_strings::w!("Magnifier");
+pub const WC_MAGNIFIERA: ::windows_strings::PCSTR = ::windows_strings::s!("Magnifier");
+pub const WC_MAGNIFIERW: ::windows_strings::PCWSTR = ::windows_strings::w!("Magnifier");
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq, ::core::marker::Copy, ::core::clone::Clone, ::core::default::Default)]
 pub struct MW_FILTERMODE(pub u32);

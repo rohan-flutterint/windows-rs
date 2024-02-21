@@ -181,8 +181,8 @@ where
     ::windows_targets::link!("d3dcompiler_47.dll" "system" fn D3DWriteBlobToFile(pblob : * mut::core::ffi::c_void, pfilename : ::windows_core::PCWSTR, boverwrite : super::super::super::Foundation:: BOOL) -> ::windows_core::HRESULT);
     D3DWriteBlobToFile(pblob.into_param().abi(), pfilename.into_param().abi(), boverwrite.into_param().abi()).ok()
 }
-pub const D3DCOMPILER_DLL_A: ::windows_core::PCSTR = ::windows_core::s!("d3dcompiler_47.dll");
-pub const D3DCOMPILER_DLL_W: ::windows_core::PCWSTR = ::windows_core::w!("d3dcompiler_47.dll");
+pub const D3DCOMPILER_DLL_A: ::windows_strings::PCSTR = ::windows_strings::s!("d3dcompiler_47.dll");
+pub const D3DCOMPILER_DLL_W: ::windows_strings::PCWSTR = ::windows_strings::w!("d3dcompiler_47.dll");
 pub const D3DCOMPILER_STRIP_DEBUG_INFO: D3DCOMPILER_STRIP_FLAGS = D3DCOMPILER_STRIP_FLAGS(2i32);
 pub const D3DCOMPILER_STRIP_PRIVATE_DATA: D3DCOMPILER_STRIP_FLAGS = D3DCOMPILER_STRIP_FLAGS(8i32);
 pub const D3DCOMPILER_STRIP_REFLECTION_DATA: D3DCOMPILER_STRIP_FLAGS = D3DCOMPILER_STRIP_FLAGS(1i32);
