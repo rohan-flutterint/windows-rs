@@ -25,6 +25,10 @@ path = "../targets"
 version = "0.1.0"
 path = "../result"
 
+[dependencies.windows-strings]
+version = "0.1.0"
+path = "../strings"
+
 [features]
 default = []
 implement = []
