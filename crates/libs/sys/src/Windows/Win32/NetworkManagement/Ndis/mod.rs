@@ -1,7 +1,7 @@
 pub const AUTHENTICATE: OFFLOAD_OPERATION_E = 1i32;
 pub const CLOCK_NETWORK_DERIVED: u32 = 2u32;
 pub const CLOCK_PRECISION: u32 = 4u32;
-pub const DD_NDIS_DEVICE_NAME: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("\\Device\\NDIS");
+pub const DD_NDIS_DEVICE_NAME: ::windows_strings::PCWSTR = ::windows_strings::w!("\\Device\\NDIS");
 pub const DOT11_RSN_KCK_LENGTH: u32 = 16u32;
 pub const DOT11_RSN_KEK_LENGTH: u32 = 16u32;
 pub const DOT11_RSN_MAX_CIPHER_KEY_LENGTH: u32 = 32u32;

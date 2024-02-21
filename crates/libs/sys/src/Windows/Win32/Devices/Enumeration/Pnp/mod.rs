@@ -11,7 +11,7 @@
 ::windows_targets::link!("cfgmgr32.dll" "system" fn SwDevicePropertySet(hswdevice : HSWDEVICE, cpropertycount : u32, pproperties : *const super::super::Properties:: DEVPROPERTY) -> ::windows_sys::core::HRESULT);
 ::windows_targets::link!("cfgmgr32.dll" "system" fn SwDeviceSetLifetime(hswdevice : HSWDEVICE, lifetime : SW_DEVICE_LIFETIME) -> ::windows_sys::core::HRESULT);
 ::windows_targets::link!("cfgmgr32.dll" "system" fn SwMemFree(pmem : *const ::core::ffi::c_void));
-pub const ADDRESS_FAMILY_VALUE_NAME: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("AddressFamily");
+pub const ADDRESS_FAMILY_VALUE_NAME: ::windows_strings::PCWSTR = ::windows_strings::w!("AddressFamily");
 pub const FAULT_ACTION_SPECIFIC_BASE: u32 = 600u32;
 pub const FAULT_ACTION_SPECIFIC_MAX: u32 = 899u32;
 pub const FAULT_DEVICE_INTERNAL_ERROR: u32 = 501u32;
@@ -19,7 +19,7 @@ pub const FAULT_INVALID_ACTION: u32 = 401u32;
 pub const FAULT_INVALID_ARG: u32 = 402u32;
 pub const FAULT_INVALID_SEQUENCE_NUMBER: u32 = 403u32;
 pub const FAULT_INVALID_VARIABLE: u32 = 404u32;
-pub const REMOTE_ADDRESS_VALUE_NAME: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("RemoteAddress");
+pub const REMOTE_ADDRESS_VALUE_NAME: ::windows_strings::PCWSTR = ::windows_strings::w!("RemoteAddress");
 pub const SWDeviceCapabilitiesDriverRequired: SW_DEVICE_CAPABILITIES = 8i32;
 pub const SWDeviceCapabilitiesNoDisplayInUI: SW_DEVICE_CAPABILITIES = 4i32;
 pub const SWDeviceCapabilitiesNone: SW_DEVICE_CAPABILITIES = 0i32;

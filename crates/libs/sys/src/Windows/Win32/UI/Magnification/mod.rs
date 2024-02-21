@@ -24,9 +24,9 @@ pub const MS_INVERTCOLORS: i32 = 4i32;
 pub const MS_SHOWMAGNIFIEDCURSOR: i32 = 1i32;
 pub const MW_FILTERMODE_EXCLUDE: MW_FILTERMODE = 0u32;
 pub const MW_FILTERMODE_INCLUDE: MW_FILTERMODE = 1u32;
-pub const WC_MAGNIFIER: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Magnifier");
-pub const WC_MAGNIFIERA: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("Magnifier");
-pub const WC_MAGNIFIERW: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Magnifier");
+pub const WC_MAGNIFIER: ::windows_strings::PCWSTR = ::windows_strings::w!("Magnifier");
+pub const WC_MAGNIFIERA: ::windows_strings::PCSTR = ::windows_strings::s!("Magnifier");
+pub const WC_MAGNIFIERW: ::windows_strings::PCWSTR = ::windows_strings::w!("Magnifier");
 pub type MW_FILTERMODE = u32;
 #[repr(C)]
 pub struct MAGCOLOREFFECT {

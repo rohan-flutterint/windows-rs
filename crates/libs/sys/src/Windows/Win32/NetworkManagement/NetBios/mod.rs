@@ -1,5 +1,5 @@
 ::windows_targets::link!("netapi32.dll" "system" fn Netbios(pncb : *mut NCB) -> u8);
-pub const ALL_TRANSPORTS: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("M\u{0}\u{0}\u{0}");
+pub const ALL_TRANSPORTS: ::windows_strings::PCSTR = ::windows_strings::s!("M\u{0}\u{0}\u{0}");
 pub const ASYNCH: u32 = 128u32;
 pub const CALL_PENDING: u32 = 2u32;
 pub const DEREGISTERED: u32 = 5u32;
@@ -10,7 +10,7 @@ pub const HANGUP_COMPLETE: u32 = 5u32;
 pub const HANGUP_PENDING: u32 = 4u32;
 pub const LISTEN_OUTSTANDING: u32 = 1u32;
 pub const MAX_LANA: u32 = 254u32;
-pub const MS_NBF: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("MNBF");
+pub const MS_NBF: ::windows_strings::PCSTR = ::windows_strings::s!("MNBF");
 pub const NAME_FLAGS_MASK: u32 = 135u32;
 pub const NCBACTION: u32 = 119u32;
 pub const NCBADDGRNAME: u32 = 54u32;
