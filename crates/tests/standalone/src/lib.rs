@@ -32,6 +32,7 @@ mod b_vtbl_2;
 mod b_vtbl_3;
 mod b_vtbl_4;
 mod b_win_enumerator;
+mod b_string_literals;
 
 #[allow(non_snake_case)]
 mod included {

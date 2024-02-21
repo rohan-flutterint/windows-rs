@@ -9,3 +9,6 @@ path = "../../libs/core"
 
 [dependencies.windows-targets]
 path = "../../libs/targets"
+
+[dependencies.windows-strings]
+path = "../../libs/strings"

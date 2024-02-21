@@ -12,18 +12,17 @@ pub fn writer(writer: &Writer, def: metadata::Field) -> TokenStream {
 
         if ty == constant_type {
             if ty == metadata::Type::String {
-                let crate_name = writer.crate_name();
                 if field_is_ansi(def) {
                     let value = writer.value(&constant.value());
                     quote! {
                         #features
-                        pub const #name: #crate_name PCSTR = #crate_name s!(#value);
+                        pub const #name: ::windows_strings::PCSTR = ::windows_strings::s!(#value);
                     }
                 } else {
                     let value = writer.value(&constant.value());
                     quote! {
                         #features
-                        pub const #name: #crate_name PCWSTR = #crate_name w!(#value);
+                        pub const #name: ::windows_strings::PCWSTR = ::windows_strings::w!(#value);
                     }
                 }
             } else {

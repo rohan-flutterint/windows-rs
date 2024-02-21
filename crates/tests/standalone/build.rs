@@ -138,6 +138,17 @@ fn main() {
         ],
     );
 
+    // Ensures that string literals are supported.
+    write_sys(
+        "src/b_string_literals.rs",
+        &[
+
+            "Windows.Win32.Security.Cryptography.BCRYPT_RNG_ALGORITHM",
+            "Windows.Win32.Globalization.ULOC_US",
+        ],
+    );
+    
+
     // Ensure that no-inner-attribute works, and the resulting
     // file can be `include!` inside a mod{} block.
     write_no_inner_attr(
