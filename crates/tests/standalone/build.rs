@@ -140,13 +140,25 @@ fn main() {
 
     // Ensures that string literals are supported.
     write_sys(
-        "src/b_string_literals.rs",
+        "src/b_strings.rs",
         &[
 
             "Windows.Win32.Security.Cryptography.BCRYPT_RNG_ALGORITHM",
             "Windows.Win32.Globalization.ULOC_US",
         ],
     );
+
+        // Ensures that "std" strings types are unaffected, but don't support string literals.
+        write_std(
+            "src/b_std_strings.rs",
+            &[
+    
+                "Windows.Win32.Foundation.SysAllocString", // BSTR and PCWSTR
+                "Windows.Win32.Foundation.SysAllocStringByteLen", // PCSTR
+                "Windows.Win32.Foundation.UNICODE_STRING", // PWSTR
+                "Windows.Win32.UI.WindowsAndMessaging.CharLowerA", // PSTR
+            ],
+        );
     
 
     // Ensure that no-inner-attribute works, and the resulting

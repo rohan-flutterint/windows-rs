@@ -54,11 +54,11 @@ pub fn standalone_imp(writer: &Writer) -> String {
                     }
                 },
             ),
-            metadata::Type::PSTR if writer.sys => sorted.insert("PSTR", quote! { pub type PSTR = *mut u8; }),
-            metadata::Type::PWSTR if writer.sys => sorted.insert("PWSTR", quote! { pub type PWSTR = *mut u16; }),
-            metadata::Type::PCSTR if writer.sys => sorted.insert("PCSTR", quote! { pub type PCSTR = *const u8; }),
-            metadata::Type::PCWSTR if writer.sys => sorted.insert("PCWSTR", quote! { pub type PCWSTR = *const u16; }),
-            metadata::Type::BSTR if writer.sys => sorted.insert("BSTR", quote! { pub type BSTR = *const u16; }),
+            metadata::Type::PSTR if writer.std => sorted.insert("PSTR", quote! { pub type PSTR = *mut u8; }),
+            metadata::Type::PWSTR if writer.std => sorted.insert("PWSTR", quote! { pub type PWSTR = *mut u16; }),
+            metadata::Type::PCSTR if writer.std => sorted.insert("PCSTR", quote! { pub type PCSTR = *const u8; }),
+            metadata::Type::PCWSTR if writer.std => sorted.insert("PCWSTR", quote! { pub type PCWSTR = *const u16; }),
+            metadata::Type::BSTR if writer.std => sorted.insert("BSTR", quote! { pub type BSTR = *const u16; }),
             metadata::Type::GUID if writer.sys => {
                 sorted.insert(
                     "GUID",
