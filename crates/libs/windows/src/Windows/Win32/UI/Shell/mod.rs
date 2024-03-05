@@ -2661,25 +2661,25 @@ where
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHCopyKeyA<P0, P1, P2>(hkeysrc: P0, pszsrcsubkey: P1, hkeydest: P2, freserved: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHCopyKeyA<P0, P1, P2>(hkeysrc: P0, pszsrcsubkey: P1, hkeydest: P2, freserved: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     P2: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHCopyKeyA(hkeysrc : super::super::System::Registry:: HKEY, pszsrcsubkey : ::windows_core::PCSTR, hkeydest : super::super::System::Registry:: HKEY, freserved : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHCopyKeyA(hkeysrc.into_param().abi(), pszsrcsubkey.into_param().abi(), hkeydest.into_param().abi(), freserved).ok()
+    SHCopyKeyA(hkeysrc.into_param().abi(), pszsrcsubkey.into_param().abi(), hkeydest.into_param().abi(), freserved)
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHCopyKeyW<P0, P1, P2>(hkeysrc: P0, pszsrcsubkey: P1, hkeydest: P2, freserved: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHCopyKeyW<P0, P1, P2>(hkeysrc: P0, pszsrcsubkey: P1, hkeydest: P2, freserved: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     P2: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHCopyKeyW(hkeysrc : super::super::System::Registry:: HKEY, pszsrcsubkey : ::windows_core::PCWSTR, hkeydest : super::super::System::Registry:: HKEY, freserved : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHCopyKeyW(hkeysrc.into_param().abi(), pszsrcsubkey.into_param().abi(), hkeydest.into_param().abi(), freserved).ok()
+    SHCopyKeyW(hkeysrc.into_param().abi(), pszsrcsubkey.into_param().abi(), hkeydest.into_param().abi(), freserved)
 }
 #[inline]
 pub unsafe fn SHCreateAssociationRegistration<T>() -> ::windows_core::Result<T>
@@ -3000,65 +3000,65 @@ where
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHDeleteEmptyKeyA<P0, P1>(hkey: P0, pszsubkey: P1) -> ::windows_core::Result<()>
+pub unsafe fn SHDeleteEmptyKeyA<P0, P1>(hkey: P0, pszsubkey: P1) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHDeleteEmptyKeyA(hkey : super::super::System::Registry:: HKEY, pszsubkey : ::windows_core::PCSTR) -> super::super::Foundation:: WIN32_ERROR);
-    SHDeleteEmptyKeyA(hkey.into_param().abi(), pszsubkey.into_param().abi()).ok()
+    SHDeleteEmptyKeyA(hkey.into_param().abi(), pszsubkey.into_param().abi())
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHDeleteEmptyKeyW<P0, P1>(hkey: P0, pszsubkey: P1) -> ::windows_core::Result<()>
+pub unsafe fn SHDeleteEmptyKeyW<P0, P1>(hkey: P0, pszsubkey: P1) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHDeleteEmptyKeyW(hkey : super::super::System::Registry:: HKEY, pszsubkey : ::windows_core::PCWSTR) -> super::super::Foundation:: WIN32_ERROR);
-    SHDeleteEmptyKeyW(hkey.into_param().abi(), pszsubkey.into_param().abi()).ok()
+    SHDeleteEmptyKeyW(hkey.into_param().abi(), pszsubkey.into_param().abi())
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHDeleteKeyA<P0, P1>(hkey: P0, pszsubkey: P1) -> ::windows_core::Result<()>
+pub unsafe fn SHDeleteKeyA<P0, P1>(hkey: P0, pszsubkey: P1) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHDeleteKeyA(hkey : super::super::System::Registry:: HKEY, pszsubkey : ::windows_core::PCSTR) -> super::super::Foundation:: WIN32_ERROR);
-    SHDeleteKeyA(hkey.into_param().abi(), pszsubkey.into_param().abi()).ok()
+    SHDeleteKeyA(hkey.into_param().abi(), pszsubkey.into_param().abi())
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHDeleteKeyW<P0, P1>(hkey: P0, pszsubkey: P1) -> ::windows_core::Result<()>
+pub unsafe fn SHDeleteKeyW<P0, P1>(hkey: P0, pszsubkey: P1) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHDeleteKeyW(hkey : super::super::System::Registry:: HKEY, pszsubkey : ::windows_core::PCWSTR) -> super::super::Foundation:: WIN32_ERROR);
-    SHDeleteKeyW(hkey.into_param().abi(), pszsubkey.into_param().abi()).ok()
+    SHDeleteKeyW(hkey.into_param().abi(), pszsubkey.into_param().abi())
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHDeleteValueA<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2) -> ::windows_core::Result<()>
+pub unsafe fn SHDeleteValueA<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     P2: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHDeleteValueA(hkey : super::super::System::Registry:: HKEY, pszsubkey : ::windows_core::PCSTR, pszvalue : ::windows_core::PCSTR) -> super::super::Foundation:: WIN32_ERROR);
-    SHDeleteValueA(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi()).ok()
+    SHDeleteValueA(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi())
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHDeleteValueW<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2) -> ::windows_core::Result<()>
+pub unsafe fn SHDeleteValueW<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHDeleteValueW(hkey : super::super::System::Registry:: HKEY, pszsubkey : ::windows_core::PCWSTR, pszvalue : ::windows_core::PCWSTR) -> super::super::Foundation:: WIN32_ERROR);
-    SHDeleteValueW(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi()).ok()
+    SHDeleteValueW(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi())
 }
 #[inline]
 pub unsafe fn SHDestroyPropSheetExtArray<P0>(hpsxa: P0)
@@ -3100,39 +3100,39 @@ where
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHEnumKeyExA<P0>(hkey: P0, dwindex: u32, pszname: ::windows_core::PSTR, pcchname: *mut u32) -> ::windows_core::Result<()>
+pub unsafe fn SHEnumKeyExA<P0>(hkey: P0, dwindex: u32, pszname: ::windows_core::PSTR, pcchname: *mut u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHEnumKeyExA(hkey : super::super::System::Registry:: HKEY, dwindex : u32, pszname : ::windows_core::PSTR, pcchname : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHEnumKeyExA(hkey.into_param().abi(), dwindex, ::core::mem::transmute(pszname), pcchname).ok()
+    SHEnumKeyExA(hkey.into_param().abi(), dwindex, ::core::mem::transmute(pszname), pcchname)
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHEnumKeyExW<P0>(hkey: P0, dwindex: u32, pszname: ::windows_core::PWSTR, pcchname: *mut u32) -> ::windows_core::Result<()>
+pub unsafe fn SHEnumKeyExW<P0>(hkey: P0, dwindex: u32, pszname: ::windows_core::PWSTR, pcchname: *mut u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHEnumKeyExW(hkey : super::super::System::Registry:: HKEY, dwindex : u32, pszname : ::windows_core::PWSTR, pcchname : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHEnumKeyExW(hkey.into_param().abi(), dwindex, ::core::mem::transmute(pszname), pcchname).ok()
+    SHEnumKeyExW(hkey.into_param().abi(), dwindex, ::core::mem::transmute(pszname), pcchname)
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHEnumValueA<P0>(hkey: P0, dwindex: u32, pszvaluename: ::windows_core::PSTR, pcchvaluename: ::core::option::Option<*mut u32>, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
+pub unsafe fn SHEnumValueA<P0>(hkey: P0, dwindex: u32, pszvaluename: ::windows_core::PSTR, pcchvaluename: ::core::option::Option<*mut u32>, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHEnumValueA(hkey : super::super::System::Registry:: HKEY, dwindex : u32, pszvaluename : ::windows_core::PSTR, pcchvaluename : *mut u32, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHEnumValueA(hkey.into_param().abi(), dwindex, ::core::mem::transmute(pszvaluename), ::core::mem::transmute(pcchvaluename.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut()))).ok()
+    SHEnumValueA(hkey.into_param().abi(), dwindex, ::core::mem::transmute(pszvaluename), ::core::mem::transmute(pcchvaluename.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())))
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHEnumValueW<P0>(hkey: P0, dwindex: u32, pszvaluename: ::windows_core::PWSTR, pcchvaluename: ::core::option::Option<*mut u32>, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
+pub unsafe fn SHEnumValueW<P0>(hkey: P0, dwindex: u32, pszvaluename: ::windows_core::PWSTR, pcchvaluename: ::core::option::Option<*mut u32>, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHEnumValueW(hkey : super::super::System::Registry:: HKEY, dwindex : u32, pszvaluename : ::windows_core::PWSTR, pcchvaluename : *mut u32, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHEnumValueW(hkey.into_param().abi(), dwindex, ::core::mem::transmute(pszvaluename), ::core::mem::transmute(pcchvaluename.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut()))).ok()
+    SHEnumValueW(hkey.into_param().abi(), dwindex, ::core::mem::transmute(pszvaluename), ::core::mem::transmute(pcchvaluename.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())))
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
@@ -3593,25 +3593,25 @@ where
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHGetValueA<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
+pub unsafe fn SHGetValueA<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     P2: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHGetValueA(hkey : super::super::System::Registry:: HKEY, pszsubkey : ::windows_core::PCSTR, pszvalue : ::windows_core::PCSTR, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHGetValueA(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut()))).ok()
+    SHGetValueA(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())))
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHGetValueW<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
+pub unsafe fn SHGetValueW<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHGetValueW(hkey : super::super::System::Registry:: HKEY, pszsubkey : ::windows_core::PCWSTR, pszvalue : ::windows_core::PCWSTR, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHGetValueW(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut()))).ok()
+    SHGetValueW(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())))
 }
 #[cfg(feature = "Win32_UI_Shell_Common")]
 #[inline]
@@ -3876,21 +3876,21 @@ where
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHQueryInfoKeyA<P0>(hkey: P0, pcsubkeys: ::core::option::Option<*mut u32>, pcchmaxsubkeylen: ::core::option::Option<*mut u32>, pcvalues: ::core::option::Option<*mut u32>, pcchmaxvaluenamelen: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
+pub unsafe fn SHQueryInfoKeyA<P0>(hkey: P0, pcsubkeys: ::core::option::Option<*mut u32>, pcchmaxsubkeylen: ::core::option::Option<*mut u32>, pcvalues: ::core::option::Option<*mut u32>, pcchmaxvaluenamelen: ::core::option::Option<*mut u32>) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHQueryInfoKeyA(hkey : super::super::System::Registry:: HKEY, pcsubkeys : *mut u32, pcchmaxsubkeylen : *mut u32, pcvalues : *mut u32, pcchmaxvaluenamelen : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHQueryInfoKeyA(hkey.into_param().abi(), ::core::mem::transmute(pcsubkeys.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxsubkeylen.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcvalues.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxvaluenamelen.unwrap_or(::std::ptr::null_mut()))).ok()
+    SHQueryInfoKeyA(hkey.into_param().abi(), ::core::mem::transmute(pcsubkeys.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxsubkeylen.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcvalues.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxvaluenamelen.unwrap_or(::std::ptr::null_mut())))
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHQueryInfoKeyW<P0>(hkey: P0, pcsubkeys: ::core::option::Option<*mut u32>, pcchmaxsubkeylen: ::core::option::Option<*mut u32>, pcvalues: ::core::option::Option<*mut u32>, pcchmaxvaluenamelen: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
+pub unsafe fn SHQueryInfoKeyW<P0>(hkey: P0, pcsubkeys: ::core::option::Option<*mut u32>, pcchmaxsubkeylen: ::core::option::Option<*mut u32>, pcvalues: ::core::option::Option<*mut u32>, pcchmaxvaluenamelen: ::core::option::Option<*mut u32>) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHQueryInfoKeyW(hkey : super::super::System::Registry:: HKEY, pcsubkeys : *mut u32, pcchmaxsubkeylen : *mut u32, pcvalues : *mut u32, pcchmaxvaluenamelen : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHQueryInfoKeyW(hkey.into_param().abi(), ::core::mem::transmute(pcsubkeys.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxsubkeylen.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcvalues.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxvaluenamelen.unwrap_or(::std::ptr::null_mut()))).ok()
+    SHQueryInfoKeyW(hkey.into_param().abi(), ::core::mem::transmute(pcsubkeys.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxsubkeylen.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcvalues.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxvaluenamelen.unwrap_or(::std::ptr::null_mut())))
 }
 #[inline]
 pub unsafe fn SHQueryRecycleBinA<P0>(pszrootpath: P0, pshqueryrbinfo: *mut SHQUERYRBINFO) -> ::windows_core::Result<()>
@@ -3916,76 +3916,76 @@ pub unsafe fn SHQueryUserNotificationState() -> ::windows_core::Result<QUERY_USE
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHQueryValueExA<P0, P1>(hkey: P0, pszvalue: P1, pdwreserved: ::core::option::Option<*const u32>, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
+pub unsafe fn SHQueryValueExA<P0, P1>(hkey: P0, pszvalue: P1, pdwreserved: ::core::option::Option<*const u32>, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHQueryValueExA(hkey : super::super::System::Registry:: HKEY, pszvalue : ::windows_core::PCSTR, pdwreserved : *const u32, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHQueryValueExA(hkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwreserved.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut()))).ok()
+    SHQueryValueExA(hkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwreserved.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())))
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHQueryValueExW<P0, P1>(hkey: P0, pszvalue: P1, pdwreserved: ::core::option::Option<*const u32>, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
+pub unsafe fn SHQueryValueExW<P0, P1>(hkey: P0, pszvalue: P1, pdwreserved: ::core::option::Option<*const u32>, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHQueryValueExW(hkey : super::super::System::Registry:: HKEY, pszvalue : ::windows_core::PCWSTR, pdwreserved : *const u32, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHQueryValueExW(hkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwreserved.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut()))).ok()
+    SHQueryValueExW(hkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwreserved.unwrap_or(::std::ptr::null())), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())))
 }
 #[inline]
-pub unsafe fn SHRegCloseUSKey(huskey: isize) -> ::windows_core::Result<()> {
+pub unsafe fn SHRegCloseUSKey(huskey: isize) -> super::super::Foundation::WIN32_ERROR {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegCloseUSKey(huskey : isize) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegCloseUSKey(huskey).ok()
+    SHRegCloseUSKey(huskey)
 }
 #[inline]
-pub unsafe fn SHRegCreateUSKeyA<P0>(pszpath: P0, samdesired: u32, hrelativeuskey: isize, phnewuskey: *mut isize, dwflags: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegCreateUSKeyA<P0>(pszpath: P0, samdesired: u32, hrelativeuskey: isize, phnewuskey: *mut isize, dwflags: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegCreateUSKeyA(pszpath : ::windows_core::PCSTR, samdesired : u32, hrelativeuskey : isize, phnewuskey : *mut isize, dwflags : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegCreateUSKeyA(pszpath.into_param().abi(), samdesired, hrelativeuskey, phnewuskey, dwflags).ok()
+    SHRegCreateUSKeyA(pszpath.into_param().abi(), samdesired, hrelativeuskey, phnewuskey, dwflags)
 }
 #[inline]
-pub unsafe fn SHRegCreateUSKeyW<P0>(pwzpath: P0, samdesired: u32, hrelativeuskey: isize, phnewuskey: *mut isize, dwflags: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegCreateUSKeyW<P0>(pwzpath: P0, samdesired: u32, hrelativeuskey: isize, phnewuskey: *mut isize, dwflags: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegCreateUSKeyW(pwzpath : ::windows_core::PCWSTR, samdesired : u32, hrelativeuskey : isize, phnewuskey : *mut isize, dwflags : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegCreateUSKeyW(pwzpath.into_param().abi(), samdesired, hrelativeuskey, phnewuskey, dwflags).ok()
+    SHRegCreateUSKeyW(pwzpath.into_param().abi(), samdesired, hrelativeuskey, phnewuskey, dwflags)
 }
 #[inline]
-pub unsafe fn SHRegDeleteEmptyUSKeyA<P0>(huskey: isize, pszsubkey: P0, delregflags: SHREGDEL_FLAGS) -> ::windows_core::Result<()>
+pub unsafe fn SHRegDeleteEmptyUSKeyA<P0>(huskey: isize, pszsubkey: P0, delregflags: SHREGDEL_FLAGS) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegDeleteEmptyUSKeyA(huskey : isize, pszsubkey : ::windows_core::PCSTR, delregflags : SHREGDEL_FLAGS) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegDeleteEmptyUSKeyA(huskey, pszsubkey.into_param().abi(), delregflags).ok()
+    SHRegDeleteEmptyUSKeyA(huskey, pszsubkey.into_param().abi(), delregflags)
 }
 #[inline]
-pub unsafe fn SHRegDeleteEmptyUSKeyW<P0>(huskey: isize, pwzsubkey: P0, delregflags: SHREGDEL_FLAGS) -> ::windows_core::Result<()>
+pub unsafe fn SHRegDeleteEmptyUSKeyW<P0>(huskey: isize, pwzsubkey: P0, delregflags: SHREGDEL_FLAGS) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegDeleteEmptyUSKeyW(huskey : isize, pwzsubkey : ::windows_core::PCWSTR, delregflags : SHREGDEL_FLAGS) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegDeleteEmptyUSKeyW(huskey, pwzsubkey.into_param().abi(), delregflags).ok()
+    SHRegDeleteEmptyUSKeyW(huskey, pwzsubkey.into_param().abi(), delregflags)
 }
 #[inline]
-pub unsafe fn SHRegDeleteUSValueA<P0>(huskey: isize, pszvalue: P0, delregflags: SHREGDEL_FLAGS) -> ::windows_core::Result<()>
+pub unsafe fn SHRegDeleteUSValueA<P0>(huskey: isize, pszvalue: P0, delregflags: SHREGDEL_FLAGS) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegDeleteUSValueA(huskey : isize, pszvalue : ::windows_core::PCSTR, delregflags : SHREGDEL_FLAGS) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegDeleteUSValueA(huskey, pszvalue.into_param().abi(), delregflags).ok()
+    SHRegDeleteUSValueA(huskey, pszvalue.into_param().abi(), delregflags)
 }
 #[inline]
-pub unsafe fn SHRegDeleteUSValueW<P0>(huskey: isize, pwzvalue: P0, delregflags: SHREGDEL_FLAGS) -> ::windows_core::Result<()>
+pub unsafe fn SHRegDeleteUSValueW<P0>(huskey: isize, pwzvalue: P0, delregflags: SHREGDEL_FLAGS) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegDeleteUSValueW(huskey : isize, pwzvalue : ::windows_core::PCWSTR, delregflags : SHREGDEL_FLAGS) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegDeleteUSValueW(huskey, pwzvalue.into_param().abi(), delregflags).ok()
+    SHRegDeleteUSValueW(huskey, pwzvalue.into_param().abi(), delregflags)
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
@@ -3997,24 +3997,24 @@ where
     SHRegDuplicateHKey(hkey.into_param().abi())
 }
 #[inline]
-pub unsafe fn SHRegEnumUSKeyA(huskey: isize, dwindex: u32, pszname: ::windows_core::PSTR, pcchname: *mut u32, enumregflags: SHREGENUM_FLAGS) -> ::windows_core::Result<()> {
+pub unsafe fn SHRegEnumUSKeyA(huskey: isize, dwindex: u32, pszname: ::windows_core::PSTR, pcchname: *mut u32, enumregflags: SHREGENUM_FLAGS) -> super::super::Foundation::WIN32_ERROR {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegEnumUSKeyA(huskey : isize, dwindex : u32, pszname : ::windows_core::PSTR, pcchname : *mut u32, enumregflags : SHREGENUM_FLAGS) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegEnumUSKeyA(huskey, dwindex, ::core::mem::transmute(pszname), pcchname, enumregflags).ok()
+    SHRegEnumUSKeyA(huskey, dwindex, ::core::mem::transmute(pszname), pcchname, enumregflags)
 }
 #[inline]
-pub unsafe fn SHRegEnumUSKeyW(huskey: isize, dwindex: u32, pwzname: ::windows_core::PWSTR, pcchname: *mut u32, enumregflags: SHREGENUM_FLAGS) -> ::windows_core::Result<()> {
+pub unsafe fn SHRegEnumUSKeyW(huskey: isize, dwindex: u32, pwzname: ::windows_core::PWSTR, pcchname: *mut u32, enumregflags: SHREGENUM_FLAGS) -> super::super::Foundation::WIN32_ERROR {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegEnumUSKeyW(huskey : isize, dwindex : u32, pwzname : ::windows_core::PWSTR, pcchname : *mut u32, enumregflags : SHREGENUM_FLAGS) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegEnumUSKeyW(huskey, dwindex, ::core::mem::transmute(pwzname), pcchname, enumregflags).ok()
+    SHRegEnumUSKeyW(huskey, dwindex, ::core::mem::transmute(pwzname), pcchname, enumregflags)
 }
 #[inline]
-pub unsafe fn SHRegEnumUSValueA(huskey: isize, dwindex: u32, pszvaluename: ::windows_core::PSTR, pcchvaluename: *mut u32, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, enumregflags: SHREGENUM_FLAGS) -> ::windows_core::Result<()> {
+pub unsafe fn SHRegEnumUSValueA(huskey: isize, dwindex: u32, pszvaluename: ::windows_core::PSTR, pcchvaluename: *mut u32, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, enumregflags: SHREGENUM_FLAGS) -> super::super::Foundation::WIN32_ERROR {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegEnumUSValueA(huskey : isize, dwindex : u32, pszvaluename : ::windows_core::PSTR, pcchvaluename : *mut u32, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32, enumregflags : SHREGENUM_FLAGS) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegEnumUSValueA(huskey, dwindex, ::core::mem::transmute(pszvaluename), pcchvaluename, ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), enumregflags).ok()
+    SHRegEnumUSValueA(huskey, dwindex, ::core::mem::transmute(pszvaluename), pcchvaluename, ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), enumregflags)
 }
 #[inline]
-pub unsafe fn SHRegEnumUSValueW(huskey: isize, dwindex: u32, pszvaluename: ::windows_core::PWSTR, pcchvaluename: *mut u32, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, enumregflags: SHREGENUM_FLAGS) -> ::windows_core::Result<()> {
+pub unsafe fn SHRegEnumUSValueW(huskey: isize, dwindex: u32, pszvaluename: ::windows_core::PWSTR, pcchvaluename: *mut u32, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, enumregflags: SHREGENUM_FLAGS) -> super::super::Foundation::WIN32_ERROR {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegEnumUSValueW(huskey : isize, dwindex : u32, pszvaluename : ::windows_core::PWSTR, pcchvaluename : *mut u32, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32, enumregflags : SHREGENUM_FLAGS) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegEnumUSValueW(huskey, dwindex, ::core::mem::transmute(pszvaluename), pcchvaluename, ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), enumregflags).ok()
+    SHRegEnumUSValueW(huskey, dwindex, ::core::mem::transmute(pszvaluename), pcchvaluename, ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), enumregflags)
 }
 #[inline]
 pub unsafe fn SHRegGetBoolUSValueA<P0, P1, P2, P3>(pszsubkey: P0, pszvalue: P1, fignorehkcu: P2, fdefault: P3) -> super::super::Foundation::BOOL
@@ -4050,126 +4050,126 @@ where
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHRegGetPathA<P0, P1, P2>(hkey: P0, pcszsubkey: P1, pcszvalue: P2, pszpath: &mut [u8; 260], dwflags: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegGetPathA<P0, P1, P2>(hkey: P0, pcszsubkey: P1, pcszvalue: P2, pszpath: &mut [u8; 260], dwflags: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     P2: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegGetPathA(hkey : super::super::System::Registry:: HKEY, pcszsubkey : ::windows_core::PCSTR, pcszvalue : ::windows_core::PCSTR, pszpath : ::windows_core::PSTR, dwflags : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegGetPathA(hkey.into_param().abi(), pcszsubkey.into_param().abi(), pcszvalue.into_param().abi(), ::core::mem::transmute(pszpath.as_ptr()), dwflags).ok()
+    SHRegGetPathA(hkey.into_param().abi(), pcszsubkey.into_param().abi(), pcszvalue.into_param().abi(), ::core::mem::transmute(pszpath.as_ptr()), dwflags)
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHRegGetPathW<P0, P1, P2>(hkey: P0, pcszsubkey: P1, pcszvalue: P2, pszpath: &mut [u16; 260], dwflags: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegGetPathW<P0, P1, P2>(hkey: P0, pcszsubkey: P1, pcszvalue: P2, pszpath: &mut [u16; 260], dwflags: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegGetPathW(hkey : super::super::System::Registry:: HKEY, pcszsubkey : ::windows_core::PCWSTR, pcszvalue : ::windows_core::PCWSTR, pszpath : ::windows_core::PWSTR, dwflags : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegGetPathW(hkey.into_param().abi(), pcszsubkey.into_param().abi(), pcszvalue.into_param().abi(), ::core::mem::transmute(pszpath.as_ptr()), dwflags).ok()
+    SHRegGetPathW(hkey.into_param().abi(), pcszsubkey.into_param().abi(), pcszvalue.into_param().abi(), ::core::mem::transmute(pszpath.as_ptr()), dwflags)
 }
 #[inline]
-pub unsafe fn SHRegGetUSValueA<P0, P1, P2>(pszsubkey: P0, pszvalue: P1, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, fignorehkcu: P2, pvdefaultdata: ::core::option::Option<*const ::core::ffi::c_void>, dwdefaultdatasize: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegGetUSValueA<P0, P1, P2>(pszsubkey: P0, pszvalue: P1, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, fignorehkcu: P2, pvdefaultdata: ::core::option::Option<*const ::core::ffi::c_void>, dwdefaultdatasize: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     P2: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegGetUSValueA(pszsubkey : ::windows_core::PCSTR, pszvalue : ::windows_core::PCSTR, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32, fignorehkcu : super::super::Foundation:: BOOL, pvdefaultdata : *const ::core::ffi::c_void, dwdefaultdatasize : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegGetUSValueA(pszsubkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), fignorehkcu.into_param().abi(), ::core::mem::transmute(pvdefaultdata.unwrap_or(::std::ptr::null())), dwdefaultdatasize).ok()
+    SHRegGetUSValueA(pszsubkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), fignorehkcu.into_param().abi(), ::core::mem::transmute(pvdefaultdata.unwrap_or(::std::ptr::null())), dwdefaultdatasize)
 }
 #[inline]
-pub unsafe fn SHRegGetUSValueW<P0, P1, P2>(pszsubkey: P0, pszvalue: P1, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, fignorehkcu: P2, pvdefaultdata: ::core::option::Option<*const ::core::ffi::c_void>, dwdefaultdatasize: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegGetUSValueW<P0, P1, P2>(pszsubkey: P0, pszvalue: P1, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, fignorehkcu: P2, pvdefaultdata: ::core::option::Option<*const ::core::ffi::c_void>, dwdefaultdatasize: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     P2: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegGetUSValueW(pszsubkey : ::windows_core::PCWSTR, pszvalue : ::windows_core::PCWSTR, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32, fignorehkcu : super::super::Foundation:: BOOL, pvdefaultdata : *const ::core::ffi::c_void, dwdefaultdatasize : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegGetUSValueW(pszsubkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), fignorehkcu.into_param().abi(), ::core::mem::transmute(pvdefaultdata.unwrap_or(::std::ptr::null())), dwdefaultdatasize).ok()
+    SHRegGetUSValueW(pszsubkey.into_param().abi(), pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), fignorehkcu.into_param().abi(), ::core::mem::transmute(pvdefaultdata.unwrap_or(::std::ptr::null())), dwdefaultdatasize)
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHRegGetValueA<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2, srrfflags: i32, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
+pub unsafe fn SHRegGetValueA<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2, srrfflags: i32, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
     P2: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegGetValueA(hkey : super::super::System::Registry:: HKEY, pszsubkey : ::windows_core::PCSTR, pszvalue : ::windows_core::PCSTR, srrfflags : i32, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegGetValueA(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi(), srrfflags, ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut()))).ok()
+    SHRegGetValueA(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi(), srrfflags, ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())))
 }
 #[inline]
-pub unsafe fn SHRegGetValueFromHKCUHKLM<P0, P1>(pwszkey: P0, pwszvalue: P1, srrfflags: i32, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
+pub unsafe fn SHRegGetValueFromHKCUHKLM<P0, P1>(pwszkey: P0, pwszvalue: P1, srrfflags: i32, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegGetValueFromHKCUHKLM(pwszkey : ::windows_core::PCWSTR, pwszvalue : ::windows_core::PCWSTR, srrfflags : i32, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegGetValueFromHKCUHKLM(pwszkey.into_param().abi(), pwszvalue.into_param().abi(), srrfflags, ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut()))).ok()
+    SHRegGetValueFromHKCUHKLM(pwszkey.into_param().abi(), pwszvalue.into_param().abi(), srrfflags, ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())))
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHRegGetValueW<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2, srrfflags: i32, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> ::windows_core::Result<()>
+pub unsafe fn SHRegGetValueW<P0, P1, P2>(hkey: P0, pszsubkey: P1, pszvalue: P2, srrfflags: i32, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     P2: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegGetValueW(hkey : super::super::System::Registry:: HKEY, pszsubkey : ::windows_core::PCWSTR, pszvalue : ::windows_core::PCWSTR, srrfflags : i32, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegGetValueW(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi(), srrfflags, ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut()))).ok()
+    SHRegGetValueW(hkey.into_param().abi(), pszsubkey.into_param().abi(), pszvalue.into_param().abi(), srrfflags, ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())))
 }
 #[inline]
-pub unsafe fn SHRegOpenUSKeyA<P0, P1>(pszpath: P0, samdesired: u32, hrelativeuskey: isize, phnewuskey: *mut isize, fignorehkcu: P1) -> ::windows_core::Result<()>
+pub unsafe fn SHRegOpenUSKeyA<P0, P1>(pszpath: P0, samdesired: u32, hrelativeuskey: isize, phnewuskey: *mut isize, fignorehkcu: P1) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegOpenUSKeyA(pszpath : ::windows_core::PCSTR, samdesired : u32, hrelativeuskey : isize, phnewuskey : *mut isize, fignorehkcu : super::super::Foundation:: BOOL) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegOpenUSKeyA(pszpath.into_param().abi(), samdesired, hrelativeuskey, phnewuskey, fignorehkcu.into_param().abi()).ok()
+    SHRegOpenUSKeyA(pszpath.into_param().abi(), samdesired, hrelativeuskey, phnewuskey, fignorehkcu.into_param().abi())
 }
 #[inline]
-pub unsafe fn SHRegOpenUSKeyW<P0, P1>(pwzpath: P0, samdesired: u32, hrelativeuskey: isize, phnewuskey: *mut isize, fignorehkcu: P1) -> ::windows_core::Result<()>
+pub unsafe fn SHRegOpenUSKeyW<P0, P1>(pwzpath: P0, samdesired: u32, hrelativeuskey: isize, phnewuskey: *mut isize, fignorehkcu: P1) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegOpenUSKeyW(pwzpath : ::windows_core::PCWSTR, samdesired : u32, hrelativeuskey : isize, phnewuskey : *mut isize, fignorehkcu : super::super::Foundation:: BOOL) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegOpenUSKeyW(pwzpath.into_param().abi(), samdesired, hrelativeuskey, phnewuskey, fignorehkcu.into_param().abi()).ok()
+    SHRegOpenUSKeyW(pwzpath.into_param().abi(), samdesired, hrelativeuskey, phnewuskey, fignorehkcu.into_param().abi())
 }
 #[inline]
-pub unsafe fn SHRegQueryInfoUSKeyA(huskey: isize, pcsubkeys: ::core::option::Option<*mut u32>, pcchmaxsubkeylen: ::core::option::Option<*mut u32>, pcvalues: ::core::option::Option<*mut u32>, pcchmaxvaluenamelen: ::core::option::Option<*mut u32>, enumregflags: SHREGENUM_FLAGS) -> ::windows_core::Result<()> {
+pub unsafe fn SHRegQueryInfoUSKeyA(huskey: isize, pcsubkeys: ::core::option::Option<*mut u32>, pcchmaxsubkeylen: ::core::option::Option<*mut u32>, pcvalues: ::core::option::Option<*mut u32>, pcchmaxvaluenamelen: ::core::option::Option<*mut u32>, enumregflags: SHREGENUM_FLAGS) -> super::super::Foundation::WIN32_ERROR {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegQueryInfoUSKeyA(huskey : isize, pcsubkeys : *mut u32, pcchmaxsubkeylen : *mut u32, pcvalues : *mut u32, pcchmaxvaluenamelen : *mut u32, enumregflags : SHREGENUM_FLAGS) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegQueryInfoUSKeyA(huskey, ::core::mem::transmute(pcsubkeys.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxsubkeylen.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcvalues.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxvaluenamelen.unwrap_or(::std::ptr::null_mut())), enumregflags).ok()
+    SHRegQueryInfoUSKeyA(huskey, ::core::mem::transmute(pcsubkeys.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxsubkeylen.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcvalues.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxvaluenamelen.unwrap_or(::std::ptr::null_mut())), enumregflags)
 }
 #[inline]
-pub unsafe fn SHRegQueryInfoUSKeyW(huskey: isize, pcsubkeys: ::core::option::Option<*mut u32>, pcchmaxsubkeylen: ::core::option::Option<*mut u32>, pcvalues: ::core::option::Option<*mut u32>, pcchmaxvaluenamelen: ::core::option::Option<*mut u32>, enumregflags: SHREGENUM_FLAGS) -> ::windows_core::Result<()> {
+pub unsafe fn SHRegQueryInfoUSKeyW(huskey: isize, pcsubkeys: ::core::option::Option<*mut u32>, pcchmaxsubkeylen: ::core::option::Option<*mut u32>, pcvalues: ::core::option::Option<*mut u32>, pcchmaxvaluenamelen: ::core::option::Option<*mut u32>, enumregflags: SHREGENUM_FLAGS) -> super::super::Foundation::WIN32_ERROR {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegQueryInfoUSKeyW(huskey : isize, pcsubkeys : *mut u32, pcchmaxsubkeylen : *mut u32, pcvalues : *mut u32, pcchmaxvaluenamelen : *mut u32, enumregflags : SHREGENUM_FLAGS) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegQueryInfoUSKeyW(huskey, ::core::mem::transmute(pcsubkeys.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxsubkeylen.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcvalues.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxvaluenamelen.unwrap_or(::std::ptr::null_mut())), enumregflags).ok()
+    SHRegQueryInfoUSKeyW(huskey, ::core::mem::transmute(pcsubkeys.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxsubkeylen.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcvalues.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcchmaxvaluenamelen.unwrap_or(::std::ptr::null_mut())), enumregflags)
 }
 #[inline]
-pub unsafe fn SHRegQueryUSValueA<P0, P1>(huskey: isize, pszvalue: P0, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, fignorehkcu: P1, pvdefaultdata: ::core::option::Option<*const ::core::ffi::c_void>, dwdefaultdatasize: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegQueryUSValueA<P0, P1>(huskey: isize, pszvalue: P0, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, fignorehkcu: P1, pvdefaultdata: ::core::option::Option<*const ::core::ffi::c_void>, dwdefaultdatasize: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegQueryUSValueA(huskey : isize, pszvalue : ::windows_core::PCSTR, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32, fignorehkcu : super::super::Foundation:: BOOL, pvdefaultdata : *const ::core::ffi::c_void, dwdefaultdatasize : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegQueryUSValueA(huskey, pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), fignorehkcu.into_param().abi(), ::core::mem::transmute(pvdefaultdata.unwrap_or(::std::ptr::null())), dwdefaultdatasize).ok()
+    SHRegQueryUSValueA(huskey, pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), fignorehkcu.into_param().abi(), ::core::mem::transmute(pvdefaultdata.unwrap_or(::std::ptr::null())), dwdefaultdatasize)
 }
 #[inline]
-pub unsafe fn SHRegQueryUSValueW<P0, P1>(huskey: isize, pszvalue: P0, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, fignorehkcu: P1, pvdefaultdata: ::core::option::Option<*const ::core::ffi::c_void>, dwdefaultdatasize: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegQueryUSValueW<P0, P1>(huskey: isize, pszvalue: P0, pdwtype: ::core::option::Option<*mut u32>, pvdata: ::core::option::Option<*mut ::core::ffi::c_void>, pcbdata: ::core::option::Option<*mut u32>, fignorehkcu: P1, pvdefaultdata: ::core::option::Option<*const ::core::ffi::c_void>, dwdefaultdatasize: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     P1: ::windows_core::IntoParam<super::super::Foundation::BOOL>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegQueryUSValueW(huskey : isize, pszvalue : ::windows_core::PCWSTR, pdwtype : *mut u32, pvdata : *mut ::core::ffi::c_void, pcbdata : *mut u32, fignorehkcu : super::super::Foundation:: BOOL, pvdefaultdata : *const ::core::ffi::c_void, dwdefaultdatasize : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegQueryUSValueW(huskey, pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), fignorehkcu.into_param().abi(), ::core::mem::transmute(pvdefaultdata.unwrap_or(::std::ptr::null())), dwdefaultdatasize).ok()
+    SHRegQueryUSValueW(huskey, pszvalue.into_param().abi(), ::core::mem::transmute(pdwtype.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null_mut())), ::core::mem::transmute(pcbdata.unwrap_or(::std::ptr::null_mut())), fignorehkcu.into_param().abi(), ::core::mem::transmute(pvdefaultdata.unwrap_or(::std::ptr::null())), dwdefaultdatasize)
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHRegSetPathA<P0, P1, P2, P3>(hkey: P0, pcszsubkey: P1, pcszvalue: P2, pcszpath: P3, dwflags: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegSetPathA<P0, P1, P2, P3>(hkey: P0, pcszsubkey: P1, pcszvalue: P2, pcszpath: P3, dwflags: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
@@ -4177,11 +4177,11 @@ where
     P3: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegSetPathA(hkey : super::super::System::Registry:: HKEY, pcszsubkey : ::windows_core::PCSTR, pcszvalue : ::windows_core::PCSTR, pcszpath : ::windows_core::PCSTR, dwflags : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegSetPathA(hkey.into_param().abi(), pcszsubkey.into_param().abi(), pcszvalue.into_param().abi(), pcszpath.into_param().abi(), dwflags).ok()
+    SHRegSetPathA(hkey.into_param().abi(), pcszsubkey.into_param().abi(), pcszvalue.into_param().abi(), pcszpath.into_param().abi(), dwflags)
 }
 #[cfg(feature = "Win32_System_Registry")]
 #[inline]
-pub unsafe fn SHRegSetPathW<P0, P1, P2, P3>(hkey: P0, pcszsubkey: P1, pcszvalue: P2, pcszpath: P3, dwflags: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegSetPathW<P0, P1, P2, P3>(hkey: P0, pcszsubkey: P1, pcszvalue: P2, pcszpath: P3, dwflags: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<super::super::System::Registry::HKEY>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
@@ -4189,41 +4189,41 @@ where
     P3: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegSetPathW(hkey : super::super::System::Registry:: HKEY, pcszsubkey : ::windows_core::PCWSTR, pcszvalue : ::windows_core::PCWSTR, pcszpath : ::windows_core::PCWSTR, dwflags : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegSetPathW(hkey.into_param().abi(), pcszsubkey.into_param().abi(), pcszvalue.into_param().abi(), pcszpath.into_param().abi(), dwflags).ok()
+    SHRegSetPathW(hkey.into_param().abi(), pcszsubkey.into_param().abi(), pcszvalue.into_param().abi(), pcszpath.into_param().abi(), dwflags)
 }
 #[inline]
-pub unsafe fn SHRegSetUSValueA<P0, P1>(pszsubkey: P0, pszvalue: P1, dwtype: u32, pvdata: ::core::option::Option<*const ::core::ffi::c_void>, cbdata: u32, dwflags: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegSetUSValueA<P0, P1>(pszsubkey: P0, pszvalue: P1, dwtype: u32, pvdata: ::core::option::Option<*const ::core::ffi::c_void>, cbdata: u32, dwflags: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
     P1: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegSetUSValueA(pszsubkey : ::windows_core::PCSTR, pszvalue : ::windows_core::PCSTR, dwtype : u32, pvdata : *const ::core::ffi::c_void, cbdata : u32, dwflags : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegSetUSValueA(pszsubkey.into_param().abi(), pszvalue.into_param().abi(), dwtype, ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null())), cbdata, dwflags).ok()
+    SHRegSetUSValueA(pszsubkey.into_param().abi(), pszvalue.into_param().abi(), dwtype, ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null())), cbdata, dwflags)
 }
 #[inline]
-pub unsafe fn SHRegSetUSValueW<P0, P1>(pwzsubkey: P0, pwzvalue: P1, dwtype: u32, pvdata: ::core::option::Option<*const ::core::ffi::c_void>, cbdata: u32, dwflags: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegSetUSValueW<P0, P1>(pwzsubkey: P0, pwzvalue: P1, dwtype: u32, pvdata: ::core::option::Option<*const ::core::ffi::c_void>, cbdata: u32, dwflags: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
     P1: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegSetUSValueW(pwzsubkey : ::windows_core::PCWSTR, pwzvalue : ::windows_core::PCWSTR, dwtype : u32, pvdata : *const ::core::ffi::c_void, cbdata : u32, dwflags : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegSetUSValueW(pwzsubkey.into_param().abi(), pwzvalue.into_param().abi(), dwtype, ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null())), cbdata, dwflags).ok()
+    SHRegSetUSValueW(pwzsubkey.into_param().abi(), pwzvalue.into_param().abi(), dwtype, ::core::mem::transmute(pvdata.unwrap_or(::std::ptr::null())), cbdata, dwflags)
 }
 #[inline]
-pub unsafe fn SHRegWriteUSValueA<P0>(huskey: isize, pszvalue: P0, dwtype: u32, pvdata: *const ::core::ffi::c_void, cbdata: u32, dwflags: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegWriteUSValueA<P0>(huskey: isize, pszvalue: P0, dwtype: u32, pvdata: *const ::core::ffi::c_void, cbdata: u32, dwflags: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegWriteUSValueA(huskey : isize, pszvalue : ::windows_core::PCSTR, dwtype : u32, pvdata : *const ::core::ffi::c_void, cbdata : u32, dwflags : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegWriteUSValueA(huskey, pszvalue.into_param().abi(), dwtype, pvdata, cbdata, dwflags).ok()
+    SHRegWriteUSValueA(huskey, pszvalue.into_param().abi(), dwtype, pvdata, cbdata, dwflags)
 }
 #[inline]
-pub unsafe fn SHRegWriteUSValueW<P0>(huskey: isize, pwzvalue: P0, dwtype: u32, pvdata: *const ::core::ffi::c_void, cbdata: u32, dwflags: u32) -> ::windows_core::Result<()>
+pub unsafe fn SHRegWriteUSValueW<P0>(huskey: isize, pwzvalue: P0, dwtype: u32, pvdata: *const ::core::ffi::c_void, cbdata: u32, dwflags: u32) -> super::super::Foundation::WIN32_ERROR
 where
     P0: ::windows_core::IntoParam<::windows_core::PCWSTR>,
 {
     ::windows_targets::link!("shlwapi.dll" "system" fn SHRegWriteUSValueW(huskey : isize, pwzvalue : ::windows_core::PCWSTR, dwtype : u32, pvdata : *const ::core::ffi::c_void, cbdata : u32, dwflags : u32) -> super::super::Foundation:: WIN32_ERROR);
-    SHRegWriteUSValueW(huskey, pwzvalue.into_param().abi(), dwtype, pvdata, cbdata, dwflags).ok()
+    SHRegWriteUSValueW(huskey, pwzvalue.into_param().abi(), dwtype, pvdata, cbdata, dwflags)
 }
 #[inline]
 pub unsafe fn SHReleaseThreadRef() -> ::windows_core::Result<()> {
@@ -29378,19 +29378,7 @@ pub const AVS_FILLED: APPLICATION_VIEW_STATE = APPLICATION_VIEW_STATE(1i32);
 pub const AVS_FULLSCREEN_LANDSCAPE: APPLICATION_VIEW_STATE = APPLICATION_VIEW_STATE(0i32);
 pub const AVS_FULLSCREEN_PORTRAIT: APPLICATION_VIEW_STATE = APPLICATION_VIEW_STATE(3i32);
 pub const AVS_SNAPPED: APPLICATION_VIEW_STATE = APPLICATION_VIEW_STATE(2i32);
-pub const AccessibilityDockingService: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x29ce1d46_b481_4aa0_a08a_d3ebc8aca402);
 pub const AllowSmallerSize: ThumbnailStreamCacheOptions = ThumbnailStreamCacheOptions(4i32);
-pub const AlphabeticalCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x3c2654c6_7372_4f6b_b310_55d6128f49d2);
-pub const AppShellVerbHandler: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x4ed3a719_cea8_4bd9_910d_e252f997afc2);
-pub const AppStartupLink: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x273eb5e7_88b0_4843_bfef_e2c81d43aae5);
-pub const AppVisibility: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7e5fe3d9_985f_4908_91f9_ee19f9fd1514);
-pub const ApplicationActivationManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x45ba127d_10a8_46ea_8ab7_56ea9078943c);
-pub const ApplicationAssociationRegistration: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x591209c7_767b_42b2_9fba_44ee4615f2c7);
-pub const ApplicationAssociationRegistrationUI: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1968106d_f3b5_44cf_890e_116fcb9ecef1);
-pub const ApplicationDesignModeSettings: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x958a6fb5_dcb2_4faf_aafd_7fb054ad1a3b);
-pub const ApplicationDestinations: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x86c14003_4d6b_4ef3_a7b4_0506663b2e68);
-pub const ApplicationDocumentLists: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x86bec222_30f2_47e0_9f25_60d11cd75c28);
-pub const AttachmentServices: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x4125dd96_e03a_4103_8f70_e0597d803b9c);
 pub const BFFM_ENABLEOK: u32 = 1125u32;
 pub const BFFM_INITIALIZED: u32 = 1u32;
 pub const BFFM_IUNKNOWN: u32 = 5u32;
@@ -29551,7 +29539,6 @@ pub const CDBOSC_RENAME: u32 = 3u32;
 pub const CDBOSC_SELCHANGE: u32 = 2u32;
 pub const CDBOSC_SETFOCUS: u32 = 0u32;
 pub const CDBOSC_STATECHANGE: u32 = 4u32;
-pub const CDBurn: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xfbeb8a05_beee_4442_804e_409d6c4515e9);
 pub const CDCS_ENABLED: CDCONTROLSTATEF = CDCONTROLSTATEF(1i32);
 pub const CDCS_ENABLEDVISIBLE: CDCONTROLSTATEF = CDCONTROLSTATEF(3i32);
 pub const CDCS_INACTIVE: CDCONTROLSTATEF = CDCONTROLSTATEF(0i32);
@@ -29940,7 +29927,6 @@ pub const CSIDL_SYSTEM: u32 = 37u32;
 pub const CSIDL_SYSTEMX86: u32 = 41u32;
 pub const CSIDL_TEMPLATES: u32 = 21u32;
 pub const CSIDL_WINDOWS: u32 = 36u32;
-pub const CScriptErrorList: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xefd01300_160f_11d2_bb2e_00805ff7efca);
 pub const CTF_COINIT: i32 = 8i32;
 pub const CTF_COINIT_MTA: i32 = 4096i32;
 pub const CTF_COINIT_STA: i32 = 8i32;
@@ -29956,7 +29942,6 @@ pub const CTF_THREAD_REF: i32 = 2i32;
 pub const CTF_UNUSED: i32 = 128i32;
 pub const CTF_WAIT_ALLOWCOM: i32 = 64i32;
 pub const CTF_WAIT_NO_REENTRANCY: i32 = 512i32;
-pub const ConflictFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x289978ac_a101_4341_a817_21eba7fd046d);
 pub const DBCID_CLSIDOFBAR: i32 = 2i32;
 pub const DBCID_EMPTY: i32 = 0i32;
 pub const DBCID_GETBAR: i32 = 4i32;
@@ -30131,13 +30116,6 @@ pub const DWPOS_FIT: DESKTOP_WALLPAPER_POSITION = DESKTOP_WALLPAPER_POSITION(3i3
 pub const DWPOS_SPAN: DESKTOP_WALLPAPER_POSITION = DESKTOP_WALLPAPER_POSITION(5i32);
 pub const DWPOS_STRETCH: DESKTOP_WALLPAPER_POSITION = DESKTOP_WALLPAPER_POSITION(2i32);
 pub const DWPOS_TILE: DESKTOP_WALLPAPER_POSITION = DESKTOP_WALLPAPER_POSITION(1i32);
-pub const DefFolderMenu: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc63382be_7933_48d0_9ac8_85fb46be2fdd);
-pub const DesktopGadget: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x924ccc1b_6562_4c85_8657_d177925222b6);
-pub const DesktopWallpaper: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc2cf3110_460e_4fc1_b9d0_8a1c0c9cc4bd);
-pub const DestinationList: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x77f10cf0_3db5_4966_b520_b7c54fd35ed6);
-pub const DocPropShellExtension: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x883373c3_bf89_11d1_be35_080036b11a03);
-pub const DriveSizeCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x94357b53_ca29_4b78_83ae_e8fe7409134f);
-pub const DriveTypeCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xb0a8f3cf_4333_4bab_8873_1ccb1cada48b);
 pub const EBF_NODROPTARGET: EXPLORER_BROWSER_FILL_FLAGS = EXPLORER_BROWSER_FILL_FLAGS(512i32);
 pub const EBF_NONE: EXPLORER_BROWSER_FILL_FLAGS = EXPLORER_BROWSER_FILL_FLAGS(0i32);
 pub const EBF_SELECTFROMDATAOBJECT: EXPLORER_BROWSER_FILL_FLAGS = EXPLORER_BROWSER_FILL_FLAGS(256i32);
@@ -30219,10 +30197,6 @@ pub const E_USERTILE_FILESIZE: ::windows_core::HRESULT = ::windows_core::HRESULT
 pub const E_USERTILE_LARGEORDYNAMIC: ::windows_core::HRESULT = ::windows_core::HRESULT(0x80270212_u32 as _);
 pub const E_USERTILE_UNSUPPORTEDFILETYPE: ::windows_core::HRESULT = ::windows_core::HRESULT(0x80270210_u32 as _);
 pub const E_USERTILE_VIDEOFRAMESIZE: ::windows_core::HRESULT = ::windows_core::HRESULT(0x80270213_u32 as _);
-pub const EnumerableObjectCollection: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x2d3468c1_36a7_43b6_ac24_d3f02fd9607a);
-pub const ExecuteFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x11dbb47c_a525_400b_9e80_a54615a090c0);
-pub const ExecuteUnknown: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xe44e9428_bdbc_4987_a099_40dc8fd255e7);
-pub const ExplorerBrowser: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x71f96385_ddd6_48d3_a0c1_ae06e8b055fb);
 pub const ExtractIfNotCached: ThumbnailStreamCacheOptions = ThumbnailStreamCacheOptions(0i32);
 pub const FCIDM_BROWSERFIRST: u32 = 40960u32;
 pub const FCIDM_BROWSERLAST: u32 = 48896u32;
@@ -30558,7 +30532,6 @@ pub const FP_BELOW: FLYOUT_PLACEMENT = FLYOUT_PLACEMENT(2i32);
 pub const FP_DEFAULT: FLYOUT_PLACEMENT = FLYOUT_PLACEMENT(0i32);
 pub const FP_LEFT: FLYOUT_PLACEMENT = FLYOUT_PLACEMENT(3i32);
 pub const FP_RIGHT: FLYOUT_PLACEMENT = FLYOUT_PLACEMENT(4i32);
-pub const FSCopyHandler: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd197380a_0a79_4dc8_a033_ed882c2fa14b);
 pub const FTA_AlwaysUnsafe: FILETYPEATTRIBUTEFLAGS = FILETYPEATTRIBUTEFLAGS(131072i32);
 pub const FTA_AlwaysUseDirectInvoke: FILETYPEATTRIBUTEFLAGS = FILETYPEATTRIBUTEFLAGS(4194304i32);
 pub const FTA_Exclude: FILETYPEATTRIBUTEFLAGS = FILETYPEATTRIBUTEFLAGS(1i32);
@@ -30640,13 +30613,6 @@ pub const FWF_SUBSETGROUPS: FOLDERFLAGS = FOLDERFLAGS(536870912i32);
 pub const FWF_TRANSPARENT: FOLDERFLAGS = FOLDERFLAGS(256i32);
 pub const FWF_TRICHECKSELECT: FOLDERFLAGS = FOLDERFLAGS(67108864i32);
 pub const FWF_USESEARCHFOLDER: FOLDERFLAGS = FOLDERFLAGS(1073741824i32);
-pub const FileOpenDialog: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xdc1c5a9c_e88a_4dde_a5a1_60f82a20aef7);
-pub const FileOperation: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x3ad05575_8857_4850_9277_11b85bdb8e09);
-pub const FileSaveDialog: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc0b4e2f3_ba21_4773_8dba_335ec946eb8b);
-pub const FileSearchBand: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc4ee31f3_4768_11d2_be5c_00a0c9a83da1);
-pub const FolderViewHost: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x20b1cb23_6968_4eb9_b7d4_a66d00d07cee);
-pub const FrameworkInputPane: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd5120aa3_46ba_44c5_822d_ca8092c1fc72);
-pub const FreeSpaceCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xb5607793_24ac_44c7_82e2_831726aa6cb7);
 pub const GADOF_DIRTY: u32 = 1u32;
 pub const GCS_HELPTEXT: u32 = 5u32;
 pub const GCS_HELPTEXTA: u32 = 1u32;
@@ -30738,7 +30704,6 @@ pub const GLOBALCOUNTER_USERINFOCHANGED: SHGLOBALCOUNTER = SHGLOBALCOUNTER(56i32
 pub const GPFIDL_ALTNAME: GPFIDL_FLAGS = GPFIDL_FLAGS(1u32);
 pub const GPFIDL_DEFAULT: GPFIDL_FLAGS = GPFIDL_FLAGS(0u32);
 pub const GPFIDL_UNCPRINTER: GPFIDL_FLAGS = GPFIDL_FLAGS(2u32);
-pub const GenericCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x25cbb996_92ed_457e_b28c_4774084bd562);
 pub const HELPINFO_MENUITEM: HELP_INFO_TYPE = HELP_INFO_TYPE(2i32);
 pub const HELPINFO_WINDOW: HELP_INFO_TYPE = HELP_INFO_TYPE(1i32);
 pub const HGSC_DOCUMENTSLIBRARY: HOMEGROUPSHARINGCHOICES = HOMEGROUPSHARINGCHOICES(8i32);
@@ -30806,10 +30771,15 @@ pub const HLTB_DOCKEDTOP: HLTB_INFO = HLTB_INFO(1i32);
 pub const HLTB_FLOATING: HLTB_INFO = HLTB_INFO(4i32);
 pub const HLTRANSLATEF_DEFAULT: HLTRANSLATEF = HLTRANSLATEF(0i32);
 pub const HLTRANSLATEF_DONTAPPLYDEFAULTPREFIX: HLTRANSLATEF = HLTRANSLATEF(1i32);
+<<<<<<< HEAD
 pub const HOMEGROUP_SECURITY_GROUP: ::windows_strings::PCWSTR = ::windows_strings::w!("HomeUsers");
 pub const HOMEGROUP_SECURITY_GROUP_MULTI: ::windows_strings::PCWSTR = ::windows_strings::w!("HUG");
 pub const HideInputPaneAnimationCoordinator: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x384742b1_2a77_4cb3_8cf8_1136f5e17e59);
 pub const HomeGroup: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xde77ba04_3c92_4d11_a1a5_42352a53e0e3);
+=======
+pub const HOMEGROUP_SECURITY_GROUP: ::windows_core::PCWSTR = ::windows_core::w!("HomeUsers");
+pub const HOMEGROUP_SECURITY_GROUP_MULTI: ::windows_core::PCWSTR = ::windows_core::w!("HUG");
+>>>>>>> master
 pub const IDC_OFFLINE_HAND: u32 = 103u32;
 pub const IDC_PANTOOL_HAND_CLOSED: u32 = 105u32;
 pub const IDC_PANTOOL_HAND_OPEN: u32 = 104u32;
@@ -30835,7 +30805,6 @@ pub const IEIFLAG_SCREEN: u32 = 32u32;
 pub const IEIT_PRIORITY_NORMAL: u32 = 268435456u32;
 pub const IEI_PRIORITY_MAX: u32 = 2147483647u32;
 pub const IEI_PRIORITY_MIN: u32 = 0u32;
-pub const IENamespaceTreeControl: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xace52d03_e5cd_4b20_82ff_e71b11beae1d);
 pub const IEPDN_BINDINGUI: IEPDNFLAGS = IEPDNFLAGS(1i32);
 pub const IESHORTCUT_BACKGROUNDTAB: IESHORTCUTFLAGS = IESHORTCUTFLAGS(8i32);
 pub const IESHORTCUT_FORCENAVIGATE: IESHORTCUTFLAGS = IESHORTCUTFLAGS(4i32);
@@ -30895,13 +30864,6 @@ pub const IURL_INVOKECOMMAND_FL_USE_DEFAULT_VERB: IURL_INVOKECOMMAND_FLAGS = IUR
 pub const IURL_SETURL_FL_GUESS_PROTOCOL: IURL_SETURL_FLAGS = IURL_SETURL_FLAGS(1i32);
 pub const IURL_SETURL_FL_USE_DEFAULT_PROTOCOL: IURL_SETURL_FLAGS = IURL_SETURL_FLAGS(2i32);
 pub const Identity_LocalUserProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xa198529b_730f_4089_b646_a12557f5665e);
-pub const ImageProperties: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7ab770c7_0e23_4d7a_8aa2_19bfad479829);
-pub const ImageRecompress: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6e33091c_d2f8_4740_b55e_2e11d1477a2c);
-pub const ImageTranscode: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x17b75166_928f_417d_9685_64aa135565c1);
-pub const InputPanelConfiguration: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x2853add3_f096_4c63_a78f_7fa3ea837fb7);
-pub const InternetExplorer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x0002df01_0000_0000_c000_000000000046);
-pub const InternetExplorerMedium: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd5e8041d_920f_45e9_b8fb_b1deb82c6e5e);
-pub const InternetPrintOrdering: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xadd36aa8_751a_4579_a266_d66f5202ccbb);
 pub const ItemCount_Property_GUID: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xabbf5c45_5ccc_47b7_bb4e_87cb87bbd162);
 pub const ItemIndex_Property_GUID: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x92a053da_2969_4021_bf27_514cfc2e4a69);
 pub const KDC_FREQUENT: KNOWNDESTCATEGORY = KNOWNDESTCATEGORY(1i32);
@@ -30949,7 +30911,6 @@ pub const KF_REDIRECT_SET_OWNER_EXPLICIT: _KF_REDIRECT_FLAGS = _KF_REDIRECT_FLAG
 pub const KF_REDIRECT_UNPIN: _KF_REDIRECT_FLAGS = _KF_REDIRECT_FLAGS(64i32);
 pub const KF_REDIRECT_USER_EXCLUSIVE: _KF_REDIRECT_FLAGS = _KF_REDIRECT_FLAGS(1i32);
 pub const KF_REDIRECT_WITH_UI: _KF_REDIRECT_FLAGS = _KF_REDIRECT_FLAGS(32i32);
-pub const KnownFolderManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x4df0c730_df9d_4ae3_9153_aa6b82e9795a);
 pub const LFF_ALLITEMS: LIBRARYFOLDERFILTER = LIBRARYFOLDERFILTER(3i32);
 pub const LFF_FORCEFILESYSTEM: LIBRARYFOLDERFILTER = LIBRARYFOLDERFILTER(1i32);
 pub const LFF_STORAGEITEMS: LIBRARYFOLDERFILTER = LIBRARYFOLDERFILTER(2i32);
@@ -30964,7 +30925,6 @@ pub const LOF_PINNEDTONAVPANE: LIBRARYOPTIONFLAGS = LIBRARYOPTIONFLAGS(1i32);
 pub const LSF_FAILIFTHERE: LIBRARYSAVEFLAGS = LIBRARYSAVEFLAGS(0i32);
 pub const LSF_MAKEUNIQUENAME: LIBRARYSAVEFLAGS = LIBRARYSAVEFLAGS(2i32);
 pub const LSF_OVERRIDEEXISTING: LIBRARYSAVEFLAGS = LIBRARYSAVEFLAGS(1i32);
-pub const LocalThumbnailCache: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x50ef4544_ac9f_4a8e_b21b_8a26180db13f);
 pub const MAV_APP_VISIBLE: MONITOR_APP_VISIBILITY = MONITOR_APP_VISIBILITY(2i32);
 pub const MAV_NO_APP_VISIBLE: MONITOR_APP_VISIBILITY = MONITOR_APP_VISIBILITY(1i32);
 pub const MAV_UNKNOWN: MONITOR_APP_VISIBILITY = MONITOR_APP_VISIBILITY(0i32);
@@ -31004,8 +30964,6 @@ pub const MPPF_TOP: MENUPOPUPPOPUPFLAGS = MENUPOPUPPOPUPFLAGS(536870912i32);
 pub const MUS_COMPLETE: MERGE_UPDATE_STATUS = MERGE_UPDATE_STATUS(0i32);
 pub const MUS_FAILED: MERGE_UPDATE_STATUS = MERGE_UPDATE_STATUS(2i32);
 pub const MUS_USERINPUTNEEDED: MERGE_UPDATE_STATUS = MERGE_UPDATE_STATUS(1i32);
-pub const MailRecipient: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x9e56be60_c50f_11cf_9a2c_00a0c90a90ce);
-pub const MergedCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8e827c11_33e7_4bc1_b242_8cd9a1c2b304);
 pub const NCM_DISPLAYERRORTIP: u32 = 1028u32;
 pub const NCM_GETADDRESS: u32 = 1025u32;
 pub const NCM_GETALLOWTYPE: u32 = 1027u32;
@@ -31052,7 +31010,6 @@ pub const NMCSAEI_EDIT: _NMCSAEI_FLAGS = _NMCSAEI_FLAGS(1i32);
 pub const NMCSAEI_SELECT: _NMCSAEI_FLAGS = _NMCSAEI_FLAGS(0i32);
 pub const NOTIFYICON_VERSION: u32 = 3u32;
 pub const NOTIFYICON_VERSION_4: u32 = 4u32;
-pub const NPCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x3dd6bec0_8193_4ffe_ae25_e08e39ea4063);
 pub const NSTCDHPOS_ONTOP: i32 = -1i32;
 pub const NSTCECT_BUTTON: _NSTCECLICKTYPE = _NSTCECLICKTYPE(3i32);
 pub const NSTCECT_DBLCLICK: _NSTCECLICKTYPE = _NSTCECLICKTYPE(4i32);
@@ -31159,11 +31116,6 @@ pub const NWMF_UNLOADING: NWMF = NWMF(1i32);
 pub const NWMF_USERALLOWED: NWMF = NWMF(256i32);
 pub const NWMF_USERINITED: NWMF = NWMF(2i32);
 pub const NWMF_USERREQUESTED: NWMF = NWMF(128i32);
-pub const NamespaceTreeControl: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xae054212_3535_4430_83ed_d501aa6680e6);
-pub const NamespaceWalker: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x72eb61e0_8672_4303_9175_f2e4c68b2e7c);
-pub const NetworkConnections: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7007acc7_3202_11d1_aad2_00805fc1270e);
-pub const NetworkExplorerFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xf02c1a0d_be21_4350_88b0_7367fc96ef3c);
-pub const NetworkPlaces: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x208d2c60_3aea_1069_a2d7_08002b30309d);
 pub const OAIF_ALLOW_REGISTRATION: OPEN_AS_INFO_FLAGS = OPEN_AS_INFO_FLAGS(1i32);
 pub const OAIF_EXEC: OPEN_AS_INFO_FLAGS = OPEN_AS_INFO_FLAGS(4i32);
 pub const OAIF_FILE_IS_URI: OPEN_AS_INFO_FLAGS = OPEN_AS_INFO_FLAGS(128i32);
@@ -31230,9 +31182,6 @@ pub const OS_WIN98_GOLD: OS = OS(6u32);
 pub const OS_WINDOWS: OS = OS(0u32);
 pub const OS_WOW6432: OS = OS(30u32);
 pub const OS_XPORGREATER: OS = OS(18u32);
-pub const OnexCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x07aa0886_cc8d_4e19_a410_1c75af686e62);
-pub const OnexPlapSmartcardCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x33c86cd6_705f_4ba1_9adb_67070b837775);
-pub const OpenControlPanel: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x06622d85_6856_4460_8de1_a81921b41c4b);
 pub const PAI_ASSIGNEDTIME: PUBAPPINFOFLAGS = PUBAPPINFOFLAGS(2i32);
 pub const PAI_EXPIRETIME: PUBAPPINFOFLAGS = PUBAPPINFOFLAGS(16i32);
 pub const PAI_PUBLISHEDTIME: PUBAPPINFOFLAGS = PUBAPPINFOFLAGS(4i32);
@@ -31381,7 +31330,6 @@ pub const PIFPARAMSSIZE: u32 = 64u32;
 pub const PIFSHDATASIZE: u32 = 64u32;
 pub const PIFSHPROGSIZE: u32 = 64u32;
 pub const PIFSTARTLOCSIZE: u32 = 63u32;
-pub const PINLogonCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xcb82ea12_9f71_446d_89e1_8d0924e1256e);
 pub const PLATFORM_BROWSERONLY: u32 = 1u32;
 pub const PLATFORM_IE3: u32 = 1u32;
 pub const PLATFORM_INTEGRATED: u32 = 2u32;
@@ -31443,13 +31391,7 @@ pub const PSGUID_SUMMARYINFORMATION: ::windows_core::GUID = ::windows_core::GUID
 pub const PSGUID_VIDEO: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x64440491_4c8b_11d1_8b70_080036b11a03);
 pub const PSGUID_VOLUME: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x9b174b35_40ff_11d2_a27e_00c04fc30871);
 pub const PSGUID_WEBVIEW: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xf2275480_f782_4291_bd94_f13693513aec);
-pub const PackageDebugSettings: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xb1aec16f_2383_4852_b0e9_8f0b1dc66b4d);
-pub const PasswordCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x60b78e88_ead8_445c_9cfd_0b87f74ea6cd);
-pub const PreviousVersions: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x596ab062_b4d2_4215_9f74_e9109b0a8153);
-pub const PropertiesUI: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd912f8cf_0396_4915_884e_fb425d32943b);
 pub const ProtectedModeRedirect: NewProcessCauseConstants = NewProcessCauseConstants(1i32);
-pub const PublishDropTarget: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xcc6eeffb_43f6_46c5_9619_51d571967f7d);
-pub const PublishingWizard: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6b33163c_76a5_4b6c_bf21_45de9cd503a1);
 pub const QCMINFO_PLACE_AFTER: u32 = 1u32;
 pub const QCMINFO_PLACE_BEFORE: u32 = 0u32;
 pub const QIF_CACHED: QITIPF_FLAGS = QITIPF_FLAGS(1i32);
@@ -31467,8 +31409,6 @@ pub const QUNS_NOT_PRESENT: QUERY_USER_NOTIFICATION_STATE = QUERY_USER_NOTIFICAT
 pub const QUNS_PRESENTATION_MODE: QUERY_USER_NOTIFICATION_STATE = QUERY_USER_NOTIFICATION_STATE(4i32);
 pub const QUNS_QUIET_TIME: QUERY_USER_NOTIFICATION_STATE = QUERY_USER_NOTIFICATION_STATE(6i32);
 pub const QUNS_RUNNING_D3D_FULL_SCREEN: QUERY_USER_NOTIFICATION_STATE = QUERY_USER_NOTIFICATION_STATE(3i32);
-pub const QueryCancelAutoPlay: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x331f1768_05a9_4ddd_b86e_dae34ddc998a);
-pub const RASProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x5537e283_b1e7_4ef8_9c6e_7ab0afe5056d);
 pub const REFRESH_COMPLETELY: RefreshConstants = RefreshConstants(3i32);
 pub const REFRESH_IFEXPIRED: RefreshConstants = RefreshConstants(1i32);
 pub const REFRESH_NORMAL: RefreshConstants = RefreshConstants(0i32);
@@ -32641,44 +32581,7 @@ pub const S_SYNCMGR_ENUMITEMS: ::windows_core::HRESULT = ::windows_core::HRESULT
 pub const S_SYNCMGR_ITEMDELETED: ::windows_core::HRESULT = ::windows_core::HRESULT(0x40210_u32 as _);
 pub const S_SYNCMGR_MISSINGITEMS: ::windows_core::HRESULT = ::windows_core::HRESULT(0x40201_u32 as _);
 pub const S_SYNCMGR_RETRYSYNC: ::windows_core::HRESULT = ::windows_core::HRESULT(0x40202_u32 as _);
-pub const ScheduledTasks: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd6277990_4c6a_11cf_8d87_00aa0060f5bf);
-pub const SearchFolderItemFactory: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x14010e02_bbbd_41f0_88e3_eda371216584);
 pub const SelectedItemCount_Property_GUID: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8fe316d2_0e52_460a_9c1e_48f273d470a3);
-pub const SharedBitmap: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x4db26476_6787_4046_b836_e8412a9e8a27);
-pub const SharingConfigurationManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x49f371e1_8c5c_4d9c_9a3b_54a6827f513c);
-pub const Shell: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x13709620_c279_11ce_a49e_444553540000);
-pub const ShellBrowserWindow: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc08afd90_f2a1_11d1_8455_00a0c91f3880);
-pub const ShellDesktop: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x00021400_0000_0000_c000_000000000046);
-pub const ShellDispatchInproc: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x0a89a860_d7b1_11ce_8350_444553540000);
-pub const ShellFSFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xf3364ba0_65b9_11ce_a9ba_00aa004ae837);
-pub const ShellFolderItem: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x2fe352ea_fd1f_11d2_b1f4_00c04f8eeb3e);
-pub const ShellFolderView: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x62112aa1_ebe4_11cf_a5fb_0020afe7292d);
-pub const ShellFolderViewOC: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x9ba05971_f6a8_11cf_a442_00a0c90a8f39);
-pub const ShellImageDataFactory: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x66e4e4fb_f385_4dd0_8d74_a2efd1bc6178);
-pub const ShellItem: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x9ac9fbe1_e0a2_4ad6_b4ee_e212013ea917);
-pub const ShellLibrary: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd9b3211d_e57f_4426_aaef_30a806add397);
-pub const ShellLink: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x00021401_0000_0000_c000_000000000046);
-pub const ShellLinkObject: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x11219420_1768_11d1_95be_00609797ea4f);
-pub const ShellNameSpace: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x55136805_b2de_11d1_b9f2_00a0c98bc547);
-pub const ShellUIHelper: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x64ab4bb7_111e_11d1_8f79_00c04fc2fbe1);
-pub const ShellWindows: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x9ba05972_f6a8_11cf_a442_00a0c90a8f39);
-pub const ShowInputPaneAnimationCoordinator: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1f046abf_3202_4dc1_8cb5_3c67617ce1fa);
-pub const SimpleConflictPresenter: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7a0f6ab7_ed84_46b6_b47e_02aa159a152b);
-pub const SizeCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x55d7b852_f6d1_42f2_aa75_8728a1b2d264);
-pub const SmartcardCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8fd7e19c_3bf7_489b_a72c_846ab3678c96);
-pub const SmartcardPinProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x94596c7e_3744_41ce_893e_bbf09122f76a);
-pub const SmartcardReaderSelectionProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1b283861_754f_4022_ad47_a5eaaa618894);
-pub const SmartcardWinRTProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1ee7337f_85ac_45e2_a23c_37c753209769);
-pub const StartMenuPin: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xa2a9545d_a0c2_42b4_9708_a0b2badd77c8);
-pub const StorageProviderBanners: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7ccdf9f4_e576_455a_8bc7_f6ec68d6f063);
-pub const SuspensionDependencyManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6b273fc5_61fd_4918_95a2_c3b5e9d7f581);
-pub const SyncMgr: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6295df27_35ee_11d1_8707_00c04fd93327);
-pub const SyncMgrClient: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1202db60_1dac_42c5_aed5_1abdd432248e);
-pub const SyncMgrControl: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1a1f4206_0688_4e7f_be03_d82ec69df9a5);
-pub const SyncMgrFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x9c73f5e5_7ae7_4e32_a8e8_8d23b85255bf);
-pub const SyncMgrScheduleWizard: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8d8b8e30_c451_421b_8553_d2976afa648c);
-pub const SyncResultsFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x71d99464_3b6b_475c_b241_e15883207529);
-pub const SyncSetupFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x2e9e59c0_b437_4981_a647_9c34b9b90891);
 pub const TBIF_APPEND: u32 = 0u32;
 pub const TBIF_DEFAULT: u32 = 0u32;
 pub const TBIF_INTERNETBAR: u32 = 65536u32;
@@ -32738,12 +32641,6 @@ pub const TS_INDETERMINATE: _TRANSFER_ADVISE_STATE = _TRANSFER_ADVISE_STATE(4i32
 pub const TS_NONE: _TRANSFER_ADVISE_STATE = _TRANSFER_ADVISE_STATE(0i32);
 pub const TS_PERFORMING: _TRANSFER_ADVISE_STATE = _TRANSFER_ADVISE_STATE(1i32);
 pub const TS_PREPARING: _TRANSFER_ADVISE_STATE = _TRANSFER_ADVISE_STATE(2i32);
-pub const TaskbarList: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x56fdf344_fd6d_11d0_958a_006097c9a090);
-pub const ThumbnailStreamCache: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xcbe0fed3_4b91_4e90_8354_8a8c84ec6872);
-pub const TimeCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x3bb4118f_ddfd_4d30_a348_9fb5d6bf1afe);
-pub const TrackShellMenu: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8278f931_2a3e_11d2_838f_00c04fd918d0);
-pub const TrayBandSiteService: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xf60ad0a0_e5e1_45cb_b51a_e15b9f8b2934);
-pub const TrayDeskBand: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xe6442437_6c68_4f52_94dd_2cfed267efb9);
 pub const URLASSOCDLG_FL_REGISTER_ASSOC: URLASSOCIATIONDIALOG_IN_FLAGS = URLASSOCIATIONDIALOG_IN_FLAGS(2i32);
 pub const URLASSOCDLG_FL_USE_DEFAULT_NAME: URLASSOCIATIONDIALOG_IN_FLAGS = URLASSOCIATIONDIALOG_IN_FLAGS(1i32);
 pub const URLIS_APPLIABLE: URLIS = URLIS(4i32);
@@ -32820,10 +32717,6 @@ pub const URL_UNESCAPE_URI_COMPONENT: u32 = 262144u32;
 pub const URL_WININET_COMPATIBILITY: u32 = 2147483648u32;
 pub const UR_MONITOR_DISCONNECT: UNDOCK_REASON = UNDOCK_REASON(1i32);
 pub const UR_RESOLUTION_CHANGE: UNDOCK_REASON = UNDOCK_REASON(0i32);
-pub const UserNotification: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x0010890e_8789_413c_adbc_48f5b511b3af);
-pub const V1PasswordCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6f45dc1e_5384_457a_bc13_2cd81b0d28ed);
-pub const V1SmartcardCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8bf9a910_a8ff_457f_999f_a5ca10b4a885);
-pub const V1WinBioCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xac3ac249_e820_4343_a65b_377ac634dc09);
 pub const VALIDATEUNC_CONNECT: VALIDATEUNC_OPTION = VALIDATEUNC_OPTION(1i32);
 pub const VALIDATEUNC_NOUI: VALIDATEUNC_OPTION = VALIDATEUNC_OPTION(2i32);
 pub const VALIDATEUNC_PERSIST: VALIDATEUNC_OPTION = VALIDATEUNC_OPTION(8i32);
@@ -32855,9 +32748,13 @@ pub const VPCF_TEXT: VPCOLORFLAGS = VPCOLORFLAGS(1i32);
 pub const VPCF_TEXTBACKGROUND: VPCOLORFLAGS = VPCOLORFLAGS(5i32);
 pub const VPWF_ALPHABLEND: VPWATERMARKFLAGS = VPWATERMARKFLAGS(1i32);
 pub const VPWF_DEFAULT: VPWATERMARKFLAGS = VPWATERMARKFLAGS(0i32);
+<<<<<<< HEAD
 pub const VaultProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x503739d0_4c5e_4cfd_b3ba_d881334f0df2);
 pub const VirtualDesktopManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xaa509086_5ca9_4c25_8f95_589d3c07b48a);
 pub const WC_NETADDRESS: ::windows_strings::PCWSTR = ::windows_strings::w!("msctls_netaddress");
+=======
+pub const WC_NETADDRESS: ::windows_core::PCWSTR = ::windows_core::w!("msctls_netaddress");
+>>>>>>> master
 pub const WM_CPL_LAUNCH: u32 = 2024u32;
 pub const WM_CPL_LAUNCHED: u32 = 2025u32;
 pub const WPSTYLE_CENTER: u32 = 0u32;
@@ -32903,10 +32800,6 @@ pub const WTS_SCALEUP: WTS_FLAGS = WTS_FLAGS(65536i32);
 pub const WTS_SKIPFASTEXTRACT: WTS_FLAGS = WTS_FLAGS(128i32);
 pub const WTS_SLOWRECLAIM: WTS_FLAGS = WTS_FLAGS(8i32);
 pub const WTS_WIDETHUMBNAILS: WTS_FLAGS = WTS_FLAGS(16384i32);
-pub const WebBrowser: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8856f961_340a_11d0_a96b_00c04fd705a2);
-pub const WebBrowser_V1: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xeab22ac3_30c1_11cf_a7eb_0000c05bae0b);
-pub const WebWizardHost: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc827f149_55c1_4d28_935e_57e47caed973);
-pub const WinBioCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xbec09223_b018_416d_a0ac_523971b639f5);
 pub const __UNUSED_RECYCLE_WAS_GLOBALCOUNTER_CSCSYNCINPROGRESS: SHGLOBALCOUNTER = SHGLOBALCOUNTER(13i32);
 pub const __UNUSED_RECYCLE_WAS_GLOBALCOUNTER_RECYCLEDIRTYCOUNT_SERVERDRIVE: SHGLOBALCOUNTER = SHGLOBALCOUNTER(42i32);
 pub const __UNUSED_RECYCLE_WAS_GLOBALCOUNTER_RECYCLEGLOBALDIRTYCOUNT: SHGLOBALCOUNTER = SHGLOBALCOUNTER(43i32);
@@ -38761,6 +38654,18 @@ impl ::core::default::Default for AUTO_SCROLL_DATA {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const AccessibilityDockingService: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x29ce1d46_b481_4aa0_a08a_d3ebc8aca402);
+pub const AlphabeticalCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x3c2654c6_7372_4f6b_b310_55d6128f49d2);
+pub const AppShellVerbHandler: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x4ed3a719_cea8_4bd9_910d_e252f997afc2);
+pub const AppStartupLink: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x273eb5e7_88b0_4843_bfef_e2c81d43aae5);
+pub const AppVisibility: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7e5fe3d9_985f_4908_91f9_ee19f9fd1514);
+pub const ApplicationActivationManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x45ba127d_10a8_46ea_8ab7_56ea9078943c);
+pub const ApplicationAssociationRegistration: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x591209c7_767b_42b2_9fba_44ee4615f2c7);
+pub const ApplicationAssociationRegistrationUI: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1968106d_f3b5_44cf_890e_116fcb9ecef1);
+pub const ApplicationDesignModeSettings: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x958a6fb5_dcb2_4faf_aafd_7fb054ad1a3b);
+pub const ApplicationDestinations: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x86c14003_4d6b_4ef3_a7b4_0506663b2e68);
+pub const ApplicationDocumentLists: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x86bec222_30f2_47e0_9f25_60d11cd75c28);
+pub const AttachmentServices: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x4125dd96_e03a_4103_8f70_e0597d803b9c);
 #[repr(C)]
 #[cfg(feature = "Win32_UI_Shell_Common")]
 pub struct BANDINFOSFB {
@@ -39217,6 +39122,7 @@ impl ::core::default::Default for CATEGORY_INFO {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const CDBurn: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xfbeb8a05_beee_4442_804e_409d6c4515e9);
 #[repr(C, packed(1))]
 pub struct CIDA {
     pub cidl: u32,
@@ -39609,6 +39515,8 @@ impl ::core::default::Default for CSFV {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const CScriptErrorList: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xefd01300_160f_11d2_bb2e_00805ff7efca);
+pub const ConflictFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x289978ac_a101_4341_a817_21eba7fd046d);
 #[repr(C, packed(1))]
 pub struct DATABLOCK_HEADER {
     pub cbSize: u32,
@@ -40002,6 +39910,13 @@ impl ::core::default::Default for DROPFILES {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const DefFolderMenu: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc63382be_7933_48d0_9ac8_85fb46be2fdd);
+pub const DesktopGadget: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x924ccc1b_6562_4c85_8657_d177925222b6);
+pub const DesktopWallpaper: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc2cf3110_460e_4fc1_b9d0_8a1c0c9cc4bd);
+pub const DestinationList: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x77f10cf0_3db5_4966_b520_b7c54fd35ed6);
+pub const DocPropShellExtension: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x883373c3_bf89_11d1_be35_080036b11a03);
+pub const DriveSizeCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x94357b53_ca29_4b78_83ae_e8fe7409134f);
+pub const DriveTypeCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xb0a8f3cf_4333_4bab_8873_1ccb1cada48b);
 #[repr(C, packed(1))]
 pub struct EXP_DARWIN_LINK {
     pub dbh: DATABLOCK_HEADER,
@@ -40115,6 +40030,10 @@ impl ::core::default::Default for EXTRASEARCH {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const EnumerableObjectCollection: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x2d3468c1_36a7_43b6_ac24_d3f02fd9607a);
+pub const ExecuteFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x11dbb47c_a525_400b_9e80_a54615a090c0);
+pub const ExecuteUnknown: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xe44e9428_bdbc_4987_a099_40dc8fd255e7);
+pub const ExplorerBrowser: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x71f96385_ddd6_48d3_a0c1_ae06e8b055fb);
 #[repr(C, packed(1))]
 pub struct FILEDESCRIPTORA {
     pub dwFlags: u32,
@@ -40291,6 +40210,15 @@ impl ::core::default::Default for FOLDERSETTINGS {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const FSCopyHandler: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd197380a_0a79_4dc8_a033_ed882c2fa14b);
+pub const FileOpenDialog: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xdc1c5a9c_e88a_4dde_a5a1_60f82a20aef7);
+pub const FileOperation: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x3ad05575_8857_4850_9277_11b85bdb8e09);
+pub const FileSaveDialog: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc0b4e2f3_ba21_4773_8dba_335ec946eb8b);
+pub const FileSearchBand: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc4ee31f3_4768_11d2_be5c_00a0c9a83da1);
+pub const FolderViewHost: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x20b1cb23_6968_4eb9_b7d4_a66d00d07cee);
+pub const FrameworkInputPane: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd5120aa3_46ba_44c5_822d_ca8092c1fc72);
+pub const FreeSpaceCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xb5607793_24ac_44c7_82e2_831726aa6cb7);
+pub const GenericCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x25cbb996_92ed_457e_b28c_4774084bd562);
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq)]
 pub struct HDROP(pub isize);
@@ -40542,6 +40470,9 @@ impl ::core::fmt::Debug for HPSXA {
 impl ::windows_core::TypeKind for HPSXA {
     type TypeKind = ::windows_core::CopyType;
 }
+pub const HideInputPaneAnimationCoordinator: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x384742b1_2a77_4cb3_8cf8_1136f5e17e59);
+pub const HomeGroup: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xde77ba04_3c92_4d11_a1a5_42352a53e0e3);
+pub const IENamespaceTreeControl: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xace52d03_e5cd_4b20_82ff_e71b11beae1d);
 #[repr(C)]
 pub struct ITEMSPACING {
     pub cxSmall: i32,
@@ -40574,6 +40505,13 @@ impl ::core::default::Default for ITEMSPACING {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const ImageProperties: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7ab770c7_0e23_4d7a_8aa2_19bfad479829);
+pub const ImageRecompress: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6e33091c_d2f8_4740_b55e_2e11d1477a2c);
+pub const ImageTranscode: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x17b75166_928f_417d_9685_64aa135565c1);
+pub const InputPanelConfiguration: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x2853add3_f096_4c63_a78f_7fa3ea837fb7);
+pub const InternetExplorer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x0002df01_0000_0000_c000_000000000046);
+pub const InternetExplorerMedium: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd5e8041d_920f_45e9_b8fb_b1deb82c6e5e);
+pub const InternetPrintOrdering: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xadd36aa8_751a_4579_a266_d66f5202ccbb);
 #[repr(C)]
 pub struct KNOWNFOLDER_DEFINITION {
     pub category: KF_CATEGORY,
@@ -40629,6 +40567,8 @@ impl ::core::default::Default for KNOWNFOLDER_DEFINITION {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const KnownFolderManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x4df0c730_df9d_4ae3_9153_aa6b82e9795a);
+pub const LocalThumbnailCache: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x50ef4544_ac9f_4a8e_b21b_8a26180db13f);
 #[repr(C)]
 pub struct MULTIKEYHELPA {
     pub mkSize: u32,
@@ -40691,6 +40631,8 @@ impl ::core::default::Default for MULTIKEYHELPW {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const MailRecipient: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x9e56be60_c50f_11cf_9a2c_00a0c90a90ce);
+pub const MergedCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8e827c11_33e7_4bc1_b242_8cd9a1c2b304);
 #[repr(C)]
 #[cfg(all(feature = "Win32_NetworkManagement_IpHelper", feature = "Win32_Networking_WinSock"))]
 pub struct NC_ADDRESS {
@@ -41126,6 +41068,7 @@ impl ::core::default::Default for NOTIFYICONIDENTIFIER {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const NPCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x3dd6bec0_8193_4ffe_ae25_e08e39ea4063);
 #[repr(C)]
 #[cfg(feature = "Win32_NetworkManagement_WNet")]
 pub struct NRESARRAY {
@@ -41268,6 +41211,11 @@ impl ::core::default::Default for NT_FE_CONSOLE_PROPS {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const NamespaceTreeControl: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xae054212_3535_4430_83ed_d501aa6680e6);
+pub const NamespaceWalker: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x72eb61e0_8672_4303_9175_f2e4c68b2e7c);
+pub const NetworkConnections: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7007acc7_3202_11d1_aad2_00805fc1270e);
+pub const NetworkExplorerFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xf02c1a0d_be21_4350_88b0_7367fc96ef3c);
+pub const NetworkPlaces: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x208d2c60_3aea_1069_a2d7_08002b30309d);
 #[repr(C)]
 pub struct OPENASINFO {
     pub pcszFile: ::windows_core::PCWSTR,
@@ -41407,6 +41355,9 @@ impl ::core::default::Default for OPEN_PRINTER_PROPS_INFOW {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const OnexCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x07aa0886_cc8d_4e19_a410_1c75af686e62);
+pub const OnexPlapSmartcardCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x33c86cd6_705f_4ba1_9adb_67070b837775);
+pub const OpenControlPanel: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x06622d85_6856_4460_8de1_a81921b41c4b);
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq)]
 pub struct PAPPCONSTRAIN_REGISTRATION(pub isize);
@@ -41560,6 +41511,7 @@ impl ::core::default::Default for PERSIST_FOLDER_TARGET_INFO {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const PINLogonCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xcb82ea12_9f71_446d_89e1_8d0924e1256e);
 #[repr(C)]
 #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
 pub struct PREVIEWHANDLERFRAMEINFO {
@@ -41705,6 +41657,12 @@ impl ::core::default::Default for PUBAPPINFO {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const PackageDebugSettings: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xb1aec16f_2383_4852_b0e9_8f0b1dc66b4d);
+pub const PasswordCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x60b78e88_ead8_445c_9cfd_0b87f74ea6cd);
+pub const PreviousVersions: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x596ab062_b4d2_4215_9f74_e9109b0a8153);
+pub const PropertiesUI: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd912f8cf_0396_4915_884e_fb425d32943b);
+pub const PublishDropTarget: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xcc6eeffb_43f6_46c5_9619_51d571967f7d);
+pub const PublishingWizard: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6b33163c_76a5_4b6c_bf21_45de9cd503a1);
 #[repr(C)]
 #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
 pub struct QCMINFO {
@@ -41836,6 +41794,8 @@ impl ::core::default::Default for QITAB {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const QueryCancelAutoPlay: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x331f1768_05a9_4ddd_b86e_dae34ddc998a);
+pub const RASProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x5537e283_b1e7_4ef8_9c6e_7ab0afe5056d);
 #[repr(C)]
 pub struct SFVM_HELPTOPIC_DATA {
     pub wszHelpFile: [u16; 260],
@@ -43678,6 +43638,43 @@ impl ::core::default::Default for SYNCMGR_CONFLICT_ID_INFO {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const ScheduledTasks: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd6277990_4c6a_11cf_8d87_00aa0060f5bf);
+pub const SearchFolderItemFactory: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x14010e02_bbbd_41f0_88e3_eda371216584);
+pub const SharedBitmap: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x4db26476_6787_4046_b836_e8412a9e8a27);
+pub const SharingConfigurationManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x49f371e1_8c5c_4d9c_9a3b_54a6827f513c);
+pub const Shell: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x13709620_c279_11ce_a49e_444553540000);
+pub const ShellBrowserWindow: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc08afd90_f2a1_11d1_8455_00a0c91f3880);
+pub const ShellDesktop: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x00021400_0000_0000_c000_000000000046);
+pub const ShellDispatchInproc: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x0a89a860_d7b1_11ce_8350_444553540000);
+pub const ShellFSFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xf3364ba0_65b9_11ce_a9ba_00aa004ae837);
+pub const ShellFolderItem: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x2fe352ea_fd1f_11d2_b1f4_00c04f8eeb3e);
+pub const ShellFolderView: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x62112aa1_ebe4_11cf_a5fb_0020afe7292d);
+pub const ShellFolderViewOC: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x9ba05971_f6a8_11cf_a442_00a0c90a8f39);
+pub const ShellImageDataFactory: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x66e4e4fb_f385_4dd0_8d74_a2efd1bc6178);
+pub const ShellItem: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x9ac9fbe1_e0a2_4ad6_b4ee_e212013ea917);
+pub const ShellLibrary: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xd9b3211d_e57f_4426_aaef_30a806add397);
+pub const ShellLink: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x00021401_0000_0000_c000_000000000046);
+pub const ShellLinkObject: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x11219420_1768_11d1_95be_00609797ea4f);
+pub const ShellNameSpace: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x55136805_b2de_11d1_b9f2_00a0c98bc547);
+pub const ShellUIHelper: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x64ab4bb7_111e_11d1_8f79_00c04fc2fbe1);
+pub const ShellWindows: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x9ba05972_f6a8_11cf_a442_00a0c90a8f39);
+pub const ShowInputPaneAnimationCoordinator: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1f046abf_3202_4dc1_8cb5_3c67617ce1fa);
+pub const SimpleConflictPresenter: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7a0f6ab7_ed84_46b6_b47e_02aa159a152b);
+pub const SizeCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x55d7b852_f6d1_42f2_aa75_8728a1b2d264);
+pub const SmartcardCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8fd7e19c_3bf7_489b_a72c_846ab3678c96);
+pub const SmartcardPinProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x94596c7e_3744_41ce_893e_bbf09122f76a);
+pub const SmartcardReaderSelectionProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1b283861_754f_4022_ad47_a5eaaa618894);
+pub const SmartcardWinRTProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1ee7337f_85ac_45e2_a23c_37c753209769);
+pub const StartMenuPin: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xa2a9545d_a0c2_42b4_9708_a0b2badd77c8);
+pub const StorageProviderBanners: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7ccdf9f4_e576_455a_8bc7_f6ec68d6f063);
+pub const SuspensionDependencyManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6b273fc5_61fd_4918_95a2_c3b5e9d7f581);
+pub const SyncMgr: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6295df27_35ee_11d1_8707_00c04fd93327);
+pub const SyncMgrClient: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1202db60_1dac_42c5_aed5_1abdd432248e);
+pub const SyncMgrControl: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x1a1f4206_0688_4e7f_be03_d82ec69df9a5);
+pub const SyncMgrFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x9c73f5e5_7ae7_4e32_a8e8_8d23b85255bf);
+pub const SyncMgrScheduleWizard: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8d8b8e30_c451_421b_8553_d2976afa648c);
+pub const SyncResultsFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x71d99464_3b6b_475c_b241_e15883207529);
+pub const SyncSetupFolder: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x2e9e59c0_b437_4981_a647_9c34b9b90891);
 #[repr(C)]
 pub struct TBINFO {
     pub cbuttons: u32,
@@ -43789,6 +43786,12 @@ impl ::core::default::Default for TOOLBARITEM {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const TaskbarList: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x56fdf344_fd6d_11d0_958a_006097c9a090);
+pub const ThumbnailStreamCache: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xcbe0fed3_4b91_4e90_8354_8a8c84ec6872);
+pub const TimeCategorizer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x3bb4118f_ddfd_4d30_a348_9fb5d6bf1afe);
+pub const TrackShellMenu: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8278f931_2a3e_11d2_838f_00c04fd918d0);
+pub const TrayBandSiteService: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xf60ad0a0_e5e1_45cb_b51a_e15b9f8b2934);
+pub const TrayDeskBand: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xe6442437_6c68_4f52_94dd_2cfed267efb9);
 #[repr(C)]
 pub struct URLINVOKECOMMANDINFOA {
     pub dwcbSize: u32,
@@ -43853,6 +43856,12 @@ impl ::core::default::Default for URLINVOKECOMMANDINFOW {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const UserNotification: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x0010890e_8789_413c_adbc_48f5b511b3af);
+pub const V1PasswordCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6f45dc1e_5384_457a_bc13_2cd81b0d28ed);
+pub const V1SmartcardCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8bf9a910_a8ff_457f_999f_a5ca10b4a885);
+pub const V1WinBioCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xac3ac249_e820_4343_a65b_377ac634dc09);
+pub const VaultProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x503739d0_4c5e_4cfd_b3ba_d881334f0df2);
+pub const VirtualDesktopManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xaa509086_5ca9_4c25_8f95_589d3c07b48a);
 #[repr(C)]
 #[cfg(feature = "Win32_UI_Shell_Common")]
 pub struct WINDOWDATA {
@@ -43924,6 +43933,10 @@ impl ::core::default::Default for WTS_THUMBNAILID {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const WebBrowser: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8856f961_340a_11d0_a96b_00c04fd705a2);
+pub const WebBrowser_V1: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xeab22ac3_30c1_11cf_a7eb_0000c05bae0b);
+pub const WebWizardHost: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc827f149_55c1_4d28_935e_57e47caed973);
+pub const WinBioCredentialProvider: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xbec09223_b018_416d_a0ac_523971b639f5);
 pub type APPLET_PROC = ::core::option::Option<unsafe extern "system" fn(hwndcpl: super::super::Foundation::HWND, msg: u32, lparam1: super::super::Foundation::LPARAM, lparam2: super::super::Foundation::LPARAM) -> i32>;
 pub type BFFCALLBACK = ::core::option::Option<unsafe extern "system" fn(hwnd: super::super::Foundation::HWND, umsg: u32, lparam: super::super::Foundation::LPARAM, lpdata: super::super::Foundation::LPARAM) -> i32>;
 pub type DLLGETVERSIONPROC = ::core::option::Option<unsafe extern "system" fn(param0: *mut DLLVERSIONINFO) -> ::windows_core::HRESULT>;

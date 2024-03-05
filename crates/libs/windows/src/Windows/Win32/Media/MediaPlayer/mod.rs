@@ -9265,9 +9265,6 @@ pub const FXSO_NONE: FEEDS_XML_SORT_ORDER = FEEDS_XML_SORT_ORDER(0i32);
 pub const FXSP_DOWNLOADTIME: FEEDS_XML_SORT_PROPERTY = FEEDS_XML_SORT_PROPERTY(2i32);
 pub const FXSP_NONE: FEEDS_XML_SORT_PROPERTY = FEEDS_XML_SORT_PROPERTY(0i32);
 pub const FXSP_PUBDATE: FEEDS_XML_SORT_PROPERTY = FEEDS_XML_SORT_PROPERTY(1i32);
-pub const FeedFolderWatcher: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x281001ed_7765_4cb0_84af_e9b387af01ff);
-pub const FeedWatcher: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x18a6737b_f433_4687_89bc_a1b4dfb9f123);
-pub const FeedsManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xfaeb54c4_f66f_4806_83a0_805299f5e3ad);
 pub const IOCTL_WMP_DEVICE_CAN_SYNC: u32 = 844123479u32;
 pub const IOCTL_WMP_METADATA_ROUND_TRIP: u32 = 827346263u32;
 pub const PLUGIN_ALL_MEDIASENDTO: ::windows_strings::PCWSTR = ::windows_strings::w!("MediaSendTo");
@@ -9325,10 +9322,8 @@ pub const WMPGC_FLAGS_DISABLE_PLUGINS: u32 = 8u32;
 pub const WMPGC_FLAGS_IGNORE_AV_SYNC: u32 = 4u32;
 pub const WMPGC_FLAGS_SUPPRESS_DIALOGS: u32 = 2u32;
 pub const WMPGC_FLAGS_USE_CUSTOM_GRAPH: u32 = 16u32;
-pub const WMPLib: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6bf52a50_394a_11d3_b153_00c04f79faa6);
 pub const WMPOCXEVENT_BASE: u32 = 6500u32;
 pub const WMPPlugin_Caps_CannotConvertFormats: WMPPlugin_Caps = WMPPlugin_Caps(1i32);
-pub const WMPRemoteMediaServices: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xdf333473_2cf7_4be2_907f_9aad5661364f);
 pub const WMPServices_StreamState_Pause: WMPServices_StreamState = WMPServices_StreamState(1i32);
 pub const WMPServices_StreamState_Play: WMPServices_StreamState = WMPServices_StreamState(2i32);
 pub const WMPServices_StreamState_Stop: WMPServices_StreamState = WMPServices_StreamState(0i32);
@@ -9414,6 +9409,7 @@ pub const WMProfile_V80_96StereoAudio: ::windows_core::GUID = ::windows_core::GU
 pub const WMProfile_V80_BESTVBRVideo: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x048439ba_309c_440e_9cb4_3dcca3756423);
 pub const WMProfile_V80_FAIRVBRVideo: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x3510a862_5850_4886_835f_d78ec6a64042);
 pub const WMProfile_V80_HIGHVBRVideo: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x0f10d9d3_3b04_4fb0_a3d3_88d4ac854acc);
+<<<<<<< HEAD
 pub const WindowsMediaPlayer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6bf52a52_394a_11d3_b153_00c04f79faa6);
 pub const g_szAllAuthors: ::windows_strings::PCWSTR = ::windows_strings::w!("AllAuthors");
 pub const g_szAllCPAlbumIDs: ::windows_strings::PCWSTR = ::windows_strings::w!("AllCPAlbumIDs");
@@ -9490,6 +9486,83 @@ pub const g_szViewMode_OrderedList: ::windows_strings::PCWSTR = ::windows_string
 pub const g_szViewMode_Report: ::windows_strings::PCWSTR = ::windows_strings::w!("ViewModeReport");
 pub const g_szViewMode_Tile: ::windows_strings::PCWSTR = ::windows_strings::w!("ViewModeTile");
 pub const g_szWMParentalRating: ::windows_strings::PCWSTR = ::windows_strings::w!("WMParentalRating");
+=======
+pub const g_szAllAuthors: ::windows_core::PCWSTR = ::windows_core::w!("AllAuthors");
+pub const g_szAllCPAlbumIDs: ::windows_core::PCWSTR = ::windows_core::w!("AllCPAlbumIDs");
+pub const g_szAllCPAlbumSubGenreIDs: ::windows_core::PCWSTR = ::windows_core::w!("AllCPAlbumSubGenreIDs");
+pub const g_szAllCPArtistIDs: ::windows_core::PCWSTR = ::windows_core::w!("AllCPArtistIDs");
+pub const g_szAllCPGenreIDs: ::windows_core::PCWSTR = ::windows_core::w!("AllCPGenreIDs");
+pub const g_szAllCPListIDs: ::windows_core::PCWSTR = ::windows_core::w!("AllCPListIDs");
+pub const g_szAllCPRadioIDs: ::windows_core::PCWSTR = ::windows_core::w!("AllCPRadioIDs");
+pub const g_szAllCPTrackIDs: ::windows_core::PCWSTR = ::windows_core::w!("AllCPTrackIDs");
+pub const g_szAllReleaseDateYears: ::windows_core::PCWSTR = ::windows_core::w!("AllReleaseDateYears");
+pub const g_szAllUserEffectiveRatingStarss: ::windows_core::PCWSTR = ::windows_core::w!("AllUserEffectiveRatingStarss");
+pub const g_szAllWMParentalRatings: ::windows_core::PCWSTR = ::windows_core::w!("AllWMParentalRatings");
+pub const g_szAuthor: ::windows_core::PCWSTR = ::windows_core::w!("Author");
+pub const g_szCPAlbumID: ::windows_core::PCWSTR = ::windows_core::w!("CPAlbumID");
+pub const g_szCPAlbumSubGenreID: ::windows_core::PCWSTR = ::windows_core::w!("CPAlbumSubGenreID");
+pub const g_szCPArtistID: ::windows_core::PCWSTR = ::windows_core::w!("CPArtistID");
+pub const g_szCPGenreID: ::windows_core::PCWSTR = ::windows_core::w!("CPGenreID");
+pub const g_szCPListID: ::windows_core::PCWSTR = ::windows_core::w!("CPListID");
+pub const g_szCPRadioID: ::windows_core::PCWSTR = ::windows_core::w!("CPRadioID");
+pub const g_szCPTrackID: ::windows_core::PCWSTR = ::windows_core::w!("CPTrackID");
+pub const g_szContentPartnerInfo_AccountBalance: ::windows_core::PCWSTR = ::windows_core::w!("AccountBalance");
+pub const g_szContentPartnerInfo_AccountType: ::windows_core::PCWSTR = ::windows_core::w!("AccountType");
+pub const g_szContentPartnerInfo_HasCachedCredentials: ::windows_core::PCWSTR = ::windows_core::w!("HasCachedCredentials");
+pub const g_szContentPartnerInfo_LicenseRefreshAdvanceWarning: ::windows_core::PCWSTR = ::windows_core::w!("LicenseRefreshAdvanceWarning");
+pub const g_szContentPartnerInfo_LoginState: ::windows_core::PCWSTR = ::windows_core::w!("LoginState");
+pub const g_szContentPartnerInfo_MaximumTrackPurchasePerPurchase: ::windows_core::PCWSTR = ::windows_core::w!("MaximumNumberOfTracksPerPurchase");
+pub const g_szContentPartnerInfo_MediaPlayerAccountType: ::windows_core::PCWSTR = ::windows_core::w!("MediaPlayerAccountType");
+pub const g_szContentPartnerInfo_PurchasedTrackRequiresReDownload: ::windows_core::PCWSTR = ::windows_core::w!("PurchasedTrackRequiresReDownload");
+pub const g_szContentPartnerInfo_UserName: ::windows_core::PCWSTR = ::windows_core::w!("UserName");
+pub const g_szContentPrice_CannotBuy: ::windows_core::PCWSTR = ::windows_core::w!("PriceCannotBuy");
+pub const g_szContentPrice_Free: ::windows_core::PCWSTR = ::windows_core::w!("PriceFree");
+pub const g_szContentPrice_Unknown: ::windows_core::PCWSTR = ::windows_core::w!("PriceUnknown");
+pub const g_szFlyoutMenu: ::windows_core::PCWSTR = ::windows_core::w!("FlyoutMenu");
+pub const g_szItemInfo_ALTLoginCaption: ::windows_core::PCWSTR = ::windows_core::w!("ALTLoginCaption");
+pub const g_szItemInfo_ALTLoginURL: ::windows_core::PCWSTR = ::windows_core::w!("ALTLoginURL");
+pub const g_szItemInfo_AlbumArtURL: ::windows_core::PCWSTR = ::windows_core::w!("AlbumArt");
+pub const g_szItemInfo_ArtistArtURL: ::windows_core::PCWSTR = ::windows_core::w!("ArtistArt");
+pub const g_szItemInfo_AuthenticationSuccessURL: ::windows_core::PCWSTR = ::windows_core::w!("AuthenticationSuccessURL");
+pub const g_szItemInfo_CreateAccountURL: ::windows_core::PCWSTR = ::windows_core::w!("CreateAccount");
+pub const g_szItemInfo_ErrorDescription: ::windows_core::PCWSTR = ::windows_core::w!("CPErrorDescription");
+pub const g_szItemInfo_ErrorURL: ::windows_core::PCWSTR = ::windows_core::w!("CPErrorURL");
+pub const g_szItemInfo_ErrorURLLinkText: ::windows_core::PCWSTR = ::windows_core::w!("CPErrorURLLinkText");
+pub const g_szItemInfo_ForgetPasswordURL: ::windows_core::PCWSTR = ::windows_core::w!("ForgotPassword");
+pub const g_szItemInfo_GenreArtURL: ::windows_core::PCWSTR = ::windows_core::w!("GenreArt");
+pub const g_szItemInfo_HTMLViewURL: ::windows_core::PCWSTR = ::windows_core::w!("HTMLViewURL");
+pub const g_szItemInfo_ListArtURL: ::windows_core::PCWSTR = ::windows_core::w!("ListArt");
+pub const g_szItemInfo_LoginFailureURL: ::windows_core::PCWSTR = ::windows_core::w!("LoginFailureURL");
+pub const g_szItemInfo_PopupCaption: ::windows_core::PCWSTR = ::windows_core::w!("PopupCaption");
+pub const g_szItemInfo_PopupURL: ::windows_core::PCWSTR = ::windows_core::w!("Popup");
+pub const g_szItemInfo_RadioArtURL: ::windows_core::PCWSTR = ::windows_core::w!("RadioArt");
+pub const g_szItemInfo_SubGenreArtURL: ::windows_core::PCWSTR = ::windows_core::w!("SubGenreArt");
+pub const g_szItemInfo_TreeListIconURL: ::windows_core::PCWSTR = ::windows_core::w!("CPListIDIcon");
+pub const g_szMediaPlayerTask_Browse: ::windows_core::PCWSTR = ::windows_core::w!("Browse");
+pub const g_szMediaPlayerTask_Burn: ::windows_core::PCWSTR = ::windows_core::w!("Burn");
+pub const g_szMediaPlayerTask_Sync: ::windows_core::PCWSTR = ::windows_core::w!("Sync");
+pub const g_szOnlineStore: ::windows_core::PCWSTR = ::windows_core::w!("OnlineStore");
+pub const g_szRefreshLicenseBurn: ::windows_core::PCWSTR = ::windows_core::w!("RefreshForBurn");
+pub const g_szRefreshLicensePlay: ::windows_core::PCWSTR = ::windows_core::w!("RefreshForPlay");
+pub const g_szRefreshLicenseSync: ::windows_core::PCWSTR = ::windows_core::w!("RefreshForSync");
+pub const g_szReleaseDateYear: ::windows_core::PCWSTR = ::windows_core::w!("ReleaseDateYear");
+pub const g_szRootLocation: ::windows_core::PCWSTR = ::windows_core::w!("RootLocation");
+pub const g_szStationEvent_Complete: ::windows_core::PCWSTR = ::windows_core::w!("TrackComplete");
+pub const g_szStationEvent_Skipped: ::windows_core::PCWSTR = ::windows_core::w!("TrackSkipped");
+pub const g_szStationEvent_Started: ::windows_core::PCWSTR = ::windows_core::w!("TrackStarted");
+pub const g_szUnknownLocation: ::windows_core::PCWSTR = ::windows_core::w!("UnknownLocation");
+pub const g_szUserEffectiveRatingStars: ::windows_core::PCWSTR = ::windows_core::w!("UserEffectiveRatingStars");
+pub const g_szUserPlaylist: ::windows_core::PCWSTR = ::windows_core::w!("UserPlaylist");
+pub const g_szVerifyPermissionSync: ::windows_core::PCWSTR = ::windows_core::w!("VerifyPermissionSync");
+pub const g_szVideoRecent: ::windows_core::PCWSTR = ::windows_core::w!("VideoRecent");
+pub const g_szVideoRoot: ::windows_core::PCWSTR = ::windows_core::w!("VideoRoot");
+pub const g_szViewMode_Details: ::windows_core::PCWSTR = ::windows_core::w!("ViewModeDetails");
+pub const g_szViewMode_Icon: ::windows_core::PCWSTR = ::windows_core::w!("ViewModeIcon");
+pub const g_szViewMode_OrderedList: ::windows_core::PCWSTR = ::windows_core::w!("ViewModeOrderedList");
+pub const g_szViewMode_Report: ::windows_core::PCWSTR = ::windows_core::w!("ViewModeReport");
+pub const g_szViewMode_Tile: ::windows_core::PCWSTR = ::windows_core::w!("ViewModeTile");
+pub const g_szWMParentalRating: ::windows_core::PCWSTR = ::windows_core::w!("WMParentalRating");
+>>>>>>> master
 pub const kfltTimedLevelMaximumFrequency: f32 = 22050f32;
 pub const kfltTimedLevelMinimumFrequency: f32 = 20f32;
 pub const pause_state: PlayerState = PlayerState(1i32);
@@ -10018,6 +10091,9 @@ impl ::core::fmt::Debug for WMPTransactionType {
         f.debug_tuple("WMPTransactionType").field(&self.0).finish()
     }
 }
+pub const FeedFolderWatcher: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x281001ed_7765_4cb0_84af_e9b387af01ff);
+pub const FeedWatcher: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x18a6737b_f433_4687_89bc_a1b4dfb9f123);
+pub const FeedsManager: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xfaeb54c4_f66f_4806_83a0_805299f5e3ad);
 #[repr(C)]
 pub struct TimedLevel {
     pub frequency: [u8; 2048],
@@ -10080,6 +10156,8 @@ impl ::core::default::Default for WMPContextMenuInfo {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const WMPLib: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6bf52a50_394a_11d3_b153_00c04f79faa6);
+pub const WMPRemoteMediaServices: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xdf333473_2cf7_4be2_907f_9aad5661364f);
 #[repr(C, packed(1))]
 pub struct WMP_WMDM_METADATA_ROUND_TRIP_DEVICE2PC {
     pub dwCurrentTransactionID: u32,
@@ -10122,5 +10200,6 @@ impl ::core::default::Default for WMP_WMDM_METADATA_ROUND_TRIP_PC2DEVICE {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const WindowsMediaPlayer: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6bf52a52_394a_11d3_b153_00c04f79faa6);
 #[cfg(feature = "implement")]
 ::core::include!("impl.rs");

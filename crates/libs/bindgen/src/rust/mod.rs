@@ -42,6 +42,20 @@ pub fn from_reader(reader: &'static metadata::Reader, mut config: std::collectio
         return Err(Error::new("cannot combine `implement` and `sys` configuration values"));
     }
 
+    config.retain(|key, value| {
+        if let Some(full_name) = key.strip_prefix("prepend:") {
+            if let Some(index) = full_name.rfind('.') {
+                let namespace = &full_name[0..index];
+                let name = &full_name[index + 1..];
+                if let Some(type_def) = reader.get_type_def(namespace, name).next() {
+                    writer.prepend.insert(type_def, value.to_string());
+                    return false;
+                }
+            }
+        }
+        true
+    });
+
     if let Some((key, _)) = config.first_key_value() {
         return Err(Error::new(&format!("invalid configuration value `{key}`")));
     }
@@ -177,33 +191,7 @@ fn namespace(writer: &Writer, tree: &Tree) -> String {
                 if writer.reader.core_types().any(|(x, _)| x == &type_name) {
                     continue;
                 }
-                let name = type_name.name;
-                let kind = def.kind();
-                match kind {
-                    metadata::TypeKind::Class => {
-                        if def.flags().contains(metadata::TypeAttributes::WindowsRuntime) {
-                            types.entry(kind).or_default().insert(name, classes::writer(writer, def));
-                        }
-                    }
-                    metadata::TypeKind::Interface => types.entry(kind).or_default().entry(name).or_default().combine(&interfaces::writer(writer, def)),
-                    metadata::TypeKind::Enum => types.entry(kind).or_default().entry(name).or_default().combine(&enums::writer(writer, def)),
-                    metadata::TypeKind::Struct => {
-                        if def.fields().next().is_none() {
-                            if let Some(guid) = metadata::type_def_guid(def) {
-                                let ident = to_ident(name);
-                                let value = writer.guid(&guid);
-                                let guid = writer.type_name(&metadata::Type::GUID);
-                                let constant = quote! {
-                                    pub const #ident: #guid = #value;
-                                };
-                                types.entry(metadata::TypeKind::Class).or_default().entry(name).or_default().combine(&constant);
-                                continue;
-                            }
-                        }
-                        types.entry(kind).or_default().entry(name).or_default().combine(&structs::writer(writer, def));
-                    }
-                    metadata::TypeKind::Delegate => types.entry(kind).or_default().entry(name).or_default().combine(&delegates::writer(writer, def)),
-                }
+                types.entry(def.kind()).or_default().entry(type_name.name).or_default().combine(&writer.type_def(def));
             }
             metadata::Item::Fn(def, namespace) => {
                 let name = def.name();

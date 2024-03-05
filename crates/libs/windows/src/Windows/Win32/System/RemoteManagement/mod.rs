@@ -1741,12 +1741,20 @@ pub const WSMAN_PLUGIN_SHUTDOWN_SYSTEM: u32 = 1u32;
 pub const WSMAN_PLUGIN_STARTUP_AUTORESTARTED_CRASH: u32 = 2u32;
 pub const WSMAN_PLUGIN_STARTUP_AUTORESTARTED_REBOOT: u32 = 1u32;
 pub const WSMAN_PLUGIN_STARTUP_REQUEST_RECEIVED: u32 = 0u32;
+<<<<<<< HEAD
 pub const WSMAN_SHELL_NS: ::windows_strings::PCWSTR = ::windows_strings::w!("http://schemas.microsoft.com/wbem/wsman/1/windows/shell");
 pub const WSMAN_SHELL_OPTION_NOPROFILE: ::windows_strings::PCWSTR = ::windows_strings::w!("WINRS_NOPROFILE");
 pub const WSMAN_STREAM_ID_STDERR: ::windows_strings::PCWSTR = ::windows_strings::w!("stderr");
 pub const WSMAN_STREAM_ID_STDIN: ::windows_strings::PCWSTR = ::windows_strings::w!("stdin");
 pub const WSMAN_STREAM_ID_STDOUT: ::windows_strings::PCWSTR = ::windows_strings::w!("stdout");
 pub const WSMan: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xbced617b_ec03_420b_8508_977dc7a686bd);
+=======
+pub const WSMAN_SHELL_NS: ::windows_core::PCWSTR = ::windows_core::w!("http://schemas.microsoft.com/wbem/wsman/1/windows/shell");
+pub const WSMAN_SHELL_OPTION_NOPROFILE: ::windows_core::PCWSTR = ::windows_core::w!("WINRS_NOPROFILE");
+pub const WSMAN_STREAM_ID_STDERR: ::windows_core::PCWSTR = ::windows_core::w!("stderr");
+pub const WSMAN_STREAM_ID_STDIN: ::windows_core::PCWSTR = ::windows_core::w!("stdin");
+pub const WSMAN_STREAM_ID_STDOUT: ::windows_core::PCWSTR = ::windows_core::w!("stdout");
+>>>>>>> master
 pub const WSManFlagAllowNegotiateImplicitCredentials: WSManSessionFlags = WSManSessionFlags(67108864i32);
 pub const WSManFlagAssociatedInstance: WSManEnumFlags = WSManEnumFlags(0i32);
 pub const WSManFlagAssociationInstance: WSManEnumFlags = WSManEnumFlags(128i32);
@@ -1776,7 +1784,6 @@ pub const WSManFlagUseKerberos: WSManSessionFlags = WSManSessionFlags(524288i32)
 pub const WSManFlagUseNegotiate: WSManSessionFlags = WSManSessionFlags(131072i32);
 pub const WSManFlagUseNoAuthentication: WSManSessionFlags = WSManSessionFlags(32768i32);
 pub const WSManFlagUseSsl: WSManSessionFlags = WSManSessionFlags(134217728i32);
-pub const WSManInternal: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7de087a5_5dcb_4df7_bb12_0924ad8fbd9a);
 pub const WSManProxyAutoDetect: WSManProxyAccessTypeFlags = WSManProxyAccessTypeFlags(4i32);
 pub const WSManProxyIEConfig: WSManProxyAccessTypeFlags = WSManProxyAccessTypeFlags(1i32);
 pub const WSManProxyNoProxyServer: WSManProxyAccessTypeFlags = WSManProxyAccessTypeFlags(8i32);
@@ -2948,6 +2955,8 @@ impl ::core::default::Default for WSMAN_USERNAME_PASSWORD_CREDS {
         unsafe { ::core::mem::zeroed() }
     }
 }
+pub const WSMan: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xbced617b_ec03_420b_8508_977dc7a686bd);
+pub const WSManInternal: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7de087a5_5dcb_4df7_bb12_0924ad8fbd9a);
 pub type WSMAN_PLUGIN_AUTHORIZE_OPERATION = ::core::option::Option<unsafe extern "system" fn(plugincontext: *const ::core::ffi::c_void, senderdetails: *const WSMAN_SENDER_DETAILS, flags: u32, operation: u32, action: ::windows_core::PCWSTR, resourceuri: ::windows_core::PCWSTR)>;
 pub type WSMAN_PLUGIN_AUTHORIZE_QUERY_QUOTA = ::core::option::Option<unsafe extern "system" fn(plugincontext: *const ::core::ffi::c_void, senderdetails: *const WSMAN_SENDER_DETAILS, flags: u32)>;
 pub type WSMAN_PLUGIN_AUTHORIZE_RELEASE_CONTEXT = ::core::option::Option<unsafe extern "system" fn(userauthorizationcontext: *const ::core::ffi::c_void)>;

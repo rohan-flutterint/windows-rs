@@ -790,8 +790,6 @@ pub const FMTID_PNPX: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x6
 pub const FMTID_PNPXDynamicProperty: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x4fc5077e_b686_44be_93e3_86cafe368ccd);
 pub const FMTID_Pairing: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x8807cae6_7db6_4f10_8ee4_435eaa1392bc);
 pub const FMTID_WSD: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x92506491_ff95_4724_a05a_5b81885a7c92);
-pub const FunctionDiscovery: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc72be2ec_8e90_452c_b29a_ab8ff1c071fc);
-pub const FunctionInstanceCollection: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xba818ce5_b55f_443f_ad39_2fe89be6191f);
 pub const MAX_FDCONSTRAINTNAME_LENGTH: u32 = 100u32;
 pub const MAX_FDCONSTRAINTVALUE_LENGTH: u32 = 1000u32;
 pub const ONLINE_PROVIDER_DEVICES_QUERYCONSTRAINT_OWNERNAME: ::windows_strings::PCWSTR = ::windows_strings::w!("OwnerName");
@@ -1271,6 +1269,7 @@ pub const PKEY_WNET_Scope: super::super::UI::Shell::PropertiesSystem::PROPERTYKE
 pub const PKEY_WNET_Type: super::super::UI::Shell::PropertiesSystem::PROPERTYKEY = super::super::UI::Shell::PropertiesSystem::PROPERTYKEY { fmtid: ::windows_core::GUID::from_u128(0xdebda43a_37b3_4383_91e7_4498da2995ab), pid: 2 };
 #[cfg(feature = "Win32_UI_Shell_PropertiesSystem")]
 pub const PKEY_WNET_Usage: super::super::UI::Shell::PropertiesSystem::PROPERTYKEY = super::super::UI::Shell::PropertiesSystem::PROPERTYKEY { fmtid: ::windows_core::GUID::from_u128(0xdebda43a_37b3_4383_91e7_4498da2995ab), pid: 4 };
+<<<<<<< HEAD
 pub const PNPXAssociation: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xcee8ccc9_4f6b_4469_a235_5a22869eef03);
 pub const PNPXPairingHandler: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xb8a27942_ade7_4085_aa6e_4fadc7ada1ef);
 pub const PNPX_DEVICECATEGORY_CAMERA: ::windows_strings::PCWSTR = ::windows_strings::w!("Cameras");
@@ -1289,10 +1288,29 @@ pub const PNPX_DEVICECATEGORY_PRINTER: ::windows_strings::PCWSTR = ::windows_str
 pub const PNPX_DEVICECATEGORY_SCANNER: ::windows_strings::PCWSTR = ::windows_strings::w!("Scanners");
 pub const PNPX_DEVICECATEGORY_STORAGE: ::windows_strings::PCWSTR = ::windows_strings::w!("Storage");
 pub const PNPX_DEVICECATEGORY_TELEPHONE: ::windows_strings::PCWSTR = ::windows_strings::w!("Phones");
+=======
+pub const PNPX_DEVICECATEGORY_CAMERA: ::windows_core::PCWSTR = ::windows_core::w!("Cameras");
+pub const PNPX_DEVICECATEGORY_COMPUTER: ::windows_core::PCWSTR = ::windows_core::w!("Computers");
+pub const PNPX_DEVICECATEGORY_DISPLAYS: ::windows_core::PCWSTR = ::windows_core::w!("Displays");
+pub const PNPX_DEVICECATEGORY_FAX: ::windows_core::PCWSTR = ::windows_core::w!("FAX");
+pub const PNPX_DEVICECATEGORY_GAMING_DEVICE: ::windows_core::PCWSTR = ::windows_core::w!("Gaming");
+pub const PNPX_DEVICECATEGORY_HOME_AUTOMATION_SYSTEM: ::windows_core::PCWSTR = ::windows_core::w!("HomeAutomation");
+pub const PNPX_DEVICECATEGORY_HOME_SECURITY_SYSTEM: ::windows_core::PCWSTR = ::windows_core::w!("HomeSecurity");
+pub const PNPX_DEVICECATEGORY_INPUTDEVICE: ::windows_core::PCWSTR = ::windows_core::w!("Input");
+pub const PNPX_DEVICECATEGORY_MFP: ::windows_core::PCWSTR = ::windows_core::w!("MFP");
+pub const PNPX_DEVICECATEGORY_MULTIMEDIA_DEVICE: ::windows_core::PCWSTR = ::windows_core::w!("MediaDevices");
+pub const PNPX_DEVICECATEGORY_NETWORK_INFRASTRUCTURE: ::windows_core::PCWSTR = ::windows_core::w!("NetworkInfrastructure");
+pub const PNPX_DEVICECATEGORY_OTHER: ::windows_core::PCWSTR = ::windows_core::w!("Other");
+pub const PNPX_DEVICECATEGORY_PRINTER: ::windows_core::PCWSTR = ::windows_core::w!("Printers");
+pub const PNPX_DEVICECATEGORY_SCANNER: ::windows_core::PCWSTR = ::windows_core::w!("Scanners");
+pub const PNPX_DEVICECATEGORY_STORAGE: ::windows_core::PCWSTR = ::windows_core::w!("Storage");
+pub const PNPX_DEVICECATEGORY_TELEPHONE: ::windows_core::PCWSTR = ::windows_core::w!("Phones");
+>>>>>>> master
 pub const PNPX_INSTALLSTATE_FAILED: u32 = 3u32;
 pub const PNPX_INSTALLSTATE_INSTALLED: u32 = 1u32;
 pub const PNPX_INSTALLSTATE_INSTALLING: u32 = 2u32;
 pub const PNPX_INSTALLSTATE_NOTINSTALLED: u32 = 0u32;
+<<<<<<< HEAD
 pub const PNP_CONSTRAINTVALUE_NOTIFICATIONSONLY: ::windows_strings::PCWSTR = ::windows_strings::w!("TRUE");
 pub const PNP_CONSTRAINTVALUE_NOTPRESENT: ::windows_strings::PCWSTR = ::windows_strings::w!("TRUE");
 pub const PROVIDERDDO_QUERYCONSTRAINT_DEVICEFUNCTIONDISPLAYOBJECTS: ::windows_strings::PCWSTR = ::windows_strings::w!("DeviceFunctionDisplayObjects");
@@ -1314,6 +1332,27 @@ pub const PROVIDERWSD_QUERYCONSTRAINT_SSL_CERT_FOR_CLIENT_AUTH: ::windows_string
 pub const PROVIDERWSD_QUERYCONSTRAINT_TYPE: ::windows_strings::PCWSTR = ::windows_strings::w!("Type");
 pub const PropertyStore: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xe4796550_df61_448b_9193_13fc1341b163);
 pub const PropertyStoreCollection: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xedd36029_d753_4862_aa5b_5bccad2a4d29);
+=======
+pub const PNP_CONSTRAINTVALUE_NOTIFICATIONSONLY: ::windows_core::PCWSTR = ::windows_core::w!("TRUE");
+pub const PNP_CONSTRAINTVALUE_NOTPRESENT: ::windows_core::PCWSTR = ::windows_core::w!("TRUE");
+pub const PROVIDERDDO_QUERYCONSTRAINT_DEVICEFUNCTIONDISPLAYOBJECTS: ::windows_core::PCWSTR = ::windows_core::w!("DeviceFunctionDisplayObjects");
+pub const PROVIDERDDO_QUERYCONSTRAINT_DEVICEINTERFACES: ::windows_core::PCWSTR = ::windows_core::w!("DeviceInterfaces");
+pub const PROVIDERDDO_QUERYCONSTRAINT_ONLYCONNECTEDDEVICES: ::windows_core::PCWSTR = ::windows_core::w!("OnlyConnectedDevices");
+pub const PROVIDERPNP_QUERYCONSTRAINT_INTERFACECLASS: ::windows_core::PCWSTR = ::windows_core::w!("InterfaceClass");
+pub const PROVIDERPNP_QUERYCONSTRAINT_NOTIFICATIONSONLY: ::windows_core::PCWSTR = ::windows_core::w!("NotifyOnly");
+pub const PROVIDERPNP_QUERYCONSTRAINT_NOTPRESENT: ::windows_core::PCWSTR = ::windows_core::w!("NotPresent");
+pub const PROVIDERSSDP_QUERYCONSTRAINT_CUSTOMXMLPROPERTY: ::windows_core::PCWSTR = ::windows_core::w!("CustomXmlProperty");
+pub const PROVIDERSSDP_QUERYCONSTRAINT_TYPE: ::windows_core::PCWSTR = ::windows_core::w!("Type");
+pub const PROVIDERWNET_QUERYCONSTRAINT_PROPERTIES: ::windows_core::PCWSTR = ::windows_core::w!("Properties");
+pub const PROVIDERWNET_QUERYCONSTRAINT_RESOURCETYPE: ::windows_core::PCWSTR = ::windows_core::w!("ResourceType");
+pub const PROVIDERWNET_QUERYCONSTRAINT_TYPE: ::windows_core::PCWSTR = ::windows_core::w!("Type");
+pub const PROVIDERWSD_QUERYCONSTRAINT_DIRECTEDADDRESS: ::windows_core::PCWSTR = ::windows_core::w!("RemoteAddress");
+pub const PROVIDERWSD_QUERYCONSTRAINT_SCOPE: ::windows_core::PCWSTR = ::windows_core::w!("Scope");
+pub const PROVIDERWSD_QUERYCONSTRAINT_SECURITY_REQUIREMENTS: ::windows_core::PCWSTR = ::windows_core::w!("SecurityRequirements");
+pub const PROVIDERWSD_QUERYCONSTRAINT_SSL_CERTHASH_FOR_SERVER_AUTH: ::windows_core::PCWSTR = ::windows_core::w!("SSLServerAuthCertHash");
+pub const PROVIDERWSD_QUERYCONSTRAINT_SSL_CERT_FOR_CLIENT_AUTH: ::windows_core::PCWSTR = ::windows_core::w!("SSLClientAuthCert");
+pub const PROVIDERWSD_QUERYCONSTRAINT_TYPE: ::windows_core::PCWSTR = ::windows_core::w!("Type");
+>>>>>>> master
 pub const QCT_LAYERED: QueryCategoryType = QueryCategoryType(1i32);
 pub const QCT_PROVIDER: QueryCategoryType = QueryCategoryType(0i32);
 pub const QC_CONTAINS: PropertyConstraint = PropertyConstraint(9i32);
@@ -1402,5 +1441,11 @@ impl ::core::fmt::Debug for SystemVisibilityFlags {
         f.debug_tuple("SystemVisibilityFlags").field(&self.0).finish()
     }
 }
+pub const FunctionDiscovery: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xc72be2ec_8e90_452c_b29a_ab8ff1c071fc);
+pub const FunctionInstanceCollection: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xba818ce5_b55f_443f_ad39_2fe89be6191f);
+pub const PNPXAssociation: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xcee8ccc9_4f6b_4469_a235_5a22869eef03);
+pub const PNPXPairingHandler: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xb8a27942_ade7_4085_aa6e_4fadc7ada1ef);
+pub const PropertyStore: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xe4796550_df61_448b_9193_13fc1341b163);
+pub const PropertyStoreCollection: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xedd36029_d753_4862_aa5b_5bccad2a4d29);
 #[cfg(feature = "implement")]
 ::core::include!("impl.rs");

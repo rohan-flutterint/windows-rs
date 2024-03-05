@@ -43,9 +43,9 @@ where
     GetHandleInformation(hobject.into_param().abi(), lpdwflags).ok()
 }
 #[inline]
-pub unsafe fn GetLastError() -> ::windows_core::Result<()> {
+pub unsafe fn GetLastError() -> WIN32_ERROR {
     ::windows_targets::link!("kernel32.dll" "system" fn GetLastError() -> WIN32_ERROR);
-    GetLastError().ok()
+    GetLastError()
 }
 #[inline]
 pub unsafe fn GlobalFree<P0>(hmem: P0) -> ::windows_core::Result<HGLOBAL>
@@ -57,13 +57,12 @@ where
     (!result__.is_invalid()).then(|| result__).ok_or_else(::windows_core::Error::from_win32)
 }
 #[inline]
-pub unsafe fn LocalFree<P0>(hmem: P0) -> ::windows_core::Result<HLOCAL>
+pub unsafe fn LocalFree<P0>(hmem: P0) -> HLOCAL
 where
     P0: ::windows_core::IntoParam<HLOCAL>,
 {
     ::windows_targets::link!("kernel32.dll" "system" fn LocalFree(hmem : HLOCAL) -> HLOCAL);
-    let result__ = LocalFree(hmem.into_param().abi());
-    (!result__.is_invalid()).then(|| result__).ok_or_else(::windows_core::Error::from_win32)
+    LocalFree(hmem.into_param().abi())
 }
 #[inline]
 pub unsafe fn RtlNtStatusToDosError<P0>(status: P0) -> u32
@@ -10491,6 +10490,7 @@ impl ::core::fmt::Debug for WAIT_EVENT {
         f.debug_tuple("WAIT_EVENT").field(&self.0).finish()
     }
 }
+#[must_use]
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq, ::core::marker::Copy, ::core::clone::Clone, ::core::default::Default)]
 pub struct WIN32_ERROR(pub u32);
@@ -10531,6 +10531,7 @@ impl ::core::default::Default for APP_LOCAL_DEVICE_ID {
         unsafe { ::core::mem::zeroed() }
     }
 }
+#[must_use]
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq)]
 pub struct BOOL(pub i32);
@@ -11162,6 +11163,7 @@ impl ::core::default::Default for LUID {
         unsafe { ::core::mem::zeroed() }
     }
 }
+#[must_use]
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq)]
 pub struct NTSTATUS(pub i32);

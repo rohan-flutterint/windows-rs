@@ -3810,6 +3810,7 @@ impl ::core::fmt::Debug for RPC_NOTIFICATION_TYPES {
         f.debug_tuple("RPC_NOTIFICATION_TYPES").field(&self.0).finish()
     }
 }
+#[must_use]
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq, ::core::marker::Copy, ::core::clone::Clone, ::core::default::Default)]
 pub struct RPC_STATUS(pub i32);
@@ -9830,3 +9831,35 @@ pub type USER_MARSHAL_SIZING_ROUTINE = ::core::option::Option<unsafe extern "sys
 pub type USER_MARSHAL_UNMARSHALLING_ROUTINE = ::core::option::Option<unsafe extern "system" fn(param0: *mut u32, param1: *mut u8, param2: *mut ::core::ffi::c_void) -> *mut u8>;
 #[cfg(feature = "Win32_System_Com")]
 pub type XMIT_HELPER_ROUTINE = ::core::option::Option<unsafe extern "system" fn(param0: *mut MIDL_STUB_MESSAGE)>;
+impl RPC_STATUS {
+    #[inline]
+    pub const fn is_ok(self) -> bool {
+        self.0 == 0
+    }
+    #[inline]
+    pub const fn is_err(self) -> bool {
+        !self.is_ok()
+    }
+    #[inline]
+    pub const fn to_hresult(self) -> ::windows_core::HRESULT {
+        ::windows_core::HRESULT::from_win32(self.0 as u32)
+    }
+    #[inline]
+    pub fn ok(self) -> ::windows_core::Result<()> {
+        if self.is_ok() {
+            Ok(())
+        } else {
+            Err(self.to_hresult().into())
+        }
+    }
+}
+impl ::core::convert::From<RPC_STATUS> for ::windows_core::HRESULT {
+    fn from(value: RPC_STATUS) -> Self {
+        value.to_hresult()
+    }
+}
+impl ::core::convert::From<RPC_STATUS> for ::windows_core::Error {
+    fn from(value: RPC_STATUS) -> Self {
+        value.to_hresult().into()
+    }
+}

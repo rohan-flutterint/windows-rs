@@ -75,21 +75,8 @@ pub const ActivityContentDocument: OpenServiceActivityContentType = 0i32;
 pub const ActivityContentLink: OpenServiceActivityContentType = 2i32;
 pub const ActivityContentNone: OpenServiceActivityContentType = -1i32;
 pub const ActivityContentSelection: OpenServiceActivityContentType = 1i32;
-pub const AnchorClick: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x13d5413c_33b9_11d2_95a7_00c04f8ecb02);
 pub const CATID_MSOfficeAntiVirus: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x56ffcc30_d398_11d0_b2ae_00a0c908fa49);
-pub const CDeviceRect: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f6d4_98b5_11cf_bb82_00aa00bdce0b);
-pub const CDownloadBehavior: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f5be_98b5_11cf_bb82_00aa00bdce0b);
-pub const CHeaderFooter: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f6cd_98b5_11cf_bb82_00aa00bdce0b);
-pub const CLayoutRect: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f664_98b5_11cf_bb82_00aa00bdce0b);
 pub const COLOR_NO_TRANSPARENT: u32 = 4294967295u32;
-pub const CPersistDataPeer: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f487_98b5_11cf_bb82_00aa00bdce0b);
-pub const CPersistHistory: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f4c8_98b5_11cf_bb82_00aa00bdce0b);
-pub const CPersistShortcut: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f4c6_98b5_11cf_bb82_00aa00bdce0b);
-pub const CPersistSnapshot: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f4c9_98b5_11cf_bb82_00aa00bdce0b);
-pub const CPersistUserData: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f48e_98b5_11cf_bb82_00aa00bdce0b);
-pub const CoDitherToRGB8: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xa860ce50_3910_11d0_86fc_00a0c913f750);
-pub const CoMapMIMEToCLSID: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x30c3b080_30fb_11d0_b724_00aa006c1a01);
-pub const CoSniffStream: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x6a01fda0_30df_11d0_b724_00aa006c1a01);
 pub const DISPID_ACTIVEXFILTERINGENABLED: u32 = 61u32;
 pub const DISPID_ADDCHANNEL: u32 = 5u32;
 pub const DISPID_ADDDESKTOPCOMPONENT: u32 = 6u32;
@@ -319,8 +306,6 @@ pub const FRAMEOPTIONS_NORESIZE: FRAMEOPTIONS_FLAGS = 8i32;
 pub const FRAMEOPTIONS_SCROLL_AUTO: FRAMEOPTIONS_FLAGS = 4i32;
 pub const FRAMEOPTIONS_SCROLL_NO: FRAMEOPTIONS_FLAGS = 2i32;
 pub const FRAMEOPTIONS_SCROLL_YES: FRAMEOPTIONS_FLAGS = 1i32;
-pub const HomePage: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x766bf2ae_d650_11d1_9811_00c04fc31d2e);
-pub const HomePageSetting: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x374cede0_873a_4c4f_bc86_bcc8cf5116a3);
 pub const IECMDID_ARG_CLEAR_FORMS_ALL: u32 = 0u32;
 pub const IECMDID_ARG_CLEAR_FORMS_ALL_BUT_PASSWORDS: u32 = 1u32;
 pub const IECMDID_ARG_CLEAR_FORMS_PASSWORDS_ONLY: u32 = 2u32;
@@ -337,8 +322,12 @@ pub const IELAUNCHOPTION_FORCE_COMPAT: IELAUNCHOPTION_FLAGS = 2i32;
 pub const IELAUNCHOPTION_FORCE_EDGE: IELAUNCHOPTION_FLAGS = 4i32;
 pub const IELAUNCHOPTION_LOCK_ENGINE: IELAUNCHOPTION_FLAGS = 8i32;
 pub const IELAUNCHOPTION_SCRIPTDEBUG: IELAUNCHOPTION_FLAGS = 1i32;
+<<<<<<< HEAD
 pub const IEPROCESS_MODULE_NAME: ::windows_strings::PCWSTR = ::windows_strings::w!("IERtUtil.dll");
 pub const IEWebDriverManager: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x90314af2_5250_47b3_89d8_6295fc23bc22);
+=======
+pub const IEPROCESS_MODULE_NAME: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("IERtUtil.dll");
+>>>>>>> master
 pub const IE_USE_OE_MAIL_HKEY: i32 = -2147483647i32;
 pub const IE_USE_OE_MAIL_KEY: ::windows_strings::PCWSTR = ::windows_strings::w!("Software\\Microsoft\\Internet Explorer\\Mail");
 pub const IE_USE_OE_MAIL_VALUE: ::windows_strings::PCWSTR = ::windows_strings::w!("Use Outlook Express");
@@ -358,8 +347,6 @@ pub const IMGDECODE_HINT_TOPDOWN: u32 = 1u32;
 pub const INTERNETEXPLORERCONFIGURATION_HOST: INTERNETEXPLORERCONFIGURATION = 1i32;
 pub const INTERNETEXPLORERCONFIGURATION_WEB_DRIVER: INTERNETEXPLORERCONFIGURATION = 2i32;
 pub const INTERNETEXPLORERCONFIGURATION_WEB_DRIVER_EDGE: INTERNETEXPLORERCONFIGURATION = 4i32;
-pub const IntelliForms: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x613ab92e_16bf_11d2_bca5_00c04fd929db);
-pub const InternetExplorerManager: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xdf4fcc34_067a_4e0a_8352_4a1a5095346e);
 pub const LINKSBAND: u32 = 4u32;
 pub const MAPMIME_CLSID: u32 = 1u32;
 pub const MAPMIME_DEFAULT: u32 = 0u32;
@@ -380,6 +367,7 @@ pub const OS_E_CANCELLED: OpenServiceErrors = -2147471631i32;
 pub const OS_E_GPDISABLED: OpenServiceErrors = -1072886820i32;
 pub const OS_E_NOTFOUND: OpenServiceErrors = -2147287038i32;
 pub const OS_E_NOTSUPPORTED: OpenServiceErrors = -2147467231i32;
+<<<<<<< HEAD
 pub const OpenServiceActivityManager: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xc5efd803_50f8_43cd_9ab8_aafc1394c9e0);
 pub const OpenServiceManager: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x098870b6_39ea_480b_b8b5_dd0167c4db59);
 pub const PeerFactory: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f4cf_98b5_11cf_bb82_00aa00bdce0b);
@@ -438,6 +426,63 @@ pub const REGSTR_VAL_FONT_SCRIPT: ::windows_strings::PCWSTR = ::windows_strings:
 pub const REGSTR_VAL_FONT_SCRIPTS: ::windows_strings::PCWSTR = ::windows_strings::w!("Scripts");
 pub const REGSTR_VAL_FONT_SCRIPT_NAME: ::windows_strings::PCWSTR = ::windows_strings::w!("Script");
 pub const REGSTR_VAL_FONT_SIZE: ::windows_strings::PCWSTR = ::windows_strings::w!("IEFontSize");
+=======
+pub const REGSTRA_VAL_STARTPAGE: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("Start Page");
+pub const REGSTR_PATH_CURRENT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("current");
+pub const REGSTR_PATH_DEFAULT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("default");
+pub const REGSTR_PATH_INETCPL_RESTRICTIONS: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Software\\Policies\\Microsoft\\Internet Explorer\\Control Panel");
+pub const REGSTR_PATH_MIME_DATABASE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("MIME\\Database");
+pub const REGSTR_PATH_REMOTEACCESS: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("RemoteAccess");
+pub const REGSTR_PATH_REMOTEACESS: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("RemoteAccess");
+pub const REGSTR_SHIFTQUICKSUFFIX: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("ShiftQuickCompleteSuffix");
+pub const REGSTR_VAL_ACCEPT_LANGUAGE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("AcceptLanguage");
+pub const REGSTR_VAL_ACCESSMEDIUM: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("AccessMedium");
+pub const REGSTR_VAL_ACCESSTYPE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("AccessType");
+pub const REGSTR_VAL_ALIASTO: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("AliasForCharset");
+pub const REGSTR_VAL_ANCHORCOLOR: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Anchor Color");
+pub const REGSTR_VAL_ANCHORCOLORHOVER: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Anchor Color Hover");
+pub const REGSTR_VAL_ANCHORCOLORVISITED: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Anchor Color Visited");
+pub const REGSTR_VAL_ANCHORUNDERLINE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Anchor Underline");
+pub const REGSTR_VAL_AUTODETECT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("AutoDetect");
+pub const REGSTR_VAL_AUTODIALDLLNAME: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("AutodialDllName");
+pub const REGSTR_VAL_AUTODIALFCNNAME: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("AutodialFcnName");
+pub const REGSTR_VAL_AUTODIAL_MONITORCLASSNAME: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("MS_AutodialMonitor");
+pub const REGSTR_VAL_AUTODIAL_TRYONLYONCE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("TryAutodialOnce");
+pub const REGSTR_VAL_AUTONAVIGATE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("SearchForExtensions");
+pub const REGSTR_VAL_AUTOSEARCH: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Do404Search");
+pub const REGSTR_VAL_BACKBITMAP: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("BackBitmap");
+pub const REGSTR_VAL_BACKGROUNDCOLOR: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Background Color");
+pub const REGSTR_VAL_BODYCHARSET: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("BodyCharset");
+pub const REGSTR_VAL_BYPASSAUTOCONFIG: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("BypassAutoconfig");
+pub const REGSTR_VAL_CACHEPREFIX: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("CachePrefix");
+pub const REGSTR_VAL_CHECKASSOC: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Check_Associations");
+pub const REGSTR_VAL_CODEDOWNLOAD: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Code Download");
+pub const REGSTR_VAL_CODEDOWNLOAD_DEF: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("yes");
+pub const REGSTR_VAL_CODEPAGE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("CodePage");
+pub const REGSTR_VAL_COVEREXCLUDE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("CoverExclude");
+pub const REGSTR_VAL_DAYSTOKEEP: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("DaysToKeep");
+pub const REGSTR_VAL_DEFAULT_CODEPAGE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Default_CodePage");
+pub const REGSTR_VAL_DEFAULT_SCRIPT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Default_Script");
+pub const REGSTR_VAL_DEF_ENCODING: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Default_Encoding");
+pub const REGSTR_VAL_DEF_INETENCODING: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Default_InternetEncoding");
+pub const REGSTR_VAL_DESCRIPTION: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Description");
+pub const REGSTR_VAL_DIRECTORY: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Directory");
+pub const REGSTR_VAL_DISCONNECTIDLETIME: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("DisconnectIdleTime");
+pub const REGSTR_VAL_ENABLEAUTODIAL: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("EnableAutodial");
+pub const REGSTR_VAL_ENABLEAUTODIALDISCONNECT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("EnableAutodisconnect");
+pub const REGSTR_VAL_ENABLEAUTODISCONNECT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("EnableAutodisconnect");
+pub const REGSTR_VAL_ENABLEEXITDISCONNECT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("EnableExitDisconnect");
+pub const REGSTR_VAL_ENABLESECURITYCHECK: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("EnableSecurityCheck");
+pub const REGSTR_VAL_ENABLEUNATTENDED: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("EnableUnattended");
+pub const REGSTR_VAL_ENCODENAME: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("EncodingName");
+pub const REGSTR_VAL_FAMILY: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Family");
+pub const REGSTR_VAL_FIXEDWIDTHFONT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("FixedWidthFont");
+pub const REGSTR_VAL_FIXED_FONT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("IEFixedFontName");
+pub const REGSTR_VAL_FONT_SCRIPT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Script");
+pub const REGSTR_VAL_FONT_SCRIPTS: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Scripts");
+pub const REGSTR_VAL_FONT_SCRIPT_NAME: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Script");
+pub const REGSTR_VAL_FONT_SIZE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("IEFontSize");
+>>>>>>> master
 pub const REGSTR_VAL_FONT_SIZE_DEF: u32 = 2u32;
 pub const REGSTR_VAL_HEADERCHARSET: ::windows_strings::PCWSTR = ::windows_strings::w!("HeaderCharset");
 pub const REGSTR_VAL_HTTP_ERRORS: ::windows_strings::PCWSTR = ::windows_strings::w!("Friendly http errors");
@@ -586,7 +631,6 @@ pub const msoslHigh: u32 = 3u32;
 pub const msoslMedium: u32 = 2u32;
 pub const msoslNone: u32 = 1u32;
 pub const msoslUndefined: u32 = 0u32;
-pub const wfolders: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xbae31f9a_1b81_11d2_a97a_00c04f8ecb02);
 pub type ADDURL_FLAG = i32;
 pub type ExtensionValidationContexts = i32;
 pub type ExtensionValidationResults = i32;
@@ -599,6 +643,21 @@ pub type NAVIGATEFRAME_FLAGS = i32;
 pub type OpenServiceActivityContentType = i32;
 pub type OpenServiceErrors = i32;
 pub type SCROLLABLECONTEXTMENU_PLACEMENT = i32;
+pub const AnchorClick: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x13d5413c_33b9_11d2_95a7_00c04f8ecb02);
+pub const CDeviceRect: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f6d4_98b5_11cf_bb82_00aa00bdce0b);
+pub const CDownloadBehavior: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f5be_98b5_11cf_bb82_00aa00bdce0b);
+pub const CHeaderFooter: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f6cd_98b5_11cf_bb82_00aa00bdce0b);
+pub const CLayoutRect: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f664_98b5_11cf_bb82_00aa00bdce0b);
+pub const CPersistDataPeer: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f487_98b5_11cf_bb82_00aa00bdce0b);
+pub const CPersistHistory: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f4c8_98b5_11cf_bb82_00aa00bdce0b);
+pub const CPersistShortcut: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f4c6_98b5_11cf_bb82_00aa00bdce0b);
+pub const CPersistSnapshot: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f4c9_98b5_11cf_bb82_00aa00bdce0b);
+pub const CPersistUserData: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f48e_98b5_11cf_bb82_00aa00bdce0b);
+pub const CoDitherToRGB8: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xa860ce50_3910_11d0_86fc_00a0c913f750);
+pub const CoMapMIMEToCLSID: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x30c3b080_30fb_11d0_b724_00aa006c1a01);
+pub const CoSniffStream: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x6a01fda0_30df_11d0_b724_00aa006c1a01);
+pub const HomePage: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x766bf2ae_d650_11d1_9811_00c04fc31d2e);
+pub const HomePageSetting: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x374cede0_873a_4c4f_bc86_bcc8cf5116a3);
 #[repr(C)]
 pub struct IELAUNCHURLINFO {
     pub cbSize: u32,
@@ -611,6 +670,9 @@ impl ::core::clone::Clone for IELAUNCHURLINFO {
         *self
     }
 }
+pub const IEWebDriverManager: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x90314af2_5250_47b3_89d8_6295fc23bc22);
+pub const IntelliForms: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x613ab92e_16bf_11d2_bca5_00c04fd929db);
+pub const InternetExplorerManager: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xdf4fcc34_067a_4e0a_8352_4a1a5095346e);
 #[repr(C)]
 pub struct NAVIGATEDATA {
     pub ulTarget: u32,
@@ -625,6 +687,9 @@ impl ::core::clone::Clone for NAVIGATEDATA {
         *self
     }
 }
+pub const OpenServiceActivityManager: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xc5efd803_50f8_43cd_9ab8_aafc1394c9e0);
+pub const OpenServiceManager: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x098870b6_39ea_480b_b8b5_dd0167c4db59);
+pub const PeerFactory: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3050f4cf_98b5_11cf_bb82_00aa00bdce0b);
 #[repr(C)]
 pub struct STATURL {
     pub cbSize: u32,
@@ -641,3 +706,4 @@ impl ::core::clone::Clone for STATURL {
         *self
     }
 }
+pub const wfolders: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xbae31f9a_1b81_11d2_a97a_00c04f8ecb02);

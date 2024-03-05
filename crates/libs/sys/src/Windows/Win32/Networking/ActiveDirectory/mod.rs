@@ -452,6 +452,7 @@ pub const ADS_USE_ENCRYPTION: ADS_AUTHENTICATION_ENUM = 2u32;
 pub const ADS_USE_SEALING: ADS_AUTHENTICATION_ENUM = 128u32;
 pub const ADS_USE_SIGNING: ADS_AUTHENTICATION_ENUM = 64u32;
 pub const ADS_USE_SSL: ADS_AUTHENTICATION_ENUM = 2u32;
+<<<<<<< HEAD
 pub const ADSystemInfo: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x50b6327f_afd1_11d2_9cb9_0000f87a369e);
 pub const ADsSecurityUtility: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xf270c64a_ffb8_4ae4_85fe_3a75e5347966);
 pub const AccessControlEntry: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb75ac000_9bdd_11d0_852c_00c04fd8d503);
@@ -464,6 +465,15 @@ pub const CFSTR_DSPROPERTYPAGEINFO: ::windows_strings::PCWSTR = ::windows_string
 pub const CFSTR_DSQUERYPARAMS: ::windows_strings::PCWSTR = ::windows_strings::w!("DsQueryParameters");
 pub const CFSTR_DSQUERYSCOPE: ::windows_strings::PCWSTR = ::windows_strings::w!("DsQueryScope");
 pub const CFSTR_DS_DISPLAY_SPEC_OPTIONS: ::windows_strings::PCWSTR = ::windows_strings::w!("DsDisplaySpecOptions");
+=======
+pub const CFSTR_DSDISPLAYSPECOPTIONS: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("DsDisplaySpecOptions");
+pub const CFSTR_DSOBJECTNAMES: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("DsObjectNames");
+pub const CFSTR_DSOP_DS_SELECTION_LIST: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("CFSTR_DSOP_DS_SELECTION_LIST");
+pub const CFSTR_DSPROPERTYPAGEINFO: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("DsPropPageInfo");
+pub const CFSTR_DSQUERYPARAMS: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("DsQueryParameters");
+pub const CFSTR_DSQUERYSCOPE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("DsQueryScope");
+pub const CFSTR_DS_DISPLAY_SPEC_OPTIONS: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("DsDisplaySpecOptions");
+>>>>>>> master
 pub const CLSID_CommonQuery: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x83bc5ec0_6f2a_11d0_a1c4_00aa00c16e65);
 pub const CLSID_DsAdminCreateObj: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xe301a009_f901_11d2_82b9_00c04f68928b);
 pub const CLSID_DsDisplaySpecifier: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x1ab4a8c0_6a0b_11d2_ad49_00c04fa31a86);
@@ -494,14 +504,11 @@ pub const CQPM_INITIALIZE: u32 = 1u32;
 pub const CQPM_PERSIST: u32 = 7u32;
 pub const CQPM_RELEASE: u32 = 2u32;
 pub const CQPM_SETDEFAULTPARAMETERS: u32 = 9u32;
-pub const CaseIgnoreList: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x15f88a55_4680_11d1_a3b4_00c04fb950dc);
 pub const DBDTF_RETURNEXTERNAL: u32 = 4u32;
 pub const DBDTF_RETURNFQDN: u32 = 1u32;
 pub const DBDTF_RETURNINBOUND: u32 = 8u32;
 pub const DBDTF_RETURNINOUTBOUND: u32 = 16u32;
 pub const DBDTF_RETURNMIXEDDOMAINS: u32 = 2u32;
-pub const DNWithBinary: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x7e99c0a3_f935_11d2_ba96_00c04fb6d0d1);
-pub const DNWithString: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x334857cc_f934_11d2_ba96_00c04fb6d0d1);
 pub const DSA_NEWOBJ_CTX_CLEANUP: u32 = 4u32;
 pub const DSA_NEWOBJ_CTX_COMMIT: u32 = 2u32;
 pub const DSA_NEWOBJ_CTX_POSTCOMMIT: u32 = 3u32;
@@ -903,7 +910,6 @@ pub const DsRole_RoleMemberWorkstation: DSROLE_MACHINE_ROLE = 1i32;
 pub const DsRole_RolePrimaryDomainController: DSROLE_MACHINE_ROLE = 5i32;
 pub const DsRole_RoleStandaloneServer: DSROLE_MACHINE_ROLE = 2i32;
 pub const DsRole_RoleStandaloneWorkstation: DSROLE_MACHINE_ROLE = 0i32;
-pub const Email: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x8f92a857_478e_11d1_a3b4_00c04fb950dc);
 pub const FACILITY_BACKUP: u32 = 2047u32;
 pub const FACILITY_NTDSB: u32 = 2048u32;
 pub const FACILITY_SYSTEM: u32 = 0u32;
@@ -913,6 +919,7 @@ pub const FLAG_FOREST_OPTIONAL_FEATURE: u32 = 1u32;
 pub const FLAG_SERVER_OPTIONAL_FEATURE: u32 = 8u32;
 pub const FRSCONN_MAX_PRIORITY: u32 = 8u32;
 pub const FRSCONN_PRIORITY_MASK: u32 = 1879048192u32;
+<<<<<<< HEAD
 pub const FaxNumber: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xa5062215_4681_11d1_a3b4_00c04fb950dc);
 pub const GUID_COMPUTRS_CONTAINER_A: ::windows_strings::PCSTR = ::windows_strings::s!("aa312825768811d1aded00c04fd8d5cd");
 pub const GUID_COMPUTRS_CONTAINER_W: ::windows_strings::PCWSTR = ::windows_strings::w!("aa312825768811d1aded00c04fd8d5cd");
@@ -944,6 +951,36 @@ pub const GUID_USERS_CONTAINER_A: ::windows_strings::PCSTR = ::windows_strings::
 pub const GUID_USERS_CONTAINER_W: ::windows_strings::PCWSTR = ::windows_strings::w!("a9d1ca15768811d1aded00c04fd8d5cd");
 pub const Hold: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb3ad3e13_4080_11d1_a3ac_00c04fb950dc);
 pub const LargeInteger: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x927971f5_0939_11d1_8be1_00c04fd8d503);
+=======
+pub const GUID_COMPUTRS_CONTAINER_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("aa312825768811d1aded00c04fd8d5cd");
+pub const GUID_COMPUTRS_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("aa312825768811d1aded00c04fd8d5cd");
+pub const GUID_DELETED_OBJECTS_CONTAINER_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("18e2ea80684f11d2b9aa00c04f79f805");
+pub const GUID_DELETED_OBJECTS_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("18e2ea80684f11d2b9aa00c04f79f805");
+pub const GUID_DOMAIN_CONTROLLERS_CONTAINER_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("a361b2ffffd211d1aa4b00c04fd7d83a");
+pub const GUID_DOMAIN_CONTROLLERS_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("a361b2ffffd211d1aa4b00c04fd7d83a");
+pub const GUID_FOREIGNSECURITYPRINCIPALS_CONTAINER_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("22b70c67d56e4efb91e9300fca3dc1aa");
+pub const GUID_FOREIGNSECURITYPRINCIPALS_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("22b70c67d56e4efb91e9300fca3dc1aa");
+pub const GUID_INFRASTRUCTURE_CONTAINER_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("2fbac1870ade11d297c400c04fd8d5cd");
+pub const GUID_INFRASTRUCTURE_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("2fbac1870ade11d297c400c04fd8d5cd");
+pub const GUID_KEYS_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("683A24E2E8164BD3AF86AC3C2CF3F981");
+pub const GUID_LOSTANDFOUND_CONTAINER_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("ab8153b7768811d1aded00c04fd8d5cd");
+pub const GUID_LOSTANDFOUND_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("ab8153b7768811d1aded00c04fd8d5cd");
+pub const GUID_MANAGED_SERVICE_ACCOUNTS_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("1EB93889E40C45DF9F0C64D23BBB6237");
+pub const GUID_MICROSOFT_PROGRAM_DATA_CONTAINER_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("f4be92a4c777485e878e9421d53087db");
+pub const GUID_MICROSOFT_PROGRAM_DATA_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("f4be92a4c777485e878e9421d53087db");
+pub const GUID_NTDS_QUOTAS_CONTAINER_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("6227f0af1fc2410d8e3bb10615bb5b0f");
+pub const GUID_NTDS_QUOTAS_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("6227f0af1fc2410d8e3bb10615bb5b0f");
+pub const GUID_PRIVILEGED_ACCESS_MANAGEMENT_OPTIONAL_FEATURE_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("73e843ece8cc4046b4ab07ffe4ab5bcd");
+pub const GUID_PRIVILEGED_ACCESS_MANAGEMENT_OPTIONAL_FEATURE_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("73e843ece8cc4046b4ab07ffe4ab5bcd");
+pub const GUID_PROGRAM_DATA_CONTAINER_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("09460c08ae1e4a4ea0f64aee7daa1e5a");
+pub const GUID_PROGRAM_DATA_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("09460c08ae1e4a4ea0f64aee7daa1e5a");
+pub const GUID_RECYCLE_BIN_OPTIONAL_FEATURE_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("d8dc6d76d0ac5e44f3b9a7f9b6744f2a");
+pub const GUID_RECYCLE_BIN_OPTIONAL_FEATURE_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("d8dc6d76d0ac5e44f3b9a7f9b6744f2a");
+pub const GUID_SYSTEMS_CONTAINER_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("ab1d30f3768811d1aded00c04fd8d5cd");
+pub const GUID_SYSTEMS_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("ab1d30f3768811d1aded00c04fd8d5cd");
+pub const GUID_USERS_CONTAINER_A: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("a9d1ca15768811d1aded00c04fd8d5cd");
+pub const GUID_USERS_CONTAINER_W: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("a9d1ca15768811d1aded00c04fd8d5cd");
+>>>>>>> master
 pub const NTDSAPI_BIND_ALLOW_DELEGATION: u32 = 1u32;
 pub const NTDSAPI_BIND_FIND_BINDING: u32 = 2u32;
 pub const NTDSAPI_BIND_FORCE_KERBEROS: u32 = 4u32;
@@ -995,8 +1032,6 @@ pub const NTDSSITELINK_OPT_TWOWAY_SYNC: u32 = 2u32;
 pub const NTDSSITELINK_OPT_USE_NOTIFY: u32 = 1u32;
 pub const NTDSTRANSPORT_OPT_BRIDGES_REQUIRED: u32 = 2u32;
 pub const NTDSTRANSPORT_OPT_IGNORE_SCHEDULES: u32 = 1u32;
-pub const NameTranslate: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x274fae1f_3626_11d1_a3a4_00c04fb950dc);
-pub const NetAddress: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb0b71247_4080_11d1_a3ac_00c04fb950dc);
 pub const OQWF_DEFAULTFORM: u32 = 2u32;
 pub const OQWF_HIDEMENUS: u32 = 1024u32;
 pub const OQWF_HIDESEARCHUI: u32 = 2048u32;
@@ -1009,21 +1044,11 @@ pub const OQWF_REMOVESCOPES: u32 = 16u32;
 pub const OQWF_SAVEQUERYONOK: u32 = 512u32;
 pub const OQWF_SHOWOPTIONAL: u32 = 128u32;
 pub const OQWF_SINGLESELECT: u32 = 4u32;
-pub const OctetList: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x1241400f_4680_11d1_a3b4_00c04fb950dc);
-pub const Path: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb2538919_4080_11d1_a3ac_00c04fb950dc);
-pub const Pathname: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x080d0d78_f421_11d0_a36e_00c04fb950dc);
-pub const PostalAddress: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x0a75afcd_4680_11d1_a3b4_00c04fb950dc);
-pub const PropertyEntry: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x72d3edc2_a4c4_11d0_8533_00c04fd8d503);
-pub const PropertyValue: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x7b9e38b0_a97c_11d0_8534_00c04fd8d503);
 pub const QUERYFORM_CHANGESFORMLIST: u64 = 1u64;
 pub const QUERYFORM_CHANGESOPTFORMLIST: u64 = 2u64;
-pub const ReplicaPointer: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xf5d1badf_4080_11d1_a3ac_00c04fb950dc);
 pub const SCHEDULE_BANDWIDTH: u32 = 1u32;
 pub const SCHEDULE_INTERVAL: u32 = 0u32;
 pub const SCHEDULE_PRIORITY: u32 = 2u32;
-pub const SecurityDescriptor: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb958f73c_9bdd_11d0_852c_00c04fd8d503);
-pub const Timestamp: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb2bed2eb_4080_11d1_a3ac_00c04fb950dc);
-pub const TypedName: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb33143cb_4080_11d1_a3ac_00c04fb950dc);
 pub const WM_ADSPROP_NOTIFY_APPLY: u32 = 2128u32;
 pub const WM_ADSPROP_NOTIFY_CHANGE: u32 = 2127u32;
 pub const WM_ADSPROP_NOTIFY_ERROR: u32 = 2134u32;
@@ -1032,7 +1057,6 @@ pub const WM_ADSPROP_NOTIFY_FOREGROUND: u32 = 2130u32;
 pub const WM_ADSPROP_NOTIFY_PAGEHWND: u32 = 2126u32;
 pub const WM_ADSPROP_NOTIFY_PAGEINIT: u32 = 2125u32;
 pub const WM_ADSPROP_NOTIFY_SETFOCUS: u32 = 2129u32;
-pub const WinNTSystemInfo: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x66182ec4_afd1_11d2_9cb9_0000f87a369e);
 pub const hrAccessDenied: ::windows_sys::core::HRESULT = 0xC8000773_u32 as _;
 pub const hrAfterInitialization: ::windows_sys::core::HRESULT = 0xC800073A_u32 as _;
 pub const hrAlreadyInitialized: ::windows_sys::core::HRESULT = 0xC8000406_u32 as _;
@@ -1652,6 +1676,11 @@ impl ::core::clone::Clone for ADS_VLV {
         *self
     }
 }
+pub const ADSystemInfo: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x50b6327f_afd1_11d2_9cb9_0000f87a369e);
+pub const ADsSecurityUtility: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xf270c64a_ffb8_4ae4_85fe_3a75e5347966);
+pub const AccessControlEntry: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb75ac000_9bdd_11d0_852c_00c04fd8d503);
+pub const AccessControlList: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb85ea052_9bdd_11d0_852c_00c04fd8d503);
+pub const BackLink: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xfcbf906f_4080_11d1_a3ac_00c04fb950dc);
 #[repr(C)]
 #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
 pub struct CQFORM {
@@ -1689,6 +1718,9 @@ impl ::core::clone::Clone for CQPAGE {
         *self
     }
 }
+pub const CaseIgnoreList: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x15f88a55_4680_11d1_a3b4_00c04fb950dc);
+pub const DNWithBinary: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x7e99c0a3_f935_11d2_ba96_00c04fb6d0d1);
+pub const DNWithString: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x334857cc_f934_11d2_ba96_00c04fb6d0d1);
 #[repr(C)]
 pub struct DOMAINDESC {
     pub pszName: ::windows_sys::core::PWSTR,
@@ -2898,6 +2930,12 @@ impl ::core::clone::Clone for DS_SITE_COST_INFO {
         *self
     }
 }
+pub const Email: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x8f92a857_478e_11d1_a3b4_00c04fb950dc);
+pub const FaxNumber: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xa5062215_4681_11d1_a3b4_00c04fb950dc);
+pub const Hold: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb3ad3e13_4080_11d1_a3ac_00c04fb950dc);
+pub const LargeInteger: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x927971f5_0939_11d1_8be1_00c04fd8d503);
+pub const NameTranslate: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x274fae1f_3626_11d1_a3a4_00c04fb950dc);
+pub const NetAddress: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb0b71247_4080_11d1_a3ac_00c04fb950dc);
 #[repr(C)]
 pub struct OPENQUERYWINDOW {
     pub cbStruct: u32,
@@ -2925,6 +2963,13 @@ impl ::core::clone::Clone for OPENQUERYWINDOW_0 {
         *self
     }
 }
+pub const OctetList: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x1241400f_4680_11d1_a3b4_00c04fb950dc);
+pub const Path: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb2538919_4080_11d1_a3ac_00c04fb950dc);
+pub const Pathname: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x080d0d78_f421_11d0_a36e_00c04fb950dc);
+pub const PostalAddress: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x0a75afcd_4680_11d1_a3b4_00c04fb950dc);
+pub const PropertyEntry: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x72d3edc2_a4c4_11d0_8533_00c04fd8d503);
+pub const PropertyValue: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x7b9e38b0_a97c_11d0_8534_00c04fd8d503);
+pub const ReplicaPointer: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xf5d1badf_4080_11d1_a3ac_00c04fb950dc);
 #[repr(C)]
 pub struct SCHEDULE {
     pub Size: u32,
@@ -2949,6 +2994,10 @@ impl ::core::clone::Clone for SCHEDULE_HEADER {
         *self
     }
 }
+pub const SecurityDescriptor: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb958f73c_9bdd_11d0_852c_00c04fd8d503);
+pub const Timestamp: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb2bed2eb_4080_11d1_a3ac_00c04fb950dc);
+pub const TypedName: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xb33143cb_4080_11d1_a3ac_00c04fb950dc);
+pub const WinNTSystemInfo: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x66182ec4_afd1_11d2_9cb9_0000f87a369e);
 #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
 pub type LPCQADDFORMSPROC = ::core::option::Option<unsafe extern "system" fn(lparam: super::super::Foundation::LPARAM, pform: *mut CQFORM) -> ::windows_sys::core::HRESULT>;
 #[cfg(feature = "Win32_UI_WindowsAndMessaging")]
