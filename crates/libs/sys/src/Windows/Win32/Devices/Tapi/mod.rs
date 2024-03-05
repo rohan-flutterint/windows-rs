@@ -1189,14 +1189,8 @@ pub const ME_PRIVATE_EVENT: MSP_EVENT = 3i32;
 pub const ME_TONE_TERMINAL_EVENT: MSP_EVENT = 7i32;
 pub const ME_TSP_DATA: MSP_EVENT = 2i32;
 pub const ME_TTS_TERMINAL_EVENT: MSP_EVENT = 5i32;
-<<<<<<< HEAD
-pub const McastAddressAllocation: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xdf0daef2_a289_11d1_8697_006008b0e5d2);
 pub const OPENTNEFSTREAM: ::windows_strings::PCSTR = ::windows_strings::s!("OpenTnefStream");
 pub const OPENTNEFSTREAMEX: ::windows_strings::PCSTR = ::windows_strings::s!("OpenTnefStreamEx");
-=======
-pub const OPENTNEFSTREAM: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("OpenTnefStream");
-pub const OPENTNEFSTREAMEX: ::windows_sys::core::PCSTR = ::windows_sys::core::s!("OpenTnefStreamEx");
->>>>>>> master
 pub const OT_CONFERENCE: DIRECTORY_OBJECT_TYPE = 1i32;
 pub const OT_USER: DIRECTORY_OBJECT_TYPE = 2i32;
 pub const PBF_ABBREVDIAL: PHONE_BUTTON_FUNCTION = 11i32;

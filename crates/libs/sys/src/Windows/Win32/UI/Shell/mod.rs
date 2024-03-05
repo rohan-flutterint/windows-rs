@@ -2481,15 +2481,8 @@ pub const HLTB_DOCKEDTOP: HLTB_INFO = 1i32;
 pub const HLTB_FLOATING: HLTB_INFO = 4i32;
 pub const HLTRANSLATEF_DEFAULT: HLTRANSLATEF = 0i32;
 pub const HLTRANSLATEF_DONTAPPLYDEFAULTPREFIX: HLTRANSLATEF = 1i32;
-<<<<<<< HEAD
 pub const HOMEGROUP_SECURITY_GROUP: ::windows_strings::PCWSTR = ::windows_strings::w!("HomeUsers");
 pub const HOMEGROUP_SECURITY_GROUP_MULTI: ::windows_strings::PCWSTR = ::windows_strings::w!("HUG");
-pub const HideInputPaneAnimationCoordinator: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x384742b1_2a77_4cb3_8cf8_1136f5e17e59);
-pub const HomeGroup: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xde77ba04_3c92_4d11_a1a5_42352a53e0e3);
-=======
-pub const HOMEGROUP_SECURITY_GROUP: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("HomeUsers");
-pub const HOMEGROUP_SECURITY_GROUP_MULTI: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("HUG");
->>>>>>> master
 pub const IDC_OFFLINE_HAND: u32 = 103u32;
 pub const IDC_PANTOOL_HAND_CLOSED: u32 = 105u32;
 pub const IDC_PANTOOL_HAND_OPEN: u32 = 104u32;
@@ -4458,13 +4451,7 @@ pub const VPCF_TEXT: VPCOLORFLAGS = 1i32;
 pub const VPCF_TEXTBACKGROUND: VPCOLORFLAGS = 5i32;
 pub const VPWF_ALPHABLEND: VPWATERMARKFLAGS = 1i32;
 pub const VPWF_DEFAULT: VPWATERMARKFLAGS = 0i32;
-<<<<<<< HEAD
-pub const VaultProvider: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x503739d0_4c5e_4cfd_b3ba_d881334f0df2);
-pub const VirtualDesktopManager: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xaa509086_5ca9_4c25_8f95_589d3c07b48a);
 pub const WC_NETADDRESS: ::windows_strings::PCWSTR = ::windows_strings::w!("msctls_netaddress");
-=======
-pub const WC_NETADDRESS: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("msctls_netaddress");
->>>>>>> master
 pub const WM_CPL_LAUNCH: u32 = 2024u32;
 pub const WM_CPL_LAUNCHED: u32 = 2025u32;
 pub const WPSTYLE_CENTER: u32 = 0u32;

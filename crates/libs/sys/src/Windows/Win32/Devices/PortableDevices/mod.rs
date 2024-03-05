@@ -418,7 +418,6 @@ pub const NAME_WordDocument: ::windows_strings::PCWSTR = ::windows_strings::w!("
 pub const NAME_XMLDocument: ::windows_strings::PCWSTR = ::windows_strings::w!("XMLDocument");
 pub const PORTABLE_DEVICE_DELETE_NO_RECURSION: DELETE_OBJECT_OPTIONS = 0i32;
 pub const PORTABLE_DEVICE_DELETE_WITH_RECURSION: DELETE_OBJECT_OPTIONS = 1i32;
-<<<<<<< HEAD
 pub const PORTABLE_DEVICE_DRM_SCHEME_PDDRM: ::windows_strings::PCWSTR = ::windows_strings::w!("PDDRM");
 pub const PORTABLE_DEVICE_DRM_SCHEME_WMDRM10_PD: ::windows_strings::PCWSTR = ::windows_strings::w!("WMDRM10-PD");
 pub const PORTABLE_DEVICE_ICON: ::windows_strings::PCWSTR = ::windows_strings::w!("Icons");
@@ -427,27 +426,6 @@ pub const PORTABLE_DEVICE_NAMESPACE_EXCLUDE_FROM_SHELL: ::windows_strings::PCWST
 pub const PORTABLE_DEVICE_NAMESPACE_THUMBNAIL_CONTENT_TYPES: ::windows_strings::PCWSTR = ::windows_strings::w!("PortableDeviceNameSpaceThumbnailContentTypes");
 pub const PORTABLE_DEVICE_NAMESPACE_TIMEOUT: ::windows_strings::PCWSTR = ::windows_strings::w!("PortableDeviceNameSpaceTimeout");
 pub const PORTABLE_DEVICE_TYPE: ::windows_strings::PCWSTR = ::windows_strings::w!("PortableDeviceType");
-pub const PortableDevice: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x728a21c5_3d9e_48d7_9810_864848f0f404);
-pub const PortableDeviceDispatchFactory: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x43232233_8338_4658_ae01_0b4ae830b6b0);
-pub const PortableDeviceFTM: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xf7c0039a_4762_488a_b4b3_760ef9a1ba9b);
-pub const PortableDeviceKeyCollection: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xde2d022d_2480_43be_97f0_d1fa2cf98f4f);
-pub const PortableDeviceManager: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x0af10cec_2ecd_4b92_9581_34f6ae0637f3);
-pub const PortableDevicePropVariantCollection: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x08a99e2f_6d6d_4b80_af5a_baf2bcbe4cb9);
-pub const PortableDeviceService: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xef5db4c2_9312_422c_9152_411cd9c4dd84);
-pub const PortableDeviceServiceFTM: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x1649b154_c794_497a_9b03_f3f0121302f3);
-pub const PortableDeviceValues: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x0c15d503_d017_47ce_9016_7b3f978721cc);
-pub const PortableDeviceValuesCollection: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x3882134d_14cf_4220_9cb4_435f86d83f60);
-pub const PortableDeviceWebControl: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x186dd02c_2dec_41b5_a7d4_b59056fade51);
-=======
-pub const PORTABLE_DEVICE_DRM_SCHEME_PDDRM: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("PDDRM");
-pub const PORTABLE_DEVICE_DRM_SCHEME_WMDRM10_PD: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("WMDRM10-PD");
-pub const PORTABLE_DEVICE_ICON: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("Icons");
-pub const PORTABLE_DEVICE_IS_MASS_STORAGE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("PortableDeviceIsMassStorage");
-pub const PORTABLE_DEVICE_NAMESPACE_EXCLUDE_FROM_SHELL: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("PortableDeviceNameSpaceExcludeFromShell");
-pub const PORTABLE_DEVICE_NAMESPACE_THUMBNAIL_CONTENT_TYPES: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("PortableDeviceNameSpaceThumbnailContentTypes");
-pub const PORTABLE_DEVICE_NAMESPACE_TIMEOUT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("PortableDeviceNameSpaceTimeout");
-pub const PORTABLE_DEVICE_TYPE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("PortableDeviceType");
->>>>>>> master
 pub const RANGEMAX_MessageObj_PatternDayOfMonth: u32 = 31u32;
 pub const RANGEMAX_MessageObj_PatternMonthOfYear: u32 = 12u32;
 pub const RANGEMAX_StatusSvc_BatteryLife: u32 = 100u32;

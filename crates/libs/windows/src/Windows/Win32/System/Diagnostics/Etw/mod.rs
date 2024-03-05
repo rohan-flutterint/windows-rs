@@ -696,14 +696,8 @@ pub struct ITraceRelogger_Vtbl {
 }
 pub const ALPCGuid: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x45d8cccd_539f_4b72_a8b7_5c683142609a);
 pub const CLSID_TraceRelogger: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7b40792d_05ff_44c4_9058_f440c71f17d4);
-<<<<<<< HEAD
-pub const CTraceRelogger: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7b40792d_05ff_44c4_9058_f440c71f17d4);
 pub const DIAG_LOGGER_NAMEA: ::windows_strings::PCSTR = ::windows_strings::s!("DiagLog");
 pub const DIAG_LOGGER_NAMEW: ::windows_strings::PCWSTR = ::windows_strings::w!("DiagLog");
-=======
-pub const DIAG_LOGGER_NAMEA: ::windows_core::PCSTR = ::windows_core::s!("DiagLog");
-pub const DIAG_LOGGER_NAMEW: ::windows_core::PCWSTR = ::windows_core::w!("DiagLog");
->>>>>>> master
 pub const DecodingSourceMax: DECODING_SOURCE = DECODING_SOURCE(4i32);
 pub const DecodingSourceTlg: DECODING_SOURCE = DECODING_SOURCE(3i32);
 pub const DecodingSourceWPP: DECODING_SOURCE = DECODING_SOURCE(2i32);

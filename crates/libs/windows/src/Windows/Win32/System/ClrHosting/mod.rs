@@ -2498,14 +2498,7 @@ pub const CLSID_RESOLUTION_REGISTERED: CLSID_RESOLUTION_FLAGS = CLSID_RESOLUTION
 pub const COR_GC_COUNTS: COR_GC_STAT_TYPES = COR_GC_STAT_TYPES(1i32);
 pub const COR_GC_MEMORYUSAGE: COR_GC_STAT_TYPES = COR_GC_STAT_TYPES(2i32);
 pub const COR_GC_THREAD_HAS_PROMOTED_BYTES: COR_GC_THREAD_STATS_TYPES = COR_GC_THREAD_STATS_TYPES(1i32);
-<<<<<<< HEAD
-pub const ComCallUnmarshal: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x3f281000_e95a_11d2_886b_00c04f869f04);
-pub const ComCallUnmarshalV4: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x45fb4600_e6e8_4928_b25e_50476ff79425);
-pub const CorRuntimeHost: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xcb2f6723_ab3a_11d2_9c40_00c04fa30a3e);
 pub const DEPRECATED_CLR_API_MESG: ::windows_strings::PCSTR = ::windows_strings::s!("This API has been deprecated. Refer to https://go.microsoft.com/fwlink/?LinkId=143720 for more details.");
-=======
-pub const DEPRECATED_CLR_API_MESG: ::windows_core::PCSTR = ::windows_core::s!("This API has been deprecated. Refer to https://go.microsoft.com/fwlink/?LinkId=143720 for more details.");
->>>>>>> master
 pub const DUMP_FLAVOR_CriticalCLRState: ECustomDumpFlavor = ECustomDumpFlavor(1i32);
 pub const DUMP_FLAVOR_Default: ECustomDumpFlavor = ECustomDumpFlavor(0i32);
 pub const DUMP_FLAVOR_Mini: ECustomDumpFlavor = ECustomDumpFlavor(0i32);

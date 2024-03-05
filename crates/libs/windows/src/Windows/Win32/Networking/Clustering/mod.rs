@@ -7981,12 +7981,7 @@ pub const ClusterUpgradePhaseUpgradingComponents: CLUSTER_UPGRADE_PHASE = CLUSTE
 pub const ClusterUpgradePhaseValidatingUpgrade: CLUSTER_UPGRADE_PHASE = CLUSTER_UPGRADE_PHASE(2i32);
 pub const DNS_LENGTH: u32 = 64u32;
 pub const DoNotFailbackGroups: CLUSTER_NODE_RESUME_FAILBACK_TYPE = CLUSTER_NODE_RESUME_FAILBACK_TYPE(0i32);
-<<<<<<< HEAD
-pub const DomainNames: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xf2e606e1_2631_11d1_89f1_00a0c90d061e);
 pub const ENABLE_CLUSTER_SHARED_VOLUMES: ::windows_strings::PCWSTR = ::windows_strings::w!("EnableSharedVolumes");
-=======
-pub const ENABLE_CLUSTER_SHARED_VOLUMES: ::windows_core::PCWSTR = ::windows_core::w!("EnableSharedVolumes");
->>>>>>> master
 pub const FAILURE_TYPE_EMBEDDED: FAILURE_TYPE = FAILURE_TYPE(1i32);
 pub const FAILURE_TYPE_GENERAL: FAILURE_TYPE = FAILURE_TYPE(0i32);
 pub const FAILURE_TYPE_NETWORK_LOSS: FAILURE_TYPE = FAILURE_TYPE(2i32);

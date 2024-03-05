@@ -1900,26 +1900,12 @@ pub const KSSTREAM_READ: u32 = 0u32;
 pub const KSSTREAM_SYNCHRONOUS: u32 = 4096u32;
 pub const KSSTREAM_UVC_SECURE_ATTRIBUTE_SIZE: u32 = 8192u32;
 pub const KSSTREAM_WRITE: u32 = 1u32;
-<<<<<<< HEAD
 pub const KSSTRING_Allocator: ::windows_strings::PCWSTR = ::windows_strings::w!("{642F5D00-4791-11D0-A5D6-28DB04C10000}");
 pub const KSSTRING_AllocatorEx: ::windows_strings::PCWSTR = ::windows_strings::w!("{091BB63B-603F-11D1-B067-00A0C9062802}");
 pub const KSSTRING_Clock: ::windows_strings::PCWSTR = ::windows_strings::w!("{53172480-4791-11D0-A5D6-28DB04C10000}");
 pub const KSSTRING_Filter: ::windows_strings::PCWSTR = ::windows_strings::w!("{9B365890-165F-11D0-A195-0020AFD156E4}");
 pub const KSSTRING_Pin: ::windows_strings::PCWSTR = ::windows_strings::w!("{146F1A80-4791-11D0-A5D6-28DB04C10000}");
 pub const KSSTRING_TopologyNode: ::windows_strings::PCWSTR = ::windows_strings::w!("{0621061A-EE75-11D0-B915-00A0C9223196}");
-pub const KSTIME_FORMAT_BYTE: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7b785571_8c82_11cf_bc0c_00aa00ac74f6);
-pub const KSTIME_FORMAT_FIELD: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7b785573_8c82_11cf_bc0c_00aa00ac74f6);
-pub const KSTIME_FORMAT_FRAME: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7b785570_8c82_11cf_bc0c_00aa00ac74f6);
-pub const KSTIME_FORMAT_MEDIA_TIME: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7b785574_8c82_11cf_bc0c_00aa00ac74f6);
-pub const KSTIME_FORMAT_SAMPLE: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7b785572_8c82_11cf_bc0c_00aa00ac74f6);
-=======
-pub const KSSTRING_Allocator: ::windows_core::PCWSTR = ::windows_core::w!("{642F5D00-4791-11D0-A5D6-28DB04C10000}");
-pub const KSSTRING_AllocatorEx: ::windows_core::PCWSTR = ::windows_core::w!("{091BB63B-603F-11D1-B067-00A0C9062802}");
-pub const KSSTRING_Clock: ::windows_core::PCWSTR = ::windows_core::w!("{53172480-4791-11D0-A5D6-28DB04C10000}");
-pub const KSSTRING_Filter: ::windows_core::PCWSTR = ::windows_core::w!("{9B365890-165F-11D0-A195-0020AFD156E4}");
-pub const KSSTRING_Pin: ::windows_core::PCWSTR = ::windows_core::w!("{146F1A80-4791-11D0-A5D6-28DB04C10000}");
-pub const KSSTRING_TopologyNode: ::windows_core::PCWSTR = ::windows_core::w!("{0621061A-EE75-11D0-B915-00A0C9223196}");
->>>>>>> master
 pub const KSWAVE_BUFFER_ATTRIBUTEF_LOOPING: u32 = 1u32;
 pub const KSWAVE_BUFFER_ATTRIBUTEF_STATIC: u32 = 2u32;
 pub const KSWAVE_COMPATCAPS_INPUT: u32 = 0u32;

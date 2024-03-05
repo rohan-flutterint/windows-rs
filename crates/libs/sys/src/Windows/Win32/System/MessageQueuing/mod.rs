@@ -415,28 +415,8 @@ pub const MQ_XACT_STATUS_NOT_XACT: XACT_STATUS = 1i32;
 pub const MQ_XACT_STATUS_UNKNOWN: XACT_STATUS = 2i32;
 pub const MQ_XACT_STATUS_XACT: XACT_STATUS = 0i32;
 pub const MQ_XA_TRANSACTION: MQTRANSACTION = 2i32;
-<<<<<<< HEAD
-pub const MSMQApplication: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xd7d6e086_dccd_11d0_aa4b_0060970debae);
-pub const MSMQCollection: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xf72b9031_2f0c_43e8_924e_e6052cdc493f);
-pub const MSMQCoordinatedTransactionDispenser: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xd7d6e082_dccd_11d0_aa4b_0060970debae);
-pub const MSMQDestination: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xeba96b18_2168_11d3_898c_00e02c074f6b);
-pub const MSMQEvent: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xd7d6e07a_dccd_11d0_aa4b_0060970debae);
-pub const MSMQManagement: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x39ce96fe_f4c5_4484_a143_4c2d5d324229);
-pub const MSMQMessage: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xd7d6e075_dccd_11d0_aa4b_0060970debae);
-pub const MSMQOutgoingQueueManagement: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x0188401c_247a_4fed_99c6_bf14119d7055);
-pub const MSMQQuery: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xd7d6e073_dccd_11d0_aa4b_0060970debae);
-pub const MSMQQueue: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xd7d6e079_dccd_11d0_aa4b_0060970debae);
-pub const MSMQQueueInfo: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xd7d6e07c_dccd_11d0_aa4b_0060970debae);
-pub const MSMQQueueInfos: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xd7d6e07e_dccd_11d0_aa4b_0060970debae);
-pub const MSMQQueueManagement: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0x33b6d07e_f27d_42fa_b2d7_bf82e11e9374);
-pub const MSMQTransaction: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xd7d6e080_dccd_11d0_aa4b_0060970debae);
-pub const MSMQTransactionDispenser: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xd7d6e084_dccd_11d0_aa4b_0060970debae);
 pub const MSMQ_CONNECTED: ::windows_strings::PCWSTR = ::windows_strings::w!("CONNECTED");
 pub const MSMQ_DISCONNECTED: ::windows_strings::PCWSTR = ::windows_strings::w!("DISCONNECTED");
-=======
-pub const MSMQ_CONNECTED: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("CONNECTED");
-pub const MSMQ_DISCONNECTED: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("DISCONNECTED");
->>>>>>> master
 pub const PREQ: u32 = 4u32;
 pub const PRGE: u32 = 3u32;
 pub const PRGT: u32 = 2u32;

@@ -627,20 +627,11 @@ pub const WSMAN_PLUGIN_SHUTDOWN_SYSTEM: u32 = 1u32;
 pub const WSMAN_PLUGIN_STARTUP_AUTORESTARTED_CRASH: u32 = 2u32;
 pub const WSMAN_PLUGIN_STARTUP_AUTORESTARTED_REBOOT: u32 = 1u32;
 pub const WSMAN_PLUGIN_STARTUP_REQUEST_RECEIVED: u32 = 0u32;
-<<<<<<< HEAD
 pub const WSMAN_SHELL_NS: ::windows_strings::PCWSTR = ::windows_strings::w!("http://schemas.microsoft.com/wbem/wsman/1/windows/shell");
 pub const WSMAN_SHELL_OPTION_NOPROFILE: ::windows_strings::PCWSTR = ::windows_strings::w!("WINRS_NOPROFILE");
 pub const WSMAN_STREAM_ID_STDERR: ::windows_strings::PCWSTR = ::windows_strings::w!("stderr");
 pub const WSMAN_STREAM_ID_STDIN: ::windows_strings::PCWSTR = ::windows_strings::w!("stdin");
 pub const WSMAN_STREAM_ID_STDOUT: ::windows_strings::PCWSTR = ::windows_strings::w!("stdout");
-pub const WSMan: ::windows_sys::core::GUID = ::windows_sys::core::GUID::from_u128(0xbced617b_ec03_420b_8508_977dc7a686bd);
-=======
-pub const WSMAN_SHELL_NS: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("http://schemas.microsoft.com/wbem/wsman/1/windows/shell");
-pub const WSMAN_SHELL_OPTION_NOPROFILE: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("WINRS_NOPROFILE");
-pub const WSMAN_STREAM_ID_STDERR: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("stderr");
-pub const WSMAN_STREAM_ID_STDIN: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("stdin");
-pub const WSMAN_STREAM_ID_STDOUT: ::windows_sys::core::PCWSTR = ::windows_sys::core::w!("stdout");
->>>>>>> master
 pub const WSManFlagAllowNegotiateImplicitCredentials: WSManSessionFlags = 67108864i32;
 pub const WSManFlagAssociatedInstance: WSManEnumFlags = 0i32;
 pub const WSManFlagAssociationInstance: WSManEnumFlags = 128i32;

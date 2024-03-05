@@ -5118,17 +5118,7 @@ pub const RP_RECIP_FLAGS_RESERVED: u32 = 15u32;
 pub const RP_REMOTE_MTA_NO_DSN: u32 = 524288u32;
 pub const RP_UNRESOLVED: u32 = 4144u32;
 pub const RP_VOLATILE_FLAGS_MASK: u32 = 4026531840u32;
-<<<<<<< HEAD
 pub const SZ_PROGID_SMTPCAT: ::windows_strings::PCSTR = ::windows_strings::s!("Smtp.Cat");
-pub const tagIMMPID_CPV_STRUCT: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xa2a76b2a_e52d_11d1_aa64_00c04fa35b82);
-pub const tagIMMPID_MPV_STRUCT: ::windows_core::GUID = ::windows_core::GUID::from_u128(0xcbe69706_c9bd_11d1_9ff2_00c04fa37348);
-pub const tagIMMPID_MP_STRUCT: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x13384cf0_b3c4_11d1_aa92_00aa006bc80b);
-pub const tagIMMPID_NMP_STRUCT: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x7433a9aa_20e2_11d2_94d6_00c04fa379f1);
-pub const tagIMMPID_RPV_STRUCT: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x79e82049_d320_11d1_9ff4_00c04fa37348);
-pub const tagIMMPID_RP_STRUCT: ::windows_core::GUID = ::windows_core::GUID::from_u128(0x79e82048_d320_11d1_9ff4_00c04fa37348);
-=======
-pub const SZ_PROGID_SMTPCAT: ::windows_core::PCSTR = ::windows_core::s!("Smtp.Cat");
->>>>>>> master
 #[repr(transparent)]
 #[derive(::core::cmp::PartialEq, ::core::cmp::Eq, ::core::marker::Copy, ::core::clone::Clone, ::core::default::Default)]
 pub struct DISC_RECORDER_STATE_FLAGS(pub u32);
