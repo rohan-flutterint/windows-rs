@@ -36,8 +36,12 @@ pub fn gen_index(writer: &Writer) -> String {
 
             cfg = match item {
                 Item::Type(def) => {
-                    index_item.name = def.name().to_string();
-                    cfg.union(&type_def_cfg(writer, def, &[]))
+                    if def.extends() == Some(metadata::TypeName::Attribute) {
+                        cfg
+                    } else {
+                        index_item.name = def.name().to_string();
+                        cfg.union(&type_def_cfg(writer, def, &[]))
+                    }
                 }
                 Item::Const(field) => {
                     index_item.name = field.name().to_string();

@@ -430,25 +430,6 @@ impl Writer {
         compact
     }
 
-    fn cfg_not_features(&self, cfg: &cfg::Cfg) -> TokenStream {
-        let features = self.cfg_features_imp(cfg, self.namespace);
-        if features.is_empty() {
-            quote! {}
-        } else {
-            match features.len() {
-                0 => quote! {},
-                1 => {
-                    let features = features.iter().cloned().map(to_feature);
-                    quote! { #[cfg(not(#(feature = #features)*))] }
-                }
-                _ => {
-                    let features = features.iter().cloned().map(to_feature);
-                    quote! { #[cfg(not(all( #(feature = #features),* )))] }
-                }
-            }
-        }
-    }
-
     //
     // Other helpers
     //
@@ -791,24 +772,10 @@ impl Writer {
             }
             let name = method_names.add(method);
             let signature = metadata::method_def_signature(def.namespace(), method, generics);
-            let mut cfg = cfg::signature_cfg(self, method);
             let signature = self.vtbl_signature(def, false, &signature);
-            cfg.add_feature(def.namespace());
-            let cfg_all = self.cfg_features(&cfg);
-            let cfg_not = self.cfg_not_features(&cfg);
 
             let signature = quote! { pub #name: unsafe extern "system" fn #signature, };
-
-            if cfg_all.is_empty() {
-                methods.combine(&signature);
-            } else {
-                methods.combine(&quote! {
-                    #cfg_all
-                    #signature
-                    #cfg_not
-                    #name: usize,
-                });
-            }
+            methods.combine(&signature);
         }
 
         quote! {

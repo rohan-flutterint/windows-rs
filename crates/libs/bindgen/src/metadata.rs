@@ -741,7 +741,7 @@ pub fn type_def_bases(mut row: TypeDef) -> Vec<TypeDef> {
     loop {
         match row.extends() {
             Some(base) if base != TypeName::Object => {
-                row = row.reader().get_type_def(base.namespace, base.name).next().expect("Type not found");
+                row = row.reader().get_type_def(base.namespace, base.name).next().unwrap_or_else(|| panic!("Type not found: {}", base));
                 bases.push(row);
             }
             _ => break,

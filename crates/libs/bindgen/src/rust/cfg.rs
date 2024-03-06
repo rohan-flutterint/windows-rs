@@ -40,13 +40,7 @@ fn field_cfg_combine(writer: &Writer, row: metadata::Field, enclosing: Option<me
     type_cfg_combine(writer, &row.ty(enclosing), cfg)
 }
 
-pub fn type_def_cfg(writer: &Writer, row: metadata::TypeDef, generics: &[metadata::Type]) -> Cfg {
-    let mut cfg = Cfg::default();
-    type_def_cfg_combine(writer, row, generics, &mut cfg);
-    cfg_add_attributes(&mut cfg, row);
-    cfg
-}
-pub fn type_def_cfg_impl(writer: &Writer, def: metadata::TypeDef, generics: &[metadata::Type]) -> Cfg {
+pub fn type_def_cfg(writer: &Writer, def: metadata::TypeDef, generics: &[metadata::Type]) -> Cfg {
     let mut cfg = Cfg { implement: true, ..Default::default() };
 
     fn combine(writer: &Writer, def: metadata::TypeDef, generics: &[metadata::Type], cfg: &mut Cfg) {
@@ -89,11 +83,19 @@ pub fn type_def_cfg_combine(writer: &Writer, row: metadata::TypeDef, generics: &
                 }
             }
             metadata::TypeKind::Interface => {
-                if !row.flags().contains(metadata::TypeAttributes::WindowsRuntime) {
-                    for def in metadata::type_def_vtables(row) {
-                        if let metadata::Type::TypeDef(def, _) = def {
-                            cfg.add_feature(def.namespace());
-                        }
+                fn combine(writer: &Writer, def: metadata::TypeDef, generics: &[metadata::Type], cfg: &mut Cfg) {
+                    type_def_cfg_combine(writer, def, generics, cfg);
+
+                    for method in def.methods() {
+                        signature_cfg_combine(writer, &method.signature(generics), cfg);
+                    }
+                }
+
+                combine(writer, row, generics, cfg);
+
+                for interface in metadata::type_interfaces(&metadata::Type::TypeDef(row, generics.to_vec())) {
+                    if let metadata::Type::TypeDef(row, generics) = interface.ty {
+                        combine(writer, row, &generics, cfg);
                     }
                 }
             }

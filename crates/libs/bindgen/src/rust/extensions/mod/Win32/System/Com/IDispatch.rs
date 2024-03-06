@@ -1,3 +1,4 @@
+#[cfg(all(feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl From<IDispatch> for windows_core::VARIANT {
     fn from(value: IDispatch) -> Self {
         unsafe {
@@ -16,6 +17,7 @@ impl From<IDispatch> for windows_core::VARIANT {
     }
 }
 
+#[cfg(all(feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl From<IDispatch> for windows_core::PROPVARIANT {
     fn from(value: IDispatch) -> Self {
         unsafe {
@@ -34,6 +36,7 @@ impl From<IDispatch> for windows_core::PROPVARIANT {
     }
 }
 
+#[cfg(all(feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl TryFrom<&windows_core::VARIANT> for IDispatch {
     type Error = windows_core::Error;
     fn try_from(from: &windows_core::VARIANT) -> windows_core::Result<Self> {
@@ -49,6 +52,7 @@ impl TryFrom<&windows_core::VARIANT> for IDispatch {
     }
 }
 
+#[cfg(all(feature = "Win32_System_Ole", feature = "Win32_System_Variant"))]
 impl TryFrom<&windows_core::PROPVARIANT> for IDispatch {
     type Error = windows_core::Error;
     fn try_from(from: &windows_core::PROPVARIANT) -> windows_core::Result<Self> {
