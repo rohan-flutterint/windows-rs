@@ -3,29 +3,20 @@ use metadata::{AsRow, HasAttributes};
 
 #[derive(Default, Clone)]
 pub struct Cfg {
-    pub types: std::collections::BTreeMap<&'static str, std::collections::BTreeSet<metadata::TypeDef>>,
+    pub types: std::collections::BTreeMap<metadata::CowStr, std::collections::BTreeSet<metadata::TypeDef>>,
     pub core_types: std::collections::BTreeSet<metadata::Type>,
     pub arches: std::collections::BTreeSet<&'static str>,
 }
 
 impl Cfg {
     pub fn add_feature(&mut self, feature: &'static str) {
-        self.types.entry(feature).or_default();
+        self.types.entry(metadata::CowStr::Borrowed(feature)).or_default();
     }
-    pub fn union(&self, other: &Self) -> Self {
-        let mut union = Self::default();
-        self.types.keys().for_each(|feature| {
-            union.types.entry(feature).or_default();
-        });
-        other.types.keys().for_each(|feature| {
-            union.types.entry(feature).or_default();
-        });
-        self.arches.iter().for_each(|arch| {
-            union.arches.insert(arch);
-        });
-        other.arches.iter().for_each(|arch| {
-            union.arches.insert(arch);
-        });
+    pub fn union(&self, mut other: Self) -> Self {
+        let mut union = self.clone();
+        union.types.append(&mut other.types);
+        union.core_types.append(&mut other.core_types);
+        union.arches.append(&mut other.arches);
         union
     }
 }
@@ -80,7 +71,7 @@ pub fn type_def_cfg_combine(writer: &Writer, row: metadata::TypeDef, generics: &
         type_cfg_combine(writer, generic, cfg);
     }
 
-    if cfg.types.entry(type_name.namespace()).or_default().insert(row) {
+    if cfg.types.entry(type_name.namespace().clone()).or_default().insert(row) {
         match type_kind {
             metadata::TypeKind::Class => {
                 if let Some(default_interface) = metadata::type_def_default_interface(row) {
@@ -99,7 +90,7 @@ pub fn type_def_cfg_combine(writer: &Writer, row: metadata::TypeDef, generics: &
             metadata::TypeKind::Struct => {
                 row.fields().for_each(|field| field_cfg_combine(writer, field, Some(row), cfg));
                 if !type_name.namespace().is_empty() {
-                    for def in row.reader().get_type_def(type_name.namespace(), type_name.name()) {
+                    for def in row.reader().get_type_def(&type_name) {
                         if def != row {
                             type_def_cfg_combine(writer, def, &[], cfg);
                         }

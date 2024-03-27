@@ -137,7 +137,7 @@ fn constant(def: metadata::Field) -> Option<String> {
     def.find_attribute("ConstantAttribute").map(|attribute| {
         let args = attribute.args();
         match &args[0].1 {
-            metadata::Value::String(value) => value.clone(),
+            metadata::Value::String(value) => value.to_string(),
             rest => unimplemented!("{rest:?}"),
         }
     })

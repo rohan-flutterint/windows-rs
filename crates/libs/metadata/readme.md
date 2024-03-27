@@ -26,7 +26,7 @@ fn main() {
 
     let reader = Reader::new(vec![file]);
 
-    for def in reader.get_type_def("Windows.Foundation", "IAsyncInfo") {
+    for def in reader.get_type_def(&TypeName::new("Windows.Foundation", "IAsyncInfo")) {
         println!("{}", def.name());
 
         for method in def.methods() {

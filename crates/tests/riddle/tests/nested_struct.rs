@@ -7,7 +7,7 @@ fn test() {
     let reader = Reader::new(files);
 
     let def = reader
-        .get_type_def("Test", "Inner")
+        .get_type_def(&TypeName::new("Test", "Inner"))
         .next()
         .expect("Type missing");
 
@@ -18,7 +18,7 @@ fn test() {
     assert!(matches!(fields[0].ty(None), Type::I32));
 
     let def = reader
-        .get_type_def("Test", "Outer")
+        .get_type_def(&TypeName::new("Test", "Outer"))
         .next()
         .expect("Type missing");
 

@@ -311,17 +311,17 @@ fn size() {
     );
 }
 
-fn function_size(reader: &Reader, namespace: &str, name: &str) -> usize {
+fn function_size(reader: &Reader, namespace: &'static str, name: &'static str) -> usize {
     let (method, _) = reader
-        .get_method_def(namespace, name)
+        .get_method_def(&TypeName::new(namespace, name))
         .next()
         .expect("Function not found");
     method.signature(&[]).size()
 }
 
-fn struct_size(reader: &Reader, namespace: &str, name: &str) -> usize {
+fn struct_size(reader: &Reader, namespace: &'static str, name: &'static str) -> usize {
     let def = reader
-        .get_type_def(namespace, name)
+        .get_type_def(&TypeName::new(namespace, name))
         .next()
         .expect("Type not found");
     def.size()

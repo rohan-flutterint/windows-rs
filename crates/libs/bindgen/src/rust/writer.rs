@@ -412,8 +412,8 @@ impl Writer {
         quote! { #arch #features }
     }
 
-    fn cfg_features_imp(&self, cfg: &cfg::Cfg, namespace: &str) -> Vec<&'static str> {
-        let mut compact = Vec::<&'static str>::new();
+    fn cfg_features_imp(&self, cfg: &cfg::Cfg, namespace: &str) -> Vec<String> {
+        let mut compact = Vec::<String>::new();
         if self.package {
             for feature in cfg.types.keys() {
                 if !feature.is_empty() && !starts_with(namespace, feature) && !is_defaulted_foundation_feature(namespace, feature) {
@@ -423,7 +423,7 @@ impl Writer {
                             break;
                         }
                     }
-                    compact.push(feature);
+                    compact.push(feature.to_string());
                 }
             }
         }
@@ -1209,7 +1209,7 @@ fn const_ptrs(pointers: usize) -> TokenStream {
 }
 
 pub fn cfg_features(cfg: &cfg::Cfg) -> Vec<String> {
-    let mut compact = Vec::<&'static str>::new();
+    let mut compact = Vec::<String>::new();
     for feature in cfg.types.keys() {
         if !feature.is_empty() {
             for pos in 0..compact.len() {
@@ -1218,13 +1218,13 @@ pub fn cfg_features(cfg: &cfg::Cfg) -> Vec<String> {
                     break;
                 }
             }
-            compact.push(feature);
+            compact.push(feature.to_string());
         }
     }
     compact.into_iter().map(to_feature).collect()
 }
 
-fn to_feature(name: &str) -> String {
+fn to_feature(name: String) -> String {
     let mut feature = String::new();
 
     for name in name.split('.').skip(1) {

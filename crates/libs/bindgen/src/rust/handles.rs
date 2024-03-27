@@ -111,7 +111,8 @@ pub fn gen_win_handle(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
 fn type_def_usable_for(row: metadata::TypeDef) -> Option<metadata::TypeDef> {
     if let Some(attribute) = row.find_attribute("AlsoUsableForAttribute") {
         if let Some((_, metadata::Value::String(name))) = attribute.args().first() {
-            return row.reader().get_type_def(row.namespace(), name.as_str()).next();
+            let type_name = metadata::TypeName::owned(row.namespace(), name.as_str());
+            return row.reader().get_type_def(&type_name).next();
         }
     }
     None

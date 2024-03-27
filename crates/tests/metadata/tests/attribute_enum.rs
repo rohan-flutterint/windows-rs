@@ -6,7 +6,7 @@ fn attribute_enum() {
     let reader = Reader::new(files);
 
     let (method, _) = reader
-        .get_method_def("Windows.Win32.UI.WindowsAndMessaging", "SetWindowLongPtrA")
+        .get_method_def(&TypeName::new("Windows.Win32.UI.WindowsAndMessaging", "SetWindowLongPtrA"))
         .next()
         .unwrap();
 
@@ -21,7 +21,7 @@ fn attribute_enum() {
 
     // The only attribute currently with a named enum argument is "GCPressure".
     let def = reader
-        .get_type_def("Windows.Graphics.Imaging", "BitmapBuffer")
+        .get_type_def(&TypeName::new("Windows.Graphics.Imaging", "BitmapBuffer"))
         .next()
         .unwrap();
 

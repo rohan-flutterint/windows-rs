@@ -119,21 +119,21 @@ impl Reader {
         true
     }
 
-    fn get_item(&self, namespace: &str, name: &str) -> impl Iterator<Item = Item> + '_ {
-        if let Some(items) = self.items.get(namespace) {
-            if let Some(items) = items.get(name) {
+    fn get_item(&self, type_name: &TypeName) -> impl Iterator<Item = Item> + '_ {
+        if let Some(items) = self.items.get(type_name.namespace().as_str()) {
+            if let Some(items) = items.get(type_name.name().as_str()) {
                 return Some(items.iter().cloned()).into_iter().flatten();
             }
         }
         None.into_iter().flatten()
     }
 
-    pub fn get_type_def(&self, namespace: &str, name: &str) -> impl Iterator<Item = TypeDef> + '_ {
-        self.get_item(namespace, name).filter_map(|item| if let Item::Type(def) = item { Some(def) } else { None })
+    pub fn get_type_def(&self, type_name: &TypeName) -> impl Iterator<Item = TypeDef> + '_ {
+        self.get_item(type_name).filter_map(|item| if let Item::Type(def) = item { Some(def) } else { None })
     }
 
-    pub fn get_method_def(&self, namespace: &str, name: &str) -> impl Iterator<Item = (MethodDef, &'static str)> + '_ {
-        self.get_item(namespace, name).filter_map(|item| if let Item::Fn(def, namespace) = item { Some((def, namespace)) } else { None })
+    pub fn get_method_def(&self, type_name: &TypeName) -> impl Iterator<Item = (MethodDef, &'static str)> + '_ {
+        self.get_item(type_name).filter_map(|item| if let Item::Fn(def, namespace) = item { Some((def, namespace)) } else { None })
     }
 
     pub fn nested_types(&self, type_def: TypeDef) -> impl Iterator<Item = TypeDef> + '_ {
@@ -176,7 +176,7 @@ impl Reader {
         if let Some(outer) = enclosing {
             if full_name.namespace().is_empty() {
                 let nested = &self.nested[&outer];
-                let Some(inner) = nested.get(full_name.name()) else {
+                let Some(inner) = nested.get(full_name.name().as_str()) else {
                     panic!("Nested type not found: {}.{}", outer.type_name(), full_name.name());
                 };
                 return Type::TypeDef(*inner, Vec::new());
@@ -184,7 +184,7 @@ impl Reader {
         }
 
         // TODO: this needs to just return a TypeRef and avoid resolving as its too early to bake in the type
-        if let Some(def) = self.get_type_def(full_name.namespace(), full_name.name()).next() {
+        if let Some(def) = self.get_type_def(&full_name).next() {
             Type::TypeDef(def, Vec::new())
         } else {
             Type::TypeRef(full_name)
@@ -249,7 +249,7 @@ impl Reader {
                 blob.read_usize(); // ELEMENT_TYPE_VALUETYPE or ELEMENT_TYPE_CLASS
 
                 let type_name = TypeDefOrRef::decode(blob.file, blob.read_usize()).type_name();
-                let def = self.get_type_def(type_name.namespace(), type_name.name()).next().unwrap_or_else(|| panic!("Type not found: {}", type_name));
+                let def = self.get_type_def(&type_name).next().unwrap_or_else(|| panic!("Type not found: {}", type_name));
                 let mut args = Vec::with_capacity(blob.read_usize());
 
                 for _ in 0..args.capacity() {

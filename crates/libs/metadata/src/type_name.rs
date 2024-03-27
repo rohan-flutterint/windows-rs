@@ -1,9 +1,12 @@
 #![allow(non_upper_case_globals)]
 
+use super::*;
+
 #[derive(Clone, Debug, Hash, PartialEq, Eq, Ord, PartialOrd)]
 pub struct TypeName {
-    namespace: &'static str,
-    name: &'static str,
+    namespace: CowStr,
+    name: CowStr,
+    nested: CowStr,
 }
 
 impl TypeName {
@@ -53,7 +56,11 @@ impl TypeName {
     pub const PROPVARIANT: Self = Self::new("Windows.Win32.System.Com.StructuredStorage", "PROPVARIANT");
 
     pub const fn new(namespace: &'static str, name: &'static str) -> Self {
-        Self { namespace, name }
+        Self { namespace: CowStr::Borrowed(namespace), name: CowStr::Borrowed(name), nested: CowStr::Borrowed("") }
+    }
+
+    pub fn owned(namespace: &str, name: &str) -> Self {
+        Self { namespace: CowStr::Owned(namespace.to_string()), name: CowStr::Owned(name.to_string()), nested: CowStr::Borrowed("") }
     }
 
     pub fn parse(full_name: &'static str) -> Self {
@@ -61,12 +68,12 @@ impl TypeName {
         Self::new(&full_name[0..index], &full_name[index + 1..])
     }
 
-    pub fn namespace(&self) -> &'static str {
-        self.namespace
+    pub fn namespace(&self) -> &CowStr {
+        &self.namespace
     }
 
-    pub fn name(&self) -> &'static str {
-        self.name
+    pub fn name(&self) -> &CowStr {
+        &self.name
     }
 }
 

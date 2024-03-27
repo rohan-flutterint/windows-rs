@@ -7,7 +7,7 @@ fn test() {
     let reader = Reader::new(files);
 
     let def = reader
-        .get_type_def("Test", "Type")
+        .get_type_def(&TypeName::new("Test", "Type"))
         .next()
         .expect("Type missing");
 
