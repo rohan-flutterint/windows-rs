@@ -173,7 +173,7 @@ impl Writer {
                     quote! { #crate_name IUnknown }
                 }
             }
-            metadata::Type::HRESULT => {
+            metadata::Type::TypeRef(metadata::TypeName::HResult) => {
                 let crate_name = self.crate_name();
                 quote! { #crate_name HRESULT }
             }

@@ -18,13 +18,16 @@ pub enum Type {
     F64,
     ISize,
     USize,
-
-    // System types
-    GUID,         // Both Win32 and WinRT agree that this is represented by System.Guid
     String,       // TODO: Win32 should use System.String when referring to an HSTRING
     IInspectable, // TODO: Win32 should use System.Object when referring to an IInspectable
     Type,         // System.Type is needed since WinRT attribute use this as a parameter type.
 
+    // TODO: these should not be "special" and just point to regular metadata types in Win32.Foundation
+    PSTR,
+    PWSTR,
+    PCSTR,
+    PCWSTR,
+    
     // Regular ECMA-335 types that map to metadata
     TypeRef(TypeName),
     GenericParam(GenericParam),
@@ -40,14 +43,6 @@ pub enum Type {
 
     // TODO: temporary hack to accommodate Win32 metadata
     PrimitiveOrEnum(Box<Self>, Box<Self>),
-
-    // TODO: these should not be "special" and just point to regular metadata types in Win32.Foundation
-    HRESULT,  // TODO: Win32 should use Windows.Foundation.HResult when referring to HRESULT
-    IUnknown, // TODO: should be defined in Windows.Win32.Foundation.IUnknown
-    PSTR,
-    PWSTR,
-    PCSTR,
-    PCWSTR,
 }
 
 impl Type {

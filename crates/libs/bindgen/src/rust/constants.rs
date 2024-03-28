@@ -80,7 +80,7 @@ pub fn writer(writer: &Writer, def: metadata::Field) -> TokenStream {
 
 fn is_signed_error(ty: &metadata::Type) -> bool {
     match ty {
-        metadata::Type::HRESULT => true,
+        metadata::Type::TypeRef(metadata::TypeName::HResult) => true,
         metadata::Type::TypeDef(def, _) => def.type_name() == metadata::TypeName::NTSTATUS,
         _ => false,
     }
@@ -200,7 +200,7 @@ fn field_is_ansi(row: metadata::Field) -> bool {
 
 fn type_has_replacement(ty: &metadata::Type) -> bool {
     match ty {
-        metadata::Type::HRESULT | metadata::Type::PCSTR | metadata::Type::PCWSTR => true,
+        metadata::Type::TypeRef(metadata::TypeName::HResult) | metadata::Type::PCSTR | metadata::Type::PCWSTR => true,
         metadata::Type::TypeDef(row, _) => metadata::type_def_is_handle(*row) || row.kind() == metadata::TypeKind::Enum,
         _ => false,
     }
@@ -209,7 +209,7 @@ fn type_has_replacement(ty: &metadata::Type) -> bool {
 fn type_underlying_type(ty: &metadata::Type) -> metadata::Type {
     match ty {
         metadata::Type::TypeDef(row, _) => row.underlying_type(),
-        metadata::Type::HRESULT => metadata::Type::I32,
+        metadata::Type::TypeRef(metadata::TypeName::HResult) => metadata::Type::I32,
         _ => ty.clone(),
     }
 }

@@ -157,7 +157,7 @@ impl Signature {
         match &self.return_type {
             Type::Void if self.is_retval() => SignatureKind::ReturnValue,
             Type::Void => SignatureKind::ReturnVoid,
-            Type::HRESULT => {
+            Type::TypeRef(TypeName::HResult) => {
                 if self.params.len() >= 2 {
                     if let Some((guid, object)) = signature_param_is_query(&self.params) {
                         if self.params[object].def.flags().contains(ParamAttributes::Optional) {
@@ -574,7 +574,7 @@ fn type_def_is_primitive(row: TypeDef) -> bool {
 pub fn type_is_primitive(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => type_def_is_primitive(*row),
-        Type::Bool | Type::Char | Type::I8 | Type::U8 | Type::I16 | Type::U16 | Type::I32 | Type::U32 | Type::I64 | Type::U64 | Type::F32 | Type::F64 | Type::ISize | Type::USize | Type::HRESULT | Type::ConstPtr(_, _) | Type::MutPtr(_, _) => true,
+        Type::Bool | Type::Char | Type::I8 | Type::U8 | Type::I16 | Type::U16 | Type::I32 | Type::U32 | Type::I64 | Type::U64 | Type::F32 | Type::F64 | Type::ISize | Type::USize | Type::TypeRef(TypeName::HResult) | Type::ConstPtr(_, _) | Type::MutPtr(_, _) => true,
         _ => false,
     }
 }
@@ -678,7 +678,7 @@ fn type_signature(ty: &Type) -> String {
         Type::IInspectable => "cinterface(IInspectable)".to_string(),
         Type::TypeRef(TypeName::GUID) => "g16".to_string(),
         // TODO: ideally this doesn't need a special case
-        Type::HRESULT => "struct(Windows.Foundation.HResult;i4)".to_string(),
+        Type::TypeRef(TypeName::HResult) => "struct(Windows.Foundation.HResult;i4)".to_string(),
         Type::TypeDef(row, generics) => type_def_signature(*row, generics),
         rest => unimplemented!("{rest:?}"),
     }
