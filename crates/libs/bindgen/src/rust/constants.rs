@@ -62,7 +62,7 @@ pub fn writer(writer: &Writer, def: metadata::Field) -> TokenStream {
         }
     } else if let Some(guid) = field_guid(def) {
         let value = writer.guid(&guid);
-        let guid = writer.type_name(&metadata::Type::GUID);
+        let guid = writer.type_name(&metadata::Type::TypeRef(metadata::TypeName::GUID));
         quote! {
             pub const #name: #guid = #value;
         }
@@ -109,7 +109,7 @@ fn field_initializer<'a>(writer: &Writer, field: metadata::Field, input: &'a str
     let name = to_ident(field.name());
 
     match field.ty(None) {
-        metadata::Type::GUID => {
+        metadata::Type::TypeRef(metadata::TypeName::GUID) => {
             let (literals, rest) = read_literal_array(input, 11);
             let value = writer.guid(&metadata::Guid::from_string_args(&literals));
             (quote! { #name: #value, }, rest)

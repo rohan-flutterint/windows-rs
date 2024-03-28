@@ -357,7 +357,7 @@ fn param_or_enum(row: Param) -> Option<String> {
 }
 
 fn signature_param_is_query(params: &[SignatureParam]) -> Option<(usize, usize)> {
-    if let Some(guid) = params.iter().rposition(|param| param.ty == Type::ConstPtr(Box::new(Type::GUID), 1) && !param.def.flags().contains(ParamAttributes::Out)) {
+    if let Some(guid) = params.iter().rposition(|param| param.ty == Type::ConstPtr(Box::new(Type::TypeRef(TypeName::GUID)), 1) && !param.def.flags().contains(ParamAttributes::Out)) {
         if let Some(object) = params.iter().rposition(|param| param.ty == Type::MutPtr(Box::new(Type::Void), 2) && param.def.has_attribute("ComOutPtrAttribute")) {
             return Some((guid, object));
         }
@@ -557,7 +557,7 @@ pub fn type_is_struct(ty: &Type) -> bool {
     // nested structs. Fortunately, this is rare enough that this check is sufficient.
     match ty {
         Type::TypeDef(row, _) => row.kind() == TypeKind::Struct && !type_def_is_handle(*row),
-        Type::GUID => true,
+        Type::TypeRef(TypeName::GUID) => true,
         _ => false,
     }
 }
@@ -676,7 +676,7 @@ fn type_signature(ty: &Type) -> String {
         Type::USize => "us".to_string(),
         Type::String => "string".to_string(),
         Type::IInspectable => "cinterface(IInspectable)".to_string(),
-        Type::GUID => "g16".to_string(),
+        Type::TypeRef(TypeName::GUID) => "g16".to_string(),
         // TODO: ideally this doesn't need a special case
         Type::HRESULT => "struct(Windows.Foundation.HResult;i4)".to_string(),
         Type::TypeDef(row, generics) => type_def_signature(*row, generics),

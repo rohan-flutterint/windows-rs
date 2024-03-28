@@ -340,7 +340,7 @@ impl Writer {
             // TODO: dialect-specific keywords for "well-known types" that don't map to metadata in all cases.
             metadata::Type::String => quote! { HSTRING },
             metadata::Type::HRESULT => quote! { HRESULT },
-            metadata::Type::GUID => quote! { GUID },
+            metadata::Type::TypeRef(metadata::TypeName::GUID) => quote! { GUID },
             metadata::Type::IInspectable => quote! { IInspectable },
             metadata::Type::IUnknown => quote! { IUnknown },
             metadata::Type::TypeRef(metadata::TypeName::BSTR) => quote! { BSTR },

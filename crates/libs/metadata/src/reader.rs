@@ -266,7 +266,7 @@ const REMAP_TYPES: [(TypeName, TypeName); 3] = [(TypeName::D2D_MATRIX_3X2_F, Typ
 // then we can get rid of the second tuple
 
 const CORE_TYPES: [(TypeName, Type); 12] = [
-    (TypeName::GUID, Type::GUID),
+    (TypeName::GUID, Type::TypeRef(TypeName::GUID)),
     (TypeName::IUnknown, Type::IUnknown),
     (TypeName::HResult, Type::HRESULT), // TODO: move to REMAP_TYPES
     (TypeName::HSTRING, Type::String),
@@ -279,4 +279,4 @@ const CORE_TYPES: [(TypeName, Type); 12] = [
     (TypeName::VARIANT, Type::TypeRef(TypeName::VARIANT)),
     (TypeName::PROPVARIANT, Type::TypeRef(TypeName::PROPVARIANT)),
 ];
-const SYS_CORE_TYPES: [(TypeName, Type); 10] = [(TypeName::GUID, Type::GUID), (TypeName::IUnknown, Type::IUnknown), (TypeName::HResult, Type::HRESULT), (TypeName::HSTRING, Type::String), (TypeName::BSTR, Type::TypeRef(TypeName::BSTR)), (TypeName::IInspectable, Type::IInspectable), (TypeName::PSTR, Type::PSTR), (TypeName::PWSTR, Type::PWSTR), (TypeName::Type, Type::Type), (TypeName::CHAR, Type::I8)];
+const SYS_CORE_TYPES: [(TypeName, Type); 10] = [(TypeName::GUID, Type::TypeRef(TypeName::GUID)), (TypeName::IUnknown, Type::IUnknown), (TypeName::HResult, Type::HRESULT), (TypeName::HSTRING, Type::String), (TypeName::BSTR, Type::TypeRef(TypeName::BSTR)), (TypeName::IInspectable, Type::IInspectable), (TypeName::PSTR, Type::PSTR), (TypeName::PWSTR, Type::PWSTR), (TypeName::Type, Type::Type), (TypeName::CHAR, Type::I8)];

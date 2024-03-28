@@ -166,7 +166,7 @@ fn value_blob(value: &metadata::Value, blob: &mut Vec<u8>) {
     }
 }
 
-// TODO: keep the basic type conversion
+// TODO: this should be able to reuse the metadata Type now and avoid this mapping entirely
 fn winmd_type(ty: &metadata::Type) -> Type {
     match ty {
         metadata::Type::Void => Type::Void,
@@ -185,7 +185,7 @@ fn winmd_type(ty: &metadata::Type) -> Type {
         metadata::Type::ISize => Type::ISize,
         metadata::Type::USize => Type::USize,
         metadata::Type::String => Type::String,
-        metadata::Type::GUID => Type::GUID,
+        metadata::Type::TypeRef(metadata::TypeName::GUID) => Type::GUID,
         metadata::Type::IUnknown => Type::IUnknown,
         metadata::Type::IInspectable => Type::IInspectable,
         metadata::Type::HRESULT => Type::HRESULT,

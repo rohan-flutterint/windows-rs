@@ -161,7 +161,7 @@ impl Writer {
                     quote! { #crate_name IInspectable }
                 }
             }
-            metadata::Type::GUID => {
+            metadata::Type::TypeRef(metadata::TypeName::GUID) => {
                 let crate_name = self.crate_name();
                 quote! { #crate_name GUID }
             }
@@ -557,7 +557,7 @@ impl Writer {
     }
 
     pub fn guid(&self, value: &metadata::Guid) -> TokenStream {
-        let guid = self.type_name(&metadata::Type::GUID);
+        let guid = self.type_name(&metadata::Type::TypeRef(metadata::TypeName::GUID));
         format!("{}::from_u128(0x{:08x?}_{:04x?}_{:04x?}_{:02x?}{:02x?}_{:02x?}{:02x?}{:02x?}{:02x?}{:02x?}{:02x?})", guid.into_string(), value.0, value.1, value.2, value.3, value.4, value.5, value.6, value.7, value.8, value.9, value.10).into()
     }
 

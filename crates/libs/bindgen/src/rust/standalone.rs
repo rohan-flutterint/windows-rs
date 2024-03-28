@@ -59,7 +59,7 @@ pub fn standalone_imp(writer: &Writer) -> String {
             metadata::Type::PCSTR if writer.sys => sorted.insert("PCSTR", quote! { pub type PCSTR = *const u8; }),
             metadata::Type::PCWSTR if writer.sys => sorted.insert("PCWSTR", quote! { pub type PCWSTR = *const u16; }),
             metadata::Type::TypeRef(metadata::TypeName::BSTR) if writer.sys => sorted.insert("BSTR", quote! { pub type BSTR = *const u16; }),
-            metadata::Type::GUID if writer.sys => {
+            metadata::Type::TypeRef(metadata::TypeName::GUID) if writer.sys => {
                 sorted.insert(
                     "GUID",
                     quote! {
@@ -134,7 +134,7 @@ fn type_collect_standalone(writer: &Writer, ty: &metadata::Type, set: &mut std::
     if writer.vtbl {
         match ty {
             metadata::Type::IUnknown => {
-                set.insert(metadata::Type::GUID);
+                set.insert(metadata::Type::TypeRef(metadata::TypeName::GUID));
                 set.insert(metadata::Type::HRESULT);
             }
             metadata::Type::IInspectable => type_collect_standalone(writer, &metadata::Type::IUnknown, set),
@@ -193,7 +193,7 @@ fn type_collect_standalone(writer: &Writer, ty: &metadata::Type, set: &mut std::
     match def.kind() {
         metadata::TypeKind::Struct => {
             if def.fields().next().is_none() && metadata::type_def_guid(def).is_some() {
-                set.insert(metadata::Type::GUID);
+                set.insert(metadata::Type::TypeRef(metadata::TypeName::GUID));
             }
         }
         metadata::TypeKind::Interface => {
