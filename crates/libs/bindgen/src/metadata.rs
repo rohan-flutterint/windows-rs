@@ -677,6 +677,7 @@ fn type_signature(ty: &Type) -> String {
         Type::String => "string".to_string(),
         Type::IInspectable => "cinterface(IInspectable)".to_string(),
         Type::GUID => "g16".to_string(),
+        // TODO: ideally this doesn't need a special case
         Type::HRESULT => "struct(Windows.Foundation.HResult;i4)".to_string(),
         Type::TypeDef(row, generics) => type_def_signature(*row, generics),
         rest => unimplemented!("{rest:?}"),
