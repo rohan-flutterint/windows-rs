@@ -193,7 +193,6 @@ fn winmd_type(ty: &metadata::Type) -> Type {
         metadata::Type::PWSTR => Type::PWSTR,
         metadata::Type::PCSTR => Type::PCSTR,
         metadata::Type::PCWSTR => Type::PCWSTR,
-        metadata::Type::BSTR => Type::BSTR,
         metadata::Type::Type => Type::Type,
         metadata::Type::TypeDef(def, generics) => Type::TypeRef(TypeName { namespace: def.namespace().to_string(), name: def.name().to_string(), generics: generics.iter().map(winmd_type).collect() }),
         metadata::Type::GenericParam(generic) => Type::GenericParam(generic.number()),
