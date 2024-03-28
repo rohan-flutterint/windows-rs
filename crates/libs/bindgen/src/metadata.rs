@@ -377,7 +377,7 @@ fn method_def_last_error(row: MethodDef) -> bool {
 pub fn type_is_borrowed(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => !type_def_is_blittable(*row),
-        Type::TypeRef(TypeName::BSTR) | Type::TypeRef(TypeName::VARIANT) | Type::TypeRef(TypeName::PROPVARIANT) | Type::PCSTR | Type::PCWSTR | Type::IInspectable | Type::IUnknown | Type::GenericParam(_) => true,
+        Type::TypeRef(TypeName::BSTR) | Type::TypeRef(TypeName::VARIANT) | Type::TypeRef(TypeName::PROPVARIANT) | Type::PCSTR | Type::PCWSTR | Type::IInspectable | Type::TypeRef(TypeName::IUnknown) | Type::GenericParam(_) => true,
         _ => false,
     }
 }
@@ -506,7 +506,7 @@ pub fn field_is_copyable(row: Field, enclosing: TypeDef) -> bool {
 pub fn type_is_blittable(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => type_def_is_blittable(*row),
-        Type::String | Type::TypeRef(TypeName::BSTR) | Type::TypeRef(TypeName::VARIANT) | Type::TypeRef(TypeName::PROPVARIANT) | Type::IInspectable | Type::IUnknown | Type::GenericParam(_) => false,
+        Type::String | Type::TypeRef(TypeName::BSTR) | Type::TypeRef(TypeName::VARIANT) | Type::TypeRef(TypeName::PROPVARIANT) | Type::IInspectable | Type::TypeRef(TypeName::IUnknown) | Type::GenericParam(_) => false,
         Type::Win32Array(kind, _) => type_is_blittable(kind),
         Type::WinrtArray(kind) => type_is_blittable(kind),
         _ => true,
@@ -516,7 +516,7 @@ pub fn type_is_blittable(ty: &Type) -> bool {
 fn type_is_copyable(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => type_def_is_copyable(*row),
-        Type::String | Type::TypeRef(TypeName::BSTR) | Type::TypeRef(TypeName::VARIANT) | Type::TypeRef(TypeName::PROPVARIANT) | Type::IInspectable | Type::IUnknown | Type::GenericParam(_) => false,
+        Type::String | Type::TypeRef(TypeName::BSTR) | Type::TypeRef(TypeName::VARIANT) | Type::TypeRef(TypeName::PROPVARIANT) | Type::IInspectable | Type::TypeRef(TypeName::IUnknown) | Type::GenericParam(_) => false,
         Type::Win32Array(kind, _) => type_is_copyable(kind),
         Type::WinrtArray(kind) => type_is_copyable(kind),
         _ => true,
@@ -776,7 +776,7 @@ fn type_def_is_nullable(row: TypeDef) -> bool {
 pub fn type_is_nullable(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => type_def_is_nullable(*row),
-        Type::IInspectable | Type::IUnknown => true,
+        Type::IInspectable | Type::TypeRef(TypeName::IUnknown) => true,
         _ => false,
     }
 }
@@ -784,7 +784,7 @@ pub fn type_is_nullable(ty: &Type) -> bool {
 pub fn type_def_vtables(row: TypeDef) -> Vec<Type> {
     let mut result = Vec::new();
     if row.flags().contains(TypeAttributes::WindowsRuntime) {
-        result.push(Type::IUnknown);
+        result.push(Type::TypeRef(TypeName::IUnknown));
         if row.kind() != TypeKind::Delegate {
             result.push(Type::IInspectable);
         }
@@ -797,12 +797,12 @@ pub fn type_def_vtables(row: TypeDef) -> Vec<Type> {
                     result.insert(0, base);
                 }
                 Type::IInspectable => {
-                    result.insert(0, Type::IUnknown);
+                    result.insert(0, Type::TypeRef(TypeName::IUnknown));
                     result.insert(1, Type::IInspectable);
                     break;
                 }
-                Type::IUnknown => {
-                    result.insert(0, Type::IUnknown);
+                Type::TypeRef(TypeName::IUnknown) => {
+                    result.insert(0, Type::TypeRef(TypeName::IUnknown));
                     break;
                 }
                 rest => unimplemented!("{rest:?}"),

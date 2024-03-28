@@ -186,7 +186,7 @@ fn winmd_type(ty: &metadata::Type) -> Type {
         metadata::Type::USize => Type::USize,
         metadata::Type::String => Type::String,
         metadata::Type::TypeRef(metadata::TypeName::GUID) => Type::GUID,
-        metadata::Type::IUnknown => Type::IUnknown,
+        metadata::Type::TypeRef(metadata::TypeName::IUnknown) => Type::IUnknown,
         metadata::Type::IInspectable => Type::IInspectable,
         metadata::Type::HRESULT => Type::HRESULT,
         metadata::Type::PSTR => Type::PSTR,

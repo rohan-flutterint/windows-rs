@@ -21,7 +21,7 @@ pub fn standalone_imp(writer: &Writer) -> String {
     for ty in types {
         match ty {
             metadata::Type::HRESULT if writer.sys => sorted.insert("HRESULT", quote! { pub type HRESULT = i32; }),
-            metadata::Type::IUnknown if writer.sys => sorted.insert(
+            metadata::Type::TypeRef(metadata::TypeName::IUnknown) if writer.sys => sorted.insert(
                 "IUnknown",
                 if !writer.vtbl {
                     quote! {}
@@ -133,11 +133,11 @@ fn type_collect_standalone(writer: &Writer, ty: &metadata::Type, set: &mut std::
 
     if writer.vtbl {
         match ty {
-            metadata::Type::IUnknown => {
+            metadata::Type::TypeRef(metadata::TypeName::IUnknown) => {
                 set.insert(metadata::Type::TypeRef(metadata::TypeName::GUID));
                 set.insert(metadata::Type::HRESULT);
             }
-            metadata::Type::IInspectable => type_collect_standalone(writer, &metadata::Type::IUnknown, set),
+            metadata::Type::IInspectable => type_collect_standalone(writer, &metadata::Type::TypeRef(metadata::TypeName::IUnknown), set),
             _ => {}
         }
     }
