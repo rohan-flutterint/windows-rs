@@ -377,7 +377,7 @@ fn method_def_last_error(row: MethodDef) -> bool {
 pub fn type_is_borrowed(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => !type_def_is_blittable(*row),
-        Type::BSTR | Type::VARIANT | Type::PROPVARIANT | Type::PCSTR | Type::PCWSTR | Type::IInspectable | Type::IUnknown | Type::GenericParam(_) => true,
+        Type::BSTR | Type::TypeRef(TypeName::VARIANT) | Type::TypeRef(TypeName::PROPVARIANT) | Type::PCSTR | Type::PCWSTR | Type::IInspectable | Type::IUnknown | Type::GenericParam(_) => true,
         _ => false,
     }
 }
@@ -506,7 +506,7 @@ pub fn field_is_copyable(row: Field, enclosing: TypeDef) -> bool {
 pub fn type_is_blittable(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => type_def_is_blittable(*row),
-        Type::String | Type::BSTR | Type::VARIANT | Type::PROPVARIANT | Type::IInspectable | Type::IUnknown | Type::GenericParam(_) => false,
+        Type::String | Type::BSTR | Type::TypeRef(TypeName::VARIANT) | Type::TypeRef(TypeName::PROPVARIANT) | Type::IInspectable | Type::IUnknown | Type::GenericParam(_) => false,
         Type::Win32Array(kind, _) => type_is_blittable(kind),
         Type::WinrtArray(kind) => type_is_blittable(kind),
         _ => true,
@@ -516,7 +516,7 @@ pub fn type_is_blittable(ty: &Type) -> bool {
 fn type_is_copyable(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => type_def_is_copyable(*row),
-        Type::String | Type::BSTR | Type::VARIANT | Type::PROPVARIANT | Type::IInspectable | Type::IUnknown | Type::GenericParam(_) => false,
+        Type::String | Type::BSTR | Type::TypeRef(TypeName::VARIANT) | Type::TypeRef(TypeName::PROPVARIANT) | Type::IInspectable | Type::IUnknown | Type::GenericParam(_) => false,
         Type::Win32Array(kind, _) => type_is_copyable(kind),
         Type::WinrtArray(kind) => type_is_copyable(kind),
         _ => true,

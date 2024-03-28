@@ -6,7 +6,10 @@ fn attribute_enum() {
     let reader = Reader::new(files);
 
     let (method, _) = reader
-        .get_method_def(&TypeName::new("Windows.Win32.UI.WindowsAndMessaging", "SetWindowLongPtrA"))
+        .get_method_def(&TypeName::new(
+            "Windows.Win32.UI.WindowsAndMessaging",
+            "SetWindowLongPtrA",
+        ))
         .next()
         .unwrap();
 

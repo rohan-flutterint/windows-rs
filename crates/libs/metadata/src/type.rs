@@ -49,8 +49,6 @@ pub enum Type {
     PCSTR,
     PCWSTR,
     BSTR,
-    VARIANT,
-    PROPVARIANT,
 }
 
 impl Type {
