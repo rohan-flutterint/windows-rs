@@ -343,6 +343,7 @@ impl Writer {
             metadata::Type::GUID => quote! { GUID },
             metadata::Type::IInspectable => quote! { IInspectable },
             metadata::Type::IUnknown => quote! { IUnknown },
+            metadata::Type::TypeRef(metadata::TypeName::BSTR) => quote! { BSTR },
 
             metadata::Type::TypeDef(def, generics) => {
                 let namespace = self.namespace(def.namespace());
@@ -373,7 +374,6 @@ impl Writer {
             metadata::Type::PWSTR => quote! { PWSTR },
             metadata::Type::PCSTR => quote! { PCSTR },
             metadata::Type::PCWSTR => quote! { PCWSTR },
-            metadata::Type::BSTR => quote! { BSTR },
             metadata::Type::PrimitiveOrEnum(_, ty) => self.ty(ty),
             rest => unimplemented!("{rest:?}"),
         }

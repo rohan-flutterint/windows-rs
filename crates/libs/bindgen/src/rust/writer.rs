@@ -141,7 +141,7 @@ impl Writer {
                     quote! { #crate_name HSTRING }
                 }
             }
-            metadata::Type::BSTR => {
+            metadata::Type::TypeRef(metadata::TypeName::BSTR) => {
                 let crate_name = self.crate_name();
                 quote! { #crate_name BSTR }
             }
@@ -248,7 +248,7 @@ impl Writer {
             metadata::Type::String => {
                 quote! { std::mem::MaybeUninit<windows_core::HSTRING> }
             }
-            metadata::Type::BSTR => {
+            metadata::Type::TypeRef(metadata::TypeName::BSTR) => {
                 quote! { std::mem::MaybeUninit<windows_core::BSTR> }
             }
             metadata::Type::TypeRef(metadata::TypeName::VARIANT) => {

@@ -266,14 +266,16 @@ impl Reader {
 // TODO: this should be in riddle's Rust generator if at all - perhaps as convertible types rather than remapped types since there's already some precedent for that.
 const REMAP_TYPES: [(TypeName, TypeName); 2] = [(TypeName::D2D_MATRIX_3X2_F, TypeName::Matrix3x2), (TypeName::D3DMATRIX, TypeName::Matrix4x4)];
 
-// TODO: get rid of at least the second tuple if not the whole thing.
+// TODO: core types should be provided by bindgen and should just produce a Type::TypeRef(TypeName)
+// then we can get rid of the second tuple
+
 const CORE_TYPES: [(TypeName, Type); 13] = [
     (TypeName::GUID, Type::GUID),
     (TypeName::IUnknown, Type::IUnknown),
-    (TypeName::HResult, Type::HRESULT),
+    (TypeName::HResult, Type::HRESULT), // TODO: move to REMAP_TYPES
     (TypeName::HRESULT, Type::HRESULT),
     (TypeName::HSTRING, Type::String),
-    (TypeName::BSTR, Type::BSTR),
+    (TypeName::BSTR, Type::TypeRef(TypeName::BSTR)),
     (TypeName::IInspectable, Type::IInspectable),
     (TypeName::PSTR, Type::PSTR),
     (TypeName::PWSTR, Type::PWSTR),
@@ -282,4 +284,4 @@ const CORE_TYPES: [(TypeName, Type); 13] = [
     (TypeName::VARIANT, Type::TypeRef(TypeName::VARIANT)),
     (TypeName::PROPVARIANT, Type::TypeRef(TypeName::PROPVARIANT)),
 ];
-const SYS_CORE_TYPES: [(TypeName, Type); 11] = [(TypeName::GUID, Type::GUID), (TypeName::IUnknown, Type::IUnknown), (TypeName::HResult, Type::HRESULT), (TypeName::HRESULT, Type::HRESULT), (TypeName::HSTRING, Type::String), (TypeName::BSTR, Type::BSTR), (TypeName::IInspectable, Type::IInspectable), (TypeName::PSTR, Type::PSTR), (TypeName::PWSTR, Type::PWSTR), (TypeName::Type, Type::Type), (TypeName::CHAR, Type::I8)];
+const SYS_CORE_TYPES: [(TypeName, Type); 11] = [(TypeName::GUID, Type::GUID), (TypeName::IUnknown, Type::IUnknown), (TypeName::HResult, Type::HRESULT), (TypeName::HRESULT, Type::HRESULT), (TypeName::HSTRING, Type::String), (TypeName::BSTR, Type::TypeRef(TypeName::BSTR)), (TypeName::IInspectable, Type::IInspectable), (TypeName::PSTR, Type::PSTR), (TypeName::PWSTR, Type::PWSTR), (TypeName::Type, Type::Type), (TypeName::CHAR, Type::I8)];
