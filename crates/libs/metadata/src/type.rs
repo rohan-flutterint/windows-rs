@@ -21,14 +21,8 @@ pub enum Type {
     String,       // TODO: Win32 should use System.String when referring to an HSTRING
     IInspectable, // TODO: Win32 should use System.Object when referring to an IInspectable
 
-    // TODO: these should not be "special" and just point to regular metadata types in Win32.Foundation
-    PSTR,
-    PWSTR,
-    PCSTR,
-    PCWSTR,
-    
     Name(TypeName),
-    //Const(TypeName),
+    Const(TypeName),
     GenericParam(GenericParam), // TODO: Replace with "name"
     TypeDef(TypeDef, Vec<Self>), // TODO: Replace with TypeRef with full name
 
@@ -75,8 +69,8 @@ impl Type {
         match self {
             Self::MutPtr(kind, pointers) => Self::MutPtr(Box::new(kind.to_const_type()), pointers),
             Self::ConstPtr(kind, pointers) => Self::ConstPtr(Box::new(kind.to_const_type()), pointers),
-            Self::PSTR => Self::PCSTR,
-            Self::PWSTR => Self::PCWSTR,
+            Self::Name(TypeName::PSTR) => Self::Const(TypeName::PSTR),
+            Self::Name(TypeName::PWSTR) => Self::Const(TypeName::PWSTR),
             _ => self,
         }
     }
@@ -114,8 +108,8 @@ impl Type {
             }
             Self::ConstPtr(kind, pointers) => Self::ConstPtr(kind.clone(), pointers - 1),
             Self::MutPtr(kind, pointers) => Self::MutPtr(kind.clone(), pointers - 1),
-            Self::PSTR | Self::PCSTR => Self::U8,
-            Self::PWSTR | Self::PCWSTR => Self::U16,
+            Self::Name(TypeName::PSTR) | Self::Const(TypeName::PSTR) => Self::U8,
+            Self::Name(TypeName::PWSTR) | Self::Const(TypeName::PWSTR) => Self::U16,
             _ => panic!("`deref` can only be called on pointer types"),
         }
     }
@@ -158,7 +152,7 @@ impl Type {
     pub fn is_byte_size(&self) -> bool {
         match self {
             Type::ConstPtr(kind, _) | Type::MutPtr(kind, _) => kind.is_byte_size(),
-            Type::I8 | Type::U8 | Type::PSTR | Type::PCSTR => true,
+            Type::I8 | Type::U8 | Self::Name(TypeName::PSTR) | Self::Const(TypeName::PSTR) => true,
             _ => false,
         }
     }
