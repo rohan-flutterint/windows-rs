@@ -20,7 +20,6 @@ pub enum Type {
     USize,
     String,       // TODO: Win32 should use System.String when referring to an HSTRING
     IInspectable, // TODO: Win32 should use System.Object when referring to an IInspectable
-    Type,         // System.Type is needed since WinRT attribute use this as a parameter type.
 
     // TODO: these should not be "special" and just point to regular metadata types in Win32.Foundation
     PSTR,
@@ -28,8 +27,8 @@ pub enum Type {
     PCSTR,
     PCWSTR,
     
-    // Regular ECMA-335 types that map to metadata
     TypeRef(TypeName),
+    //Const(TypeName),
     GenericParam(GenericParam), // TODO: Replace with "name"
     TypeDef(TypeDef, Vec<Self>), // TODO: Replace with TypeRef with full name
 
