@@ -183,7 +183,7 @@ impl Reader {
         if let Some(def) = self.get_type_def(&full_name).next() {
             Type::TypeDef(def, Vec::new())
         } else {
-            Type::TypeName(full_name)
+            Type::Name(full_name)
         }
     }
 
@@ -262,21 +262,21 @@ impl Reader {
 // TODO: this should be in riddle's Rust generator if at all - perhaps as convertible types rather than remapped types since there's already some precedent for that.
 const REMAP_TYPES: [(TypeName, TypeName); 3] = [(TypeName::D2D_MATRIX_3X2_F, TypeName::Matrix3x2), (TypeName::D3DMATRIX, TypeName::Matrix4x4), (TypeName::HRESULT, TypeName::HResult)];
 
-// TODO: core types should be provided by bindgen and should just produce a Type::TypeName(TypeName)
+// TODO: core types should be provided by bindgen and should just produce a Type::Name(TypeName)
 // then we can get rid of the second tuple
 
 const CORE_TYPES: [(TypeName, Type); 12] = [
-    (TypeName::GUID, Type::TypeName(TypeName::GUID)),
-    (TypeName::IUnknown, Type::TypeName(TypeName::IUnknown)),
-    (TypeName::HResult, Type::TypeName(TypeName::HResult)),
+    (TypeName::GUID, Type::Name(TypeName::GUID)),
+    (TypeName::IUnknown, Type::Name(TypeName::IUnknown)),
+    (TypeName::HResult, Type::Name(TypeName::HResult)),
     (TypeName::HSTRING, Type::String),
-    (TypeName::BSTR, Type::TypeName(TypeName::BSTR)),
+    (TypeName::BSTR, Type::Name(TypeName::BSTR)),
     (TypeName::IInspectable, Type::IInspectable),
     (TypeName::PSTR, Type::PSTR),
     (TypeName::PWSTR, Type::PWSTR),
-    (TypeName::Type, Type::TypeName(TypeName::Type)),
+    (TypeName::Type, Type::Name(TypeName::Type)),
     (TypeName::CHAR, Type::I8),
-    (TypeName::VARIANT, Type::TypeName(TypeName::VARIANT)),
-    (TypeName::PROPVARIANT, Type::TypeName(TypeName::PROPVARIANT)),
+    (TypeName::VARIANT, Type::Name(TypeName::VARIANT)),
+    (TypeName::PROPVARIANT, Type::Name(TypeName::PROPVARIANT)),
 ];
-const SYS_CORE_TYPES: [(TypeName, Type); 9] = [(TypeName::GUID, Type::TypeName(TypeName::GUID)), (TypeName::IUnknown, Type::TypeName(TypeName::IUnknown)), (TypeName::HResult, Type::TypeName(TypeName::HResult)), (TypeName::HSTRING, Type::String), (TypeName::BSTR, Type::TypeName(TypeName::BSTR)), (TypeName::IInspectable, Type::IInspectable), (TypeName::PSTR, Type::PSTR), (TypeName::PWSTR, Type::PWSTR), (TypeName::CHAR, Type::I8)];
+const SYS_CORE_TYPES: [(TypeName, Type); 9] = [(TypeName::GUID, Type::Name(TypeName::GUID)), (TypeName::IUnknown, Type::Name(TypeName::IUnknown)), (TypeName::HResult, Type::Name(TypeName::HResult)), (TypeName::HSTRING, Type::String), (TypeName::BSTR, Type::Name(TypeName::BSTR)), (TypeName::IInspectable, Type::IInspectable), (TypeName::PSTR, Type::PSTR), (TypeName::PWSTR, Type::PWSTR), (TypeName::CHAR, Type::I8)];

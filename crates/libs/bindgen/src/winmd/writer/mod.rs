@@ -173,7 +173,7 @@ impl Writer {
                 blob.push(metadata::ELEMENT_TYPE_VALUETYPE);
                 usize_blob(code.encode() as usize, blob);
             }
-            Type::TypeName(ty) => {
+            Type::Name(ty) => {
                 if !ty.generics.is_empty() {
                     blob.push(metadata::ELEMENT_TYPE_GENERICINST);
                 }
