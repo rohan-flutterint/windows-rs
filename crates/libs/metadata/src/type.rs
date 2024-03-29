@@ -27,7 +27,7 @@ pub enum Type {
     PCSTR,
     PCWSTR,
     
-    TypeRef(TypeName),
+    TypeName(TypeName),
     //Const(TypeName),
     GenericParam(GenericParam), // TODO: Replace with "name"
     TypeDef(TypeDef, Vec<Self>), // TODO: Replace with TypeRef with full name
@@ -168,7 +168,7 @@ impl Type {
             Type::I8 | Type::U8 => 1,
             Type::I16 | Type::U16 => 2,
             Type::I64 | Type::U64 | Type::F64 => 8,
-            Type::TypeRef(TypeName::GUID) => 16,
+            Type::TypeName(TypeName::GUID) => 16,
             Type::TypeDef(def, _) => def.size(),
             Type::Win32Array(ty, len) => ty.size() * len,
             Type::PrimitiveOrEnum(ty, _) => ty.size(),
@@ -181,7 +181,7 @@ impl Type {
             Type::I8 | Type::U8 => 1,
             Type::I16 | Type::U16 => 2,
             Type::I64 | Type::U64 | Type::F64 => 8,
-            Type::TypeRef(TypeName::GUID) => 4,
+            Type::TypeName(TypeName::GUID) => 4,
             Type::TypeDef(def, _) => def.align(),
             Type::Win32Array(ty, len) => ty.align() * len,
             _ => 4,

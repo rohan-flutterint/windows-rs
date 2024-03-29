@@ -339,11 +339,11 @@ impl Writer {
 
             // TODO: dialect-specific keywords for "well-known types" that don't map to metadata in all cases.
             metadata::Type::String => quote! { HSTRING },
-            metadata::Type::TypeRef(metadata::TypeName::HResult) => quote! { HRESULT },
-            metadata::Type::TypeRef(metadata::TypeName::GUID) => quote! { GUID },
+            metadata::Type::TypeName(metadata::TypeName::HResult) => quote! { HRESULT },
+            metadata::Type::TypeName(metadata::TypeName::GUID) => quote! { GUID },
             metadata::Type::IInspectable => quote! { IInspectable },
-            metadata::Type::TypeRef(metadata::TypeName::IUnknown) => quote! { IUnknown },
-            metadata::Type::TypeRef(metadata::TypeName::BSTR) => quote! { BSTR },
+            metadata::Type::TypeName(metadata::TypeName::IUnknown) => quote! { IUnknown },
+            metadata::Type::TypeName(metadata::TypeName::BSTR) => quote! { BSTR },
 
             metadata::Type::TypeDef(def, generics) => {
                 let namespace = self.namespace(def.namespace());
@@ -356,7 +356,7 @@ impl Writer {
                 }
             }
 
-            metadata::Type::TypeRef(type_name) => {
+            metadata::Type::TypeName(type_name) => {
                 let namespace = self.namespace(type_name.namespace());
                 let name = to_ident(type_name.name());
                 quote! { #namespace #name }

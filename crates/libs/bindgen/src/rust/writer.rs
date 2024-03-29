@@ -141,15 +141,15 @@ impl Writer {
                     quote! { #crate_name HSTRING }
                 }
             }
-            metadata::Type::TypeRef(metadata::TypeName::BSTR) => {
+            metadata::Type::TypeName(metadata::TypeName::BSTR) => {
                 let crate_name = self.crate_name();
                 quote! { #crate_name BSTR }
             }
-            metadata::Type::TypeRef(metadata::TypeName::VARIANT) => {
+            metadata::Type::TypeName(metadata::TypeName::VARIANT) => {
                 let crate_name = self.crate_name();
                 quote! { #crate_name VARIANT }
             }
-            metadata::Type::TypeRef(metadata::TypeName::PROPVARIANT) => {
+            metadata::Type::TypeName(metadata::TypeName::PROPVARIANT) => {
                 let crate_name = self.crate_name();
                 quote! { #crate_name PROPVARIANT }
             }
@@ -161,11 +161,11 @@ impl Writer {
                     quote! { #crate_name IInspectable }
                 }
             }
-            metadata::Type::TypeRef(metadata::TypeName::GUID) => {
+            metadata::Type::TypeName(metadata::TypeName::GUID) => {
                 let crate_name = self.crate_name();
                 quote! { #crate_name GUID }
             }
-            metadata::Type::TypeRef(metadata::TypeName::IUnknown) => {
+            metadata::Type::TypeName(metadata::TypeName::IUnknown) => {
                 if self.sys {
                     quote! { *mut core::ffi::c_void }
                 } else {
@@ -173,7 +173,7 @@ impl Writer {
                     quote! { #crate_name IUnknown }
                 }
             }
-            metadata::Type::TypeRef(metadata::TypeName::HResult) => {
+            metadata::Type::TypeName(metadata::TypeName::HResult) => {
                 let crate_name = self.crate_name();
                 quote! { #crate_name HRESULT }
             }
@@ -242,19 +242,19 @@ impl Writer {
         }
 
         match ty {
-            metadata::Type::TypeRef(metadata::TypeName::IUnknown) | metadata::Type::IInspectable => {
+            metadata::Type::TypeName(metadata::TypeName::IUnknown) | metadata::Type::IInspectable => {
                 quote! { *mut core::ffi::c_void }
             }
             metadata::Type::String => {
                 quote! { std::mem::MaybeUninit<windows_core::HSTRING> }
             }
-            metadata::Type::TypeRef(metadata::TypeName::BSTR) => {
+            metadata::Type::TypeName(metadata::TypeName::BSTR) => {
                 quote! { std::mem::MaybeUninit<windows_core::BSTR> }
             }
-            metadata::Type::TypeRef(metadata::TypeName::VARIANT) => {
+            metadata::Type::TypeName(metadata::TypeName::VARIANT) => {
                 quote! { std::mem::MaybeUninit<windows_core::VARIANT> }
             }
-            metadata::Type::TypeRef(metadata::TypeName::PROPVARIANT) => {
+            metadata::Type::TypeName(metadata::TypeName::PROPVARIANT) => {
                 quote! { std::mem::MaybeUninit<windows_core::PROPVARIANT> }
             }
             metadata::Type::Win32Array(kind, len) => {
@@ -557,7 +557,7 @@ impl Writer {
     }
 
     pub fn guid(&self, value: &metadata::Guid) -> TokenStream {
-        let guid = self.type_name(&metadata::Type::TypeRef(metadata::TypeName::GUID));
+        let guid = self.type_name(&metadata::Type::TypeName(metadata::TypeName::GUID));
         format!("{}::from_u128(0x{:08x?}_{:04x?}_{:04x?}_{:02x?}{:02x?}_{:02x?}{:02x?}{:02x?}{:02x?}{:02x?}{:02x?})", guid.into_string(), value.0, value.1, value.2, value.3, value.4, value.5, value.6, value.7, value.8, value.9, value.10).into()
     }
 
@@ -778,7 +778,7 @@ impl Writer {
         let crate_name = self.crate_name();
 
         match metadata::type_def_vtables(def).last() {
-            Some(metadata::Type::TypeRef(metadata::TypeName::IUnknown)) => methods.combine(&quote! { pub base__: #crate_name IUnknown_Vtbl, }),
+            Some(metadata::Type::TypeName(metadata::TypeName::IUnknown)) => methods.combine(&quote! { pub base__: #crate_name IUnknown_Vtbl, }),
             Some(metadata::Type::IInspectable) => methods.combine(&quote! { pub base__: #crate_name IInspectable_Vtbl, }),
             Some(metadata::Type::TypeDef(def, _)) => {
                 let vtbl = self.type_def_vtbl_name(*def, &[]);

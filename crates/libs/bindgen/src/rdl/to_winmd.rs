@@ -90,8 +90,8 @@ fn write_interface(writer: &mut winmd::Writer, namespace: &str, name: &str, memb
         let ty = syn_type_path(namespace, &member.generics, type_path);
 
         let reference = match &ty {
-            winmd::Type::TypeRef(type_name) if type_name.generics.is_empty() => writer.insert_type_ref(&type_name.namespace, &type_name.name),
-            winmd::Type::TypeRef(_) => writer.insert_type_spec(ty),
+            winmd::Type::TypeName(type_name) if type_name.generics.is_empty() => writer.insert_type_ref(&type_name.namespace, &type_name.name),
+            winmd::Type::TypeName(_) => writer.insert_type_spec(ty),
             rest => unimplemented!("{rest:?}"),
         };
 
@@ -156,7 +156,7 @@ fn write_class(writer: &mut winmd::Writer, namespace: &str, name: &str, member: 
 
     let extends = if let Some(base) = &member.base {
         match syn_type_path(namespace, &[], base) {
-            winmd::Type::TypeRef(base) => writer.insert_type_ref(&base.namespace, &base.name),
+            winmd::Type::TypeName(base) => writer.insert_type_ref(&base.namespace, &base.name),
             rest => unimplemented!("{rest:?}"),
         }
     } else {
@@ -177,8 +177,8 @@ fn write_class(writer: &mut winmd::Writer, namespace: &str, name: &str, member: 
         let ty = syn_type_path(namespace, &[], extends);
 
         let reference = match &ty {
-            winmd::Type::TypeRef(type_name) if type_name.generics.is_empty() => writer.insert_type_ref(&type_name.namespace, &type_name.name),
-            winmd::Type::TypeRef(_) => writer.insert_type_spec(ty),
+            winmd::Type::TypeName(type_name) if type_name.generics.is_empty() => writer.insert_type_ref(&type_name.namespace, &type_name.name),
+            winmd::Type::TypeName(_) => writer.insert_type_spec(ty),
             winmd::Type::IUnknown => writer.insert_type_ref("Windows.Win32.System.Com", "IUnknown"),
             winmd::Type::IInspectable => writer.insert_type_ref("Windows.Win32.System.WinRT", "IInspectable"),
             rest => unimplemented!("{rest:?}"),
@@ -330,5 +330,5 @@ fn syn_path(namespace: &str, generics: &[String], path: &syn::Path) -> winmd::Ty
         }
     }
 
-    winmd::Type::TypeRef(winmd::TypeName { namespace: type_namespace, name: name.to_string(), generics: type_generics })
+    winmd::Type::TypeName(winmd::TypeName { namespace: type_namespace, name: name.to_string(), generics: type_generics })
 }
