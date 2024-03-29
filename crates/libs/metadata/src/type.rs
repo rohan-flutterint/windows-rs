@@ -30,8 +30,8 @@ pub enum Type {
     
     // Regular ECMA-335 types that map to metadata
     TypeRef(TypeName),
-    GenericParam(GenericParam),
-    TypeDef(TypeDef, Vec<Self>),
+    GenericParam(GenericParam), // TODO: Replace with "name"
+    TypeDef(TypeDef, Vec<Self>), // TODO: Replace with TypeRef with full name
 
     // Qualified types
     MutPtr(Box<Self>, usize),
