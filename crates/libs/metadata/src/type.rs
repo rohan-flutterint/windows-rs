@@ -2,7 +2,7 @@ use super::*;
 
 #[derive(Clone, Debug, Hash, PartialEq, Eq, Ord, PartialOrd)]
 pub enum Type {
-    // Primitives in ECMA-335
+    // TODO: could replace all of these with "System.Xxx" and then use Type::Name for everything?
     Void,
     Bool,
     Char,
@@ -19,7 +19,7 @@ pub enum Type {
     ISize,
     USize,
     String,       // TODO: Win32 should use System.String when referring to an HSTRING
-    IInspectable, // TODO: Win32 should use System.Object when referring to an IInspectable
+    Object, // TODO: Win32 should use System.Object when referring to an IInspectable
 
     Name(TypeName),
     Const(TypeName),
@@ -59,7 +59,7 @@ impl Type {
             ELEMENT_TYPE_I => Some(Self::ISize),
             ELEMENT_TYPE_U => Some(Self::USize),
             ELEMENT_TYPE_STRING => Some(Self::String),
-            ELEMENT_TYPE_OBJECT => Some(Self::IInspectable),
+            ELEMENT_TYPE_OBJECT => Some(Self::Object),
             _ => None,
         }
     }

@@ -101,7 +101,7 @@ pub fn writer(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
 
     match vtables.last() {
         Some(metadata::Type::Name(metadata::TypeName::IUnknown)) => methods.combine(&quote! { base__: windows_core::IUnknown_Vtbl::new::<Identity, OFFSET>(), }),
-        Some(metadata::Type::IInspectable) => methods.combine(&quote! { base__: windows_core::IInspectable_Vtbl::new::<Identity, #type_ident, OFFSET>(), }),
+        Some(metadata::Type::Object) => methods.combine(&quote! { base__: windows_core::IInspectable_Vtbl::new::<Identity, #type_ident, OFFSET>(), }),
         Some(metadata::Type::TypeDef(def, generics)) => {
             let name = writer.type_def_name_imp(*def, generics, "_Vtbl");
             if has_unknown_base {

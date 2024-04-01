@@ -341,7 +341,7 @@ impl Writer {
             metadata::Type::String => quote! { HSTRING },
             metadata::Type::Name(metadata::TypeName::HResult) => quote! { HRESULT },
             metadata::Type::Name(metadata::TypeName::GUID) => quote! { GUID },
-            metadata::Type::IInspectable => quote! { IInspectable },
+            metadata::Type::Object => quote! { IInspectable },
             metadata::Type::Name(metadata::TypeName::IUnknown) => quote! { IUnknown },
             metadata::Type::Name(metadata::TypeName::BSTR) => quote! { BSTR },
 

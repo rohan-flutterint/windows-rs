@@ -153,7 +153,7 @@ impl Writer {
                 let crate_name = self.crate_name();
                 quote! { #crate_name PROPVARIANT }
             }
-            metadata::Type::IInspectable => {
+            metadata::Type::Object => {
                 if self.sys {
                     quote! { *mut core::ffi::c_void }
                 } else {
@@ -242,7 +242,7 @@ impl Writer {
         }
 
         match ty {
-            metadata::Type::Name(metadata::TypeName::IUnknown) | metadata::Type::IInspectable => {
+            metadata::Type::Name(metadata::TypeName::IUnknown) | metadata::Type::Object => {
                 quote! { *mut core::ffi::c_void }
             }
             metadata::Type::String => {
@@ -779,7 +779,7 @@ impl Writer {
 
         match metadata::type_def_vtables(def).last() {
             Some(metadata::Type::Name(metadata::TypeName::IUnknown)) => methods.combine(&quote! { pub base__: #crate_name IUnknown_Vtbl, }),
-            Some(metadata::Type::IInspectable) => methods.combine(&quote! { pub base__: #crate_name IInspectable_Vtbl, }),
+            Some(metadata::Type::Object) => methods.combine(&quote! { pub base__: #crate_name IInspectable_Vtbl, }),
             Some(metadata::Type::TypeDef(def, _)) => {
                 let vtbl = self.type_def_vtbl_name(*def, &[]);
                 methods.combine(&quote! { pub base__: #vtbl, });

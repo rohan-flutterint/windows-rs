@@ -37,7 +37,7 @@ pub fn standalone_imp(writer: &Writer) -> String {
                     }
                 },
             ),
-            metadata::Type::IInspectable if writer.sys => sorted.insert(
+            metadata::Type::Object if writer.sys => sorted.insert(
                 "IInspectable",
                 if !writer.vtbl {
                     quote! {}
@@ -137,7 +137,7 @@ fn type_collect_standalone(writer: &Writer, ty: &metadata::Type, set: &mut std::
                 set.insert(metadata::Type::Name(metadata::TypeName::GUID));
                 set.insert(metadata::Type::Name(metadata::TypeName::HResult));
             }
-            metadata::Type::IInspectable => type_collect_standalone(writer, &metadata::Type::Name(metadata::TypeName::IUnknown), set),
+            metadata::Type::Object => type_collect_standalone(writer, &metadata::Type::Name(metadata::TypeName::IUnknown), set),
             _ => {}
         }
     }
@@ -198,7 +198,7 @@ fn type_collect_standalone(writer: &Writer, ty: &metadata::Type, set: &mut std::
         }
         metadata::TypeKind::Interface => {
             if def.flags().contains(metadata::TypeAttributes::WindowsRuntime) {
-                type_collect_standalone(writer, &metadata::Type::IInspectable, set);
+                type_collect_standalone(writer, &metadata::Type::Object, set);
             }
         }
         _ => {}

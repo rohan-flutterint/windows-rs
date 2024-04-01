@@ -271,7 +271,7 @@ const CORE_TYPES: [(TypeName, Type); 12] = [
     (TypeName::HResult, Type::Name(TypeName::HResult)),
     (TypeName::HSTRING, Type::String),
     (TypeName::BSTR, Type::Name(TypeName::BSTR)),
-    (TypeName::IInspectable, Type::IInspectable),
+    (TypeName::IInspectable, Type::Object),
     (TypeName::PSTR, Type::Name(TypeName::PSTR)),
     (TypeName::PWSTR, Type::Name(TypeName::PWSTR)),
     (TypeName::Type, Type::Name(TypeName::Type)),
@@ -279,4 +279,4 @@ const CORE_TYPES: [(TypeName, Type); 12] = [
     (TypeName::VARIANT, Type::Name(TypeName::VARIANT)),
     (TypeName::PROPVARIANT, Type::Name(TypeName::PROPVARIANT)),
 ];
-const SYS_CORE_TYPES: [(TypeName, Type); 9] = [(TypeName::GUID, Type::Name(TypeName::GUID)), (TypeName::IUnknown, Type::Name(TypeName::IUnknown)), (TypeName::HResult, Type::Name(TypeName::HResult)), (TypeName::HSTRING, Type::String), (TypeName::BSTR, Type::Name(TypeName::BSTR)), (TypeName::IInspectable, Type::IInspectable), (TypeName::PSTR, Type::Name(TypeName::PSTR)), (TypeName::PWSTR,Type::Name(TypeName::PWSTR)), (TypeName::CHAR, Type::I8)];
+const SYS_CORE_TYPES: [(TypeName, Type); 9] = [(TypeName::GUID, Type::Name(TypeName::GUID)), (TypeName::IUnknown, Type::Name(TypeName::IUnknown)), (TypeName::HResult, Type::Name(TypeName::HResult)), (TypeName::HSTRING, Type::String), (TypeName::BSTR, Type::Name(TypeName::BSTR)), (TypeName::IInspectable, Type::Object), (TypeName::PSTR, Type::Name(TypeName::PSTR)), (TypeName::PWSTR,Type::Name(TypeName::PWSTR)), (TypeName::CHAR, Type::I8)];

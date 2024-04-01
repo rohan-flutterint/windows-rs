@@ -377,7 +377,7 @@ fn method_def_last_error(row: MethodDef) -> bool {
 pub fn type_is_borrowed(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => !type_def_is_blittable(*row),
-        Type::Name(TypeName::BSTR) | Type::Name(TypeName::VARIANT) | Type::Name(TypeName::PROPVARIANT) | Type::Const(TypeName::PSTR) | Type::Const(TypeName::PWSTR) | Type::IInspectable | Type::Name(TypeName::IUnknown) | Type::GenericParam(_) => true,
+        Type::Name(TypeName::BSTR) | Type::Name(TypeName::VARIANT) | Type::Name(TypeName::PROPVARIANT) | Type::Const(TypeName::PSTR) | Type::Const(TypeName::PWSTR) | Type::Object | Type::Name(TypeName::IUnknown) | Type::GenericParam(_) => true,
         _ => false,
     }
 }
@@ -506,7 +506,7 @@ pub fn field_is_copyable(row: Field, enclosing: TypeDef) -> bool {
 pub fn type_is_blittable(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => type_def_is_blittable(*row),
-        Type::String | Type::Name(TypeName::BSTR) | Type::Name(TypeName::VARIANT) | Type::Name(TypeName::PROPVARIANT) | Type::IInspectable | Type::Name(TypeName::IUnknown) | Type::GenericParam(_) => false,
+        Type::String | Type::Name(TypeName::BSTR) | Type::Name(TypeName::VARIANT) | Type::Name(TypeName::PROPVARIANT) | Type::Object | Type::Name(TypeName::IUnknown) | Type::GenericParam(_) => false,
         Type::Win32Array(kind, _) => type_is_blittable(kind),
         Type::WinrtArray(kind) => type_is_blittable(kind),
         _ => true,
@@ -516,7 +516,7 @@ pub fn type_is_blittable(ty: &Type) -> bool {
 fn type_is_copyable(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => type_def_is_copyable(*row),
-        Type::String | Type::Name(TypeName::BSTR) | Type::Name(TypeName::VARIANT) | Type::Name(TypeName::PROPVARIANT) | Type::IInspectable | Type::Name(TypeName::IUnknown) | Type::GenericParam(_) => false,
+        Type::String | Type::Name(TypeName::BSTR) | Type::Name(TypeName::VARIANT) | Type::Name(TypeName::PROPVARIANT) | Type::Object | Type::Name(TypeName::IUnknown) | Type::GenericParam(_) => false,
         Type::Win32Array(kind, _) => type_is_copyable(kind),
         Type::WinrtArray(kind) => type_is_copyable(kind),
         _ => true,
@@ -675,7 +675,7 @@ fn type_signature(ty: &Type) -> String {
         Type::ISize => "is".to_string(),
         Type::USize => "us".to_string(),
         Type::String => "string".to_string(),
-        Type::IInspectable => "cinterface(IInspectable)".to_string(),
+        Type::Object => "cinterface(IInspectable)".to_string(),
         Type::Name(TypeName::GUID) => "g16".to_string(),
         // TODO: ideally this doesn't need a special case
         Type::Name(TypeName::HResult) => "struct(Windows.Foundation.HResult;i4)".to_string(),
@@ -776,7 +776,7 @@ fn type_def_is_nullable(row: TypeDef) -> bool {
 pub fn type_is_nullable(ty: &Type) -> bool {
     match ty {
         Type::TypeDef(row, _) => type_def_is_nullable(*row),
-        Type::IInspectable | Type::Name(TypeName::IUnknown) => true,
+        Type::Object | Type::Name(TypeName::IUnknown) => true,
         _ => false,
     }
 }
@@ -786,7 +786,7 @@ pub fn type_def_vtables(row: TypeDef) -> Vec<Type> {
     if row.flags().contains(TypeAttributes::WindowsRuntime) {
         result.push(Type::Name(TypeName::IUnknown));
         if row.kind() != TypeKind::Delegate {
-            result.push(Type::IInspectable);
+            result.push(Type::Object);
         }
     } else {
         let mut next = row;
@@ -796,9 +796,9 @@ pub fn type_def_vtables(row: TypeDef) -> Vec<Type> {
                     next = row;
                     result.insert(0, base);
                 }
-                Type::IInspectable => {
+                Type::Object => {
                     result.insert(0, Type::Name(TypeName::IUnknown));
-                    result.insert(1, Type::IInspectable);
+                    result.insert(1, Type::Object);
                     break;
                 }
                 Type::Name(TypeName::IUnknown) => {

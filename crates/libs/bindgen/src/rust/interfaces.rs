@@ -90,7 +90,7 @@ fn gen_win_interface(writer: &Writer, def: metadata::TypeDef) -> TokenStream {
             let mut bases = vtables.len();
             for ty in &vtables {
                 match ty {
-                    metadata::Type::Name(metadata::TypeName::IUnknown) | metadata::Type::IInspectable => {}
+                    metadata::Type::Name(metadata::TypeName::IUnknown) | metadata::Type::Object => {}
                     metadata::Type::TypeDef(def, _) => {
                         let kind = if def.type_name() == metadata::TypeName::IDispatch { metadata::InterfaceKind::None } else { metadata::InterfaceKind::Default };
                         for method in def.methods() {
