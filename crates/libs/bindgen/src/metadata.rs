@@ -137,7 +137,7 @@ impl SignatureParam {
             return false;
         }
         // If it's bigger than 128 bits, best to pass as a reference.
-        if self.ty.deref().size() > 16 {
+        if self.ty.deref().size(self.def.reader()) > 16 {
             return false;
         }
         // Win32 callbacks are defined as `Option<T>` so we don't include them here to avoid

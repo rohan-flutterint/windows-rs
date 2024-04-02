@@ -157,27 +157,29 @@ impl Type {
         }
     }
 
-    pub fn size(&self) -> usize {
+    pub fn size(&self, reader: &Reader) -> usize {
         match self {
             Type::I8 | Type::U8 => 1,
             Type::I16 | Type::U16 => 2,
             Type::I64 | Type::U64 | Type::F64 => 8,
             Type::Name(TypeName::GUID) => 16,
             Type::TypeDef(def, _) => def.size(),
-            Type::Win32Array(ty, len) => ty.size() * len,
-            Type::PrimitiveOrEnum(ty, _) => ty.size(),
+            Type::Win32Array(ty, len) => ty.size(reader) * len,
+            Type::PrimitiveOrEnum(ty, _) => ty.size(reader),
+            Type::Name(type_name) => reader.get_type_def(type_name).next().map_or(0, |def|def.size()), // TODO: possible issue with not having the correct arch-d version of type def?
             _ => 4,
         }
     }
 
-    pub fn align(&self) -> usize {
+    pub fn align(&self, reader: &Reader) -> usize {
         match self {
             Type::I8 | Type::U8 => 1,
             Type::I16 | Type::U16 => 2,
             Type::I64 | Type::U64 | Type::F64 => 8,
             Type::Name(TypeName::GUID) => 4,
             Type::TypeDef(def, _) => def.align(),
-            Type::Win32Array(ty, len) => ty.align() * len,
+            Type::Win32Array(ty, len) => ty.align(reader) * len,
+            Type::Name(type_name) => reader.get_type_def(type_name).next().map_or(0, |def|def.align()), // TODO: possible issue with not having the correct arch-d version of type def?
             _ => 4,
         }
     }

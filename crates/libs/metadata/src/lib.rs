@@ -107,8 +107,8 @@ pub struct MethodDefSig {
 }
 
 impl MethodDefSig {
-    pub fn size(&self) -> usize {
-        self.params.iter().fold(0, |sum, param| sum + std::cmp::max(4, param.size()))
+    pub fn size(&self, reader: &Reader) -> usize {
+        self.params.iter().fold(0, |sum, param| sum + std::cmp::max(4, param.size(reader)))
     }
 }
 

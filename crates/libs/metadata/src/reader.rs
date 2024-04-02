@@ -252,6 +252,7 @@ impl Reader {
                     args.push(self.type_from_blob_impl(blob, enclosing, generics));
                 }
 
+                // TODO: replace with TypeName
                 Type::TypeDef(def, args)
             }
             rest => unimplemented!("{rest:?}"),

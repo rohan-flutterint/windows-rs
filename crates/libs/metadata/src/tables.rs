@@ -374,28 +374,28 @@ impl TypeDef {
         match self.kind() {
             TypeKind::Struct => {
                 if self.flags().contains(TypeAttributes::ExplicitLayout) {
-                    self.fields().map(|field| field.ty(Some(*self)).size()).max().unwrap_or(1)
+                    self.fields().map(|field| field.ty(Some(*self)).size(self.reader())).max().unwrap_or(1)
                 } else {
                     let mut sum = 0;
                     for field in self.fields() {
                         let ty = field.ty(Some(*self));
-                        let size = ty.size();
-                        let align = ty.align();
+                        let size = ty.size(self.reader());
+                        let align = ty.align(field.reader());
                         sum = (sum + (align - 1)) & !(align - 1);
                         sum += size;
                     }
                     sum
                 }
             }
-            TypeKind::Enum => self.underlying_type().size(),
+            TypeKind::Enum => self.underlying_type().size(self.reader()),
             _ => 4,
         }
     }
 
     pub fn align(&self) -> usize {
         match self.kind() {
-            TypeKind::Struct => self.fields().map(|field| field.ty(Some(*self)).align()).max().unwrap_or(1),
-            TypeKind::Enum => self.underlying_type().align(),
+            TypeKind::Struct => self.fields().map(|field| field.ty(Some(*self)).align(self.reader())).max().unwrap_or(1),
+            TypeKind::Enum => self.underlying_type().align(self.reader()),
             _ => 4,
         }
     }
