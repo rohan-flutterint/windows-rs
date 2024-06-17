@@ -41,6 +41,7 @@ mod scoped_interface;
 mod strings;
 mod r#type;
 mod unknown;
+#[cfg(windows)]
 mod variant;
 mod weak;
 
@@ -65,6 +66,7 @@ pub use runtime_type::*;
 pub use scoped_interface::*;
 pub use strings::*;
 pub use unknown::*;
+#[cfg(windows)]
 pub use variant::*;
 pub use weak::*;
 pub use windows_implement::implement;
