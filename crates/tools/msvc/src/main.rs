@@ -68,11 +68,35 @@ changes can sneak in undetected.
     .unwrap();
 }
 
+fn pcwstr<T: AsRef<str>>(value: T) -> Vec<u16> {
+    value
+        .as_ref()
+        .encode_utf16()
+        .chain(core::iter::once(0))
+        .collect()
+}
+
+fn pcstr<T: AsRef<str>>(value: T) -> Vec<u8> {
+    value.as_ref().bytes().chain(core::iter::once(0)).collect()
+}
+
 fn build_library(
     output: &std::path::Path,
     library: &str,
     functions: &BTreeMap<String, lib::CallingConvention>,
 ) {
+    use windows_sys::Win32::System::LibraryLoader::*;
+    let module = unsafe {
+        LoadLibraryExW(
+            pcwstr(library).as_ptr(),
+            0,
+            LOAD_LIBRARY_SEARCH_DEFAULT_DIRS,
+        )
+    };
+    if module == 0 {
+        println!("library not found: {library}");
+    }
+
     // Note that we don't use set_extension as it confuses PathBuf when the library name includes a period.
 
     let mut path = std::path::PathBuf::from(output);
@@ -95,6 +119,11 @@ EXPORTS
     .unwrap();
 
     for (function, calling_convention) in functions {
+        let proc = unsafe { GetProcAddress(module, pcstr(function).as_ptr()) };
+        if proc.is_none() {
+            println!("function not found: {library}.{function}");
+        }
+
         let buffer = match calling_convention {
             lib::CallingConvention::Stdcall(size) => {
                 let mut buffer = format!("void __stdcall {function}(");
