@@ -119,9 +119,11 @@ EXPORTS
     .unwrap();
 
     for (function, calling_convention) in functions {
-        let proc = unsafe { GetProcAddress(module, pcstr(function).as_ptr()) };
-        if proc.is_none() {
-            println!("function not found: {library}.{function}");
+        if module != 0 {
+            let proc = unsafe { GetProcAddress(module, pcstr(function).as_ptr()) };
+            if proc.is_none() {
+                println!("function not found: {library}.{function}");
+            }
         }
 
         let buffer = match calling_convention {
