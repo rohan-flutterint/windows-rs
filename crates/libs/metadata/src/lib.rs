@@ -27,7 +27,7 @@ pub use blob::*;
 pub use codes::*;
 use column::*;
 pub use file::*;
-use filter::*;
+pub use filter::*;
 pub use r#type::*;
 pub use reader::*;
 pub use row::*;

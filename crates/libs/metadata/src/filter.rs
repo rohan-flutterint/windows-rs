@@ -1,3 +1,103 @@
+// TODO: should move to bindgen
+
+use super::*;
+use std::collections::btree_map::*;
+
+type TypeMapImp = BTreeMap<&'static str, BTreeMap<&'static str, &'static [Item]>>;
+
+pub struct TypeMap( pub TypeMapImp);
+
+impl TypeMap {
+    pub fn new(reader: &'static Reader, include: &[&str], exclude: &[&str], add_dependencies: bool ) -> Self {
+        let filter = Filter::new(include, exclude);
+        let mut map = BTreeMap::new();
+
+        for (namespace, items) in &reader.items {
+            if filter.includes_namespace(namespace) {
+                for (name, items) in items {
+                    if filter.includes_type_name(namespace, name) {
+                        add_type_name(reader, &mut map, namespace, name, Some(items), add_dependencies);
+                    }
+                }
+            }
+        }
+
+        Self( map)
+    }
+}
+
+// Returns whether the value was newly inserted.
+fn add_type_name(
+    reader: &'static Reader,
+    map: &mut TypeMapImp,
+    namespace: &'static str,
+    name: &'static str,
+    items: Option<&'static [Item]>,
+    add_dependencies: bool,
+) -> bool {
+    if let Entry::Vacant(entry) = map.entry(namespace).or_default().entry(name) {
+        let items = items.unwrap_or_else(|| {
+            reader
+                .items
+                .get(namespace)
+                .expect("Namespace not found")
+                .get(name)
+                .expect("Name not found")
+        });
+        entry.insert(items);
+
+        if add_dependencies {
+        for item in items {
+            match item {
+                Item::Type(def) => {
+                    add_type_dependencies(reader, map, &Type::TypeDef(*def, vec![]))
+                }
+                Item::Const(field) => {
+                    add_type_dependencies(reader, map, &field.ty(None).to_const_type())
+                }
+                Item::Fn(method, _namespace) => {
+                    let signature = method.signature(&[]);
+                    add_type_dependencies(reader, map, &signature.return_type);
+                    signature
+                        .params
+                        .iter()
+                        .for_each(|ty| add_type_dependencies(reader, map, ty));
+                }
+            }
+        }
+        }
+
+
+        true
+    } else {
+        false
+    }
+}
+
+// Add this type (via `add_type_name`) and its dependencies.
+fn add_type_dependency(reader: &'static Reader, map: &mut TypeMapImp, ty: &Type) {
+    if let Type::TypeDef(def, generics) = ty.to_underlying_type() {
+        let namespace = def.namespace();
+        if namespace.is_empty() {
+            def.fields().for_each(|field|add_type_dependency(reader, map, &field.ty(Some(def))));
+        } else {
+            add_type_name(reader, map, namespace, def.name(), None, true);
+            generics.iter().for_each(|ty|add_type_dependency(reader, map, ty));
+        }
+        
+    }
+}
+
+// Add this type's dependencies.
+fn add_type_dependencies(reader: &'static Reader, map: &mut TypeMapImp, ty: &Type) {
+    if let Type::TypeDef(def, generics) = ty.to_underlying_type() {
+        generics.iter().for_each(|ty| add_type_dependency(reader, map, ty));
+        def.fields()
+            .for_each(|field| add_type_dependency(reader, map, &field.ty(Some(def))));
+    }
+}
+
+
 #[derive(Default)]
 pub struct Filter(pub Vec<(String, bool)>);
 

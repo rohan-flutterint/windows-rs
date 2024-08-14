@@ -11,7 +11,7 @@ pub enum Item {
 
 pub struct Reader {
     // TODO: get rid of inner Vec - that's just a hack to support multi-arch structs in Win32 metadata.
-    items: BTreeMap<&'static str, BTreeMap<&'static str, Vec<Item>>>,
+    pub items: BTreeMap<&'static str, BTreeMap<&'static str, Vec<Item>>>,
 
     // TODO: riddle should just avoid nested structs
     nested: HashMap<TypeDef, BTreeMap<&'static str, TypeDef>>,
@@ -32,6 +32,7 @@ impl Reader {
 
     pub fn filter(
         files: Vec<File>,
+        // TODO: remove this
         include: &[&str],
         exclude: &[&str],
         config: &BTreeMap<&str, &str>,
