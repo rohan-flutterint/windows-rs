@@ -14,8 +14,7 @@ pub fn writer(
     let vname = virtual_names.add(method);
     let generics = writer.constraint_generics(&signature.params);
     let where_clause = writer.where_clause(&signature.params);
-    let mut cfg = cfg::signature_cfg(writer, method);
-    cfg.add_feature(def.namespace());
+    let cfg = cfg::signature_cfg(writer, method);
 
     if !cfg.included(writer) {
         return quote! {};

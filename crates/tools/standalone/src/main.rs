@@ -213,6 +213,12 @@ fn main() {
             "prepend:Windows.Foundation.DateTime=#[derive(std::cmp::PartialOrd,std::cmp::Ord)]",
         ],
     );
+
+    riddle(
+        &src.join("b_next.rs"),
+        &["Windows.Gaming.Input"],
+        &[]
+    );
 }
 
 fn write_sys(output: &Path, filter: &[&str]) {

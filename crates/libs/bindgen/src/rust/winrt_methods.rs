@@ -10,6 +10,13 @@ pub fn writer(
     method_names: &mut MethodNames,
     virtual_names: &mut MethodNames,
 ) -> TokenStream {
+    let mut cfg = cfg::signature_cfg(writer, method);
+    cfg::type_def_cfg_combine(writer, def, generic_types, &mut cfg);
+
+    if !cfg.included(writer) {
+        return quote! {};
+    }
+
     let signature = metadata::method_def_signature(def.namespace(), method, generic_types);
     let params = &signature.params;
     let name = method_names.add(method);
@@ -17,8 +24,7 @@ pub fn writer(
     let vname = virtual_names.add(method);
     let generics = writer.constraint_generics(params);
     let where_clause = writer.where_clause(params);
-    let mut cfg = cfg::signature_cfg(writer, method);
-    cfg::type_def_cfg_combine(writer, def, generic_types, &mut cfg);
+
     let features = writer.cfg_features(&cfg);
     let args = gen_winrt_abi_args(writer, params);
     let params = gen_winrt_params(writer, params);

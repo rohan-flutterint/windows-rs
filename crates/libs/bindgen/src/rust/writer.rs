@@ -884,9 +884,8 @@ impl Writer {
             }
             let name = method_names.add(method);
             let signature = metadata::method_def_signature(def.namespace(), method, generics);
-            let mut cfg = cfg::signature_cfg(self, method);
+            let cfg = cfg::signature_cfg(self, method);
             let signature = self.vtbl_signature(def, false, &signature);
-            cfg.add_feature(def.namespace());
 
             if cfg.included(self) {
                 let cfg_all = self.cfg_features(&cfg);

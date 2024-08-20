@@ -23,12 +23,13 @@ impl Cfg {
     }
 
     pub fn included(&self, writer: &Writer) -> bool {
-        if writer.package {
-            for namespace in self.types.keys() {
-                if !writer.reader.includes_namespace(namespace) {
-                    return false;
-                }
+        for types in self.types.values() {
+            for def in types {
+                let tn = def.type_name();
+            if !writer.reader.includes_type_name(tn.namespace(), tn.name()) {
+                return false;
             }
+        }
         }
         true
     }

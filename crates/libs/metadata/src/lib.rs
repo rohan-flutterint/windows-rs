@@ -27,7 +27,8 @@ pub use blob::*;
 pub use codes::*;
 use column::*;
 pub use file::*;
-use filter::*;
+// TODO filter should move... into implementation of Tree2
+pub use filter::*;
 pub use r#type::*;
 pub use reader::*;
 pub use row::*;

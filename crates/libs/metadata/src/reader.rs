@@ -1,6 +1,6 @@
 use super::*;
 
-#[derive(Clone)]
+#[derive(Debug, Clone)]
 pub enum Item {
     Type(TypeDef),
     Const(Field),
@@ -10,16 +10,24 @@ pub enum Item {
 }
 
 pub struct Reader {
+    // TODO: use HashMap here since sorting comes later (via TypeMap)
+
     // TODO: get rid of inner Vec - that's just a hack to support multi-arch structs in Win32 metadata.
-    items: BTreeMap<&'static str, BTreeMap<&'static str, Vec<Item>>>,
+    pub items: BTreeMap<&'static str, BTreeMap<&'static str, Vec<Item>>>,
+
+    // TODO: get winmd writer working and then start by rewriting windows.win32 to avoid these workarounds
 
     // TODO: riddle should just avoid nested structs
     nested: HashMap<TypeDef, BTreeMap<&'static str, TypeDef>>,
+
+
+    // TODO: remove filter and use a top-level post-filter
 
     // The reader needs to store the filter since standalone code generation needs more than just the filtered items
     // in order to chase dependencies automatically. This is why `Reader::filter` can't just filter everything up front.
     filter: Filter,
 
+    // TODO: remove this and provide type remapping in filter?
     sys: bool,
 }
 
@@ -112,6 +120,10 @@ impl Reader {
         self.filter.includes_namespace(namespace)
     }
 
+    pub fn includes_type_name(&self, namespace: &str, name: &str) -> bool {
+        self.filter.includes_type_name(namespace, name)
+    }
+
     pub fn namespaces(&self) -> impl Iterator<Item = &str> + '_ {
         self.items.keys().copied()
     }
@@ -142,45 +154,45 @@ impl Reader {
             .cloned()
     }
 
-    pub fn unused(&self) -> impl Iterator<Item = &str> + '_ {
-        self.filter.0.iter().filter_map(|(name, _)| {
-            if self.is_unused(name) {
-                Some(name.as_str())
-            } else {
-                None
-            }
-        })
-    }
+    // pub fn unused(&self) -> impl Iterator<Item = &str> + '_ {
+    //     self.filter.0.iter().filter_map(|(name, _)| {
+    //         if self.is_unused(name) {
+    //             Some(name.as_str())
+    //         } else {
+    //             None
+    //         }
+    //     })
+    // }
 
-    fn is_unused(&self, filter: &str) -> bool {
-        // Match namespaces
-        if self.items.contains_key(filter) {
-            return false;
-        }
+    // fn is_unused(&self, filter: &str) -> bool {
+    //     // Match namespaces
+    //     if self.items.contains_key(filter) {
+    //         return false;
+    //     }
 
-        // Match type names
-        if let Some((namespace, name)) = filter.rsplit_once('.') {
-            if self
-                .items
-                .get(namespace)
-                .is_some_and(|items| items.contains_key(name))
-            {
-                return false;
-            }
-        }
+    //     // Match type names
+    //     if let Some((namespace, name)) = filter.rsplit_once('.') {
+    //         if self
+    //             .items
+    //             .get(namespace)
+    //             .is_some_and(|items| items.contains_key(name))
+    //         {
+    //             return false;
+    //         }
+    //     }
 
-        // Match empty parent namespaces
-        for namespace in self.items.keys() {
-            if namespace.len() > filter.len()
-                && namespace.starts_with(filter)
-                && namespace.as_bytes()[filter.len()] == b'.'
-            {
-                return false;
-            }
-        }
+    //     // Match empty parent namespaces
+    //     for namespace in self.items.keys() {
+    //         if namespace.len() > filter.len()
+    //             && namespace.starts_with(filter)
+    //             && namespace.as_bytes()[filter.len()] == b'.'
+    //         {
+    //             return false;
+    //         }
+    //     }
 
-        true
-    }
+    //     true
+    // }
 
     fn get_item(&self, namespace: &str, name: &str) -> impl Iterator<Item = Item> + '_ {
         if let Some(items) = self.items.get(namespace) {

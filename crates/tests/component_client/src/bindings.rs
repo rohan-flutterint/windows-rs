@@ -79,13 +79,7 @@ pub struct IClass_Vtbl {
         *mut u32,
         *mut *mut core::mem::MaybeUninit<windows_core::HSTRING>,
     ) -> windows_core::HRESULT,
-    pub Input: unsafe extern "system" fn(
-        *mut core::ffi::c_void,
-        *mut core::ffi::c_void,
-        *mut core::ffi::c_void,
-        *mut core::ffi::c_void,
-        *mut core::ffi::c_void,
-    ) -> windows_core::HRESULT,
+    Input: usize,
 }
 #[repr(transparent)]
 #[derive(PartialEq, Eq, Debug, Clone)]
@@ -183,25 +177,6 @@ impl Class {
                 result__.as_mut_ptr() as *mut _ as _,
             )
             .map(|| result__.assume_init())
-        }
-    }
-    pub fn Input<P0, P1, P2, P3>(&self, a: P0, b: P1, c: P2, d: P3) -> windows_core::Result<()>
-    where
-        P0: windows_core::Param<windows_core::IInspectable>,
-        P1: windows_core::Param<Class>,
-        P2: windows_core::Param<windows::Foundation::IStringable>,
-        P3: windows_core::Param<Callback>,
-    {
-        let this = self;
-        unsafe {
-            (windows_core::Interface::vtable(this).Input)(
-                windows_core::Interface::as_raw(this),
-                a.param().abi(),
-                b.param().abi(),
-                c.param().abi(),
-                d.param().abi(),
-            )
-            .ok()
         }
     }
 }

@@ -1,5 +1,6 @@
 use super::*;
 
+// TODO: move to metadata and the filtered TypeMap can generate a filtered Tree
 #[derive(Debug)]
 pub struct Tree {
     pub namespace: &'static str,
