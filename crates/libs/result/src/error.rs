@@ -69,7 +69,7 @@ const fn const_nonzero_i32(i: i32) -> NonZeroI32 {
     }
 }
 
-fn nonzero_hresult(hr: HRESULT) -> NonZeroI32 {
+const fn nonzero_hresult(hr: HRESULT) -> NonZeroI32 {
     if let Some(nz) = NonZeroI32::new(hr.0) {
         nz
     } else {
@@ -107,7 +107,7 @@ impl Error {
     }
 
     /// Creates a new error object with an error code, but without additional error information.
-    pub fn from_hresult(code: HRESULT) -> Self {
+    pub const fn from_hresult(code: HRESULT) -> Self {
         Self {
             code: nonzero_hresult(code),
             info: ErrorInfo::empty(),
